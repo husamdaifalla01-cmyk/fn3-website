@@ -17,7 +17,19 @@ export function ReferenceModels() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
         {models.map((model, i) => (
           <FadeInSection key={model.name} delay={i * 0.08}>
-            <div className={`${i > 0 ? 'pt-8 lg:pt-0 lg:pl-6 border-t lg:border-t-0 lg:border-l border-[#f3f4f6]' : ''} ${i < models.length - 1 ? 'pb-8 lg:pb-0 lg:pr-6' : ''}`}>
+            <div className={[
+              // items after the first get top border + top padding on mobile (1-col)
+              // but at sm (2-col), odd items are in the same row — use left border instead
+              // at lg (5-col) all use left border
+              i > 0 ? 'pt-8 sm:pt-0 lg:pt-0 border-t sm:border-t-0 lg:border-t-0 border-[#f3f4f6]' : '',
+              // odd items at sm: left border + left padding
+              i % 2 === 1 ? 'sm:border-l sm:pl-6 lg:border-l-0' : '',
+              // even items (except first) at sm: top border + top padding
+              i > 0 && i % 2 === 0 ? 'sm:border-t sm:pt-8 lg:border-t-0 lg:pt-0' : '',
+              // all items after first at lg: left border + padding
+              i > 0 ? 'lg:border-l lg:pl-6' : '',
+              i < models.length - 1 ? 'pb-8 sm:pb-0 lg:pb-0 lg:pr-6' : '',
+            ].filter(Boolean).join(' ')}>
               <h3 className="text-[13px] font-bold text-[#1c1917] mb-2">{model.name}</h3>
               <p className="text-[12px] text-[#9ca3af] leading-[1.6]">{model.desc}</p>
             </div>

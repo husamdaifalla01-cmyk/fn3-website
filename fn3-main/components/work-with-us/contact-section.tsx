@@ -25,7 +25,7 @@ export function ContactSection() {
         </p>
         <a
           href="mailto:hello@flownexis3.com"
-          className="inline-block text-[28px] font-bold text-fn3-red tracking-tight border-b-2 border-fn3-red-faint hover:border-fn3-red pb-1 transition-colors duration-150 mb-12"
+          className="inline-block text-[20px] lg:text-[28px] font-bold text-fn3-red tracking-tight border-b-2 border-fn3-red-faint hover:border-fn3-red pb-1 transition-colors duration-150 mb-12 break-all"
         >
           hello@flownexis3.com →
         </a>

@@ -17,7 +17,16 @@ export function NumbersStrip() {
         {stats.map((stat, i) => (
           <div
             key={stat.label}
-            className={`${i < stats.length - 1 ? 'pb-10 lg:pb-0 lg:pr-10 lg:border-r border-fn3-dark-border' : 'pt-10 lg:pt-0 lg:pl-10'} ${i > 0 && i < stats.length ? 'border-t lg:border-t-0 border-fn3-dark-border mt-0 pt-10 lg:pt-0' : ''}`}
+            className={[
+              // desktop right border + padding for all but last
+              i < stats.length - 1 ? 'lg:pr-10 lg:border-r lg:border-fn3-dark-border' : 'lg:pl-10',
+              // desktop left padding for all but first
+              i > 0 ? 'lg:pl-10' : '',
+              // mobile: item 1 gets left border (same row as item 0)
+              i === 1 ? 'pl-6 border-l border-fn3-dark-border' : '',
+              // mobile: items 2 and 3 get top border + top padding (new row)
+              i >= 2 ? 'pt-10 border-t border-fn3-dark-border' : '',
+            ].filter(Boolean).join(' ')}
           >
             <div className={`font-serif text-[64px] font-normal leading-none ${stat.accent ? 'text-fn3-red' : 'text-white'}`}>
               {stat.value !== null ? (
