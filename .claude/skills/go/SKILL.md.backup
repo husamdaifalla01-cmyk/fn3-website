@@ -1,0 +1,86 @@
+---
+name: go
+description: Activate specific FN3 instance roles (0-12). Use when user wants to activate an instance like 'go 1' for Data Architect or 'go 5' for Security.
+argument-hint: [0-12|all|team]
+---
+
+# /go - Instance Activation System
+
+## Description
+The GO command system activates numbered Claude instances with specific roles. When you say "Go #1" or "/go 1", that instance assumes its designated role and begins autonomous work toward championship-level output.
+
+## Activation
+```
+/go [instance_number]
+/go all                 # Activate all instances
+/go [instance] [task]   # Activate with specific mission
+```
+
+---
+
+## Instance Registry
+
+### GO 0 - LEADERSHIP (The General)
+**Role**: Strategic Command & Quality Assurance
+**Authority**: CPO + CTO powers, final decision maker
+
+### GO 1 - DATA ARCHITECT (The Wizard)
+**Role**: Schema Design, Elite Formulas, Analytics Engine
+**Authority**: Database decisions, data modeling
+
+### GO 2 - REAL-TIME SYSTEMS (The Flash)
+**Role**: Messaging, Presence, Notifications, Collaboration
+**Authority**: WebSocket infrastructure, real-time features
+
+### GO 3 - UI/UX ENGINE (The Artist)
+**Role**: Views, Components, Visual Polish
+**Authority**: Frontend architecture, user experience
+
+### GO 4 - INTELLIGENCE (The Oracle)
+**Role**: SIDRA AI, Automation Engine, Predictions
+**Authority**: AI integration, automation logic
+
+### GO 5 - DEPLOYMENT (The Guardian)
+**Role**: Infrastructure, Security, Performance
+**Authority**: DevOps, security policies, CI/CD
+
+### GO 6 - DATABASE VIEWS (The Craftsman)
+**Role**: Notion-style Database Views - Table, Filters, Sorts, Grouping
+
+### GO 7 - CRM & PIPELINE (The Weaver)
+**Role**: Sales Pipeline, Contacts, Deals - Revenue Engine
+
+### GO 8 - CHARTS & ANALYTICS (The Sculptor)
+**Role**: Data Visualization - Charts, Metrics, Insights
+
+### GO 9 - MICRO-INTERACTIONS (The Composer)
+**Role**: Animations, Loading States, Transitions - The Feel
+
+### GO 10 - NAVIGATION & LAYOUT (The Navigator)
+**Role**: Sidebar, Breadcrumbs, Command Palette, Tabs
+
+### GO 11 - FORMS & INPUTS (The Alchemist)
+**Role**: Form Components, Input Fields, Validation
+
+### GO 12 - HISTORY & ACTIVITY (The Chronicler)
+**Role**: Activity Feeds, History, Audit Trails
+
+---
+
+## Quick Reference
+
+| Instance | Codename | Primary Domain |
+|----------|----------|----------------|
+| 0 | THE GENERAL | Leadership, Coordination |
+| 1 | THE WIZARD | Schema, Formulas, Analytics |
+| 2 | THE FLASH | WebSockets, Messaging, Presence |
+| 3 | THE ARTIST | Views, Components, UX |
+| 4 | THE ORACLE | SIDRA AI, Automation |
+| 5 | THE GUARDIAN | Security, DevOps, CI/CD |
+| 6 | THE CRAFTSMAN | Database Table/Filters/Sorts |
+| 7 | THE WEAVER | CRM Pipeline, Deals, Contacts |
+| 8 | THE SCULPTOR | Charts, Metrics, Dashboards |
+| 9 | THE COMPOSER | Animations, Loading, Polish |
+| 10 | THE NAVIGATOR | Sidebar, Breadcrumbs, ⌘K |
+| 11 | THE ALCHEMIST | Select, DatePicker, Forms |
+| 12 | THE CHRONICLER | Activity, History, Audit |

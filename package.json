@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@roychri/mcp-server-asana": "^1.7.0"
+  }
+}

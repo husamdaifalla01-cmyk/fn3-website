@@ -1,0 +1,142 @@
+<h2>FN3 — Site Structure Approaches</h2>
+<p class="subtitle">How the 5 pages connect and how a visitor moves through the site</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="narrative-scroll" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#080808;padding:24px;min-height:240px;font-family:monospace;font-size:11px;color:#4a4a6a;overflow:hidden;">
+      <div style="color:#e8ff47;letter-spacing:0.2em;margin-bottom:16px;font-size:10px;">APPROACH A — NARRATIVE SCROLL</div>
+
+      <div style="display:flex;gap:16px;">
+        <!-- Homepage column -->
+        <div style="flex:2;border:1px solid #1a1a2a;padding:12px;">
+          <div style="color:#8080a0;margin-bottom:8px;font-size:9px;letter-spacing:0.15em;">HOMEPAGE — THE FULL STORY</div>
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="background:#0f0f1f;border-left:2px solid #e8ff47;padding:4px 8px;color:#f0efe8;font-size:10px;">01 — MANIFESTO HERO</div>
+            <div style="background:#0f0f1f;border-left:2px solid #2a2a4a;padding:4px 8px;color:#6060a0;">02 — WHAT FN3 IS</div>
+            <div style="background:#0f0f1f;border-left:2px solid #2a2a4a;padding:4px 8px;color:#6060a0;">03 — THE VENTURES (CONDENSED)</div>
+            <div style="background:#0f0f1f;border-left:2px solid #2a2a4a;padding:4px 8px;color:#6060a0;">04 — THE AI SYSTEM</div>
+            <div style="background:#0f0f1f;border-left:2px solid #2a2a4a;padding:4px 8px;color:#6060a0;">05 — THE NUMBERS</div>
+            <div style="background:#0f0f1f;border-left:2px solid #2a2a4a;padding:4px 8px;color:#6060a0;">06 — CONTACT</div>
+          </div>
+        </div>
+        <!-- Sub pages -->
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;">
+          <div style="border:1px solid #1a1a2a;padding:8px;">
+            <div style="color:#555;font-size:9px;margin-bottom:4px;">PORTFOLIO /</div>
+            <div style="color:#8080a0;font-size:10px;">Deep-dives per venture</div>
+          </div>
+          <div style="border:1px solid #1a1a2a;padding:8px;">
+            <div style="color:#555;font-size:9px;margin-bottom:4px;">ABOUT /</div>
+            <div style="color:#8080a0;font-size:10px;">Founder + philosophy</div>
+          </div>
+          <div style="border:1px solid #1a1a2a;padding:8px;">
+            <div style="color:#555;font-size:9px;margin-bottom:4px;">SERVICES /</div>
+            <div style="color:#8080a0;font-size:10px;">External agency offering</div>
+          </div>
+          <div style="border:1px solid #1a1a2a;padding:8px;">
+            <div style="color:#555;font-size:9px;margin-bottom:4px;">CONTACT /</div>
+            <div style="color:#8080a0;font-size:10px;">One page, minimal</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;color:#333;font-size:10px;border-top:1px solid #111;padding-top:10px;">Visitor flow: HOMEPAGE → any sub-page via nav or in-page links</div>
+    </div>
+    <div class="card-body">
+      <h3>A — Homepage Does The Heavy Lifting</h3>
+      <p>The homepage tells the entire FN3 story in one scroll. Sub-pages provide depth for those who want more. Most visitors get everything they need without leaving the home page. Best for conviction-building across all audiences simultaneously.</p>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>One scroll = full picture</li><li>Less navigation friction</li><li>Homepage becomes the brand</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Longer homepage to maintain</li><li>Sub-pages feel thinner</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="hub-spoke" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#080808;padding:24px;min-height:240px;font-family:monospace;font-size:11px;color:#4a4a6a;overflow:hidden;">
+      <div style="color:#e8ff47;letter-spacing:0.2em;margin-bottom:16px;font-size:10px;">APPROACH B — HUB & SPOKE</div>
+
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <!-- Hub -->
+        <div style="background:#0f0f1f;border:1px solid #e8ff4740;padding:10px 24px;color:#f0efe8;font-size:11px;letter-spacing:0.1em;">HOMEPAGE — IDENTITY STATEMENT ONLY</div>
+        <div style="font-size:9px;color:#333;">↓  ↓  ↓  ↓</div>
+        <!-- Spokes -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;width:100%;">
+          <div style="background:#0a0a14;border:1px solid #1a1a2a;padding:8px;text-align:center;">
+            <div style="color:#e8ff47;font-size:10px;margin-bottom:4px;">PORTFOLIO</div>
+            <div style="color:#444;font-size:9px;">Each venture<br>as a chapter</div>
+          </div>
+          <div style="background:#0a0a14;border:1px solid #1a1a2a;padding:8px;text-align:center;">
+            <div style="color:#e8ff47;font-size:10px;margin-bottom:4px;">SERVICES</div>
+            <div style="color:#444;font-size:9px;">External<br>offering</div>
+          </div>
+          <div style="background:#0a0a14;border:1px solid #1a1a2a;padding:8px;text-align:center;">
+            <div style="color:#e8ff47;font-size:10px;margin-bottom:4px;">ABOUT</div>
+            <div style="color:#444;font-size:9px;">Philosophy<br>+ founder</div>
+          </div>
+          <div style="background:#0a0a14;border:1px solid #1a1a2a;padding:8px;text-align:center;">
+            <div style="color:#e8ff47;font-size:10px;margin-bottom:4px;">CONTACT</div>
+            <div style="color:#444;font-size:9px;">One page<br>minimal</div>
+          </div>
+        </div>
+        <div style="width:100%;border-top:1px solid #111;margin-top:8px;padding-top:8px;color:#333;font-size:10px;">Homepage = portal. Each page = its own complete experience. Visitor self-sorts by clicking what matters to them.</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Homepage as Portal, Pages as Experiences</h3>
+      <p>Homepage is short — just identity and navigation intent. Each sub-page is a full, rich experience for that audience. Investor clicks Portfolio. Client clicks Services. Partner clicks About. The homepage trusts the visitor to know what they want.</p>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Clean separation of audiences</li><li>Each page optimized for one purpose</li><li>Fast homepage load</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Requires strong navigation UX</li><li>Homepage alone doesn't convince</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" data-choice="chapters" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#080808;padding:24px;min-height:240px;font-family:monospace;font-size:11px;color:#4a4a6a;overflow:hidden;">
+      <div style="color:#e8ff47;letter-spacing:0.2em;margin-bottom:16px;font-size:10px;">APPROACH C — CHAPTER STRUCTURE</div>
+
+      <div style="display:flex;gap:12px;">
+        <div style="flex:1;display:flex;flex-direction:column;gap:6px;">
+          <div style="background:#0f0f1f;border-left:2px solid #e8ff47;padding:6px 10px;">
+            <div style="color:#f0efe8;font-size:10px;">HOME</div>
+            <div style="color:#444;font-size:9px;">Manifesto + navigation to chapters</div>
+          </div>
+          <div style="background:#0f0f1f;border-left:2px solid #3a3a5a;padding:6px 10px;">
+            <div style="color:#8080a0;font-size:10px;">CH.01 — WHAT WE ARE</div>
+            <div style="color:#444;font-size:9px;">About / philosophy</div>
+          </div>
+          <div style="background:#0f0f1f;border-left:2px solid #3a3a5a;padding:6px 10px;">
+            <div style="color:#8080a0;font-size:10px;">CH.02 — WHAT WE'VE BUILT</div>
+            <div style="color:#444;font-size:9px;">Portfolio / ventures</div>
+          </div>
+          <div style="background:#0f0f1f;border-left:2px solid #3a3a5a;padding:6px 10px;">
+            <div style="color:#8080a0;font-size:10px;">CH.03 — HOW WE WORK</div>
+            <div style="color:#444;font-size:9px;">Services / operating model</div>
+          </div>
+          <div style="background:#0f0f1f;border-left:2px solid #3a3a5a;padding:6px 10px;">
+            <div style="color:#8080a0;font-size:10px;">CH.04 — WORK WITH US</div>
+            <div style="color:#444;font-size:9px;">Contact</div>
+          </div>
+        </div>
+        <div style="flex:1;border:1px solid #111;padding:10px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;">
+          <div style="font-size:9px;color:#333;letter-spacing:0.1em;text-align:center;">NAV READS AS:</div>
+          <div style="font-size:13px;color:#6060a0;text-align:center;line-height:1.8;">What We Are<br>What We've Built<br>How We Work<br>Work With Us</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;color:#333;font-size:10px;border-top:1px solid #111;padding-top:10px;">Navigation language is intentional — human, not corporate. Each chapter is self-contained but part of a sequence.</div>
+    </div>
+    <div class="card-body">
+      <h3>C — Chapters (Narrative Navigation)</h3>
+      <p>The nav itself tells a story. "What We Are → What We've Built → How We Work → Work With Us" is a logical argument in four steps. Every audience enters the same story at different points. The naming does positioning work before they even click.</p>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>Pros</h4><ul><li>Nav = micro-manifesto</li><li>Clear logical flow for all audiences</li><li>Pages feel intentional, not generic</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Chapter names need careful writing</li><li>Slightly unconventional — needs confident execution</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:20px;">My recommendation is C — but let me know what resonates. We can mix too.</p>

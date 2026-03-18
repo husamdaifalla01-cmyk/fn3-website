@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FN3 — Chapter Pages Design</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Inter', sans-serif; background: #f9f9f9; }
+
+  .page-divider {
+    background: #1c1917;
+    padding: 14px 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .page-divider-num {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    color: #b91c1c;
+    text-transform: uppercase;
+  }
+  .page-divider-title {
+    font-family: monospace;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .page-divider-url {
+    font-family: monospace;
+    font-size: 9px;
+    color: #3f3232;
+    margin-left: auto;
+  }
+
+  nav {
+    background: #b91c1c;
+    padding: 0 48px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { font-size: 15px; font-weight: 800; color: #fff; font-family: monospace; letter-spacing: 0.05em; }
+  .nav-back { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); font-family: monospace; }
+  .nav-cta { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; border-bottom: 1px solid rgba(255,255,255,0.5); padding-bottom: 1px; font-family: monospace; }
+
+  /* PAGE HERO — consistent across all chapters */
+  .page-hero {
+    background: #b91c1c;
+    padding: 72px 48px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: end;
+  }
+  .page-chapter-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+  }
+  .page-title {
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -2px;
+    line-height: 1;
+  }
+  .page-desc {
+    font-size: 16px;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.75;
+    align-self: end;
+    padding-bottom: 4px;
+  }
+
+  .section-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #f87171;
+    margin-bottom: 40px;
+  }
+
+  /* ═══ CH.01 — WHAT WE ARE ═══ */
+  .ch01-philosophy {
+    background: #fffbfb;
+    padding: 80px 48px;
+    border-bottom: 1px solid #fde8e8;
+  }
+  .ch01-philosophy-grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .ch01-philosophy-headline {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1c1917;
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+  .ch01-philosophy-headline span { color: #b91c1c; }
+  .ch01-philosophy-body { font-size: 16px; color: #78716c; line-height: 1.8; }
+  .ch01-models {
+    background: #fff;
+    padding: 80px 48px;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .ch01-models-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .ch01-model-item {
+    padding: 0 24px 0 0;
+    border-right: 1px solid #f3f4f6;
+  }
+  .ch01-model-item:last-child { border-right: none; padding-right: 0; }
+  .ch01-model-item:not(:first-child) { padding-left: 24px; }
+  .ch01-model-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1c1917;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+  .ch01-model-desc { font-size: 12px; color: #9ca3af; line-height: 1.6; }
+  .ch01-principles {
+    background: #0c0a0a;
+    padding: 80px 48px;
+  }
+  .ch01-principles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 40px;
+  }
+  .ch01-principle {
+    border-top: 1px solid #1a1212;
+    padding-top: 24px;
+  }
+  .ch01-principle-num { font-family: monospace; font-size: 9px; color: #b91c1c; letter-spacing: 0.2em; margin-bottom: 12px; }
+  .ch01-principle-title { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 10px; letter-spacing: -0.3px; }
+  .ch01-principle-text { font-size: 13px; color: #3f3232; line-height: 1.7; }
+
+  /* ═══ CH.02 — WHAT WE'VE BUILT ═══ */
+  .ch02-intro {
+    background: #fffbfb;
+    padding: 80px 48px;
+    border-bottom: 1px solid #fde8e8;
+  }
+  .ch02-intro-text {
+    font-size: 24px;
+    color: #1c1917;
+    max-width: 680px;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+  }
+  .ch02-intro-text strong { color: #b91c1c; font-weight: 700; }
+  .ch02-ventures {
+    background: #fff;
+    padding: 80px 48px;
+  }
+  .venture-item {
+    display: grid;
+    grid-template-columns: 200px 1fr 160px;
+    gap: 48px;
+    align-items: start;
+    padding: 40px 0;
+    border-top: 1px solid #f3f4f6;
+  }
+  .venture-item:last-child { border-bottom: 1px solid #f3f4f6; }
+  .venture-name-block {}
+  .venture-name {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1c1917;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+  .venture-sector { font-family: monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: #d1d5db; }
+  .venture-desc { font-size: 14px; color: #78716c; line-height: 1.75; }
+  .venture-status-block { text-align: right; }
+  .venture-status-dot {
+    width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px; vertical-align: middle;
+  }
+  .venture-status-label { font-family: monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: #9ca3af; }
+
+  /* ═══ CH.03 — HOW WE WORK ═══ */
+  .ch03-statement {
+    background: #fffbfb;
+    padding: 80px 48px;
+    border-bottom: 1px solid #fde8e8;
+  }
+  .ch03-statement-text {
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 800;
+    color: #1c1917;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    max-width: 640px;
+    margin-bottom: 32px;
+  }
+  .ch03-statement-text span { color: #b91c1c; }
+  .ch03-statement-sub { font-size: 16px; color: #78716c; max-width: 520px; line-height: 1.75; }
+  .ch03-capabilities {
+    background: #fff;
+    padding: 80px 48px;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .ch03-cap-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 48px;
+    padding: 36px 0;
+    border-top: 1px solid #f3f4f6;
+    align-items: start;
+  }
+  .ch03-cap-row:last-child { border-bottom: 1px solid #f3f4f6; }
+  .ch03-cap-title { font-size: 16px; font-weight: 700; color: #1c1917; letter-spacing: -0.3px; }
+  .ch03-cap-title-num { font-family: monospace; font-size: 9px; color: #f87171; letter-spacing: 0.2em; margin-bottom: 8px; }
+  .ch03-cap-body { font-size: 14px; color: #78716c; line-height: 1.75; }
+  .ch03-process {
+    background: #0c0a0a;
+    padding: 80px 48px;
+  }
+  .ch03-process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+    margin-top: 40px;
+  }
+  .ch03-step {
+    padding-right: 32px;
+    border-right: 1px solid #1a1212;
+  }
+  .ch03-step:last-child { border-right: none; padding-right: 0; }
+  .ch03-step:not(:first-child) { padding-left: 32px; }
+  .ch03-step-num { font-family: monospace; font-size: 9px; color: #b91c1c; letter-spacing: 0.2em; margin-bottom: 16px; }
+  .ch03-step-title { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 10px; }
+  .ch03-step-text { font-size: 12px; color: #3f3232; line-height: 1.65; }
+
+  /* ═══ CH.04 — WORK WITH US ═══ */
+  .ch04-contact {
+    background: #fffbfb;
+    padding: 100px 48px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ch04-question {
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-style: italic;
+    color: #1c1917;
+    line-height: 1.2;
+    max-width: 600px;
+    margin-bottom: 48px;
+    letter-spacing: -1px;
+  }
+  .ch04-email {
+    font-size: 28px;
+    font-weight: 800;
+    color: #b91c1c;
+    letter-spacing: -0.5px;
+    border-bottom: 2px solid #fde8e8;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 48px;
+    text-decoration: none;
+  }
+  .ch04-options {
+    display: flex;
+    gap: 48px;
+  }
+  .ch04-option { border-top: 1px solid #fde8e8; padding-top: 20px; width: 200px; }
+  .ch04-option-label { font-family: monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #f87171; margin-bottom: 8px; }
+  .ch04-option-text { font-size: 13px; color: #78716c; line-height: 1.6; }
+
+  .annotation {
+    background: #fff8f0;
+    border-left: 3px solid #fb923c;
+    padding: 8px 16px;
+    font-size: 11px;
+    color: #7c3a00;
+    font-style: italic;
+  }
+
+  footer {
+    background: #0c0a0a;
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo { font-family: monospace; font-size: 12px; font-weight: 700; color: #b91c1c; }
+  .footer-legal { font-family: monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: #2a1a1a; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- CH.01 — WHAT WE ARE -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page-divider">
+  <span class="page-divider-num">Chapter 01</span>
+  <span class="page-divider-title">What We Are</span>
+  <span class="page-divider-url">flownexis3.com/what-we-are</span>
+</div>
+<nav>
+  <div class="nav-logo">FN3</div>
+  <span class="nav-back">← Back to Home</span>
+  <a href="#" class="nav-cta">Work With Us →</a>
+</nav>
+<section class="page-hero">
+  <div>
+    <div class="page-chapter-label">Chapter 01 — What We Are</div>
+    <div class="page-title">The Company Behind the System</div>
+  </div>
+  <div class="page-desc">FN3 is a lean operational holding company. Not defined by its ventures — defined by the operating model that runs them. Built to prove that AI-first operations at scale are possible with a small, precise team.</div>
+</section>
+<div class="annotation">Page hero: Consistent red header across all chapters. Left = chapter title. Right = page description. Breathes.</div>
+
+<section class="ch01-philosophy">
+  <div class="section-label">The Philosophy</div>
+  <div class="ch01-philosophy-grid">
+    <div class="ch01-philosophy-headline">Built to run<br>many things<br><span>without becoming</span><br>many things.</div>
+    <div class="ch01-philosophy-body">Most companies scale by adding people, layers, and complexity. FN3 scales by deepening the system. Every process is designed to be automated before it's designed to be staffed. Every service is built as an API before it's built as a team.<br><br>The result: a holding company that runs like software. Lean by design. Compound by nature. AI-native from the ground up.</div>
+  </div>
+</section>
+
+<section class="ch01-models">
+  <div class="section-label">Informed By</div>
+  <div class="ch01-models-grid">
+    <div class="ch01-model-item">
+      <div class="ch01-model-name">Constellation Software</div>
+      <div class="ch01-model-desc">Acquire and compound. Never sell. Operational discipline over growth theatre.</div>
+    </div>
+    <div class="ch01-model-item">
+      <div class="ch01-model-name">Berkshire Hathaway</div>
+      <div class="ch01-model-desc">Autonomous business units. Capital allocation as the core skill. Trust the operator.</div>
+    </div>
+    <div class="ch01-model-item">
+      <div class="ch01-model-name">Amazon</div>
+      <div class="ch01-model-desc">API mandate. Every service externalizable. Build platforms, not products.</div>
+    </div>
+    <div class="ch01-model-item">
+      <div class="ch01-model-name">Danaher</div>
+      <div class="ch01-model-desc">The Business System. A replicable operating model applied across every acquisition.</div>
+    </div>
+    <div class="ch01-model-item">
+      <div class="ch01-model-name">IAC</div>
+      <div class="ch01-model-desc">Build, spin, repeat. Incubate internally. Spin out when ready. Never stop building.</div>
+    </div>
+  </div>
+</section>
+<div class="annotation">Reference models: 5 columns, hairline dividers, no cards. These are intellectual foundations — shown with restraint, not as bullet marketing.</div>
+
+<section class="ch01-principles">
+  <div class="section-label" style="color:#3f3232;">Operating Principles</div>
+  <div class="ch01-principles-grid">
+    <div class="ch01-principle">
+      <div class="ch01-principle-num">PRINCIPLE 01</div>
+      <div class="ch01-principle-title">Automate Before You Staff</div>
+      <div class="ch01-principle-text">Every process gets designed for automation first. Humans handle judgment. Systems handle execution.</div>
+    </div>
+    <div class="ch01-principle">
+      <div class="ch01-principle-num">PRINCIPLE 02</div>
+      <div class="ch01-principle-title">Build APIs, Not Teams</div>
+      <div class="ch01-principle-text">Every service interface is designed to be externalizable from day one. Nothing is siloed by default.</div>
+    </div>
+    <div class="ch01-principle">
+      <div class="ch01-principle-num">PRINCIPLE 03</div>
+      <div class="ch01-principle-title">Compound With Every Venture</div>
+      <div class="ch01-principle-text">Each new business makes the operating system stronger. Infrastructure invested once, leveraged across all.</div>
+    </div>
+    <div class="ch01-principle">
+      <div class="ch01-principle-num">PRINCIPLE 04</div>
+      <div class="ch01-principle-title">Decisions From Frameworks</div>
+      <div class="ch01-principle-text">No gut calls on strategy. Regret minimization, Anand-Collis framework, capital allocation rules — all documented, all applied.</div>
+    </div>
+  </div>
+</section>
+<div class="annotation">Principles: Near-black section. 2x2 grid. Brand red numbers. This is the "how we think" moment — grounded, not hype.</div>
+
+<br>
+<!-- ═══════════════════════════════════════════ -->
+<!-- CH.02 — WHAT WE'VE BUILT -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page-divider">
+  <span class="page-divider-num">Chapter 02</span>
+  <span class="page-divider-title">What We've Built</span>
+  <span class="page-divider-url">flownexis3.com/what-weve-built</span>
+</div>
+<nav>
+  <div class="nav-logo">FN3</div>
+  <span class="nav-back">← Back to Home</span>
+  <a href="#" class="nav-cta">Work With Us →</a>
+</nav>
+<section class="page-hero">
+  <div>
+    <div class="page-chapter-label">Chapter 02 — What We've Built</div>
+    <div class="page-title">The System In The Wild</div>
+  </div>
+  <div class="page-desc">Five ventures. Each one a live test of the FN3 operating model. Different industries, same infrastructure. This is what the system looks like when it runs.</div>
+</section>
+<div class="annotation">Hero framing: Ventures = proof of system. Not a portfolio page — a demonstration page.</div>
+
+<section class="ch02-intro">
+  <div class="section-label">Why This Page Exists</div>
+  <div class="ch02-intro-text">
+    These aren't investments. They're <strong>proof</strong>. Each venture runs on the same agent infrastructure, the same operational frameworks, the same decision architecture. When a client asks "does this actually work?" — this page is the answer.
+  </div>
+</section>
+
+<section class="ch02-ventures">
+  <div class="section-label">Active Ventures</div>
+  <div class="venture-item">
+    <div class="venture-name-block">
+      <div class="venture-name">SUBZII</div>
+      <div class="venture-sector">Event Ticketing</div>
+    </div>
+    <div class="venture-desc">Live entertainment ticketing platform. AI-optimized pricing, inventory management, and demand forecasting. The FN3 agent layer runs demand prediction and operational workflows end-to-end.</div>
+    <div class="venture-status-block">
+      <span class="venture-status-dot" style="background:#4ade80;"></span>
+      <span class="venture-status-label">Growth</span>
+    </div>
+  </div>
+  <div class="venture-item">
+    <div class="venture-name-block">
+      <div class="venture-name">DETAILMAPS</div>
+      <div class="venture-sector">Auto-Care</div>
+    </div>
+    <div class="venture-desc">Vehicle maintenance platform connecting auto-care providers with customers. Intelligent scheduling, route optimization, and service automation driven by the FN3 operations layer.</div>
+    <div class="venture-status-block">
+      <span class="venture-status-dot" style="background:#60a5fa;"></span>
+      <span class="venture-status-label">Active</span>
+    </div>
+  </div>
+  <div class="venture-item">
+    <div class="venture-name-block">
+      <div class="venture-name">DRYJETS</div>
+      <div class="venture-sector">On-Demand Services</div>
+    </div>
+    <div class="venture-desc">On-demand service coordination platform. Resource matching, real-time dispatch, and contractor management — operational complexity handled by systems, not headcount.</div>
+    <div class="venture-status-block">
+      <span class="venture-status-dot" style="background:#fbbf24;"></span>
+      <span class="venture-status-label">Contracting</span>
+    </div>
+  </div>
+  <div class="venture-item">
+    <div class="venture-name-block">
+      <div class="venture-name">DAWA</div>
+      <div class="venture-sector">Healthcare Infrastructure</div>
+    </div>
+    <div class="venture-desc">Morocco healthcare infrastructure modernization. AI-driven workflow optimization and patient coordination systems. The FN3 model applied to public sector operational transformation.</div>
+    <div class="venture-status-block">
+      <span class="venture-status-dot" style="background:#a78bfa;"></span>
+      <span class="venture-status-label">Concept</span>
+    </div>
+  </div>
+  <div class="venture-item">
+    <div class="venture-name-block">
+      <div class="venture-name">BIO</div>
+      <div class="venture-sector">To Be Announced</div>
+    </div>
+    <div class="venture-desc">Early concept stage. The FN3 operating model is being applied to a new vertical. Details to follow.</div>
+    <div class="venture-status-block">
+      <span class="venture-status-dot" style="background:#374151;"></span>
+      <span class="venture-status-label">Concept</span>
+    </div>
+  </div>
+</section>
+<div class="annotation">Ventures: Row layout — name/sector left, description center, status right. No cards, no icons, no gradient blobs. Clean editorial list.</div>
+
+<br>
+<!-- ═══════════════════════════════════════════ -->
+<!-- CH.03 — HOW WE WORK -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page-divider">
+  <span class="page-divider-num">Chapter 03</span>
+  <span class="page-divider-title">How We Work</span>
+  <span class="page-divider-url">flownexis3.com/how-we-work</span>
+</div>
+<nav>
+  <div class="nav-logo">FN3</div>
+  <span class="nav-back">← Back to Home</span>
+  <a href="#" class="nav-cta">Work With Us →</a>
+</nav>
+<section class="page-hero">
+  <div>
+    <div class="page-chapter-label">Chapter 03 — How We Work</div>
+    <div class="page-title">The Operating Model, Available</div>
+  </div>
+  <div class="page-desc">The same operational intelligence FN3 uses to run its ventures is available to external clients. Six service capabilities. One integrated system. No agency overhead.</div>
+</section>
+
+<section class="ch03-statement">
+  <div class="section-label">The Offer</div>
+  <div class="ch03-statement-text">You don't hire us.<br>You <span>integrate</span> us.</div>
+  <div class="ch03-statement-sub">FN3 doesn't parachute in with slide decks. We plug the operating system directly into your business — agents, automation, and frameworks that run alongside your team, not above it.</div>
+</section>
+
+<section class="ch03-capabilities">
+  <div class="section-label">Six Capabilities</div>
+  <div class="ch03-cap-row">
+    <div>
+      <div class="ch03-cap-title-num">CAPABILITY 01</div>
+      <div class="ch03-cap-title">Automation Integration</div>
+    </div>
+    <div class="ch03-cap-body">Map existing operations. Identify automation opportunities. Design and deploy automation that eliminates manual work without disrupting what's working. Built for operations teams, not IT departments.</div>
+  </div>
+  <div class="ch03-cap-row">
+    <div>
+      <div class="ch03-cap-title-num">CAPABILITY 02</div>
+      <div class="ch03-cap-title">Agent Deployment</div>
+    </div>
+    <div class="ch03-cap-body">Purpose-built AI agents for specific operational roles. Not generic chatbots — configured agents with memory, context, and defined responsibilities. A workforce extension, not a tool upgrade.</div>
+  </div>
+  <div class="ch03-cap-row">
+    <div>
+      <div class="ch03-cap-title-num">CAPABILITY 03</div>
+      <div class="ch03-cap-title">Operating System Design</div>
+    </div>
+    <div class="ch03-cap-body">The frameworks, decision layers, and systems architecture behind how FN3 runs. Applied to your business. Includes SLA design, transfer pricing models, and the management layer that makes scale possible without chaos.</div>
+  </div>
+  <div class="ch03-cap-row">
+    <div>
+      <div class="ch03-cap-title-num">CAPABILITY 04</div>
+      <div class="ch03-cap-title">Context Engineering</div>
+    </div>
+    <div class="ch03-cap-body">Building the living context layer that keeps AI systems accurate, current, and operationally relevant. The difference between AI that hallucinates and AI that actually runs your business.</div>
+  </div>
+  <div class="ch03-cap-row">
+    <div>
+      <div class="ch03-cap-title-num">CAPABILITY 05</div>
+      <div class="ch03-cap-title">Infrastructure &amp; Observability</div>
+    </div>
+    <div class="ch03-cap-body">Cloud infrastructure, database architecture, and observability pipelines. Built with the same standards FN3 uses internally — OpenTelemetry, traces, metrics, and alerting that actually tells you what's happening.</div>
+  </div>
+  <div class="ch03-cap-row">
+    <div>
+      <div class="ch03-cap-title-num">CAPABILITY 06</div>
+      <div class="ch03-cap-title">Product &amp; Platform Strategy</div>
+    </div>
+    <div class="ch03-cap-body">From concept to operating platform. Product architecture, roadmap design, and platform strategy informed by the FN3 holding company model. For founders and operators who are building something that needs to scale.</div>
+  </div>
+</section>
+<div class="annotation">Capabilities: Row layout, number left, description right. No cards. Clean left-aligned list with hairline borders.</div>
+
+<section class="ch03-process">
+  <div class="section-label" style="color:#3f3232;">How an Engagement Works</div>
+  <div class="ch03-process-steps">
+    <div class="ch03-step">
+      <div class="ch03-step-num">STEP 01</div>
+      <div class="ch03-step-title">Operational Audit</div>
+      <div class="ch03-step-text">We map your current operations. Where the gaps are, where the leverage is, what's ready for automation now.</div>
+    </div>
+    <div class="ch03-step">
+      <div class="ch03-step-num">STEP 02</div>
+      <div class="ch03-step-title">System Design</div>
+      <div class="ch03-step-text">We design the operational layer — agents, automations, frameworks — tailored to your business, not templated.</div>
+    </div>
+    <div class="ch03-step">
+      <div class="ch03-step-num">STEP 03</div>
+      <div class="ch03-step-title">Integration &amp; Deploy</div>
+      <div class="ch03-step-text">We build and deploy directly into your stack. No handoff decks. We run it until it runs itself.</div>
+    </div>
+    <div class="ch03-step">
+      <div class="ch03-step-num">STEP 04</div>
+      <div class="ch03-step-title">Compound &amp; Expand</div>
+      <div class="ch03-step-text">The system learns. Each month it does more. Capabilities expand as confidence in the foundation grows.</div>
+    </div>
+  </div>
+</section>
+<div class="annotation">Process: Near-black, 4 steps, serif numbers in red. Reads like a brief, not a sales pitch.</div>
+
+<br>
+<!-- ═══════════════════════════════════════════ -->
+<!-- CH.04 — WORK WITH US -->
+<!-- ═══════════════════════════════════════════ -->
+<div class="page-divider">
+  <span class="page-divider-num">Chapter 04</span>
+  <span class="page-divider-title">Work With Us</span>
+  <span class="page-divider-url">flownexis3.com/work-with-us</span>
+</div>
+<nav>
+  <div class="nav-logo">FN3</div>
+  <span class="nav-back">← Back to Home</span>
+  <a href="#" class="nav-cta">Work With Us →</a>
+</nav>
+<section class="page-hero">
+  <div>
+    <div class="page-chapter-label">Chapter 04 — Work With Us</div>
+    <div class="page-title">Let's Talk Operations</div>
+  </div>
+  <div class="page-desc">No intake form. No discovery call booking widget. If you've read this far, you know if FN3 is the right fit. Reach out directly.</div>
+</section>
+<div class="annotation">Contact hero: Red header stays consistent. Description is deliberate — we're filtering for serious inquiries only.</div>
+
+<section class="ch04-contact">
+  <div class="section-label">Get In Touch</div>
+  <div class="ch04-question">Ready to bring operational intelligence into your business?</div>
+  <a href="mailto:hello@flownexis3.com" class="ch04-email">hello@flownexis3.com →</a>
+  <div class="ch04-options">
+    <div class="ch04-option">
+      <div class="ch04-option-label">For Clients</div>
+      <div class="ch04-option-text">Tell us what you're building and where operations are breaking down. We'll respond within 48 hours.</div>
+    </div>
+    <div class="ch04-option">
+      <div class="ch04-option-label">For Partners</div>
+      <div class="ch04-option-text">Strategic partnerships, joint ventures, and collaborative builds. We're selective but always open to the right conversation.</div>
+    </div>
+    <div class="ch04-option">
+      <div class="ch04-option-label">For Investors</div>
+      <div class="ch04-option-text">FN3 is not actively raising. If you're building a long-term thesis around operational AI, we want to know you.</div>
+    </div>
+  </div>
+</section>
+<div class="annotation">Contact: Warm off-white. Italic serif question. Email in brand red. Three paths below — clients, partners, investors. No form. Clean.</div>
+
+<footer>
+  <div class="footer-logo">FN3</div>
+  <div class="footer-legal">© FlowNexis3 2025 — All Rights Reserved</div>
+</footer>
+
+</body>
+</html>

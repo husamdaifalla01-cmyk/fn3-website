@@ -1,0 +1,9 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/how-we-work/page": "app/how-we-work/page.js",
+  "/page": "app/page.js",
+  "/what-we-are/page": "app/what-we-are/page.js",
+  "/what-weve-built/page": "app/what-weve-built/page.js",
+  "/work-with-us/page": "app/work-with-us/page.js"
+}
