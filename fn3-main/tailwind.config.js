@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,6 +17,7 @@ module.exports = {
         'fn3-dark-border':'#1a1212',
         'fn3-dark-label': '#2a1a1a',
         'fn3-dark-text':  '#3f3232',
+        'fn3-body':       '#1c1917',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
