@@ -62,6 +62,7 @@ export function Nav({ variant = 'home' }: NavProps) {
 
         {/* Mobile hamburger */}
         <button
+          type="button"
           className="lg:hidden text-white p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
