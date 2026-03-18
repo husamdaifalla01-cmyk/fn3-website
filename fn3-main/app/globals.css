@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: #1a1212;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #1c1917;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :root {
+    --radius: 0px;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    line-height: 1.02;
+  }
+
+  .font-serif-italic {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+  }
+
+  .label-mono {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.5625rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+}
