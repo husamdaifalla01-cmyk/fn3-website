@@ -11,7 +11,7 @@ interface CountUpProps {
 }
 
 export function CountUp({ to, duration = 1.2, className, suffix = '' }: CountUpProps) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLSpanElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
   const count = useMotionValue(0)
   const rounded = useTransform(count, (v) => Math.round(v))
@@ -22,7 +22,7 @@ export function CountUp({ to, duration = 1.2, className, suffix = '' }: CountUpP
       duration,
       ease: 'easeOut',
     })
-    return controls.stop
+    return () => controls.stop()
   }, [isInView, count, to, duration])
 
   return (

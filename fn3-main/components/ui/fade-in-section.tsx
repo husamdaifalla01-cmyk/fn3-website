@@ -10,7 +10,7 @@ interface FadeInSectionProps {
 }
 
 export function FadeInSection({ children, className, delay = 0 }: FadeInSectionProps) {
-  const ref = useRef(null)
+  const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
