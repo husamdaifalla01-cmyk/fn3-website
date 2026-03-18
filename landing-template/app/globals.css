@@ -1,0 +1,364 @@
+@import "tailwindcss";
+@import "../styles/utils.css";
+@import "./responsive.css";
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  /* Dynamic theme colors - updated by ThemeProvider */
+  --color-background: rgb(var(--background));
+  --color-foreground: rgb(var(--foreground));
+  --color-card: rgb(var(--card));
+  --color-card-foreground: rgb(var(--card-foreground));
+  --color-popover: rgb(var(--popover));
+  --color-popover-foreground: rgb(var(--popover-foreground));
+  --color-primary: rgb(var(--primary));
+  --color-primary-foreground: rgb(var(--primary-foreground));
+  --color-secondary: rgb(var(--secondary));
+  --color-secondary-foreground: rgb(var(--secondary-foreground));
+  --color-muted: rgb(var(--muted));
+  --color-muted-foreground: rgb(var(--muted-foreground));
+  --color-accent: rgb(var(--accent));
+  --color-accent-foreground: rgb(var(--accent-foreground));
+  --color-destructive: rgb(var(--destructive));
+  --color-destructive-foreground: rgb(var(--destructive-foreground));
+  --color-border: rgb(var(--border));
+  --color-input: rgb(var(--input));
+  --color-ring: rgb(var(--ring));
+
+  /* Legacy brand colors - maintain compatibility */
+  --color-brand: #ff6b35;
+  --color-brand-foreground: #ffffff;
+  --color-light: var(--color-primary);
+  --color-light-foreground: var(--color-primary-foreground);
+
+  /* Sidebar colors inherit from main theme */
+  --color-sidebar: var(--color-card);
+  --color-sidebar-foreground: var(--color-card-foreground);
+  --color-sidebar-primary: var(--color-primary);
+  --color-sidebar-primary-foreground: var(--color-primary-foreground);
+  --color-sidebar-accent: var(--color-accent);
+  --color-sidebar-accent-foreground: var(--color-accent-foreground);
+  --color-sidebar-border: var(--color-border);
+  --color-sidebar-ring: var(--color-ring);
+
+  /* Chart colors remain static */
+  --color-chart-1: rgb(59 130 246); /* blue-500 */
+  --color-chart-2: rgb(16 185 129); /* emerald-500 */
+  --color-chart-3: rgb(245 158 11); /* amber-500 */
+  --color-chart-4: rgb(239 68 68); /* red-500 */
+  --color-chart-5: rgb(139 92 246); /* violet-500 */
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-ibm-plex-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --spacing-container: 1280px;
+  --spacing-container-lg: 1536px;
+
+  --shadow-md: 0 4px 6px -1px var(--shadow), 0 2px 4px -2px var(--shadow);
+  --shadow-xl: 0 20px 25px -5px var(--shadow), 0 8px 10px -6px var(--shadow);
+  --shadow-2xl: 0 25px 50px -12px var(--shadow);
+  --shadow-mockup: -12px 16px 48px var(--shadow-strong);
+
+  --line-width: 1px;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-appear: appear 0.6s forwards ease-out;
+  --animate-appear-zoom: appear-zoom 0.6s forwards ease-out;
+
+  /* ── News Command Center Animations ── */
+  --animate-ticker-scroll: ticker-scroll 30s linear infinite;
+  --animate-pulse-live: pulse-live 2s ease-in-out infinite;
+  --animate-glow-breathe: glow-breathe 3s ease-in-out infinite;
+  --animate-slide-in-feed: slide-in-feed 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-sparkline-draw: sparkline-draw 1.2s ease-out forwards;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+      filter: blur(0.5rem);
+    }
+    50% {
+      filter: blur(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  @keyframes appear-zoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* ── News Command Center Keyframes ── */
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes pulse-live {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+  }
+  @keyframes glow-breathe {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  @keyframes slide-in-feed {
+    0% {
+      opacity: 0;
+      transform: translateY(16px) scale(0.98);
+    }
+    70% {
+      transform: translateY(-2px) scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes sparkline-draw {
+    0% { stroke-dashoffset: var(--sparkline-length, 200); }
+    100% { stroke-dashoffset: 0; }
+  }
+}
+
+:root {
+  /* Default light theme - will be overridden by ThemeProvider */
+  --background: 255 255 255; /* white */
+  --foreground: 15 23 42; /* slate-900 */
+  --card: 255 255 255; /* white */
+  --card-foreground: 15 23 42; /* slate-900 */
+  --popover: 255 255 255; /* white */
+  --popover-foreground: 15 23 42; /* slate-900 */
+  --primary: 15 23 42; /* slate-900 */
+  --primary-foreground: 248 250 252; /* slate-50 */
+  --secondary: 241 245 249; /* slate-100 */
+  --secondary-foreground: 15 23 42; /* slate-900 */
+  --muted: 241 245 249; /* slate-100 */
+  --muted-foreground: 100 116 139; /* slate-500 */
+  --accent: 241 245 249; /* slate-100 */
+  --accent-foreground: 15 23 42; /* slate-900 */
+  --destructive: 239 68 68; /* red-500 */
+  --destructive-foreground: 248 250 252; /* slate-50 */
+  --border: 226 232 240; /* slate-200 */
+  --input: 226 232 240; /* slate-200 */
+  --ring: 15 23 42; /* slate-900 */
+
+  /* Static values */
+  --radius: 0.625rem;
+
+  /* Legacy brand colors */
+  --brand: #ff6b35;
+  --brand-foreground: #ffffff;
+  --light: #ff6b35;
+  --light-foreground: #ffffff;
+
+  /* Dynamic shadows based on theme */
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-strong: rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme will be applied via data-theme attribute by ThemeProvider */
+[data-theme^="dark"], [data-theme="crimson"], [data-theme="gold"], [data-theme="rocket"] {
+  --shadow: rgba(255, 255, 255, 0.05);
+  --shadow-strong: rgba(255, 255, 255, 0.1);
+}
+
+/* Multi-theme support with Skeleton UI integration */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Smooth transitions for theme changes */
+  *,
+  *::before,
+  *::after {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  /* Override forced styles to respect theming */
+  .bg-card { @apply bg-card text-card-foreground; }
+  .bg-muted { @apply bg-muted text-muted-foreground; }
+  .bg-background { @apply bg-background text-foreground; }
+  .bg-popover { @apply bg-popover text-popover-foreground; }
+  .bg-secondary { @apply bg-secondary text-secondary-foreground; }
+
+  /* Remove forced overrides - let themes control styling */
+  section,
+  [data-section],
+  div,
+  main,
+  article {
+    background-color: inherit;
+    color: inherit;
+  }
+
+  /* Theme-specific overrides for special cases */
+
+  /* Hero section dark theme support */
+  .hero-section.dark {
+    background: linear-gradient(135deg, rgb(var(--background)) 0%, rgb(var(--card)) 100%);
+  }
+
+  /* Light theme cards in dark theme sections */
+  [data-light-theme] {
+    background-color: rgb(255 255 255) !important;
+    color: rgb(0 0 0) !important;
+  }
+
+  [data-light-theme] * {
+    color: inherit !important;
+  }
+
+  /* Brand colors remain consistent across themes */
+  .text-brand, [class*="text-brand"] {
+    color: var(--brand) !important;
+  }
+
+  .bg-brand, [class*="bg-brand"] {
+    background-color: var(--brand) !important;
+    color: var(--brand-foreground) !important;
+  }
+
+  /* FORCE WHITE AND ORANGE BUTTON VARIANTS - HIGHEST PRIORITY */
+
+  /* White button variant - overrides ALL styles */
+  [data-variant="white"],
+  button[data-variant="white"],
+  .dark [data-variant="white"],
+  .dark button[data-variant="white"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    border-color: transparent !important;
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+
+  [data-variant="white"]:hover,
+  button[data-variant="white"]:hover,
+  .dark [data-variant="white"]:hover,
+  .dark button[data-variant="white"]:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #000000 !important;
+  }
+
+  [data-variant="white"] *,
+  button[data-variant="white"] *,
+  .dark [data-variant="white"] *,
+  .dark button[data-variant="white"] * {
+    color: #000000 !important;
+  }
+
+  /* Orange button variant - overrides ALL styles */
+  [data-variant="orange"],
+  button[data-variant="orange"],
+  .dark [data-variant="orange"],
+  .dark button[data-variant="orange"] {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-color: transparent !important;
+    position: relative !important;
+    z-index: 9999 !important;
+  }
+
+  [data-variant="orange"]:hover,
+  button[data-variant="orange"]:hover,
+  .dark [data-variant="orange"]:hover,
+  .dark button[data-variant="orange"]:hover {
+    background-color: #ea580c !important;
+    color: #ffffff !important;
+  }
+
+  [data-variant="orange"] *,
+  button[data-variant="orange"] *,
+  .dark [data-variant="orange"] *,
+  .dark button[data-variant="orange"] * {
+    color: #ffffff !important;
+  }
+
+  /* Force styling for buttons inside hero and CTA sections */
+  .hero-section [data-variant="white"],
+  .cta-section [data-variant="white"],
+  div[class*="z-[60]"] [data-variant="white"] {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+  }
+
+  .hero-section [data-variant="orange"],
+  .cta-section [data-variant="orange"],
+  div[class*="z-[60]"] [data-variant="orange"] {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+
+  /* Force auth page orange background */
+  .auth-brand-panel {
+    background-color: #f97316 !important;
+  }
+
+  .auth-brand-panel * {
+    color: #ffffff !important;
+  }
+
+  /* Override any dark mode interference on auth page */
+  .dark .auth-brand-panel {
+    background-color: #f97316 !important;
+  }
+
+  .dark .auth-brand-panel * {
+    color: #ffffff !important;
+  }
+}
+
+
+

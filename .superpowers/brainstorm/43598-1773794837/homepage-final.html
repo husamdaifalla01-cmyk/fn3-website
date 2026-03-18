@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FN3 Homepage — Command Red System</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Inter', sans-serif; background: #fff; }
+
+  /* NAV */
+  nav {
+    background: #b91c1c;
+    padding: 0 48px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-logo {
+    font-size: 15px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.05em;
+    font-family: monospace;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: #fff; }
+  .nav-cta {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    padding-bottom: 1px;
+  }
+
+  /* HERO */
+  .hero {
+    background: #b91c1c;
+    padding: 80px 48px 100px;
+    min-height: 88vh;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+  }
+  .hero-eyebrow {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 48px;
+  }
+  .hero-manifesto-grey {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: rgba(255,255,255,0.38);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .hero-rule {
+    width: 36px;
+    height: 1px;
+    background: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+  }
+  .hero-statement {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    max-width: 640px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 48px;
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+  .hero-ventures {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-self: center;
+  }
+  .hero-ventures-label {
+    font-family: monospace;
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    margin-bottom: 4px;
+  }
+  .venture-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .venture-name {
+    font-family: monospace;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.1em;
+  }
+  .venture-line {
+    width: 20px;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+  }
+  .venture-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+
+  /* IDENTITY STRIP */
+  .identity {
+    background: #fffbfb;
+    padding: 80px 48px;
+    border-bottom: 1px solid #fde8e8;
+  }
+  .section-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #f87171;
+    margin-bottom: 48px;
+  }
+  .identity-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+  }
+  .identity-col-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #e5b0b0;
+    margin-bottom: 16px;
+  }
+  .identity-col-text {
+    font-size: 15px;
+    color: #1c1917;
+    line-height: 1.7;
+  }
+
+  /* NUMBERS STRIP */
+  .numbers {
+    background: #0c0a0a;
+    padding: 72px 48px;
+  }
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0;
+  }
+  .number-cell {
+    padding: 0 32px 0 0;
+    border-right: 1px solid #1a1212;
+  }
+  .number-cell:last-child {
+    border-right: none;
+    padding-left: 32px;
+    padding-right: 0;
+  }
+  .number-cell:not(:first-child) {
+    padding-left: 32px;
+  }
+  .number-val {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 400;
+  }
+  .number-val.accent { color: #b91c1c; }
+  .number-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #3f3232;
+    margin-top: 12px;
+  }
+
+  /* CHAPTER ENTRY */
+  .chapters {
+    background: #fff;
+    padding: 80px 48px;
+    border-top: 1px solid #f5f5f4;
+  }
+  .chapters-label {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #d1d5db;
+    margin-bottom: 40px;
+  }
+  .chapter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 0;
+    border-top: 1px solid #f3f4f6;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .chapter-row:last-child { border-bottom: 1px solid #f3f4f6; }
+  .chapter-row:hover { background: #fffbfb; margin: 0 -12px; padding: 22px 12px; }
+  .chapter-left { display: flex; align-items: center; gap: 20px; }
+  .chapter-num {
+    font-family: monospace;
+    font-size: 10px;
+    color: #d1d5db;
+    letter-spacing: 0.1em;
+    width: 24px;
+  }
+  .chapter-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: -0.5px;
+  }
+  .chapter-title.cta { color: #b91c1c; }
+  .chapter-sub {
+    font-size: 11px;
+    color: #9ca3af;
+    letter-spacing: 0.05em;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #0c0a0a;
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-logo {
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #b91c1c;
+    letter-spacing: 0.1em;
+  }
+  .footer-legal {
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2a1a1a;
+  }
+
+  /* ANNOTATION LABELS */
+  .annotation {
+    background: #fff8f0;
+    border-left: 2px solid #fb923c;
+    padding: 8px 14px;
+    font-size: 11px;
+    color: #7c3a00;
+    font-style: italic;
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">FN3</div>
+  <ul class="nav-links">
+    <li><a href="#">What We Are</a></li>
+    <li><a href="#">What We've Built</a></li>
+    <li><a href="#">How We Work</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Work With Us →</a>
+</nav>
+<div class="annotation">Nav: Always red, no scroll state change. Chapter names visible. CTA right-aligned, underline only.</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">FlowNexis3 — Lean Tech Holding Company</div>
+    <div class="hero-manifesto-grey">
+      Not an agency.<br>
+      Not a studio.<br>
+      Not a fund.
+    </div>
+    <div class="hero-rule"></div>
+    <div class="hero-statement">
+      FN3 is what you build<br>when you're done<br>choosing between them.
+    </div>
+    <div class="hero-scroll">Scroll to enter ↓</div>
+  </div>
+  <div class="hero-ventures">
+    <div class="hero-ventures-label">Active Ventures</div>
+    <div class="venture-row">
+      <span class="venture-name">SUBZII</span>
+      <span class="venture-line"></span>
+      <span class="venture-dot" style="background:#4ade80;"></span>
+    </div>
+    <div class="venture-row">
+      <span class="venture-name">DETAILMAPS</span>
+      <span class="venture-line"></span>
+      <span class="venture-dot" style="background:#60a5fa;"></span>
+    </div>
+    <div class="venture-row">
+      <span class="venture-name">DRYJETS</span>
+      <span class="venture-line"></span>
+      <span class="venture-dot" style="background:#fbbf24;"></span>
+    </div>
+    <div class="venture-row">
+      <span class="venture-name">DAWA</span>
+      <span class="venture-line"></span>
+      <span class="venture-dot" style="background:#a78bfa;"></span>
+    </div>
+    <div class="venture-row">
+      <span class="venture-name">BIO</span>
+      <span class="venture-line"></span>
+      <span class="venture-dot" style="background:#374151;"></span>
+    </div>
+  </div>
+</section>
+<div class="annotation">Hero: Full viewport. Command Red. Manifesto in italic ghost text → rule → bold declaration. Ventures right-column, barely visible. Breathes.</div>
+
+<!-- IDENTITY STRIP -->
+<section class="identity">
+  <div class="section-label">What FN3 Is</div>
+  <div class="identity-grid">
+    <div>
+      <div class="identity-col-label">The Structure</div>
+      <div class="identity-col-text">A lean holding company where each business runs autonomously — sharing AI infrastructure, not management layers.</div>
+    </div>
+    <div>
+      <div class="identity-col-label">The Edge</div>
+      <div class="identity-col-text">The same system that runs our businesses is available to clients. One team. Multiple capabilities. No briefing overhead.</div>
+    </div>
+    <div>
+      <div class="identity-col-label">The Model</div>
+      <div class="identity-col-text">AI-first from day one. Each venture compounds the next. Decisions made with frameworks, not gut feel.</div>
+    </div>
+  </div>
+</section>
+<div class="annotation">Identity strip: Warm off-white (#fffbfb). No cards, no borders. Three columns. Label in pale red, body in near-black. Text breathes.</div>
+
+<!-- NUMBERS STRIP -->
+<section class="numbers">
+  <div class="numbers-grid">
+    <div class="number-cell">
+      <div class="number-val accent">5</div>
+      <div class="number-label">Ventures</div>
+    </div>
+    <div class="number-cell">
+      <div class="number-val">200<span style="font-size:36px;color:#3f3232;">+</span></div>
+      <div class="number-label">AI Agents (Vision)</div>
+    </div>
+    <div class="number-cell">
+      <div class="number-val">6</div>
+      <div class="number-label">Service Lines</div>
+    </div>
+    <div class="number-cell">
+      <div class="number-val">25</div>
+      <div class="number-label">Person HQ Target</div>
+    </div>
+  </div>
+</section>
+<div class="annotation">Numbers: Near-black (#0c0a0a). Serif numerals. First number in brand red — the ventures, the core claim. Count up on scroll entry. No cards.</div>
+
+<!-- CHAPTER ENTRY -->
+<section class="chapters">
+  <div class="chapters-label">Enter the site</div>
+  <div class="chapter-row">
+    <div class="chapter-left">
+      <span class="chapter-num">01</span>
+      <span class="chapter-title">What We Are</span>
+    </div>
+    <span class="chapter-sub">Philosophy + Structure →</span>
+  </div>
+  <div class="chapter-row">
+    <div class="chapter-left">
+      <span class="chapter-num">02</span>
+      <span class="chapter-title">What We've Built</span>
+    </div>
+    <span class="chapter-sub">Active Ventures →</span>
+  </div>
+  <div class="chapter-row">
+    <div class="chapter-left">
+      <span class="chapter-num">03</span>
+      <span class="chapter-title">How We Work</span>
+    </div>
+    <span class="chapter-sub">Services + Operating Model →</span>
+  </div>
+  <div class="chapter-row">
+    <div class="chapter-left">
+      <span class="chapter-num">04</span>
+      <span class="chapter-title cta">Work With Us</span>
+    </div>
+    <span class="chapter-sub">Get In Touch →</span>
+  </div>
+</section>
+<div class="annotation">Chapter entry: Pure white. Rows with top borders, hover turns warm off-white. "Work With Us" in brand red. No buttons — the rows ARE the navigation.</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">FN3</div>
+  <div class="footer-legal">© FlowNexis3 2025 — All Rights Reserved</div>
+</footer>
+<div class="annotation">Footer: Near-black. FN3 in brand red. Minimal. No social icons cluster.</div>
+
+</body>
+</html>
