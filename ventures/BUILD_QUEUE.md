@@ -15,7 +15,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V1: FN3 Agency — "AI Workforce, Deployed"
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/fn3-agency/
 **Type:** B2B Service + Landing Page
 **Revenue Model:** $2,000-5,000 setup + $500-1,500/month
 **Target:** SMBs that want AI employees, not AI tools
@@ -35,7 +35,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V2: The Agency AI OS — "Run Your AI Agency Like a Machine"
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/agency-ai-os/
 **Type:** Premium Digital Product (Gumroad + Whop)
 **Revenue Model:** $297 base / $597 complete / $997 with templates
 **Target:** Consultants and agencies wanting to productize AI services
@@ -54,7 +54,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V3: AI Tools Compass — "The AI Tools Intelligence Hub for [Vertical]"
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/ai-tools-compass/
 **Type:** Programmatic SEO + Affiliate
 **Revenue Model:** Affiliate commissions ($50-500 per referral)
 **Verticals to build (one site each):**
@@ -75,7 +75,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V4: The Operators Brief — "What Actually Works in AI Operations"
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/operators-brief/
 **Type:** Newsletter + Digital Products
 **Revenue Model:** $15/month subscription + $97 paid archive access
 **Target:** Business operators, AI practitioners, agency owners who want signal not noise
@@ -93,7 +93,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V5: Profession AI Command Centers — "AI Built for How You Actually Work"
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/profession-command-centers/
 **Type:** Premium Digital Products (Gumroad, $97-147 each)
 **Professions to build:**
   - Real Estate Agents ($127)
@@ -112,7 +112,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V6: LexiKit — AI Contract Analyzer
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/lexikit/
 **Type:** Micro-SaaS web app
 **Revenue Model:** $29/month (individual) / $79/month (team)
 **Target:** Freelancers and consultants who sign contracts they don't fully understand
@@ -131,7 +131,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V7: PropertyMind — AI Operations for Property Managers
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/propertymind/
 **Type:** Vertical SaaS / Managed Service
 **Revenue Model:** $149/month (up to 50 units) / $299/month (up to 200 units)
 **Target:** Independent property managers and small PMCs (not enterprise)
@@ -150,7 +150,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V8: ComplianceAI — HIPAA Compliance Automation for Healthcare
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/compliance-ai/
 **Type:** Vertical SaaS
 **Revenue Model:** $199/month per practice
 **Target:** Solo practitioners, therapy practices, small clinics that need HIPAA compliance but can't afford a compliance officer
@@ -170,7 +170,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V9: InvoiceFlow — AI Invoice Processing for Accounting Firms
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/invoice-flow/
 **Type:** Vertical SaaS
 **Revenue Model:** $149/month (up to 500 invoices) / $299/month (unlimited)
 **Target:** Small-to-mid accounting firms and bookkeeping services drowning in manual invoice processing
@@ -190,7 +190,7 @@ Not minimum viable. MARKET LEADING. Every product ships at v100 — best in clas
 ---
 
 ### V10: E-commerce Ops Brain — AI Operations for E-commerce Merchants
-**Status:** [ ] Not Started
+**Status:** [x] IN PROGRESS — agent building at /ventures/ecommerce-ops-brain/
 **Type:** Vertical SaaS / Managed AI
 **Revenue Model:** $199/month (starter) / $399/month (pro)
 **Target:** Independent Shopify/WooCommerce merchants doing $10K-500K/month who are operationally overwhelmed

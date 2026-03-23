@@ -33,7 +33,7 @@ export function ContactSection() {
           {paths.map((path) => (
             <div key={path.label} className="border-t border-fn3-red-faint pt-5 lg:w-[200px]">
               <p className="label-mono text-fn3-red-light mb-2">{path.label}</p>
-              <p className="text-[13px] text-[#78716c] leading-[1.6]">{path.text}</p>
+              <p className="text-[14px] text-[#78716c] leading-[1.6]">{path.text}</p>
             </div>
           ))}
         </div>

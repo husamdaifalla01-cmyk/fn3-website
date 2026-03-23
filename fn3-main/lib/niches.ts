@@ -3,6 +3,8 @@ export interface NicheData {
   name: string
   tagline: string
   description: string
+  industry: string
+  targetAudience: string[]
   painPoints: string[]
   solutions: string[]
   metrics: {
@@ -20,14 +22,8 @@ export interface NicheData {
     primary: string
     secondary: string
   }
-  color: {
-    primary: string
-    secondary: string
-    gradient: string
-  }
-  icon: string
-  industry: string
-  targetAudience: string[]
+  sectorLabel: string
+  heroTitle: string
 }
 
 export const niches: NicheData[] = [
@@ -70,21 +66,17 @@ export const niches: NicheData[] = [
       }
     ],
     cta: {
-      primary: 'Schedule Practice Assessment',
-      secondary: 'View Case Studies'
+      primary: 'Bring FN3 Into Your Practice',
+      secondary: 'Work With Us →'
     },
-    color: {
-      primary: 'from-teal-500 to-cyan-600',
-      secondary: 'from-teal-50 to-cyan-50',
-      gradient: 'bg-gradient-to-br from-teal-500 to-cyan-600'
-    },
-    icon: 'Tooth',
     testimonial: {
-      quote: "FN3 Hive transformed our practice efficiency. We're seeing 35% more patients with the same staff.",
+      quote: "FN3 transformed our practice efficiency. We're seeing 35% more patients with the same staff.",
       author: "Dr. Sarah Chen",
       role: "Practice Owner",
       company: "Elite Dental Care"
-    }
+    },
+    sectorLabel: 'Operational Intelligence — Dental',
+    heroTitle: 'Operations That Fill Chairs'
   },
   {
     id: 'wealth',
@@ -125,21 +117,17 @@ export const niches: NicheData[] = [
       }
     ],
     cta: {
-      primary: 'Book Strategy Session',
-      secondary: 'Download ROI Calculator'
+      primary: 'Bring FN3 Into Your Firm',
+      secondary: 'Work With Us →'
     },
-    color: {
-      primary: 'from-emerald-500 to-green-600',
-      secondary: 'from-emerald-50 to-green-50',
-      gradient: 'bg-gradient-to-br from-emerald-500 to-green-600'
-    },
-    icon: 'TrendingUp',
     testimonial: {
       quote: "Our AUM grew 150% in 18 months thanks to FN3's automation. I can finally focus on my clients.",
       author: "Michael Rodriguez",
       role: "Senior Advisor",
       company: "Summit Wealth Partners"
-    }
+    },
+    sectorLabel: 'Operational Intelligence — Wealth Management',
+    heroTitle: 'Operations That Free Advisors'
   },
   {
     id: 'law',
@@ -180,21 +168,17 @@ export const niches: NicheData[] = [
       }
     ],
     cta: {
-      primary: 'Request Firm Demo',
-      secondary: 'View Success Stories'
+      primary: 'Bring FN3 Into Your Firm',
+      secondary: 'Work With Us →'
     },
-    color: {
-      primary: 'from-blue-500 to-indigo-600',
-      secondary: 'from-blue-50 to-indigo-50',
-      gradient: 'bg-gradient-to-br from-blue-500 to-indigo-600'
-    },
-    icon: 'Scale',
     testimonial: {
-      quote: "FN3 Hive reduced our document review time by 75%. We're closing cases faster than ever.",
+      quote: "FN3 reduced our document review time by 75%. We're closing cases faster than ever.",
       author: "Jennifer Walsh",
       role: "Managing Partner",
       company: "Walsh & Associates"
-    }
+    },
+    sectorLabel: 'Operational Intelligence — Legal',
+    heroTitle: 'Operations That Close Cases Faster'
   },
   {
     id: 'clinics',
@@ -235,21 +219,17 @@ export const niches: NicheData[] = [
       }
     ],
     cta: {
-      primary: 'Schedule Clinic Walkthrough',
-      secondary: 'Download Patient Flow Guide'
+      primary: 'Bring FN3 Into Your Clinic',
+      secondary: 'Work With Us →'
     },
-    color: {
-      primary: 'from-purple-500 to-violet-600',
-      secondary: 'from-purple-50 to-violet-50',
-      gradient: 'bg-gradient-to-br from-purple-500 to-violet-600'
-    },
-    icon: 'Heart',
     testimonial: {
       quote: "Patient satisfaction scores increased 40% after implementing FN3. Flow is everything in urgent care.",
       author: "Dr. Amanda Foster",
       role: "Medical Director",
       company: "CityMed Urgent Care"
-    }
+    },
+    sectorLabel: 'Operational Intelligence — Healthcare',
+    heroTitle: 'Operations That Move Patients Through'
   },
   {
     id: 'trades',
@@ -290,21 +270,17 @@ export const niches: NicheData[] = [
       }
     ],
     cta: {
-      primary: 'Book Shop Assessment',
-      secondary: 'View ROI Calculator'
+      primary: 'Bring FN3 Into Your Shop',
+      secondary: 'Work With Us →'
     },
-    color: {
-      primary: 'from-orange-500 to-red-600',
-      secondary: 'from-orange-50 to-red-50',
-      gradient: 'bg-gradient-to-br from-orange-500 to-red-600'
-    },
-    icon: 'Wrench',
     testimonial: {
       quote: "FN3 helped us increase revenue per bay by 40% while cutting parts costs. Game-changing results.",
       author: "Carlos Mendez",
       role: "Shop Owner",
       company: "Elite Auto Service"
-    }
+    },
+    sectorLabel: 'Operational Intelligence — Trades & Auto',
+    heroTitle: 'Operations That Maximize Every Bay'
   }
 ]
 

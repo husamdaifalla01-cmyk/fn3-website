@@ -33,7 +33,7 @@ export function MethodSection() {
         <FadeInSection delay={0.1}>
           <p className="text-[15px] text-[#78716c] leading-[1.8] lg:pt-2">
             FN3 built an operational intelligence layer to run its own portfolio.
-            Every tool, agent, and system was designed to be externalizable from day one.
+            Every tool, agent, and system was designed to be deployed externally from day one.
             What powers our ventures powers our clients.
           </p>
         </FadeInSection>
@@ -46,7 +46,7 @@ export function MethodSection() {
             <div className="bg-fn3-warm-white border border-fn3-red-faint p-7">
               <p className="label-mono text-fn3-red-light mb-3">{cap.num}</p>
               <h3 className="text-[15px] font-bold text-[#1c1917] mb-2">{cap.title}</h3>
-              <p className="text-[13px] text-[#9ca3af] leading-[1.65]">{cap.body}</p>
+              <p className="text-[14px] text-[#78716c] leading-[1.65]">{cap.body}</p>
             </div>
           </FadeInSection>
         ))}
