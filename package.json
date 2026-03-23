@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@roychri/mcp-server-asana": "^1.7.0"
+    "@roychri/mcp-server-asana": "^1.7.0",
+    "@supabase/supabase-js": "^2.99.3",
+    "dotenv": "^17.3.1"
   }
 }

@@ -18,24 +18,24 @@ export function Nav({ variant = 'home' }: NavProps) {
 
   return (
     <header className="sticky top-0 z-50 bg-fn3-red">
-      <nav className="flex items-center justify-between h-[52px] px-6 lg:px-12">
+      <nav className="flex items-center justify-between h-[60px] px-6 lg:px-12">
 
         {/* Logo */}
         <Link
           href="/"
-          className="font-mono text-[15px] font-bold text-white tracking-[0.05em]"
+          className="font-mono text-[18px] font-bold text-white tracking-[0.05em]"
         >
           FN3
         </Link>
 
-        {/* Desktop centre — home variant shows chapter links, chapter variant shows back */}
-        <div className="hidden lg:flex items-center gap-9">
+        {/* Desktop centre */}
+        <div className="hidden lg:flex items-center gap-10">
           {variant === 'home' ? (
             chapters.map((ch) => (
               <Link
                 key={ch.href}
                 href={ch.href}
-                className="font-mono text-[11px] uppercase tracking-[0.12em] text-white/50 hover:text-white transition-colors duration-150"
+                className="font-mono text-[13px] uppercase tracking-[0.1em] text-white/70 hover:text-white transition-colors duration-150"
               >
                 {ch.label}
               </Link>
@@ -43,7 +43,7 @@ export function Nav({ variant = 'home' }: NavProps) {
           ) : (
             <Link
               href="/"
-              className="font-mono text-[11px] uppercase tracking-[0.12em] text-white/50 hover:text-white transition-colors duration-150"
+              className="font-mono text-[13px] uppercase tracking-[0.1em] text-white/70 hover:text-white transition-colors duration-150"
             >
               ← Back to Home
             </Link>
@@ -54,7 +54,7 @@ export function Nav({ variant = 'home' }: NavProps) {
         <div className="hidden lg:block">
           <Link
             href="/work-with-us"
-            className="font-mono text-[11px] uppercase tracking-[0.12em] text-white border-b border-white/60 hover:border-white pb-px transition-colors duration-150"
+            className="font-mono text-[13px] uppercase tracking-[0.1em] text-white border-b border-white/60 hover:border-white pb-px transition-colors duration-150"
           >
             Work With Us →
           </Link>
@@ -87,7 +87,7 @@ export function Nav({ variant = 'home' }: NavProps) {
           {variant === 'chapter' && (
             <Link
               href="/"
-              className="block px-6 py-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/50 hover:text-white transition-colors duration-150"
+              className="block px-6 py-4 font-mono text-[13px] uppercase tracking-[0.1em] text-white/70 hover:text-white transition-colors duration-150"
               onClick={() => setMobileOpen(false)}
             >
               ← Back to Home
@@ -97,7 +97,7 @@ export function Nav({ variant = 'home' }: NavProps) {
             <Link
               key={ch.href}
               href={ch.href}
-              className="block px-6 py-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white/50 hover:text-white transition-colors duration-150 border-t border-white/5"
+              className="block px-6 py-4 font-mono text-[13px] uppercase tracking-[0.1em] text-white/70 hover:text-white transition-colors duration-150 border-t border-white/5"
               onClick={() => setMobileOpen(false)}
             >
               {ch.label}
@@ -105,7 +105,7 @@ export function Nav({ variant = 'home' }: NavProps) {
           ))}
           <Link
             href="/work-with-us"
-            className="block px-6 py-4 font-mono text-[11px] uppercase tracking-[0.12em] text-white hover:text-white/80 transition-colors duration-150 border-t border-white/15"
+            className="block px-6 py-4 font-mono text-[13px] uppercase tracking-[0.1em] text-white hover:text-white/80 transition-colors duration-150 border-t border-white/15"
             onClick={() => setMobileOpen(false)}
           >
             Work With Us →

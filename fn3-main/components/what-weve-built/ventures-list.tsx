@@ -51,7 +51,7 @@ export function VenturesList() {
               {/* Name + sector */}
               <div>
                 <h3 className="text-[22px] font-bold text-[#1c1917] tracking-tight mb-2">{v.name}</h3>
-                <p className="label-mono text-[#d1d5db]">{v.sector}</p>
+                <p className="label-mono text-[#9ca3af]">{v.sector}</p>
               </div>
               {/* Description */}
               <p className="text-[14px] text-[#78716c] leading-[1.75]">{v.desc}</p>

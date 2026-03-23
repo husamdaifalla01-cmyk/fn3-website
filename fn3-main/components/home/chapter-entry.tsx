@@ -12,7 +12,7 @@ export function ChapterEntry() {
   return (
     <section className="bg-white px-6 lg:px-12 py-20">
       <FadeInSection>
-        <p className="label-mono text-[#d1d5db] mb-10">Enter the site</p>
+        <p className="label-mono text-[#9ca3af] mb-10">Enter the site</p>
       </FadeInSection>
       <div>
         {chapters.map((ch, i) => (
@@ -22,7 +22,7 @@ export function ChapterEntry() {
               className="flex items-center justify-between py-6 border-t border-[#f3f4f6] last:border-b hover:bg-fn3-warm-white transition-colors duration-150 -mx-6 lg:-mx-12 px-6 lg:px-12"
             >
               <div className="flex items-center gap-5">
-                <span className="font-mono text-[10px] text-[#d1d5db] w-6">{ch.num}</span>
+                <span className="font-mono text-[10px] text-[#9ca3af] w-6">{ch.num}</span>
                 <span className={`text-[22px] font-bold tracking-tight ${ch.accent ? 'text-fn3-red' : 'text-[#111]'}`}>
                   {ch.title}
                 </span>
