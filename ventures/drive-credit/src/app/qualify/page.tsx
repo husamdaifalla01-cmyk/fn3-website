@@ -238,6 +238,26 @@ export default function QualifyPage() {
                   The eligibility check is completely free and won&apos;t hurt your credit score.
                 </p>
               </div>
+
+              {/* Social proof trust strip */}
+              <div
+                className="rounded-xl px-4 py-3 mb-4 flex flex-col gap-2"
+                style={{ background: 'rgba(52,211,153,0.07)', border: '1px solid rgba(52,211,153,0.15)' }}
+              >
+                <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                  <span style={{ color: '#34d399' }}>✓</span>
+                  <span><strong style={{ color: 'white' }}>83% of applicants</strong> who own a car get approved for $1,000+</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                  <span style={{ color: '#34d399' }}>✓</span>
+                  <span><strong style={{ color: 'white' }}>No hard pull</strong> — your credit score is safe</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.65)' }}>
+                  <span style={{ color: '#34d399' }}>✓</span>
+                  <span><strong style={{ color: 'white' }}>2-minute check</strong> — see your limit instantly</span>
+                </div>
+              </div>
+
               <button
                 onClick={handleYendoClick}
                 className="w-full py-4 rounded-xl font-bold text-white text-base mb-3 transition-all active:scale-95"
