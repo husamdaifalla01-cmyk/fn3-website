@@ -219,7 +219,7 @@ export default function QualifyPage() {
                 className="w-full py-4 rounded-xl font-bold text-white text-base mb-3 transition-all active:scale-95"
                 style={{ background: '#d97706' }}
               >
-                Check My Credit Limit →
+                See If My Car Qualifies →
               </button>
               <p className="text-xs text-center" style={{ color: 'rgba(255,255,255,0.3)' }}>
                 Soft pull only &bull; No effect on credit score &bull; Takes 2 minutes
