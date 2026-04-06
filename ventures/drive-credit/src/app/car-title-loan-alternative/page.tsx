@@ -242,6 +242,14 @@ export default function CarTitleLoanAlternativePage() {
         <p style={{ color: '#57534e', fontSize: '0.78rem', marginTop: 16, lineHeight: 1.6 }}>
           Mintbrooks is an independent educational resource. We are not a lender. Mintbrooks may earn a commission when you apply through our links at no extra cost to you. Not financial advice.
         </p>
+        <div style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+          <p style={{ color: '#78716c', fontSize: '0.78rem', fontWeight: 700, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Related Guides</p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <Link href="/auto-equity-loan" style={{ color: '#d97706', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none' }}>→ Auto Equity Loan: Use Your Car&apos;s Value to Get Cash</Link>
+            <Link href="/bad-credit-credit-card" style={{ color: '#d97706', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none' }}>→ Best Credit Cards for Bad Credit — Ranked by Real Approval Odds</Link>
+            <Link href="/yendo-states-guide" style={{ color: '#d97706', fontSize: '0.9rem', fontWeight: 600, textDecoration: 'none' }}>→ Is Yendo Available in Your State?</Link>
+          </div>
+        </div>
       </section>
 
       {/* Schema */}
