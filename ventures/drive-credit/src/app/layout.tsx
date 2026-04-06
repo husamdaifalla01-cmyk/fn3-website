@@ -40,20 +40,11 @@ export const metadata: Metadata = {
     description: "Turn your car into a credit line. No hard credit pull to check eligibility.",
     type: "website",
     url: SITE_URL,
-    images: [
-      {
-        url: `${SITE_URL}/og-default.png`,
-        width: 1200,
-        height: 630,
-        alt: "Mintbrooks — Car-Secured Credit Cards for Bad Credit",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mintbrooks — Use Your Car to Get a Real Credit Card",
     description: "Turn your car into a credit line. No hard credit pull to check eligibility.",
-    images: [`${SITE_URL}/og-default.png`],
   },
 };
 
