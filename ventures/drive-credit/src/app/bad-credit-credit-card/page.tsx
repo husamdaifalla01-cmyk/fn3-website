@@ -111,6 +111,9 @@ export default function BadCreditPage() {
             <Link href="/yendo-states-guide" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
               → Is Yendo Available in Your State? (37-State Eligibility Guide)
             </Link>
+            <Link href="/auto-equity-loan" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
+              → Auto Equity Loan: Use Your Car&apos;s Value to Get Cash
+            </Link>
           </div>
         </div>
 
