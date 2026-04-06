@@ -97,3 +97,9 @@ export const YENDO_CREDIT_BUILDER_HERO = buildAffiliateUrl(OFFERS.yendo.url, 'or
 export const YENDO_CREDIT_BUILDER_MID  = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'seo', 'credit-builder-mid')
 export const YENDO_CREDIT_BUILDER_CTA  = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'seo', 'credit-builder-cta')
 export const SLAM_DUNK_CREDIT_BUILDER  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'credit-builder-fallback')
+
+// ─── Secured credit card bad credit guide ───────────────────────────────────
+export const YENDO_SECURED_HERO  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'secured-card-hero')
+export const YENDO_SECURED_MID   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'secured-card-mid')
+export const YENDO_SECURED_CTA   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'secured-card-cta')
+export const SLAM_DUNK_SECURED   = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'secured-card-fallback')
