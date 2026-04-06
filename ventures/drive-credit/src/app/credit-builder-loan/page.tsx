@@ -135,6 +135,9 @@ export default function CreditBuilderLoanPage() {
           >
             Check If My Car Qualifies — No Credit Pull →
           </AffiliateLink>
+          <p className="text-xs mt-2" style={{ color: 'rgba(168,162,158,0.7)' }}>
+            Affiliate disclosure: We may earn a commission if you apply through our links.
+          </p>
         </div>
 
         {/* What is a credit builder loan */}
