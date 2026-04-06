@@ -246,7 +246,7 @@ export default function QualifyPage() {
               >
                 <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   <span style={{ color: '#34d399' }}>✓</span>
-                  <span><strong style={{ color: 'white' }}>83% of applicants</strong> who own a car get approved for $1,000+</span>
+                  <span><strong style={{ color: 'white' }}>Most car owners</strong> who apply get approved for $1,000+</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs" style={{ color: 'rgba(255,255,255,0.65)' }}>
                   <span style={{ color: '#34d399' }}>✓</span>
