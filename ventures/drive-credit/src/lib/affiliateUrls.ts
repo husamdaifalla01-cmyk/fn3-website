@@ -85,3 +85,9 @@ export { buildAffiliateUrl }
 // ─── Qualify quiz page ────────────────────────────────────────────────────────
 export const YENDO_QUALIFY_QUIZ       = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'social', 'qualify-quiz-result')
 export const SLAM_DUNK_QUALIFY_QUIZ   = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'social', 'qualify-quiz-fallback')
+
+// ─── Yendo States Guide page ───────────────────────────────────────────────
+export const YENDO_STATES_HERO  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'states-guide-hero')
+export const YENDO_STATES_TABLE = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'states-guide-table')
+export const YENDO_STATES_CTA   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'states-guide-cta')
+export const SLAM_DUNK_STATES   = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'states-guide-fallback')

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { OFFERS, buildAffiliateUrl } from '@/lib/offers'
 import { trackAffiliateClick, appendClickId } from '@/lib/analytics'
 
@@ -42,6 +42,22 @@ function ProgressBar({ step }: { step: number }) {
 export default function QualifyPage() {
   const [step, setStep] = useState<Step>(1)
   const [state, setState] = useState('')
+  const [geoDetected, setGeoDetected] = useState(false)
+
+  // Auto-detect state from IP on mount
+  useEffect(() => {
+    fetch('/api/geo')
+      .then((r) => r.json())
+      .then((data: { state: string | null; eligible: boolean | null }) => {
+        if (data.state) {
+          setState(data.state)
+          setGeoDetected(true)
+        }
+      })
+      .catch(() => {
+        // Silently fail — user selects manually
+      })
+  }, [])
 
   const YENDO_QUALIFY = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'social', 'qualify-quiz-result')
   const SLAM_QUALIFY = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'social', 'qualify-quiz-fallback')
@@ -123,6 +139,14 @@ export default function QualifyPage() {
               </h1>
               <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>
                 Eligibility varies by state.
+                {geoDetected && (
+                  <span
+                    className="ml-2 inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full"
+                    style={{ background: 'rgba(52,211,153,0.15)', color: '#34d399' }}
+                  >
+                    📍 Auto-detected
+                  </span>
+                )}
               </p>
               <select
                 value={state}
