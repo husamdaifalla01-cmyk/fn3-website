@@ -355,7 +355,7 @@ export default function FirstCreditCardBadCreditPage() {
             </AffiliateLink>
           </div>
           <p className="mt-3 text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            #ad — Mintbrooks may earn a commission from referrals. Results not guaranteed.
+            #ad — Mintbrooks may earn a commission from referrals. Results not guaranteed. This is not financial advice. Always verify current terms directly with the card issuer before applying.
           </p>
         </section>
 
