@@ -39,6 +39,64 @@ function ProgressBar({ step }: { step: number }) {
   )
 }
 
+const WHAT_HAPPENS_NEXT = [
+  {
+    q: 'What happens after I click the button?',
+    a: "You'll land on Yendo's secure website. They'll ask for your car's make, model, year, and mileage to estimate your equity — no money, no commitment, no impact on your credit score.",
+  },
+  {
+    q: 'Will this hurt my credit score?',
+    a: "No. Yendo's eligibility check is a soft pull only. It does not appear on your credit report and has zero impact on your score.",
+  },
+  {
+    q: 'How long does it take?',
+    a: "About 2 minutes. You'll see your estimated credit limit on the spot. If you want to move forward with a full application, that step takes another 5–10 minutes.",
+  },
+  {
+    q: 'What if my car has a lien?',
+    a: "Yendo can still work with cars that have a lien — as long as you have equity in the vehicle. They'll assess your payoff balance and remaining equity during the check.",
+  },
+]
+
+function WhatHappensNext() {
+  const [open, setOpen] = useState<number | null>(null)
+  return (
+    <div className="mt-5">
+      <p className="text-xs font-semibold mb-3" style={{ color: 'rgba(255,255,255,0.35)', letterSpacing: '0.07em' }}>
+        WHAT HAPPENS NEXT
+      </p>
+      <div className="flex flex-col gap-2">
+        {WHAT_HAPPENS_NEXT.map((item, i) => (
+          <div
+            key={i}
+            className="rounded-xl overflow-hidden"
+            style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.07)' }}
+          >
+            <button
+              onClick={() => setOpen(open === i ? null : i)}
+              className="w-full flex items-center justify-between px-4 py-3 text-left"
+            >
+              <span className="text-xs font-semibold" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                {item.q}
+              </span>
+              <span className="ml-3 flex-shrink-0 text-xs" style={{ color: '#d97706' }}>
+                {open === i ? '▲' : '▼'}
+              </span>
+            </button>
+            {open === i && (
+              <div className="px-4 pb-3">
+                <p className="text-xs leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  {item.a}
+                </p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function QualifyPage() {
   const [step, setStep] = useState<Step>(1)
   const [state, setState] = useState('')
@@ -271,6 +329,7 @@ export default function QualifyPage() {
               <p className="text-xs text-center mt-4" style={{ color: 'rgba(255,255,255,0.2)' }}>
                 #ad &bull; Mintbrooks may earn a commission from referrals at no cost to you.
               </p>
+              <WhatHappensNext />
             </>
           )}
 
