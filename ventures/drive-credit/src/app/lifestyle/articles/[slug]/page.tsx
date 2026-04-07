@@ -149,12 +149,6 @@ function getRelated(article: Article): Article[] {
   ).slice(0, 3)
 }
 
-// ─── generateStaticParams ─────────────────────────────────────────────────────
-
-export async function generateStaticParams() {
-  return ALL_ARTICLES.map((a) => ({ slug: a.slug }))
-}
-
 // ─── generateMetadata ─────────────────────────────────────────────────────────
 
 export async function generateMetadata({
