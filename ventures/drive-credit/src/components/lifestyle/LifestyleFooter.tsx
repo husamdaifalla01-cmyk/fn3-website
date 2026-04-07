@@ -6,28 +6,28 @@ const SECTIONS = [
   {
     heading: 'Explore',
     links: [
-      { label: 'Home & Decor', href: '/lifestyle#home' },
-      { label: 'Wellness', href: '/lifestyle#wellness' },
-      { label: 'Beauty', href: '/lifestyle#beauty' },
-      { label: 'Kitchen', href: '/lifestyle#kitchen' },
-      { label: 'Money & Credit', href: '/lifestyle#finance' },
+      { label: 'Home & Decor', href: '/#home' },
+      { label: 'Wellness', href: '/#wellness' },
+      { label: 'Beauty', href: '/#beauty' },
+      { label: 'Kitchen', href: '/#kitchen' },
+      { label: 'Money & Credit', href: '/#finance' },
     ],
   },
   {
     heading: 'Mintbrooks',
     links: [
-      { label: 'About', href: '/lifestyle/about' },
-      { label: 'Newsletter', href: '/lifestyle#newsletter' },
+      { label: 'About', href: '/about' },
+      { label: 'Newsletter', href: '/#newsletter' },
       { label: 'Pinterest', href: 'https://pinterest.com/mintbrooks' },
-      { label: 'Advertise', href: '/lifestyle/advertise' },
+      { label: 'Advertise', href: '/advertise' },
     ],
   },
   {
     heading: 'Legal',
     links: [
-      { label: 'Affiliate Disclosure', href: '/links' },
-      { label: 'Privacy Policy', href: '/lifestyle/privacy' },
-      { label: 'Terms', href: '/lifestyle/terms' },
+      { label: 'Affiliate Disclosure', href: '/finance/links' },
+      { label: 'Privacy Policy', href: '/privacy' },
+      { label: 'Terms', href: '/terms' },
     ],
   },
 ]

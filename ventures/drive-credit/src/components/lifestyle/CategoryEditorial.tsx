@@ -308,7 +308,7 @@ export default function CategoryEditorial({
           </p>
         </div>
         <Link
-          href="/lifestyle/articles"
+          href="/articles"
           style={{
             fontSize: '11px',
             fontWeight: 700,

@@ -38,7 +38,7 @@ export default function WellnessEmailCapture() {
       {/* Background image at 18% opacity */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <Image
-          src="/lifestyle/newsletter.jpg"
+          src="/newsletter.jpg"
           alt=""
           fill
           sizes="100vw"

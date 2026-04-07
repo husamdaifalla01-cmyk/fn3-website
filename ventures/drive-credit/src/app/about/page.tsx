@@ -171,7 +171,7 @@ export default function AboutPage() {
             }}
           >
             <Image
-              src="/lifestyle/editorial.jpg"
+              src="/editorial.jpg"
               alt="Editorial workspace at Mintbrooks"
               fill
               style={{ objectFit: 'cover' }}

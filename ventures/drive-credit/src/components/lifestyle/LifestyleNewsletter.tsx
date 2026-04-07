@@ -38,7 +38,7 @@ export default function LifestyleNewsletter() {
       {/* Background image — v2: stronger overlay so text is always legible */}
       <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <Image
-          src="/lifestyle/newsletter.jpg"
+          src="/newsletter.jpg"
           alt=""
           fill
           sizes="100vw"

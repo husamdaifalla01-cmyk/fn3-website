@@ -3,7 +3,7 @@ import { Playfair_Display } from 'next/font/google'
 import Image from 'next/image'
 import LifestyleNav from '@/components/lifestyle/LifestyleNav'
 import LifestyleFooter from '@/components/lifestyle/LifestyleFooter'
-import BeautyEmailCapture from './BeautyEmailCapture'
+import KitchenEmailCapture from './KitchenEmailCapture'
 import { getProductsByCategory } from '@/lib/lifestyle/products'
 import { EDITORIAL_ARTICLES } from '@/lib/lifestyle/articles-editorial'
 import ProductGrid from '@/components/lifestyle/ProductGrid'
@@ -16,30 +16,30 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'Beauty & Skincare',
+  title: 'Kitchen & Cooking',
   description:
-    'Honest skincare reviews, clean beauty guides, and the products that actually earn a place in your routine.',
-  alternates: { canonical: 'https://mintbrooks.com/lifestyle/beauty' },
+    'Kitchen gear guides, coffee bar setups, and the cookware that earns its place in your home.',
+  alternates: { canonical: 'https://mintbrooks.com/lifestyle/kitchen' },
   openGraph: {
-    title: 'Beauty & Skincare — Mintbrooks',
+    title: 'Kitchen & Cooking — Mintbrooks',
     description:
-      'Honest skincare reviews, clean beauty guides, and the products that actually earn a place in your routine.',
+      'Kitchen gear guides, coffee bar setups, and the cookware that earns its place in your home.',
     type: 'website',
-    url: 'https://mintbrooks.com/lifestyle/beauty',
-    images: [{ url: 'https://mintbrooks.com/lifestyle/beauty.jpg', width: 1200, height: 630, alt: 'Mintbrooks Beauty & Skincare' }],
+    url: 'https://mintbrooks.com/lifestyle/kitchen',
+    images: [{ url: 'https://mintbrooks.com/lifestyle/kitchen.jpg', width: 1200, height: 630, alt: 'Mintbrooks Kitchen & Cooking' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Beauty & Skincare — Mintbrooks',
+    title: 'Kitchen & Cooking — Mintbrooks',
     description:
-      'Honest skincare reviews, clean beauty guides, and the products that actually earn a place in your routine.',
-    images: ['https://mintbrooks.com/lifestyle/beauty.jpg'],
+      'Kitchen gear guides, coffee bar setups, and the cookware that earns its place in your home.',
+    images: ['https://mintbrooks.com/lifestyle/kitchen.jpg'],
   },
 }
 
-export default async function BeautyPage() {
-  const products = getProductsByCategory('beauty', 12)
-  const articles = EDITORIAL_ARTICLES.filter(a => a.categorySlug === 'beauty')
+export default async function KitchenPage() {
+  const products = getProductsByCategory('kitchen', 12)
+  const articles = EDITORIAL_ARTICLES.filter(a => a.categorySlug === 'kitchen')
   return (
     <div
       className={playfair.variable}
@@ -70,20 +70,20 @@ export default async function BeautyPage() {
       >
         {/* Background image */}
         <Image
-          src="/lifestyle/beauty.jpg"
-          alt="Beauty & Skincare"
+          src="/kitchen.jpg"
+          alt="Kitchen & Cooking"
           fill
           priority
-          style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+          style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
         />
 
-        {/* Gradient overlay — cream from bottom */}
+        {/* Gradient overlay — warm cream from bottom */}
         <div
           style={{
             position: 'absolute',
             inset: 0,
             background:
-              'linear-gradient(to bottom, rgba(253,250,246,0.08) 0%, rgba(253,250,246,0.35) 40%, rgba(253,250,246,0.82) 70%, rgba(253,250,246,0.97) 100%)',
+              'linear-gradient(to bottom, rgba(247,244,239,0.06) 0%, rgba(247,244,239,0.32) 40%, rgba(247,244,239,0.82) 70%, rgba(247,244,239,0.97) 100%)',
             zIndex: 1,
           }}
         />
@@ -113,11 +113,11 @@ export default async function BeautyPage() {
               padding: '6px 16px',
               borderRadius: '100px',
               marginBottom: '24px',
-              background: 'rgba(253,250,246,0.7)',
+              background: 'rgba(247,244,239,0.75)',
               backdropFilter: 'blur(4px)',
             }}
           >
-            Beauty
+            Kitchen
           </div>
 
           {/* Headline */}
@@ -133,9 +133,9 @@ export default async function BeautyPage() {
               margin: '0 0 20px',
             }}
           >
-            Your skin,
+            Cook like you
             <br />
-            <em style={{ fontStyle: 'italic' }}>on purpose.</em>
+            <em style={{ fontStyle: 'italic' }}>mean it.</em>
           </h1>
 
           {/* Subheadline */}
@@ -149,14 +149,13 @@ export default async function BeautyPage() {
               maxWidth: '520px',
             }}
           >
-            Clean, effective, worth every penny — and we test everything
-            before recommending it.
+            The gear, the method, the aesthetic. Curated for people who actually use their kitchen.
           </p>
 
           {/* Scroll CTA */}
           <a
-            href="#beauty-articles"
-            className="ls-fade-up ls-fade-delay-3 ls-cta-btn"
+            href="#kitchen-articles"
+            className="ls-fade-up ls-fade-delay-3 ls-hero-cta"
             style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -170,7 +169,7 @@ export default async function BeautyPage() {
               textDecoration: 'none',
               padding: '16px 36px',
               borderRadius: '100px',
-              transition: 'background 0.25s, transform 0.2s',
+              transition: 'background 0.25s',
             }}
           >
             Explore the edit
@@ -189,8 +188,8 @@ export default async function BeautyPage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <CategoryEditorial
             articles={articles}
-            categoryLabel="Beauty"
-            categorySlug="beauty"
+            categoryLabel="Kitchen"
+            categorySlug="kitchen"
           />
         </div>
       </section>
@@ -231,7 +230,7 @@ export default async function BeautyPage() {
           </div>
           <ProductGrid
             products={products}
-            category={'beauty'}
+            category={'kitchen'}
             limit={12}
             showHeader={false}
           />
@@ -242,7 +241,8 @@ export default async function BeautyPage() {
       <section
         style={{
           padding: 'clamp(60px, 8vw, 120px) clamp(20px, 5vw, 80px)',
-          background: '#1D3A2F',
+          background: '#F7F4EF',
+          borderTop: '1px solid rgba(26,23,20,0.06)',
         }}
       >
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -266,7 +266,7 @@ export default async function BeautyPage() {
                   margin: 0,
                 }}
               >
-                Our approach
+                Our philosophy
               </p>
               <h2
                 style={{
@@ -274,29 +274,40 @@ export default async function BeautyPage() {
                   fontSize: 'clamp(30px, 4vw, 48px)',
                   fontWeight: 700,
                   letterSpacing: '-0.02em',
-                  color: '#FDFAF6',
+                  color: '#1A1714',
                   margin: 0,
                   lineHeight: 1.15,
                 }}
               >
-                The Mintbrooks Skincare Framework
+                The Mintbrooks Kitchen Philosophy
               </h2>
+              <div
+                style={{
+                  fontFamily: '"Playfair Display", Georgia, serif',
+                  fontSize: 'clamp(22px, 3vw, 32px)',
+                  fontWeight: 700,
+                  fontStyle: 'italic',
+                  color: '#4A5E2C',
+                  lineHeight: 1.2,
+                }}
+              >
+                &ldquo;Buy it once. Buy it right.&rdquo;
+              </div>
               <p
                 style={{
                   fontSize: '16px',
                   lineHeight: 1.75,
-                  color: 'rgba(253,250,246,0.7)',
+                  color: '#6B6557',
                   margin: 0,
                   maxWidth: '460px',
                 }}
               >
-                We filter every product through three questions: Does the science support it?
-                Is the formulation clean? Is the price justifiable? If it fails any one,
-                it doesn&apos;t make our list.
+                We only recommend things built to last. Everything on our list passes the
+                5-year test: would you still own it, use it, and love it in five years?
+                If not, we don&apos;t recommend it.
               </p>
               <a
                 href="#"
-                className="ls-method-link"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -305,10 +316,11 @@ export default async function BeautyPage() {
                   fontWeight: 700,
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
-                  color: '#B8955A',
+                  color: '#4A5E2C',
                   textDecoration: 'none',
                   transition: 'gap 0.2s',
                 }}
+                className="ls-methodology-link"
               >
                 Read our methodology →
               </a>
@@ -321,21 +333,22 @@ export default async function BeautyPage() {
                 height: 'clamp(360px, 45vw, 520px)',
                 borderRadius: '16px',
                 overflow: 'hidden',
-                border: '1px solid rgba(253,250,246,0.12)',
+                border: '1px solid rgba(26,23,20,0.08)',
+                boxShadow: '0 20px 60px rgba(26,23,20,0.08)',
               }}
             >
               <Image
-                src="/lifestyle/beauty.jpg"
-                alt="The Mintbrooks skincare framework"
+                src="/kitchen.jpg"
+                alt="The Mintbrooks kitchen philosophy"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center 20%' }}
+                style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
               />
               <div
                 style={{
                   position: 'absolute',
                   inset: 0,
                   background:
-                    'linear-gradient(to top, rgba(29,58,47,0.5) 0%, transparent 60%)',
+                    'linear-gradient(to top, rgba(247,244,239,0.4) 0%, transparent 60%)',
                 }}
               />
             </div>
@@ -344,7 +357,7 @@ export default async function BeautyPage() {
       </section>
 
       {/* ── 5. EMAIL CAPTURE ──────────────────────────────────────────── */}
-      <BeautyEmailCapture />
+      <KitchenEmailCapture />
 
       <LifestyleFooter />
 
@@ -412,20 +425,26 @@ export default async function BeautyPage() {
           }
         }
 
-        /* Hover states (replaces JS onMouseEnter/onMouseLeave) */
-        .ls-cta-btn:hover { background: #B8955A !important; }
+        /* Hero CTA hover */
+        .ls-hero-cta:hover { background: #B8955A !important; }
 
+        /* Article card hover */
         .ls-article-card:hover {
           transform: translateY(-4px);
-          box-shadow: 0 12px 40px rgba(139,78,107,0.12);
+          box-shadow: 0 12px 40px rgba(74,94,44,0.12);
         }
 
-        .ls-card-hover:hover {
+        /* Product card hover */
+        .ls-product-card:hover {
           transform: translateY(-4px);
           box-shadow: 0 16px 48px rgba(26,23,20,0.1);
         }
 
-        .ls-method-link:hover { gap: 14px !important; }
+        /* Amazon shop button hover */
+        .ls-amazon-btn:hover { background: #B8955A !important; }
+
+        /* Methodology link hover */
+        .ls-methodology-link:hover { gap: 14px; }
 
         * { box-sizing: border-box; }
 

@@ -5,13 +5,13 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NAV_LINKS: { label: string; href: string }[] = [
-  { label: 'Home',        href: '/lifestyle' },
-  { label: 'Home & Decor', href: '/lifestyle/home-decor' },
-  { label: 'Wellness',    href: '/lifestyle/wellness' },
-  { label: 'Beauty',      href: '/lifestyle/beauty' },
-  { label: 'Kitchen',     href: '/lifestyle/kitchen' },
-  { label: 'Finance',     href: '/lifestyle/finance' },
-  { label: 'Articles',    href: '/lifestyle/articles' },
+  { label: 'Home',        href: '/' },
+  { label: 'Home & Decor', href: '/home-decor' },
+  { label: 'Wellness',    href: '/wellness' },
+  { label: 'Beauty',      href: '/beauty' },
+  { label: 'Kitchen',     href: '/kitchen' },
+  { label: 'Finance',     href: '/finance' },
+  { label: 'Articles',    href: '/articles' },
 ]
 
 export default function LifestyleNav() {
@@ -26,7 +26,7 @@ export default function LifestyleNav() {
   }, [])
 
   const isActive = (href: string) => {
-    if (href === '/lifestyle') return pathname === '/lifestyle'
+    if (href === '/') return pathname === '/'
     return pathname === href || pathname.startsWith(href + '/')
   }
 
@@ -50,7 +50,7 @@ export default function LifestyleNav() {
     >
       {/* Wordmark */}
       <Link
-        href="/lifestyle"
+        href="/"
         style={{
           fontFamily: '"Playfair Display", Georgia, serif',
           fontSize: '22px',
@@ -116,7 +116,7 @@ export default function LifestyleNav() {
           )
         })}
         <Link
-          href="/lifestyle#newsletter"
+          href="/#newsletter"
           style={{
             fontSize: '11px',
             fontWeight: 700,

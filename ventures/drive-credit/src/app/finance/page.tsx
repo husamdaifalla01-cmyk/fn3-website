@@ -120,7 +120,7 @@ export default function FinancePage() {
       >
         {/* Background image */}
         <Image
-          src="/lifestyle/finance.jpg"
+          src="/finance.jpg"
           alt="Finance"
           fill
           priority
