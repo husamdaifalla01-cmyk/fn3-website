@@ -1,35 +1,10 @@
 export const runtime = 'edge'
 
 import { NextRequest, NextResponse } from 'next/server'
-import { spawn } from 'child_process'
-import path from 'path'
-import os from 'os'
 
-const PYTHON      = path.join(os.homedir(), 'Downloads/amazon/.venv/bin/python3')
-const SCRIPTS_DIR = path.join(os.homedir(), 'Downloads/amazon/email_system')
-
-// ── Python runner ─────────────────────────────────────────────────────────────
-
-function runPython(scriptArgs: string[]): Promise<{ ok: boolean; output: string }> {
-  return new Promise((resolve) => {
-    const [script, ...args] = scriptArgs
-    const scriptPath = path.join(SCRIPTS_DIR, script)
-
-    const proc = spawn(PYTHON, [scriptPath, ...args], {
-      env: {
-        ...process.env,
-        HOME: os.homedir(),
-        RESEND_API_KEY: process.env.RESEND_API_KEY ?? '',
-        RESEND_AUDIENCE_ID: process.env.RESEND_AUDIENCE_ID ?? '',
-      },
-    })
-
-    let output = ''
-    proc.stdout.on('data', (d: Buffer) => { output += d.toString() })
-    proc.stderr.on('data', (d: Buffer) => { output += d.toString() })
-    proc.on('close', (code) => resolve({ ok: code === 0, output }))
-    proc.on('error', (err)  => resolve({ ok: false, output: String(err) }))
-  })
+// Python runner is not available in Cloudflare Workers environment
+function runPython(_scriptArgs: string[]): Promise<{ ok: boolean; output: string }> {
+  return Promise.resolve({ ok: false, output: 'Python not available in edge runtime' })
 }
 
 // ── Cron handler ──────────────────────────────────────────────────────────────

@@ -1,16 +1,10 @@
 export const runtime = 'edge'
 
 import { NextRequest, NextResponse } from 'next/server'
-import { spawn } from 'child_process'
-import path from 'path'
-import os from 'os'
 
 // TODO: install `svix` package (`npm install svix`) and uncomment the import
 // below to enable proper Resend webhook signature verification.
 // import { Webhook } from 'svix'
-
-const PYTHON = path.join(os.homedir(), 'Downloads/amazon/.venv/bin/python3')
-const STORE  = path.join(os.homedir(), 'Downloads/amazon/email_system/subscriber_store.py')
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -57,37 +51,8 @@ function isAffiliateUrl(url: string): boolean {
   return url.includes('amazon.com') || url.includes('amzn.to')
 }
 
-function runPython(args: string[]): Promise<{ ok: boolean; data: unknown }> {
-  return new Promise((resolve) => {
-    const proc = spawn(PYTHON, [STORE, ...args], {
-      env: {
-        ...process.env,
-        HOME: os.homedir(),
-      },
-    })
-
-    let stdout = ''
-    let stderr = ''
-    proc.stdout.on('data', (d: Buffer) => { stdout += d.toString() })
-    proc.stderr.on('data', (d: Buffer) => { stderr += d.toString() })
-    proc.on('close', (code) => {
-      if (code !== 0) {
-        console.error('[email/webhook] subscriber_store stderr:', stderr)
-        resolve({ ok: false, data: null })
-        return
-      }
-      try {
-        const lastLine = stdout.trim().split('\n').pop() ?? '{}'
-        resolve({ ok: true, data: JSON.parse(lastLine) })
-      } catch {
-        resolve({ ok: true, data: null })
-      }
-    })
-    proc.on('error', (err) => {
-      console.error('[email/webhook] spawn error:', err)
-      resolve({ ok: false, data: null })
-    })
-  })
+function runPython(_args: string[]): Promise<{ ok: boolean; data: unknown }> {
+  return Promise.resolve({ ok: false, data: null })
 }
 
 // ── Signature verification ────────────────────────────────────────────────────
