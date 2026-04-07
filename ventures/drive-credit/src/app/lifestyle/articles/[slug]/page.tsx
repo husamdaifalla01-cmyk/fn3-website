@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import fs from 'fs'
+import path from 'path'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -99,95 +100,34 @@ const ALL_ARTICLES: Article[] = [
 
 // ─── Affiliate article HTML paths ─────────────────────────────────────────────
 
-const BLOG_BASE = '/Users/husamahmed/Downloads/amazon/output/blog'
-
-const AFFILIATE_HTML: Record<string, string> = {
-  'best-anti-aging-serum':                                        `${BLOG_BASE}/run_2026-04-06_235236/articles/best-anti-aging-serum/index.html`,
-  'best-drip-irrigation-kits':                                    `${BLOG_BASE}/run_2026-04-06_234822/articles/best-drip-irrigation-kits/index.html`,
-  'best-garden-tool-set-for-women-gifts':                         `${BLOG_BASE}/run_2026-04-06_234822/articles/best-garden-tool-set-for-women-gifts/index.html`,
-  'best-self-care-gift-baskets-women':                            `${BLOG_BASE}/run_2026-04-06_234822/articles/best-self-care-gift-baskets-women/index.html`,
-  'best-anti-aging-serum-beginners-budget':                       `${BLOG_BASE}/run_2026-04-07_001043/articles/best-anti-aging-serum-beginners-budget/index.html`,
-  'best-serum-for-dark-spots':                                    `${BLOG_BASE}/run_2026-04-07_001043/articles/best-serum-for-dark-spots/index.html`,
-  'la-roche-posay-vitamin-c-vs-retinol':                          `${BLOG_BASE}/run_2026-04-07_001043/articles/la-roche-posay-vitamin-c-vs-retinol/index.html`,
-  'best-clean-liquid-foundation':                                 `${BLOG_BASE}/run_2026-04-07_001043/articles/best-clean-liquid-foundation/index.html`,
-  'clean-foundation-for-beginners':                               `${BLOG_BASE}/run_2026-04-07_001043/articles/clean-foundation-for-beginners/index.html`,
-  'harvest-natural-beauty-vs-jerome-alexander-foundation-beginners': `${BLOG_BASE}/run_2026-04-07_001043/articles/harvest-natural-beauty-vs-jerome-alexander-foundation-beginners/index.html`,
-  'best-neutral-eyeshadow-palette':                               `${BLOG_BASE}/run_2026-04-06_235351/articles/best-neutral-eyeshadow-palette/index.html`,
-  'best-eyeshadow-palette-under-50':                              `${BLOG_BASE}/run_2026-04-07_001043/articles/best-eyeshadow-palette-under-50/index.html`,
-  'too-faced-born-this-way-vs-tarte-tartelette-in-bloom':         `${BLOG_BASE}/run_2026-04-07_001043/articles/too-faced-born-this-way-vs-tarte-tartelette-in-bloom/index.html`,
-  'best-hair-bonding-oil-olaplex-7-review':                       `${BLOG_BASE}/run_2026-04-07_001043/articles/best-hair-bonding-oil-olaplex-7-review/index.html`,
-  'kerastase-kenra-glass-hair-showdown':                          `${BLOG_BASE}/run_2026-04-07_001043/articles/kerastase-kenra-glass-hair-showdown/index.html`,
-  'kerastase-nutritive-8h-magic-night-serum-review':              `${BLOG_BASE}/run_2026-04-07_001043/articles/kerastase-nutritive-8h-magic-night-serum-review/index.html`,
-  'best-linen-duvet-cover-sets-luxury-budget':                    `${BLOG_BASE}/run_2026-04-07_001043/articles/best-linen-duvet-cover-sets-luxury-budget/index.html`,
-  'best-chunky-knit-throw-blanket-under-50':                      `${BLOG_BASE}/run_2026-04-06_235033/articles/best-chunky-knit-throw-blanket-under-50/index.html`,
-  'best-waffle-duvet-cover-queen':                                `${BLOG_BASE}/run_2026-04-07_001043/articles/best-waffle-duvet-cover-queen/index.html`,
-  'best-sous-vide-machine-review':                                `${BLOG_BASE}/run_2026-04-07_001043/articles/best-sous-vide-machine-review/index.html`,
-  'best-air-fryer-small-spaces':                                  `${BLOG_BASE}/run_2026-04-07_001043/articles/best-air-fryer-small-spaces/index.html`,
-  'sous-vide-accessories-large-batches':                          `${BLOG_BASE}/run_2026-04-07_001043/articles/sous-vide-accessories-large-batches/index.html`,
-  'best-drip-irrigation-system':                                  `${BLOG_BASE}/run_2026-04-06_235033/articles/best-drip-irrigation-system/index.html`,
-  'best-garden-tool-sets-for-women':                              `${BLOG_BASE}/run_2026-04-07_001043/articles/best-garden-tool-sets-for-women/index.html`,
-  'drip-irrigation-kit-comparison':                               `${BLOG_BASE}/run_2026-04-07_001043/articles/drip-irrigation-kit-comparison/index.html`,
-  'best-birthday-gifts-women-under-40':                           `${BLOG_BASE}/run_2026-04-07_001043/articles/best-birthday-gifts-women-under-40/index.html`,
-  'best-vintage-self-care-gift-basket':                           `${BLOG_BASE}/run_2026-04-07_001043/articles/best-vintage-self-care-gift-basket/index.html`,
-  'best-get-well-soon-gift-baskets':                              `${BLOG_BASE}/run_2026-04-07_001043/articles/best-get-well-soon-gift-baskets/index.html`,
-}
+const BLOG_BASE = path.join(process.cwd(), 'public/articles/affiliate')
 
 // ─── Editorial article HTML paths ──────────────────────────────────────────────
 
-const EDITORIAL_BASE = '/Users/husamahmed/Downloads/amazon/output/editorial'
+const EDITORIAL_BASE = path.join(process.cwd(), 'public/articles/editorial')
 
-const EDITORIAL_HTML: Record<string, string> = {
-  'bedroom-feel-expensive':        `${EDITORIAL_BASE}/bedroom-feel-expensive.html`,
-  'shelf-decor-321-rule':          `${EDITORIAL_BASE}/shelf-decor-321-rule.html`,
-  'linen-vs-cotton-bedding':       `${EDITORIAL_BASE}/linen-vs-cotton-bedding.html`,
-  'coffee-table-styling':          `${EDITORIAL_BASE}/coffee-table-styling.html`,
-  'affordable-art-prints':         `${EDITORIAL_BASE}/affordable-art-prints.html`,
-  'cotton-throw-blankets':         `${EDITORIAL_BASE}/cotton-throw-blankets.html`,
-  'candle-warmer-lamp':            `${EDITORIAL_BASE}/candle-warmer-lamp.html`,
-  'morning-rituals':               `${EDITORIAL_BASE}/morning-rituals.html`,
-  'weighted-blankets-guide':       `${EDITORIAL_BASE}/weighted-blankets-guide.html`,
-  'diffuser-oil-combinations':     `${EDITORIAL_BASE}/diffuser-oil-combinations.html`,
-  'sleep-routine-vs-supplements':  `${EDITORIAL_BASE}/sleep-routine-vs-supplements.html`,
-  'hatch-alarm-clock-review':      `${EDITORIAL_BASE}/hatch-alarm-clock-review.html`,
-  'vitamin-c-serum-review':        `${EDITORIAL_BASE}/vitamin-c-serum-review.html`,
-  'retinol-mistakes':              `${EDITORIAL_BASE}/retinol-mistakes.html`,
-  'spf-moisturizer-vs-sunscreen':  `${EDITORIAL_BASE}/spf-moisturizer-vs-sunscreen.html`,
-  'clean-beauty-explained':        `${EDITORIAL_BASE}/clean-beauty-explained.html`,
-  'skincare-routine-sensitive-skin': `${EDITORIAL_BASE}/skincare-routine-sensitive-skin.html`,
-  'coffee-bar-setup':              `${EDITORIAL_BASE}/coffee-bar-setup.html`,
-  'cast-iron-skillet-guide':       `${EDITORIAL_BASE}/cast-iron-skillet-guide.html`,
-  'kitchen-organization':          `${EDITORIAL_BASE}/kitchen-organization.html`,
-  'kitchen-knives-guide':          `${EDITORIAL_BASE}/kitchen-knives-guide.html`,
-  'pour-over-vs-french-press':     `${EDITORIAL_BASE}/pour-over-vs-french-press.html`,
-  'meal-prep-containers':          `${EDITORIAL_BASE}/meal-prep-containers.html`,
-  'what-is-credit-score':          `${EDITORIAL_BASE}/what-is-credit-score.html`,
-  'build-credit-from-scratch':     `${EDITORIAL_BASE}/build-credit-from-scratch.html`,
-  'use-credit-card-responsibly':   `${EDITORIAL_BASE}/use-credit-card-responsibly.html`,
-  'secured-vs-unsecured-cards':    `${EDITORIAL_BASE}/secured-vs-unsecured-cards.html`,
-  'credit-utilization-explained':  `${EDITORIAL_BASE}/credit-utilization-explained.html`,
-  'build-credit-bad-credit':       `${EDITORIAL_BASE}/build-credit-bad-credit.html`,
-}
 
 function getAffiliateBodyHtml(slug: string): string | null {
-  // Check editorial articles first (raw HTML body, no <article> wrapper)
-  const editorialPath = EDITORIAL_HTML[slug]
-  if (editorialPath) {
-    try {
+  // 1. Check editorial articles first (raw HTML body, no <article> wrapper)
+  const editorialPath = path.join(EDITORIAL_BASE, `${slug}.html`)
+  try {
+    if (fs.existsSync(editorialPath)) {
       const raw = fs.readFileSync(editorialPath, 'utf-8')
       if (raw.trim().length > 200) return injectLinkAttrs(raw.trim())
-    } catch { /* fall through */ }
-  }
+    }
+  } catch { /* fall through */ }
 
-  // Then check affiliate articles (wrapped in <article>...</article>)
-  const htmlPath = AFFILIATE_HTML[slug]
-  if (!htmlPath) return null
+  // 2. Check affiliate articles — auto-discover by slug directory
+  const affiliatePath = path.join(BLOG_BASE, slug, 'index.html')
   try {
-    const raw = fs.readFileSync(htmlPath, 'utf-8')
-    const match = raw.match(/<article>([\s\S]*?)<\/article>/)
-    return match ? injectLinkAttrs(match[1].trim()) : null
-  } catch {
-    return null
-  }
+    if (fs.existsSync(affiliatePath)) {
+      const raw = fs.readFileSync(affiliatePath, 'utf-8')
+      const match = raw.match(/<article>([\s\S]*?)<\/article>/)
+      return match ? injectLinkAttrs(match[1].trim()) : null
+    }
+  } catch { /* fall through */ }
+
+  return null
 }
 
 /** Ensure all amazon.com links open in a new tab with proper rel attributes. */
