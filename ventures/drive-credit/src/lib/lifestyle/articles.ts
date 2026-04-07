@@ -12,11 +12,11 @@ export interface Article {
 }
 
 export const CATEGORY_META: Record<Category, { label: string; bg: string; accent: string; image: string }> = {
-  'home-decor': { label: 'Home & Decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/lifestyle/home-decor.jpg' },
-  'wellness':   { label: 'Wellness',     bg: '#F5EDE5', accent: '#7B5E4A', image: '/lifestyle/wellness.jpg' },
-  'beauty':     { label: 'Beauty',       bg: '#F5EAF0', accent: '#8B4E6B', image: '/lifestyle/beauty.jpg' },
-  'kitchen':    { label: 'Kitchen',      bg: '#EDF2E5', accent: '#4A5E2C', image: '/lifestyle/kitchen.jpg' },
-  'finance':    { label: 'Money & Credit', bg: '#EEF3F1', accent: '#1D3A2F', image: '/lifestyle/finance.jpg' },
+  'home-decor': { label: 'Home & Decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg' },
+  'wellness':   { label: 'Wellness',     bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg' },
+  'beauty':     { label: 'Beauty',       bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg' },
+  'kitchen':    { label: 'Kitchen',      bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg' },
+  'finance':    { label: 'Money & Credit', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg' },
 }
 
 export const ARTICLES: Article[] = [

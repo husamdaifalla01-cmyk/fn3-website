@@ -123,7 +123,7 @@ export default function TermsPage() {
             This commission comes at no extra cost to you. It does not influence our editorial
             decisions. We recommend products because they're good — not because they pay us
             more. For more detail, see our{' '}
-            <a href="/lifestyle/about#disclosure" style={linkStyle}>
+            <a href="/about#disclosure" style={linkStyle}>
               full affiliate disclosure
             </a>
             .

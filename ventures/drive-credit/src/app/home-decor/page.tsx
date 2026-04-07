@@ -63,7 +63,7 @@ export default async function HomeDecorPage() {
       >
         {/* Background image */}
         <Image
-          src="/lifestyle/home-decor.jpg"
+          src="/home-decor.jpg"
           alt="A beautifully styled living room"
           fill
           priority

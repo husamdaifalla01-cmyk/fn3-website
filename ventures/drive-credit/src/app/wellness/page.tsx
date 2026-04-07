@@ -63,7 +63,7 @@ export default async function WellnessPage() {
       >
         {/* Background image */}
         <Image
-          src="/lifestyle/wellness.jpg"
+          src="/wellness.jpg"
           alt="A serene wellness space"
           fill
           priority

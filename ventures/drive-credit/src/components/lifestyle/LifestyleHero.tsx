@@ -59,7 +59,7 @@ export default function LifestyleHero() {
       {/* Full-bleed hero image — Ken Burns via JS on mount */}
       <div ref={imgRef} style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
         <Image
-          src="/lifestyle/hero.jpg"
+          src="/hero.jpg"
           alt="A beautifully styled morning bedroom — Mintbrooks lifestyle"
           fill
           priority

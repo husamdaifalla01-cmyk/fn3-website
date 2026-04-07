@@ -13,7 +13,7 @@ const VERTICALS = [
     bg: '#EEF3F1',
     pattern: '⌂',
     span: 2,
-    image: '/lifestyle/home-decor.jpg',
+    image: '/home-decor.jpg',
   },
   {
     id: 'wellness',
@@ -24,7 +24,7 @@ const VERTICALS = [
     bg: '#F5EDE5',
     pattern: '◯',
     span: 1,
-    image: '/lifestyle/wellness.jpg',
+    image: '/wellness.jpg',
   },
   {
     id: 'beauty',
@@ -35,7 +35,7 @@ const VERTICALS = [
     bg: '#F5EAF0',
     pattern: '✦',
     span: 1,
-    image: '/lifestyle/beauty.jpg',
+    image: '/beauty.jpg',
   },
   {
     id: 'kitchen',
@@ -46,7 +46,7 @@ const VERTICALS = [
     bg: '#EDF2E5',
     pattern: '◈',
     span: 1,
-    image: '/lifestyle/kitchen.jpg',
+    image: '/kitchen.jpg',
   },
   {
     id: 'finance',
@@ -58,7 +58,7 @@ const VERTICALS = [
     pattern: '◆',
     span: 2,
     dark: true,
-    image: '/lifestyle/finance.jpg',
+    image: '/finance.jpg',
   },
 ]
 

@@ -1,70 +1,59 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Script from "next/script";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
-import "./globals.css";
+import { Playfair_Display } from 'next/font/google'
+import Script from 'next/script'
+import LifestyleNav from '@/components/lifestyle/LifestyleNav'
+import LifestyleFooter from '@/components/lifestyle/LifestyleFooter'
+import type { Metadata } from 'next'
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+})
 
-const SITE_URL = "https://mintbrooks.com";
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
-
-const orgSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#organization`,
-      name: "Mintbrooks",
-      url: SITE_URL,
-      description: "Independent educational resource about car-secured credit products.",
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      url: SITE_URL,
-      name: "Mintbrooks",
-      publisher: { "@id": `${SITE_URL}/#organization` },
-    },
-  ],
-};
+const SITE_URL = 'https://mintbrooks.com'
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
-  title: "Mintbrooks — Use Your Car to Get a Real Credit Card",
-  description: "Turn your car into a credit line. Get a Visa credit card using your vehicle as collateral — no hard credit pull to check eligibility. Available in 36+ states.",
-  keywords: "car equity credit card, credit card bad credit, use car as collateral, no credit check credit card, credit card 500 credit score",
+  title: {
+    default: 'Mintbrooks — The Good Life, Curated',
+    template: '%s | Mintbrooks',
+  },
+  description:
+    'Home, wellness, beauty, kitchen, and the credit to build it all. Mintbrooks is the lifestyle guide for people building a life worth living.',
+  keywords:
+    'lifestyle blog, home decor, wellness, beauty, kitchen, credit building, curated finds',
   metadataBase: new URL(SITE_URL),
-  alternates: { canonical: "/" },
   openGraph: {
-    title: "Mintbrooks — Use Your Car to Get a Real Credit Card",
-    description: "Turn your car into a credit line. No hard credit pull to check eligibility.",
-    type: "website",
+    title: 'Mintbrooks — The Good Life, Curated',
+    description:
+      'Home. Wellness. Beauty. Kitchen. And the financial foundation to build it all.',
+    type: 'website',
+    siteName: 'Mintbrooks',
     url: SITE_URL,
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Mintbrooks — Use Your Car to Get a Real Credit Card",
-    description: "Turn your car into a credit line. No hard credit pull to check eligibility.",
+    card: 'summary_large_image',
+    title: 'Mintbrooks — The Good Life, Curated',
+    description: 'The lifestyle guide for people building a beautiful life.',
   },
-};
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.className}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col">
-        <ExitIntentPopup />
+    <html lang="en" className={playfair.variable}>
+      <body
+        style={{
+          '--ls-cream': '#FDFAF6',
+          '--ls-forest': '#1D3A2F',
+          '--ls-gold': '#B8955A',
+          '--ls-text': '#1A1714',
+          '--ls-muted': '#6B6557',
+        } as React.CSSProperties}
+      >
+        <LifestyleNav />
         {children}
-        {/* Plausible Analytics */}
+        <LifestyleFooter />
         <Script
           defer
           data-domain="mintbrooks.com"
@@ -82,14 +71,12 @@ export default function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
-                gtag('config', '${GA_ID}', {
-                  page_path: window.location.pathname,
-                });
+                gtag('config', '${GA_ID}', { page_path: window.location.pathname });
               `}
             </Script>
           </>
         )}
       </body>
     </html>
-  );
+  )
 }

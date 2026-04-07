@@ -44,7 +44,7 @@ export default function LifestyleEditorial() {
           muted
           loop
           playsInline
-          poster="/lifestyle/editorial.jpg"
+          poster="/editorial.jpg"
           style={{
             width: '100%',
             height: '100%',
@@ -53,7 +53,7 @@ export default function LifestyleEditorial() {
             opacity: 0.5,
           }}
         >
-          <source src="/lifestyle/editorial-reel.mp4" type="video/mp4" />
+          <source src="/editorial-reel.mp4" type="video/mp4" />
         </video>
         {/* Stronger overlay — Sofia: text must win over video */}
         <div style={{
@@ -191,7 +191,7 @@ export default function LifestyleEditorial() {
           className="ls-editorial-portrait"
         >
           <Image
-            src="/lifestyle/editorial.jpg"
+            src="/editorial.jpg"
             alt="Candle glow — Mintbrooks editorial"
             fill
             sizes="220px"

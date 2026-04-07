@@ -73,7 +73,7 @@ export default function LifestyleBridge() {
               }}
             >
               <Image
-                src="/lifestyle/bridge.jpg"
+                src="/bridge.jpg"
                 alt="Morning workspace — building your foundation"
                 fill
                 sizes="(max-width: 768px) 100vw, 45vw"
