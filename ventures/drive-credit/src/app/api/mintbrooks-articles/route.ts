@@ -1,11 +1,10 @@
 import { NextResponse } from 'next/server'
 import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
-import os from 'os'
 
 export const dynamic = 'force-dynamic'
 
-const MANIFEST_PATH = join(os.homedir(), 'Downloads/amazon/output/blog/mintbrooks_articles.json')
+const MANIFEST_PATH = join(process.cwd(), 'public/articles/manifest.json')
 
 export async function GET() {
   try {
