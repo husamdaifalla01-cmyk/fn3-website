@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  /* Warm palette — comfortable borrowing, lifestyle positivity */
+  --bg: #fffdf7;
+  --surface: #ffffff;
+  --surface-warm: #fef9ee;
+  --border: rgba(217,119,6,0.12);
+  --amber: #d97706;
+  --amber-light: #fbbf24;
+  --amber-dark: #b45309;
+  --emerald: #059669;
+  --emerald-dark: #047857;
+  --dark: #1c1917;
+  --dark2: #292524;
+  --text: #1c1917;
+  --text-muted: #78716c;
+  --text-soft: #a8a29e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Primary CTA — emerald green (action, yes, go, safe) */
+.btn-primary {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(5,150,105,0.30);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(5,150,105,0.42);
+}
+
+/* Amber CTA — warmth, value */
+.btn-amber {
+  background: linear-gradient(135deg, #d97706, #b45309);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(217,119,6,0.30);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-amber:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(217,119,6,0.42);
+}
+
+/* Ghost button on dark backgrounds */
+.btn-ghost-dark {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.btn-ghost-dark:hover {
+  background: rgba(255,255,255,0.13);
+  color: white;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(28,25,23,0.05);
+}
+
+.badge-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(217,119,6,0.1);
+  border: 1px solid rgba(217,119,6,0.22);
+  color: #b45309;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  margin-bottom: 10px;
+}
+
+/* Green variant of primary CTA */
+.btn-primary.btn-green {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.section-label-light {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(251,191,36,0.85);
+  margin-bottom: 10px;
+}

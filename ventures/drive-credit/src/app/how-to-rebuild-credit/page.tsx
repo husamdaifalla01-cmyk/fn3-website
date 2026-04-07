@@ -395,6 +395,7 @@ export default function HowToRebuildCredit() {
               { href: '/bad-credit-credit-card', label: 'Best Credit Cards for Bad Credit' },
               { href: '/secured-credit-card-bad-credit', label: 'Secured Credit Cards Explained' },
               { href: '/use-car-as-collateral', label: 'How to Use Your Car as Collateral' },
+              { href: '/does-applying-for-credit-card-hurt-credit', label: 'Does Applying Hurt Your Score?' },
             ].map((link) => (
               <Link
                 key={link.href}

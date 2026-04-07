@@ -115,3 +115,9 @@ export const YENDO_FIRST_CARD_HERO = buildAffiliateUrl(OFFERS.yendo.url,    'org
 export const YENDO_FIRST_CARD_MID  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'first-card-mid')
 export const YENDO_FIRST_CARD_CTA  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'first-card-cta')
 export const SLAM_DUNK_FIRST_CARD  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'first-card-fallback')
+
+// ─── Does applying for a credit card hurt your credit guide ─────────────────
+export const YENDO_INQUIRY_HERO = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'inquiry-guide-hero')
+export const YENDO_INQUIRY_MID  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'inquiry-guide-mid')
+export const YENDO_INQUIRY_CTA  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'inquiry-guide-cta')
+export const SLAM_DUNK_INQUIRY  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'inquiry-guide-fallback')

@@ -1,0 +1,910 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
+import FinanceFAQ from './FinanceFAQ'
+import { EDITORIAL_ARTICLES } from '@/lib/lifestyle/articles-editorial'
+import { getProductsByCategory } from '@/lib/lifestyle/products'
+import CategoryEditorial from '@/components/lifestyle/CategoryEditorial'
+import CarCalculator from '@/components/CarCalculator'
+import { OFFERS, buildAffiliateUrl } from '@/lib/offers'
+
+const YENDO_FINANCE_CALC = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'seo', 'finance-calculator')
+const SLAM_DUNK_FINANCE  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'finance-calculator')
+
+export const metadata: Metadata = {
+  title: 'Money & Credit',
+  description:
+    'Credit education, financial guides, and the DriveCredit card that helps you build real credit history without a hard pull.',
+  alternates: { canonical: 'https://mintbrooks.com/lifestyle/finance' },
+  openGraph: {
+    title: 'Money & Credit — Mintbrooks',
+    description:
+      'Credit education, financial guides, and the DriveCredit card that helps you build real credit history without a hard pull.',
+    type: 'website',
+    url: 'https://mintbrooks.com/lifestyle/finance',
+    images: [{ url: 'https://mintbrooks.com/lifestyle/editorial.jpg', width: 1200, height: 630, alt: 'Mintbrooks Money & Credit' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Money & Credit — Mintbrooks',
+    description:
+      'Credit education, financial guides, and the DriveCredit card that helps you build real credit history without a hard pull.',
+    images: ['https://mintbrooks.com/lifestyle/editorial.jpg'],
+  },
+}
+
+// ─── Data ─────────────────────────────────────────────────────────────────────
+
+const STEPS = [
+  {
+    icon: '○',
+    step: '01',
+    title: 'Know where you stand',
+    body: 'Your credit score affects everything from apartment applications to interest rates. Start by understanding your current position — no guesswork, no surprises.',
+  },
+  {
+    icon: '↗',
+    step: '02',
+    title: 'Build strategically',
+    body: 'Not all credit moves are equal. We cut through the noise and show you the highest-leverage actions for your specific situation.',
+  },
+  {
+    icon: '◆',
+    step: '03',
+    title: 'Fund the life you want',
+    body: 'With strong credit, the linen sets, the kitchen upgrades, and the home renovations become decisions — not dreams.',
+  },
+]
+
+const STATS = [
+  { value: 'Up to $10K', label: 'Max credit line' },
+  { value: '36+', label: 'States available' },
+  { value: 'Soft inquiry', label: 'No score impact to check' },
+  { value: 'Visa', label: 'Accepted everywhere' },
+]
+
+const GUIDES = [
+  {
+    title: 'What is a credit score and why does it actually matter?',
+    slug: 'what-is-credit-score',
+    readTime: '5 min',
+  },
+  {
+    title: 'The fastest ways to build credit from scratch',
+    slug: 'build-credit-from-scratch',
+    readTime: '6 min',
+  },
+  {
+    title: 'How to use a credit card without going into debt',
+    slug: 'use-credit-card-responsibly',
+    readTime: '4 min',
+  },
+  {
+    title: 'Secured vs. unsecured credit cards: what\'s the real difference?',
+    slug: 'secured-vs-unsecured-cards',
+    readTime: '5 min',
+  },
+  {
+    title: 'Why your credit utilization matters more than your payment history',
+    slug: 'credit-utilization-explained',
+    readTime: '4 min',
+  },
+  {
+    title: 'Building credit with bad credit: the strategies that actually work',
+    slug: 'build-credit-bad-credit',
+    readTime: '6 min',
+  },
+]
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
+export default function FinancePage() {
+  const articles = EDITORIAL_ARTICLES.filter(a => a.categorySlug === 'finance')
+  const products = getProductsByCategory('finance', 12)
+  void products
+  return (
+    <div
+      style={{ background: '#FDFAF6', color: '#1A1714', overflowX: 'hidden' }}
+    >
+      {/* ── Finance Hero ──────────────────────────────────────────────── */}
+      <section
+        style={{
+          position: 'relative',
+          minHeight: '100svh',
+          background: '#1D3A2F',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          overflow: 'hidden',
+        }}
+      >
+        {/* Background image */}
+        <Image
+          src="/lifestyle/finance.jpg"
+          alt="Finance"
+          fill
+          priority
+          style={{ objectFit: 'cover', objectPosition: 'center 40%', opacity: 0.35 }}
+        />
+
+        {/* Dark forest overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to bottom, rgba(29,58,47,0.6) 0%, rgba(29,58,47,0.85) 100%)',
+            zIndex: 1,
+          }}
+        />
+
+        {/* Decorative quotation mark texture */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -54%)',
+            fontFamily: '"Playfair Display", Georgia, serif',
+            fontSize: 'clamp(320px, 45vw, 600px)',
+            fontWeight: 700,
+            color: 'rgba(184,149,90,0.06)',
+            lineHeight: 1,
+            userSelect: 'none',
+            pointerEvents: 'none',
+            letterSpacing: '-0.05em',
+          }}
+        >
+          &ldquo;
+        </div>
+
+        {/* Content */}
+        <div
+          style={{
+            position: 'relative',
+            zIndex: 2,
+            textAlign: 'center',
+            padding: 'clamp(100px, 12vw, 160px) clamp(20px, 5vw, 80px) clamp(80px, 10vw, 120px)',
+            maxWidth: '900px',
+          }}
+        >
+          {/* Category pill */}
+          <span
+            style={{
+              display: 'inline-block',
+              fontSize: '10px',
+              fontWeight: 700,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: '#B8955A',
+              background: 'rgba(184,149,90,0.14)',
+              border: '1px solid rgba(184,149,90,0.35)',
+              borderRadius: '100px',
+              padding: '6px 18px',
+              marginBottom: '32px',
+              animation: 'ls-fade-up 0.6s ease forwards',
+            }}
+          >
+            Money &amp; Credit
+          </span>
+
+          {/* Headline */}
+          <h1
+            style={{
+              fontFamily: '"Playfair Display", Georgia, serif',
+              fontSize: 'clamp(38px, 6vw, 80px)',
+              fontWeight: 700,
+              color: '#FDFAF6',
+              lineHeight: 1.07,
+              letterSpacing: '-0.03em',
+              margin: '0 0 28px',
+              animation: 'ls-fade-up 0.7s ease forwards',
+              animationDelay: '0.1s',
+              opacity: 0,
+            }}
+          >
+            The financial foundation
+            <br />
+            behind the life you&apos;re building.
+          </h1>
+
+          {/* Subheadline */}
+          <p
+            style={{
+              fontSize: 'clamp(16px, 2vw, 21px)',
+              color: 'rgba(253,250,246,0.65)',
+              lineHeight: 1.65,
+              margin: '0 0 48px',
+              maxWidth: '660px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              animation: 'ls-fade-up 0.7s ease forwards',
+              animationDelay: '0.2s',
+              opacity: 0,
+            }}
+          >
+            Credit isn&apos;t a limitation. It&apos;s the infrastructure. We&apos;ll show you
+            how to build it — and what to do with it.
+          </p>
+
+          {/* CTAs */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '16px',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              animation: 'ls-fade-up 0.7s ease forwards',
+              animationDelay: '0.3s',
+              opacity: 0,
+            }}
+          >
+            <Link
+              href="/qualify"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: '#B8955A',
+                color: '#FDFAF6',
+                padding: '16px 32px',
+                borderRadius: '100px',
+                fontSize: '13px',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                transition: 'background 0.2s, transform 0.2s',
+              }}
+              className="fin-cta-primary"
+            >
+              Check your credit options
+            </Link>
+            <a
+              href="#guides"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                background: 'transparent',
+                color: '#FDFAF6',
+                padding: '16px 32px',
+                borderRadius: '100px',
+                fontSize: '13px',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                border: '1.5px solid rgba(253,250,246,0.35)',
+                transition: 'border-color 0.2s',
+              }}
+              className="fin-cta-outline"
+            >
+              Read our guides
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Three Steps ───────────────────────────────────────────────── */}
+      <section
+        style={{
+          background: '#FDFAF6',
+          padding: 'clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px)',
+        }}
+      >
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          {/* Section label + headline */}
+          <div style={{ marginBottom: '60px' }}>
+            <span
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#B8955A',
+                marginBottom: '14px',
+              }}
+            >
+              How it works
+            </span>
+            <h2
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(28px, 4vw, 52px)',
+                fontWeight: 700,
+                color: '#1A1714',
+                margin: 0,
+                letterSpacing: '-0.025em',
+                lineHeight: 1.1,
+                maxWidth: '620px',
+              }}
+            >
+              From lifestyle aspiration to financial confidence.
+            </h2>
+          </div>
+
+          {/* Step cards */}
+          <div className="fin-steps-grid">
+            {STEPS.map((step, i) => (
+              <div
+                key={step.step}
+                className="fin-step-card"
+                style={{
+                  background: '#F7F4EF',
+                  borderRadius: '20px',
+                  padding: '40px 36px 44px',
+                  animation: 'ls-fade-up 0.7s ease forwards',
+                  animationDelay: `${0.1 + i * 0.12}s`,
+                  opacity: 0,
+                }}
+              >
+                {/* Icon circle */}
+                <div
+                  style={{
+                    width: '52px',
+                    height: '52px',
+                    borderRadius: '50%',
+                    background: '#1D3A2F',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '22px',
+                    color: '#FDFAF6',
+                    marginBottom: '28px',
+                  }}
+                  aria-hidden="true"
+                >
+                  {step.icon}
+                </div>
+
+                {/* Step number */}
+                <span
+                  style={{
+                    display: 'block',
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: '13px',
+                    fontWeight: 700,
+                    color: '#B8955A',
+                    letterSpacing: '0.08em',
+                    marginBottom: '12px',
+                  }}
+                >
+                  Step {step.step}
+                </span>
+
+                {/* Title */}
+                <h3
+                  style={{
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: 'clamp(20px, 2.2vw, 26px)',
+                    fontWeight: 700,
+                    color: '#1A1714',
+                    margin: '0 0 16px',
+                    lineHeight: 1.25,
+                    letterSpacing: '-0.015em',
+                  }}
+                >
+                  {step.title}
+                </h3>
+
+                {/* Body */}
+                <p
+                  style={{
+                    fontSize: '15px',
+                    color: '#6B6557',
+                    lineHeight: 1.7,
+                    margin: 0,
+                  }}
+                >
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── DriveCredit CTA ───────────────────────────────────────────── */}
+      <section
+        style={{
+          background: '#1D3A2F',
+          padding: 'clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px)',
+        }}
+      >
+        <div
+          className="fin-drive-grid"
+          style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 'clamp(48px, 6vw, 100px)',
+            alignItems: 'center',
+          }}
+        >
+          {/* Left: editorial copy */}
+          <div>
+            <span
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#B8955A',
+                marginBottom: '20px',
+              }}
+            >
+              Our partner
+            </span>
+            <h2
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(30px, 4vw, 54px)',
+                fontWeight: 700,
+                color: '#FDFAF6',
+                lineHeight: 1.1,
+                letterSpacing: '-0.025em',
+                margin: '0 0 24px',
+              }}
+            >
+              Use your car to build better credit.
+            </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                color: 'rgba(253,250,246,0.7)',
+                lineHeight: 1.75,
+                margin: '0 0 40px',
+                maxWidth: '480px',
+              }}
+            >
+              DriveCredit is Mintbrooks&apos; partner for people who want a real Visa credit card
+              without a hard credit pull. Use your vehicle as collateral, get a real card, build
+              real credit history.
+            </p>
+
+            {/* CTAs */}
+            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '28px' }}>
+              <Link
+                href="/qualify"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  background: '#B8955A',
+                  color: '#FDFAF6',
+                  padding: '14px 28px',
+                  borderRadius: '100px',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  transition: 'background 0.2s',
+                }}
+                className="fin-qualify-btn"
+              >
+                See if you qualify
+              </Link>
+              <Link
+                href="/how-it-works"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  background: 'transparent',
+                  color: 'rgba(253,250,246,0.8)',
+                  padding: '14px 28px',
+                  borderRadius: '100px',
+                  fontSize: '13px',
+                  fontWeight: 700,
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  textDecoration: 'none',
+                  border: '1.5px solid rgba(253,250,246,0.25)',
+                  transition: 'border-color 0.2s, color 0.2s',
+                }}
+                className="fin-howitworks-btn"
+              >
+                Learn how it works
+              </Link>
+            </div>
+
+            <p
+              style={{
+                fontSize: '12px',
+                color: 'rgba(253,250,246,0.35)',
+                margin: 0,
+                lineHeight: 1.6,
+              }}
+            >
+              No hard credit pull to check eligibility. Available in 36+ states.
+            </p>
+          </div>
+
+          {/* Right: stat cards */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px',
+            }}
+          >
+            {STATS.map((stat, i) => (
+              <div
+                key={stat.value}
+                className="fin-stat-card"
+                style={{
+                  background: 'rgba(253,250,246,0.06)',
+                  border: '1px solid rgba(253,250,246,0.1)',
+                  borderRadius: '16px',
+                  padding: '28px 32px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '24px',
+                  animation: 'ls-fade-up 0.7s ease forwards',
+                  animationDelay: `${0.15 + i * 0.12}s`,
+                  opacity: 0,
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: 'clamp(26px, 3vw, 38px)',
+                    fontWeight: 700,
+                    color: '#B8955A',
+                    letterSpacing: '-0.02em',
+                    lineHeight: 1,
+                    flexShrink: 0,
+                    minWidth: '120px',
+                  }}
+                >
+                  {stat.value}
+                </span>
+                <span
+                  style={{
+                    fontSize: '14px',
+                    color: 'rgba(253,250,246,0.6)',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Car Credit Calculator ─────────────────────────────────────── */}
+      <section
+        style={{
+          background: '#F7F4EF',
+          padding: 'clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px)',
+        }}
+      >
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          {/* Section header */}
+          <div style={{ textAlign: 'center', marginBottom: '52px' }}>
+            <span
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#B8955A',
+                marginBottom: '14px',
+              }}
+            >
+              Free Estimator
+            </span>
+            <h2
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(28px, 4vw, 52px)',
+                fontWeight: 700,
+                color: '#1A1714',
+                margin: '0 0 16px',
+                letterSpacing: '-0.025em',
+                lineHeight: 1.1,
+              }}
+            >
+              What&apos;s your car worth in credit?
+            </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                color: '#6B6557',
+                maxWidth: '480px',
+                margin: '0 auto',
+                lineHeight: 1.65,
+              }}
+            >
+              Enter your details for an instant estimate. Takes 30 seconds.
+            </p>
+            <p
+              style={{
+                fontSize: '11px',
+                color: '#9B9388',
+                marginTop: '10px',
+              }}
+            >
+              Estimates are illustrative. Actual credit limits are determined by the lender.
+            </p>
+          </div>
+          <CarCalculator yendoUrl={YENDO_FINANCE_CALC} slamDunkUrl={SLAM_DUNK_FINANCE} />
+        </div>
+      </section>
+
+      {/* ── Credit Guides ─────────────────────────────────────────────── */}
+      <section
+        id="guides"
+        style={{
+          padding: 'clamp(80px, 10vw, 140px) clamp(20px, 5vw, 80px)',
+          background: '#FDFAF6',
+        }}
+      >
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          {/* Section header */}
+          <div style={{ marginBottom: '52px' }}>
+            <span
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#B8955A',
+                marginBottom: '14px',
+              }}
+            >
+              Guides
+            </span>
+            <h2
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(28px, 4vw, 50px)',
+                fontWeight: 700,
+                color: '#1A1714',
+                margin: 0,
+                letterSpacing: '-0.025em',
+                lineHeight: 1.1,
+              }}
+            >
+              The credit library.
+            </h2>
+          </div>
+
+          {/* Article cards */}
+          <div className="fin-guides-grid">
+            {GUIDES.map((guide, i) => (
+              <Link
+                key={guide.slug}
+                href={`/lifestyle/articles/${guide.slug}`}
+                className="fin-guide-card"
+                style={{
+                  display: 'block',
+                  background: '#EEF3F1',
+                  borderRadius: '16px',
+                  padding: '32px 28px',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  animation: 'ls-fade-up 0.7s ease forwards',
+                  animationDelay: `${0.1 + i * 0.08}s`,
+                  opacity: 0,
+                }}
+              >
+                <span
+                  style={{
+                    display: 'block',
+                    fontSize: '10px',
+                    fontWeight: 700,
+                    letterSpacing: '0.18em',
+                    textTransform: 'uppercase',
+                    color: '#1D3A2F',
+                    marginBottom: '14px',
+                  }}
+                >
+                  Finance
+                </span>
+                <h3
+                  style={{
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: 'clamp(17px, 2vw, 22px)',
+                    fontWeight: 700,
+                    color: '#1A1714',
+                    margin: '0 0 20px',
+                    lineHeight: 1.3,
+                    letterSpacing: '-0.015em',
+                  }}
+                >
+                  {guide.title}
+                </h3>
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '12px',
+                      color: '#6B6557',
+                      fontWeight: 500,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '6px',
+                    }}
+                  >
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                      <circle cx="6" cy="6" r="5" stroke="#6B6557" strokeWidth="1.2" />
+                      <path d="M6 3.5v2.75l1.5 1.5" stroke="#6B6557" strokeWidth="1.2" strokeLinecap="round" />
+                    </svg>
+                    {guide.readTime} read
+                  </span>
+                  <span
+                    style={{
+                      fontSize: '13px',
+                      fontWeight: 600,
+                      color: '#1D3A2F',
+                    }}
+                  >
+                    Read →
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Editorial ───────────────────────────────────────────────────── */}
+      <section style={{
+        background: '#F0EDE8',
+        padding: 'clamp(60px, 8vw, 100px) clamp(20px, 6vw, 80px)',
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <CategoryEditorial
+            articles={articles}
+            categoryLabel="Finance"
+            categorySlug="finance"
+          />
+        </div>
+      </section>
+
+      {/* ── FAQ ───────────────────────────────────────────────────────── */}
+      <section
+        style={{
+          background: '#FDFAF6',
+          padding: 'clamp(60px, 8vw, 120px) clamp(20px, 5vw, 80px)',
+          borderTop: '1px solid rgba(184,149,90,0.12)',
+        }}
+      >
+        <div style={{ maxWidth: '820px', margin: '0 auto' }}>
+          <div style={{ marginBottom: '52px' }}>
+            <span
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#B8955A',
+                marginBottom: '14px',
+              }}
+            >
+              FAQ
+            </span>
+            <h2
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(28px, 4vw, 50px)',
+                fontWeight: 700,
+                color: '#1A1714',
+                margin: 0,
+                letterSpacing: '-0.025em',
+                lineHeight: 1.1,
+              }}
+            >
+              Common questions.
+            </h2>
+          </div>
+
+          <FinanceFAQ />
+        </div>
+      </section>
+
+      <style>{`
+        @keyframes ls-fade-up {
+          from { opacity: 0; transform: translateY(20px); }
+          to   { opacity: 1; transform: translateY(0); }
+        }
+
+        html { scroll-behavior: smooth; }
+
+        ::selection {
+          background: rgba(184,149,90,0.22);
+          color: #1A1714;
+        }
+
+        /* Steps grid */
+        .fin-steps-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
+        /* Guides grid */
+        .fin-guides-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+
+        /* Guide card hover */
+        .fin-guide-card {
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .fin-guide-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 40px rgba(29,58,47,0.10);
+        }
+
+        /* Step card hover */
+        .fin-step-card {
+          transition: transform 0.25s ease;
+        }
+        .fin-step-card:hover {
+          transform: translateY(-3px);
+        }
+
+        /* CTA button hovers */
+        .fin-cta-primary:hover {
+          background: #a07e4a !important;
+          transform: translateY(-1px);
+        }
+        .fin-cta-outline:hover {
+          border-color: rgba(253,250,246,0.7) !important;
+        }
+        .fin-qualify-btn:hover {
+          background: #a07e4a !important;
+        }
+        .fin-howitworks-btn:hover {
+          border-color: rgba(253,250,246,0.6) !important;
+          color: #FDFAF6 !important;
+        }
+
+        /* Stat card hover */
+        .fin-stat-card {
+          transition: background 0.2s, border-color 0.2s;
+        }
+        .fin-stat-card:hover {
+          background: rgba(253,250,246,0.09) !important;
+          border-color: rgba(184,149,90,0.25) !important;
+        }
+
+        /* DriveCredit grid responsive */
+        @media (max-width: 900px) {
+          .fin-drive-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .fin-steps-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .fin-guides-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .fin-guides-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+    </div>
+  )
+}
