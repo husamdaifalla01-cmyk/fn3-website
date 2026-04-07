@@ -4,20 +4,20 @@ import { useState } from 'react'
 
 const FAQS = [
   {
-    q: 'How does DriveCredit work?',
-    a: 'DriveCredit lets you use your vehicle as collateral for a real Visa credit card. You keep driving your car — there\'s no title transfer. The card reports to all three credit bureaus, helping you build credit history.',
+    q: 'How does a car-secured credit card work?',
+    a: 'Yendo lets you use your vehicle\'s equity as collateral for a real Visa credit card — instead of a cash deposit or a high credit score. You keep driving your car normally. The card reports to all three credit bureaus every month, helping you build credit history.',
   },
   {
     q: 'Does checking my eligibility affect my credit score?',
-    a: 'No. Checking if you qualify uses a soft pull, which has no impact on your credit score. Only if you choose to proceed does a hard inquiry occur.',
+    a: 'No. The initial eligibility check with Yendo is a soft pull — it does not appear on your credit report and has no impact on your score. Only if you choose to proceed with a full application does a hard inquiry occur.',
   },
   {
     q: 'What credit score do I need?',
-    a: 'DriveCredit is designed for people rebuilding or establishing credit. There\'s no minimum credit score requirement to check eligibility.',
+    a: 'There is no minimum credit score requirement to check eligibility. Yendo\'s car-secured card is designed for people with bad credit (300–600) or thin credit files. Your vehicle\'s value is the primary factor, not your credit history.',
   },
   {
     q: 'How is this different from a secured credit card?',
-    a: 'With a secured card, your cash deposit is the collateral and you lose access to those funds. With DriveCredit, your vehicle is the collateral — your cash stays in your pocket.',
+    a: 'Traditional secured cards require a cash deposit ($200–$500) that you lose access to. With a car-secured card, your vehicle\'s equity is the collateral — your cash stays in your pocket. Credit limits are also typically much higher ($500–$10,000 vs $200–$500).',
   },
   {
     q: 'How long does it take to see credit score improvement?',
