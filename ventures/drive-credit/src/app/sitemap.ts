@@ -22,6 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/finance/secured-credit-card-bad-credit', '/finance/qualify',
     '/finance/how-to-rebuild-credit', '/finance/first-credit-card-bad-credit',
     '/finance/credit-card-to-rebuild-credit',
+    '/finance/faq',
+    '/finance/yendo-review',
+    '/finance/car-equity-credit-card-reviews',
+    '/finance/does-applying-for-credit-card-hurt-credit',
   ]
 
   const articlePages = ARTICLES.map(a => `/articles/${a.slug}`)
