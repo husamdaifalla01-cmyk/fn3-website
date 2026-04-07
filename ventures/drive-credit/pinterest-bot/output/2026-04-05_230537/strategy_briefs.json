@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bad-credit-credit-card-v1",
+    "account": "mintbrooks_main",
+    "board": "Bad Credit Solutions",
+    "pin_title": "Bad Credit? Your Car Can Unlock a Visa Card That ACTUALLY Works!",
+    "pin_description": "Struggling to get approved for a credit card because of bad credit? Discover the Yendo Visa Credit Card that uses your car's equity to help you qualify. No traditional credit check required! Start rebuilding your credit today and get access to the funds you need. Learn how your car can be your path to a real credit card. #BadCreditCreditCard #CreditCardForBadCredit #YendoVisa #CarEquityLoan #RebuildCredit #FinancialFreedom #NoCreditCheck #VisaCard",
+    "hashtags": [
+      "BadCreditCreditCard",
+      "CreditCardForBadCredit",
+      "YendoVisa",
+      "CarEquityLoan",
+      "RebuildCredit",
+      "FinancialFreedom",
+      "NoCreditCheck",
+      "VisaCard"
+    ],
+    "image_direction": {
+      "scene": "A person looking relieved, holding a shiny new credit card, with a modern car visible in the background (subtly).",
+      "mood": "Hopeful, empowering, relief.",
+      "colors": "Bright, optimistic, perhaps blue and green accents.",
+      "composition": "Close-up on the person's face or hand with the card, car in soft focus behind.",
+      "negative_prompt": "Despair, frustration, old broken car, low quality, blurry, dark colors."
+    },
+    "affiliate_url": "https://mintbrooks.com/bad-credit-credit-card?utm_source=pinterest&utm_medium=social&utm_campaign=bad-credit-credit-card-v1",
+    "hook_type": "relief",
+    "niche": "bad_credit",
+    "angle": "This pin highlights a working solution for those with bad credit by leveraging their car."
+  },
+  {
+    "id": "bad-credit-credit-card-v2",
+    "account": "mintbrooks_main",
+    "board": "Bad Credit Solutions",
+    "pin_title": "Forget Your Credit Score! Your Car Can Get You a Real Visa Card.",
+    "pin_description": "Worried your credit score is holding you back from getting a credit card? With the Yendo Visa Credit Card, your credit score isn't the main factor. Instead, leverage the equity in your car to qualify for a Visa card and start building a better financial future. Stop letting past credit mistakes define your access to credit. Discover a new way today! #NoCreditScore #BadCreditCreditCard #CarAsCollateral #YendoCard #BuildCreditFast #FinancialSolutions #CreditCardHelp #VisaForBadCredit",
+    "hashtags": [
+      "NoCreditScore",
+      "BadCreditCreditCard",
+      "CarAsCollateral",
+      "YendoCard",
+      "BuildCreditFast",
+      "FinancialSolutions",
+      "CreditCardHelp",
+      "VisaForBadCredit"
+    ],
+    "image_direction": {
+      "scene": "A person confidently standing next to a sleek, modern car, looking at a credit card in their hand.",
+      "mood": "Confident, innovative, empowering.",
+      "colors": "Bold, clean, perhaps metallic silver and deep blue.",
+      "composition": "Person and car prominent, credit card clearly visible, dynamic angle.",
+      "negative_prompt": "Old car, struggling person, despair, blurry, low quality, dark and dull colors."
+    },
+    "affiliate_url": "https://mintbrooks.com/bad-credit-credit-card?utm_source=pinterest&utm_medium=social&utm_campaign=bad-credit-credit-card-v2",
+    "hook_type": "pattern_interrupt",
+    "niche": "bad_credit",
+    "angle": "This pin focuses on the innovative approach of using car equity instead of a credit score to get a credit card."
+  }
+]

@@ -1,3 +1,5 @@
+export const runtime = 'edge'
+
 import { NextResponse } from 'next/server'
 import { readFileSync, readdirSync, existsSync } from 'fs'
 import { join } from 'path'

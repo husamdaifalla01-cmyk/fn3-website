@@ -1,12 +1,9 @@
+export const runtime = 'edge'
+
 import { NextResponse } from 'next/server'
-import { readFileSync, existsSync } from 'fs'
-import { join } from 'path'
 
 export const dynamic = 'force-dynamic'
 
-const PRODUCTS_PATH = join(process.cwd(), 'public/articles/products.json')
-
-// Map Amazon bot niche keys to Mintbrooks category slugs
 const NICHE_TO_CATEGORY: Record<string, string> = {
   clean_beauty: 'beauty', skincare: 'beauty', makeup: 'beauty', hair: 'beauty', nail_art: 'beauty',
   home_decor: 'home-decor', bathroom: 'home-decor', organization: 'home-decor',
@@ -17,25 +14,19 @@ const NICHE_TO_CATEGORY: Record<string, string> = {
 }
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url)
+  const { origin, searchParams } = new URL(request.url)
   const category = searchParams.get('category')
 
   try {
-    if (!existsSync(PRODUCTS_PATH)) {
-      return NextResponse.json({ products: [], total: 0 })
-    }
+    const res = await fetch(`${origin}/articles/products.json`, { cache: 'no-store' })
+    if (!res.ok) return NextResponse.json({ products: [], total: 0 })
 
-    const raw = readFileSync(PRODUCTS_PATH, 'utf-8')
-    const data = JSON.parse(raw)
-
-    // products.json structure: { skincare: [...], clean_beauty: [...], ... }
+    const data = await res.json()
     const allProducts: unknown[] = []
     const seen = new Set<string>()
 
     for (const [niche, items] of Object.entries(data)) {
-      if (niche.startsWith('_')) continue // skip _meta fields
-      if (!Array.isArray(items)) continue
-
+      if (niche.startsWith('_') || !Array.isArray(items)) continue
       const mintbrooksCategory = NICHE_TO_CATEGORY[niche] || 'lifestyle'
       if (category && category !== mintbrooksCategory) continue
 
@@ -43,7 +34,6 @@ export async function GET(request: Request) {
         const asin: string = p.asin
         if (!asin || seen.has(asin)) continue
         seen.add(asin)
-
         allProducts.push({
           asin,
           name: p.name || p.title,

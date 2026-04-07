@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bad-credit-credit-card-v1",
+    "account": "mintbrooks_main",
+    "board": "Bad Credit Solutions",
+    "pin_title": "Finally! A Credit Card For Bad Credit That Actually Works (No Joke)",
+    "pin_description": "Struggling to get approved for a credit card because of your bad credit history? Discover the Yendo Credit Card, designed for Americans with less-than-perfect credit. Stop getting denied and start rebuilding your financial future. This card uses your car's equity, making approval possible even with a low credit score. Learn how to get a credit card that works for you and check if your car qualifies today! #BadCreditCreditCard #CreditCardForBadCredit #FinancialFreedom #RebuildCredit #YendoCreditCard #CreditHelp #NoCreditCheck #CarEquityLoan",
+    "hashtags": [
+      "BadCreditCreditCard",
+      "CreditCardForBadCredit",
+      "FinancialFreedom",
+      "RebuildCredit",
+      "YendoCreditCard",
+      "CreditHelp",
+      "NoCreditCheck",
+      "CarEquityLoan"
+    ],
+    "image_direction": {
+      "scene": "A person looking genuinely relieved and happy, holding a new credit card, with a modern car visible in the background through a window or in soft focus.",
+      "mood": "Hopeful, relieved, empowering, optimistic.",
+      "colors": "Bright, clean, professional palette with blues, greens, and whites. Accents of silver or gold.",
+      "composition": "Close-up of the person's hand holding the card, with the car subtly in the background, suggesting the connection. Clear focus on the card and the person's positive expression.",
+      "negative_prompt": "Stressed person, dark or gloomy colors, old or broken car, cluttered background, images depicting debt or struggle."
+    },
+    "affiliate_url": "https://mintbrooks.com/bad-credit-credit-card?utm_source=pinterest&utm_medium=social&utm_campaign=bad-credit-credit-card-v1",
+    "hook_type": "relief",
+    "niche": "bad_credit",
+    "angle": "This pin offers relief by presenting a credit card solution specifically for people with bad credit that is proven to work using their car's equity."
+  },
+  {
+    "id": "bad-credit-credit-card-v2",
+    "account": "mintbrooks_main",
+    "board": "Bad Credit Solutions",
+    "pin_title": "No Credit Score? No Problem! Your Car Can Get You a Credit Card Today.",
+    "pin_description": "Tired of being judged by your credit score? With the Yendo Credit Card, your car's value is your key to getting approved. Forget traditional credit checks; we focus on what you own. Perfect for those with bad credit or no credit history. Use your car to unlock financial flexibility and start building a better credit future. Find out if your car qualifies and get the credit you deserve! #NoCreditScore #BadCreditSolutions #CarSecuredCreditCard #YendoCard #BuildCredit #FinancialHelp #CreditBuilding #AutoEquityCard",
+    "hashtags": [
+      "NoCreditScore",
+      "BadCreditSolutions",
+      "CarSecuredCreditCard",
+      "YendoCard",
+      "BuildCredit",
+      "FinancialHelp",
+      "CreditBuilding",
+      "AutoEquityCard"
+    ],
+    "image_direction": {
+      "scene": "A stylized graphic showing a car key transforming into a modern credit card, or a sleek car silhouette with a glowing credit card icon overlaid on it.",
+      "mood": "Innovative, empowering, straightforward, modern.",
+      "colors": "Clean, professional, and slightly futuristic colors like silver, deep blues, white, and subtle metallic accents.",
+      "composition": "Focus on the visual connection or transformation between the car/car key and the credit card, making it clear and impactful. Minimalist background.",
+      "negative_prompt": "Old-fashioned design, complicated imagery, distressed or broken items, dark or cluttered backgrounds, images of debt or frustration."
+    },
+    "affiliate_url": "https://mintbrooks.com/bad-credit-credit-card?utm_source=pinterest&utm_medium=social&utm_campaign=bad-credit-credit-card-v2",
+    "hook_type": "pattern_interrupt",
+    "niche": "bad_credit",
+    "angle": "This pin uses a pattern interrupt by highlighting an unconventional method (using a car) to get a credit card, bypassing the need for a good credit score."
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "pin_id": "1135681231064827436",
+    "brief_id": "bad-credit-credit-card-v1",
+    "account": "mintbrooks_main",
+    "niche": "bad_credit",
+    "hook_type": "relief",
+    "angle": "This pin offers relief by presenting a credit card solution specifically for people with bad credit that is proven to work using their car's equity.",
+    "pin_title": "Finally! A Credit Card For Bad Credit That Actually Works (No Joke)",
+    "impressions": 0,
+    "saves": 0,
+    "clicks": 0,
+    "date": "2026-04-06"
+  },
+  {
+    "pin_id": "1135681231064827441",
+    "brief_id": "bad-credit-credit-card-v2",
+    "account": "mintbrooks_main",
+    "niche": "bad_credit",
+    "hook_type": "pattern_interrupt",
+    "angle": "This pin uses a pattern interrupt by highlighting an unconventional method (using a car) to get a credit card, bypassing the need for a good credit score.",
+    "pin_title": "No Credit Score? No Problem! Your Car Can Get You a Credit Card Today.",
+    "impressions": 0,
+    "saves": 0,
+    "clicks": 0,
+    "date": "2026-04-06"
+  }
+]

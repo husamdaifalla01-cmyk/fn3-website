@@ -1,0 +1,58 @@
+[
+  {
+    "id": "bad-credit-credit-card-v1",
+    "account": "mintbrooks_main",
+    "board": "Bad Credit Solutions",
+    "pin_title": "Finally! A Credit Card For Bad Credit That ACTUALLY Works!",
+    "pin_description": "Struggling to get approved for a credit card because of bad credit? Discover the Yendo Credit Card, designed for Americans with less-than-perfect credit. Instead of your credit score, Yendo uses your car's equity to help you get approved. Get access to credit, build your payment history, and improve your financial future. No hard credit checks to apply. Learn how your car can unlock a credit card today!",
+    "hashtags": [
+      "badcredit",
+      "creditcard",
+      "nocreditcheck",
+      "buildcredit",
+      "financialfreedom",
+      "carenthusiast",
+      "creditscore",
+      "yendo"
+    ],
+    "image_direction": {
+      "scene": "A person looking relieved and hopeful, with a modern car subtly visible in the background.",
+      "mood": "Hopeful, empowering, relief",
+      "colors": "Bright, inviting, warm tones with hints of blue or green",
+      "composition": "Close-up of a person's face showing a genuine smile of relief, with a soft-focus car element behind them.",
+      "negative_prompt": "Gloomy, sad, desperate, old car, broken car, complex background, aggressive, cheap"
+    },
+    "affiliate_url": "https://mintbrooks.com/bad-credit-credit-card?utm_source=pinterest&utm_medium=social&utm_campaign=bad-credit-credit-card-v1",
+    "hook_type": "relief",
+    "niche": "bad_credit",
+    "angle": "Credit card for bad credit that actually works"
+  },
+  {
+    "id": "bad-credit-credit-card-v2",
+    "account": "mintbrooks_main",
+    "board": "Bad Credit Solutions",
+    "pin_title": "Forget Your Credit Score! Your Car Is Your New Credit Card.",
+    "pin_description": "Tired of credit scores dictating your financial life? The Yendo Credit Card offers a revolutionary approach: use your car's equity to get approved, no credit score needed! Perfect for those with bad credit or no credit history. Access a Visa credit card and start building a positive payment history without traditional hurdles. Your car is more than just transport – it's your path to financial flexibility. Discover how it works!",
+    "hashtags": [
+      "nocreditscore",
+      "carsecured",
+      "visacard",
+      "badcredithelp",
+      "financialtip",
+      "carowner",
+      "getapproved",
+      "creditbuilding"
+    ],
+    "image_direction": {
+      "scene": "A confident person standing next to a sleek, modern car, holding a Yendo Visa credit card.",
+      "mood": "Confident, innovative, empowering",
+      "colors": "Sleek, modern, metallic tones (silver, grey) with a pop of vibrant color from the credit card or clothing.",
+      "composition": "Medium shot of a person, credit card clearly visible, with the car partially in the background at a dynamic angle.",
+      "negative_prompt": "Old car, broken car, desperate person, complex background, dark colors, traditional bank imagery, confused expression"
+    },
+    "affiliate_url": "https://mintbrooks.com/bad-credit-credit-card?utm_source=pinterest&utm_medium=social&utm_campaign=bad-credit-credit-card-v2",
+    "hook_type": "pattern_interrupt",
+    "niche": "bad_credit",
+    "angle": "No credit score needed — use your car instead"
+  }
+]

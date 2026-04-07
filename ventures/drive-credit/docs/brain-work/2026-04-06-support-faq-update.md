@@ -1,50 +1,52 @@
-# Mintbrooks Support — FAQ Update (New Pages)
-
-**Prepared by:** Head of Support  
-**Date:** 2026-04-06
-
----
-
-## New FAQ Content for Recently Shipped Pages
-
-### For /secured-credit-card-bad-credit
-
-**Q: Is a secured credit card the same as a prepaid card?**
-A: No. A prepaid card uses your own money loaded onto the card. A secured credit card is backed by a deposit (or, in Yendo's case, your car's equity), but it's a real credit card that reports to credit bureaus. Prepaid cards do NOT build credit. Secured credit cards DO build credit.
-
-**Q: Can I get a secured card with a 400 credit score?**
-A: Yes, most secured cards are designed for scores below 500. OpenSky Secured Visa has no credit check at all. Yendo (car-secured) uses your car's value rather than your credit score. A 400 score doesn't disqualify you for either.
-
-**Q: What happens to my deposit when I close a secured credit card?**
-A: Your deposit is returned when you close the account in good standing — meaning no outstanding balance and no missed payments. Some issuers (Capital One, Discover) will upgrade you to an unsecured card automatically and return your deposit after 6–12 months of on-time payments.
+# Support — FAQ Update + Pre-Launch Customer Question Prep
+**Date:** 2026-04-06 19:25 EDT
+**Agent:** Head of Support
 
 ---
 
-### For /credit-builder-loan
+## Top 10 Questions We'll Get When Content Launches
 
-**Q: Can I get a credit builder loan with no credit?**
-A: Yes. Most credit builder loans are specifically designed for people with no credit history or bad credit. There is typically no credit check to apply — lenders only require proof of income. Self and Credit Strong are popular online options.
+Based on the ICP (bad credit, car owners), here are the questions support will need to answer:
 
-**Q: How is a credit builder loan different from a regular loan?**
-A: In a regular loan, you receive the money upfront and pay it back. In a credit builder loan, the money is held in a locked savings account while you make payments. You only receive the funds after the loan is fully paid. The purpose is credit building, not immediate access to cash.
+1. **"Does applying affect my credit score?"**
+   Answer: "Checking your eligibility uses a soft pull — this does NOT affect your credit score. Only if you proceed to full application is there a hard pull."
+
+2. **"My car is financed — do I still qualify?"**
+   Answer: "Yendo typically requires that you own your vehicle outright or have substantial equity. If you're still making payments, eligibility depends on your remaining balance vs. vehicle value."
+
+3. **"I live in [excluded state]. Will it be available soon?"**
+   Answer: "We don't have a timeline for new state launches. We recommend bookmarking /yendo-states-guide and checking back. In the meantime, see our alternative options for your state."
+
+4. **"Is this a scam?"**
+   Answer: "Mintbrooks is an independent educational site. We don't take your money or personal details — we connect you to Yendo, a real company. Check our About page for full disclosure."
+
+5. **"How much credit limit can I get?"**
+   Answer: "Yendo determines your limit based on your vehicle's assessed value. Limits typically range from $500 to $10,000. Use our free calculator for an estimate."
+
+6. **"Can I use this to improve my credit score?"**
+   Answer: "Yes — Yendo reports to all 3 major credit bureaus (Equifax, Experian, TransUnion). Responsible use will build credit history."
+
+7. **"What's the APR?"**
+   Answer: "Yendo's rates vary by applicant. We recommend checking their current terms directly at their site — we only share publicly available information and it can change."
+
+8. **"How is this different from a secured credit card?"**
+   Answer: "Traditional secured cards require a cash deposit (usually $200-500). Yendo uses your car's value as collateral — no cash deposit needed."
+
+9. **"What happens if I can't pay?"**
+   Answer: "Like any credit product, non-payment has consequences. With Yendo, your car is collateral — we recommend only applying if you're ready to make on-time payments."
+
+10. **"How do I cancel or unsubscribe from emails?"**
+    Answer: "Use the unsubscribe link at the bottom of any email. Or email support@mintbrooks.com."
 
 ---
 
-### For /yendo-states-guide
+## Support Channel (Pre-Launch)
 
-**Q: Is Yendo available in my state?**
-A: Yendo is currently available in 37 states + DC. Visit our states guide at mintbrooks.com/yendo-states-guide for the full list. If you're in an excluded state, see the Slam Dunk Loans option on that page.
+- Email: support@mintbrooks.com (Resend inbox)
+- Response target: 24 hours
+- Auto-reply: Set up a Resend acknowledgment email if volume warrants it
 
-**Q: Why is Yendo not available in New York or California?**
-A: Yendo's availability is determined by state licensing and regulatory requirements. The company is actively expanding. Some states with stricter lending regulations require additional licensing. California is notably absent from their current map — check the guide for current state status.
+## FAQ Page Priority
 
----
-
-## Support Email Response Templates
-
-**Common inquiry: "Is this a scam?"**
-> Hi [Name], thanks for reaching out! Mintbrooks is an independent educational resource about car-secured credit products. We are not a lender — we provide information and connect people with Yendo, which is a licensed financial technology company offering car-secured Visa credit cards. The initial eligibility check is a soft inquiry that won't affect your credit. Happy to answer any specific questions you have.
-
-**Common inquiry: "I clicked the link but nothing happened"**
-> Hi [Name], our affiliate link should take you to Yendo's eligibility checker. If the link isn't working, you can go directly to Yendo's website and look for their "Check My Car" eligibility tool. If you're still having trouble, please let us know which device and browser you're using and we'll look into it.
+Once first traffic arrives, /faq should be built with the top 10 above. Estimated search volume for "yendo card faq" style queries is low, but the page will dramatically reduce email volume and boost trust signals.
 
