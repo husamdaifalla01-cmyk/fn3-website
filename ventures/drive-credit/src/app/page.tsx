@@ -322,6 +322,7 @@ export default function HomePage() {
               { href: '/emergency-cash-between-paychecks', title: 'Managing Cash Flow Gaps', desc: 'What to consider when expenses arrive before income.' },
               { href: '/secured-credit-card-bad-credit', title: 'Best Secured Credit Cards for Bad Credit', desc: 'No cash deposit required if you own a car.' },
               { href: '/credit-builder-loan', title: 'Credit Builder Loans vs. Credit Cards', desc: 'Which builds credit faster — and which fits your situation.' },
+              { href: '/first-credit-card-bad-credit', title: 'Your First Credit Card With Bad Credit', desc: 'Own a car? Skip the deposit. Here\'s everything you need to know.' },
             ].map(g => (
               <Link
                 key={g.href}

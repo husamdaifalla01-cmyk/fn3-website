@@ -114,6 +114,9 @@ export default function BadCreditPage() {
             <Link href="/auto-equity-loan" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
               → Auto Equity Loan: Use Your Car&apos;s Value to Get Cash
             </Link>
+            <Link href="/first-credit-card-bad-credit" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
+              → Getting Your First Credit Card With Bad Credit (Complete Guide)
+            </Link>
           </div>
         </div>
 

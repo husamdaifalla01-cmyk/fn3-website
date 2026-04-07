@@ -109,3 +109,9 @@ export const YENDO_GUIDE_HERO  = buildAffiliateUrl(OFFERS.yendo.url,    'organic
 export const YENDO_GUIDE_MID   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'rebuild-credit-mid')
 export const YENDO_GUIDE_CTA   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'rebuild-credit-cta')
 export const SLAM_DUNK_GUIDE   = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'rebuild-credit-fallback')
+
+// ─── First credit card bad credit guide ────────────────────────────────────
+export const YENDO_FIRST_CARD_HERO = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'first-card-hero')
+export const YENDO_FIRST_CARD_MID  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'first-card-mid')
+export const YENDO_FIRST_CARD_CTA  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'first-card-cta')
+export const SLAM_DUNK_FIRST_CARD  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'first-card-fallback')
