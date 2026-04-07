@@ -103,3 +103,9 @@ export const YENDO_SECURED_HERO  = buildAffiliateUrl(OFFERS.yendo.url,    'organ
 export const YENDO_SECURED_MID   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'secured-card-mid')
 export const YENDO_SECURED_CTA   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'secured-card-cta')
 export const SLAM_DUNK_SECURED   = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'secured-card-fallback')
+
+// ─── How to rebuild credit guide ────────────────────────────────────────────
+export const YENDO_GUIDE_HERO  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'rebuild-credit-hero')
+export const YENDO_GUIDE_MID   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'rebuild-credit-mid')
+export const YENDO_GUIDE_CTA   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'rebuild-credit-cta')
+export const SLAM_DUNK_GUIDE   = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'rebuild-credit-fallback')
