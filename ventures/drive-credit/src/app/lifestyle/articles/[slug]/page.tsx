@@ -16,6 +16,7 @@ type Article = {
   accent: string
   image: string
   date: string
+  excerpt?: string
 }
 
 const ALL_ARTICLES: Article[] = [
