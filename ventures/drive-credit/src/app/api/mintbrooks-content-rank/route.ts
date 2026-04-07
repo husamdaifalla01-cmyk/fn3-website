@@ -1,9 +1,6 @@
 export const runtime = 'edge'
 
 import { NextResponse } from 'next/server'
-import { readFileSync, readdirSync, existsSync } from 'fs'
-import { join } from 'path'
-import os from 'os'
 import { ALL_ARTICLES } from '@/lib/lifestyle/articles'
 import {
   scoreArticle,
@@ -43,72 +40,22 @@ const CACHE_TTL_MS = 60 * 60 * 1000 // 1 hour
 
 // ── Product cache path ──────────────────────────────────────────────────────
 
-const CACHE_DIR = join(os.homedir(), 'Downloads/amazon/data/product_cache')
-
 // ── Load and score all content ──────────────────────────────────────────────
 
 function buildRanked(): ContentScore[] {
-  // 1. Score all articles
+  // Score articles only — local product cache not available in edge runtime
   const articleScores: ContentScore[] = ALL_ARTICLES.map(article =>
     scoreArticle({
       slug: article.slug,
       categorySlug: article.category,
       readTime: article.readTime,
-      date: undefined, // articles.ts does not carry a date field
+      date: undefined,
       featured: FEATURED_SLUGS.has(article.slug),
       title: article.title,
     })
   )
 
-  // 2. Load products from cache dir (up to 50 files, skip errors)
-  const rawProducts: Array<{
-    asin: string
-    category: string
-    rating?: number
-    review_count?: number
-    has_pin?: boolean
-    featured?: boolean
-  }> = []
-
-  if (existsSync(CACHE_DIR)) {
-    let files: string[] = []
-    try {
-      files = readdirSync(CACHE_DIR)
-        .filter(f => f.endsWith('.json'))
-        .slice(0, 50)
-    } catch {
-      // ignore
-    }
-
-    for (const file of files) {
-      try {
-        const raw = readFileSync(join(CACHE_DIR, file), 'utf-8')
-        const products = JSON.parse(raw)
-        if (Array.isArray(products)) {
-          for (const p of products) {
-            const niche: string = p.niche || p.category || 'lifestyle'
-            const category = NICHE_TO_CATEGORY[niche] ?? 'lifestyle'
-            rawProducts.push({
-              asin: p.asin,
-              category,
-              rating: p.rating,
-              review_count: p.review_count,
-              has_pin: p.has_pin ?? false,
-              featured: false,
-            })
-          }
-        }
-      } catch {
-        // skip malformed files
-      }
-    }
-  }
-
-  // 3. Score products
-  const productScores = scoreAllProducts(rawProducts)
-
-  // 4. Rank everything together
-  return rankContent([...articleScores, ...productScores])
+  return rankContent(articleScores)
 }
 
 // ── Niche → Mintbrooks category map (mirrors mintbrooks-products/route.ts) ──
