@@ -1,0 +1,553 @@
+export type Category = 'home-decor' | 'wellness' | 'beauty' | 'kitchen' | 'finance'
+
+export interface Article {
+  slug: string
+  title: string
+  category: Category
+  categoryLabel: string
+  readTime: string
+  excerpt: string
+  bg: string
+  accent: string
+}
+
+export const CATEGORY_META: Record<Category, { label: string; bg: string; accent: string; image: string }> = {
+  'home-decor': { label: 'Home & Decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/lifestyle/home-decor.jpg' },
+  'wellness':   { label: 'Wellness',     bg: '#F5EDE5', accent: '#7B5E4A', image: '/lifestyle/wellness.jpg' },
+  'beauty':     { label: 'Beauty',       bg: '#F5EAF0', accent: '#8B4E6B', image: '/lifestyle/beauty.jpg' },
+  'kitchen':    { label: 'Kitchen',      bg: '#EDF2E5', accent: '#4A5E2C', image: '/lifestyle/kitchen.jpg' },
+  'finance':    { label: 'Money & Credit', bg: '#EEF3F1', accent: '#1D3A2F', image: '/lifestyle/finance.jpg' },
+}
+
+export const ARTICLES: Article[] = [
+  // ── Home & Decor (6) ────────────────────────────────────────────────────────
+  {
+    slug: 'bedroom-feel-expensive',
+    title: 'The 7 things that actually make a bedroom feel expensive',
+    category: 'home-decor',
+    categoryLabel: 'Home & Decor',
+    readTime: '4 min',
+    excerpt: 'It has nothing to do with price tag. These are the small changes that read as intentional.',
+    bg: '#EEF3F1',
+    accent: '#2C4A3E',
+  },
+  {
+    slug: 'shelf-decor-321-rule',
+    title: 'Aesthetic shelf decor: the 3-2-1 rule designers actually use',
+    category: 'home-decor',
+    categoryLabel: 'Home & Decor',
+    readTime: '4 min',
+    excerpt: 'Three types of objects, two heights, one focal point. The formula every good shelf follows.',
+    bg: '#EEF3F1',
+    accent: '#2C4A3E',
+  },
+  {
+    slug: 'linen-vs-cotton-bedding',
+    title: 'Linen vs cotton bedding: which is actually worth it?',
+    category: 'home-decor',
+    categoryLabel: 'Home & Decor',
+    readTime: '5 min',
+    excerpt: 'We tested both for three months. The answer depends on how you sleep — here is the full breakdown.',
+    bg: '#EEF3F1',
+    accent: '#2C4A3E',
+  },
+  {
+    slug: 'coffee-table-styling',
+    title: 'How to style a coffee table like an interior designer',
+    category: 'home-decor',
+    categoryLabel: 'Home & Decor',
+    readTime: '3 min',
+    excerpt: 'The five-object rule and why symmetry is overrated.',
+    bg: '#EEF3F1',
+    accent: '#2C4A3E',
+  },
+  {
+    slug: 'affordable-art-prints',
+    title: 'The best affordable art prints that look high-end',
+    category: 'home-decor',
+    categoryLabel: 'Home & Decor',
+    readTime: '6 min',
+    excerpt: 'Under $50, but nobody needs to know that.',
+    bg: '#EEF3F1',
+    accent: '#2C4A3E',
+  },
+  {
+    slug: 'cotton-throw-blankets',
+    title: 'Organic cotton throw blankets we actually tested',
+    category: 'home-decor',
+    categoryLabel: 'Home & Decor',
+    readTime: '4 min',
+    excerpt: 'Softness, durability, and whether they pill after washing. We checked all three.',
+    bg: '#EEF3F1',
+    accent: '#2C4A3E',
+  },
+
+  // ── Wellness (6) ────────────────────────────────────────────────────────────
+  {
+    slug: 'candle-warmer-lamp',
+    title: 'The candle warmer lamp that changed my evening routine',
+    category: 'wellness',
+    categoryLabel: 'Wellness',
+    readTime: '3 min',
+    excerpt: 'No flame, full scent, zero wax waste. The upgrade you did not know you needed.',
+    bg: '#F5EDE5',
+    accent: '#7B5E4A',
+  },
+  {
+    slug: 'morning-rituals',
+    title: '5 morning rituals that take under 10 minutes',
+    category: 'wellness',
+    categoryLabel: 'Wellness',
+    readTime: '5 min',
+    excerpt: 'No 5am wake-up required. These are small enough to actually stick.',
+    bg: '#F5EDE5',
+    accent: '#7B5E4A',
+  },
+  {
+    slug: 'weighted-blankets-guide',
+    title: 'Weighted blankets: who actually needs one?',
+    category: 'wellness',
+    categoryLabel: 'Wellness',
+    readTime: '6 min',
+    excerpt: 'The science, the weight range, and which people genuinely benefit.',
+    bg: '#F5EDE5',
+    accent: '#7B5E4A',
+  },
+  {
+    slug: 'diffuser-oil-combinations',
+    title: 'The diffuser oil combinations worth trying',
+    category: 'wellness',
+    categoryLabel: 'Wellness',
+    readTime: '4 min',
+    excerpt: 'Seven tested pairings. Two of them are genuinely remarkable.',
+    bg: '#F5EDE5',
+    accent: '#7B5E4A',
+  },
+  {
+    slug: 'sleep-routine-vs-supplements',
+    title: 'Why your sleep routine matters more than your supplement stack',
+    category: 'wellness',
+    categoryLabel: 'Wellness',
+    readTime: '7 min',
+    excerpt: 'Magnesium is fine. Consistency is better. Here is what the research actually says.',
+    bg: '#F5EDE5',
+    accent: '#7B5E4A',
+  },
+  {
+    slug: 'hatch-alarm-clock-review',
+    title: 'An honest review of the Hatch alarm clock',
+    category: 'wellness',
+    categoryLabel: 'Wellness',
+    readTime: '5 min',
+    excerpt: 'After six months: what works, what does not, and whether it is worth $170.',
+    bg: '#F5EDE5',
+    accent: '#7B5E4A',
+  },
+
+  // ── Beauty (6) ──────────────────────────────────────────────────────────────
+  {
+    slug: 'glass-skin-routine',
+    title: 'Glass skin routine: the Korean steps actually worth adding',
+    category: 'beauty',
+    categoryLabel: 'Beauty',
+    readTime: '7 min',
+    excerpt: 'The actual steps, in order, with the products that deliver. No 12-step overwhelm.',
+    bg: '#F5EAF0',
+    accent: '#8B4E6B',
+  },
+  {
+    slug: 'vitamin-c-serum-review',
+    title: 'Is a vitamin C serum actually worth it? We tested 6.',
+    category: 'beauty',
+    categoryLabel: 'Beauty',
+    readTime: '6 min',
+    excerpt: 'Stability, concentration, and what the dermatologists actually say.',
+    bg: '#F5EAF0',
+    accent: '#8B4E6B',
+  },
+  {
+    slug: 'retinol-mistakes',
+    title: 'The retinol mistake almost everyone makes',
+    category: 'beauty',
+    categoryLabel: 'Beauty',
+    readTime: '5 min',
+    excerpt: 'Starting too strong. Starting too often. The fixes are simple.',
+    bg: '#F5EAF0',
+    accent: '#8B4E6B',
+  },
+  {
+    slug: 'spf-moisturizer-vs-sunscreen',
+    title: 'SPF in your moisturizer vs. a separate sunscreen: does it matter?',
+    category: 'beauty',
+    categoryLabel: 'Beauty',
+    readTime: '4 min',
+    excerpt: 'The dermatologists have thoughts. They are not what you expect.',
+    bg: '#F5EAF0',
+    accent: '#8B4E6B',
+  },
+  {
+    slug: 'clean-beauty-explained',
+    title: 'Clean beauty: what the label actually means',
+    category: 'beauty',
+    categoryLabel: 'Beauty',
+    readTime: '6 min',
+    excerpt: '"Clean" is not regulated. Here is what to actually look for on an ingredient list.',
+    bg: '#F5EAF0',
+    accent: '#8B4E6B',
+  },
+  {
+    slug: 'skincare-routine-sensitive-skin',
+    title: 'The 5-step skincare routine for sensitive skin',
+    category: 'beauty',
+    categoryLabel: 'Beauty',
+    readTime: '5 min',
+    excerpt: 'The ingredients to avoid and the ones that genuinely soothe.',
+    bg: '#F5EAF0',
+    accent: '#8B4E6B',
+  },
+
+  // ── Kitchen (6) ─────────────────────────────────────────────────────────────
+  {
+    slug: 'coffee-bar-setup',
+    title: 'How to build a coffee bar that looks like it cost $2,000 (for $200)',
+    category: 'kitchen',
+    categoryLabel: 'Kitchen',
+    readTime: '5 min',
+    excerpt: 'The layout, the gear, and the three objects that make it look intentional.',
+    bg: '#EDF2E5',
+    accent: '#4A5E2C',
+  },
+  {
+    slug: 'cast-iron-skillet-guide',
+    title: 'The cast iron skillet guide: why everyone owns one and how to use it',
+    category: 'kitchen',
+    categoryLabel: 'Kitchen',
+    readTime: '6 min',
+    excerpt: 'Seasoning, cleaning, and the three things people get wrong.',
+    bg: '#EDF2E5',
+    accent: '#4A5E2C',
+  },
+  {
+    slug: 'kitchen-organization',
+    title: 'Aesthetic kitchen organization: the products that actually work',
+    category: 'kitchen',
+    categoryLabel: 'Kitchen',
+    readTime: '4 min',
+    excerpt: 'Drawer dividers, shelf risers, and the lazy susan you did not know you needed.',
+    bg: '#EDF2E5',
+    accent: '#4A5E2C',
+  },
+  {
+    slug: 'kitchen-knives-guide',
+    title: 'The only knife you actually need (and 2 backups)',
+    category: 'kitchen',
+    categoryLabel: 'Kitchen',
+    readTime: '5 min',
+    excerpt: 'One eight-inch chefs knife handles 95% of what you cook. Here is how to choose it.',
+    bg: '#EDF2E5',
+    accent: '#4A5E2C',
+  },
+  {
+    slug: 'pour-over-vs-french-press',
+    title: 'Pour-over vs. French press: an honest comparison',
+    category: 'kitchen',
+    categoryLabel: 'Kitchen',
+    readTime: '4 min',
+    excerpt: 'They make genuinely different coffee. Here is which one you will actually prefer.',
+    bg: '#EDF2E5',
+    accent: '#4A5E2C',
+  },
+  {
+    slug: 'meal-prep-containers',
+    title: 'Meal prep containers that do not look depressing',
+    category: 'kitchen',
+    categoryLabel: 'Kitchen',
+    readTime: '3 min',
+    excerpt: 'Glass, aesthetic, stackable, and actually worth washing.',
+    bg: '#EDF2E5',
+    accent: '#4A5E2C',
+  },
+
+  // ── Beauty — Affiliate (13) ─────────────────────────────────────────────────
+  {
+    slug: 'best-anti-aging-serum',
+    title: 'Best Anti-Aging Serums for Every Skin Concern & Budget',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '9 min',
+    excerpt: 'Retinol, vitamin C, niacinamide — we break down what each does and which La Roche-Posay and Paula\'s Choice formulas are actually worth buying.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'best-anti-aging-serum-beginners-budget',
+    title: 'Best Anti-Aging Serums for Beginners & Beyond Under $100',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'Starting your anti-aging journey without breaking the bank. Our top picks are gentle enough for beginners and effective enough to show results.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'best-serum-for-dark-spots',
+    title: 'The Best Serums for Dark Spots and Hyperpigmentation',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '9 min',
+    excerpt: 'Dark spots respond to the right ingredients — if you pick them correctly. Here are the serums that actually deliver visible brightening results.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'la-roche-posay-vitamin-c-vs-retinol',
+    title: 'La Roche-Posay Vitamin C vs. Retinol: Which Is Best for You?',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'Both are dermatologist-tested. Both work. The question is which one your skin actually needs right now — and whether you can use them together.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'best-clean-liquid-foundation',
+    title: 'The Best Clean Liquid Foundations for a Healthy Glow (Under $40)',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'Non-toxic, genuinely effective, and priced under $40. These are the clean foundations that don\'t compromise on coverage or longevity.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'clean-foundation-for-beginners',
+    title: 'Top Clean Foundations for Beginners: Effortless Beauty',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '7 min',
+    excerpt: 'Your first clean foundation doesn\'t need to be complicated. These beginner-friendly picks apply easily and look genuinely polished.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'harvest-natural-beauty-vs-jerome-alexander-foundation-beginners',
+    title: 'Harvest Natural Beauty vs. Jerome Alexander: Clean Foundation',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'Two of the most talked-about clean foundations for beginners, compared head-to-head on formula, finish, and real-world wearability.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'best-neutral-eyeshadow-palette',
+    title: 'The Best Neutral Eyeshadow Palettes for Your Everyday Look',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '9 min',
+    excerpt: 'Neutral palettes are the most versatile purchase in beauty. These are the ones with actual pigment, buildable formula, and zero fallout.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'best-eyeshadow-palette-under-50',
+    title: 'Top Eyeshadow Palettes Under $50: Pro Quality, Budget Friendly',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'You don\'t need a $60 palette to get professional results. These picks deliver high pigment, blendability, and longevity at a fraction of the price.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'too-faced-born-this-way-vs-tarte-tartelette-in-bloom',
+    title: 'Too Faced Born This Way vs. Tarte Tartelette In Bloom',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'Two cult neutral palettes, both beloved, both priced similarly. We break down what actually sets them apart so you only buy one.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'best-hair-bonding-oil-olaplex-7-review',
+    title: 'Best Bonding Oils for Damaged Hair: Olaplex No. 7 Review',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '9 min',
+    excerpt: 'Olaplex No. 7 has a cult following — but is it worth $30 for a tiny bottle? We compare it against the competition and test it on color-treated hair.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'kerastase-kenra-glass-hair-showdown',
+    title: 'Glass Hair Showdown: Kerastase Gloss Absolu vs. Kenra Platinum',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'The glass hair trend demands the right gloss product. We test two of the best — at very different price points — to find out which delivers more mirror-like shine.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+  {
+    slug: 'kerastase-nutritive-8h-magic-night-serum-review',
+    title: 'Kerastase Nutritive 8H Magic Night Serum: Honest Review',
+    category: 'beauty', categoryLabel: 'Beauty', readTime: '8 min',
+    excerpt: 'An overnight hair serum that promises intense repair while you sleep. We tested it for four weeks on dry, damaged hair — here\'s what changed.',
+    bg: '#F5EAF0', accent: '#8B4E6B',
+  },
+
+  // ── Home & Decor — Affiliate (8) ─────────────────────────────────────────────
+  {
+    slug: 'best-linen-duvet-cover-sets-luxury-budget',
+    title: 'Best Linen Duvet Cover Sets: Luxury vs. Budget Options',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '8 min',
+    excerpt: 'The linen bedding market is crowded with identical-looking options at wildly different prices. Here is what actually separates a $250 set from a $90 one.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'best-chunky-knit-throw-blanket-under-50',
+    title: 'Top Chunky Knit Throw Blankets Under $50 for a Cozier Home',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '7 min',
+    excerpt: 'Chunky knit throws add instant texture and warmth to any space. These picks under $50 hold their shape, resist pilling, and look genuinely expensive.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'best-waffle-duvet-cover-queen',
+    title: 'The Best Waffle Duvet Covers for an Aesthetic Queen Bedroom',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '8 min',
+    excerpt: 'Waffle weave bedding reads as intentional and hotel-quality. These queen-size picks balance texture, softness, and the kind of aesthetic that photographs well.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'best-drip-irrigation-kits',
+    title: 'Best Drip Irrigation Kits for Smart Garden Watering',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '8 min',
+    excerpt: 'Drip irrigation pays for itself in lower water bills and healthier plants. Here are the kits that are actually easy to set up — and worth the weekend project.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'best-drip-irrigation-system',
+    title: 'Best Drip Irrigation Systems for Every Garden & Skill Level',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '8 min',
+    excerpt: 'Whether you have a raised bed or a full backyard setup, there is a drip system that fits. We break down the best options by garden size and ease of install.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'best-garden-tool-set-for-women-gifts',
+    title: 'Top Garden Tool Sets for Women: Ideal Gifts for the Female Gardener',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '7 min',
+    excerpt: 'The best garden tool sets designed for smaller hands, with ergonomic grips and real durability. These make genuinely useful gifts — not decorative ones.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'best-garden-tool-sets-for-women',
+    title: 'Best Garden Tool Sets for Women: Gifts & Budget Buys',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '7 min',
+    excerpt: 'Quality tools make gardening less work and more satisfying. These sets are built to last, sized thoughtfully, and priced for real people.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+  {
+    slug: 'drip-irrigation-kit-comparison',
+    title: 'Drip Irrigation Kit Comparison: Find Your Perfect System',
+    category: 'home-decor', categoryLabel: 'Home & Decor', readTime: '8 min',
+    excerpt: 'Not all drip irrigation kits are created equal. We compare the leading systems on coverage, ease of use, and long-term reliability.',
+    bg: '#EEF3F1', accent: '#2C4A3E',
+  },
+
+  // ── Kitchen — Affiliate (3) ──────────────────────────────────────────────────
+  {
+    slug: 'best-sous-vide-machine-review',
+    title: 'The Best Sous Vide Machines for Every Home Cook: Beginner to Pro',
+    category: 'kitchen', categoryLabel: 'Kitchen', readTime: '9 min',
+    excerpt: 'Sous vide produces restaurant-quality results at home — if you pick the right machine. We compare the leading circulators across price, power, and app control.',
+    bg: '#EDF2E5', accent: '#4A5E2C',
+  },
+  {
+    slug: 'best-air-fryer-small-spaces',
+    title: 'Tiny Kitchen, Big Flavor: Best Compact Air Fryers for Small Spaces',
+    category: 'kitchen', categoryLabel: 'Kitchen', readTime: '8 min',
+    excerpt: 'A compact air fryer changes how you cook without taking over your counter. These picks for small kitchens deliver full-size results in a fraction of the footprint.',
+    bg: '#EDF2E5', accent: '#4A5E2C',
+  },
+  {
+    slug: 'sous-vide-accessories-large-batches',
+    title: 'Mastering Big Batches: Sous Vide Accessories for Large Meals',
+    category: 'kitchen', categoryLabel: 'Kitchen', readTime: '8 min',
+    excerpt: 'Meal prepping with sous vide scales beautifully — if you have the right containers and accessories. Here is the gear that makes large batches effortless.',
+    bg: '#EDF2E5', accent: '#4A5E2C',
+  },
+
+  // ── Wellness — Affiliate (4) ─────────────────────────────────────────────────
+  {
+    slug: 'best-self-care-gift-baskets-women',
+    title: 'The Best Self-Care Gift Baskets for Women for Every Occasion',
+    category: 'wellness', categoryLabel: 'Wellness', readTime: '8 min',
+    excerpt: 'A well-curated self-care basket says more than a generic gift card. These are the sets worth buying — tested on real occasions, with honest notes on what\'s inside.',
+    bg: '#F5EDE5', accent: '#7B5E4A',
+  },
+  {
+    slug: 'best-birthday-gifts-women-under-40',
+    title: 'Best Birthday Gifts for Women Under $40: Thoughtful & Pampering',
+    category: 'wellness', categoryLabel: 'Wellness', readTime: '7 min',
+    excerpt: 'The best birthday gifts aren\'t the most expensive — they\'re the most considered. These picks under $40 feel genuinely luxurious without the guilt.',
+    bg: '#F5EDE5', accent: '#7B5E4A',
+  },
+  {
+    slug: 'best-vintage-self-care-gift-basket',
+    title: 'Vintage Charm: Best Self-Care Gift Basket for an Aesthetic Touch',
+    category: 'wellness', categoryLabel: 'Wellness', readTime: '7 min',
+    excerpt: 'Self-care gifts don\'t have to look clinical. These vintage-inspired baskets blend practical wellness with the kind of aesthetic that makes unwrapping feel special.',
+    bg: '#F5EDE5', accent: '#7B5E4A',
+  },
+  {
+    slug: 'best-get-well-soon-gift-baskets',
+    title: 'Top Get Well Soon Gift Baskets for Speedy Recovery & Comfort',
+    category: 'wellness', categoryLabel: 'Wellness', readTime: '8 min',
+    excerpt: 'The right get-well basket is practical, comforting, and genuinely thoughtful. These picks go beyond flowers — and they\'re the ones that recipients actually use.',
+    bg: '#F5EDE5', accent: '#7B5E4A',
+  },
+
+  // ── Finance (6) ─────────────────────────────────────────────────────────────
+  {
+    slug: 'what-is-credit-score',
+    title: 'What is a credit score and why does it actually matter?',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '5 min',
+    excerpt: 'The five factors, what moves the needle, and what does not.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
+  {
+    slug: 'build-credit-from-scratch',
+    title: 'The fastest ways to build credit from scratch',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '6 min',
+    excerpt: 'No credit history is not the same as bad credit. Here is the difference and the path forward.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
+  {
+    slug: 'use-credit-card-responsibly',
+    title: 'How to use a credit card without going into debt',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '4 min',
+    excerpt: 'The rules are simpler than the industry makes them sound.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
+  {
+    slug: 'secured-vs-unsecured-cards',
+    title: 'Secured vs. unsecured credit cards: what is the real difference?',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '5 min',
+    excerpt: 'One locks up your cash. The other does not. Here is everything else that differs.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
+  {
+    slug: 'credit-utilization-explained',
+    title: 'Why your credit utilization matters more than your payment history',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '4 min',
+    excerpt: 'It is the fastest thing you can change and the most immediate impact on your score.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
+  {
+    slug: 'build-credit-bad-credit',
+    title: 'Building credit with bad credit: the strategies that actually work',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '6 min',
+    excerpt: 'The difference between rebuilding and starting over — and which situation you are in.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
+]
+
+/** Alias for ARTICLES — used by content-ranking API route */
+export const ALL_ARTICLES = ARTICLES
+
+export function getArticleBySlug(slug: string): Article | undefined {
+  return ARTICLES.find(a => a.slug === slug)
+}
+
+export function getArticlesByCategory(category: Category): Article[] {
+  return ARTICLES.filter(a => a.category === category)
+}
+
+export function getRelatedArticles(slug: string, limit = 3): Article[] {
+  const article = getArticleBySlug(slug)
+  if (!article) return ARTICLES.slice(0, limit)
+  return ARTICLES.filter(a => a.category === article.category && a.slug !== slug).slice(0, limit)
+}
