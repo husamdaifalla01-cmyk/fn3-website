@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/how-to-get-credit-card-bad-credit-no-deposit', '/yendo-states-guide', '/yendo-credit-card-review',
     '/auto-equity-loan', '/credit-builder-loan', '/secured-credit-card-bad-credit',
     '/yendo-review', '/qualify', '/links', '/how-to-rebuild-credit',
-    '/first-credit-card-bad-credit',
+    '/first-credit-card-bad-credit', '/credit-card-to-rebuild-credit',
   ]
 
   // ── Lifestyle section pages ──────────────────────────────────────────────────
