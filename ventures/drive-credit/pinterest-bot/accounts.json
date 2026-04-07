@@ -1,0 +1,29 @@
+[
+  {
+    "id": "mintbrooks_main",
+    "pinterest_profile": "mintbrooks_main",
+    "niches": ["bad_credit", "car_credit", "credit_builder", "financial_freedom", "car_ownership", "emergency_cash", "no_deposit", "yendo_review", "comparison"],
+    "boards": {
+      "bad_credit": "Bad Credit Solutions",
+      "car_credit": "Car Credit Cards",
+      "credit_builder": "Build Your Credit",
+      "financial_freedom": "Financial Freedom",
+      "car_ownership": "Smart Car Ownership",
+      "emergency_cash": "Emergency Money Tips",
+      "no_deposit": "No Deposit Credit Cards",
+      "yendo_review": "Credit Card Reviews",
+      "comparison": "Credit Card Comparisons"
+    },
+    "board_ids": {
+      "Bad Credit Solutions": "1135681299724409924",
+      "Car Credit Cards": "1135681299724409925",
+      "Build Your Credit": "1135681299724409926",
+      "Financial Freedom": "1135681299724409927",
+      "Smart Car Ownership": "1135681299724409928",
+      "Emergency Money Tips": "1135681299724409929",
+      "No Deposit Credit Cards": "1135681299724409930",
+      "Credit Card Reviews": "1135681299724409931",
+      "Credit Card Comparisons": "1135681299724409932"
+    }
+  }
+]

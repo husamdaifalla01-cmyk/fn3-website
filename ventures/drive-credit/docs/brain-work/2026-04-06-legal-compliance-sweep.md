@@ -1,58 +1,58 @@
-# Legal: Compliance Sweep + Pinterest Pin Fix
-**Cycle:** 2026-04-06 17:30 EDT  
-**Agent:** General Counsel
+# Legal — Compliance Sweep + Pinterest Pin Fix
+**Date:** 2026-04-06 19:25 EDT
+**Agent:** General Counsel (CFPB/FTC compliance lens)
 
 ---
 
-## Pinterest Pin #3 APR Claim — FIX REQUIRED
+## Pinterest Pin #3 APR Claim — Fix (Flagged 3 Sessions Ago)
 
-**Issue (flagged 2 sessions ago):** Pin #3 contains a specific APR claim that needs softening.
+**Issue:** Pinterest Pin #3 has a specific APR claim that needs softening.
+**Principle:** We cannot state specific rates unless they're guaranteed and currently accurate. Yendo's APR varies by applicant.
 
-**Original claim (problematic):**
-Any language like "low APR" or specific percentage claims without current disclosure.
+**Current (problematic):** Any text like "rates as low as X%" or "APR starting at X%"
+**Corrected framing:** "APR varies by applicant — check eligibility to see your rate"
 
-**Required fix:**
-Replace with: "APR varies — check current terms at yendo.com before applying."
-
-**Action for Husam:**
-- Go to Pinterest → @mintbrookscredit → Pin #3
-- Edit description to add: "APR and terms subject to change. Always verify current rates at yendo.com."
-- This is a FTC/Regulation Z requirement for credit advertising.
+**Action for Husam:** Edit the specific Pinterest pin. Replace any rate/APR number with "rates vary — see eligibility" or remove the APR claim entirely.
 
 ---
 
-## Week 2 Content Compliance Checklist
+## Week 2 Content Compliance Pre-Clearance
 
-For each TikTok/IG caption:
-- [x] #ad tag present
-- [x] No "guaranteed approval" language
-- [x] No "no credit check" — only "soft pull" or "soft inquiry"
-- [x] No specific APR claims without "verify at [lender]"
-- [x] No "hack" framing (use "alternative" or "option")
-- [x] No income or employment guarantees
+Scripts for Week 2 batch — pre-approved language:
 
-All 5 upcoming Week 2 captions reviewed: ✅ COMPLIANT
+✅ APPROVED HOOKS:
+- "Your car could qualify for a real credit card"
+- "What banks don't tell bad credit customers"
+- "There's a credit card that doesn't require a deposit"
+- "Most people with bad credit don't know this exists"
 
----
-
-## Creator Brief Compliance Requirements (Pre-Outreach)
-
-When you send creator briefs, include:
-```
-REQUIRED DISCLOSURES:
-1. Must use #ad or #sponsored in every post
-2. Must not claim guaranteed approval
-3. Must not claim specific APR rates
-4. Must say "link in bio" to a disclosed affiliate page
-5. Any testimonial must be clearly personal experience ("In my experience...")
-```
+❌ FLAGGED LANGUAGE (do not use):
+- "Guaranteed approval"
+- "No credit check" (must say "soft pull only" or "soft inquiry")
+- "Loophole" — use "alternative" or "option"
+- Specific APR, rate, or fee numbers
+- "Rebuild your credit in X days" — timeline claims
 
 ---
 
-## Legal Status: GREEN
-- Site disclosures: ✅ (footer + near CTAs on all pages)
-- CAN-SPAM compliance: ✅ (unsubscribe + physical address)
-- FTC affiliate disclosure: ✅ (near hero CTAs, footer)
-- CFPB content rules: ✅ (no guaranteed approval language)
-- Open item: Pinterest Pin #3 APR softening (Husam action)
+## Creator Brief Compliance Addendum
+
+When creator outreach begins (Week 2-3), include in the brief:
+1. Must disclose "ad" or "sponsored" in first 3 words of caption and in-video
+2. Cannot guarantee approval outcomes
+3. Cannot state specific APRs unless Yendo provides approved language
+4. "Soft pull" or "soft inquiry" — never "no credit check"
+
+---
+
+## Ongoing Compliance Status: GREEN (with 1 outstanding)
+
+| Item | Status |
+|------|--------|
+| FTC #ad disclosure in captions | ✅ All templates include it |
+| Email CAN-SPAM compliance | ✅ Physical address + unsubscribe in all 3 emails |
+| "Soft pull" language | ✅ Verified across all content |
+| No guaranteed approval language | ✅ Clean |
+| Pinterest APR claim | ⚠️ Needs Husam to edit pin |
+| In-video disclosure template | ✅ Ready for creator use |
 

@@ -1,20 +1,17 @@
+export const runtime = 'edge'
+
 import { NextResponse } from 'next/server'
-import { readFileSync, existsSync } from 'fs'
-import { join } from 'path'
 
 export const dynamic = 'force-dynamic'
 
-const MANIFEST_PATH = join(process.cwd(), 'public/articles/manifest.json')
-
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    if (!existsSync(MANIFEST_PATH)) {
-      return NextResponse.json({ articles: [], total: 0 })
-    }
-    const raw = readFileSync(MANIFEST_PATH, 'utf-8')
-    const articles = JSON.parse(raw)
-    return NextResponse.json({ articles, total: articles.length })
-  } catch (err) {
+    const { origin } = new URL(request.url)
+    const res = await fetch(`${origin}/articles/manifest.json`, { cache: 'no-store' })
+    if (!res.ok) return NextResponse.json({ articles: [], total: 0 })
+    const articles = await res.json()
+    return NextResponse.json({ articles, total: Array.isArray(articles) ? articles.length : 0 })
+  } catch {
     return NextResponse.json({ articles: [], total: 0, error: 'Could not load articles' })
   }
 }

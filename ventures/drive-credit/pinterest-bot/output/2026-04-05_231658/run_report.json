@@ -1,0 +1,23 @@
+{
+  "run_timestamp": "2026-04-06T03:17:38.642274+00:00",
+  "elapsed_seconds": 40.1,
+  "briefs_generated": 2,
+  "images_generated": 2,
+  "pins_posted": 0,
+  "pins_failed": 2,
+  "post_results": [
+    {
+      "id": "bad-credit-credit-card-v1",
+      "success": false,
+      "error": "HTTP 500: {\"resource_response\":{\"error\":{\"status\":\"failure\",\"http_status\":500,\"code\":12,\"message\":\"Something went wrong on our end. Sorry about that.\",\"api_error_code\":12},\"data\":{\"request_id\":\"9497429340894191"
+    },
+    {
+      "id": "bad-credit-credit-card-v2",
+      "success": false,
+      "error": "HTTP 500: {\"resource_response\":{\"error\":{\"status\":\"failure\",\"http_status\":500,\"code\":12,\"message\":\"Something went wrong on our end. Sorry about that.\",\"api_error_code\":12},\"data\":{\"request_id\":\"3315111900521639"
+    }
+  ],
+  "cumulative_performance": {
+    "note": "No analytics data yet — first run."
+  }
+}
