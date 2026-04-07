@@ -1,6 +1,4 @@
 import type { Metadata } from 'next'
-import fs from 'fs'
-import path from 'path'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -98,30 +96,21 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Building credit with bad credit', slug: 'build-credit-bad-credit', readTime: '6 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/lifestyle/finance.jpg', date: 'February 27, 2026' },
 ]
 
-// ─── Affiliate article HTML paths ─────────────────────────────────────────────
-
-const BLOG_BASE = path.join(process.cwd(), 'public/articles/affiliate')
-
-// ─── Editorial article HTML paths ──────────────────────────────────────────────
-
-const EDITORIAL_BASE = path.join(process.cwd(), 'public/articles/editorial')
-
-
-function getAffiliateBodyHtml(slug: string): string | null {
-  // 1. Check editorial articles first (raw HTML body, no <article> wrapper)
-  const editorialPath = path.join(EDITORIAL_BASE, `${slug}.html`)
+async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
+  // 1. Try editorial first (raw HTML body)
   try {
-    if (fs.existsSync(editorialPath)) {
-      const raw = fs.readFileSync(editorialPath, 'utf-8')
+    const res = await fetch(`${siteUrl}/articles/editorial/${slug}.html`, { cache: 'no-store' })
+    if (res.ok) {
+      const raw = await res.text()
       if (raw.trim().length > 200) return injectLinkAttrs(raw.trim())
     }
   } catch { /* fall through */ }
 
-  // 2. Check affiliate articles — auto-discover by slug directory
-  const affiliatePath = path.join(BLOG_BASE, slug, 'index.html')
+  // 2. Try affiliate article
   try {
-    if (fs.existsSync(affiliatePath)) {
-      const raw = fs.readFileSync(affiliatePath, 'utf-8')
+    const res = await fetch(`${siteUrl}/articles/affiliate/${slug}/index.html`, { cache: 'no-store' })
+    if (res.ok) {
+      const raw = await res.text()
       const match = raw.match(/<article>([\s\S]*?)<\/article>/)
       return match ? injectLinkAttrs(match[1].trim()) : null
     }
@@ -388,7 +377,8 @@ export default async function ArticleDetailPage({
 
   const related = getRelated(article)
   const isGlassSkin = slug === 'glass-skin-routine'
-  const affiliateBodyHtml = getAffiliateBodyHtml(slug)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mintbrooks.com'
+  const affiliateBodyHtml = await getAffiliateBodyHtml(slug, siteUrl)
 
   return (
     <div style={{ background: '#FDFAF6', color: '#1A1714', overflowX: 'hidden' }}>
