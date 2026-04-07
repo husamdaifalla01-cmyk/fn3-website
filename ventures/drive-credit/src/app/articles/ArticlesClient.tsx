@@ -1,8 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import ArticleCard from '../../../components/lifestyle/ArticleCard'
-import { EDITORIAL_ARTICLES, getFeaturedEditorialArticles } from '../../../lib/lifestyle/articles-editorial'
+import ArticleCard from '@/components/lifestyle/ArticleCard'
+import { EDITORIAL_ARTICLES, getFeaturedEditorialArticles } from '@/lib/lifestyle/articles-editorial'
 
 // ─── Filter Config ─────────────────────────────────────────────────────────────
 
