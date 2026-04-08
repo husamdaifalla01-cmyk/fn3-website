@@ -45,7 +45,7 @@ export default function ProductCard({ product, featured = false, layout = 'grid'
   const effectiveLayout = featured ? 'featured' : layout
   const isFeatured = effectiveLayout === 'featured'
 
-  const fallbackSrc = `/lifestyle/${product.category}.jpg`
+  const fallbackSrc = `/${product.category}.jpg`
   const initialSrc = product.primary_image_url || product.image_url || fallbackSrc
 
   const [imgSrc, setImgSrc] = useState(initialSrc)
