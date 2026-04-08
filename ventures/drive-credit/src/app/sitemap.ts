@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/finance/yendo-review',
     '/finance/car-equity-credit-card-reviews',
     '/finance/does-applying-for-credit-card-hurt-credit',
+    '/finance/no-credit-check-credit-card',
   ]
 
   const articlePages = ARTICLES.map(a => `/articles/${a.slug}`)
