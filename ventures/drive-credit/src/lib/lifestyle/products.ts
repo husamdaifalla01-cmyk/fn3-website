@@ -21,10 +21,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 12000,
     "affiliate_url": "https://www.amazon.com/dp/B07Z9Y4C3C?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B07Z9Y4C3C",
-    "primary_image_url": "/api/pin-image/B07Z9Y4C3C",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B07Z9Y4C3C_nb.jpg",
+    "primary_image_url": "/products/B07Z9Y4C3C_nb.jpg",
+    "pin_image_url": "/products/B07Z9Y4C3C_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -86,10 +86,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 9400,
     "affiliate_url": "https://www.amazon.com/dp/B08T8L371P?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B08T8L371P",
-    "primary_image_url": "/api/pin-image/B08T8L371P",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B08T8L371P_nb.jpg",
+    "primary_image_url": "/products/B08T8L371P_nb.jpg",
+    "pin_image_url": "/products/B08T8L371P_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -99,10 +99,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.5,
     "review_count": 1800,
     "affiliate_url": "https://www.amazon.com/dp/B0FP4WJXD5?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0FP4WJXD5",
-    "primary_image_url": "/api/pin-image/B0FP4WJXD5",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0FP4WJXD5_nb.jpg",
+    "primary_image_url": "/products/B0FP4WJXD5_nb.jpg",
+    "pin_image_url": "/products/B0FP4WJXD5_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -112,10 +112,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.3,
     "review_count": 4200,
     "affiliate_url": "https://www.amazon.com/dp/B0CTC25796?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0CTC25796",
-    "primary_image_url": "/api/pin-image/B0CTC25796",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0CTC25796_nb.jpg",
+    "primary_image_url": "/products/B0CTC25796_nb.jpg",
+    "pin_image_url": "/products/B0CTC25796_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -125,10 +125,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 3600,
     "affiliate_url": "https://www.amazon.com/dp/B08YZ8219S?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B08YZ8219S",
-    "primary_image_url": "/api/pin-image/B08YZ8219S",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B08YZ8219S_nb.jpg",
+    "primary_image_url": "/products/B08YZ8219S_nb.jpg",
+    "pin_image_url": "/products/B08YZ8219S_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -138,10 +138,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.5,
     "review_count": 2900,
     "affiliate_url": "https://www.amazon.com/dp/B0CQ788GT3?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0CQ788GT3",
-    "primary_image_url": "/api/pin-image/B0CQ788GT3",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0CQ788GT3_nb.jpg",
+    "primary_image_url": "/products/B0CQ788GT3_nb.jpg",
+    "pin_image_url": "/products/B0CQ788GT3_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -177,10 +177,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.4,
     "review_count": 2200,
     "affiliate_url": "https://www.amazon.com/dp/B0B75XKWL3?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0B75XKWL3",
-    "primary_image_url": "/api/pin-image/B0B75XKWL3",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0B75XKWL3_nb.jpg",
+    "primary_image_url": "/products/B0B75XKWL3_nb.jpg",
+    "pin_image_url": "/products/B0B75XKWL3_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -190,10 +190,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 2800,
     "affiliate_url": "https://www.amazon.com/dp/B08YS1YGFR?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B08YS1YGFR",
-    "primary_image_url": "/api/pin-image/B08YS1YGFR",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B08YS1YGFR_nb.jpg",
+    "primary_image_url": "/products/B08YS1YGFR_nb.jpg",
+    "pin_image_url": "/products/B08YS1YGFR_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -242,10 +242,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.3,
     "review_count": 1200,
     "affiliate_url": "https://www.amazon.com/dp/B073MW6XCG?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B073MW6XCG",
-    "primary_image_url": "/api/pin-image/B073MW6XCG",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B073MW6XCG_nb.jpg",
+    "primary_image_url": "/products/B073MW6XCG_nb.jpg",
+    "pin_image_url": "/products/B073MW6XCG_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -255,10 +255,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.3,
     "review_count": 8900,
     "affiliate_url": "https://www.amazon.com/dp/B0B6Q7DZ8P?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0B6Q7DZ8P",
-    "primary_image_url": "/api/pin-image/B0B6Q7DZ8P",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0B6Q7DZ8P_nb.jpg",
+    "primary_image_url": "/products/B0B6Q7DZ8P_nb.jpg",
+    "pin_image_url": "/products/B0B6Q7DZ8P_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -268,10 +268,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 24000,
     "affiliate_url": "https://www.amazon.com/dp/B07DL1ZQ82?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B07DL1ZQ82",
-    "primary_image_url": "/api/pin-image/B07DL1ZQ82",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B07DL1ZQ82_nb.jpg",
+    "primary_image_url": "/products/B07DL1ZQ82_nb.jpg",
+    "pin_image_url": "/products/B07DL1ZQ82_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -333,10 +333,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 9200,
     "affiliate_url": "https://www.amazon.com/dp/B0852SZ4XN?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0852SZ4XN",
-    "primary_image_url": "/api/pin-image/B0852SZ4XN",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0852SZ4XN_nb.jpg",
+    "primary_image_url": "/products/B0852SZ4XN_nb.jpg",
+    "pin_image_url": "/products/B0852SZ4XN_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -346,10 +346,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 4100,
     "affiliate_url": "https://www.amazon.com/dp/B0CK66B44Z?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0CK66B44Z",
-    "primary_image_url": "/api/pin-image/B0CK66B44Z",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0CK66B44Z_nb.jpg",
+    "primary_image_url": "/products/B0CK66B44Z_nb.jpg",
+    "pin_image_url": "/products/B0CK66B44Z_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -385,10 +385,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 2800,
     "affiliate_url": "https://www.amazon.com/dp/B0DV8Z4L8X?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0DV8Z4L8X",
-    "primary_image_url": "/api/pin-image/B0DV8Z4L8X",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0DV8Z4L8X_nb.jpg",
+    "primary_image_url": "/products/B0DV8Z4L8X_nb.jpg",
+    "pin_image_url": "/products/B0DV8Z4L8X_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -411,10 +411,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 21000,
     "affiliate_url": "https://www.amazon.com/dp/B07H2WR5VV?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B07H2WR5VV",
-    "primary_image_url": "/api/pin-image/B07H2WR5VV",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B07H2WR5VV_nb.jpg",
+    "primary_image_url": "/products/B07H2WR5VV_nb.jpg",
+    "pin_image_url": "/products/B07H2WR5VV_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -437,10 +437,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 7800,
     "affiliate_url": "https://www.amazon.com/dp/B0725W1D66?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0725W1D66",
-    "primary_image_url": "/api/pin-image/B0725W1D66",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0725W1D66_nb.jpg",
+    "primary_image_url": "/products/B0725W1D66_nb.jpg",
+    "pin_image_url": "/products/B0725W1D66_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -463,10 +463,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 45000,
     "affiliate_url": "https://www.amazon.com/dp/B07VR1NDSQ?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B07VR1NDSQ",
-    "primary_image_url": "/api/pin-image/B07VR1NDSQ",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B07VR1NDSQ_nb.jpg",
+    "primary_image_url": "/products/B07VR1NDSQ_nb.jpg",
+    "pin_image_url": "/products/B07VR1NDSQ_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -489,10 +489,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 8900,
     "affiliate_url": "https://www.amazon.com/dp/B0013VY4AM?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0013VY4AM",
-    "primary_image_url": "/api/pin-image/B0013VY4AM",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0013VY4AM_nb.jpg",
+    "primary_image_url": "/products/B0013VY4AM_nb.jpg",
+    "pin_image_url": "/products/B0013VY4AM_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -502,10 +502,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 2100,
     "affiliate_url": "https://www.amazon.com/dp/B0F2QZQWDN?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0F2QZQWDN",
-    "primary_image_url": "/api/pin-image/B0F2QZQWDN",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0F2QZQWDN_nb.jpg",
+    "primary_image_url": "/products/B0F2QZQWDN_nb.jpg",
+    "pin_image_url": "/products/B0F2QZQWDN_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -567,10 +567,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 12000,
     "affiliate_url": "https://www.amazon.com/dp/B07H3GBSC3?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B07H3GBSC3",
-    "primary_image_url": "/api/pin-image/B07H3GBSC3",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B07H3GBSC3_nb.jpg",
+    "primary_image_url": "/products/B07H3GBSC3_nb.jpg",
+    "pin_image_url": "/products/B07H3GBSC3_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -580,10 +580,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.3,
     "review_count": 19000,
     "affiliate_url": "https://www.amazon.com/dp/B09HR5KSR8?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B09HR5KSR8",
-    "primary_image_url": "/api/pin-image/B09HR5KSR8",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B09HR5KSR8_nb.jpg",
+    "primary_image_url": "/products/B09HR5KSR8_nb.jpg",
+    "pin_image_url": "/products/B09HR5KSR8_nb.jpg",
+    "has_pin": true,
     "category": "beauty"
   },
   {
@@ -632,10 +632,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.4,
     "review_count": 9800,
     "affiliate_url": "https://www.amazon.com/dp/B0BR728TB6?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0BR728TB6",
-    "primary_image_url": "/api/pin-image/B0BR728TB6",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0BR728TB6_nb.jpg",
+    "primary_image_url": "/products/B0BR728TB6_nb.jpg",
+    "pin_image_url": "/products/B0BR728TB6_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -645,10 +645,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.5,
     "review_count": 7300,
     "affiliate_url": "https://www.amazon.com/dp/B0D264M84J?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0D264M84J",
-    "primary_image_url": "/api/pin-image/B0D264M84J",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0D264M84J_nb.jpg",
+    "primary_image_url": "/products/B0D264M84J_nb.jpg",
+    "pin_image_url": "/products/B0D264M84J_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -814,10 +814,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 42000,
     "affiliate_url": "https://www.amazon.com/dp/B08ZK5WDWN?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B08ZK5WDWN",
-    "primary_image_url": "/api/pin-image/B08ZK5WDWN",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B08ZK5WDWN_nb.jpg",
+    "primary_image_url": "/products/B08ZK5WDWN_nb.jpg",
+    "pin_image_url": "/products/B08ZK5WDWN_nb.jpg",
+    "has_pin": true,
     "category": "kitchen"
   },
   {
@@ -827,10 +827,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 6200,
     "affiliate_url": "https://www.amazon.com/dp/B0DDKK7DWH?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0DDKK7DWH",
-    "primary_image_url": "/api/pin-image/B0DDKK7DWH",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0DDKK7DWH_nb.jpg",
+    "primary_image_url": "/products/B0DDKK7DWH_nb.jpg",
+    "pin_image_url": "/products/B0DDKK7DWH_nb.jpg",
+    "has_pin": true,
     "category": "kitchen"
   },
   {
@@ -853,10 +853,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 5.0,
     "review_count": 890,
     "affiliate_url": "https://www.amazon.com/dp/B0GFW1L9V1?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0GFW1L9V1",
-    "primary_image_url": "/api/pin-image/B0GFW1L9V1",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0GFW1L9V1_nb.jpg",
+    "primary_image_url": "/products/B0GFW1L9V1_nb.jpg",
+    "pin_image_url": "/products/B0GFW1L9V1_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -866,10 +866,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.5,
     "review_count": 2100,
     "affiliate_url": "https://www.amazon.com/dp/B0DYJQ6M79?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0DYJQ6M79",
-    "primary_image_url": "/api/pin-image/B0DYJQ6M79",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0DYJQ6M79_nb.jpg",
+    "primary_image_url": "/products/B0DYJQ6M79_nb.jpg",
+    "pin_image_url": "/products/B0DYJQ6M79_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -879,10 +879,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.5,
     "review_count": 3800,
     "affiliate_url": "https://www.amazon.com/dp/B0FFB991KF?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0FFB991KF",
-    "primary_image_url": "/api/pin-image/B0FFB991KF",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0FFB991KF_nb.jpg",
+    "primary_image_url": "/products/B0FFB991KF_nb.jpg",
+    "pin_image_url": "/products/B0FFB991KF_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -892,10 +892,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.8,
     "review_count": 12400,
     "affiliate_url": "https://www.amazon.com/dp/B09R98W9J5?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B09R98W9J5",
-    "primary_image_url": "/api/pin-image/B09R98W9J5",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B09R98W9J5_nb.jpg",
+    "primary_image_url": "/products/B09R98W9J5_nb.jpg",
+    "pin_image_url": "/products/B09R98W9J5_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -905,10 +905,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.7,
     "review_count": 6700,
     "affiliate_url": "https://www.amazon.com/dp/B0DWHSCGRL?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0DWHSCGRL",
-    "primary_image_url": "/api/pin-image/B0DWHSCGRL",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0DWHSCGRL_nb.jpg",
+    "primary_image_url": "/products/B0DWHSCGRL_nb.jpg",
+    "pin_image_url": "/products/B0DWHSCGRL_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -918,10 +918,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.6,
     "review_count": 4300,
     "affiliate_url": "https://www.amazon.com/dp/B0CQ4BYFGR?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0CQ4BYFGR",
-    "primary_image_url": "/api/pin-image/B0CQ4BYFGR",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0CQ4BYFGR_nb.jpg",
+    "primary_image_url": "/products/B0CQ4BYFGR_nb.jpg",
+    "pin_image_url": "/products/B0CQ4BYFGR_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -931,10 +931,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.4,
     "review_count": 8900,
     "affiliate_url": "https://www.amazon.com/dp/B07BZ5B3LS?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B07BZ5B3LS",
-    "primary_image_url": "/api/pin-image/B07BZ5B3LS",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B07BZ5B3LS_nb.jpg",
+    "primary_image_url": "/products/B07BZ5B3LS_nb.jpg",
+    "pin_image_url": "/products/B07BZ5B3LS_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -944,10 +944,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.8,
     "review_count": 2800,
     "affiliate_url": "https://www.amazon.com/dp/B0FKGQ8V4R?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0FKGQ8V4R",
-    "primary_image_url": "/api/pin-image/B0FKGQ8V4R",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0FKGQ8V4R_nb.jpg",
+    "primary_image_url": "/products/B0FKGQ8V4R_nb.jpg",
+    "pin_image_url": "/products/B0FKGQ8V4R_nb.jpg",
+    "has_pin": true,
     "category": "home-decor"
   },
   {
@@ -1035,10 +1035,10 @@ const ALL_PRODUCTS: Product[] = [
     "rating": 4.5,
     "review_count": 4600,
     "affiliate_url": "https://www.amazon.com/dp/B0CWZYRC4G?tag=mintbrooks-20",
-    "image_url": "/api/pin-image/B0CWZYRC4G",
-    "primary_image_url": "/api/pin-image/B0CWZYRC4G",
-    "pin_image_url": null,
-    "has_pin": false,
+    "image_url": "/products/B0CWZYRC4G_nb.jpg",
+    "primary_image_url": "/products/B0CWZYRC4G_nb.jpg",
+    "pin_image_url": "/products/B0CWZYRC4G_nb.jpg",
+    "has_pin": true,
     "category": "wellness"
   }
 ]
