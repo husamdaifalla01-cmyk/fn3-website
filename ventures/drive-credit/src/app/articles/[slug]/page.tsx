@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ArticleNewsletter from './ArticleNewsletter'
+import { EDITORIAL_CONTENT } from '@/lib/editorial-content'
 
 // ─── Article Data ─────────────────────────────────────────────────────────────
 
@@ -100,16 +101,12 @@ const ALL_ARTICLES: Article[] = [
 ]
 
 async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
-  // 1. Try editorial first (raw HTML body)
-  try {
-    const res = await fetch(`${siteUrl}/articles/editorial/${slug}.html`, { cache: 'no-store' })
-    if (res.ok) {
-      const raw = await res.text()
-      if (raw.trim().length > 200) return injectLinkAttrs(raw.trim())
-    }
-  } catch { /* fall through */ }
+  // 1. Check bundled editorial content (no network fetch needed)
+  if (EDITORIAL_CONTENT[slug]) {
+    return injectLinkAttrs(EDITORIAL_CONTENT[slug])
+  }
 
-  // 2. Try affiliate article
+  // 2. Try affiliate article (still fetched at runtime)
   try {
     const res = await fetch(`${siteUrl}/articles/affiliate/${slug}/index.html`, { cache: 'no-store' })
     if (res.ok) {
