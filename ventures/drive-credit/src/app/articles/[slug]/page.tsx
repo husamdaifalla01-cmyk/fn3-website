@@ -257,7 +257,7 @@ function GlassSkinBody() {
             </p>
           </div>
           <a
-            href="https://www.amazon.com/s?k=COSRX+Advanced+Snail+96+Mucin+Power+Essence"
+            href="https://www.amazon.com/dp/B00PBX3L7K?tag=mintbrooks-20"
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="product-link"
@@ -301,7 +301,7 @@ function GlassSkinBody() {
             </p>
           </div>
           <a
-            href="https://www.amazon.com/s?k=CeraVe+Moisturizing+Cream"
+            href="https://www.amazon.com/dp/B00TTD9BRC?tag=mintbrooks-20"
             target="_blank"
             rel="noopener noreferrer nofollow"
             className="product-link"
