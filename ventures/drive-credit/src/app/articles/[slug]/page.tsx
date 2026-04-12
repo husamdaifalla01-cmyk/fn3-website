@@ -149,7 +149,8 @@ type TopProduct = {
 function extractTopProduct(html: string): TopProduct | null {
   const nameMatch = html.match(/<h4[^>]*class="product-name"[^>]*>([\s\S]*?)<\/h4>/i)
   const priceMatch = html.match(/<span[^>]*class="product-price"[^>]*>([\s\S]*?)<\/span>/i)
-  const linkMatch = html.match(/<a[^>]*class="product-link"[^>]*href="([^"]*)"/)
+  const anchorMatch = html.match(/<a[^>]*class="product-link"[^>]*>/)
+  const linkMatch = anchorMatch ? anchorMatch[0].match(/href="([^"]*)"/) : null
   if (!nameMatch || !linkMatch) return null
   return {
     name: nameMatch[1].replace(/<[^>]+>/g, '').trim(),
