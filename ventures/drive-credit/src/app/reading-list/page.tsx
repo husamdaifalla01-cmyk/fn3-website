@@ -486,66 +486,70 @@ function FeaturedBook({ book, coverUrl }: { book: Book; coverUrl: string }) {
 function SmallBookCard({ book, coverUrl }: { book: Book; coverUrl: string }) {
   return (
     <article className="rl-small-book">
+      {/* Column 1: cover */}
       <a
         href={book.amazonUrl}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        style={{ display: 'block', marginBottom: '16px' }}
+        style={{ display: 'block' }}
       >
         <BookCover book={book} coverUrl={coverUrl} />
       </a>
-      <h4
-        style={{
-          fontFamily: 'var(--font-playfair), Georgia, serif',
-          fontSize: 'clamp(16px,1.5vw,20px)',
-          fontWeight: 700,
-          color: '#1A1714',
-          lineHeight: 1.2,
-          margin: '0 0 6px 0',
-        }}
-      >
-        {book.title}
-      </h4>
-      <div
-        style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: '12px',
-          color: '#6B6557',
-          marginBottom: '10px',
-        }}
-      >
-        {book.author} · {book.year}
+      {/* Column 2: all text — single wrapper so grid stays 2-column */}
+      <div>
+        <h4
+          style={{
+            fontFamily: 'var(--font-playfair), Georgia, serif',
+            fontSize: 'clamp(16px,1.5vw,20px)',
+            fontWeight: 700,
+            color: '#1A1714',
+            lineHeight: 1.2,
+            margin: '0 0 6px 0',
+          }}
+        >
+          {book.title}
+        </h4>
+        <div
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '12px',
+            color: '#6B6557',
+            marginBottom: '12px',
+          }}
+        >
+          {book.author} · {book.year}
+        </div>
+        <p
+          style={{
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '14px',
+            lineHeight: 1.7,
+            color: '#3A3430',
+            margin: '0 0 14px 0',
+          }}
+        >
+          {book.editorial}
+        </p>
+        <a
+          href={book.amazonUrl}
+          target="_blank"
+          rel="noopener noreferrer sponsored"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '4px',
+            fontFamily: 'Inter, system-ui, sans-serif',
+            fontSize: '11px',
+            fontWeight: 700,
+            letterSpacing: '0.06em',
+            color: '#B8955A',
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+          }}
+        >
+          Buy on Amazon ↗
+        </a>
       </div>
-      <p
-        style={{
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: '14px',
-          lineHeight: 1.7,
-          color: '#3A3430',
-          margin: '0 0 12px 0',
-        }}
-      >
-        {book.editorial}
-      </p>
-      <a
-        href={book.amazonUrl}
-        target="_blank"
-        rel="noopener noreferrer sponsored"
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: '4px',
-          fontFamily: 'Inter, system-ui, sans-serif',
-          fontSize: '11px',
-          fontWeight: 700,
-          letterSpacing: '0.06em',
-          color: '#B8955A',
-          textDecoration: 'none',
-          textTransform: 'uppercase',
-        }}
-      >
-        Buy on Amazon ↗
-      </a>
     </article>
   )
 }
@@ -616,6 +620,20 @@ const TRENDING: TrendingBook[] = [
     isbn: '9781668089552',
     amazonUrl: 'https://www.amazon.com/dp/B0C7Y68VWT?tag=mintbrooks-20',
     tag: 'Ideas',
+  },
+  {
+    title: 'Atomic Habits',
+    author: 'James Clear',
+    isbn: '9780735211292',
+    amazonUrl: 'https://www.amazon.com/dp/0735211299?tag=mintbrooks-20',
+    tag: 'Habits',
+  },
+  {
+    title: 'Greenlights',
+    author: 'Matthew McConaughey',
+    isbn: '9780593139134',
+    amazonUrl: 'https://www.amazon.com/dp/0593139135?tag=mintbrooks-20',
+    tag: 'Life',
   },
 ]
 
@@ -1019,8 +1037,8 @@ export default async function ReadingListPage() {
               </div>
             )}
 
-            {/* ── Trending break — inserted after section 2 ── */}
-            {sIdx === 2 && (
+            {/* ── Trending break — inserted after section 1 ── */}
+            {sIdx === 1 && (
               <div style={{ background: '#1A1714', overflow: 'hidden' }}>
                 {/* Header */}
                 <div style={{
@@ -1152,6 +1170,138 @@ export default async function ReadingListPage() {
                   letterSpacing: '0.08em',
                 }}>
                   Scroll →
+                </div>
+              </div>
+            )}
+
+            {/* ── Top 10 Trending break — inserted after section 4 ── */}
+            {sIdx === 4 && (
+              <div style={{ background: '#1D3A2F', overflow: 'hidden' }}>
+                {/* Header */}
+                <div style={{
+                  padding: 'clamp(40px,5vw,64px) clamp(20px,5vw,80px) 0',
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  gap: '20px',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                }}>
+                  <div>
+                    <div style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontSize: '10px',
+                      letterSpacing: '0.22em',
+                      textTransform: 'uppercase',
+                      color: '#B8955A',
+                      fontWeight: 700,
+                      marginBottom: '10px',
+                    }}>
+                      This Season
+                    </div>
+                    <h2 style={{
+                      fontFamily: 'var(--font-playfair), Georgia, serif',
+                      fontSize: 'clamp(28px,4vw,52px)',
+                      fontWeight: 700,
+                      color: '#FDFAF6',
+                      lineHeight: 1.0,
+                      letterSpacing: '-0.02em',
+                      margin: 0,
+                    }}>
+                      Top 10 Trending
+                    </h2>
+                  </div>
+                  <div style={{
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    fontSize: '13px',
+                    color: 'rgba(253,250,246,0.4)',
+                    maxWidth: '280px',
+                    lineHeight: 1.6,
+                  }}>
+                    The books climbing charts right now — ranked by cultural moment, not just sales.
+                  </div>
+                </div>
+
+                {/* Ranked grid — 2×5 on desktop, horizontal scroll on mobile */}
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(5, 1fr)',
+                  gap: '24px 32px',
+                  padding: 'clamp(32px,4vw,48px) clamp(20px,5vw,80px)',
+                  overflowX: 'auto',
+                  minWidth: 0,
+                }}>
+                  {TRENDING.map((book, idx) => (
+                    <a
+                      key={idx}
+                      href={book.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      style={{
+                        textDecoration: 'none',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        minWidth: '120px',
+                      }}
+                    >
+                      {/* Rank number */}
+                      <div style={{
+                        fontFamily: 'var(--font-playfair), Georgia, serif',
+                        fontSize: 'clamp(32px,3vw,48px)',
+                        fontWeight: 700,
+                        color: 'rgba(184,149,90,0.25)',
+                        lineHeight: 1,
+                        marginBottom: '8px',
+                      }}>
+                        {String(idx + 1).padStart(2, '0')}
+                      </div>
+                      {/* Cover */}
+                      <div style={{
+                        aspectRatio: '2/3',
+                        overflow: 'hidden',
+                        marginBottom: '12px',
+                        boxShadow: '0 6px 24px rgba(0,0,0,0.4)',
+                      }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={coverMap[book.isbn]}
+                          alt={book.title}
+                          loading="lazy"
+                          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                        />
+                      </div>
+                      {/* Tag */}
+                      <div style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontSize: '9px',
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        color: '#B8955A',
+                        fontWeight: 700,
+                        marginBottom: '4px',
+                      }}>
+                        {book.tag}
+                      </div>
+                      {/* Title */}
+                      <div style={{
+                        fontFamily: 'var(--font-playfair), Georgia, serif',
+                        fontSize: 'clamp(13px,1.1vw,15px)',
+                        fontWeight: 700,
+                        color: '#FDFAF6',
+                        lineHeight: 1.2,
+                        marginBottom: '4px',
+                      }}>
+                        {book.title}
+                      </div>
+                      {/* Author */}
+                      <div style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontSize: '11px',
+                        color: 'rgba(253,250,246,0.45)',
+                      }}>
+                        {book.author}
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
             )}
