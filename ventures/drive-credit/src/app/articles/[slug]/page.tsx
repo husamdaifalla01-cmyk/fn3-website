@@ -288,7 +288,7 @@ function GlassSkinBody() {
             rel="noopener noreferrer nofollow"
             className="product-link"
           >
-            Shop on Amazon →
+            Check Price on Amazon
           </a>
         </div>
       </div>
@@ -332,7 +332,7 @@ function GlassSkinBody() {
             rel="noopener noreferrer nofollow"
             className="product-link"
           >
-            Shop on Amazon →
+            Check Price on Amazon
           </a>
         </div>
       </div>
@@ -748,74 +748,98 @@ export default async function ArticleDetailPage({
           border-left: 3px solid #B8955A;
         }
 
-        /* Product box */
+        /* ── Upgraded Product Box ── */
         .article-product-box {
-          margin: 40px 0;
-          border-left: 3px solid #B8955A;
-          background: #F7F4EF;
-          border-radius: 0 12px 12px 0;
-          overflow: hidden;
+          border: 1px solid #EEE9E2;
+          background: #fff;
+          border-radius: 12px;
+          padding: 16px 18px;
+          margin: 32px 0;
+          border-left: 1px solid #EEE9E2;
         }
 
         .article-product-inner {
-          padding: 28px 28px 24px;
           display: flex;
-          flex-direction: column;
-          gap: 16px;
+          gap: 14px;
+          align-items: flex-start;
+          margin-bottom: 12px;
+        }
+
+        .product-image-slot {
+          width: 72px;
+          height: 72px;
+          background: linear-gradient(135deg, #EEF3F1, #c8dcd6);
+          border-radius: 8px;
+          flex-shrink: 0;
+          overflow: hidden;
+        }
+
+        .product-image-slot img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
 
         .product-label {
           display: block;
           font-size: 10px;
           font-weight: 700;
-          letter-spacing: 0.16em;
+          letter-spacing: 0.14em;
           text-transform: uppercase;
           color: #B8955A;
-          margin-bottom: 8px;
+          margin-bottom: 4px;
+          font-family: sans-serif;
         }
 
         .product-name {
           font-family: "Playfair Display", Georgia, serif;
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 700;
           color: #1A1714;
           margin: 0 0 4px;
           letter-spacing: -0.01em;
+          line-height: 1.3;
         }
 
         .product-price {
           display: block;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 700;
           color: #B8955A;
-          margin-bottom: 10px;
+          margin-bottom: 0;
+          font-family: sans-serif;
         }
 
         .product-desc {
-          font-size: 14px;
+          font-size: 13px;
           color: #6B6557;
           line-height: 1.65;
-          margin: 0;
+          margin: 0 0 12px;
         }
 
+        /* Full-width 48px CTA — Oli Gardner standard */
         .product-link {
-          display: inline-flex;
+          display: flex;
           align-items: center;
-          font-size: 12px;
+          justify-content: center;
+          width: 100%;
+          background: #1D3A2F;
+          color: #FDFAF6 !important;
+          text-align: center;
+          padding: 13px 20px;
+          border-radius: 100px;
+          font-size: 13px;
           font-weight: 700;
-          letter-spacing: 0.1em;
+          letter-spacing: 0.06em;
           text-transform: uppercase;
-          color: #1D3A2F;
           text-decoration: none;
-          border-bottom: 1.5px solid rgba(29,58,47,0.3);
-          padding-bottom: 2px;
-          transition: border-color 0.2s;
-          width: fit-content;
+          min-height: 48px;
+          border-bottom: none;
+          transition: background 0.2s;
+          box-sizing: border-box;
         }
 
-        .product-link:hover {
-          border-color: #1D3A2F;
-        }
+        .product-link:hover { background: #0D1F18; border-color: transparent; }
 
         /* Related grid */
         .related-grid {
