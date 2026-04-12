@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ArticleNewsletter from './ArticleNewsletter'
+import ArticleSidebar from './ArticleSidebar'
 import { EDITORIAL_CONTENT } from '@/lib/editorial-content'
 
 // ─── Article Data ─────────────────────────────────────────────────────────────
