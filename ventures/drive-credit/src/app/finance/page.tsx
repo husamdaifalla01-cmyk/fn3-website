@@ -14,12 +14,12 @@ const SLAM_DUNK_FINANCE  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'se
 export const metadata: Metadata = {
   title: 'Money & Credit',
   description:
-    'Credit education, financial guides, and the DriveCredit card that helps you build real credit history without a hard pull.',
+    'Credit education, financial guides, and tools to build real credit history — including Yendo (car-backed Visa, no hard pull) and SlamDunk Finance personal loans.',
   alternates: { canonical: 'https://mintbrooks.com/lifestyle/finance' },
   openGraph: {
     title: 'Money & Credit — Mintbrooks',
     description:
-      'Credit education, financial guides, and the DriveCredit card that helps you build real credit history without a hard pull.',
+      'Credit education, financial guides, and tools to build real credit history — including Yendo (car-backed Visa, no hard pull) and SlamDunk Finance personal loans.',
     type: 'website',
     url: 'https://mintbrooks.com/lifestyle/finance',
     images: [{ url: 'https://mintbrooks.com/lifestyle/editorial.jpg', width: 1200, height: 630, alt: 'Mintbrooks Money & Credit' }],
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Money & Credit — Mintbrooks',
     description:
-      'Credit education, financial guides, and the DriveCredit card that helps you build real credit history without a hard pull.',
+      'Credit education, financial guides, and tools to build real credit history — including Yendo (car-backed Visa, no hard pull) and SlamDunk Finance personal loans.',
     images: ['https://mintbrooks.com/lifestyle/editorial.jpg'],
   },
 }
@@ -239,8 +239,10 @@ export default function FinancePage() {
               opacity: 0,
             }}
           >
-            <Link
-              href="/qualify"
+            <a
+              href={YENDO_FINANCE_CALC}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
@@ -258,8 +260,8 @@ export default function FinancePage() {
               }}
               className="fin-cta-primary"
             >
-              Check your credit options
-            </Link>
+              Check if my car qualifies
+            </a>
             <a
               href="#guides"
               style={{
@@ -406,7 +408,7 @@ export default function FinancePage() {
         </div>
       </section>
 
-      {/* ── DriveCredit CTA ───────────────────────────────────────────── */}
+      {/* ── Yendo — Primary Credit Tool ───────────────────────────────── */}
       <section
         style={{
           background: '#1D3A2F',
@@ -437,7 +439,7 @@ export default function FinancePage() {
                 marginBottom: '20px',
               }}
             >
-              Our partner
+              Featured tool
             </span>
             <h2
               style={{
@@ -461,15 +463,17 @@ export default function FinancePage() {
                 maxWidth: '480px',
               }}
             >
-              DriveCredit is Mintbrooks&apos; partner for people who want a real Visa credit card
-              without a hard credit pull. Use your vehicle as collateral, get a real card, build
-              real credit history.
+              Yendo is a real Visa credit card backed by your vehicle — no hard credit pull to
+              check eligibility. Your car becomes your collateral, you get a real card, and every
+              on-time payment reports to the bureaus. Credit history, built month by month.
             </p>
 
             {/* CTAs */}
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginBottom: '28px' }}>
-              <Link
-                href="/qualify"
+              <a
+                href={YENDO_FINANCE_CALC}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -486,29 +490,8 @@ export default function FinancePage() {
                 }}
                 className="fin-qualify-btn"
               >
-                See if you qualify
-              </Link>
-              <Link
-                href="/how-it-works"
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  background: 'transparent',
-                  color: 'rgba(253,250,246,0.8)',
-                  padding: '14px 28px',
-                  borderRadius: '100px',
-                  fontSize: '13px',
-                  fontWeight: 700,
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                  border: '1.5px solid rgba(253,250,246,0.25)',
-                  transition: 'border-color 0.2s, color 0.2s',
-                }}
-                className="fin-howitworks-btn"
-              >
-                Learn how it works
-              </Link>
+                Check if my car qualifies
+              </a>
             </div>
 
             <p
@@ -519,7 +502,7 @@ export default function FinancePage() {
                 lineHeight: 1.6,
               }}
             >
-              No hard credit pull to check eligibility. Available in 36+ states.
+              Sponsored. No hard credit pull to check eligibility. Available in 36+ states.
             </p>
           </div>
 
@@ -571,6 +554,135 @@ export default function FinancePage() {
                 >
                   {stat.label}
                 </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SlamDunk Finance — Secondary Tool ─────────────────────────── */}
+      <section
+        style={{
+          background: '#F7F4EF',
+          padding: 'clamp(64px, 8vw, 100px) clamp(20px, 5vw, 80px)',
+          borderTop: '1px solid rgba(184,149,90,0.12)',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1200px',
+            margin: '0 auto',
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: 'clamp(48px, 6vw, 100px)',
+            alignItems: 'center',
+          }}
+          className="fin-slam-grid"
+        >
+          {/* Left: copy */}
+          <div>
+            <span
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: '#B8955A',
+                marginBottom: '20px',
+              }}
+            >
+              Also featured
+            </span>
+            <h2
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: 'clamp(28px, 3.5vw, 46px)',
+                fontWeight: 700,
+                color: '#1A1714',
+                lineHeight: 1.15,
+                letterSpacing: '-0.025em',
+                margin: '0 0 20px',
+              }}
+            >
+              Need cash now, not a card?
+            </h2>
+            <p
+              style={{
+                fontSize: '16px',
+                color: '#6B6557',
+                lineHeight: 1.75,
+                margin: '0 0 36px',
+                maxWidth: '460px',
+              }}
+            >
+              SlamDunk Finance matches you with personal loan offers in minutes — even with
+              imperfect credit. When you need emergency funds before your credit is fully rebuilt,
+              this is where to start.
+            </p>
+            <a
+              href={SLAM_DUNK_FINANCE}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                background: '#1D3A2F',
+                color: '#FDFAF6',
+                padding: '14px 28px',
+                borderRadius: '100px',
+                fontSize: '13px',
+                fontWeight: 700,
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                transition: 'background 0.2s',
+              }}
+            >
+              Get emergency cash now
+            </a>
+            <p
+              style={{
+                fontSize: '12px',
+                color: '#9B9388',
+                margin: '16px 0 0',
+                lineHeight: 1.6,
+              }}
+            >
+              Sponsored. Loan offers vary. Not a guarantee of credit.
+            </p>
+          </div>
+
+          {/* Right: feature bullets */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+            }}
+          >
+            {[
+              { icon: '⚡', title: 'Fast matching', body: 'See offers in minutes — no waiting, no lengthy application process.' },
+              { icon: '◎', title: 'Bad credit welcome', body: 'Built for people who are still rebuilding. Soft pull to check your options.' },
+              { icon: '↗', title: 'Flexible amounts', body: 'From $500 to $35,000 depending on your profile and lender match.' },
+            ].map((feat) => (
+              <div
+                key={feat.title}
+                style={{
+                  background: '#FDFAF6',
+                  borderRadius: '16px',
+                  padding: '24px 28px',
+                  display: 'flex',
+                  gap: '20px',
+                  alignItems: 'flex-start',
+                  border: '1px solid rgba(184,149,90,0.12)',
+                }}
+              >
+                <span style={{ fontSize: '22px', lineHeight: 1, flexShrink: 0 }} aria-hidden="true">{feat.icon}</span>
+                <div>
+                  <p style={{ fontWeight: 700, fontSize: '15px', color: '#1A1714', margin: '0 0 6px', letterSpacing: '-0.01em' }}>{feat.title}</p>
+                  <p style={{ fontSize: '14px', color: '#6B6557', lineHeight: 1.65, margin: 0 }}>{feat.body}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -1124,9 +1236,10 @@ export default function FinancePage() {
           border-color: rgba(184,149,90,0.25) !important;
         }
 
-        /* DriveCredit grid responsive */
+        /* Credit tools grid responsive */
         @media (max-width: 900px) {
-          .fin-drive-grid {
+          .fin-drive-grid,
+          .fin-slam-grid {
             grid-template-columns: 1fr !important;
           }
           .fin-steps-grid {
