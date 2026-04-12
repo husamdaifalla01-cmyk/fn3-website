@@ -141,6 +141,12 @@ type TopProduct = {
   name: string
   price: string
   link: string
+  image?: string
+}
+
+function extractAsin(url: string): string | null {
+  const m = url.match(/\/(?:dp|gp\/product)\/([A-Z0-9]{10})(?:[/?]|$)/)
+  return m ? m[1] : null
 }
 
 /**
@@ -157,10 +163,13 @@ function extractTopProduct(html: string): TopProduct | null {
   const anchorMatch = html.match(/<a[^>]*class="product-link"[^>]*>/)
   const linkMatch = anchorMatch ? anchorMatch[0].match(/href="([^"]*)"/) : null
   if (nameMatch && linkMatch) {
+    const link = linkMatch[1]
+    const asin = extractAsin(link)
     return {
       name: nameMatch[1].replace(/<[^>]+>/g, '').trim(),
       price: priceMatch ? priceMatch[1].replace(/<[^>]+>/g, '').trim() : '',
-      link: linkMatch[1],
+      link,
+      image: asin ? `/products/${asin}_nb.jpg` : undefined,
     }
   }
 
@@ -172,7 +181,8 @@ function extractTopProduct(html: string): TopProduct | null {
     const text = m[2].replace(/<[^>]+>/g, '').replace(/→/g, '').trim()
     // Skip short or generic labels
     if (text.length > 8 && !/^(buy|shop|check price|get it|view|learn more)/i.test(text)) {
-      return { name: text, price: '', link: href }
+      const asin = extractAsin(href)
+      return { name: text, price: '', link: href, image: asin ? `/products/${asin}_nb.jpg` : undefined }
     }
   }
 
@@ -996,10 +1006,31 @@ export default async function ArticleDetailPage({
           background: #fff;
           border: 1px solid #EEE9E2;
           border-radius: 12px;
-          padding: 16px;
+          overflow: hidden;
+          padding: 0;
+        }
+
+        .sb-product-img {
+          display: block;
+          width: 100%;
+          height: 180px;
+          object-fit: cover;
+          border-radius: 0;
+        }
+
+        .sb-card .sb-product-name,
+        .sb-card .sb-product-price,
+        .sb-card .sb-cta {
+          margin-left: 16px;
+          margin-right: 16px;
+        }
+
+        .sb-card .sb-cta {
+          margin-bottom: 16px;
         }
 
         .sb-product-name {
+          margin-top: 14px;
           font-size: 15px;
           font-weight: 700;
           color: #1A1714;

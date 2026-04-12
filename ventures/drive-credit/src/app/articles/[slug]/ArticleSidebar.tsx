@@ -6,32 +6,33 @@ type TopProduct = {
   name: string
   price: string
   link: string
+  image?: string
 }
 
 const QUIZ_COPY: Record<string, { title: string; sub: string; url: string }> = {
   'Beauty': {
-    title: 'What skincare routine fits your skin?',
-    sub: '2 min quiz → personalized product list',
+    title: 'Who is your skin, really?',
+    sub: 'Discover your skin story in 3 questions',
     url: '/quiz/beauty',
   },
   'Home & Decor': {
-    title: 'What bedroom style fits you?',
-    sub: '2 min quiz → personalized picks',
+    title: 'What does your space say about you?',
+    sub: 'Find the aesthetic that fits who you are',
     url: '/quiz/home-decor',
   },
   'Kitchen': {
-    title: 'What kind of home cook are you?',
-    sub: '2 min quiz → gear matched to you',
+    title: 'What kind of cook lives inside you?',
+    sub: 'Discover your kitchen personality',
     url: '/quiz/kitchen',
   },
   'Wellness': {
-    title: 'What does your wellness routine need?',
-    sub: '2 min quiz → your personalized plan',
+    title: 'What does your body actually need?',
+    sub: 'Uncover your wellness archetype',
     url: '/quiz/wellness',
   },
   'Finance': {
-    title: "What's your credit-building style?",
-    sub: '2 min quiz → tailored next steps',
+    title: 'What\'s your money personality?',
+    sub: 'Understand your relationship with credit',
     url: '/quiz/finance',
   },
 }
@@ -66,6 +67,15 @@ export default function ArticleSidebar({
       {/* ── Product card ── */}
       {topProduct && (
         <div className="sb-card">
+          {topProduct.image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={topProduct.image}
+              alt={topProduct.name}
+              className="sb-product-img"
+              onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+            />
+          )}
           <p className="sb-product-name">{topProduct.name}</p>
           {topProduct.price && (
             <span className="sb-product-price">{topProduct.price} on Amazon</span>
