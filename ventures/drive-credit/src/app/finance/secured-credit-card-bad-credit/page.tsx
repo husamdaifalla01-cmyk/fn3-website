@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
+import MoneyResetCTA from '@/components/MoneyResetCTA'
 import {
   YENDO_SECURED_HERO,
   YENDO_SECURED_MID,
@@ -274,6 +275,10 @@ export default function SecuredCreditCardBadCreditPage() {
           </AffiliateLink>
         </section>
 
+        <section className="max-w-3xl mx-auto px-4">
+          <MoneyResetCTA variant="mid" />
+        </section>
+
         {/* What Makes a Good Secured Card */}
         <section className="max-w-3xl mx-auto px-4 py-10">
           <h2 className="text-2xl font-black text-white mb-4">What to Look for in a Secured Card for Bad Credit</h2>
@@ -329,6 +334,10 @@ export default function SecuredCreditCardBadCreditPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="max-w-3xl mx-auto px-4">
+          <MoneyResetCTA variant="end" />
         </section>
 
         {/* CTA */}

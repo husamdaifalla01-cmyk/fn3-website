@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
+import MoneyResetCTA from '@/components/MoneyResetCTA'
 import {
   YENDO_GUIDE_HERO,
   YENDO_GUIDE_MID,
@@ -352,6 +353,10 @@ export default function HowToRebuildCredit() {
           </div>
         </section>
 
+        <div className="px-4 max-w-3xl mx-auto">
+          <MoneyResetCTA variant="mid" />
+        </div>
+
         {/* FAQ */}
         <section className="px-4 max-w-3xl mx-auto mb-16">
           <h2 className="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
@@ -407,6 +412,10 @@ export default function HowToRebuildCredit() {
             ))}
           </div>
         </section>
+
+        <div className="px-4 max-w-3xl mx-auto">
+          <MoneyResetCTA variant="end" />
+        </div>
 
         {/* Final CTA */}
         <section className="px-4 max-w-3xl mx-auto mb-20 text-center">

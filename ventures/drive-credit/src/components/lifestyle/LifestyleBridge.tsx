@@ -7,6 +7,7 @@ const STATS = [
   { value: '1 in 3', label: 'Americans have subprime credit holding back major purchases' },
   { value: '$847', label: 'Extra paid per year in interest by those with fair vs. good credit' },
   { value: '6 months', label: 'Average time to see meaningful credit score improvement' },
+  { value: '90 days', label: 'Step-by-step protocol to rebuild your credit score — one action per day', cta: true },
 ]
 
 export default function LifestyleBridge() {
@@ -133,10 +134,7 @@ export default function LifestyleBridge() {
                 margin: '0 0 32px',
               }}
             >
-              Every linen set, kitchen upgrade, and skincare investment you've been eyeing —
-              they're all more attainable when your credit is working for you.
-              We don't just recommend the products. We help you build the financial
-              foundation to afford them confidently.
+              Every linen set, kitchen upgrade, and skincare investment you've been eyeing — they're all more attainable when your credit is working for you. The 90-Day Money Reset is a step-by-step protocol that takes you from financial avoidance to a credit score you can say out loud.
             </p>
 
             <div
@@ -148,7 +146,7 @@ export default function LifestyleBridge() {
               }}
             >
               <a
-                href="/"
+                href="/products/90-day-money-reset"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
@@ -174,8 +172,7 @@ export default function LifestyleBridge() {
                   e.currentTarget.style.boxShadow = '0 4px 24px rgba(29,58,47,0.25)'
                 }}
               >
-                Check your credit options
-                <span>→</span>
+                Start the 90-Day Reset →
               </a>
               <p style={{
                 fontSize: '11px',
@@ -185,45 +182,108 @@ export default function LifestyleBridge() {
               }}>
                 No hard credit pull to check eligibility
               </p>
+              <a
+                href="/finance"
+                style={{
+                  display: 'inline-block',
+                  marginTop: '16px',
+                  fontSize: '13px',
+                  color: '#6B6557',
+                  textDecoration: 'none',
+                  letterSpacing: '0.02em',
+                  borderBottom: '1px solid rgba(107,101,87,0.35)',
+                  paddingBottom: '1px',
+                  transition: 'color 0.2s, border-color 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#1D3A2F'
+                  e.currentTarget.style.borderColor = 'rgba(29,58,47,0.5)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#6B6557'
+                  e.currentTarget.style.borderColor = 'rgba(107,101,87,0.35)'
+                }}
+              >
+                Already tracking your score? → Explore credit tools
+              </a>
             </div>
           </div>
 
           {/* Right — stats cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingTop: '8px' }}>
             {STATS.map((stat, i) => (
-              <div
-                key={i}
-                className="ls-bridge-reveal"
-                style={{
-                  opacity: 0,
-                  transform: 'translateY(28px)',
-                  transition: 'opacity 0.8s ease, transform 0.8s ease',
-                  background: i === 0 ? '#1D3A2F' : '#F0EDE8',
-                  borderRadius: '20px',
-                  padding: '36px 32px',
-                  // v2: subtle left border accent on non-hero cards
-                  borderLeft: i !== 0 ? '3px solid rgba(184,149,90,0.25)' : 'none',
-                }}
-              >
-                <div style={{
-                  fontFamily: '"Playfair Display", Georgia, serif',
-                  fontSize: 'clamp(30px, 3.5vw, 44px)',
-                  fontWeight: 700,
-                  color: i === 0 ? '#B8955A' : '#1D3A2F',
-                  lineHeight: 1,
-                  marginBottom: '10px',
-                  letterSpacing: '-0.02em',
-                }}>
-                  {stat.value}
+              i === 3 ? (
+                <a
+                  key={i}
+                  href="/products/90-day-money-reset"
+                  className="ls-bridge-reveal"
+                  style={{
+                    opacity: 0,
+                    transform: 'translateY(28px)',
+                    transition: 'opacity 0.8s ease, transform 0.8s ease',
+                    background: '#1D3A2F',
+                    borderRadius: '20px',
+                    padding: '36px 32px',
+                    display: 'block',
+                    textDecoration: 'none',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-4px)'
+                    e.currentTarget.style.boxShadow = '0 16px 48px rgba(29,58,47,0.35)'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = 'translateY(0)'
+                    e.currentTarget.style.boxShadow = 'none'
+                  }}
+                >
+                  <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(184,149,90,0.75)', marginBottom: '12px' }}>
+                    The Guide
+                  </div>
+                  <div style={{ fontFamily: '"Playfair Display", Georgia, serif', fontSize: 'clamp(22px, 2.5vw, 30px)', fontWeight: 700, color: '#FDFAF6', lineHeight: 1.2, marginBottom: '12px', letterSpacing: '-0.02em' }}>
+                    The 90-Day Money Reset
+                  </div>
+                  <div style={{ fontSize: '14px', color: 'rgba(253,250,246,0.6)', lineHeight: 1.55, marginBottom: '20px' }}>
+                    A step-by-step protocol for people who know what to do — and need the structure to actually do it. $24.
+                  </div>
+                  <div style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#B8955A', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    Get the guide → <span style={{ fontSize: '16px' }}>→</span>
+                  </div>
+                </a>
+              ) : (
+                <div
+                  key={i}
+                  className="ls-bridge-reveal"
+                  style={{
+                    opacity: 0,
+                    transform: 'translateY(28px)',
+                    transition: 'opacity 0.8s ease, transform 0.8s ease',
+                    background: i === 0 ? '#1D3A2F' : '#F0EDE8',
+                    borderRadius: '20px',
+                    padding: '36px 32px',
+                    // v2: subtle left border accent on non-hero cards
+                    borderLeft: i !== 0 ? '3px solid rgba(184,149,90,0.25)' : 'none',
+                  }}
+                >
+                  <div style={{
+                    fontFamily: '"Playfair Display", Georgia, serif',
+                    fontSize: 'clamp(30px, 3.5vw, 44px)',
+                    fontWeight: 700,
+                    color: i === 0 ? '#B8955A' : '#1D3A2F',
+                    lineHeight: 1,
+                    marginBottom: '10px',
+                    letterSpacing: '-0.02em',
+                  }}>
+                    {stat.value}
+                  </div>
+                  <div style={{
+                    fontSize: '14px',
+                    color: i === 0 ? 'rgba(253,250,246,0.65)' : '#6B6557',
+                    lineHeight: 1.55,
+                  }}>
+                    {stat.label}
+                  </div>
                 </div>
-                <div style={{
-                  fontSize: '14px',
-                  color: i === 0 ? 'rgba(253,250,246,0.65)' : '#6B6557',
-                  lineHeight: 1.55,
-                }}>
-                  {stat.label}
-                </div>
-              </div>
+              )
             ))}
           </div>
 
