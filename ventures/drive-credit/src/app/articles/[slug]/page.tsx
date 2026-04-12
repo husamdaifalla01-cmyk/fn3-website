@@ -449,7 +449,6 @@ export default async function ArticleDetailPage({
               borderRadius: '100px',
               padding: '6px 16px',
               marginBottom: '24px',
-              animation: 'ls-fade-up 0.6s ease forwards',
             }}
           >
             {article.category}
@@ -465,9 +464,6 @@ export default async function ArticleDetailPage({
               lineHeight: 1.1,
               letterSpacing: '-0.025em',
               margin: '0 0 24px',
-              animation: 'ls-fade-up 0.7s ease forwards',
-              animationDelay: '0.1s',
-              opacity: 0,
             }}
           >
             {article.title}
@@ -483,9 +479,6 @@ export default async function ArticleDetailPage({
               color: '#9B9388',
               flexWrap: 'wrap',
               marginBottom: '28px',
-              animation: 'ls-fade-up 0.7s ease forwards',
-              animationDelay: '0.2s',
-              opacity: 0,
             }}
           >
             <span>By The Mintbrooks Team</span>
@@ -505,9 +498,6 @@ export default async function ArticleDetailPage({
               color: '#9B9388',
               lineHeight: 1.5,
               marginBottom: '40px',
-              animation: 'ls-fade-up 0.7s ease forwards',
-              animationDelay: '0.25s',
-              opacity: 0,
             }}
           >
             This article may contain affiliate links. We earn a small commission at no extra cost
@@ -521,9 +511,6 @@ export default async function ArticleDetailPage({
         style={{
           padding: '0 clamp(20px, 5vw, 80px)',
           marginBottom: 'clamp(48px, 6vw, 80px)',
-          animation: 'ls-fade-up 0.8s ease forwards',
-          animationDelay: '0.3s',
-          opacity: 0,
         }}
       >
         <div
@@ -1444,6 +1431,30 @@ export default async function ArticleDetailPage({
           color: #1D3A2F;
           font-weight: 500;
           line-height: 1.6;
+        }
+
+        /* ── Table Scroll Wrapper ── */
+        .table-wrap {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          margin: 28px 0;
+          border-radius: 10px;
+          border: 1px solid #EEE9E2;
+        }
+
+        .table-wrap table {
+          margin: 0;
+          border-radius: 0;
+          min-width: 480px;
+        }
+
+        /* ── Reduced Motion (mandatory) ── */
+        @media (prefers-reduced-motion: reduce) {
+          *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
         }
       `}</style>
     </div>
