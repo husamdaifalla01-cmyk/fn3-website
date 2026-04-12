@@ -36,7 +36,6 @@ export default function ArticleSidebar({
 }) {
   const [email, setEmail]       = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const [imgFailed, setImgFailed] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -63,13 +62,12 @@ export default function ArticleSidebar({
       {/* ── Product card ── */}
       {topProduct && (
         <div className="sb-card">
-          {topProduct.image && !imgFailed && (
+          {topProduct.image && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={topProduct.image}
               alt={topProduct.name}
               className="sb-product-img"
-              onError={() => setImgFailed(true)}
             />
           )}
           <p className="sb-product-name">{topProduct.name}</p>
