@@ -63,7 +63,7 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Mintbrooks',
   url: SITE_URL,
-  logo: `${SITE_URL}/logo.png`,
+  logo: `${SITE_URL}/lifestyle/logo.png`,
   sameAs: [
     'https://www.pinterest.com/mintbrookslifestyle',
   ],
