@@ -7,7 +7,7 @@ import { notFound } from 'next/navigation'
 import ArticleNewsletter from './ArticleNewsletter'
 import ArticleSidebar from './ArticleSidebar'
 import { EDITORIAL_CONTENT } from '@/lib/editorial-content'
-import { getProducts } from '@/lib/lifestyle/products'
+import { getProducts, getProductsByCategory } from '@/lib/lifestyle/products'
 
 // ─── Article Data ─────────────────────────────────────────────────────────────
 
@@ -192,6 +192,22 @@ function extractTopProduct(html: string): TopProduct | null {
   }
 
   return null
+}
+
+/**
+ * Always returns a product from our affiliate catalogue for the given category slug.
+ * Used when the article's extracted product is not in the Pinterest pipeline.
+ */
+function getCategoryProduct(categorySlug: string): TopProduct | null {
+  const products = getProductsByCategory(categorySlug, 1)
+  if (!products.length) return null
+  const p = products[0]
+  return {
+    name: p.name,
+    price: `$${p.price.toFixed(2)}`,
+    link: p.affiliate_url,
+    image: p.primary_image_url,
+  }
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -433,7 +449,11 @@ export default async function ArticleDetailPage({
   const isGlassSkin = slug === 'glass-skin-routine'
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mintbrooks.com'
   const affiliateBodyHtml = await getAffiliateBodyHtml(slug, siteUrl)
-  const topProduct = affiliateBodyHtml ? extractTopProduct(affiliateBodyHtml) : null
+  // Only use a product if it's in our affiliate catalogue (has a nano banana image).
+  // Anything else — external brands, unrecognised ASINs — is replaced with the
+  // top product from our catalogue for this category.
+  const extracted = affiliateBodyHtml ? extractTopProduct(affiliateBodyHtml) : null
+  const topProduct = (extracted?.image) ? extracted : getCategoryProduct(article.categorySlug)
 
   return (
     <div style={{ background: '#FDFAF6', color: '#1A1714' }}>
