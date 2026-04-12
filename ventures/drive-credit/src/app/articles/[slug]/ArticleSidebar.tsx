@@ -66,7 +66,6 @@ export default function ArticleSidebar({
       {/* ── Product card ── */}
       {topProduct && (
         <div className="sb-card">
-          <span className="sb-label">⭐ Top Pick from This Article</span>
           <p className="sb-product-name">{topProduct.name}</p>
           {topProduct.price && (
             <span className="sb-product-price">{topProduct.price} on Amazon</span>
@@ -84,9 +83,9 @@ export default function ArticleSidebar({
 
       {/* ── Newsletter ── */}
       <div className="sb-newsletter">
-        <p className="sb-nl-title">The weekly edit →</p>
+        <p className="sb-nl-title">The weekly edit</p>
         <p className="sb-nl-sub">
-          Best finds in {category}, curated weekly. No fluff.
+          Best finds in {category}, curated weekly.
         </p>
         {submitted ? (
           <p className="sb-nl-success">You&apos;re in. Check your inbox soon.</p>
@@ -109,11 +108,10 @@ export default function ArticleSidebar({
         )}
       </div>
 
-      {/* ── Quiz widget ── */}
+      {/* ── Quiz — quiet CTA, no competing gradient ── */}
       {quiz && (
         <div className="sb-quiz">
           <p className="sb-quiz-title">{quiz.title}</p>
-          <p className="sb-quiz-sub">{quiz.sub}</p>
           <a href={quiz.url} className="sb-quiz-cta">
             Take the Quiz →
           </a>

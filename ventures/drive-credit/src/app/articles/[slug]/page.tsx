@@ -513,11 +513,10 @@ export default async function ArticleDetailPage({
             <Image
               src={article.image}
               alt={article.title}
-              width={900}
-              height={500}
+              fill
               priority
               sizes="(max-width: 768px) 100vw, 900px"
-              style={{ width: '100%', height: 'auto', display: 'block' }}
+              style={{ objectFit: 'cover', objectPosition: 'center' }}
             />
           </figure>
 
@@ -955,9 +954,12 @@ export default async function ArticleDetailPage({
 
         /* ── Article hero figure (inline in article column) ── */
         .article-hero-figure {
+          position: relative;
           margin: 24px 0 36px;
           border-radius: 12px;
           overflow: hidden;
+          aspect-ratio: 21/9;
+          max-height: 320px;
         }
 
         /* ── Inline disclosure ── */
@@ -987,7 +989,7 @@ export default async function ArticleDetailPage({
           align-self: start;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 16px;
         }
 
         .sb-card {
@@ -997,23 +999,12 @@ export default async function ArticleDetailPage({
           padding: 16px;
         }
 
-        .sb-label {
-          display: block;
-          font-size: 10px;
-          font-weight: 700;
-          text-transform: uppercase;
-          letter-spacing: 0.14em;
-          color: #B8955A;
-          margin-bottom: 10px;
-          font-family: sans-serif;
-        }
-
         .sb-product-name {
-          font-size: 14px;
+          font-size: 15px;
           font-weight: 700;
           color: #1A1714;
-          line-height: 1.3;
-          margin: 0 0 4px;
+          line-height: 1.35;
+          margin: 0 0 6px;
           font-family: sans-serif;
         }
 
@@ -1048,7 +1039,8 @@ export default async function ArticleDetailPage({
 
         /* Sidebar newsletter */
         .sb-newsletter {
-          background: #F7F4EF;
+          background: #fff;
+          border: 1px solid #EEE9E2;
           border-radius: 12px;
           padding: 16px;
           font-family: sans-serif;
@@ -1115,43 +1107,33 @@ export default async function ArticleDetailPage({
 
         /* Sidebar quiz */
         .sb-quiz {
-          background: linear-gradient(135deg, #1D3A2F, #2c5a47);
-          border-radius: 12px;
-          padding: 16px;
+          background: #fff;
+          border: 1px solid #EEE9E2;
+          border-left: 3px solid #B8955A;
+          border-radius: 0 12px 12px 0;
+          padding: 14px 16px;
           font-family: sans-serif;
-          color: #FDFAF6;
         }
 
         .sb-quiz-title {
           font-size: 13px;
-          font-weight: 700;
+          font-weight: 600;
+          color: #1A1714;
           line-height: 1.35;
-          margin: 0 0 4px;
-        }
-
-        .sb-quiz-sub {
-          font-size: 11px;
-          opacity: 0.75;
-          margin: 0 0 10px;
+          margin: 0 0 8px;
         }
 
         .sb-quiz-cta {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background: #B8955A;
-          color: #fff;
-          text-align: center;
-          font-size: 12px;
-          font-weight: 700;
-          padding: 8px 12px;
-          border-radius: 8px;
+          font-size: 13px;
+          font-weight: 600;
+          color: #B8955A;
           text-decoration: none;
-          min-height: 44px;
-          transition: opacity 0.2s;
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
         }
 
-        .sb-quiz-cta:hover { opacity: 0.88; }
+        .sb-quiz-cta:hover { text-decoration: underline; }
 
         /* ── Mobile Sticky Bar ── */
         .mobile-sticky-bar {
