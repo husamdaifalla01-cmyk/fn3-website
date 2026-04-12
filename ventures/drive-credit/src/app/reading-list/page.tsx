@@ -32,6 +32,7 @@ type Book = {
   title: string
   author: string
   year: number
+  isbn: string
   coverColor: string
   coverAccent: string
   editorial: string
@@ -48,6 +49,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Psychology of Money',
         author: 'Morgan Housel',
         year: 2020,
+        isbn: '9780857197689',
         coverColor: '#1D3A2F',
         coverAccent: '#B8955A',
         editorial:
@@ -58,6 +60,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'I Will Teach You to Be Rich',
         author: 'Ramit Sethi',
         year: 2009,
+        isbn: '9781523505746',
         coverColor: '#B8955A',
         coverAccent: '#FDFAF6',
         editorial:
@@ -68,6 +71,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Millionaire Next Door',
         author: 'Thomas J. Stanley',
         year: 1996,
+        isbn: '9780671015206',
         coverColor: '#2D2420',
         coverAccent: '#FDFAF6',
         editorial:
@@ -85,6 +89,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'A Pattern Language',
         author: 'Christopher Alexander',
         year: 1977,
+        isbn: '9780195019193',
         coverColor: '#4A5240',
         coverAccent: '#E8D5A3',
         editorial:
@@ -95,6 +100,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Life-Changing Magic of Tidying Up',
         author: 'Marie Kondo',
         year: 2011,
+        isbn: '9781607747307',
         coverColor: '#F0EBE1',
         coverAccent: '#1A1714',
         editorial:
@@ -105,6 +111,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Minimalist Home',
         author: 'Joshua Becker',
         year: 2018,
+        isbn: '9780525572992',
         coverColor: '#D9C5A0',
         coverAccent: '#1D3A2F',
         editorial:
@@ -122,6 +129,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Why We Sleep',
         author: 'Matthew Walker',
         year: 2017,
+        isbn: '9781501144318',
         coverColor: '#1A2A4A',
         coverAccent: '#9EB8D9',
         editorial:
@@ -132,6 +140,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Atomic Habits',
         author: 'James Clear',
         year: 2018,
+        isbn: '9780735211292',
         coverColor: '#B8955A',
         coverAccent: '#1D3A2F',
         editorial:
@@ -142,6 +151,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'In Defense of Food',
         author: 'Michael Pollan',
         year: 2008,
+        isbn: '9780143114963',
         coverColor: '#3D5A30',
         coverAccent: '#E8D5A3',
         editorial:
@@ -159,6 +169,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Steal Like an Artist',
         author: 'Austin Kleon',
         year: 2012,
+        isbn: '9780761169253',
         coverColor: '#1A1714',
         coverAccent: '#FDFAF6',
         editorial:
@@ -169,6 +180,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Wabi-Sabi House',
         author: 'Robyn Griggs Lawrence',
         year: 2004,
+        isbn: '9781400055135',
         coverColor: '#C8B89A',
         coverAccent: '#1A1714',
         editorial:
@@ -179,6 +191,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Big Magic',
         author: 'Elizabeth Gilbert',
         year: 2015,
+        isbn: '9781594634727',
         coverColor: '#8B4A7A',
         coverAccent: '#F0EBE1',
         editorial:
@@ -196,6 +209,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Thinking, Fast and Slow',
         author: 'Daniel Kahneman',
         year: 2011,
+        isbn: '9780374533557',
         coverColor: '#2A3A5A',
         coverAccent: '#FDFAF6',
         editorial:
@@ -206,6 +220,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Range',
         author: 'David Epstein',
         year: 2019,
+        isbn: '9780735214484',
         coverColor: '#5A3A1A',
         coverAccent: '#E8D5A3',
         editorial:
@@ -216,6 +231,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Power of Habit',
         author: 'Charles Duhigg',
         year: 2012,
+        isbn: '9780812981605',
         coverColor: '#3A1A2A',
         coverAccent: '#D9C5A0',
         editorial:
@@ -233,6 +249,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Almanack of Naval Ravikant',
         author: 'Eric Jorgenson',
         year: 2020,
+        isbn: '9781544514222',
         coverColor: '#1D3A2F',
         coverAccent: '#B8955A',
         editorial:
@@ -243,6 +260,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'When Breath Becomes Air',
         author: 'Paul Kalanithi',
         year: 2016,
+        isbn: '9780812988406',
         coverColor: '#4A3A2A',
         coverAccent: '#F0EBE1',
         editorial:
@@ -253,6 +271,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Essentialism',
         author: 'Greg McKeown',
         year: 2014,
+        isbn: '9780804137386',
         coverColor: '#F0EBE1',
         coverAccent: '#1D3A2F',
         editorial:
@@ -263,6 +282,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'Deep Work',
         author: 'Cal Newport',
         year: 2016,
+        isbn: '9781455586691',
         coverColor: '#1A1714',
         coverAccent: '#B8955A',
         editorial:
@@ -273,6 +293,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         title: 'The Tipping Point',
         author: 'Malcolm Gladwell',
         year: 2000,
+        isbn: '9780316346627',
         coverColor: '#2D4A3A',
         coverAccent: '#E8D5A3',
         editorial:
@@ -309,69 +330,33 @@ function BookCover({
   book: Book
   size?: 'large' | 'small'
 }) {
-  const isLarge = size === 'large'
+  const coverUrl = `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg`
   return (
     <div
       style={{
-        background: book.coverColor,
-        aspectRatio: isLarge ? '2/3' : '2/3',
+        aspectRatio: '2/3',
         width: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: isLarge ? 'clamp(20px,3vw,32px)' : '16px',
-        fontFamily: 'var(--font-playfair), Georgia, serif',
         position: 'relative',
         overflow: 'hidden',
+        background: book.coverColor,
+        boxShadow: '0 4px 20px rgba(0,0,0,0.18)',
       }}
     >
-      {/* Top stripe */}
-      <div
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={coverUrl}
+        alt={`${book.title} by ${book.author}`}
+        loading="lazy"
         style={{
+          position: 'absolute',
+          inset: 0,
           width: '100%',
-          height: isLarge ? '5px' : '3px',
-          background: book.coverAccent,
-          opacity: 0.8,
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center top',
+          display: 'block',
         }}
       />
-      {/* Title */}
-      <div style={{ flex: 1, display: 'flex', alignItems: 'center', padding: isLarge ? '20px 0' : '12px 0' }}>
-        <div
-          style={{
-            color: book.coverAccent,
-            fontSize: isLarge ? 'clamp(18px,2.5vw,28px)' : 'clamp(13px,1.5vw,17px)',
-            fontWeight: 700,
-            lineHeight: 1.15,
-            letterSpacing: '-0.01em',
-          }}
-        >
-          {book.title}
-        </div>
-      </div>
-      {/* Author + year */}
-      <div>
-        <div
-          style={{
-            color: book.coverAccent,
-            opacity: 0.6,
-            fontSize: isLarge ? '11px' : '9px',
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            marginBottom: '4px',
-          }}
-        >
-          {book.author}
-        </div>
-        <div
-          style={{
-            width: '100%',
-            height: isLarge ? '3px' : '2px',
-            background: book.coverAccent,
-            opacity: 0.35,
-          }}
-        />
-      </div>
     </div>
   )
 }
@@ -601,6 +586,18 @@ export default function ReadingListPage() {
           margin: 0 0 clamp(40px, 5vw, 64px) 0;
         }
 
+        /* ── TOC row hover ───────────────────────────────────── */
+        .rl-toc-row:hover {
+          background: rgba(184,149,90,0.08);
+          margin: 0 -12px;
+          padding-left: 12px !important;
+          padding-right: 12px !important;
+          border-radius: 4px;
+        }
+        .rl-toc-row:hover span:last-child {
+          color: #1D3A2F !important;
+        }
+
         /* ── Hover animations ────────────────────────────────── */
         .rl-featured-book:hover .rl-featured-cover > div {
           transform: translateY(-4px);
@@ -618,16 +615,44 @@ export default function ReadingListPage() {
           OPENING — Not a hero. A declaration.
       ═══════════════════════════════════════════════════════════════════ */}
       <section className="rl-stamp">
-        {/* Left: Forest statement */}
+        {/* Left: Forest statement with photo background */}
         <div
           style={{
-            background: '#1D3A2F',
+            position: 'relative',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'flex-end',
             padding: 'clamp(60px, 8vw, 100px) clamp(32px, 5vw, 72px)',
+            overflow: 'hidden',
+            background: '#1D3A2F',
           }}
         >
+          {/* Background photo */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/lifestyle/editorial.jpg"
+            alt=""
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              opacity: 0.28,
+              zIndex: 0,
+            }}
+          />
+          {/* Gradient overlay — lighter at top (nav area), heavy at bottom (text) */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to bottom, rgba(29,58,47,0.15) 0%, rgba(29,58,47,0.55) 35%, rgba(29,58,47,0.93) 65%, rgba(29,58,47,0.99) 100%)',
+            zIndex: 1,
+          }} />
+          {/* Content — above overlays */}
+          <div style={{ position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
           <div
             style={{
               fontFamily: 'Inter, system-ui, sans-serif',
@@ -676,6 +701,7 @@ export default function ReadingListPage() {
           >
             Updated April 2026
           </div>
+          </div>
         </div>
 
         {/* Right: Classification grid — books as data */}
@@ -701,8 +727,9 @@ export default function ReadingListPage() {
             Reading Sections
           </div>
           {SECTIONS.map((section, i) => (
-            <div
+            <a
               key={i}
+              href={`#section-${i + 1}`}
               style={{
                 display: 'grid',
                 gridTemplateColumns: '20px 1fr auto',
@@ -710,7 +737,10 @@ export default function ReadingListPage() {
                 alignItems: 'baseline',
                 padding: '14px 0',
                 borderBottom: '1px solid rgba(26,23,20,0.08)',
+                textDecoration: 'none',
+                transition: 'background 0.15s',
               }}
+              className="rl-toc-row"
             >
               <span
                 style={{
@@ -736,12 +766,12 @@ export default function ReadingListPage() {
                 style={{
                   fontFamily: 'Inter, system-ui, sans-serif',
                   fontSize: '12px',
-                  color: '#6B6557',
+                  color: '#B8955A',
                 }}
               >
-                {section.books.length} books
+                → {section.books.length} books
               </span>
-            </div>
+            </a>
           ))}
         </div>
       </section>
@@ -796,9 +826,11 @@ export default function ReadingListPage() {
 
             {/* ── Section ── */}
             <section
+              id={`section-${sIdx + 1}`}
               className="rl-section"
               style={{
                 background: sIdx % 2 === 1 ? '#F5EFE4' : '#FDFAF6',
+                scrollMarginTop: '70px',
               }}
             >
               {/* Section header */}
