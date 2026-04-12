@@ -123,6 +123,12 @@ export default function HomeDecorEmailCapture() {
           Weekly finds for a home you love coming to.
         </p>
 
+        {status === 'error' && (
+          <p style={{ fontSize: '13px', color: '#c0392b', textAlign: 'center', margin: '0 0 14px' }}>
+            Something went wrong. Please try again.
+          </p>
+        )}
+
         {status === 'success' ? (
           <div
             style={{

@@ -664,11 +664,6 @@ export default async function ArticleDetailPage({
       <ArticleNewsletter />
 
       <style>{`
-        @keyframes ls-fade-up {
-          from { opacity: 0; transform: translateY(20px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-
         .breadcrumb-link {
           color: #9B9388;
           text-decoration: none;

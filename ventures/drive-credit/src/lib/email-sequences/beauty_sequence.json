@@ -1,0 +1,284 @@
+{
+  "sequence_meta": {
+    "niche": "beauty",
+    "brand": "Mintbrooks",
+    "persona": "The Skin Edit",
+    "persona_voice": "Emily Weiss / Into The Gloss — community voice, skin-type aware, friend-to-friend, personal stories, never brand-to-consumer",
+    "total_emails": 6
+  },
+  "emails": [
+    {
+      "niche": "beauty",
+      "email_number": 1,
+      "send_day": 0,
+      "subject_line": "Your free skincare guide + a question about your skin",
+      "preview_text": "I want to understand what you're actually dealing with before I recommend anything",
+      "from_name": "The Skin Edit",
+      "plain_text_body": "Hey, welcome.\n\nI'm Chloe. I've been writing about skincare for about six years — not from a brand perspective, from a person-who-cares-too-much-about-this perspective. I've tried most of what I write about. I've made a lot of mistakes. I've wasted money on things that didn't work and found incredible things in places I didn't expect.\n\nYour guide — \"The Edited Routine: A Skin-Type Specific Starter Stack for Every Budget\" — is attached. Before you dig in, though, I want to ask you something because the guide covers four different skin types and I don't want you to read all four sections if you only need one.\n\nWhat does your skin actually do?\n\nClick the option that's most true, and I'll make sure everything I send from here on out is relevant to what you're actually dealing with:\n\n[SEGMENTATION LINK: Oily/Combination] — \"My T-zone is shiny by noon and my pores look like craters close-up\"\n[SEGMENTATION LINK: Dry/Sensitive] — \"My skin gets tight, flaky, or red — especially in winter\"\n[SEGMENTATION LINK: Acne-Prone] — \"I break out regularly and nothing seems to stop it permanently\"\n[SEGMENTATION LINK: Hyperpigmentation] — \"My main concern is dark spots, uneven tone, or post-acne marks\"\n[SEGMENTATION LINK: Anti-Aging] — \"I'm focused on fine lines, texture, and keeping what I have\"\n\nNo wrong answers. These are all just different problems with different solutions.\n\nThe thing I want you to know before anything else: building a skincare routine is not complicated. The skincare industry makes it complicated because complicated sells more products. A genuinely effective routine for most people is three to four steps.\n\nCleanse. Treat. Moisturize. SPF in the morning.\n\nEvery other product fits inside one of those steps or adds a fifth one if your skin needs it.\n\nI'm going to send you emails that actually help you figure out which products belong in your routine for your skin — not the ones that are trending on TikTok, not the ones with the nicest packaging, the ones that work.\n\nTalk soon,\nChloe\nThe Skin Edit at Mintbrooks\n\nP.S. — I share affiliate links in most emails. I only ever share things I've used, researched thoroughly, or seen consistent community praise for. I'll tell you what I use myself vs. what I've researched when it matters.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1e1e1e; line-height: 1.75;'><p style='color: #c9a96e; font-size: 17px; font-weight: bold;'>The Skin Edit · Mintbrooks</p><h2 style='font-size: 22px;'>Your free skincare guide — and one question</h2><p>Hey, welcome. I'm Chloe.</p><p>Before you read the guide, I want to know what your skin actually does — so everything I send is relevant to you.</p><p><strong>What's most true for your skin?</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 10px;'><a href='{{SEG_OILY}}' style='background: #c9a96e; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Oily/Combination — shiny T-zone, visible pores</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_DRY}}' style='background: #c9a96e; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Dry/Sensitive — tight, flaky, or red</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_ACNE}}' style='background: #c9a96e; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Acne-prone — breaks out regularly</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_HYPERPIG}}' style='background: #c9a96e; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Hyperpigmentation — dark spots, uneven tone</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_ANTIAGING}}' style='background: #c9a96e; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Anti-aging — fine lines, texture, prevention</a></li></ul><p>A genuinely effective routine is 3-4 steps. Cleanse. Treat. Moisturize. SPF. I'll help you fill those steps with what actually works for your skin.</p><p>Talk soon,<br><strong>Chloe</strong></p></div>",
+      "tags_applied_on_send": ["sequence:beauty", "stage:welcome"],
+      "tags_applied_on_click": ["tag:skin-type:set"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "beauty",
+          "amazon_search_term": "CeraVe hydrating facial cleanser normal dry skin",
+          "placement": "guide-reference",
+          "affiliate_context": "Guide covers all skin types — cleanser mentioned as universal starting point regardless of skin type"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:beauty-email-1"],
+        "on_click_seg_oily": ["tag:skin-type:oily-combo"],
+        "on_click_seg_dry": ["tag:skin-type:dry-sensitive"],
+        "on_click_seg_acne": ["tag:skin-type:acne-prone"],
+        "on_click_seg_hyperpig": ["tag:skin-type:hyperpigmentation"],
+        "on_click_seg_antiaging": ["tag:skin-type:anti-aging"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "What does your skin actually need? (2-second answer)"
+      }
+    },
+    {
+      "niche": "beauty",
+      "email_number": 2,
+      "send_day": 3,
+      "subject_line": "The skincare ingredient I avoided for years (and now can't live without)",
+      "preview_text": "I thought retinol was for my mom. I was so wrong.",
+      "from_name": "The Skin Edit",
+      "plain_text_body": "Okay, confession.\n\nI avoided retinol for three years because I thought it was a \"serious\" thing that only dermatologists prescribed and that it would make my skin peel off and become red and sensitive forever.\n\nThis is what happens when you get your skincare education from beauty forums.\n\nRetinol is Vitamin A. Your skin has receptors specifically designed to use it. It works by accelerating cell turnover — basically telling your skin cells to move faster, which means new, fresh cells surface more quickly and dead skin sheds faster.\n\nThe result over 12-16 weeks of consistent use: smoother texture, smaller pores (they look smaller when they're not clogged), faded hyperpigmentation, and — this is the big one — stimulation of collagen production.\n\nIt's the closest thing to an anti-aging ingredient with real, robust evidence behind it. More than any serum. More than most professional treatments.\n\nThe reason people hate it is that they start wrong. They buy prescription-strength tretinoin or a high-percentage OTC retinol and use it every night and their skin freaks out. This is called retinization — it's real, it's temporary, and it's completely preventable.\n\nThe right way to start:\n\n1. Start with a low-percentage retinol (0.025% to 0.05%)\n2. Use it two nights a week for the first month\n3. Increase to three nights a week in month two\n4. By month three, every other night is fine for most people\n5. Always follow with a moisturizer. Always use SPF the next morning.\n\nThe products I'd actually recommend for starting:\n\n**For complete beginners or sensitive skin:**\nOlay Regenerist Retinol 24 Night Moisturizer — retinol plus hyaluronic acid, so it delivers moisture at the same time. Much gentler entry point. About $30.\n\n**For people ready for a proper retinol serum:**\nPaula's Choice 1% Retinol Treatment — this is what I use. Excellent formulation, well-tolerated by most people who've eased in properly. About $52.\n\n**If you want pharmacy-level without the price:**\nAdaptalene (Differin Gel, 0.1%) — this is a retinoid that was previously prescription only and is now available OTC. Particularly good for acne-prone skin. About $14.\n\n[PRODUCT LINK: Olay Regenerist Retinol 24 Night Moisturizer]\n[PRODUCT LINK: Paula's Choice 1% Retinol Treatment]\n[PRODUCT LINK: Differin Adapalene Gel 0.1% Acne Treatment]\n\nOne thing I want to be clear about: if you're pregnant or breastfeeding, you should skip retinoids entirely. Talk to your OB. The rest of us — this is worth starting.\n\nNext email: the SPF conversation. Yes, we're having it. And I'm going to change your mind about the kind you're using.\n\nTalk soon,\nChloe\n\nP.S. — The patch test rule is not optional. New product, new ingredient — patch test on your jaw or inner arm for 48 hours before putting it on your full face. Always.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1e1e1e; line-height: 1.75;'><p style='color: #c9a96e; font-size: 17px; font-weight: bold;'>The Skin Edit · Mintbrooks</p><h2>The ingredient I avoided for 3 years</h2><p>I avoided retinol because I thought it was serious and scary. It's not. Here's what I wish I'd known.</p><p>Retinol is Vitamin A. Your skin has receptors designed to use it. It accelerates cell turnover — new cells surface faster, pores look smaller, hyperpigmentation fades, and collagen production is stimulated.</p><p>It's the closest thing to an anti-aging ingredient with <em>real</em> evidence behind it.</p><div style='background: #fdf8f0; border-radius: 8px; padding: 20px; margin: 20px 0;'><p style='font-weight: bold; margin: 0 0 10px;'>How to start without the freak-out:</p><ol style='margin: 0; padding-left: 20px;'><li>Start at 0.025%–0.05%</li><li>Use 2 nights a week, first month</li><li>Increase to 3 nights in month two</li><li>Always follow with moisturizer</li><li>Always use SPF the next morning</li></ol></div><p><strong>My recommendations by starting point:</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P1_URL}}' style='color: #c9a96e; font-weight: bold;'>Olay Regenerist Retinol 24 Night Moisturizer</a><br><span style='font-size: 13px;'>~$30 — For complete beginners or sensitive skin. Retinol + hyaluronic acid.</span></li><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P2_URL}}' style='color: #c9a96e; font-weight: bold;'>Paula's Choice 1% Retinol Treatment</a><br><span style='font-size: 13px;'>~$52 — What I personally use. For people ready for a proper retinol serum.</span></li><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P3_URL}}' style='color: #c9a96e; font-weight: bold;'>Differin Adapalene Gel 0.1%</a><br><span style='font-size: 13px;'>~$14 — Previously prescription-only retinoid. Great for acne-prone skin.</span></li></ul><p>Talk soon,<br><strong>Chloe</strong></p><p style='font-size: 12px; color: #999;'>Patch test always. Avoid if pregnant/breastfeeding.</p></div>",
+      "tags_applied_on_send": ["sequence:beauty", "stage:education"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:retinol"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "beauty",
+          "amazon_search_term": "Olay Regenerist Retinol 24 Night Moisturizer fragrance free",
+          "placement": "tiered-recommendation",
+          "affiliate_context": "Recommended as the beginner-safe retinol entry point — moisturizer format reduces irritation risk"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "beauty",
+          "amazon_search_term": "Paula's Choice 1% Retinol Booster serum",
+          "placement": "tiered-recommendation",
+          "affiliate_context": "The writer's personal product — highest trust signal. For intermediate users who've already been introduced to retinol."
+        },
+        {
+          "slot_id": "product_3",
+          "category": "beauty",
+          "amazon_search_term": "Differin adapalene gel 0.1 percent acne treatment OTC",
+          "placement": "tiered-recommendation",
+          "affiliate_context": "Budget and acne-prone segment — formerly prescription retinoid at pharmacy price, strong conversion for price-sensitive or acne-tagged subscribers"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:beauty-email-2"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "I avoided this ingredient for 3 years. Don't make my mistake."
+      }
+    },
+    {
+      "niche": "beauty",
+      "email_number": 3,
+      "send_day": 9,
+      "subject_line": "\"My skin has never looked better\" (and she's 47)",
+      "preview_text": "A reader's story about finding the routine that actually stuck",
+      "from_name": "The Skin Edit",
+      "plain_text_body": "I got this message a few weeks ago and I've been thinking about it constantly.\n\nSharing with permission from Rachel, who reads this newsletter from Vancouver:\n\n---\n\n\"I've been battling with my skin since I had my first kid at 32. The hormonal acne came with pregnancy and it just... never fully left. I've spent probably thousands of dollars over 15 years trying things that didn't work.\n\nLast year I started reading your emails. I know that sounds dramatic, but the thing that shifted for me was when you explained that not all dark spots are the same — some are hyperpigmentation from inflammation, some are melasma from sun/hormones, and they respond to completely different ingredients.\n\nI'd been using Vitamin C on what turned out to be melasma-adjacent spots, which was doing essentially nothing.\n\nI switched to Tranexamic Acid (the Naturium one you mentioned) and added niacinamide. Within about 8 weeks I saw more progress than I'd seen in two years.\n\nI'm 47. My skin has never looked better. I cried a little bit, honestly.\"\n\n— Rachel, Vancouver\n\n---\n\nRachel said something that I think about a lot: that the problem wasn't effort. She'd been trying for 15 years. The problem was targeting the wrong mechanism.\n\nThis is the thing that separates skincare that works from skincare that doesn't. It's not about how much you spend or how many steps you do. It's about identifying what your skin is actually doing and matching the ingredient to the mechanism.\n\nHyperpigmentation from inflammation (PIH — post-inflammatory hyperpigmentation): responds to niacinamide, azelaic acid, and sometimes retinol.\n\nMelasma (hormonally-driven pigmentation): responds to tranexamic acid, kojic acid, and strict sun protection. Vitamin C helps, but it's not first-line.\n\nSun spots (lentigines): respond to retinoids, acids, and brighteners. These are the most treatable.\n\nThe products Rachel used:\n\n[PRODUCT LINK: Naturium Tranexamic Acid Serum 5%]\n[PRODUCT LINK: The Ordinary Niacinamide 10% + Zinc 1%]\n\nIf you're not sure which type you're dealing with — a good dermatologist can tell you in about 30 seconds under a light. It's worth one appointment if you've been frustrated for a long time.\n\nBut for most people reading this? The combination of niacinamide + tranexamic acid is a good place to start for any discoloration concern. Both are gentle. Both have strong evidence. And the Ordinary niacinamide is $7.\n\nTalk soon,\nChloe\n\nP.S. — If you have a story like Rachel's — a moment when things clicked and your routine finally started working — I would genuinely love to hear it. Hit reply.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1e1e1e; line-height: 1.75;'><p style='color: #c9a96e; font-size: 17px; font-weight: bold;'>The Skin Edit · Mintbrooks</p><h2>\"My skin has never looked better\" (and she's 47)</h2><blockquote style='border-left: 4px solid #c9a96e; margin: 20px 0; padding: 16px 24px; background: #fdf8f0; font-style: italic;'><p>\"I switched to Tranexamic Acid and added niacinamide. Within about 8 weeks I saw more progress than I'd seen in two years. I'm 47. My skin has never looked better. I cried a little bit, honestly.\"</p><p style='font-style: normal; font-size: 13px; color: #888;'>— Rachel, Vancouver</p></blockquote><p>The problem wasn't effort. She'd been trying for 15 years. The problem was targeting the wrong mechanism.</p><div style='background: #fdf8f0; border-radius: 8px; padding: 20px; margin: 20px 0;'><p><strong>Know your dark spot type:</strong></p><p><em>PIH (post-inflammatory)</em> → niacinamide, azelaic acid, retinol</p><p><em>Melasma (hormonal)</em> → tranexamic acid, kojic acid, sun protection first</p><p><em>Sun spots</em> → retinoids, brighteners, acids</p></div><p><strong>What Rachel used:</strong></p><p><a href='{{P1_URL}}' style='color: #c9a96e;'>Naturium Tranexamic Acid Serum 5% →</a><br><a href='{{P2_URL}}' style='color: #c9a96e;'>The Ordinary Niacinamide 10% + Zinc 1% →</a></p><p>Both gentle. Both evidence-backed. The Ordinary niacinamide is $7.</p><p>Talk soon,<br><strong>Chloe</strong></p></div>",
+      "tags_applied_on_send": ["sequence:beauty", "stage:social-proof"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:hyperpigmentation"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "beauty",
+          "amazon_search_term": "Naturium tranexamic acid topical serum 5 percent brightening",
+          "placement": "story-attribution",
+          "affiliate_context": "Reader transformation product — highest social proof context. Tranexamic acid is the differentiated ingredient that worked when others failed."
+        },
+        {
+          "slot_id": "product_2",
+          "category": "beauty",
+          "amazon_search_term": "The Ordinary niacinamide 10% zinc 1% serum 30ml",
+          "placement": "story-attribution",
+          "affiliate_context": "Second product from reader story — extremely high conversion due to very low price point ($7) and story attribution"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:beauty-email-3"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "She spent 15 years on the wrong ingredient. One switch changed everything."
+      }
+    },
+    {
+      "niche": "beauty",
+      "email_number": 4,
+      "send_day": 15,
+      "subject_line": "The SPF you've been using is probably not doing what you think",
+      "preview_text": "Chemical vs. mineral, reapplication reality, and the one I actually use",
+      "from_name": "The Skin Edit",
+      "plain_text_body": "We need to talk about sunscreen.\n\nI know. Bear with me.\n\nHere's the thing most beauty content won't say plainly: all the retinol, niacinamide, vitamin C, and expensive serums in the world are doing half the job if you're not wearing SPF every morning. Sunscreen is the single most evidence-backed anti-aging and anti-pigmentation tool that exists. More than any serum. More than injectables.\n\nUV exposure is responsible for about 80% of visible facial aging. That's a well-studied number.\n\nSo why do most people skip it? Because the experience of wearing SPF has historically been terrible. White cast. Greasy finish. Pilling under makeup. The smell of a 1990s beach.\n\nThis is changing. And quickly.\n\nA few things I want you to know:\n\n**Chemical vs. mineral sunscreen — the real difference:**\nMineral (zinc oxide and/or titanium dioxide): sits on the skin and reflects UV rays. Immediately effective. Often leaves a white cast on deeper skin tones. Better for sensitive skin and reef-safe concerns.\nChemical (avobenzone, octinoxate, etc.): absorbs into the skin and converts UV to heat. No white cast. Needs 20 minutes to activate. There are some concerns about hormone disruption at high doses, though the FDA is still reviewing this.\n\nNeither is universally better. Mineral with a good tint or formulation is often the best of both.\n\n**The reapplication reality nobody talks about:**\nSPF protection degrades. In direct sun, you need to reapply every 2 hours. Most people apply once in the morning and consider themselves protected all day.\n\nFor most of us working indoors, once in the morning is probably fine (UVA comes through windows, but at much lower intensity). But if you're outside? Reapply.\n\nThe products I use and love:\n\n**My everyday SPF (7 years running):**\nEltaMD UV Clear Broad-Spectrum SPF 46 — tinted or untinted, absorbs beautifully, doesn't pill, has niacinamide built in. About $40. Worth every dollar.\n\n**For deeper skin tones (no white cast):**\nBlack Girl Sunscreen SPF 30 — no white cast, no scent, moisturizing finish. Dermatologist community favorite.\n\n**Budget-friendly option that actually works:**\nLa Roche-Posay Anthelios Melt-in Milk SPF 100 — yes, SPF 100 is overkill in theory but real-world application means you get SPF 30-40 effective protection. This one passes the vibe test.\n\n**For reapplication over makeup:**\nSupergoop Invisible Mist SPF 40 — spray on top of makeup. No rubbing. Refreshes protection without disturbing your look.\n\n[PRODUCT LINK: EltaMD UV Clear SPF 46 Tinted]\n[PRODUCT LINK: Black Girl Sunscreen SPF 30]\n[PRODUCT LINK: La Roche-Posay Anthelios Melt-in Milk SPF 100]\n[PRODUCT LINK: Supergoop! Invisible Setting Mist SPF 40]\n\nThe one non-negotiable: broad-spectrum. This is printed on the bottle. It means the formula covers both UVA (aging) and UVB (burning). If it doesn't say broad-spectrum, don't bother.\n\nTalk soon,\nChloe\n\nP.S. — Your neck and chest are part of your face. They see the same sun. Please include them.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1e1e1e; line-height: 1.75;'><p style='color: #c9a96e; font-size: 17px; font-weight: bold;'>The Skin Edit · Mintbrooks</p><h2>The SPF conversation we need to have</h2><p>UV exposure causes ~80% of visible facial aging. Sunscreen is more evidence-backed than any serum or injectable.</p><p>The reason people skip it: the experience has historically been terrible. <em>This is changing.</em></p><div style='background: #fdf8f0; border-radius: 8px; padding: 20px; margin: 20px 0;'><p><strong>Chemical vs. Mineral:</strong> Neither is universally better. Mineral = reflects UV, no chemical concerns, sometimes white cast. Chemical = no white cast, needs 20min to activate, some formulation concerns at high doses.</p><p><strong>The non-negotiable:</strong> Broad-spectrum. Printed on the bottle. Both UVA + UVB covered.</p></div><p><strong>My picks by use case:</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P1_URL}}' style='color: #c9a96e; font-weight: bold;'>EltaMD UV Clear SPF 46 Tinted</a><br><span style='font-size: 13px;'>My everyday for 7 years. Absorbs perfectly, has niacinamide, doesn't pill.</span></li><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P2_URL}}' style='color: #c9a96e; font-weight: bold;'>Black Girl Sunscreen SPF 30</a><br><span style='font-size: 13px;'>No white cast, no scent. For deeper skin tones.</span></li><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P3_URL}}' style='color: #c9a96e; font-weight: bold;'>La Roche-Posay Anthelios Melt-in Milk SPF 100</a><br><span style='font-size: 13px;'>Budget-friendly, excellent real-world protection.</span></li><li style='margin-bottom: 12px; padding: 12px; border: 1px solid #eee; border-radius: 6px;'><a href='{{P4_URL}}' style='color: #c9a96e; font-weight: bold;'>Supergoop! Invisible Setting Mist SPF 40</a><br><span style='font-size: 13px;'>Spray reapplication over makeup. No rubbing required.</span></li></ul><p>Talk soon,<br><strong>Chloe</strong></p></div>",
+      "tags_applied_on_send": ["sequence:beauty", "stage:objection-handler"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:spf"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "beauty",
+          "amazon_search_term": "EltaMD UV Clear broad spectrum SPF 46 tinted facial sunscreen",
+          "placement": "personal-recommendation",
+          "affiliate_context": "7-year personal use product — highest trust signal in any recommendation. Positioned as the universal starting recommendation."
+        },
+        {
+          "slot_id": "product_2",
+          "category": "beauty",
+          "amazon_search_term": "Black Girl Sunscreen SPF 30 moisturizing no white cast",
+          "placement": "skin-tone-specific",
+          "affiliate_context": "Skin-tone aware recommendation for deeper skin tones — addresses the white cast objection directly"
+        },
+        {
+          "slot_id": "product_3",
+          "category": "beauty",
+          "amazon_search_term": "La Roche-Posay Anthelios Melt-in Milk Sunscreen SPF 100",
+          "placement": "budget-recommendation",
+          "affiliate_context": "Budget tier and best-value recommendation for price-sensitive subscribers"
+        },
+        {
+          "slot_id": "product_4",
+          "category": "beauty",
+          "amazon_search_term": "Supergoop Invisible Mist Setting Spray SPF 40",
+          "placement": "reapplication-solution",
+          "affiliate_context": "Solves the reapplication problem for subscribers who wear makeup — spray format removes friction from the behavior"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:beauty-email-4"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "80% of facial aging comes from this one thing"
+      }
+    },
+    {
+      "niche": "beauty",
+      "email_number": 5,
+      "send_day": 22,
+      "subject_line": "Your skin type routine (the short version)",
+      "preview_text": "Oily, dry, acne-prone, or hyperpigmentation — here's your specific stack",
+      "from_name": "The Skin Edit",
+      "plain_text_body": "Three weeks ago you told me about your skin. Today I'm giving you back a specific routine for it.\n\nScroll to your skin type. The rest is background noise.\n\n---\n\n**IF YOUR SKIN IS: Oily / Combination**\n\nYour goal: control shine without stripping, keep pores clear, prevent the congestion that leads to breakouts.\n\nAM Routine:\n1. Cleanser: CeraVe Foaming Facial Cleanser — removes excess oil without disrupting barrier\n2. Niacinamide serum: The Ordinary Niacinamide 10% + Zinc — regulates sebum production\n3. Lightweight moisturizer: Neutrogena Hydro Boost Water Gel — hydration without heaviness\n4. SPF: EltaMD UV Clear SPF 46 (the one in this formula controls shine too)\n\nPM Routine:\n1. Same cleanser or oil cleanser if wearing makeup\n2. Retinol 2x/week (Differin Gel 0.1% or Olay Regenerist)\n3. Same moisturizer\n\n---\n\n**IF YOUR SKIN IS: Dry / Sensitive**\n\nYour goal: rebuild and maintain the skin barrier. Barrier-compromised skin is the root of most dry skin issues.\n\nAM Routine:\n1. Cleanser: CeraVe Hydrating Cleanser — milk-based, doesn't strip anything\n2. Hyaluronic acid serum: Neutrogena Hydro Boost + Vitamin C (apply to damp skin for maximum humectant effect)\n3. Moisturizer: CeraVe Moisturizing Cream (not lotion — the cream in the tub) — ceramides rebuild barrier\n4. SPF: EltaMD UV Physical Broad-Spectrum SPF 41 (mineral, no chemical irritants)\n\nPM Routine:\n1. Oil cleanser + water cleanser if wearing makeup\n2. Moisturizer: First Aid Beauty Ultra Repair Cream or Vanicream Moisturizing Skin Cream\n3. Occasional face oil on dry patches: Biossance Squalane Oil (squalane is identical to your skin's natural sebum)\n\n---\n\n**IF YOUR SKIN IS: Acne-Prone**\n\nYour goal: prevent new breakouts, accelerate healing, prevent PIH.\n\nAM Routine:\n1. Cleanser: La Roche-Posay Toleriane Purifying Foaming Cleanser\n2. Azelaic Acid: The Ordinary Azelaic Acid Suspension 10% — anti-inflammatory, unclogs pores\n3. Lightweight moisturizer: CeraVe AM Facial Moisturizing Lotion with SPF (two steps in one)\n\nPM Routine:\n1. Same cleanser\n2. Adapalene (Differin 0.1%) — begin 2x/week, increase slowly\n3. Moisturizer\n4. Spot treatment as needed: Benzac 2.5% benzoyl peroxide (low dose is less irritating, equally effective)\n\n---\n\n**IF YOUR CONCERN IS: Hyperpigmentation / Dark Spots**\n\nYour goal: fade existing spots, prevent new ones, maintain overall tone.\n\nAM Routine:\n1. Cleanser\n2. Vitamin C serum: TruSkin Vitamin C Serum — L-ascorbic acid 20%, brightening + antioxidant protection\n3. Moisturizer\n4. SPF: Non-negotiable. Pigmentation gets worse without it.\n\nPM Routine:\n1. Cleanser\n2. Tranexamic Acid: Naturium Tranexamic Acid Serum 5% — fades existing pigmentation\n3. Niacinamide: The Ordinary 10% + Zinc\n4. Moisturizer + retinol 2-3x/week\n\n---\n\nAll of these routines are designed to be affordable, evidence-backed, and starting-point focused. None of them require spending more than $80-100 total to start.\n\n[PRODUCT LINK: CeraVe Foaming Facial Cleanser 16 oz]\n[PRODUCT LINK: CeraVe Moisturizing Cream 16 oz tub]\n[PRODUCT LINK: TruSkin Vitamin C Serum for face]\n[PRODUCT LINK: Naturium Tranexamic Acid Serum 5%]\n\nTalk soon,\nChloe",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1e1e1e; line-height: 1.75;'><p style='color: #c9a96e; font-size: 17px; font-weight: bold;'>The Skin Edit · Mintbrooks</p><h2>Your skin type routine — the short version</h2><p>Scroll to your skin. Ignore the rest.</p><div style='border-left: 4px solid #c9a96e; padding-left: 20px; margin: 20px 0;'><h3 style='color: #c9a96e;'>Oily / Combination</h3><p>CeraVe Foaming Cleanser → Niacinamide 10% → Neutrogena Hydro Boost Gel → EltaMD UV Clear SPF 46<br>PM: Differin 0.1% 2x/week</p></div><div style='border-left: 4px solid #a8c5b0; padding-left: 20px; margin: 20px 0;'><h3 style='color: #a8c5b0;'>Dry / Sensitive</h3><p>CeraVe Hydrating Cleanser → Hyaluronic Acid serum (damp skin) → CeraVe Cream tub → EltaMD UV Physical SPF<br>PM: FAB Ultra Repair Cream or Vanicream + Biossance Squalane drops</p></div><div style='border-left: 4px solid #d4956a; padding-left: 20px; margin: 20px 0;'><h3 style='color: #d4956a;'>Acne-Prone</h3><p>LRP Toleriane Cleanser → Azelaic Acid 10% → CeraVe AM SPF Moisturizer<br>PM: Differin 0.1% + Benzac 2.5% spot treat</p></div><div style='border-left: 4px solid #8c7db0; padding-left: 20px; margin: 20px 0;'><h3 style='color: #8c7db0;'>Hyperpigmentation</h3><p>Cleanser → TruSkin Vitamin C → Moisturizer → SPF<br>PM: Naturium Tranexamic Acid + Niacinamide + Retinol 2-3x/week</p></div><div style='background: #fdf8f0; border-radius: 8px; padding: 16px 20px; margin: 24px 0;'><p style='margin: 0; font-weight: bold;'>Starting essentials (all skin types):</p><p style='margin: 8px 0 0;'><a href='{{P1_URL}}' style='color: #c9a96e;'>CeraVe Foaming Cleanser →</a><br><a href='{{P2_URL}}' style='color: #c9a96e;'>CeraVe Moisturizing Cream (tub) →</a><br><a href='{{P3_URL}}' style='color: #c9a96e;'>TruSkin Vitamin C Serum →</a><br><a href='{{P4_URL}}' style='color: #c9a96e;'>Naturium Tranexamic Acid Serum →</a></p></div><p>Talk soon,<br><strong>Chloe</strong></p></div>",
+      "tags_applied_on_send": ["sequence:beauty", "stage:conversion"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:segment:beauty-buyer-intent"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "beauty",
+          "amazon_search_term": "CeraVe foaming facial cleanser 16 oz normal oily skin",
+          "placement": "routine-list-universal",
+          "affiliate_context": "Universal cleanser recommendation across skin types — highest purchase probability due to cross-segment appeal"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "beauty",
+          "amazon_search_term": "CeraVe moisturizing cream 16 oz tub ceramide",
+          "placement": "routine-list-dry-sensitive",
+          "affiliate_context": "Dry/sensitive segment core product — the cream tub format is specifically recommended over lotion for barrier repair"
+        },
+        {
+          "slot_id": "product_3",
+          "category": "beauty",
+          "amazon_search_term": "TruSkin vitamin C serum face brightening L-ascorbic acid",
+          "placement": "routine-list-hyperpigmentation",
+          "affiliate_context": "Hyperpigmentation AM routine anchor — vitamin C as the brightening + antioxidant step"
+        },
+        {
+          "slot_id": "product_4",
+          "category": "beauty",
+          "amazon_search_term": "Naturium tranexamic acid serum brightening dark spots",
+          "placement": "routine-list-hyperpigmentation",
+          "affiliate_context": "Previously featured in reader story — repeat placement reinforces social proof while serving a new purchase context"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:beauty-email-5"],
+        "on_click_product": ["tag:journey:converted-click", "queue:post-purchase-care-sequence"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Your skin type routine — 4 steps, no filler"
+      }
+    },
+    {
+      "niche": "beauty",
+      "email_number": 6,
+      "send_day": 36,
+      "subject_line": "How's the routine going? (Check-in)",
+      "preview_text": "A month in — I want to hear from you",
+      "from_name": "The Skin Edit",
+      "plain_text_body": "A month ago you downloaded a guide and told me about your skin.\n\nI'm checking in.\n\nBecause I know how this goes. You open the emails, you learn things, maybe you order one product, maybe you're still meaning to but haven't yet. Life is busy. Skincare feels lower-priority than approximately everything else.\n\nI get it.\n\nBut here's what I want to say: the gap between the routine you have and the one that would actually make a difference is smaller than you think. Most people I talk to are 1-2 products away from a routine that changes how they feel about their skin.\n\nNot a 10-step overhaul. One addition or one swap.\n\nI want to help you find that one thing. So I'm going to ask:\n\nWhat's the thing you're most unhappy about with your skin right now? Not your whole routine, not your whole face — the one thing that bothers you most when you look in the mirror.\n\nHit reply and tell me. I'll respond personally to as many as I can.\n\nIn the meantime, I'll keep sending you content every week or so — ingredient deep dives, reviews, the occasional find I can't stop thinking about.\n\nIf you're not feeling it anymore, the unsubscribe is below. Truly no pressure.\n\nBut if you're still working on your routine — welcome to the ongoing project. Skin takes time. It's worth it.\n\nTalk soon,\nChloe\n\nP.S. — One thing I keep coming back to for almost every skin concern: moisturizer matters more than most people think. If you haven't tried switching to a ceramide-based cream, this is the version I'd start with:\n\n[PRODUCT LINK: CeraVe Moisturizing Cream 16 oz tub — the one that dermatologists won't shut up about]\n\nIt's $18. It genuinely works. It's not exciting. That's kind of the point.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1e1e1e; line-height: 1.75;'><p style='color: #c9a96e; font-size: 17px; font-weight: bold;'>The Skin Edit · Mintbrooks</p><h2>How's the routine going?</h2><p>A month ago you downloaded a guide and told me about your skin. I'm checking in.</p><p>Most people are 1–2 products away from a routine that changes how they feel about their skin. Not a 10-step overhaul. One addition or one swap.</p><p><strong>What's the one thing that bothers you most about your skin right now?</strong></p><p>Hit reply. I respond personally to as many as I can.</p><p>And if you haven't started yet — this is where I'd begin:</p><p><a href='{{P1_URL}}' style='background: #c9a96e; color: white; padding: 10px 16px; border-radius: 5px; text-decoration: none; display: inline-block;'>CeraVe Moisturizing Cream — $18, dermatologist-beloved →</a></p><p>It's not exciting. That's kind of the point.</p><p>Talk soon,<br><strong>Chloe</strong></p><p style='font-size: 12px; color: #999;'>Unsubscribe below — no hard feelings.</p></div>",
+      "tags_applied_on_send": ["sequence:beauty", "stage:re-engagement"],
+      "tags_applied_on_click": ["tag:re-engaged", "tag:beauty:still-active"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "beauty",
+          "amazon_search_term": "CeraVe moisturizing cream 16 oz tub ceramide hyaluronic acid",
+          "placement": "re-engagement-cta",
+          "affiliate_context": "Universal re-entry product — cheapest, highest-utility, lowest-risk recommendation for re-engaging cold subscribers who haven't purchased yet"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:re-engaged:beauty-email-6", "remove-tag:at-risk-churn"],
+        "on_reply": ["tag:high-value:beauty-replied", "queue:personal-response-workflow"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "move_to_win_back_sequence",
+        "variant_subject": "One last thing about your skin"
+      }
+    }
+  ],
+  "automation_flow": {
+    "sequence_name": "beauty-post-sequence",
+    "description": "Post-sequence automation for beauty subscribers",
+    "branches": [
+      {
+        "condition": "tag:re-engaged:beauty-email-6",
+        "action": "enroll_in_weekly_digest",
+        "digest_cadence": "every_thursday",
+        "digest_content": "1 ingredient spotlight OR 1 product review matched to skin-type tag + 1 seasonal skin tip",
+        "digest_from_name": "The Skin Edit"
+      },
+      {
+        "condition": "tag:skin-type:acne-prone AND tag:journey:converted-click",
+        "action": "enroll_in_acne_deep_dive",
+        "timing": "14 days after email 6",
+        "content": "4-email deep dive: hormonal vs. clogged pore acne, prescription options conversation, scar prevention"
+      },
+      {
+        "condition": "tag:journey:converted-click AND NOT tag:post-purchase-confirmed",
+        "action": "send_check_in",
+        "timing": "10 days after click",
+        "content": "How is [product] working for your [skin type]? + what to add next in the routine"
+      },
+      {
+        "condition": "NOT opened any email in 30 days",
+        "action": "enroll_in_win_back_sequence",
+        "win_back_subject_1": "Your skin in 60 days — one small change",
+        "win_back_subject_2": "Taking you off the list (unless you want to stay)"
+      }
+    ],
+    "seasonal_campaigns": [
+      {"name": "Winter Barrier Repair", "send_month": "November", "content": "Cold weather skin protocol — barrier focus"},
+      {"name": "Spring Refresh", "send_month": "March", "content": "Exfoliation, lighter formulas, SPF reinforcement"},
+      {"name": "Summer Glow", "send_month": "June", "content": "Sweat-proof routines, SPF reapplication, post-sun care"}
+    ]
+  }
+}

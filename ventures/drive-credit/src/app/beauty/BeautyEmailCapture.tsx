@@ -93,6 +93,12 @@ export default function BeautyEmailCapture() {
           Skincare finds, honest reviews, and the routines actually worth your time.
         </p>
 
+        {status === 'error' && (
+          <p style={{ fontSize: '13px', color: '#c0392b', textAlign: 'center', margin: '0 0 14px' }}>
+            Something went wrong. Please try again.
+          </p>
+        )}
+
         {status === 'success' ? (
           <div
             style={{
