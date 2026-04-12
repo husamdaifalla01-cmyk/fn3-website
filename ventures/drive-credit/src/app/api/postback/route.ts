@@ -37,7 +37,7 @@ export async function GET(req: NextRequest) {
       ua: req.headers.get('user-agent') || '',
     }
 
-    // Log as structured JSON — captured by Vercel's log stream.
+    // Log as structured JSON — captured by Cloudflare's log stream.
     // Connect a log drain (Axiom, Datadog, etc.) to persist conversion data.
     console.log(JSON.stringify(entry))
 

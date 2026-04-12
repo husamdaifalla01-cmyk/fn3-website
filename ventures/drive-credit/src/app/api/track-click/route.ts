@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       ua: req.headers.get('user-agent') || '',
     }
 
-    // Log as structured JSON — captured by Vercel's log stream
+    // Log as structured JSON — captured by Cloudflare's log stream
     // Can be piped to any log drain (Datadog, Axiom, etc.)
     console.log(JSON.stringify(entry))
 
