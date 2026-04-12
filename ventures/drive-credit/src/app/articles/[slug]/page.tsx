@@ -134,6 +134,30 @@ function injectLinkAttrs(html: string): string {
   )
 }
 
+// ─── Top Product Extraction ────────────────────────────────────────────────
+
+type TopProduct = {
+  name: string
+  price: string
+  link: string
+}
+
+/**
+ * Parse the first .article-product-box from publisher.py-generated HTML.
+ * Runs server-side at edge — zero bundle cost.
+ */
+function extractTopProduct(html: string): TopProduct | null {
+  const nameMatch = html.match(/<h4[^>]*class="product-name"[^>]*>([\s\S]*?)<\/h4>/i)
+  const priceMatch = html.match(/<span[^>]*class="product-price"[^>]*>([\s\S]*?)<\/span>/i)
+  const linkMatch = html.match(/<a[^>]*class="product-link"[^>]*href="([^"]*)"/)
+  if (!nameMatch || !linkMatch) return null
+  return {
+    name: nameMatch[1].replace(/<[^>]+>/g, '').trim(),
+    price: priceMatch ? priceMatch[1].replace(/<[^>]+>/g, '').trim() : '',
+    link: linkMatch[1],
+  }
+}
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 function getArticle(slug: string): Article | undefined {
@@ -373,6 +397,7 @@ export default async function ArticleDetailPage({
   const isGlassSkin = slug === 'glass-skin-routine'
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mintbrooks.com'
   const affiliateBodyHtml = await getAffiliateBodyHtml(slug, siteUrl)
+  const topProduct = affiliateBodyHtml ? extractTopProduct(affiliateBodyHtml) : null
 
   return (
     <div style={{ background: '#FDFAF6', color: '#1A1714', overflowX: 'hidden' }}>
