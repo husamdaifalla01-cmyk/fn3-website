@@ -33,6 +33,7 @@ type Book = {
   author: string
   year: number
   isbn: string
+  amazonUrl: string
   coverColor: string
   coverAccent: string
   editorial: string
@@ -50,6 +51,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Morgan Housel',
         year: 2020,
         isbn: '9780857197689',
+        amazonUrl: 'https://www.amazon.com/dp/B09Q68BXWL?tag=mintbrooks-20',
         coverColor: '#1D3A2F',
         coverAccent: '#B8955A',
         editorial:
@@ -61,6 +63,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Ramit Sethi',
         year: 2009,
         isbn: '9781523505746',
+        amazonUrl: 'https://www.amazon.com/dp/1523505745?tag=mintbrooks-20',
         coverColor: '#B8955A',
         coverAccent: '#FDFAF6',
         editorial:
@@ -72,6 +75,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Thomas J. Stanley',
         year: 1996,
         isbn: '9780671015206',
+        amazonUrl: 'https://www.amazon.com/dp/1589795474?tag=mintbrooks-20',
         coverColor: '#2D2420',
         coverAccent: '#FDFAF6',
         editorial:
@@ -90,6 +94,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Christopher Alexander',
         year: 1977,
         isbn: '9780195019193',
+        amazonUrl: 'https://www.amazon.com/dp/0195019199?tag=mintbrooks-20',
         coverColor: '#4A5240',
         coverAccent: '#E8D5A3',
         editorial:
@@ -101,6 +106,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Marie Kondo',
         year: 2011,
         isbn: '9781607747307',
+        amazonUrl: 'https://www.amazon.com/dp/1607747308?tag=mintbrooks-20',
         coverColor: '#F0EBE1',
         coverAccent: '#1A1714',
         editorial:
@@ -112,6 +118,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Joshua Becker',
         year: 2018,
         isbn: '9780525572992',
+        amazonUrl: 'https://www.amazon.com/dp/B07KWBRY92?tag=mintbrooks-20',
         coverColor: '#D9C5A0',
         coverAccent: '#1D3A2F',
         editorial:
@@ -130,6 +137,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Matthew Walker',
         year: 2017,
         isbn: '9781501144318',
+        amazonUrl: 'https://www.amazon.com/dp/1501144324?tag=mintbrooks-20',
         coverColor: '#1A2A4A',
         coverAccent: '#9EB8D9',
         editorial:
@@ -141,6 +149,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'James Clear',
         year: 2018,
         isbn: '9780735211292',
+        amazonUrl: 'https://www.amazon.com/dp/B07RFSSYBH?tag=mintbrooks-20',
         coverColor: '#B8955A',
         coverAccent: '#1D3A2F',
         editorial:
@@ -152,6 +161,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Michael Pollan',
         year: 2008,
         isbn: '9780143114963',
+        amazonUrl: 'https://www.amazon.com/dp/0143114964?tag=mintbrooks-20',
         coverColor: '#3D5A30',
         coverAccent: '#E8D5A3',
         editorial:
@@ -170,6 +180,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Austin Kleon',
         year: 2012,
         isbn: '9780761169253',
+        amazonUrl: 'https://www.amazon.com/dp/0761169253?tag=mintbrooks-20',
         coverColor: '#1A1714',
         coverAccent: '#FDFAF6',
         editorial:
@@ -181,6 +192,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Robyn Griggs Lawrence',
         year: 2004,
         isbn: '9781400055135',
+        amazonUrl: 'https://www.amazon.com/dp/1400050464?tag=mintbrooks-20',
         coverColor: '#C8B89A',
         coverAccent: '#1A1714',
         editorial:
@@ -192,6 +204,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Elizabeth Gilbert',
         year: 2015,
         isbn: '9781594634727',
+        amazonUrl: 'https://www.amazon.com/dp/1594634726?tag=mintbrooks-20',
         coverColor: '#8B4A7A',
         coverAccent: '#F0EBE1',
         editorial:
@@ -210,6 +223,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Daniel Kahneman',
         year: 2011,
         isbn: '9780374533557',
+        amazonUrl: 'https://www.amazon.com/dp/0374533555?tag=mintbrooks-20',
         coverColor: '#2A3A5A',
         coverAccent: '#FDFAF6',
         editorial:
@@ -221,6 +235,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'David Epstein',
         year: 2019,
         isbn: '9780735214484',
+        amazonUrl: 'https://www.amazon.com/dp/0735214506?tag=mintbrooks-20',
         coverColor: '#5A3A1A',
         coverAccent: '#E8D5A3',
         editorial:
@@ -232,6 +247,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Charles Duhigg',
         year: 2012,
         isbn: '9780812981605',
+        amazonUrl: 'https://www.amazon.com/dp/B0FD49GYHN?tag=mintbrooks-20',
         coverColor: '#3A1A2A',
         coverAccent: '#D9C5A0',
         editorial:
@@ -250,6 +266,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Eric Jorgenson',
         year: 2020,
         isbn: '9781544514222',
+        amazonUrl: 'https://www.amazon.com/dp/B0FBCVCC7M?tag=mintbrooks-20',
         coverColor: '#1D3A2F',
         coverAccent: '#B8955A',
         editorial:
@@ -261,6 +278,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Paul Kalanithi',
         year: 2016,
         isbn: '9780812988406',
+        amazonUrl: 'https://www.amazon.com/dp/081298840X?tag=mintbrooks-20',
         coverColor: '#4A3A2A',
         coverAccent: '#F0EBE1',
         editorial:
@@ -272,6 +290,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Greg McKeown',
         year: 2014,
         isbn: '9780804137386',
+        amazonUrl: 'https://www.amazon.com/dp/B00IWYP5NI?tag=mintbrooks-20',
         coverColor: '#F0EBE1',
         coverAccent: '#1D3A2F',
         editorial:
@@ -283,6 +302,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Cal Newport',
         year: 2016,
         isbn: '9781455586691',
+        amazonUrl: 'https://www.amazon.com/dp/B0189PVAWY?tag=mintbrooks-20',
         coverColor: '#1A1714',
         coverAccent: '#B8955A',
         editorial:
@@ -294,6 +314,7 @@ const SECTIONS: { label: string; intro: string; books: Book[] }[] = [
         author: 'Malcolm Gladwell',
         year: 2000,
         isbn: '9780316346627',
+        amazonUrl: 'https://www.amazon.com/dp/B000OYD8T2?tag=mintbrooks-20',
         coverColor: '#2D4A3A',
         coverAccent: '#E8D5A3',
         editorial:
@@ -360,9 +381,15 @@ function BookCover({
 function FeaturedBook({ book, coverUrl }: { book: Book; coverUrl: string }) {
   return (
     <article className="rl-featured-book">
-      <div className="rl-featured-cover">
+      <a
+        href={book.amazonUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="rl-featured-cover"
+        style={{ display: 'block' }}
+      >
         <BookCover book={book} coverUrl={coverUrl} />
-      </div>
+      </a>
       <div className="rl-featured-content">
         <div
           style={{
@@ -411,22 +438,45 @@ function FeaturedBook({ book, coverUrl }: { book: Book; coverUrl: string }) {
         >
           {book.editorial}
         </p>
-        <div
-          style={{
-            display: 'inline-block',
-            padding: '8px 20px',
-            background: 'transparent',
-            border: '1.5px solid #1D3A2F',
-            borderRadius: '100px',
-            fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '12px',
-            fontWeight: 700,
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            color: '#1D3A2F',
-          }}
-        >
-          {book.shortTake}
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
+          <div
+            style={{
+              display: 'inline-block',
+              padding: '8px 20px',
+              background: 'transparent',
+              border: '1.5px solid #1D3A2F',
+              borderRadius: '100px',
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontSize: '12px',
+              fontWeight: 700,
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              color: '#1D3A2F',
+            }}
+          >
+            {book.shortTake}
+          </div>
+          <a
+            href={book.amazonUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '8px 20px',
+              background: '#FF9900',
+              borderRadius: '100px',
+              fontFamily: 'Inter, system-ui, sans-serif',
+              fontSize: '12px',
+              fontWeight: 700,
+              letterSpacing: '0.06em',
+              color: '#1A1714',
+              textDecoration: 'none',
+            }}
+          >
+            Buy on Amazon ↗
+          </a>
         </div>
       </div>
     </article>
@@ -436,9 +486,14 @@ function FeaturedBook({ book, coverUrl }: { book: Book; coverUrl: string }) {
 function SmallBookCard({ book, coverUrl }: { book: Book; coverUrl: string }) {
   return (
     <article className="rl-small-book">
-      <div style={{ marginBottom: '16px' }}>
+      <a
+        href={book.amazonUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        style={{ display: 'block', marginBottom: '16px' }}
+      >
         <BookCover book={book} coverUrl={coverUrl} />
-      </div>
+      </a>
       <h4
         style={{
           fontFamily: 'var(--font-playfair), Georgia, serif',
@@ -918,9 +973,14 @@ export default async function ReadingListPage() {
                 <div className="rl-good-life-grid">
                   {section.books.map((book, bIdx) => (
                     <article key={bIdx}>
-                      <div style={{ marginBottom: '16px' }}>
+                      <a
+                        href={book.amazonUrl}
+                        target="_blank"
+                        rel="noopener noreferrer sponsored"
+                        style={{ display: 'block', marginBottom: '16px' }}
+                      >
                         <BookCover book={book} coverUrl={coverMap[book.isbn]} />
-                      </div>
+                      </a>
                       <h4
                         style={{
                           fontFamily: 'var(--font-playfair), Georgia, serif',
