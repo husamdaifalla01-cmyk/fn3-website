@@ -92,7 +92,9 @@ export default function ArticleSidebar({
           <p className="sb-nl-success">You&apos;re in. Check your inbox soon.</p>
         ) : (
           <form onSubmit={handleSubmit} className="sb-nl-form">
+            <label htmlFor="sb-email" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap' }}>Email address</label>
             <input
+              id="sb-email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
