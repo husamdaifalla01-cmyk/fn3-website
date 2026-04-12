@@ -520,16 +520,104 @@ function SmallBookCard({ book, coverUrl }: { book: Book; coverUrl: string }) {
         style={{
           fontFamily: 'Inter, system-ui, sans-serif',
           fontSize: '14px',
-          lineHeight: 1.65,
+          lineHeight: 1.7,
           color: '#3A3430',
-          margin: 0,
+          margin: '0 0 12px 0',
         }}
       >
-        {book.shortTake}
+        {book.editorial}
       </p>
+      <a
+        href={book.amazonUrl}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '4px',
+          fontFamily: 'Inter, system-ui, sans-serif',
+          fontSize: '11px',
+          fontWeight: 700,
+          letterSpacing: '0.06em',
+          color: '#B8955A',
+          textDecoration: 'none',
+          textTransform: 'uppercase',
+        }}
+      >
+        Buy on Amazon ↗
+      </a>
     </article>
   )
 }
+
+// ── Trending books (scraped from Amazon bestsellers, curated to MB audience) ───
+
+type TrendingBook = {
+  title: string
+  author: string
+  isbn: string
+  amazonUrl: string
+  tag: string
+}
+
+const TRENDING: TrendingBook[] = [
+  {
+    title: 'Zero to One',
+    author: 'Peter Thiel',
+    isbn: '9780804139021',
+    amazonUrl: 'https://www.amazon.com/dp/B00M284NY2?tag=mintbrooks-20',
+    tag: 'Business',
+  },
+  {
+    title: 'Poor Charlie\'s Almanack',
+    author: 'Charlie Munger',
+    isbn: '9781953953247',
+    amazonUrl: 'https://www.amazon.com/dp/B0CMDK1ZHD?tag=mintbrooks-20',
+    tag: 'Investing',
+  },
+  {
+    title: 'Principles',
+    author: 'Ray Dalio',
+    isbn: '9781501124020',
+    amazonUrl: 'https://www.amazon.com/dp/1982160276?tag=mintbrooks-20',
+    tag: 'Business',
+  },
+  {
+    title: 'The Creative Act',
+    author: 'Rick Rubin',
+    isbn: '9780593652886',
+    amazonUrl: 'https://www.amazon.com/dp/0593652886?tag=mintbrooks-20',
+    tag: 'Creativity',
+  },
+  {
+    title: 'Same as Ever',
+    author: 'Morgan Housel',
+    isbn: '9780593332702',
+    amazonUrl: 'https://www.amazon.com/dp/0593332709?tag=mintbrooks-20',
+    tag: 'Money',
+  },
+  {
+    title: 'Die with Zero',
+    author: 'Bill Perkins',
+    isbn: '9780358099765',
+    amazonUrl: 'https://www.amazon.com/dp/0358099765?tag=mintbrooks-20',
+    tag: 'Life',
+  },
+  {
+    title: 'The Anxious Generation',
+    author: 'Jonathan Haidt',
+    isbn: '9780593655030',
+    amazonUrl: 'https://www.amazon.com/dp/0593655036?tag=mintbrooks-20',
+    tag: 'Culture',
+  },
+  {
+    title: 'Abundance',
+    author: 'Ezra Klein & Derek Thompson',
+    isbn: '9781668089552',
+    amazonUrl: 'https://www.amazon.com/dp/B0C7Y68VWT?tag=mintbrooks-20',
+    tag: 'Ideas',
+  },
+]
 
 // ── Google Books cover fetch (build-time, cached forever) ─────────────────────
 
@@ -560,11 +648,15 @@ async function fetchCoverUrl(isbn: string): Promise<string> {
 // ── Page ──────────────────────────────────────────────────────────────────────
 
 export default async function ReadingListPage() {
-  // Fetch all 20 covers in parallel at build time
+  // Fetch curated + trending covers in parallel at build time
   const allBooks = SECTIONS.flatMap((s) => s.books)
-  const urls = await Promise.all(allBooks.map((b) => fetchCoverUrl(b.isbn)))
+  const [curatedUrls, trendingUrls] = await Promise.all([
+    Promise.all(allBooks.map((b) => fetchCoverUrl(b.isbn))),
+    Promise.all(TRENDING.map((b) => fetchCoverUrl(b.isbn))),
+  ])
   const coverMap: Record<string, string> = {}
-  allBooks.forEach((book, i) => { coverMap[book.isbn] = urls[i] })
+  allBooks.forEach((book, i) => { coverMap[book.isbn] = curatedUrls[i] })
+  TRENDING.forEach((book, i) => { coverMap[book.isbn] = trendingUrls[i] })
 
   return (
     <div className={playfair.variable} style={{ background: '#FDFAF6', color: '#1A1714' }}>
@@ -667,6 +759,18 @@ export default async function ReadingListPage() {
           height: 3px;
           background: #B8955A;
           margin: 0 0 clamp(40px, 5vw, 64px) 0;
+        }
+
+        /* ── Trending shelf — hide scrollbar ────────────────── */
+        div[style*="overflowX: auto"]::-webkit-scrollbar { display: none; }
+
+        /* ── Trending card hover ─────────────────────────────── */
+        .rl-trending-card > div:first-child {
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .rl-trending-card:hover > div:first-child {
+          transform: translateY(-6px);
+          box-shadow: 0 16px 40px rgba(0,0,0,0.6) !important;
         }
 
         /* ── TOC row hover ───────────────────────────────────── */
@@ -779,7 +883,7 @@ export default async function ReadingListPage() {
               maxWidth: '420px',
             }}
           >
-            Twenty books. Six subjects. One editorial rule: if we wouldn't give it to someone we care about, it doesn't make the list.
+            A living library, curated for the Mintbrooks reader. Six subjects. One rule: if we wouldn't give it to someone we care about, it doesn't make the list.
           </p>
           <div
             style={{
@@ -911,6 +1015,143 @@ export default async function ReadingListPage() {
                   >
                     {PULL_QUOTES[(sIdx / 2 - 1) % PULL_QUOTES.length].attribution}
                   </div>
+                </div>
+              </div>
+            )}
+
+            {/* ── Trending break — inserted after section 2 ── */}
+            {sIdx === 2 && (
+              <div style={{ background: '#1A1714', overflow: 'hidden' }}>
+                {/* Header */}
+                <div style={{
+                  padding: 'clamp(40px,5vw,64px) clamp(20px,5vw,80px) 0',
+                  display: 'flex',
+                  alignItems: 'baseline',
+                  gap: '20px',
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                }}>
+                  <div>
+                    <div style={{
+                      fontFamily: 'Inter, system-ui, sans-serif',
+                      fontSize: '10px',
+                      letterSpacing: '0.22em',
+                      textTransform: 'uppercase',
+                      color: '#B8955A',
+                      fontWeight: 700,
+                      marginBottom: '10px',
+                    }}>
+                      Right Now
+                    </div>
+                    <h2 style={{
+                      fontFamily: 'var(--font-playfair), Georgia, serif',
+                      fontSize: 'clamp(28px,4vw,52px)',
+                      fontWeight: 700,
+                      color: '#FDFAF6',
+                      lineHeight: 1.0,
+                      letterSpacing: '-0.02em',
+                      margin: 0,
+                    }}>
+                      What Everyone's Reading
+                    </h2>
+                  </div>
+                  <div style={{
+                    fontFamily: 'Inter, system-ui, sans-serif',
+                    fontSize: '13px',
+                    color: 'rgba(253,250,246,0.4)',
+                    maxWidth: '280px',
+                    lineHeight: 1.6,
+                  }}>
+                    Amazon bestsellers filtered through the Mintbrooks lens. Trending across business, creativity, and the good life.
+                  </div>
+                </div>
+
+                {/* Horizontal scroll shelf */}
+                <div style={{
+                  display: 'flex',
+                  gap: '20px',
+                  overflowX: 'auto',
+                  padding: 'clamp(32px,4vw,48px) clamp(20px,5vw,80px)',
+                  scrollSnapType: 'x mandatory',
+                  WebkitOverflowScrolling: 'touch',
+                  msOverflowStyle: 'none',
+                  scrollbarWidth: 'none',
+                }}>
+                  {TRENDING.map((book, idx) => (
+                    <a
+                      key={idx}
+                      href={book.amazonUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      style={{
+                        flexShrink: 0,
+                        width: 'clamp(140px,16vw,180px)',
+                        scrollSnapAlign: 'start',
+                        textDecoration: 'none',
+                        display: 'block',
+                      }}
+                      className="rl-trending-card"
+                    >
+                      {/* Cover */}
+                      <div style={{
+                        aspectRatio: '2/3',
+                        overflow: 'hidden',
+                        marginBottom: '14px',
+                        boxShadow: '0 8px 32px rgba(0,0,0,0.5)',
+                      }}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={coverMap[book.isbn]}
+                          alt={book.title}
+                          loading="lazy"
+                          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                        />
+                      </div>
+                      {/* Tag */}
+                      <div style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontSize: '9px',
+                        letterSpacing: '0.14em',
+                        textTransform: 'uppercase',
+                        color: '#B8955A',
+                        fontWeight: 700,
+                        marginBottom: '4px',
+                      }}>
+                        {book.tag}
+                      </div>
+                      {/* Title */}
+                      <div style={{
+                        fontFamily: 'var(--font-playfair), Georgia, serif',
+                        fontSize: 'clamp(13px,1.2vw,15px)',
+                        fontWeight: 700,
+                        color: '#FDFAF6',
+                        lineHeight: 1.2,
+                        marginBottom: '4px',
+                      }}>
+                        {book.title}
+                      </div>
+                      {/* Author */}
+                      <div style={{
+                        fontFamily: 'Inter, system-ui, sans-serif',
+                        fontSize: '11px',
+                        color: 'rgba(253,250,246,0.45)',
+                      }}>
+                        {book.author}
+                      </div>
+                    </a>
+                  ))}
+                </div>
+
+                {/* Scroll hint */}
+                <div style={{
+                  paddingBottom: 'clamp(32px,4vw,48px)',
+                  paddingLeft: 'clamp(20px,5vw,80px)',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  fontSize: '11px',
+                  color: 'rgba(253,250,246,0.25)',
+                  letterSpacing: '0.08em',
+                }}>
+                  Scroll →
                 </div>
               </div>
             )}
