@@ -635,6 +635,76 @@ const TRENDING: TrendingBook[] = [
     amazonUrl: 'https://www.amazon.com/dp/0593139135?tag=mintbrooks-20',
     tag: 'Life',
   },
+  {
+    title: 'Sapiens',
+    author: 'Yuval Noah Harari',
+    isbn: '9780062316097',
+    amazonUrl: 'https://www.amazon.com/dp/0062316095?tag=mintbrooks-20',
+    tag: 'History',
+  },
+  {
+    title: 'Thinking, Fast and Slow',
+    author: 'Daniel Kahneman',
+    isbn: '9780374533557',
+    amazonUrl: 'https://www.amazon.com/dp/0374533555?tag=mintbrooks-20',
+    tag: 'Psychology',
+  },
+  {
+    title: 'Essentialism',
+    author: 'Greg McKeown',
+    isbn: '9780804137386',
+    amazonUrl: 'https://www.amazon.com/dp/0804137382?tag=mintbrooks-20',
+    tag: 'Focus',
+  },
+  {
+    title: 'Never Split the Difference',
+    author: 'Chris Voss',
+    isbn: '9780062407801',
+    amazonUrl: 'https://www.amazon.com/dp/0062407805?tag=mintbrooks-20',
+    tag: 'Negotiation',
+  },
+  {
+    title: 'Big Magic',
+    author: 'Elizabeth Gilbert',
+    isbn: '9781594634727',
+    amazonUrl: 'https://www.amazon.com/dp/1594634726?tag=mintbrooks-20',
+    tag: 'Creativity',
+  },
+  {
+    title: 'The 48 Laws of Power',
+    author: 'Robert Greene',
+    isbn: '9780140280197',
+    amazonUrl: 'https://www.amazon.com/dp/0140280197?tag=mintbrooks-20',
+    tag: 'Power',
+  },
+  {
+    title: 'Untamed',
+    author: 'Glennon Doyle',
+    isbn: '9781984801258',
+    amazonUrl: 'https://www.amazon.com/dp/1984801252?tag=mintbrooks-20',
+    tag: 'Women',
+  },
+  {
+    title: 'Meditations',
+    author: 'Marcus Aurelius',
+    isbn: '9780812968255',
+    amazonUrl: 'https://www.amazon.com/dp/0812968255?tag=mintbrooks-20',
+    tag: 'Stoicism',
+  },
+  {
+    title: 'Start with Why',
+    author: 'Simon Sinek',
+    isbn: '9781591846444',
+    amazonUrl: 'https://www.amazon.com/dp/1591846447?tag=mintbrooks-20',
+    tag: 'Leadership',
+  },
+  {
+    title: 'The Midnight Library',
+    author: 'Matt Haig',
+    isbn: '9780525559474',
+    amazonUrl: 'https://www.amazon.com/dp/0525559477?tag=mintbrooks-20',
+    tag: 'Fiction',
+  },
 ]
 
 // ── Google Books cover fetch (build-time, cached forever) ─────────────────────
@@ -1037,8 +1107,8 @@ export default async function ReadingListPage() {
               </div>
             )}
 
-            {/* ── Trending break — inserted after section 1 ── */}
-            {sIdx === 1 && (
+            {/* ── Trending break — inserted after section 0 ── */}
+            {sIdx === 0 && (
               <div style={{ background: '#1A1714', overflow: 'hidden' }}>
                 {/* Header */}
                 <div style={{
@@ -1174,8 +1244,8 @@ export default async function ReadingListPage() {
               </div>
             )}
 
-            {/* ── Top 10 Trending break — inserted after section 4 ── */}
-            {sIdx === 4 && (
+            {/* ── Top 10 Trending break — inserted after section 2 ── */}
+            {sIdx === 2 && (
               <div style={{ background: '#1D3A2F', overflow: 'hidden' }}>
                 {/* Header */}
                 <div style={{
@@ -1230,7 +1300,7 @@ export default async function ReadingListPage() {
                   overflowX: 'auto',
                   minWidth: 0,
                 }}>
-                  {TRENDING.map((book, idx) => (
+                  {TRENDING.slice(0, 10).map((book, idx) => (
                     <a
                       key={idx}
                       href={book.amazonUrl}
