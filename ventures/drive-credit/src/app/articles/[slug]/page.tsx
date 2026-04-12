@@ -975,11 +975,11 @@ export default async function ArticleDetailPage({
         /* ── 2-Zone Article Layout ── */
         .article-layout-wrapper {
           display: grid;
-          grid-template-columns: minmax(0, 1fr) 260px;
-          gap: clamp(28px, 4vw, 52px);
-          max-width: 1080px;
+          grid-template-columns: minmax(0, 1fr) 300px;
+          gap: clamp(32px, 4vw, 60px);
+          max-width: 1400px;
           margin: 0 auto;
-          padding: 0 clamp(20px, 4vw, 48px) clamp(60px, 8vw, 100px);
+          padding: 0 clamp(20px, 5vw, 80px) clamp(60px, 8vw, 100px);
           align-items: start;
         }
 
