@@ -330,7 +330,9 @@ function BookCover({
   book: Book
   size?: 'large' | 'small'
 }) {
-  const coverUrl = `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg`
+  // Google Books returns significantly higher resolution covers than Open Library.
+  // zoom=6 requests the largest available size (often 800px+ wide, sharp on retina/4K).
+  const coverUrl = `https://books.google.com/books/content?vid=ISBN${book.isbn}&printsec=frontcover&img=1&zoom=6&source=gbs_api`
   return (
     <div
       style={{
@@ -640,15 +642,15 @@ export default function ReadingListPage() {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center',
-              opacity: 0.28,
+              opacity: 0.55,
               zIndex: 0,
             }}
           />
-          {/* Gradient overlay — lighter at top (nav area), heavy at bottom (text) */}
+          {/* Gradient — photo visible top half, text fully protected bottom half */}
           <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to bottom, rgba(29,58,47,0.15) 0%, rgba(29,58,47,0.55) 35%, rgba(29,58,47,0.93) 65%, rgba(29,58,47,0.99) 100%)',
+            background: 'linear-gradient(to bottom, rgba(29,58,47,0.22) 0%, rgba(29,58,47,0.22) 38%, rgba(29,58,47,0.72) 58%, rgba(29,58,47,0.97) 72%, rgba(29,58,47,1) 100%)',
             zIndex: 1,
           }} />
           {/* Content — above overlays */}
@@ -674,6 +676,7 @@ export default function ReadingListPage() {
               lineHeight: 1.0,
               letterSpacing: '-0.03em',
               margin: '0 0 32px 0',
+              textShadow: '0 2px 16px rgba(0,0,0,0.35)',
             }}
           >
             Books We'd Press Into Your Hands
