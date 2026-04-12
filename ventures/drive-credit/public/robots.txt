@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drivecredit.vercel.app/sitemap.xml
+Sitemap: https://mintbrooks.com/sitemap.xml
