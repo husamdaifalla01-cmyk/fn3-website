@@ -4,11 +4,12 @@ import { useState } from 'react'
 
 export default function ArticleNewsletter() {
   const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email.trim()) return
+    setStatus('loading')
     try {
       const res = await fetch('/api/lifestyle/subscribe', {
         method: 'POST',
@@ -16,8 +17,10 @@ export default function ArticleNewsletter() {
         body: JSON.stringify({ email: email.trim(), source: 'articles' }),
       })
       if (!res.ok) throw new Error('failed')
-    } catch { /* silent — still show success */ }
-    setSubmitted(true)
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -75,7 +78,13 @@ export default function ArticleNewsletter() {
           New guides, honest reviews, and curated picks — delivered weekly. No fluff.
         </p>
 
-        {submitted ? (
+        {status === 'error' && (
+          <p style={{ fontSize: '13px', color: '#c0392b', textAlign: 'center', margin: '0 0 14px' }}>
+            Something went wrong. Please try again.
+          </p>
+        )}
+
+        {status === 'success' ? (
           <div
             style={{
               background: '#EEF3F1',
@@ -122,6 +131,7 @@ export default function ArticleNewsletter() {
             />
             <button
               type="submit"
+              disabled={status === 'loading'}
               style={{
                 padding: '14px 28px',
                 borderRadius: '100px',
@@ -132,15 +142,16 @@ export default function ArticleNewsletter() {
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
                 border: 'none',
-                cursor: 'pointer',
+                cursor: status === 'loading' ? 'wait' : 'pointer',
+                opacity: status === 'loading' ? 0.7 : 1,
                 transition: 'background 0.2s',
                 fontFamily: 'inherit',
                 flexShrink: 0,
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.background = '#0D1F18')}
+              onMouseEnter={(e) => { if (status !== 'loading') e.currentTarget.style.background = '#0D1F18' }}
               onMouseLeave={(e) => (e.currentTarget.style.background = '#1D3A2F')}
             >
-              Subscribe
+              {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
             </button>
           </form>
         )}

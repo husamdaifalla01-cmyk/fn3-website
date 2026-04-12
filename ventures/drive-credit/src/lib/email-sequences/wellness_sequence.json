@@ -1,0 +1,284 @@
+{
+  "sequence_meta": {
+    "niche": "wellness",
+    "brand": "Mintbrooks",
+    "persona": "The Wellness Realist",
+    "persona_voice": "Ben Settle — contrarian, daily-email energy, first person, slightly irreverent, plain text feel",
+    "total_emails": 6
+  },
+  "emails": [
+    {
+      "niche": "wellness",
+      "email_number": 1,
+      "send_day": 0,
+      "subject_line": "Wellness industry confession (+ your free guide)",
+      "preview_text": "I'm about to say something that'll get me kicked out of the green juice club",
+      "from_name": "The Wellness Realist",
+      "plain_text_body": "Here's something I probably shouldn't admit right off the bat.\n\nI've wasted more money on wellness products than I care to count. Adaptogens that did nothing. Supplements with ingredients I couldn't pronounce. A $280 infrared sauna blanket that I used four times before it became a very expensive floor decoration.\n\nAnd I'm someone who writes about this stuff.\n\nSo why am I telling you this on day one?\n\nBecause I think most wellness content is dishonest in a very specific way. It's not lying, exactly. It's performing. Every newsletter, every influencer, every branded article presents a version of wellness that looks like it takes 2 hours a day, requires 14 different supplements, and produces photogenic green smoothies at 6am.\n\nThat is not real life. That's content.\n\nHere's what actually works, in my experience and based on a lot of reading of actual research:\n\nSleep. Sunlight. Movement you don't hate. Food that doesn't come in a bag. Stress you've thought about. A small number of supplements that have real evidence behind them.\n\nThat's 90% of it. The rest is optimization for people who've already nailed the basics.\n\nYour free guide — \"The No-BS Wellness Stack: The 8 things that actually matter, based on evidence not trends\" — is attached. It covers sleep hygiene, the two supplements with the most consistent research support, movement minimum effective dose, and stress tools that take under 5 minutes.\n\nNot a 47-point checklist. Eight things.\n\nBefore I let you go: I'm going to be sending you emails 3-4 times a week. Not because I'm trying to annoy you, but because I've found that one long email a week is less useful than several shorter ones with one clear idea each.\n\nIf that's too much, unsubscribe link is below. No drama.\n\nBut if you actually want to improve how you feel — not perform wellness, *feel better* — stick around. I'll try to be worth your time.\n\nOne question: what's the wellness thing you've tried most often that never seems to stick?\n\nHit reply. I'm genuinely curious, and I use these answers to decide what to write.\n\n[SEGMENTATION LINK: Sleep] — \"I've tried everything for sleep and nothing lasts\"\n[SEGMENTATION LINK: Energy] — \"My energy crashes mid-afternoon every day\"\n[SEGMENTATION LINK: Stress/Anxiety] — \"I manage stress poorly and I know it\"\n[SEGMENTATION LINK: Movement] — \"I want to move more but I never follow through\"\n[SEGMENTATION LINK: Nutrition] — \"I eat okay but my gut/digestion is a mess\"\n\nTalk soon,\nMarcus\nThe Wellness Realist at Mintbrooks\n\nP.S. — I take commissions on products I recommend. I disclose this every time. I only recommend things I've personally used or that have peer-reviewed research I can point to. That's the deal.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 580px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #5a8a70; font-weight: bold;'>The Wellness Realist · Mintbrooks</p><p>Here's something I probably shouldn't admit right off the bat.</p><p>I've wasted more money on wellness products than I care to count. Adaptogens that did nothing. Supplements with ingredients I couldn't pronounce. A $280 infrared sauna blanket that I used four times before it became a very expensive floor decoration.</p><p>And I'm someone who writes about this stuff.</p><p>Most wellness content is dishonest in a specific way. It performs. It presents a version of wellness that takes 2 hours a day, requires 14 supplements, and produces photogenic green smoothies at 6am.</p><p>That is not real life. That's content.</p><p><strong>What actually works:</strong> Sleep. Sunlight. Movement you don't hate. Food that doesn't come in a bag. A small number of supplements with real evidence behind them. That's 90% of it.</p><p>Your free guide — <em>\"The No-BS Wellness Stack\"</em> — is attached. Eight things. Not 47.</p><hr style='border: none; border-top: 1px solid #eee; margin: 24px 0;'/><p><strong>What's the wellness thing you've tried most that never sticks?</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 8px;'><a href='{{SEG_SLEEP}}' style='color: #5a8a70;'>Sleep — \"I've tried everything and nothing lasts\"</a></li><li style='margin-bottom: 8px;'><a href='{{SEG_ENERGY}}' style='color: #5a8a70;'>Energy — \"I crash every afternoon\"</a></li><li style='margin-bottom: 8px;'><a href='{{SEG_STRESS}}' style='color: #5a8a70;'>Stress — \"I manage it poorly and I know it\"</a></li><li style='margin-bottom: 8px;'><a href='{{SEG_MOVEMENT}}' style='color: #5a8a70;'>Movement — \"I want to but never follow through\"</a></li><li style='margin-bottom: 8px;'><a href='{{SEG_NUTRITION}}' style='color: #5a8a70;'>Nutrition/gut — \"Digestion is a mess\"</a></li></ul><p>Marcus<br><em>The Wellness Realist</em></p></div>",
+      "tags_applied_on_send": ["sequence:wellness", "stage:welcome"],
+      "tags_applied_on_click": ["tag:wellness-segment:set"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "wellness",
+          "amazon_search_term": "magnesium glycinate supplement 400mg capsules sleep",
+          "placement": "guide-reference",
+          "affiliate_context": "Guide mentions magnesium glycinate as one of two supplements with consistent research support — referenced in welcome as part of the 8-item stack"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:wellness-email-1"],
+        "on_click_segment_sleep": ["tag:wellness-focus:sleep"],
+        "on_click_segment_energy": ["tag:wellness-focus:energy"],
+        "on_click_segment_stress": ["tag:wellness-focus:stress"],
+        "on_click_segment_movement": ["tag:wellness-focus:movement"],
+        "on_click_segment_nutrition": ["tag:wellness-focus:nutrition"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The wellness industry doesn't want me to say this"
+      }
+    },
+    {
+      "niche": "wellness",
+      "email_number": 2,
+      "send_day": 3,
+      "subject_line": "The supplement industry's dirty little secret",
+      "preview_text": "Most of what's in your cabinet does nothing. Here's what does.",
+      "from_name": "The Wellness Realist",
+      "plain_text_body": "Let me give you the education I wish I'd had five years ago.\n\nThe supplement market in the US is, to put it charitably, a disaster zone.\n\nHere's the part most people don't know: dietary supplements don't have to prove they work before they're sold. The FDA regulates them as foods, not drugs. Which means a company can formulate a product, slap a label on it with 14 health claims written just vague enough to avoid a lawsuit, and sell it to millions of people.\n\nThe burden is on the FDA to prove harm *after the fact.* Not on the company to prove efficacy beforehand.\n\nSo when you're standing in the supplement aisle feeling overwhelmed — you're right to feel overwhelmed. Most of it has sparse evidence behind it.\n\nBut here's the thing: *some* of it does. And those things matter.\n\nThe short list of supplements with the most consistent, replicated evidence behind them (not industry-funded research — independent meta-analyses):\n\n**Magnesium glycinate** — nearly half of Americans are deficient. Deficiency is linked to sleep problems, muscle cramps, anxiety, and fatigue. Glycinate form is the most bioavailable and easiest on the gut. 300-400mg before bed.\n\n**Vitamin D3 + K2** — If you live north of Atlanta and don't work outside, you're probably deficient. D3 alone does less than D3 paired with K2, which directs calcium where it should go. 2000-4000 IU D3 + 100mcg K2 daily.\n\n**Omega-3 (fish oil, high EPA)** — The ratio matters. Most grocery store fish oil is garbage — either oxidized or low in EPA. You want a product third-party tested with 1-2g EPA per serving. Nordic Naturals Ultimate Omega is the one I actually use.\n\n**Creatine monohydrate** — Not just for gym bros. Creatine is one of the most studied supplements in existence. It supports energy production in muscle AND brain cells. 3-5g daily, no cycling needed. Unflavored powder in water. Done.\n\nThat's it. Four things with real evidence, real safety profiles, and decades of data.\n\nAnything else I mention will be positioned as *interesting but not essential* — and I'll tell you exactly what the evidence says, not what the brand says.\n\nHere are the specific products I'd buy:\n\n[PRODUCT LINK: Pure Encapsulations Magnesium Glycinate 120mg capsules]\n[PRODUCT LINK: Sports Research Vitamin D3 + K2 with Organic Coconut Oil]\n[PRODUCT LINK: Nordic Naturals Ultimate Omega - 1280mg, 60 soft gels]\n[PRODUCT LINK: Optimum Nutrition Micronized Creatine Monohydrate Powder]\n\nNote the brands. These are specifically chosen because they've been third-party tested (look for USP, NSF, or Informed Sport certification on any supplement you buy).\n\nTalk soon,\nMarcus\n\nP.S. — The wellness industry wants you to spend $400/month on supplements. You could get more benefit from these four things ($60-80/month total) than from most full supplement stacks.\n\nNot financial or medical advice. Talk to your doctor. Especially if you're on blood thinners (fish oil and vitamin K2 interactions are real).",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 580px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #5a8a70; font-weight: bold;'>The Wellness Realist · Mintbrooks</p><h2>The supplement industry's dirty little secret</h2><p>The supplement market in the US is, to put it charitably, a disaster zone.</p><p>Dietary supplements don't have to prove they work before they're sold. The FDA regulates them as foods, not drugs. Most of what's in your cabinet has sparse evidence behind it.</p><p>But <em>some</em> of it does. These four have the most consistent, replicated, independent evidence:</p><div style='background: #f4f9f6; border-radius: 8px; padding: 20px; margin: 20px 0;'><p><strong>1. Magnesium Glycinate</strong> — nearly half of Americans are deficient. 300-400mg before bed.</p><p><strong>2. Vitamin D3 + K2</strong> — If you live north of Atlanta and work indoors, you're probably deficient. 2000-4000 IU D3 + 100mcg K2 daily.</p><p><strong>3. Omega-3 (high EPA fish oil)</strong> — Must be third-party tested. Most grocery store fish oil is oxidized garbage.</p><p><strong>4. Creatine Monohydrate</strong> — One of the most studied supplements in existence. 3-5g daily. Works for brain AND muscle.</p></div><p><strong>The products I'd actually buy:</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 8px;'><a href='{{P1_URL}}' style='color: #5a8a70;'>Pure Encapsulations Magnesium Glycinate →</a></li><li style='margin-bottom: 8px;'><a href='{{P2_URL}}' style='color: #5a8a70;'>Sports Research Vitamin D3 + K2 →</a></li><li style='margin-bottom: 8px;'><a href='{{P3_URL}}' style='color: #5a8a70;'>Nordic Naturals Ultimate Omega →</a></li><li style='margin-bottom: 8px;'><a href='{{P4_URL}}' style='color: #5a8a70;'>Optimum Nutrition Creatine Monohydrate →</a></li></ul><p>Marcus</p><p style='font-size: 12px; color: #999;'>Not medical advice. Talk to your doctor, especially regarding drug interactions.</p></div>",
+      "tags_applied_on_send": ["sequence:wellness", "stage:education"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:supplements"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "wellness",
+          "amazon_search_term": "Pure Encapsulations magnesium glycinate capsules 120 count",
+          "placement": "evidence-based-recommendation",
+          "affiliate_context": "Recommended after building credibility by explaining the FDA gap — reader trust is highest here. Third-party tested brand specifically chosen."
+        },
+        {
+          "slot_id": "product_2",
+          "category": "wellness",
+          "amazon_search_term": "Sports Research vitamin D3 K2 organic coconut oil softgels",
+          "placement": "evidence-based-recommendation",
+          "affiliate_context": "D3+K2 combo selected over D3 alone because K2 pairing is the non-obvious insight taught in this email"
+        },
+        {
+          "slot_id": "product_3",
+          "category": "wellness",
+          "amazon_search_term": "Nordic Naturals Ultimate Omega fish oil 1280mg softgels",
+          "placement": "evidence-based-recommendation",
+          "affiliate_context": "Specific brand chosen because it's third-party tested and high EPA — reinforces the 'quality matters more than quantity' message"
+        },
+        {
+          "slot_id": "product_4",
+          "category": "wellness",
+          "amazon_search_term": "Optimum Nutrition micronized creatine monohydrate powder unflavored",
+          "placement": "evidence-based-recommendation",
+          "affiliate_context": "Creatine positioned as the contrarian recommendation — expected to surprise readers who think it's only for bodybuilders"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:wellness-email-2"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "4 supplements worth your money (everything else: skip)"
+      }
+    },
+    {
+      "niche": "wellness",
+      "email_number": 3,
+      "send_day": 8,
+      "subject_line": "He slept 4 hours a night and thought he was fine",
+      "preview_text": "Then he learned what chronic sleep deprivation actually does. Short story.",
+      "from_name": "The Wellness Realist",
+      "plain_text_body": "This is a story about a guy I know — call him Dan — who ran a company, slept four hours a night, and was genuinely proud of it.\n\nDan thought his sleep schedule was a competitive advantage. He'd read about short sleepers. He'd half-convinced himself he was one. He was productive, sharp, always moving. He didn't *feel* tired.\n\nHere's the thing about chronic sleep deprivation: it impairs your ability to assess your own impairment.\n\nThis is real. It's well-documented. When you're chronically sleep-deprived, the part of your brain responsible for recognizing fatigue gets disproportionately affected. You feel fine. You're not fine.\n\nDan got a WHOOP band. Not because he wanted to improve his sleep — he was skeptical — but because he wanted data to prove he was an exception.\n\nThe data was not what he expected.\n\nHis resting heart rate was elevated almost every night. HRV (heart rate variability — a proxy for nervous system recovery) was in the bottom 10th percentile for his age bracket. His body, unlike his brain, was not handling the 4-hour nights.\n\nHe didn't overhaul his life. He added two things: magnesium glycinate before bed (same one from my last email), and he moved his phone charger out of the bedroom, which pushed his phone-scrolling-in-bed time to near zero.\n\nThat was it.\n\nThree months later his resting HR had dropped 6 bpm. His HRV moved from the 10th percentile to the 47th. He still works hard. He still sleeps less than ideal. But he's not driving his nervous system into the ground every night.\n\nI'm not telling you to buy a WHOOP band (though it's worth knowing about). I'm telling you Dan's story because the version of \"wellness\" that matters most often isn't green juice and cold plunges. It's fixing the one system that underlies everything else.\n\nSleep is that system.\n\nIf you've been ignoring yours, a few things that have consistent evidence behind them:\n\n**For falling asleep faster:**\n→ Magnesium glycinate 300mg, 30 min before bed\n→ Keeping bedroom temperature 65-68°F\n→ Blue light glasses 90 min before bed (stops melatonin suppression)\n\n**For staying asleep:**\n→ Blackout curtains or a sleep mask — seriously, even small light exposure disrupts sleep architecture\n→ White noise if you're a light sleeper\n\n**The specific things I'd try first:**\n\n[PRODUCT LINK: Manta Sleep Mask — total blackout, zero eye pressure]\n[PRODUCT LINK: LectroFan White Noise Machine — compact, 20 non-looping sounds]\n[PRODUCT LINK: Swanwick Blue Light Blocking Glasses — stylish enough to actually wear]\n\nThe sleep mask is the one I use. Black-out curtains or a quality eye mask eliminates more light than you think is bothering you.\n\nTalk soon,\nMarcus\n\nP.S. — Dan, if you're reading this — I got your permission to share this. Thank you.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 580px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #5a8a70; font-weight: bold;'>The Wellness Realist · Mintbrooks</p><h2>He slept 4 hours a night and thought he was fine</h2><p>This is a story about a guy I know — call him Dan — who ran a company, slept four hours a night, and was genuinely proud of it.</p><p>Here's the thing about chronic sleep deprivation: <strong>it impairs your ability to assess your own impairment.</strong></p><p>When you're chronically sleep-deprived, the part of your brain responsible for recognizing fatigue gets disproportionately affected. You feel fine. You're not fine.</p><p>Dan added two things: magnesium glycinate before bed + moved his phone charger out of the bedroom. Three months later his resting HR dropped 6 bpm. HRV moved from 10th to 47th percentile.</p><hr style='border: none; border-top: 1px solid #eee; margin: 20px 0;'/><p><strong>Evidence-backed sleep tools:</strong></p><ul><li>Manta Sleep Mask — <a href='{{P1_URL}}' style='color: #5a8a70;'>total blackout, zero eye pressure →</a></li><li>LectroFan White Noise Machine — <a href='{{P2_URL}}' style='color: #5a8a70;'>20 non-looping sounds →</a></li><li>Swanwick Blue Light Glasses — <a href='{{P3_URL}}' style='color: #5a8a70;'>stylish enough to actually wear →</a></li></ul><p>Marcus</p></div>",
+      "tags_applied_on_send": ["sequence:wellness", "stage:social-proof"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:sleep"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "wellness",
+          "amazon_search_term": "Manta sleep mask total blackout adjustable",
+          "placement": "story-resolution-recommendation",
+          "affiliate_context": "Sleep story resolution — the mask is recommended as the first physical step, embedded naturally after the transformation narrative"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "wellness",
+          "amazon_search_term": "LectroFan white noise machine 20 sounds compact",
+          "placement": "supporting-recommendation",
+          "affiliate_context": "Secondary sleep tool — white noise for staying asleep (different mechanism than the mask, addresses different issue)"
+        },
+        {
+          "slot_id": "product_3",
+          "category": "wellness",
+          "amazon_search_term": "blue light blocking glasses evening screen use stylish",
+          "placement": "supporting-recommendation",
+          "affiliate_context": "Pre-sleep behavior change tool — blue light glasses complete the full sleep hygiene toolkit"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:wellness-email-3"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The man who thought 4-hour nights were a superpower"
+      }
+    },
+    {
+      "niche": "wellness",
+      "email_number": 4,
+      "send_day": 14,
+      "subject_line": "The wellness advice I ignore (and why you probably should too)",
+      "preview_text": "Cold plunges. Fasting windows. Biohacking. Let's be honest about all of it.",
+      "from_name": "The Wellness Realist",
+      "plain_text_body": "Let me do something the wellness industry almost never does.\n\nLet me tell you what I don't do, what I don't take, and why.\n\n**Cold plunges**\n\nI've done a handful. I don't hate them. The evidence for regular cold immersion is interesting but much weaker than the hype. The strongest finding is mood elevation for 1-2 hours after. The \"metabolism boosting\" claim is not well-supported. If you love it, keep doing it. If you don't, skip it — you're not missing a longevity secret.\n\n**Intermittent fasting**\n\nThe evidence is genuinely good for some people. Particularly 16:8 if you're eating too much in a wide window. The problem is that most people who practice IF are just eating the same amount of food in a shorter period, which helps with caloric control but is not metabolic magic. If skipping breakfast stresses you out, the cortisol from that stress may cancel the benefit. Do it if it works for you. Don't do it because it's trending.\n\n**$150 greens powders**\n\nNo.\n\nIf you eat vegetables regularly — even imperfectly — you don't need Athletic Greens or its knockoffs. The research on greens powders is almost entirely brand-funded. Save the $150 and buy actual vegetables.\n\n**Nootropics and \"cognitive enhancers\"**\n\nI've tried about 12 of these over 3 years. The only one with independent evidence for any meaningful cognitive effect in healthy adults is caffeine. Everything else is either underpowered or studied in clinical populations with specific deficiencies.\n\nLion's mane is interesting. The human data is thin. I still take it occasionally. I wouldn't pay more than $25/month for it.\n\n**What I actually do, consistently, that I would bet on:**\n\n→ Magnesium glycinate before bed (every night)\n→ Vitamin D3 + K2 in winter (every morning)\n→ Creatine in my morning coffee (every day, been doing this for 2 years)\n→ 20-30 minute walk after lunch (most days — this is the intervention I'd defend most aggressively)\n→ Sleep mask + 65°F bedroom\n→ One cup of coffee before 10am, not after\n\nThat's the whole stack. It's boring. It costs less than $80/month. And it makes a measurable difference in how I feel, focus, and recover.\n\nI'm not going to tell you to biohack. I'm going to tell you to do the boring things consistently.\n\nThe one tool I will mention today — because it changed how I approach walks:\n\n[PRODUCT LINK: Garmin Forerunner 55 GPS Running Watch — step tracking, heart rate, sleep]\n\nNot because you need a fitness tracker. But because seeing data on your actual activity tends to correct delusions about how much you're moving. I thought I was active. The data said otherwise.\n\nTalk soon,\nMarcus\n\nP.S. — None of this is medical advice. I'm a writer, not a doctor. If you have a specific condition, talk to an actual physician who knows your history.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 580px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #5a8a70; font-weight: bold;'>The Wellness Realist · Mintbrooks</p><h2>What I don't do (and why you probably shouldn't either)</h2><p>Let me tell you what I skip, what I don't take, and the actual logic behind each.</p><p><strong>Cold plunges</strong> — Mood lift for 1-2 hours. Metabolism claims: not supported. Skip if you don't love it.</p><p><strong>Intermittent fasting</strong> — Good evidence for caloric control. Not metabolic magic. Don't do it because it's trending.</p><p><strong>$150 greens powders</strong> — No. Buy actual vegetables.</p><p><strong>Nootropics</strong> — Only one with real independent evidence in healthy adults: caffeine. Lion's mane is interesting; human data is thin.</p><hr style='border: none; border-top: 1px solid #eee; margin: 20px 0;'/><p><strong>What I actually do — the boring stack:</strong></p><ul><li>Magnesium glycinate before bed, every night</li><li>Vitamin D3 + K2 every morning</li><li>Creatine in morning coffee, daily</li><li>20-30 min walk after lunch, most days</li><li>Sleep mask + 65°F bedroom</li><li>Coffee before 10am only</li></ul><p>Costs under $80/month. Boring. Works.</p><p><a href='{{P1_URL}}' style='color: #5a8a70;'>Garmin Forerunner 55 →</a> The tool that corrected my delusions about how much I was moving.</p><p>Marcus</p><p style='font-size: 12px; color: #999;'>Not medical advice. I'm a writer, not a doctor.</p></div>",
+      "tags_applied_on_send": ["sequence:wellness", "stage:objection-handler"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:fitness-tracking"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "wellness",
+          "amazon_search_term": "Garmin Forerunner 55 GPS running watch heart rate monitor",
+          "placement": "contrarian-recommendation",
+          "affiliate_context": "Recommended after establishing credibility by debunking hype — trust is highest because sender has just proven skepticism. Fitness tracker as accountability tool, not biohacking device."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:wellness-email-4"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "I'm going to tell you to skip the cold plunge"
+      }
+    },
+    {
+      "niche": "wellness",
+      "email_number": 5,
+      "send_day": 20,
+      "subject_line": "Your wellness picks (based on what you told me)",
+      "preview_text": "Sleep, energy, stress, movement, or gut — here's your specific list",
+      "from_name": "The Wellness Realist",
+      "plain_text_body": "A few weeks ago, you told me which wellness area matters most to you right now.\n\nBelow are specific recommendations by focus area. Skip to yours.\n\n---\n\n**IF YOUR FOCUS IS: Sleep**\n\nThe stack I'd start with:\n\n1. Magnesium glycinate, 300-400mg, 30 minutes before bed — Pure Encapsulations or Doctor's Best are the two brands I'd trust\n2. A real sleep mask — not the cheap foam kind. Manta Sleep Mask, ~$35. Total blackout, fits any face shape\n3. LectroFan White Noise Machine if you're a light sleeper or live in a noisy environment\n4. Move your phone out of the bedroom. Not a product. Free.\n\n[PRODUCT LINK: Pure Encapsulations Magnesium Glycinate]\n[PRODUCT LINK: Manta Sleep Mask]\n[PRODUCT LINK: LectroFan White Noise Machine]\n\n---\n\n**IF YOUR FOCUS IS: Energy**\n\nMost energy problems are one of four things: poor sleep (see above), dehydration, magnesium deficiency, or vitamin D deficiency. Address those before buying anything in the \"energy\" category.\n\nIf you've addressed those and still have afternoon crashes:\n\n1. Creatine monohydrate, 3-5g daily in the morning — supports energy at the cellular level\n2. Electrolytes (not sugar water — real electrolytes with sodium, potassium, magnesium): LMNT is the standard recommendation for a reason\n3. A 10-minute walk after lunch does more for afternoon energy than any supplement I've tried\n\n[PRODUCT LINK: Optimum Nutrition Creatine Monohydrate Powder]\n[PRODUCT LINK: LMNT Zero Sugar Electrolytes - Variety Pack]\n\n---\n\n**IF YOUR FOCUS IS: Stress / Nervous System**\n\n1. Ashwagandha KSM-66 extract (this is the form with the best evidence — 300mg morning, 300mg evening, 8-week minimum to evaluate) — Jarrow Formulas or KSM-66 branded\n2. Magnesium glycinate (also helps here — it's a nervous system mineral)\n3. A breathing protocol. Physiological sigh: double inhale through nose, long exhale through mouth. 5 repetitions. Takes 90 seconds. More effective than any supplement I've taken for acute stress.\n4. Journaling — I know how this sounds. 5 minutes of unstructured writing in the morning reduces cortisol measurably in clinical studies. No app required.\n\n[PRODUCT LINK: Jarrow Formulas Ashwagandha KSM-66 300mg]\n\n---\n\n**IF YOUR FOCUS IS: Movement**\n\nThe research is extremely consistent here: 150 minutes of moderate movement per week is where almost all the health benefit is. That's 21 minutes a day. You don't need a gym.\n\n1. A resistance band set — they travel, they're cheap, and a 20-minute resistance band session 3x/week covers your minimum effective dose for strength\n2. A walking pad if you work from home — under-desk treadmill at 1.5mph while on calls. I've spoken to multiple people who this has genuinely changed\n3. A jump rope — $15, 10 minutes, effective cardiovascular session\n\n[PRODUCT LINK: Fit Simplify Resistance Loop Bands Set of 5]\n[PRODUCT LINK: WalkingPad Under Desk Treadmill Foldable]\n\n---\n\n**IF YOUR FOCUS IS: Gut / Nutrition**\n\n1. A quality probiotic — seed is the brand with the most third-party testing. If you want Amazon, Culturelle Digestive Daily is the most studied single strain (Lactobacillus rhamnosus GG)\n2. Psyllium husk — fiber supplement, the single most evidence-backed gut intervention. 1 teaspoon in water before meals\n3. AG1 / Athletic Greens — I said no to this for everyone. But if your vegetable intake is genuinely very low and you struggle to change that, it does cover micronutrient gaps. I still think it's overpriced. A less expensive alternative: Transparent Labs Prebiotic Greens\n\n[PRODUCT LINK: Culturelle Digestive Daily Probiotic Capsules]\n[PRODUCT LINK: NOW Psyllium Husk Powder organic]\n\n---\n\nAll affiliate links. I disclose every time. Only recommend what I've used or can point to evidence for.\n\nTalk soon,\nMarcus",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 580px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #5a8a70; font-weight: bold;'>The Wellness Realist · Mintbrooks</p><h2>Your wellness picks by focus area</h2><p>Skip to yours.</p><div style='background: #f4f9f6; border-left: 4px solid #5a8a70; padding: 16px 20px; margin: 16px 0;'><strong>Sleep:</strong> Magnesium glycinate + sleep mask + white noise machine + phone out of bedroom<br><a href='{{SLEEP_P1}}' style='color: #5a8a70;'>Shop sleep stack →</a></div><div style='background: #f4f9f6; border-left: 4px solid #5a8a70; padding: 16px 20px; margin: 16px 0;'><strong>Energy:</strong> Address sleep/dehydration/D3 first. Then creatine + LMNT electrolytes + a walk after lunch<br><a href='{{ENERGY_P1}}' style='color: #5a8a70;'>Shop energy stack →</a></div><div style='background: #f4f9f6; border-left: 4px solid #5a8a70; padding: 16px 20px; margin: 16px 0;'><strong>Stress:</strong> Ashwagandha KSM-66 + magnesium + physiological sigh breathing (free)<br><a href='{{STRESS_P1}}' style='color: #5a8a70;'>Shop stress stack →</a></div><div style='background: #f4f9f6; border-left: 4px solid #5a8a70; padding: 16px 20px; margin: 16px 0;'><strong>Movement:</strong> 150 min/week is the target. Resistance bands + walking pad or jump rope<br><a href='{{MOVEMENT_P1}}' style='color: #5a8a70;'>Shop movement stack →</a></div><div style='background: #f4f9f6; border-left: 4px solid #5a8a70; padding: 16px 20px; margin: 16px 0;'><strong>Gut:</strong> Culturelle probiotic + psyllium husk fiber. Simple, cheap, studied.<br><a href='{{GUT_P1}}' style='color: #5a8a70;'>Shop gut stack →</a></div><p>Marcus</p><p style='font-size: 12px; color: #999;'>Affiliate links. Not medical advice.</p></div>",
+      "tags_applied_on_send": ["sequence:wellness", "stage:conversion"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:segment:wellness-buyer-intent"],
+      "product_slots": [
+        {
+          "slot_id": "product_sleep_1",
+          "category": "wellness",
+          "amazon_search_term": "Pure Encapsulations magnesium glycinate 120mg 180 capsules",
+          "placement": "segmented-focus-list",
+          "affiliate_context": "Sleep segment core product — anchor recommendation for the sleep-focused subscriber"
+        },
+        {
+          "slot_id": "product_energy_1",
+          "category": "wellness",
+          "amazon_search_term": "LMNT zero sugar electrolyte drink mix variety pack",
+          "placement": "segmented-focus-list",
+          "affiliate_context": "Energy segment — electrolytes positioned as solving afternoon crashes after ruling out sleep and vitamin D deficiency"
+        },
+        {
+          "slot_id": "product_stress_1",
+          "category": "wellness",
+          "amazon_search_term": "Jarrow Formulas ashwagandha KSM-66 300mg capsules",
+          "placement": "segmented-focus-list",
+          "affiliate_context": "Stress segment — KSM-66 form specifically chosen because it has the best evidence among ashwagandha extracts"
+        },
+        {
+          "slot_id": "product_movement_1",
+          "category": "wellness",
+          "amazon_search_term": "WalkingPad under desk treadmill foldable compact",
+          "placement": "segmented-focus-list",
+          "affiliate_context": "Movement segment — walking pad as highest-conversion item for work-from-home subscribers who cite 'no time' as barrier"
+        },
+        {
+          "slot_id": "product_gut_1",
+          "category": "wellness",
+          "amazon_search_term": "Culturelle digestive daily probiotic Lactobacillus rhamnosus capsules",
+          "placement": "segmented-focus-list",
+          "affiliate_context": "Gut segment — most studied single probiotic strain, chosen over trendier options because evidence is strongest"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:wellness-email-5"],
+        "on_click_product": ["tag:journey:converted-click", "queue:post-purchase-care-sequence"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The short list for your specific wellness goal"
+      }
+    },
+    {
+      "niche": "wellness",
+      "email_number": 6,
+      "send_day": 32,
+      "subject_line": "A month in — how's the stack holding up?",
+      "preview_text": "Checking in. One question. No lecture.",
+      "from_name": "The Wellness Realist",
+      "plain_text_body": "It's been about a month.\n\nI'm not going to ask if you've optimized your sleep architecture or whether your HRV is trending upward. That's not the point.\n\nI'm just going to ask: are you doing anything differently than you were before?\n\nEven one thing?\n\nBecause here's what I've learned from writing this kind of content for years: the people who improve are almost never the ones who overhaul everything. They're the ones who change one habit, feel slightly better because of it, and use that small win to change one more thing.\n\nThe supplement stack. The walk after lunch. Moving the phone out of the bedroom. One of those things.\n\nIf you've done even one of them — I want to hear about it. Seriously. Hit reply. It helps me understand what actually sticks for people and what doesn't.\n\nIf you haven't done anything yet — that's fine too. I'm not here to judge. But I want to ask you one honest question:\n\nWhat's actually in the way?\n\nIs it time? Motivation? Cost? Not knowing where to start? Feeling like it won't make a difference?\n\nBecause every one of those objections is real, and I've written about all of them. Hit reply with the honest answer and I'll point you to the most relevant thing I've written.\n\nOther than that — I'll keep sending you content. Maybe 2-3 times a week, one idea each. No selling on every email. Just the things I'm thinking about, testing, reading, and occasionally buying.\n\nIf that doesn't sound like what you signed up for, the unsubscribe is below. I genuinely don't take it personally — I'd rather send to 500 people who read every email than 5,000 who delete them.\n\nBut if you're still reading this far — you're probably my kind of person.\n\nTalk soon,\nMarcus\n\nP.S. — The one thing I'd push on if you haven't started anything: the magnesium glycinate. Take it tonight. See how you feel tomorrow morning. If you don't have it:\n\n[PRODUCT LINK: Pure Encapsulations Magnesium Glycinate — the one I take]",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 580px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #5a8a70; font-weight: bold;'>The Wellness Realist · Mintbrooks</p><p>It's been about a month.</p><p>One question: are you doing anything differently than you were before? Even one thing?</p><p>The people who improve are almost never the ones who overhaul everything. They're the ones who change one habit, feel slightly better, and use that small win to change one more thing.</p><p>If you've done even one thing from these emails — I want to hear about it. Hit reply.</p><p>If you haven't done anything yet — what's actually in the way? Is it time? Cost? Not knowing where to start? Hit reply with the honest answer.</p><p>And if you haven't started anywhere yet — try this tonight:</p><p><a href='{{P1_URL}}' style='background: #5a8a70; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; display: inline-block;'>Magnesium Glycinate — take it before bed →</a></p><p>Marcus</p><p style='font-size: 12px; color: #999;'>Unsubscribe below if this isn't for you — no hard feelings, genuinely.</p></div>",
+      "tags_applied_on_send": ["sequence:wellness", "stage:re-engagement"],
+      "tags_applied_on_click": ["tag:re-engaged", "tag:wellness:still-active"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "wellness",
+          "amazon_search_term": "Pure Encapsulations magnesium glycinate 120mg vegetarian capsules",
+          "placement": "re-engagement-cta",
+          "affiliate_context": "The single lowest-barrier entry point repeated in re-engagement — magnesium is cheap, easy, and results are felt quickly. Highest-conversion reactivation product."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:re-engaged:wellness-email-6", "remove-tag:at-risk-churn"],
+        "on_reply": ["tag:high-value:replied-email-6", "queue:personal-response-workflow"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "move_to_win_back_sequence",
+        "variant_subject": "Last one (unless you want more)"
+      }
+    }
+  ],
+  "automation_flow": {
+    "sequence_name": "wellness-post-sequence",
+    "description": "Post-sequence automation for wellness subscribers",
+    "branches": [
+      {
+        "condition": "tag:re-engaged:wellness-email-6",
+        "action": "enroll_in_weekly_digest",
+        "digest_cadence": "every_wednesday",
+        "digest_content": "1 evidence-based wellness insight + 0-1 product recommendations per week",
+        "digest_from_name": "The Wellness Realist"
+      },
+      {
+        "condition": "tag:wellness-focus:sleep AND tag:journey:converted-click",
+        "action": "enroll_in_sleep_deep_dive_sequence",
+        "timing": "14 days after email 6",
+        "content": "3-email deep dive on sleep optimization specifically"
+      },
+      {
+        "condition": "tag:journey:converted-click AND NOT tag:post-purchase-confirmed",
+        "action": "send_check_in",
+        "timing": "7 days after click",
+        "content": "How's the [product] working for you? + complementary recommendation"
+      },
+      {
+        "condition": "NOT opened any email in 21 days after email 6",
+        "action": "enroll_in_win_back_sequence",
+        "win_back_subject_1": "One thing. No product. Just this.",
+        "win_back_subject_2": "I'll stop emailing after this (unless you reply)"
+      }
+    ],
+    "seasonal_campaigns": [
+      {"name": "January Supplement Reset", "send_month": "January", "content": "The only supplements worth keeping in 2025"},
+      {"name": "Summer Movement Guide", "send_month": "June", "content": "Heat-proof movement protocols"},
+      {"name": "Winter Vitamin D Warning", "send_month": "October", "content": "Northern hemisphere — your D3 checkin"}
+    ]
+  }
+}
