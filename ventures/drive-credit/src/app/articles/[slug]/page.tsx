@@ -1451,6 +1451,88 @@ export default async function ArticleDetailPage({
             transition-duration: 0.01ms !important;
           }
         }
+
+        /* ── Table of Contents Card ── */
+        .affiliate-body .toc,
+        .article-body .toc {
+          border: 1px solid #EEE9E2;
+          background: #F7F4EF;
+          border-radius: 10px;
+          padding: 18px 22px;
+          margin-bottom: 32px;
+        }
+
+        .affiliate-body .toc p,
+        .article-body .toc p {
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+          color: #6B6557;
+          margin: 0 0 10px;
+          font-family: sans-serif;
+        }
+
+        .affiliate-body .toc ol,
+        .affiliate-body .toc ul,
+        .article-body .toc ol,
+        .article-body .toc ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .affiliate-body .toc li,
+        .article-body .toc li {
+          margin-bottom: 0;
+        }
+
+        .affiliate-body .toc a,
+        .article-body .toc a {
+          display: block;
+          font-size: 14px;
+          color: #1D3A2F;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          padding: 5px 0;
+          border-bottom: none;
+        }
+
+        .affiliate-body .toc a:hover,
+        .article-body .toc a:hover {
+          color: #B8955A;
+        }
+
+        /* Mobile: publisher.py generates <details class="toc-mobile"> */
+        .affiliate-body details.toc-mobile,
+        .article-body details.toc-mobile {
+          border: 1px solid #EEE9E2;
+          background: #F7F4EF;
+          border-radius: 10px;
+          padding: 12px 16px;
+          margin-bottom: 24px;
+        }
+
+        .affiliate-body details.toc-mobile summary,
+        .article-body details.toc-mobile summary {
+          font-size: 13px;
+          font-weight: 700;
+          color: #1A1714;
+          cursor: pointer;
+          list-style: none;
+          font-family: sans-serif;
+        }
+
+        .affiliate-body details.toc-mobile summary::after,
+        .article-body details.toc-mobile summary::after {
+          content: ' ▾';
+          color: #B8955A;
+        }
+
+        .affiliate-body details[open].toc-mobile summary::after,
+        .article-body details[open].toc-mobile summary::after {
+          content: ' ▴';
+        }
       `}</style>
     </div>
   )
