@@ -3,7 +3,7 @@ export const runtime = 'edge'
 import { NextResponse } from 'next/server'
 
 /**
- * Health check endpoint — used by Vercel uptime monitors and external pings.
+ * Health check endpoint — used by Cloudflare uptime monitors and external pings.
  * Returns service status, env var presence (no values), and timestamp.
  */
 export async function GET() {
@@ -20,7 +20,7 @@ export async function GET() {
     {
       status: allHealthy ? 'healthy' : 'degraded',
       timestamp: new Date().toISOString(),
-      version: process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) || 'local',
+      version: process.env.CF_PAGES_COMMIT_SHA?.slice(0, 7) || 'local',
       env: checks,
     },
     {

@@ -10,7 +10,7 @@ function runPython(_scriptArgs: string[]): Promise<{ ok: boolean; output: string
 // ── Cron handler ──────────────────────────────────────────────────────────────
 
 export async function GET(req: NextRequest) {
-  // Verify this request comes from Vercel Cron
+  // Verify this request comes from Cloudflare Cron (Workers scheduled trigger)
   const authHeader = req.headers.get('authorization')
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })

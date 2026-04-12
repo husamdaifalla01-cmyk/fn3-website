@@ -10,11 +10,11 @@ const YENDO_ELIGIBLE_STATES = new Set([
 ])
 
 export async function GET(request: NextRequest) {
-  // Vercel injects these headers on all requests (Edge Network)
-  // x-vercel-ip-country: "US"
-  // x-vercel-ip-country-region: "TX" (ISO 3166-2 subdivision code)
-  const country = request.headers.get('x-vercel-ip-country') ?? ''
-  const region = request.headers.get('x-vercel-ip-country-region') ?? ''
+  // Cloudflare injects these headers on all requests (Edge Network)
+  // cf-ipcountry: "US"
+  // cf-region-code: "TX" (ISO 3166-2 subdivision code)
+  const country = request.headers.get('cf-ipcountry') ?? ''
+  const region = request.headers.get('cf-region-code') ?? ''
 
   // Only return state if user is in the US
   if (country !== 'US' || !region) {
