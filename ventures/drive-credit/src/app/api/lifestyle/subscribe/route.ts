@@ -59,13 +59,21 @@ function amazonSearchUrl(term: string): string {
   return `https://www.amazon.com/s?k=${encodeURIComponent(term)}&tag=${AMAZON_TAG}`
 }
 
+// Segmentation tag → persona tag + redirect URL
+const SEG_MAP: Record<string, { tag: string; redirect: string }> = {
+  SEG_IDEAS:     { tag: 'persona:ideas-first',    redirect: 'https://mintbrooks.com/articles' },
+  SEG_PRACTICAL: { tag: 'persona:practical-first', redirect: 'https://mintbrooks.com' },
+  SEG_STORIES:   { tag: 'persona:stories-first',   redirect: 'https://mintbrooks.com/articles' },
+  SEG_ALL:       { tag: 'persona:all-of-it',        redirect: 'https://mintbrooks.com' },
+}
+
 /**
  * Replace all {{PLACEHOLDER}} tokens in an email HTML body:
  *   {{P1_URL}}, {{P2_URL}} … → real Amazon affiliate search URLs per product slot
- *   {{SEG_*}}               → niche landing page (segmentation without a backend)
+ *   {{SEG_IDEAS}} etc.      → /api/email/profiling URL that tags subscriber + redirects to niche
  *   any remaining {{*}}     → niche landing page
  */
-function resolveHtml(html: string, niche: string, slots: ProductSlot[]): string {
+function resolveHtml(html: string, niche: string, slots: ProductSlot[], email: string): string {
   const nicheUrl = NICHE_URL[niche] ?? 'https://mintbrooks.com'
   let out = html
 
@@ -74,15 +82,21 @@ function resolveHtml(html: string, niche: string, slots: ProductSlot[]): string 
     const m = slot.slot_id.match(/product_(\d+)/)
     if (m) {
       const url = amazonSearchUrl(slot.amazon_search_term)
-      // replaceAll handles multiple occurrences within the same email
       out = out.split(`{{P${m[1]}_URL}}`).join(url)
     }
   }
 
-  // Any unresolved product URLs (e.g. unusual slot IDs) → niche page
+  // Any unresolved product URLs → niche page
   out = out.replace(/\{\{P\d+_URL\}\}/g, nicheUrl)
-  // Segmentation links ({{SEG_DRY}}, {{SEG_ACNE}} …) → niche page
-  out = out.replace(/\{\{SEG_\w+\}\}/g, nicheUrl)
+
+  // Segmentation links → profiling endpoint (tags subscriber + redirects)
+  out = out.replace(/\{\{(SEG_\w+)\}\}/g, (_, key) => {
+    const seg = SEG_MAP[key]
+    if (!seg) return nicheUrl
+    const base = 'https://mintbrooks.com/api/email/profiling'
+    return `${base}?email=${encodeURIComponent(email)}&tag=${encodeURIComponent(seg.tag)}&redirect=${encodeURIComponent(seg.redirect)}`
+  })
+
   // Catch-all for any remaining placeholders
   out = out.replace(/\{\{[^}]+\}\}/g, nicheUrl)
 
@@ -164,7 +178,7 @@ export async function POST(req: NextRequest) {
 
   for (const entry of sequence.emails) {
     const fromName = (entry.from_name ?? 'Mintbrooks').trim()
-    const html     = resolveHtml(entry.html_body, niche, entry.product_slots ?? [])
+    const html     = resolveHtml(entry.html_body, niche, entry.product_slots ?? [], cleanEmail)
                    + footerHtml(cleanEmail)
 
     const { data, error } = await resend.emails.send({
