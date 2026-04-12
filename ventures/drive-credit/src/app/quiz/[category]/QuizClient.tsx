@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { getProductsByCategory, type Product } from '@/lib/lifestyle/products'
+import { OFFERS, buildAffiliateUrl } from '@/lib/offers'
 
 // ─── Quiz Data ───────────────────────────────────────────────────────────────
 
@@ -343,46 +344,70 @@ const QUIZZES: Record<string, QuizConfig> = {
   },
 }
 
-// ─── Finance Resource Cards (no products) ────────────────────────────────────
+// ─── Finance Offer Cards ─────────────────────────────────────────────────────
 
-const FINANCE_STEPS = [
+const YENDO_QUIZ_URL   = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'quiz', 'finance-quiz-result')
+const SLAM_DUNK_QUIZ_URL = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'quiz', 'finance-quiz-result')
+
+type FinanceOffer = {
+  id: string
+  badge: string
+  name: string
+  tagline: string
+  bullets: string[]
+  cta: string
+  href: string
+  highlight: boolean
+}
+
+const FINANCE_OFFERS: FinanceOffer[] = [
   {
-    title: 'Know Your Score',
-    body: 'Check your credit score for free at Credit Karma, Experian, or through your bank. No hard pull.',
-    cta: 'Check for Free →',
-    href: 'https://www.creditkarma.com',
+    id: 'yendo',
+    badge: '✦ Car Equity Card',
+    name: 'Yendo Credit Card',
+    tagline: 'Turn your car\'s value into a real Visa credit card — no hard credit pull to check eligibility.',
+    bullets: [
+      'Credit line based on your car\'s value ($500–$10,000)',
+      'No hard pull to see if you qualify',
+      'Reports to all 3 bureaus — actively builds your score',
+      'Real Visa card, accepted everywhere',
+    ],
+    cta: 'Check If My Car Qualifies →',
+    href: YENDO_QUIZ_URL,
+    highlight: true,
   },
   {
-    title: 'Pull Your Full Report',
-    body: 'AnnualCreditReport.com gives you free reports from all three bureaus — Equifax, Experian, and TransUnion.',
-    cta: 'Get Your Report →',
-    href: 'https://www.annualcreditreport.com',
-  },
-  {
-    title: 'Dispute Errors',
-    body: 'One in five credit reports has an error. Dispute directly with the bureau online — most resolve within 30 days.',
-    cta: 'Dispute With Experian →',
-    href: 'https://www.experian.com/disputes/main.html',
-  },
-  {
-    title: 'Get a Secured Card',
-    body: 'A secured card with a low limit, paid in full monthly, is the fastest way to build positive history.',
-    cta: 'Browse Options →',
-    href: 'https://www.nerdwallet.com/best/credit-cards/secured',
-  },
-  {
-    title: 'Become an Authorized User',
-    body: 'If someone with good credit adds you to their card, their history can boost your score immediately.',
-    cta: 'Learn How →',
-    href: 'https://www.experian.com/blogs/ask-experian/credit-education/score-basics/authorized-user/',
-  },
-  {
-    title: 'Keep Utilization Under 10%',
-    body: 'Your utilization ratio is the second-biggest score factor. Keeping it under 10% signals control.',
-    cta: 'Learn More →',
-    href: 'https://www.myfico.com/credit-education/credit-scores/credit-utilization',
+    id: 'slam-dunk',
+    badge: 'Personal Loans',
+    name: 'Slam Dunk Loans',
+    tagline: 'Personal loans up to $50,000 — fast decision, any credit welcome.',
+    bullets: [
+      'Loans from $1,000 to $50,000',
+      'Any credit score considered',
+      'Instant rate check — no impact on your score',
+      'Funds as fast as the next business day',
+    ],
+    cta: 'Check My Rate in 60 Seconds →',
+    href: SLAM_DUNK_QUIZ_URL,
+    highlight: false,
   },
 ]
+
+// Persona-specific positioning copy for each offer
+const PERSONA_OFFER_COPY: Record<string, Record<string, { headline: string; sub: string }>> = {
+  yendo: {
+    'The Starter':    { headline: 'No credit score required', sub: 'Yendo qualifies you on your car\'s value, not your credit history. Perfect for starting fresh.' },
+    'The Builder':    { headline: 'Build credit while using credit', sub: 'Every on-time payment reports to all 3 bureaus. The right card can do the heavy lifting.' },
+    'The Optimizer':  { headline: 'Higher limits without a hard pull', sub: 'Use your car\'s equity to unlock a credit line that improves your utilization ratio.' },
+    'The Strategist': { headline: 'Leverage an asset you already own', sub: 'Your car\'s equity is sitting idle. Yendo lets you deploy it as working credit.' },
+  },
+  'slam-dunk': {
+    'The Starter':    { headline: 'Cash when you need it most', sub: 'If you need a bridge while building credit, Slam Dunk loans accept all credit scores.' },
+    'The Builder':    { headline: 'Short-term cash, no credit barriers', sub: 'Keep momentum going — Slam Dunk gets you funds fast without stalling your progress.' },
+    'The Optimizer':  { headline: 'Pay down balances strategically', sub: 'A personal loan to consolidate high-utilization balances can meaningfully lift your score.' },
+    'The Strategist': { headline: 'Flexible capital on demand', sub: 'Up to $50,000 with instant rate checks — no score impact until you decide to move forward.' },
+  },
+}
 
 // ─── Quiz Component ───────────────────────────────────────────────────────────
 
@@ -490,23 +515,42 @@ export default function QuizClient({ category }: { category: string }) {
 
         {!quiz.productCategory && (
           <section className="quiz-picks">
-            <h2 className="quiz-picks-heading">Your Credit Roadmap</h2>
-            <p className="quiz-picks-sub">The moves that matter most for where you are right now.</p>
-            <div className="quiz-finance-grid">
-              {FINANCE_STEPS.map((step) => (
-                <a
-                  key={step.title}
-                  href={step.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="quiz-finance-card"
-                >
-                  <p className="quiz-finance-title">{step.title}</p>
-                  <p className="quiz-finance-body">{step.body}</p>
-                  <span className="quiz-finance-cta">{step.cta}</span>
-                </a>
-              ))}
+            <h2 className="quiz-picks-heading">Your Matched Offers</h2>
+            <p className="quiz-picks-sub">Chosen for where you are right now — not where the average person is.</p>
+            <div className="quiz-offer-grid">
+              {FINANCE_OFFERS.map((offer) => {
+                const copy = PERSONA_OFFER_COPY[offer.id]?.[persona!.name]
+                return (
+                  <a
+                    key={offer.id}
+                    href={offer.href}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className={`quiz-offer-card${offer.highlight ? ' quiz-offer-card--featured' : ''}`}
+                  >
+                    <span className="quiz-offer-badge">{offer.badge}</span>
+                    <p className="quiz-offer-name">{offer.name}</p>
+                    {copy ? (
+                      <>
+                        <p className="quiz-offer-headline">{copy.headline}</p>
+                        <p className="quiz-offer-tagline">{copy.sub}</p>
+                      </>
+                    ) : (
+                      <p className="quiz-offer-tagline">{offer.tagline}</p>
+                    )}
+                    <ul className="quiz-offer-bullets">
+                      {offer.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                    <span className="quiz-offer-cta">{offer.cta}</span>
+                  </a>
+                )
+              })}
             </div>
+            <p className="quiz-offer-disclosure">
+              Mintbrooks may earn a commission when you apply through our links. This doesn&apos;t affect our recommendations.
+            </p>
           </section>
         )}
       </>
@@ -859,65 +903,178 @@ const QUIZ_CSS = `
 
   .quiz-explore-btn:hover { background: #0D1F18; }
 
-  /* Finance cards */
-  .quiz-finance-grid {
+  /* Offer cards — Yendo + Slam Dunk */
+  .quiz-offer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    max-width: 960px;
-    margin: 0 auto;
+    max-width: 860px;
+    margin: 0 auto 24px;
   }
 
-  .quiz-finance-card {
+  .quiz-offer-card {
     background: #fff;
-    border: 1px solid #EEE9E2;
-    border-radius: 16px;
-    padding: 24px;
+    border: 1.5px solid #EEE9E2;
+    border-radius: 20px;
+    padding: 28px 24px;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
   }
 
-  .quiz-finance-card:hover {
+  .quiz-offer-card:hover {
     border-color: #B8955A;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+    transform: translateY(-3px);
   }
 
-  .quiz-finance-title {
+  .quiz-offer-card--featured {
+    border-color: #1D3A2F;
+    background: #1D3A2F;
+    color: #FDFAF6;
+  }
+
+  .quiz-offer-card--featured:hover {
+    border-color: #1D3A2F;
+    box-shadow: 0 16px 48px rgba(29,58,47,0.30);
+  }
+
+  .quiz-offer-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #B8955A;
+    font-family: sans-serif;
+    display: block;
+  }
+
+  .quiz-offer-card--featured .quiz-offer-badge {
+    color: rgba(184,149,90,0.85);
+  }
+
+  .quiz-offer-name {
     font-family: "Playfair Display", Georgia, serif;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     color: #1A1714;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.2;
   }
 
-  .quiz-finance-body {
+  .quiz-offer-card--featured .quiz-offer-name {
+    color: #FDFAF6;
+  }
+
+  .quiz-offer-headline {
     font-size: 14px;
-    color: #5A534E;
-    line-height: 1.6;
+    font-weight: 700;
+    color: #1A1714;
     margin: 0;
     font-family: sans-serif;
+    line-height: 1.4;
+  }
+
+  .quiz-offer-card--featured .quiz-offer-headline {
+    color: #FDFAF6;
+  }
+
+  .quiz-offer-tagline {
+    font-size: 14px;
+    color: #5A534E;
+    margin: 0;
+    line-height: 1.6;
+    font-family: sans-serif;
+  }
+
+  .quiz-offer-card--featured .quiz-offer-tagline {
+    color: rgba(253,250,246,0.70);
+  }
+
+  .quiz-offer-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
     flex: 1;
   }
 
-  .quiz-finance-cta {
+  .quiz-offer-bullets li {
+    font-size: 13px;
+    color: #5A534E;
+    padding-left: 18px;
+    position: relative;
+    font-family: sans-serif;
+    line-height: 1.5;
+  }
+
+  .quiz-offer-bullets li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #B8955A;
+    font-weight: 700;
+  }
+
+  .quiz-offer-card--featured .quiz-offer-bullets li {
+    color: rgba(253,250,246,0.75);
+  }
+
+  .quiz-offer-card--featured .quiz-offer-bullets li::before {
+    color: #B8955A;
+  }
+
+  .quiz-offer-cta {
+    display: block;
+    margin-top: 16px;
+    padding: 14px 20px;
+    background: #B8955A;
+    color: #fff;
+    border-radius: 100px;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #1D3A2F;
+    text-align: center;
     font-family: sans-serif;
+    transition: background 0.2s;
+  }
+
+  .quiz-offer-card--featured .quiz-offer-cta {
+    background: #FDFAF6;
+    color: #1D3A2F;
+  }
+
+  .quiz-offer-card:hover .quiz-offer-cta {
+    background: #9A7A47;
+  }
+
+  .quiz-offer-card--featured:hover .quiz-offer-cta {
+    background: #EEE9E2;
+  }
+
+  .quiz-offer-disclosure {
+    font-size: 11px;
+    color: #B0A99E;
+    text-align: center;
+    margin: 8px 0 0;
+    font-family: sans-serif;
+    font-style: italic;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media (max-width: 480px) {
     .quiz-product-grid {
       grid-template-columns: 1fr 1fr;
     }
-    .quiz-finance-grid {
+    .quiz-offer-grid {
       grid-template-columns: 1fr;
     }
   }
