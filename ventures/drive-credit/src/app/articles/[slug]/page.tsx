@@ -100,6 +100,22 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Secured vs. unsecured credit cards', slug: 'secured-vs-unsecured-cards', readTime: '5 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg', date: 'March 12, 2026' },
   { title: 'Why credit utilization matters more than payment history', slug: 'credit-utilization-explained', readTime: '4 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg', date: 'March 5, 2026' },
   { title: 'Building credit with bad credit', slug: 'build-credit-bad-credit', readTime: '6 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg', date: 'February 27, 2026' },
+
+  { title: 'Best Hair Shine Sprays 2024: Get Mirror-Like Gloss', slug: 'best-hair-shine-spray', readTime: '5 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 12, 2026', excerpt: 'Searching for the best hair shine spray to achieve mirror-like gloss without breaking the bank? Our 2024 guide helps you find the perfect glossing spray for luminous hair.' },
+
+  { title: 'Best Niacinamide Serums for Pores & Skin Tone in 2024', slug: 'best-niacinamide-serum-pores-skin-tone', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 12, 2026', excerpt: 'Struggling with enlarged pores or uneven skin tone? Discover the best niacinamide serum for you, including our top pick, Paula\'s Choice CLINICAL 20% Niacinamide.' },
+
+  { title: 'Best Sous Vide Containers of 2024: Top Picks for Perfect Cooking', slug: 'best-sous-vide-container', readTime: '7 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'April 12, 2026', excerpt: 'Discover the best sous vide containers of 2024, including our top 26QT pick for large batch cooking. Achieve perfect results every time with Mintbrooks.' },
+
+  { title: 'Best Duvet Covers of 2024: Top Picks for Comfort & Style', slug: 'best-duvet-covers', readTime: '6 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 12, 2026', excerpt: 'Transform your bedroom with the best duvet covers of 2024. Our guide helps you find top-rated, comfortable, and stylish options, including the Bedsure Waffle Duvet Cover.' },
+
+  { title: 'Best Eyeshadow Palettes 2024: Top Picks for Every Look', slug: 'best-eyeshadow-palettes', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 12, 2026', excerpt: 'Discover the best eyeshadow palettes of 2024, including top-rated options for beginners and professional quality alternatives. Find your perfect look with Mintbrooks\' curated picks.' },
+
+  { title: 'Best Clean Beauty Foundations for Flawless Skin (2024)', slug: 'best-clean-beauty-foundation', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 12, 2026', excerpt: 'Discover the best clean beauty foundations for a flawless, natural look in 2024. Our top pick is Clinique Even Better Makeup for its skin-evening benefits.' },
+
+  { title: 'Best Drip Irrigation Systems of 2024: Top Picks for Every Garden', slug: 'best-drip-irrigation-systems', readTime: '8 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 12, 2026', excerpt: 'Discover the best drip irrigation system for your garden in 2024. Our guide helps you choose the top-rated kits for efficient, customizable watering.' },
+
+  { title: 'Best Get Well Soon Gifts 2024: Thoughtful Care Packages', slug: 'best-get-well-soon-gifts', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 12, 2026', excerpt: 'Searching for the best get well soon gifts? Discover thoughtful care packages and our top pick for ultimate comfort to help a loved one recover in 2024.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
