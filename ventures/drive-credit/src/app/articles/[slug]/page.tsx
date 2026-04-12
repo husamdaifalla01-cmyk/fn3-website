@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import ArticleNewsletter from './ArticleNewsletter'
 import ArticleSidebar from './ArticleSidebar'
 import { EDITORIAL_CONTENT } from '@/lib/editorial-content'
+import { getProducts } from '@/lib/lifestyle/products'
 
 // ─── Article Data ─────────────────────────────────────────────────────────────
 
@@ -149,12 +150,17 @@ function extractAsin(url: string): string | null {
   return m ? m[1] : null
 }
 
+// Lookup table built once: ASIN → nano banana image path (Pinterest pipeline products only)
+const ASIN_IMAGE_MAP: Record<string, string> = Object.fromEntries(
+  getProducts().filter(p => p.primary_image_url).map(p => [p.asin, p.primary_image_url])
+)
+
 /**
  * Parse the first product from publisher.py-generated HTML.
  * Two strategies:
  *  1. Structured markup (.product-name / .product-link classes)
  *  2. Fallback: first meaningful Amazon affiliate link
- * Runs server-side at edge — zero bundle cost.
+ * Image is only set when the ASIN is in the Pinterest pipeline (has a nano banana file).
  */
 function extractTopProduct(html: string): TopProduct | null {
   // Strategy 1: structured product card markup
@@ -169,7 +175,7 @@ function extractTopProduct(html: string): TopProduct | null {
       name: nameMatch[1].replace(/<[^>]+>/g, '').trim(),
       price: priceMatch ? priceMatch[1].replace(/<[^>]+>/g, '').trim() : '',
       link,
-      image: asin ? `/products/${asin}_nb.jpg` : undefined,
+      image: asin ? ASIN_IMAGE_MAP[asin] : undefined,
     }
   }
 
@@ -179,10 +185,9 @@ function extractTopProduct(html: string): TopProduct | null {
   while ((m = linkRe.exec(html)) !== null) {
     const href = m[1]
     const text = m[2].replace(/<[^>]+>/g, '').replace(/→/g, '').trim()
-    // Skip short or generic labels
     if (text.length > 8 && !/^(buy|shop|check price|get it|view|learn more)/i.test(text)) {
       const asin = extractAsin(href)
-      return { name: text, price: '', link: href, image: asin ? `/products/${asin}_nb.jpg` : undefined }
+      return { name: text, price: '', link: href, image: asin ? ASIN_IMAGE_MAP[asin] : undefined }
     }
   }
 
@@ -1000,6 +1005,14 @@ export default async function ArticleDetailPage({
           display: flex;
           flex-direction: column;
           gap: 16px;
+          max-height: calc(100vh - 100px);
+          overflow-y: auto;
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        .article-sidebar::-webkit-scrollbar {
+          display: none;
         }
 
         .sb-card {
