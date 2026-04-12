@@ -223,6 +223,7 @@ export default function WhatCreditScorePage() {
             </p>
             <AffiliateLink
               href={YENDO_SECURED_HERO}
+              placement="credit-score-guide-hero"
               className="block w-full bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-center py-4 rounded-lg text-lg transition-colors"
             >
               See If I Qualify →
@@ -348,6 +349,7 @@ export default function WhatCreditScorePage() {
             </p>
             <AffiliateLink
               href={YENDO_SECURED_MID}
+              placement="credit-score-guide-mid"
               className="inline-block bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-6 py-3 rounded-lg transition-colors"
             >
               Check My Car&apos;s Qualification →
@@ -404,6 +406,7 @@ export default function WhatCreditScorePage() {
             </p>
             <AffiliateLink
               href={YENDO_SECURED_CTA}
+              placement="credit-score-guide-cta"
               className="inline-block bg-amber-500 hover:bg-amber-400 text-stone-950 font-black px-8 py-4 rounded-xl text-lg transition-colors"
             >
               Check My Car&apos;s Value →
