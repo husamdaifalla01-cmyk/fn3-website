@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
+import MoneyResetCTA from '@/components/MoneyResetCTA'
 import { YENDO_BUILD_CREDIT_HERO, YENDO_BUILD_CREDIT_CTA } from '@/lib/affiliateUrls'
 
 export const metadata: Metadata = {
@@ -290,6 +291,8 @@ export default function HowToBuildCreditBadCreditPage() {
           <p className="text-xs mt-2" style={{ color: '#a8a29e' }}>Soft inquiry only · Affiliate link</p>
         </div>
 
+        <MoneyResetCTA variant="mid" />
+
         <h2 className="text-2xl font-black mb-4" style={{ color: '#1c1917', letterSpacing: '-0.01em' }}>Free Tools and Resources</h2>
         <div className="space-y-3 mb-8">
           {[
@@ -318,6 +321,8 @@ export default function HowToBuildCreditBadCreditPage() {
         <p className="mb-8 leading-relaxed" style={{ color: '#78716c' }}>
           What matters most is starting. Every month without an active, reporting credit account is a month of potential credit building lost. The best time to start was yesterday. The second best time is today.
         </p>
+
+        <MoneyResetCTA variant="end" />
 
         {/* Final CTA */}
         <div className="rounded-2xl p-6 text-center mb-12" style={{ background: '#1c1917' }}>

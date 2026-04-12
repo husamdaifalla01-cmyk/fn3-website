@@ -638,6 +638,244 @@ export default function FinancePage() {
         </div>
       </section>
 
+      {/* ── Featured Product — The 90-Day Money Reset ──────────────────── */}
+<section
+  style={{
+    background: '#F0EDE8',
+    padding: 'clamp(64px, 8vw, 100px) clamp(20px, 5vw, 80px)',
+    borderTop: '1px solid rgba(184,149,90,0.15)',
+  }}
+>
+  <div
+    style={{
+      maxWidth: '1200px',
+      margin: '0 auto',
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: 'clamp(40px, 6vw, 80px)',
+      alignItems: 'center',
+    }}
+    className="fin-product-grid"
+  >
+    {/* Left — product info */}
+    <div>
+      <span
+        style={{
+          display: 'inline-block',
+          fontSize: '10px',
+          fontWeight: 700,
+          letterSpacing: '0.22em',
+          textTransform: 'uppercase',
+          color: '#B8955A',
+          marginBottom: '20px',
+          background: 'rgba(184,149,90,0.12)',
+          border: '1px solid rgba(184,149,90,0.22)',
+          padding: '5px 14px',
+          borderRadius: '100px',
+        }}
+      >
+        New — mintbrooks guide
+      </span>
+      <h2
+        style={{
+          fontFamily: '"Playfair Display", Georgia, serif',
+          fontSize: 'clamp(30px, 4.5vw, 52px)',
+          fontWeight: 700,
+          color: '#1A1714',
+          lineHeight: 1.1,
+          letterSpacing: '-0.025em',
+          margin: '0 0 20px',
+        }}
+      >
+        The 90-Day
+        <br />
+        <em style={{ fontStyle: 'italic', color: '#1D3A2F' }}>Money Reset.</em>
+      </h2>
+      <p
+        style={{
+          fontSize: 'clamp(15px, 1.6vw, 18px)',
+          color: '#6B6557',
+          lineHeight: 1.72,
+          margin: '0 0 32px',
+          maxWidth: '480px',
+        }}
+      >
+        The step-by-step protocol for people who already know what they should
+        do about their credit — and need a structure that makes actually doing
+        it feel possible. 90 days. One action per day. A score you can say out loud.
+      </p>
+
+      {/* Feature list */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '36px' }}>
+        {[
+          'The Credit Sequence — the correct order of operations',
+          'Word-for-word creditor communication scripts',
+          'No-shame mindset framework (pages 8–14)',
+          '60-day money-back guarantee',
+        ].map(f => (
+          <div key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+            <span style={{ color: '#1D3A2F', fontWeight: 700, fontSize: '13px', flexShrink: 0 }}>✓</span>
+            <span style={{ fontSize: '14px', color: '#2A2520', lineHeight: 1.4 }}>{f}</span>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+        <Link
+          href="/products/90-day-money-reset"
+          style={{
+            background: '#1D3A2F',
+            color: '#FDFAF6',
+            padding: '16px 36px',
+            borderRadius: '100px',
+            fontSize: '13px',
+            fontWeight: 700,
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            textDecoration: 'none',
+            boxShadow: '0 4px 24px rgba(29,58,47,0.28)',
+            display: 'inline-block',
+            transition: 'transform 0.2s, box-shadow 0.2s',
+          }}
+        >
+          Get the guide — $24
+        </Link>
+        <span
+          style={{
+            fontSize: '13px',
+            color: '#9B9388',
+            fontStyle: 'italic',
+          }}
+        >
+          One-time · Instant PDF delivery
+        </span>
+      </div>
+    </div>
+
+    {/* Right — visual card */}
+    <div
+      style={{
+        background: '#1D3A2F',
+        borderRadius: '24px',
+        padding: 'clamp(36px, 4vw, 52px)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Decorative oversized character */}
+      <div
+        aria-hidden
+        style={{
+          position: 'absolute',
+          right: '-20px',
+          top: '-20px',
+          fontFamily: '"Playfair Display", Georgia, serif',
+          fontSize: '200px',
+          fontWeight: 700,
+          color: 'rgba(253,250,246,0.04)',
+          lineHeight: 1,
+          userSelect: 'none',
+          pointerEvents: 'none',
+        }}
+      >
+        90
+      </div>
+
+      <span
+        style={{
+          display: 'block',
+          fontSize: '10px',
+          fontWeight: 700,
+          letterSpacing: '0.22em',
+          textTransform: 'uppercase',
+          color: 'rgba(184,149,90,0.7)',
+          marginBottom: '28px',
+        }}
+      >
+        Inside the guide
+      </span>
+
+      {[
+        { phase: '01', title: 'The Foundation', days: 'Days 1–30' },
+        { phase: '02', title: 'The Triage', days: 'Days 31–60' },
+        { phase: '03', title: 'The Build', days: 'Days 61–90' },
+      ].map((item, i) => (
+        <div
+          key={item.phase}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+            padding: '18px 0',
+            borderBottom: i < 2 ? '1px solid rgba(253,250,246,0.08)' : 'none',
+          }}
+        >
+          <div
+            style={{
+              width: '44px',
+              height: '44px',
+              borderRadius: '50%',
+              background: 'rgba(184,149,90,0.15)',
+              border: '1px solid rgba(184,149,90,0.25)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexShrink: 0,
+              fontFamily: '"Playfair Display", Georgia, serif',
+              fontSize: '16px',
+              fontWeight: 700,
+              color: '#B8955A',
+            }}
+          >
+            {item.phase}
+          </div>
+          <div>
+            <div
+              style={{
+                fontFamily: '"Playfair Display", Georgia, serif',
+                fontSize: '18px',
+                fontWeight: 700,
+                color: '#FDFAF6',
+                marginBottom: '3px',
+              }}
+            >
+              {item.title}
+            </div>
+            <div style={{ fontSize: '12px', color: 'rgba(253,250,246,0.45)', letterSpacing: '0.04em' }}>
+              {item.days}
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <div
+        style={{
+          marginTop: '28px',
+          padding: '20px 24px',
+          background: 'rgba(253,250,246,0.05)',
+          borderRadius: '12px',
+          border: '1px solid rgba(253,250,246,0.08)',
+        }}
+      >
+        <div
+          style={{
+            fontFamily: '"Playfair Display", Georgia, serif',
+            fontSize: '32px',
+            fontWeight: 700,
+            color: '#FDFAF6',
+            letterSpacing: '-0.03em',
+          }}
+        >
+          $24
+        </div>
+        <div style={{ fontSize: '12px', color: 'rgba(253,250,246,0.4)', marginTop: '4px' }}>
+          One-time · No subscription · 60-day guarantee
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       {/* ── Credit Guides ─────────────────────────────────────────────── */}
       <section
         id="guides"
@@ -901,6 +1139,13 @@ export default function FinancePage() {
 
         @media (max-width: 640px) {
           .fin-guides-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+
+        /* Product feature grid */
+        @media (max-width: 768px) {
+          .fin-product-grid {
             grid-template-columns: 1fr !important;
           }
         }

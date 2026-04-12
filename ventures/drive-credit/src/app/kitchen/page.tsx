@@ -307,7 +307,7 @@ export default async function KitchenPage() {
                 If not, we don&apos;t recommend it.
               </p>
               <a
-                href="#"
+                href="/about"
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',

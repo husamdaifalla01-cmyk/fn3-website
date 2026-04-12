@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
+import MoneyResetCTA from '@/components/MoneyResetCTA'
 import { YENDO_BAD_CREDIT_HERO, YENDO_BAD_CREDIT_CARD, YENDO_BAD_CREDIT_CTA } from '@/lib/affiliateUrls'
 
 export const metadata: Metadata = {
@@ -84,9 +85,13 @@ export default function BadCreditPage() {
           ))}
         </div>
 
+        <MoneyResetCTA variant="mid" />
+
         <h2 className="text-2xl font-black mb-4" style={{ color: '#1c1917', letterSpacing: '-0.01em' }}>What Builds Credit the Fastest</h2>
         <p className="mb-4 leading-relaxed" style={{ color: '#78716c' }}>Consistent, on-time payments on an account that reports to all three bureaus is the most reliable path to rebuilding credit. The interest rate is secondary — if you pay your balance in full each month, you pay no interest.</p>
         <p className="mb-8 leading-relaxed" style={{ color: '#78716c' }}>Credit utilization (how much of your available credit you use) accounts for roughly 30% of a FICO score. A higher credit limit at the same spending level means lower utilization — which can meaningfully improve your score faster than a low-limit secured card.</p>
+
+        <MoneyResetCTA variant="end" />
 
         <div className="rounded-2xl p-6 text-center mb-12" style={{ background: '#1c1917' }}>
           <h3 className="text-xl font-black text-white mb-2">Use Your Car to Skip the Score Barrier</h3>

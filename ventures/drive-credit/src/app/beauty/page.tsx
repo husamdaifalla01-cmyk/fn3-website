@@ -295,7 +295,7 @@ export default async function BeautyPage() {
                 it doesn&apos;t make our list.
               </p>
               <a
-                href="#"
+                href="/about"
                 className="ls-method-link"
                 style={{
                   display: 'inline-flex',

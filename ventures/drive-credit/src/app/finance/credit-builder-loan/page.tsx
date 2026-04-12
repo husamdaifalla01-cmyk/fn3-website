@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
+import MoneyResetCTA from '@/components/MoneyResetCTA'
 import {
   YENDO_CREDIT_BUILDER_HERO,
   YENDO_CREDIT_BUILDER_MID,
@@ -192,6 +193,8 @@ export default function CreditBuilderLoanPage() {
           </div>
         </section>
 
+        <MoneyResetCTA variant="mid" />
+
         {/* Why car owners should skip the credit builder loan */}
         <section className="mb-10">
           <h2 className="text-2xl font-black text-white mb-4">
@@ -275,6 +278,8 @@ export default function CreditBuilderLoanPage() {
             ))}
           </div>
         </section>
+
+        <MoneyResetCTA variant="end" />
 
         {/* Final CTA */}
         <section className="bg-gradient-to-br from-amber-500/10 to-stone-800 border border-amber-500/30 rounded-2xl p-8 text-center mb-10">

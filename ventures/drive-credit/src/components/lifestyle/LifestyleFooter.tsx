@@ -76,10 +76,16 @@ export default function LifestyleFooter() {
               foundation to sustain it.
             </p>
             <div style={{ display: 'flex', gap: '12px' }}>
-              {['Pinterest', 'Substack', 'Instagram'].map((platform) => (
+              {[
+              { label: 'Pinterest', url: 'https://pinterest.com/mintbrooks' },
+              { label: 'Substack', url: 'https://mintbrooks.substack.com' },
+              { label: 'Instagram', url: 'https://instagram.com/mintbrooks' },
+            ].map(({ label: platform, url }) => (
                 <a
                   key={platform}
-                  href="#"
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     fontSize: '10px',
                     fontWeight: 700,
