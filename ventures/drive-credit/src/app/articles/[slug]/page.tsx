@@ -423,20 +423,16 @@ export default async function ArticleDetailPage({
   return (
     <div style={{ background: '#FDFAF6', color: '#1A1714' }}>
 
-      {/* ── Article Header ────────────────────────────────────────────── */}
-      <header
-        style={{
-          background: '#FDFAF6',
-          padding: 'clamp(120px, 14vw, 180px) clamp(20px, 5vw, 80px) 0',
-        }}
-      >
-        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+      {/* ── Article Grid (header + body + sidebar) ────────────────────── */}
+      <div className="article-layout-wrapper">
+        <main className="article-main">
+
           {/* Breadcrumb */}
           <nav
             style={{
               fontSize: '12px',
               color: '#9B9388',
-              marginBottom: '28px',
+              marginBottom: '20px',
               display: 'flex',
               alignItems: 'center',
               gap: '6px',
@@ -467,7 +463,7 @@ export default async function ArticleDetailPage({
               background: article.bg,
               borderRadius: '100px',
               padding: '6px 16px',
-              marginBottom: '24px',
+              marginBottom: '20px',
             }}
           >
             {article.category}
@@ -477,18 +473,18 @@ export default async function ArticleDetailPage({
           <h1
             style={{
               fontFamily: '"Playfair Display", Georgia, serif',
-              fontSize: 'clamp(32px, 5vw, 58px)',
+              fontSize: 'clamp(28px, 4vw, 48px)',
               fontWeight: 700,
               color: '#1A1714',
               lineHeight: 1.1,
               letterSpacing: '-0.025em',
-              margin: '0 0 24px',
+              margin: '0 0 16px',
             }}
           >
             {article.title}
           </h1>
 
-          {/* Author / meta line */}
+          {/* Meta line */}
           <div
             style={{
               display: 'flex',
@@ -497,7 +493,7 @@ export default async function ArticleDetailPage({
               fontSize: '13px',
               color: '#9B9388',
               flexWrap: 'wrap',
-              marginBottom: '28px',
+              marginBottom: '8px',
             }}
           >
             <span>By The Mintbrooks Team</span>
@@ -507,55 +503,25 @@ export default async function ArticleDetailPage({
             <span>{article.date}</span>
           </div>
 
-          {/* Affiliate disclosure */}
-          <div
-            style={{
-              background: '#F7F4EF',
-              borderRadius: '10px',
-              padding: '12px 18px',
-              fontSize: '12px',
-              color: '#9B9388',
-              lineHeight: 1.5,
-              marginBottom: '40px',
-            }}
-          >
-            This article may contain affiliate links. We earn a small commission at no extra cost
-            to you. We only recommend products we&apos;d genuinely use.
-          </div>
-        </div>
-      </header>
+          {/* Disclosure — inline, unobtrusive */}
+          <p className="article-disclosure-inline">
+            Contains affiliate links. We earn a small commission at no extra cost to you.
+          </p>
 
-      {/* ── Article Hero Image ────────────────────────────────────────── */}
-      <div
-        style={{
-          padding: '0 clamp(20px, 5vw, 80px)',
-          marginBottom: 'clamp(48px, 6vw, 80px)',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '1100px',
-            margin: '0 auto',
-            position: 'relative',
-            height: 'clamp(280px, 40vw, 480px)',
-            borderRadius: '16px',
-            overflow: 'hidden',
-          }}
-        >
-          <Image
-            src={article.image}
-            alt={article.title}
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, 1100px"
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-          />
-        </div>
-      </div>
+          {/* Hero image — inline figure inside the article column */}
+          <figure className="article-hero-figure">
+            <Image
+              src={article.image}
+              alt={article.title}
+              width={900}
+              height={500}
+              priority
+              sizes="(max-width: 768px) 100vw, 900px"
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
+          </figure>
 
-      {/* ── Article Body + Sidebar ─────────────────────────────────────── */}
-      <div className="article-layout-wrapper">
-        <main className="article-main">
+          {/* Article body */}
           {affiliateBodyHtml ? (
             <div
               className="article-body affiliate-body"
@@ -979,12 +945,29 @@ export default async function ArticleDetailPage({
           gap: clamp(32px, 4vw, 60px);
           max-width: 1400px;
           margin: 0 auto;
-          padding: 0 clamp(20px, 5vw, 80px) clamp(60px, 8vw, 100px);
+          padding: clamp(80px, 8vw, 110px) clamp(20px, 5vw, 80px) clamp(60px, 8vw, 100px);
           align-items: start;
         }
 
         .article-main {
           min-width: 0;
+        }
+
+        /* ── Article hero figure (inline in article column) ── */
+        .article-hero-figure {
+          margin: 24px 0 36px;
+          border-radius: 12px;
+          overflow: hidden;
+        }
+
+        /* ── Inline disclosure ── */
+        .article-disclosure-inline {
+          font-size: 11px;
+          color: #B0A99E;
+          margin: 0 0 28px;
+          font-style: italic;
+          font-family: sans-serif;
+          line-height: 1.5;
         }
 
         @media (max-width: 768px) {
