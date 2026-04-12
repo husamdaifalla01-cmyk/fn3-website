@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   keywords:
     'lifestyle blog, home decor, wellness, beauty, kitchen, credit building, curated finds',
   metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     title: 'Mintbrooks — The Good Life, Curated',
     description:
@@ -39,9 +42,39 @@ export const metadata: Metadata = {
   },
 }
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Mintbrooks',
+  url: SITE_URL,
+  description: 'Home, wellness, beauty, kitchen, and the credit to build it all.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Mintbrooks',
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo.png`,
+  sameAs: [
+    'https://www.pinterest.com/mintbrookslifestyle',
+  ],
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={playfair.variable}>
+      <head>
+        <link rel="canonical" href={SITE_URL} />
+      </head>
       <body
         style={{
           '--ls-cream': '#FDFAF6',
@@ -51,6 +84,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           '--ls-muted': '#6B6557',
         } as React.CSSProperties}
       >
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <Script
+          id="schema-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <LifestyleNav />
         {children}
         <LifestyleFooter />
