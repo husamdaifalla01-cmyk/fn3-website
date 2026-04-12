@@ -330,9 +330,10 @@ function BookCover({
   book: Book
   size?: 'large' | 'small'
 }) {
-  // Google Books returns significantly higher resolution covers than Open Library.
-  // zoom=6 requests the largest available size (often 800px+ wide, sharp on retina/4K).
-  const coverUrl = `https://books.google.com/books/content?vid=ISBN${book.isbn}&printsec=frontcover&img=1&zoom=6&source=gbs_api`
+  // Open Library public cover API — reliable, no auth needed.
+  // Use -L (largest) for Open Library; display with contain so the image
+  // renders at its native resolution without upscaling artifacts.
+  const coverUrl = `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg`
   return (
     <div
       style={{
@@ -341,7 +342,10 @@ function BookCover({
         position: 'relative',
         overflow: 'hidden',
         background: book.coverColor,
-        boxShadow: '0 4px 20px rgba(0,0,0,0.18)',
+        boxShadow: '0 8px 32px rgba(0,0,0,0.22)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -350,13 +354,12 @@ function BookCover({
         alt={`${book.title} by ${book.author}`}
         loading="lazy"
         style={{
-          position: 'absolute',
-          inset: 0,
           width: '100%',
           height: '100%',
           objectFit: 'cover',
           objectPosition: 'center top',
           display: 'block',
+          imageRendering: 'auto',
         }}
       />
     </div>
@@ -642,15 +645,22 @@ export default function ReadingListPage() {
               height: '100%',
               objectFit: 'cover',
               objectPosition: 'center',
-              opacity: 0.55,
+              opacity: 0.88,
               zIndex: 0,
             }}
           />
-          {/* Gradient — photo visible top half, text fully protected bottom half */}
+          {/* Forest base — shows behind photo where opacity < 1 */}
           <div style={{
             position: 'absolute',
             inset: 0,
-            background: 'linear-gradient(to bottom, rgba(29,58,47,0.22) 0%, rgba(29,58,47,0.22) 38%, rgba(29,58,47,0.72) 58%, rgba(29,58,47,0.97) 72%, rgba(29,58,47,1) 100%)',
+            background: '#1D3A2F',
+            zIndex: -1,
+          }} />
+          {/* Gradient — transparent until 55%, then hardens fast to protect text */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 55%, rgba(29,58,47,0.82) 72%, rgba(29,58,47,0.99) 85%, rgba(29,58,47,1) 100%)',
             zIndex: 1,
           }} />
           {/* Content — above overlays */}
