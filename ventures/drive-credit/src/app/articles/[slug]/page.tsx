@@ -1136,35 +1136,74 @@ export default async function ArticleDetailPage({
           margin: 0;
         }
 
-        /* Sidebar quiz */
-        .sb-quiz {
+        /* ── Sidebar — Discover yourself quizzes ── */
+        .sb-quizzes {
           background: #fff;
           border: 1px solid #EEE9E2;
-          border-left: 3px solid #B8955A;
-          border-radius: 0 12px 12px 0;
-          padding: 14px 16px;
+          border-radius: 12px;
+          padding: 16px;
           font-family: sans-serif;
         }
 
-        .sb-quiz-title {
+        .sb-quizzes-heading {
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #B8955A;
+          margin: 0 0 12px;
+        }
+
+        .sb-quizzes-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .sb-quiz-item {
+          border-radius: 8px;
+        }
+
+        .sb-quiz-item--active {
+          background: #FDFAF6;
+        }
+
+        .sb-quiz-item-link {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 8px;
+          padding: 10px 10px;
+          text-decoration: none;
+          border-radius: 8px;
+          transition: background 0.15s;
+        }
+
+        .sb-quiz-item-link:hover {
+          background: #F5F0E8;
+        }
+
+        .sb-quiz-item-title {
           font-size: 13px;
-          font-weight: 600;
+          font-weight: 500;
           color: #1A1714;
           line-height: 1.35;
-          margin: 0 0 8px;
+          flex: 1;
         }
 
-        .sb-quiz-cta {
+        .sb-quiz-item--active .sb-quiz-item-title {
+          font-weight: 700;
+          color: #1D3A2F;
+        }
+
+        .sb-quiz-item-arrow {
           font-size: 13px;
-          font-weight: 600;
           color: #B8955A;
-          text-decoration: none;
-          display: inline-flex;
-          align-items: center;
-          gap: 4px;
+          flex-shrink: 0;
         }
-
-        .sb-quiz-cta:hover { text-decoration: underline; }
 
         /* ── Mobile Sticky Bar ── */
         .mobile-sticky-bar {
