@@ -121,3 +121,9 @@ export const YENDO_INQUIRY_HERO = buildAffiliateUrl(OFFERS.yendo.url,    'organi
 export const YENDO_INQUIRY_MID  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'inquiry-guide-mid')
 export const YENDO_INQUIRY_CTA  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'inquiry-guide-cta')
 export const SLAM_DUNK_INQUIRY  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'inquiry-guide-fallback')
+
+// ─── Car equity loan requirements guide ─────────────────────────────────────
+export const YENDO_CAR_REQ_HERO = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'car-req-guide-hero')
+export const YENDO_CAR_REQ_MID  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'car-req-guide-mid')
+export const YENDO_CAR_REQ_CTA  = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'car-req-guide-cta')
+export const SLAM_DUNK_CAR_REQ  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'car-req-guide-fallback')
