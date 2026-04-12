@@ -144,20 +144,39 @@ type TopProduct = {
 }
 
 /**
- * Parse the first .article-product-box from publisher.py-generated HTML.
+ * Parse the first product from publisher.py-generated HTML.
+ * Two strategies:
+ *  1. Structured markup (.product-name / .product-link classes)
+ *  2. Fallback: first meaningful Amazon affiliate link
  * Runs server-side at edge — zero bundle cost.
  */
 function extractTopProduct(html: string): TopProduct | null {
+  // Strategy 1: structured product card markup
   const nameMatch = html.match(/<h4[^>]*class="product-name"[^>]*>([\s\S]*?)<\/h4>/i)
   const priceMatch = html.match(/<span[^>]*class="product-price"[^>]*>([\s\S]*?)<\/span>/i)
   const anchorMatch = html.match(/<a[^>]*class="product-link"[^>]*>/)
   const linkMatch = anchorMatch ? anchorMatch[0].match(/href="([^"]*)"/) : null
-  if (!nameMatch || !linkMatch) return null
-  return {
-    name: nameMatch[1].replace(/<[^>]+>/g, '').trim(),
-    price: priceMatch ? priceMatch[1].replace(/<[^>]+>/g, '').trim() : '',
-    link: linkMatch[1],
+  if (nameMatch && linkMatch) {
+    return {
+      name: nameMatch[1].replace(/<[^>]+>/g, '').trim(),
+      price: priceMatch ? priceMatch[1].replace(/<[^>]+>/g, '').trim() : '',
+      link: linkMatch[1],
+    }
   }
+
+  // Strategy 2: first meaningful Amazon affiliate link
+  const linkRe = /<a[^>]*href="(https?:\/\/(?:www\.)?amazon\.com\/[^"]+)"[^>]*>([\s\S]*?)<\/a>/gi
+  let m: RegExpExecArray | null
+  while ((m = linkRe.exec(html)) !== null) {
+    const href = m[1]
+    const text = m[2].replace(/<[^>]+>/g, '').replace(/→/g, '').trim()
+    // Skip short or generic labels
+    if (text.length > 8 && !/^(buy|shop|check price|get it|view|learn more)/i.test(text)) {
+      return { name: text, price: '', link: href }
+    }
+  }
+
+  return null
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -402,7 +421,7 @@ export default async function ArticleDetailPage({
   const topProduct = affiliateBodyHtml ? extractTopProduct(affiliateBodyHtml) : null
 
   return (
-    <div style={{ background: '#FDFAF6', color: '#1A1714', overflowX: 'hidden' }}>
+    <div style={{ background: '#FDFAF6', color: '#1A1714' }}>
 
       {/* ── Article Header ────────────────────────────────────────────── */}
       <header
