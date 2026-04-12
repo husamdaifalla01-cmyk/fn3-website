@@ -325,27 +325,19 @@ const PULL_QUOTES = [
 
 function BookCover({
   book,
-  size = 'large',
+  coverUrl,
 }: {
   book: Book
-  size?: 'large' | 'small'
+  coverUrl: string
 }) {
-  // Open Library public cover API — reliable, no auth needed.
-  // Use -L (largest) for Open Library; display with contain so the image
-  // renders at its native resolution without upscaling artifacts.
-  const coverUrl = `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg`
   return (
     <div
       style={{
         aspectRatio: '2/3',
         width: '100%',
-        position: 'relative',
         overflow: 'hidden',
         background: book.coverColor,
         boxShadow: '0 8px 32px rgba(0,0,0,0.22)',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
       }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -359,18 +351,17 @@ function BookCover({
           objectFit: 'cover',
           objectPosition: 'center top',
           display: 'block',
-          imageRendering: 'auto',
         }}
       />
     </div>
   )
 }
 
-function FeaturedBook({ book }: { book: Book }) {
+function FeaturedBook({ book, coverUrl }: { book: Book; coverUrl: string }) {
   return (
     <article className="rl-featured-book">
       <div className="rl-featured-cover">
-        <BookCover book={book} size="large" />
+        <BookCover book={book} coverUrl={coverUrl} />
       </div>
       <div className="rl-featured-content">
         <div
@@ -442,11 +433,11 @@ function FeaturedBook({ book }: { book: Book }) {
   )
 }
 
-function SmallBookCard({ book }: { book: Book }) {
+function SmallBookCard({ book, coverUrl }: { book: Book; coverUrl: string }) {
   return (
     <article className="rl-small-book">
       <div style={{ marginBottom: '16px' }}>
-        <BookCover book={book} size="small" />
+        <BookCover book={book} coverUrl={coverUrl} />
       </div>
       <h4
         style={{
@@ -485,9 +476,41 @@ function SmallBookCard({ book }: { book: Book }) {
   )
 }
 
+// ── Google Books cover fetch (build-time, cached forever) ─────────────────────
+
+async function fetchCoverUrl(isbn: string): Promise<string> {
+  const fallback = `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`
+  const apiKey = process.env.GOOGLE_BOOKS_API_KEY
+  if (!apiKey) return fallback
+  try {
+    const res = await fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=isbn:${isbn}&key=${apiKey}&fields=items/volumeInfo/imageLinks`,
+      { cache: 'force-cache' },
+    )
+    if (!res.ok) return fallback
+    const data = await res.json()
+    const thumb: string | undefined = data?.items?.[0]?.volumeInfo?.imageLinks?.thumbnail
+    if (!thumb) return fallback
+    // Upgrade to ~800px wide, remove curl edge artifact, force HTTPS
+    return thumb
+      .replace('http://', 'https://')
+      .replace('zoom=1', 'zoom=1')
+      .replace('&edge=curl', '')
+      + '&fife=w800-h1200'
+  } catch {
+    return fallback
+  }
+}
+
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default function ReadingListPage() {
+export default async function ReadingListPage() {
+  // Fetch all 20 covers in parallel at build time
+  const allBooks = SECTIONS.flatMap((s) => s.books)
+  const urls = await Promise.all(allBooks.map((b) => fetchCoverUrl(b.isbn)))
+  const coverMap: Record<string, string> = {}
+  allBooks.forEach((book, i) => { coverMap[book.isbn] = urls[i] })
+
   return (
     <div className={playfair.variable} style={{ background: '#FDFAF6', color: '#1A1714' }}>
       <style>{`
@@ -896,7 +919,7 @@ export default function ReadingListPage() {
                   {section.books.map((book, bIdx) => (
                     <article key={bIdx}>
                       <div style={{ marginBottom: '16px' }}>
-                        <BookCover book={book} size="small" />
+                        <BookCover book={book} coverUrl={coverMap[book.isbn]} />
                       </div>
                       <h4
                         style={{
@@ -937,13 +960,13 @@ export default function ReadingListPage() {
               ) : (
                 <>
                   {/* Featured book (first in section) */}
-                  <FeaturedBook book={featured} />
+                  <FeaturedBook book={featured} coverUrl={coverMap[featured.isbn]} />
 
                   {/* Supporting books */}
                   {rest.length > 0 && (
                     <div className="rl-supporting-grid">
                       {rest.map((book, bIdx) => (
-                        <SmallBookCard key={bIdx} book={book} />
+                        <SmallBookCard key={bIdx} book={book} coverUrl={coverMap[book.isbn]} />
                       ))}
                     </div>
                   )}
