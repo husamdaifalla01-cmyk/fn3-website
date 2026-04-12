@@ -946,6 +946,266 @@ export default async function ArticleDetailPage({
         }
         .affiliate-body tr:nth-child(even) td { background: #F7F4EF; }
         .affiliate-body tr:last-child td { border-bottom: none; }
+
+        /* ── 2-Zone Article Layout ── */
+        .article-layout-wrapper {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) 260px;
+          gap: clamp(28px, 4vw, 52px);
+          max-width: 1080px;
+          margin: 0 auto;
+          padding: 0 clamp(20px, 4vw, 48px) clamp(60px, 8vw, 100px);
+          align-items: start;
+        }
+
+        .article-main {
+          min-width: 0;
+        }
+
+        @media (max-width: 768px) {
+          .article-layout-wrapper {
+            grid-template-columns: 1fr;
+            padding-bottom: 80px;
+          }
+          .article-sidebar {
+            display: none;
+          }
+        }
+
+        /* ── Sticky Sidebar ── */
+        .article-sidebar {
+          position: sticky;
+          top: 80px;
+          align-self: start;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .sb-card {
+          background: #fff;
+          border: 1px solid #EEE9E2;
+          border-radius: 12px;
+          padding: 16px;
+        }
+
+        .sb-label {
+          display: block;
+          font-size: 10px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+          color: #B8955A;
+          margin-bottom: 10px;
+          font-family: sans-serif;
+        }
+
+        .sb-product-name {
+          font-size: 14px;
+          font-weight: 700;
+          color: #1A1714;
+          line-height: 1.3;
+          margin: 0 0 4px;
+          font-family: sans-serif;
+        }
+
+        .sb-product-price {
+          display: block;
+          font-size: 13px;
+          font-weight: 700;
+          color: #B8955A;
+          margin-bottom: 12px;
+          font-family: sans-serif;
+        }
+
+        .sb-cta {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #1D3A2F;
+          color: #FDFAF6;
+          text-align: center;
+          padding: 13px 16px;
+          border-radius: 100px;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          text-decoration: none;
+          min-height: 48px;
+          transition: background 0.2s;
+        }
+
+        .sb-cta:hover { background: #0D1F18; }
+
+        /* Sidebar newsletter */
+        .sb-newsletter {
+          background: #F7F4EF;
+          border-radius: 12px;
+          padding: 16px;
+          font-family: sans-serif;
+        }
+
+        .sb-nl-title {
+          font-size: 14px;
+          font-weight: 700;
+          color: #1A1714;
+          margin: 0 0 4px;
+        }
+
+        .sb-nl-sub {
+          font-size: 12px;
+          color: #6B6557;
+          line-height: 1.5;
+          margin: 0 0 10px;
+        }
+
+        .sb-nl-form {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .sb-nl-input {
+          width: 100%;
+          padding: 9px 12px;
+          border: 1px solid #EEE9E2;
+          border-radius: 8px;
+          font-size: 13px;
+          color: #1A1714;
+          background: #fff;
+          box-sizing: border-box;
+          min-height: 44px;
+          font-family: inherit;
+        }
+
+        .sb-nl-input:focus { outline: none; border-color: #B8955A; }
+
+        .sb-nl-btn {
+          background: #1D3A2F;
+          color: #FDFAF6;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 10px 14px;
+          border-radius: 8px;
+          border: none;
+          cursor: pointer;
+          font-family: inherit;
+          min-height: 44px;
+          letter-spacing: 0.04em;
+          transition: background 0.2s;
+        }
+
+        .sb-nl-btn:hover { background: #0D1F18; }
+
+        .sb-nl-success {
+          font-size: 13px;
+          color: #1D3A2F;
+          font-weight: 600;
+          margin: 0;
+        }
+
+        /* Sidebar quiz */
+        .sb-quiz {
+          background: linear-gradient(135deg, #1D3A2F, #2c5a47);
+          border-radius: 12px;
+          padding: 16px;
+          font-family: sans-serif;
+          color: #FDFAF6;
+        }
+
+        .sb-quiz-title {
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 1.35;
+          margin: 0 0 4px;
+        }
+
+        .sb-quiz-sub {
+          font-size: 11px;
+          opacity: 0.75;
+          margin: 0 0 10px;
+        }
+
+        .sb-quiz-cta {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #B8955A;
+          color: #fff;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 8px 12px;
+          border-radius: 8px;
+          text-decoration: none;
+          min-height: 44px;
+          transition: opacity 0.2s;
+        }
+
+        .sb-quiz-cta:hover { opacity: 0.88; }
+
+        /* ── Mobile Sticky Bar ── */
+        .mobile-sticky-bar {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .mobile-sticky-bar {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #1A1714;
+            padding: 10px 16px;
+            padding-bottom: calc(10px + env(safe-area-inset-bottom));
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            min-height: 56px;
+          }
+        }
+
+        .mobile-bar-info { overflow: hidden; }
+
+        .mobile-bar-label {
+          font-size: 10px;
+          color: rgba(255,255,255,0.5);
+          font-family: sans-serif;
+          margin: 0 0 2px;
+        }
+
+        .mobile-bar-name {
+          font-size: 13px;
+          font-weight: 700;
+          color: #FDFAF6;
+          font-family: sans-serif;
+          margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 200px;
+        }
+
+        .mobile-bar-cta {
+          background: #B8955A;
+          color: #fff;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 10px 18px;
+          border-radius: 100px;
+          text-decoration: none;
+          white-space: nowrap;
+          min-height: 44px;
+          min-width: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          margin-left: 12px;
+        }
       `}</style>
     </div>
   )
