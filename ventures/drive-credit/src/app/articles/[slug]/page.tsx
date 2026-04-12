@@ -547,25 +547,40 @@ export default async function ArticleDetailPage({
         </div>
       </div>
 
-      {/* ── Article Body ──────────────────────────────────────────────── */}
-      <main
-        style={{
-          maxWidth: '680px',
-          margin: '0 auto',
-          padding: '0 clamp(20px, 5vw, 40px) clamp(60px, 8vw, 100px)',
-        }}
-      >
-        {affiliateBodyHtml ? (
-          <div
-            className="article-body affiliate-body"
-            dangerouslySetInnerHTML={{ __html: affiliateBodyHtml }}
-          />
-        ) : isGlassSkin ? (
-          <GlassSkinBody />
-        ) : (
-          <FallbackBody article={article} />
-        )}
-      </main>
+      {/* ── Article Body + Sidebar ─────────────────────────────────────── */}
+      <div className="article-layout-wrapper">
+        <main className="article-main">
+          {affiliateBodyHtml ? (
+            <div
+              className="article-body affiliate-body"
+              dangerouslySetInnerHTML={{ __html: affiliateBodyHtml }}
+            />
+          ) : isGlassSkin ? (
+            <GlassSkinBody />
+          ) : (
+            <FallbackBody article={article} />
+          )}
+        </main>
+        <ArticleSidebar topProduct={topProduct} category={article.category} />
+      </div>
+
+      {/* ── Mobile Sticky Bar ─────────────────────────────────────────── */}
+      {topProduct && (
+        <div className="mobile-sticky-bar">
+          <div className="mobile-bar-info">
+            <p className="mobile-bar-label">Top Pick</p>
+            <p className="mobile-bar-name">{topProduct.name}</p>
+          </div>
+          <a
+            href={topProduct.link}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="mobile-bar-cta"
+          >
+            Check Price
+          </a>
+        </div>
+      )}
 
       {/* ── Related Articles ──────────────────────────────────────────── */}
       {related.length > 0 && (
