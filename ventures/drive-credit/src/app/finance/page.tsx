@@ -7,7 +7,7 @@ import { getProductsByCategory } from '@/lib/lifestyle/products'
 import CategoryEditorial from '@/components/lifestyle/CategoryEditorial'
 import CarCalculator from '@/components/CarCalculator'
 import { OFFERS, buildAffiliateUrl } from '@/lib/offers'
-import NavBar from '@/components/NavBar'
+import LifestyleNav from '@/components/lifestyle/LifestyleNav'
 import LifestyleFooter from '@/components/lifestyle/LifestyleFooter'
 import { NextIntlClientProvider } from 'next-intl'
 import enMessages from '../../../messages/en.json'
@@ -110,7 +110,9 @@ export default function FinancePage() {
     <div
       style={{ background: '#FDFAF6', color: '#1A1714', overflowX: 'hidden' }}
     >
-      <NavBar />
+      <NextIntlClientProvider locale="en" messages={enMessages} now={new Date()} timeZone="UTC" formats={{}}>
+        <LifestyleNav />
+      </NextIntlClientProvider>
       {/* ── Finance Hero ──────────────────────────────────────────────── */}
       <section
         style={{
