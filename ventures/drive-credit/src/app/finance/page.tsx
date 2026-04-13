@@ -8,6 +8,9 @@ import CategoryEditorial from '@/components/lifestyle/CategoryEditorial'
 import CarCalculator from '@/components/CarCalculator'
 import { OFFERS, buildAffiliateUrl } from '@/lib/offers'
 import NavBar from '@/components/NavBar'
+import LifestyleFooter from '@/components/lifestyle/LifestyleFooter'
+import { NextIntlClientProvider } from 'next-intl'
+import enMessages from '../../../messages/en.json'
 
 const YENDO_FINANCE_CALC = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'seo', 'finance-calculator')
 const SLAM_DUNK_FINANCE  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'finance-calculator')
@@ -1265,6 +1268,9 @@ export default function FinancePage() {
           }
         }
       `}</style>
+      <NextIntlClientProvider locale="en" messages={enMessages} now={new Date()} timeZone="UTC" formats={{}}>
+        <LifestyleFooter />
+      </NextIntlClientProvider>
     </div>
   )
 }
