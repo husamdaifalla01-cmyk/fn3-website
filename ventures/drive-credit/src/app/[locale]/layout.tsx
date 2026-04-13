@@ -3,7 +3,7 @@ export const dynamic = 'force-dynamic'
 import { Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { hasLocale } from 'next-intl'
 import LifestyleNav from '@/components/lifestyle/LifestyleNav'
@@ -114,6 +114,7 @@ export default async function LocaleLayout({
     notFound()
   }
 
+  setRequestLocale(locale)
   const messages = await getMessages()
   const lang = LOCALE_LANG[locale] ?? 'en'
 
