@@ -42,20 +42,7 @@ jobs:
           # Copy public/ files (images, fonts, etc.) into assets root
           cp -r public/. .open-next/assets/
           # Tell Cloudflare Pages to serve static files directly (bypass Worker)
-          python3 -c "
-import json
-routes = {
-  'version': 1,
-  'include': ['/*'],
-  'exclude': [
-    '/_next/static/*','/_next/image*','/favicon.ico','/robots.txt','/sitemap.xml',
-    '/*.jpg','/*.jpeg','/*.png','/*.gif','/*.webp','/*.svg','/*.ico',
-    '/*.mp4','/*.mp3','/*.woff','/*.woff2','/*.ttf',
-    '/products/*','/articles/*','/lifestyle/*'
-  ]
-}
-open('.open-next/assets/_routes.json','w').write(json.dumps(routes))
-"
+          echo '{"version":1,"include":["/*"],"exclude":["/_next/static/*","/_next/image*","/favicon.ico","/robots.txt","/sitemap.xml","/*.jpg","/*.jpeg","/*.png","/*.gif","/*.webp","/*.svg","/*.ico","/*.mp4","/*.mp3","/*.woff","/*.woff2","/*.ttf","/products/*","/articles/*","/lifestyle/*"]}' > .open-next/assets/_routes.json
 
       - name: Deploy to Cloudflare Pages
         working-directory: ventures/drive-credit
