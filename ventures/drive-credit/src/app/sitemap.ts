@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { ARTICLES } from '@/lib/lifestyle/articles'
 import { routing } from '@/i18n/routing'
+import fs from 'fs'
+import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://mintbrooks.com'
@@ -35,51 +37,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/finance/personal-loans-up-to-50k',
   ]
 
-  // Static editorial articles in /public/articles/editorial/
-  const editorialSlugs = [
-    'affordable-art-prints', 'bedroom-feel-expensive', 'build-credit-bad-credit',
-    'build-credit-from-scratch', 'candle-warmer-lamp', 'cast-iron-skillet-guide',
-    'clean-beauty-explained', 'coffee-bar-setup', 'coffee-table-styling',
-    'cotton-throw-blankets', 'credit-utilization-explained', 'diffuser-oil-combinations',
-    'hatch-alarm-clock-review', 'kitchen-knives-guide', 'kitchen-organization',
-    'linen-vs-cotton-bedding', 'meal-prep-containers', 'morning-rituals',
-    'pour-over-vs-french-press', 'retinol-mistakes', 'secured-vs-unsecured-cards',
-    'shelf-decor-321-rule', 'skincare-routine-sensitive-skin', 'sleep-routine-vs-supplements',
-    'spf-moisturizer-vs-sunscreen', 'use-credit-card-responsibly', 'vitamin-c-serum-review',
-    'weighted-blankets-guide', 'what-is-credit-score',
-  ]
-
-  // Static affiliate articles in /public/articles/affiliate/
-  const affiliateSlugs = [
-    'anova-nano-vs-inkbird-isv-100w-sous-vide-comparison', 'best-air-fryer-small-spaces',
-    'best-anti-aging-serum', 'best-anti-aging-serum-beginners-budget',
-    'best-anti-aging-serums-2024', 'best-anti-aging-serums-for-beginners',
-    'best-birthday-gifts-women-under-40', 'best-birthday-self-care-packages-women',
-    'best-budget-drip-irrigation-kits', 'best-budget-friendly-eyeshadow-palettes-under-50',
-    'best-chunky-knit-throw-blanket-under-50', 'best-clean-beauty-foundation-for-beginners',
-    'best-clean-beauty-gifts-under-50-travel-luxury', 'best-clean-beauty-products-under-35',
-    'best-clean-liquid-foundation', 'best-compact-budget-air-fryer-small-kitchen',
-    'best-dark-spot-corrector-serum-under-50', 'best-drip-irrigation-kits',
-    'best-drip-irrigation-system', 'best-everyday-eyeshadow-palette',
-    'best-eyeshadow-palette-under-30', 'best-eyeshadow-palette-under-50',
-    'best-garden-tool-set-for-women', 'best-garden-tool-set-for-women-gifts',
-    'best-garden-tool-sets-for-women', 'best-get-well-soon-gift-basket',
-    'best-get-well-soon-gift-baskets', 'best-hair-bonding-oil-olaplex-7-review',
-    'best-hair-gloss-glass-hair-trend', 'best-large-sous-vide-container-family-meal-prep',
-    'best-linen-bedding-sets', 'best-linen-duvet-cover-sets-luxury-budget',
-    'best-luxury-hair-products-under-40', 'best-neutral-eyeshadow-palette',
-    'best-self-care-gift-baskets-women', 'best-serum-for-dark-spots',
-    'best-serums-dark-spots-brightening-enlarged-pores-2024', 'best-skincare-serums-under-50',
-    'best-sous-vide-machine-review', 'best-vintage-self-care-gift-basket',
-    'best-vintage-self-care-gift-baskets', 'best-waffle-duvet-cover-queen',
-    'best-waffle-duvet-cover-queen-aesthetic',
-    'clean-beauty-foundation-comparison-harvest-natural-beauty-jerome-alexander-clinique-bareminerals',
-    'clean-foundation-for-beginners', 'drip-irrigation-kit-comparison',
-    'harvest-natural-beauty-vs-jerome-alexander-foundation-beginners',
-    'kerastase-kenra-glass-hair-showdown', 'kerastase-nutritive-8h-magic-night-serum-review',
-    'la-roche-posay-vitamin-c-vs-retinol', 'sous-vide-accessories-large-batches',
-    'too-faced-born-this-way-vs-tarte-tartelette-in-bloom', 'vitamin-c-vs-niacinamide-for-skin',
-  ]
+  // Dynamic — reads /public/articles/* at build time, always up to date
+  const publicDir = path.join(process.cwd(), 'public', 'articles')
+  const editorialSlugs = fs.existsSync(path.join(publicDir, 'editorial'))
+    ? fs.readdirSync(path.join(publicDir, 'editorial'))
+        .filter(f => f.endsWith('.html'))
+        .map(f => f.replace('.html', ''))
+    : []
+  const affiliateSlugs = fs.existsSync(path.join(publicDir, 'affiliate'))
+    ? fs.readdirSync(path.join(publicDir, 'affiliate'))
+        .filter(f => fs.statSync(path.join(publicDir, 'affiliate', f)).isDirectory())
+    : []
 
   const articleSlugs = ARTICLES.map((a) => `/articles/${a.slug}`)
 
