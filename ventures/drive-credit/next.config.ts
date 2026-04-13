@@ -5,7 +5,9 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 
 const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
+  turbopack: {
+    root: __dirname,
+  },
   images: {
     unoptimized: true, // required for Cloudflare Pages
     remotePatterns: [
@@ -17,7 +19,6 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   async redirects() {
-<<<<<<< HEAD
     const lifestyleRedirects = [
       'beauty', 'home-decor', 'kitchen', 'wellness', 'search',
       'privacy', 'terms', 'about', 'articles', 'finance',
@@ -52,11 +53,6 @@ const nextConfig: NextConfig = {
       { source: '/lifestyle', destination: '/', permanent: true },
       { source: '/tiktok', destination: '/finance/links', permanent: false },
       { source: '/finance/yendo-review', destination: '/finance/yendo-credit-card-review', permanent: true },
-=======
-    return [
-      // Strip explicit /en prefix — canonical English is at root
-      { source: '/en/:path*', destination: '/:path*', permanent: true },
->>>>>>> 948d338b86deee06a6a32a25259fb4ac69e61941
     ]
   },
 }
