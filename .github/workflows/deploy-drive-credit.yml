@@ -42,7 +42,7 @@ jobs:
           # Copy public/ files (images, fonts, etc.) into assets root
           cp -r public/. .open-next/assets/
           # Tell Cloudflare Pages to serve static files directly (bypass Worker)
-          echo '{"version":1,"include":["/*"],"exclude":["/_next/static/*","/_next/image*","/favicon.ico","/robots.txt","/sitemap.xml","/*.jpg","/*.jpeg","/*.png","/*.gif","/*.webp","/*.svg","/*.ico","/*.mp4","/*.mp3","/*.woff","/*.woff2","/*.ttf","/articles/*","/lifestyle/*"]}' > .open-next/assets/_routes.json
+          echo '{"version":1,"include":["/*"],"exclude":["/_next/static/*","/_next/image*","/favicon.ico","/robots.txt","/sitemap.xml","/*.txt","/*.jpg","/*.jpeg","/*.png","/*.gif","/*.webp","/*.svg","/*.ico","/*.mp4","/*.mp3","/*.woff","/*.woff2","/*.ttf","/articles/*","/lifestyle/*"]}' > .open-next/assets/_routes.json
 
       - name: Deploy to Cloudflare Pages
         working-directory: ventures/drive-credit
@@ -50,3 +50,23 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: cefaf46df9642a046481c8c6d7879cb9
+
+      - name: Ping IndexNow (Bing)
+        run: |
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host": "mintbrooks.com",
+              "key": "338e4f9275e14f2880a23aae2ef100dc",
+              "keyLocation": "https://mintbrooks.com/338e4f9275e14f2880a23aae2ef100dc.txt",
+              "urlList": [
+                "https://mintbrooks.com/",
+                "https://mintbrooks.com/articles",
+                "https://mintbrooks.com/beauty",
+                "https://mintbrooks.com/wellness",
+                "https://mintbrooks.com/home-decor",
+                "https://mintbrooks.com/kitchen",
+                "https://mintbrooks.com/finance",
+                "https://mintbrooks.com/sitemap.xml"
+              ]
+            }' || true
