@@ -115,7 +115,19 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale)
-  const messages = await getMessages({ locale })
+  let messages: Awaited<ReturnType<typeof getMessages>>
+  try {
+    messages = await getMessages({ locale })
+  } catch (e) {
+    const err = e as Error
+    return (
+      <html lang="en"><body>
+        <pre style={{ padding: '40px' }}>
+          getMessages error: {err.message}{'\n'}{err.stack}
+        </pre>
+      </body></html>
+    )
+  }
   const lang = LOCALE_LANG[locale] ?? 'en'
 
   return (
