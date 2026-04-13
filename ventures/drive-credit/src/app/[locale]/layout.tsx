@@ -96,6 +96,9 @@ export async function generateMetadata({
     keywords: 'lifestyle blog, home decor, wellness, beauty, kitchen, credit building, curated finds',
     metadataBase: new URL(SITE_URL),
     alternates,
+    other: {
+      'p:domain_verify': 'e8324e340ff49d09cff7b317a9211b3d',
+    },
     openGraph: {
       title: 'Mintbrooks — The Good Life, Curated',
       description: 'Home. Wellness. Beauty. Kitchen. And the financial foundation to build it all.',
