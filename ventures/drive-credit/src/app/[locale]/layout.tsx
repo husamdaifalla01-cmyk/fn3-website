@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
