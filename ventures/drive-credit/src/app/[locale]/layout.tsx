@@ -1,9 +1,6 @@
-export const dynamic = 'force-dynamic'
-
 import { Playfair_Display } from 'next/font/google'
 import Script from 'next/script'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, setRequestLocale } from 'next-intl/server'
 import { notFound } from 'next/navigation'
 import { hasLocale } from 'next-intl'
 import LifestyleNav from '@/components/lifestyle/LifestyleNav'
@@ -12,6 +9,46 @@ import type { Metadata } from 'next'
 import { routing } from '@/i18n/routing'
 import { buildHreflangAlternates } from '@/lib/i18n/hreflang'
 import '../globals.css'
+
+// Static imports — esbuild bundles all locales into the Worker at build time
+import enMessages from '../../../messages/en.json'
+import enCAMessages from '../../../messages/en-CA.json'
+import enGBMessages from '../../../messages/en-GB.json'
+import frMessages from '../../../messages/fr.json'
+import deMessages from '../../../messages/de.json'
+import esMessages from '../../../messages/es.json'
+import itMessages from '../../../messages/it.json'
+import nlMessages from '../../../messages/nl.json'
+import plMessages from '../../../messages/pl.json'
+import svMessages from '../../../messages/sv.json'
+
+type Messages = Record<string, unknown>
+
+const MESSAGE_MAP: Record<string, Messages> = {
+  'en': enMessages, 'en-CA': enCAMessages, 'en-GB': enGBMessages,
+  'fr': frMessages, 'de': deMessages, 'es': esMessages,
+  'it': itMessages, 'nl': nlMessages, 'pl': plMessages, 'sv': svMessages,
+}
+
+function deepMerge(base: Messages, override: Messages): Messages {
+  const result = { ...base }
+  for (const key of Object.keys(override)) {
+    if (typeof override[key] === 'object' && override[key] !== null &&
+        typeof base[key] === 'object' && base[key] !== null) {
+      result[key] = deepMerge(base[key] as Messages, override[key] as Messages)
+    } else {
+      result[key] = override[key]
+    }
+  }
+  return result
+}
+
+function getLocaleMessages(locale: string): Messages {
+  if (locale === 'en-CA' || locale === 'en-GB') {
+    return deepMerge(enMessages, MESSAGE_MAP[locale])
+  }
+  return MESSAGE_MAP[locale] ?? enMessages
+}
 
 const playfair = Playfair_Display({
   subsets: ['latin', 'latin-ext'],
@@ -114,20 +151,7 @@ export default async function LocaleLayout({
     notFound()
   }
 
-  setRequestLocale(locale)
-  let messages: Awaited<ReturnType<typeof getMessages>>
-  try {
-    messages = await getMessages({ locale })
-  } catch (e) {
-    const err = e as Error
-    return (
-      <html lang="en"><body>
-        <pre style={{ padding: '40px' }}>
-          getMessages error: {err.message}{'\n'}{err.stack}
-        </pre>
-      </body></html>
-    )
-  }
+  const messages = getLocaleMessages(locale)
   const lang = LOCALE_LANG[locale] ?? 'en'
 
   return (
