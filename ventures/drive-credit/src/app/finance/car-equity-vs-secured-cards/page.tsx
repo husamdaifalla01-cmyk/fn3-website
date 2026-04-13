@@ -313,9 +313,9 @@ export default function Page() {
         <div className="rounded-xl p-5 mb-10" style={{ background: '#fef9ee', border: '1px solid rgba(217,119,6,0.15)' }}>
           <div className="font-bold text-sm mb-3" style={{ color: '#1c1917' }}>Related Guides</div>
           <div className="flex flex-wrap gap-3 text-sm">
-            <Link href="/how-it-works" className="underline hover:text-amber-700 transition-colors" style={{ color: '#d97706' }}>How Car-Secured Credit Works</Link>
+            <Link href="/finance/how-it-works" className="underline hover:text-amber-700 transition-colors" style={{ color: '#d97706' }}>How Car-Secured Credit Works</Link>
             <Link href="/bad-credit-credit-card" className="underline hover:text-amber-700 transition-colors" style={{ color: '#d97706' }}>Best Cards for Bad Credit</Link>
-            <Link href="/calculator" className="underline hover:text-amber-700 transition-colors" style={{ color: '#d97706' }}>Credit Line Estimator</Link>
+            <Link href="/finance/calculator" className="underline hover:text-amber-700 transition-colors" style={{ color: '#d97706' }}>Credit Line Estimator</Link>
           </div>
         </div>
 

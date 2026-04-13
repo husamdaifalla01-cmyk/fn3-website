@@ -330,7 +330,7 @@ export default function HowToBuildCreditBadCreditPage() {
           <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>Check if your car qualifies for a credit card — no credit score impact.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <AffiliateLink href={YENDO_BUILD_CREDIT_CTA} placement="build-credit-guide-cta" className="btn-primary py-3 px-6">Check Car Eligibility →</AffiliateLink>
-            <Link href="/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator</Link>
+            <Link href="/finance/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator</Link>
           </div>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate links · Soft inquiry · Mintbrooks is not a lender</p>
         </div>
@@ -344,7 +344,7 @@ export default function HowToBuildCreditBadCreditPage() {
               { href: '/car-equity-credit-card-reviews', label: 'Car Equity Credit Card Reviews' },
               { href: '/yendo-credit-card-review', label: 'Yendo Credit Card Review — Full Breakdown' },
               { href: '/credit-card-500-credit-score', label: 'Credit Cards for 500 Credit Score' },
-              { href: '/calculator', label: 'Free Car Equity Calculator' },
+              { href: '/finance/calculator', label: 'Free Car Equity Calculator' },
             ].map(link => (
               <Link key={link.href} href={link.href} className="block text-sm hover:text-amber-700 transition-colors" style={{ color: '#78716c' }}>
                 → {link.label}

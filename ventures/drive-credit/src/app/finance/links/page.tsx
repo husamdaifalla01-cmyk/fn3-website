@@ -71,7 +71,7 @@ export default function LinksPage() {
 
           {/* SECONDARY: Calculator */}
           <Link
-            href="/calculator"
+            href="/finance/calculator"
             className="block w-full text-center text-base py-4 font-semibold"
             style={{
               background: 'rgba(255,255,255,0.08)',
@@ -86,7 +86,7 @@ export default function LinksPage() {
 
           {/* Guide links */}
           <Link
-            href="/how-it-works"
+            href="/finance/how-it-works"
             className="block w-full text-center text-sm py-3.5 font-medium"
             style={{
               background: 'rgba(217,119,6,0.1)',

@@ -278,7 +278,7 @@ export default function YendoCreditCardReviewPage() {
           <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>Soft inquiry — no credit score impact. Takes under 5 minutes.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <AffiliateLink href={YENDO_REVIEW_CTA} placement="yendo-review-cta" className="btn-primary py-3 px-6">Check If My Car Qualifies →</AffiliateLink>
-            <Link href="/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator First</Link>
+            <Link href="/finance/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator First</Link>
           </div>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate links · Soft inquiry · Mintbrooks is not a lender</p>
         </div>
@@ -292,7 +292,7 @@ export default function YendoCreditCardReviewPage() {
               { href: '/car-equity-credit-card-reviews', label: 'Car Equity Credit Card Reviews — Full Category Guide' },
               { href: '/bad-credit-credit-card', label: 'Best Credit Cards for Bad Credit (2026)' },
               { href: '/how-to-build-credit-with-bad-credit', label: 'How to Build Credit with Bad Credit' },
-              { href: '/calculator', label: 'Free Car Equity Calculator' },
+              { href: '/finance/calculator', label: 'Free Car Equity Calculator' },
               { href: '/credit-card-500-credit-score', label: 'Credit Cards for 500 Credit Score' },
             ].map(link => (
               <Link key={link.href} href={link.href} className="block text-sm hover:text-amber-700 transition-colors" style={{ color: '#78716c' }}>

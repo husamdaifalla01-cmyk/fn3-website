@@ -1,9 +1,6 @@
 
 import { NextRequest, NextResponse } from 'next/server'
-
-// TODO: install `svix` package (`npm install svix`) and uncomment the import
-// below to enable proper Resend webhook signature verification.
-// import { Webhook } from 'svix'
+import { Webhook } from 'svix'
 
 // ── Types ────────────────────────────────────────────────────────────────────
 
@@ -55,13 +52,9 @@ function runPython(_args: string[]): Promise<{ ok: boolean; data: unknown }> {
 }
 
 // ── Signature verification ────────────────────────────────────────────────────
-// svix is not yet installed. This performs a basic presence check on the
-// required Svix headers so that unsigned requests without any headers are
-// rejected in production. Replace with the real `Webhook.verify()` call once
-// `svix` is added to package.json.
 
 function verifySvixSignature(
-  _payload: string,
+  payload: string,
   headers: { id: string; timestamp: string; signature: string },
   secret: string | undefined,
 ): boolean {
@@ -73,12 +66,16 @@ function verifySvixSignature(
   if (!headers.id || !headers.timestamp || !headers.signature) {
     return false
   }
-  // TODO: replace the three lines below with real svix verification:
-  //   import { Webhook } from 'svix'
-  //   const wh = new Webhook(secret)
-  //   wh.verify(payload, { 'svix-id': headers.id, 'svix-timestamp': headers.timestamp, 'svix-signature': headers.signature })
-  console.warn('[email/webhook] svix package not installed — headers present but signature not cryptographically verified')
-  return true
+  try {
+    new Webhook(secret).verify(payload, {
+      'svix-id':        headers.id,
+      'svix-timestamp': headers.timestamp,
+      'svix-signature': headers.signature,
+    })
+    return true
+  } catch {
+    return false
+  }
 }
 
 // ── Route handler ─────────────────────────────────────────────────────────────

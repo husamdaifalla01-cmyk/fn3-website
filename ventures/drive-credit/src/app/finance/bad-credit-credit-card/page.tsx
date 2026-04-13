@@ -98,7 +98,7 @@ export default function BadCreditPage() {
           <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>No credit score requirement. No deposit. Check eligibility in under 5 minutes.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <AffiliateLink href={YENDO_BAD_CREDIT_CTA} placement="bad-credit-guide-cta" className="btn-primary py-3 px-6">Check Car Eligibility →</AffiliateLink>
-            <Link href="/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator</Link>
+            <Link href="/finance/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator</Link>
           </div>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate links · Soft inquiry · Mintbrooks is not a lender</p>
         </div>

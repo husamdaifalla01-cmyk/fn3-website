@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 import { trackAffiliateClick } from '@/lib/analytics'
 
 interface HeroProps {
@@ -47,13 +48,13 @@ export default function HeroSection({ yendoUrl, calculatorHref }: HeroProps) {
               >
                 🚗 Car-Secured Credit
               </span>
-              <a
-                href="#disclosure"
+              <Link
+                href="/finance/links"
                 className="text-xs underline-offset-2 underline"
                 style={{ color: 'rgba(255,255,255,0.28)' }}
               >
                 Affiliate resource
-              </a>
+              </Link>
             </div>
 
             {/* Headline — 2-second skim */}

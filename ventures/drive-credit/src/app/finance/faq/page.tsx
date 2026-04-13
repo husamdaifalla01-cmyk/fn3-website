@@ -171,7 +171,7 @@ export default function FAQPage() {
           <h2 className="text-lg font-black mb-4" style={{ color: '#fafaf9' }}>Related Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { href: '/how-it-works', label: 'How Car-Secured Credit Works' },
+              { href: '/finance/how-it-works', label: 'How Car-Secured Credit Works' },
               { href: '/bad-credit-credit-card', label: 'Best Credit Cards for Bad Credit' },
               { href: '/yendo-review', label: 'Yendo Card Review 2026' },
               { href: '/how-to-rebuild-credit', label: 'How to Rebuild Credit (Step-by-Step)' },

@@ -25,7 +25,7 @@ export default function NavBar() {
           </span>
         </div>
         <div className="flex items-center gap-5 text-sm" style={{ color: '#78716c' }}>
-          <Link href="/calculator" className="hover:text-amber-700 transition-colors hidden md:block">Estimator</Link>
+          <Link href="/finance/calculator" className="hover:text-amber-700 transition-colors hidden md:block">Estimator</Link>
           <Link href="/bad-credit-credit-card" className="hover:text-amber-700 transition-colors hidden md:block">Bad Credit Guide</Link>
           <a
             href={YENDO_NAV}

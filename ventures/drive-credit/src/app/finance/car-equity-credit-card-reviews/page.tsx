@@ -233,7 +233,7 @@ export default function CarEquityCreditCardReviewsPage() {
           ))}
         </div>
         <p className="mb-8 text-sm leading-relaxed" style={{ color: '#a8a29e' }}>
-          These are illustrative estimates only. Actual credit lines are determined by the issuer based on their proprietary valuation and underwriting criteria. Use our <Link href="/calculator" className="underline hover:text-amber-700">free car equity calculator</Link> for a rough estimate.
+          These are illustrative estimates only. Actual credit lines are determined by the issuer based on their proprietary valuation and underwriting criteria. Use our <Link href="/finance/calculator" className="underline hover:text-amber-700">free car equity calculator</Link> for a rough estimate.
         </p>
 
         <h2 className="text-2xl font-black mb-4" style={{ color: '#1c1917', letterSpacing: '-0.01em' }}>What Happens If You Miss Payments?</h2>
@@ -300,7 +300,7 @@ export default function CarEquityCreditCardReviewsPage() {
           <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>Check your eligibility in under 5 minutes. Soft inquiry — no credit score impact.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <AffiliateLink href={YENDO_CAR_EQUITY_REVIEW_CTA} placement="car-equity-review-cta" className="btn-primary py-3 px-6">Check Car Eligibility →</AffiliateLink>
-            <Link href="/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator</Link>
+            <Link href="/finance/calculator" className="btn-primary py-3 px-6" style={{ background: '#059669' }}>Use Free Calculator</Link>
           </div>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate links · Soft inquiry · Mintbrooks is not a lender</p>
         </div>
@@ -313,7 +313,7 @@ export default function CarEquityCreditCardReviewsPage() {
               { href: '/yendo-credit-card-review', label: 'Yendo Credit Card Review — Full Breakdown' },
               { href: '/bad-credit-credit-card', label: 'Best Credit Cards for Bad Credit (2026)' },
               { href: '/how-to-build-credit-with-bad-credit', label: 'How to Build Credit with Bad Credit — Step by Step' },
-              { href: '/calculator', label: 'Free Car Equity Calculator' },
+              { href: '/finance/calculator', label: 'Free Car Equity Calculator' },
               { href: '/use-car-as-collateral', label: 'How to Use Your Car as Collateral for a Credit Card' },
             ].map(link => (
               <Link key={link.href} href={link.href} className="block text-sm hover:text-amber-700 transition-colors" style={{ color: '#78716c' }}>
