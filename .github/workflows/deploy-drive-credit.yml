@@ -1,0 +1,39 @@
+name: Deploy drive-credit to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ventures/drive-credit/**'
+      - '.github/workflows/deploy-drive-credit.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: ventures/drive-credit/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ventures/drive-credit
+        run: npm ci
+
+      - name: Build with OpenNext
+        working-directory: ventures/drive-credit
+        run: npx @opennextjs/cloudflare build
+
+      - name: Deploy to Cloudflare Pages
+        working-directory: ventures/drive-credit
+        run: npx wrangler pages deploy .open-next/assets --project-name=drive-credit --branch=main --commit-dirty=true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: cefaf46df9642a046481c8c6d7879cb9
