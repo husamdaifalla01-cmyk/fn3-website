@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // ─── Stripe payment link ─────────────────────────────────────────────────────
-// TODO: replace this placeholder once the Stripe Payment Link is created
 const STRIPE_URL = 'https://buy.stripe.com/14AbJ10u5c6McBb6Fa08g01'
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
