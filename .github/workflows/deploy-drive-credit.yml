@@ -31,6 +31,13 @@ jobs:
         working-directory: ventures/drive-credit
         run: npx @opennextjs/cloudflare build
 
+      - name: Prepare deployment bundle
+        working-directory: ventures/drive-credit
+        run: |
+          cp .open-next/worker.js .open-next/assets/_worker.js
+          cp -r .open-next/.build .open-next/assets/
+          cp -r .open-next/server-functions .open-next/assets/
+
       - name: Deploy to Cloudflare Pages
         working-directory: ventures/drive-credit
         run: npx wrangler pages deploy .open-next/assets --project-name=drive-credit --branch=main --commit-dirty=true
