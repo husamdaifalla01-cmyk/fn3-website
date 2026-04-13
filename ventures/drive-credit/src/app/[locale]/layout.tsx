@@ -180,7 +180,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages} now={new Date()} timeZone="UTC" formats={{}}>
           <LifestyleNav />
           {children}
           <LifestyleFooter />
