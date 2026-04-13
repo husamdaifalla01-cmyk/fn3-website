@@ -34,9 +34,11 @@ jobs:
       - name: Prepare deployment bundle
         working-directory: ventures/drive-credit
         run: |
+          # Copy all worker dependencies into assets/ so wrangler can bundle them
           cp .open-next/worker.js .open-next/assets/_worker.js
-          cp -r .open-next/.build .open-next/assets/
-          cp -r .open-next/server-functions .open-next/assets/
+          find .open-next -maxdepth 1 -mindepth 1 \
+            ! -name assets ! -name worker.js \
+            -exec cp -r {} .open-next/assets/ \;
 
       - name: Deploy to Cloudflare Pages
         working-directory: ventures/drive-credit
