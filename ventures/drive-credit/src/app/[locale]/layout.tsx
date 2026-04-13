@@ -115,7 +115,7 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale)
-  const messages = await getMessages()
+  const messages = await getMessages({ locale })
   const lang = LOCALE_LANG[locale] ?? 'en'
 
   return (
@@ -142,7 +142,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <LifestyleNav />
           {children}
           <LifestyleFooter />
