@@ -1,8 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/page": "app/page.js",
-  "/guides/ai-agency-pricing/page": "app/guides/ai-agency-pricing/page.js",
-  "/compare/page": "app/compare/page.js",
-  "/guides/ai-automation-agency/page": "app/guides/ai-automation-agency/page.js"
-}
