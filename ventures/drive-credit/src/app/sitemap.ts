@@ -35,6 +35,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/finance/build-credit-with-your-car',
     '/finance/debt-consolidation-check',
     '/finance/personal-loans-up-to-50k',
+    '/finance/car-equity-loan-requirements',
+    '/finance/what-credit-score-do-you-need-for-a-credit-card',
+    '/finance/links',
   ]
 
   // Dynamic — reads /public/articles/* at build time, always up to date
