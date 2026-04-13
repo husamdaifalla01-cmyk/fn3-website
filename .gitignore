@@ -1,6 +1,5 @@
 node_modules
 ventures/lexikit/
-<<<<<<< HEAD
 
 # Environment files — never commit real credentials
 .env
@@ -12,5 +11,3 @@ ventures/lexikit/
 # Vercel (no longer used)
 vercel.json
 .vercel/
-=======
->>>>>>> 948d338b86deee06a6a32a25259fb4ac69e61941
