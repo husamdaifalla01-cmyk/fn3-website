@@ -562,6 +562,7 @@ type TrendingBook = {
   isbn: string
   amazonUrl: string
   tag: string
+  coverUrl?: string
 }
 
 const TRENDING: TrendingBook[] = [
@@ -578,6 +579,7 @@ const TRENDING: TrendingBook[] = [
     isbn: '9781953953247',
     amazonUrl: 'https://www.amazon.com/dp/B0CMDK1ZHD?tag=mintbrooks-20',
     tag: 'Investing',
+    coverUrl: 'https://covers.openlibrary.org/b/id/8337563-L.jpg',
   },
   {
     title: 'Principles',
@@ -620,6 +622,7 @@ const TRENDING: TrendingBook[] = [
     isbn: '9781668089552',
     amazonUrl: 'https://www.amazon.com/dp/B0C7Y68VWT?tag=mintbrooks-20',
     tag: 'Ideas',
+    coverUrl: 'https://covers.openlibrary.org/b/id/15038381-L.jpg',
   },
   {
     title: 'Atomic Habits',
@@ -740,7 +743,7 @@ export default async function ReadingListPage() {
   const allBooks = SECTIONS.flatMap((s) => s.books)
   const [curatedUrls, trendingUrls] = await Promise.all([
     Promise.all(allBooks.map((b) => fetchCoverUrl(b.isbn))),
-    Promise.all(TRENDING.map((b) => fetchCoverUrl(b.isbn))),
+    Promise.all(TRENDING.map((b) => b.coverUrl ? Promise.resolve(b.coverUrl) : fetchCoverUrl(b.isbn))),
   ])
   const coverMap: Record<string, string> = {}
   allBooks.forEach((book, i) => { coverMap[book.isbn] = curatedUrls[i] })
