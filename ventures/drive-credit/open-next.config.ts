@@ -12,9 +12,6 @@ const config: OpenNextConfig = {
     },
   },
   edgeExternals: ['node:crypto'],
-  middleware: {
-    external: false,
-  },
 }
 
 export default config
