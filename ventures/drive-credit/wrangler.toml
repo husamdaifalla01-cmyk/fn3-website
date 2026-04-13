@@ -5,6 +5,3 @@ compatibility_flags = ["nodejs_compat"]
 # @opennextjs/cloudflare outputs to .open-next/
 pages_build_output_dir = ".open-next/assets"
 
-[[kv_namespaces]]
-binding = "NEXT_CACHE_WORKERS_KV"
-id = "PLACEHOLDER_KV_ID"
