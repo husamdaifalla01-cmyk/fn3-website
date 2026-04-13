@@ -39,6 +39,8 @@ jobs:
           find .open-next -maxdepth 1 -mindepth 1 \
             ! -name assets ! -name worker.js \
             -exec cp -r {} .open-next/assets/ \;
+          # Copy public/ files (images, fonts, etc.) into assets root
+          cp -r public/. .open-next/assets/
 
       - name: Deploy to Cloudflare Pages
         working-directory: ventures/drive-credit
