@@ -30,6 +30,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/finance/car-equity-credit-card-reviews',
     '/finance/does-applying-for-credit-card-hurt-credit',
     '/finance/no-credit-check-credit-card',
+    '/finance/build-credit-with-your-car',
+    '/finance/debt-consolidation-check',
+    '/finance/personal-loans-up-to-50k',
   ]
 
   const articleSlugs = ARTICLES.map((a) => `/articles/${a.slug}`)

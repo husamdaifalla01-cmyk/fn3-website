@@ -3,6 +3,7 @@
 
 const YENDO_BASE = 'https://afflat3e3.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=27618&c=918277&a=769106&k=D083BC665DB0EC415E23BE307260F10E&l=36989'
 const SLAM_DUNK_BASE = 'https://afflat3e3.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=11384&c=918277&a=769106&k=D6769605225263EA1944C850E28B6F38&l=11476'
+const LIFEFUNDS_BASE = 'https://afflat3e1.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=16048&c=918277&a=769106&k=677670208C2E38CB550EBD7BB9366C82&l=18044'
 
 /**
  * Build a tracked affiliate URL with UTM parameters.
@@ -40,6 +41,13 @@ export const OFFERS = {
     url: SLAM_DUNK_BASE,
     cta: 'Get Emergency Cash Now',
     description: 'Personal loans up to $50,000 — fast decision, any credit welcome.',
+  },
+  lifefunds: {
+    name: 'Lifefunds Personal Loans',
+    cps: 70.00,
+    url: LIFEFUNDS_BASE,
+    cta: 'Check My Loan Options',
+    description: 'Personal loans up to $50,000 — compare real offers without a hard credit pull.',
   },
 }
 
