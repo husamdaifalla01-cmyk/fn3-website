@@ -133,3 +133,32 @@ body {
   color: rgba(251,191,36,0.85);
   margin-bottom: 10px;
 }
+
+/* ── 90-Day Money Reset product page — responsive grid overrides ── */
+@media (max-width: 768px) {
+  .problem-cols {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .phase-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .deliverable-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .timeline-line {
+    display: none;
+  }
+  .timeline-row {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+}
+@media (max-width: 480px) {
+  .deliverable-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
