@@ -9,6 +9,7 @@
  */
 import { OFFERS, buildAffiliateUrl } from './offers'
 
+<<<<<<< HEAD
 // ─── Pinterest bridge pages (Eric Beer advertorials) ────────────────────────
 // source=pinterest, medium=organic — these are the landing pages for pinned traffic
 export const YENDO_BRIDGE_HERO    = buildAffiliateUrl(OFFERS.yendo.url,      'pinterest', 'organic', 'yendo-bridge-hero')
@@ -21,6 +22,8 @@ export const LIFEFUNDS_BRIDGE_HERO = buildAffiliateUrl(OFFERS.lifefunds.url, 'pi
 export const LIFEFUNDS_BRIDGE_MID  = buildAffiliateUrl(OFFERS.lifefunds.url, 'pinterest', 'organic', 'lifefunds-bridge-mid')
 export const LIFEFUNDS_BRIDGE_CTA  = buildAffiliateUrl(OFFERS.lifefunds.url, 'pinterest', 'organic', 'lifefunds-bridge-cta')
 
+=======
+>>>>>>> 948d338b86deee06a6a32a25259fb4ac69e61941
 // ─── Homepage ──────────────────────────────────────────────────────────────
 export const YENDO_HOMEPAGE_NAV       = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'homepage-nav')
 export const YENDO_HOMEPAGE_HERO      = buildAffiliateUrl(OFFERS.yendo.url,    'organic', 'seo', 'homepage-hero')

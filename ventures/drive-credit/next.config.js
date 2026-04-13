@@ -1,23 +1,8 @@
-import type { NextConfig } from 'next'
-import createNextIntlPlugin from 'next-intl/plugin'
-
-const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
-
-const nextConfig: NextConfig = {
-  typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
-  images: {
-    unoptimized: true, // required for Cloudflare Pages
-    remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
-      { protocol: 'https', hostname: 'm.media-amazon.com', pathname: '/**' },
-      { protocol: 'https', hostname: 'images-na.ssl-images-amazon.com', pathname: '/**' },
-      { protocol: 'https', hostname: 'images-eu.ssl-images-amazon.com', pathname: '/**' },
-    ],
-    formats: ['image/avif', 'image/webp'],
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: { unoptimized: true },
   async redirects() {
-<<<<<<< HEAD
+    // Old /lifestyle/* → new root paths
     const lifestyleRedirects = [
       'beauty', 'home-decor', 'kitchen', 'wellness', 'search',
       'privacy', 'terms', 'about', 'articles', 'finance',
@@ -27,6 +12,7 @@ const nextConfig: NextConfig = {
       permanent: true,
     }))
 
+    // Old finance/credit pages → /finance/*
     const financeRedirects = [
       'auto-equity-loan', 'bad-credit-credit-card', 'calculator',
       'car-equity-credit-card-reviews', 'car-equity-vs-secured-cards',
@@ -46,19 +32,13 @@ const nextConfig: NextConfig = {
     }))
 
     return [
-      { source: '/en/:path*', destination: '/:path*', permanent: true },
       ...lifestyleRedirects,
       ...financeRedirects,
+      // Legacy redirects
       { source: '/lifestyle', destination: '/', permanent: true },
       { source: '/tiktok', destination: '/finance/links', permanent: false },
       { source: '/finance/yendo-review', destination: '/finance/yendo-credit-card-review', permanent: true },
-=======
-    return [
-      // Strip explicit /en prefix — canonical English is at root
-      { source: '/en/:path*', destination: '/:path*', permanent: true },
->>>>>>> 948d338b86deee06a6a32a25259fb4ac69e61941
     ]
   },
 }
-
-export default withNextIntl(nextConfig)
+module.exports = nextConfig

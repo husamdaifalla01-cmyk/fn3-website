@@ -1,0 +1,11 @@
+{
+  "outputDirectory": ".next",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "env": {
+    "ANTHROPIC_API_KEY": "placeholder_add_anthropic_key",
+    "NEXT_PUBLIC_SUPABASE_URL": "https://cetrxwtmzrogbbrblkys.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNldHJ4d3RtenJvZ2JicmJsa3lzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIzNjI0MjUsImV4cCI6MjA1NzkzODQyNX0.oH8cgtmqZ0Gjm32FNmXyMPnbLbHCFesHToSKKW8juRc"
+  }
+}
