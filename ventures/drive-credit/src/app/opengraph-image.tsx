@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og'
 
+export const dynamic = 'force-dynamic'
 export const alt = 'Mintbrooks — Use Your Car to Get a Real Credit Card'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
