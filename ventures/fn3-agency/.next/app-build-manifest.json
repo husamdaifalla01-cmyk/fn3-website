@@ -1,0 +1,51 @@
+{
+  "pages": {
+    "/_not-found/page": [
+      "static/chunks/webpack-82b2ba201d35e58a.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-68b493f91180a142.js",
+      "static/chunks/main-app-a55ddb7ea2034368.js",
+      "static/chunks/app/_not-found/page-8520002249bfd8d4.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-82b2ba201d35e58a.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-68b493f91180a142.js",
+      "static/chunks/main-app-a55ddb7ea2034368.js",
+      "static/css/1d14def992827c6e.css",
+      "static/chunks/app/layout-a59aa41719b0e4a4.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-82b2ba201d35e58a.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-68b493f91180a142.js",
+      "static/chunks/main-app-a55ddb7ea2034368.js",
+      "static/chunks/9-683358e982142bb2.js",
+      "static/chunks/app/page-96d49dd4b576a948.js"
+    ],
+    "/guides/ai-agency-pricing/page": [
+      "static/chunks/webpack-82b2ba201d35e58a.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-68b493f91180a142.js",
+      "static/chunks/main-app-a55ddb7ea2034368.js",
+      "static/chunks/231-db6b3168377c80a2.js",
+      "static/chunks/app/guides/ai-agency-pricing/page-61f28cd2ed7625ec.js"
+    ],
+    "/compare/page": [
+      "static/chunks/webpack-82b2ba201d35e58a.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-68b493f91180a142.js",
+      "static/chunks/main-app-a55ddb7ea2034368.js",
+      "static/chunks/231-db6b3168377c80a2.js",
+      "static/chunks/app/compare/page-f4d9f28aae2e843d.js"
+    ],
+    "/guides/ai-automation-agency/page": [
+      "static/chunks/webpack-82b2ba201d35e58a.js",
+      "static/chunks/fd9d1056-00bb33a35b5f8051.js",
+      "static/chunks/23-68b493f91180a142.js",
+      "static/chunks/main-app-a55ddb7ea2034368.js",
+      "static/chunks/231-db6b3168377c80a2.js",
+      "static/chunks/app/guides/ai-automation-agency/page-b7b1301481340972.js"
+    ]
+  }
+}

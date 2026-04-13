@@ -1,0 +1,11 @@
+{
+  "assetMap": {
+    "state-check": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1/state-check_regen3.png",
+    "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1/cta_regen3.png"
+  },
+  "sceneOrder": [
+    "state-check",
+    "cta"
+  ],
+  "totalDurationFrames": 270
+}

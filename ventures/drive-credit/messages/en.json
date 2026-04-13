@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "homeDecor": "Home & Decor",
+    "wellness": "Wellness",
+    "beauty": "Beauty",
+    "kitchen": "Kitchen",
+    "finance": "Finance",
+    "articles": "Articles",
+    "subscribe": "Subscribe",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "footer": {
+    "tagline": "The Good Life, Curated.",
+    "explore": "Explore",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "affiliate_disclosure": "Mintbrooks is a participant in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.",
+    "copyright": "© {year} Mintbrooks. All rights reserved."
+  },
+  "article": {
+    "read_time": "{minutes} min read",
+    "share": "Share",
+    "buy_on_amazon": "Buy on Amazon",
+    "check_price": "Check Price",
+    "view_on_amazon": "View on Amazon",
+    "back_to_articles": "Back to Articles",
+    "related": "You might also like",
+    "updated": "Updated {date}"
+  },
+  "newsletter": {
+    "heading": "Live beautifully, spend wisely.",
+    "subheading": "Weekly finds, curated for the life you're building.",
+    "placeholder": "Your email address",
+    "cta": "Join the list",
+    "privacy_note": "No spam. Unsubscribe any time.",
+    "success": "You're in! Check your inbox.",
+    "error": "Something went wrong. Try again."
+  },
+  "category": {
+    "home_decor": "Home & Decor",
+    "wellness": "Wellness",
+    "beauty": "Beauty & Skincare",
+    "kitchen": "Kitchen",
+    "finance": "Money & Credit",
+    "all": "All Categories"
+  },
+  "common": {
+    "back": "Back",
+    "loading": "Loading...",
+    "see_all": "See all {category}",
+    "products_title": "Products we love",
+    "read_more": "Read more",
+    "search_placeholder": "Search Mintbrooks...",
+    "no_results": "No results found for \"{query}\"",
+    "language": "Language"
+  },
+  "quiz": {
+    "start": "Take the Quiz",
+    "heading": "Find your perfect match"
+  }
+}

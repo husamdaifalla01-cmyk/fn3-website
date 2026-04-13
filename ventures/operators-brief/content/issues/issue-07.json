@@ -1,0 +1,58 @@
+{
+  "number": 7,
+  "title": "How a SaaS startup handled 200 support tickets/day with 4.8 CSAT — with 0 full-time support staff",
+  "date": "April 2026",
+  "summary": "A 14-person SaaS startup at 1,200 customers and $1.9M ARR handles 200 support tickets per day with no full-time support staff. Two part-time contractors manage escalations 20 hours/week each. Annual support cost: $38K vs. $180K industry benchmark for their tier. CSAT: 4.8/5.",
+  "case_study": "Clearpath (name changed) is a project management SaaS for construction companies. 1,200 customers, $1,900 average ACV, $1.9M ARR. 14 employees — all engineering, product, and sales. Zero dedicated support staff.\n\nAt 400 customers, the founders were personally handling support in Slack channels. At 800 customers, it was untenable — support was bleeding into product and engineering time, costing them 2-3 engineering hours per day across the team. They needed a support system but couldn't justify a $60K support hire at their ARR level.\n\nThey built a tiered AI support system:\n\nTier 1 — AI Self-Service (resolves 61% of tickets): All new tickets hit the AI first. The AI has access to: the full knowledge base (200+ articles), the last 18 months of resolved tickets with resolutions, product changelog, and the customer's account data (plan type, features enabled, last login). It resolves billing questions, feature questions, 'how do I' questions, and bug reports for known issues automatically.\n\nTier 2 — AI-Assisted Human Response (resolves 26% of tickets): Tickets the AI cannot resolve confidently (confidence score below 85%) route to a contractor escalation queue. The AI provides: a summary of the issue, relevant knowledge base articles, the customer's history, and a suggested response draft. The contractor reviews, edits, and sends. Average contractor handle time: 4 minutes per ticket.\n\nTier 3 — Engineering Escalation (resolves 13% of tickets): True bugs, architecture questions, and enterprise customer issues route to the founding team. The AI triage summary saves 8 minutes of context-gathering per ticket. These still take full engineering time but the context handoff is clean.\n\nThe contractors: two former SaaS support reps hired part-time at $28/hr, 20 hours/week each. Their entire job is Tier 2 review. They've never been overwhelmed — the AI handles the volume, they handle the judgment.\n\nThe CSAT number (4.8/5) is the one that surprised everyone, including the founders. Their hypothesis: the AI-handled Tier 1 tickets actually outperform human-handled tickets in CSAT because they're faster (median response: 90 seconds) and more consistent (the AI always checks the knowledge base; humans sometimes guess).",
+  "implementation_guide": "Step 1 — Build your knowledge base before anything else. This is the most important step and the one most teams skip. Your AI support system is only as good as the documentation it draws from. Minimum viable knowledge base: answers to your top 50 support questions, feature documentation for every product area, billing and account management FAQs, troubleshooting guides for your top 10 error states.\n\nStep 2 — Set up ticket classification. Before AI response generation, you need AI classification: what type of ticket is this? (billing, technical bug, how-to, feature request, complaint). Classification determines routing and the appropriate response approach.\n\nStep 3 — Define your confidence threshold. The AI should only respond autonomously when it's confident. Set a threshold (85% is a reasonable starting point) below which tickets route to human review. Tune this threshold based on your first 30 days of data.\n\nStep 4 — Customer account data integration. The AI needs to know who it's talking to: their plan, their feature set, their history. This is what separates good AI support from generic AI support. Build the API integration to pull customer context at ticket creation.\n\nStep 5 — Human review queue design. Your escalation queue is not a dumping ground — it's a structured workflow. Each escalated ticket should arrive with: AI summary, suggested response, relevant articles, customer history. Reviewers should be able to action in under 5 minutes.\n\nStep 6 — Measure CSAT separately for AI-resolved vs. human-resolved tickets. You'll likely find AI-resolved tickets score higher on speed and lower on 'felt heard.' Adjust your AI response tone accordingly.",
+  "numbers": {
+    "daily_tickets": 200,
+    "tier1_ai_resolved_pct": 61,
+    "tier2_ai_assisted_pct": 26,
+    "tier3_engineering_pct": 13,
+    "tier1_median_response_seconds": 90,
+    "csat_score": 4.8,
+    "annual_support_cost_actual": 38000,
+    "annual_support_cost_benchmark": 180000,
+    "cost_savings_vs_benchmark": 142000,
+    "contractor_cost_monthly": 2240,
+    "ai_tool_cost_monthly": 890,
+    "implementation_cost": 14000,
+    "payback_period_months": 1.2,
+    "churn_rate_change": "No measurable impact on churn (key success metric)"
+  },
+  "tool_stack": [
+    {
+      "tool": "Intercom",
+      "use": "Ticket routing, customer context, AI integration layer",
+      "cost": "$499/month"
+    },
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Tier 1 response generation, Tier 2 draft generation",
+      "cost": "$340/month at 200 tickets/day"
+    },
+    {
+      "tool": "Stripe API",
+      "use": "Customer billing context for AI responses",
+      "cost": "Free (existing)"
+    },
+    {
+      "tool": "Postgres (internal)",
+      "use": "Historical resolved ticket database for AI context",
+      "cost": "Infrastructure cost only"
+    },
+    {
+      "tool": "Notion",
+      "use": "Knowledge base source of truth",
+      "cost": "$16/month (existing)"
+    },
+    {
+      "tool": "Zapier",
+      "use": "Slack notification to engineering for Tier 3 escalations",
+      "cost": "$49/month (existing)"
+    }
+  ],
+  "what_failed": "Attempt 1 — No knowledge base, just AI: Their first attempt pointed the AI at their product documentation (which was thin) and their Intercom help center (which had 20 articles). The AI would attempt answers to questions it didn't have good information for and hallucinate product behaviors. Three customers reported incorrect information from support in the first two weeks. They shut it down and spent 3 weeks building a proper knowledge base before restarting.\n\nAttempt 2 — Static context (no account data): Version 2 had the knowledge base but not customer account integration. The AI gave accurate general answers but couldn't answer things like 'why can't I see the reporting tab?' — which required knowing that the customer was on a plan that didn't include reporting. Without account context, the AI was generic. With account context, it became specific and accurate.\n\nAttempt 3 — No confidence scoring: Early version responded to everything. Low-confidence answers to complex technical questions damaged customer trust. Implementing confidence scoring and routing below-threshold tickets to humans was the fix that moved CSAT from 3.9 to 4.8.",
+  "takeaway": "AI-first support is not about reducing support quality — in this case, it improved CSAT. The key insight: for software products, consistency and speed beat warmth for most support interactions. Save the human touch for the 13% of tickets that actually need it."
+}

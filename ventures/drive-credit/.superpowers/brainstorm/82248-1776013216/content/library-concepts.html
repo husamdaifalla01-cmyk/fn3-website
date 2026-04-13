@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mintbrooks Library — Design Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0e0d0b; color: #f5f0e8; font-family: 'Inter', sans-serif; }
+
+  .header {
+    padding: 40px 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(184,149,90,0.2);
+    margin-bottom: 60px;
+  }
+  .header h1 { font-family: 'Playfair Display', serif; font-size: 14px; letter-spacing: 0.3em; text-transform: uppercase; color: #B8955A; margin-bottom: 8px; }
+  .header p { font-size: 13px; color: #78716c; }
+
+  /* CONCEPT CARDS */
+  .concepts { display: flex; flex-direction: column; gap: 0; }
+
+  .concept {
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    position: relative;
+  }
+  .concept.selected { border-color: #B8955A; }
+  .concept-label {
+    position: absolute; top: 24px; left: 24px; z-index: 10;
+    background: #B8955A; color: #0e0d0b;
+    font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 2px;
+  }
+  .select-badge {
+    position: absolute; top: 24px; right: 24px; z-index: 10;
+    background: rgba(14,13,11,0.7); border: 1px solid #B8955A;
+    color: #B8955A; font-size: 11px; letter-spacing: 0.1em;
+    padding: 5px 14px; border-radius: 20px;
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .concept:hover .select-badge { opacity: 1; }
+  .concept.selected .select-badge { opacity: 1; background: #B8955A; color: #0e0d0b; }
+
+  /* ══════════════════════════════════════════
+     CONCEPT A — THE READING ROOM
+     Dark, immersive, atmospheric library
+  ══════════════════════════════════════════ */
+  .concept-a {
+    background: #0a0906;
+    padding: 80px 0 0;
+    overflow: hidden;
+  }
+  .concept-a .room-intro {
+    text-align: center;
+    padding: 0 60px 60px;
+  }
+  .concept-a .eyebrow {
+    font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase;
+    color: #B8955A; margin-bottom: 20px;
+  }
+  .concept-a h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 7vw, 96px);
+    font-weight: 400;
+    line-height: 0.95;
+    color: #f5f0e8;
+    margin-bottom: 28px;
+  }
+  .concept-a h2 em { color: #B8955A; font-style: italic; }
+  .concept-a .room-sub {
+    font-size: 15px; color: #78716c; line-height: 1.7;
+    max-width: 440px; margin: 0 auto;
+  }
+
+  /* Bookshelf visual */
+  .bookshelf {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 0 40px;
+    height: 280px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(93,65,22,0.08) 100%);
+    border-top: 3px solid #3d2e15;
+    position: relative;
+    overflow: hidden;
+  }
+  .bookshelf::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to right, #0a0906 0%, transparent 10%, transparent 90%, #0a0906 100%);
+    z-index: 2; pointer-events: none;
+  }
+  .book-spine {
+    flex-shrink: 0;
+    border-radius: 3px 0 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+  }
+  .book-spine:hover { transform: translateY(-16px); filter: brightness(1.3); }
+  .book-spine span {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-family: 'Playfair Display', serif;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.6);
+    padding: 8px 4px;
+  }
+
+  /* Book detail card */
+  .book-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: #0e0d0b;
+    border-top: 1px solid rgba(184,149,90,0.15);
+    margin-top: 40px;
+  }
+  .book-feature-image {
+    background: #1a1510;
+    min-height: 320px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .book-cover-mock {
+    width: 160px; height: 240px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6), -8px 0 20px rgba(0,0,0,0.4);
+    border-radius: 2px 8px 8px 2px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 16px;
+  }
+  .book-feature-text {
+    padding: 60px;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .book-cat { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: #B8955A; margin-bottom: 16px; }
+  .book-title { font-family: 'Playfair Display', serif; font-size: 32px; line-height: 1.2; margin-bottom: 8px; color: #f5f0e8; }
+  .book-author { font-size: 13px; color: #78716c; margin-bottom: 24px; }
+  .book-why { font-size: 14px; line-height: 1.8; color: #a8a29e; border-left: 2px solid #B8955A; padding-left: 20px; font-style: italic; }
+  .concept-a-desc { padding: 30px 60px; font-size: 12px; color: #4a4540; text-align: center; }
+
+  /* ══════════════════════════════════════════
+     CONCEPT B — THE CATALOGUE
+     Library card catalogue aesthetic
+  ══════════════════════════════════════════ */
+  .concept-b {
+    background: #FDFAF6;
+    color: #1A1714;
+    padding: 80px 60px;
+  }
+  .concept-b .cat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #1A1714;
+    padding-bottom: 20px;
+    margin-bottom: 48px;
+  }
+  .concept-b .cat-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 700;
+    line-height: 1;
+    color: #1A1714;
+  }
+  .concept-b .cat-meta {
+    text-align: right;
+    font-size: 11px;
+    color: #78716c;
+    letter-spacing: 0.1em;
+    line-height: 2;
+  }
+
+  /* Catalogue drawer grid */
+  .catalogue-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+  .catalogue-drawer {
+    background: #f0ebe2;
+    border: 1px solid #d4c9b0;
+    padding: 16px 12px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .catalogue-drawer:hover { background: #e8dfc8; }
+  .drawer-num { font-size: 9px; letter-spacing: 0.2em; color: #B8955A; margin-bottom: 4px; }
+  .drawer-title { font-family: 'Playfair Display', serif; font-size: 13px; line-height: 1.3; color: #1A1714; }
+  .drawer-handle {
+    width: 40px; height: 6px;
+    background: #B8955A;
+    border-radius: 3px;
+    margin: 10px 0 0;
+  }
+
+  /* Catalogue card */
+  .catalogue-card {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    border: 1px solid #d4c9b0;
+    background: #faf7f0;
+  }
+  .card-tab {
+    background: #1A1714;
+    color: #B8955A;
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-tab .call-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    border-bottom: 1px solid rgba(184,149,90,0.3);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .card-tab .dewey { font-size: 10px; letter-spacing: 0.15em; color: #78716c; }
+  .card-body { padding: 24px 32px; }
+  .card-field { margin-bottom: 12px; }
+  .card-field label { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #B8955A; display: block; margin-bottom: 2px; }
+  .card-field span { font-size: 14px; color: #1A1714; }
+  .card-field.title-field span { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; }
+  .card-stamp {
+    display: inline-block;
+    border: 2px solid #1D3A2F;
+    color: #1D3A2F;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-top: 8px;
+    transform: rotate(-3deg);
+  }
+  .concept-b-desc { margin-top: 24px; font-size: 12px; color: #a8a29e; text-align: center; }
+
+  /* ══════════════════════════════════════════
+     CONCEPT C — THE OPENS
+     Full-bleed immersive scroll story per book
+     Each book = magazine spread moment
+  ══════════════════════════════════════════ */
+  .concept-c {
+    background: #1A1714;
+    overflow: hidden;
+  }
+  .concept-c .opens-header {
+    padding: 80px 60px 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 40px;
+    margin-bottom: 0;
+  }
+  .concept-c .opens-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 8vw, 110px);
+    font-weight: 400;
+    line-height: 0.9;
+    color: #f5f0e8;
+  }
+  .concept-c .opens-title em { color: #B8955A; font-style: italic; display: block; }
+  .concept-c .opens-nav {
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #78716c;
+    line-height: 2.2;
+  }
+  .concept-c .opens-nav a { display: block; color: #B8955A; }
+
+  /* The book spreads — horizontal scroll */
+  .opens-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 0;
+  }
+  .opens-track::-webkit-scrollbar { display: none; }
+
+  .book-spread {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+  }
+  .spread-image {
+    position: relative;
+    overflow: hidden;
+  }
+  .spread-bg {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    transition: transform 0.8s ease;
+  }
+  .spread-image:hover .spread-bg { transform: scale(1.04); }
+  .spread-gradient {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, transparent 0%, #1A1714 100%);
+  }
+  .spread-num {
+    position: absolute; top: 40px; left: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 120px; font-weight: 700;
+    color: rgba(255,255,255,0.06);
+    line-height: 1;
+  }
+  .spread-content {
+    padding: 60px 60px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .spread-category { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: #B8955A; margin-bottom: 20px; }
+  .spread-title { font-family: 'Playfair Display', serif; font-size: 36px; line-height: 1.15; color: #f5f0e8; margin-bottom: 6px; }
+  .spread-author { font-size: 13px; color: #78716c; margin-bottom: 28px; font-style: italic; }
+  .spread-quote {
+    font-size: 17px; line-height: 1.7; color: #c4b99a;
+    font-family: 'Playfair Display', serif; font-style: italic;
+    margin-bottom: 24px;
+  }
+  .spread-why { font-size: 13px; line-height: 1.8; color: #78716c; }
+  .spread-cta {
+    margin-top: 32px;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+    color: #B8955A; text-decoration: none;
+  }
+  .spread-cta::after { content: '→'; font-size: 14px; }
+
+  /* Scroll indicator */
+  .opens-scroll-hint {
+    padding: 20px 60px;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4a4540;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .scroll-dots { display: flex; gap: 6px; }
+  .scroll-dot { width: 24px; height: 2px; background: #B8955A; border-radius: 1px; }
+  .scroll-dot.dim { background: #2a2520; width: 8px; }
+
+  .concept-c-desc { padding: 20px 60px 40px; font-size: 12px; color: #4a4540; }
+
+  /* Selection footer */
+  .selection-bar {
+    position: sticky; bottom: 0;
+    background: rgba(14,13,11,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(184,149,90,0.2);
+    padding: 16px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .selection-bar p { font-size: 12px; color: #78716c; }
+  .selection-bar .selected-name { color: #B8955A; font-family: 'Playfair Display', serif; font-size: 16px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>The Mintbrooks Library — Design Concepts</h1>
+  <p>Three directions. Click a concept to select it.</p>
+</div>
+
+<div class="concepts">
+
+  <!-- ══ CONCEPT A: THE READING ROOM ══ -->
+  <div class="concept concept-a" onclick="select(this, 'A', 'The Reading Room')">
+    <div class="concept-label">A</div>
+    <div class="select-badge">Select this direction →</div>
+
+    <div class="room-intro">
+      <p class="eyebrow">The Mintbrooks Library</p>
+      <h2>Books that actually<br><em>changed something.</em></h2>
+      <p class="room-sub">Not an optimized bestseller list. The books that shifted how we live — curated by the editors at Mintbrooks.</p>
+    </div>
+
+    <!-- Bookshelf -->
+    <div class="bookshelf">
+      <div class="book-spine" style="width:28px;height:220px;background:#2C4A3E;"><span>Atomic Habits</span></div>
+      <div class="book-spine" style="width:22px;height:180px;background:#3d2e15;"><span>The Life-Changing Magic</span></div>
+      <div class="book-spine" style="width:32px;height:240px;background:#1D3A2F;"><span>Deep Work</span></div>
+      <div class="book-spine" style="width:20px;height:200px;background:#4a2c1a;"><span>Essentialism</span></div>
+      <div class="book-spine" style="width:26px;height:195px;background:#2a3d30;"><span>The Year of Magical Thinking</span></div>
+      <div class="book-spine" style="width:30px;height:255px;background:#3a1d0e;"><span>Braiding Sweetgrass</span></div>
+      <div class="book-spine" style="width:18px;height:170px;background:#4a3520;"><span>The Midnight Library</span></div>
+      <div class="book-spine" style="width:34px;height:230px;background:#1a2d20;"><span>When Breath Becomes Air</span></div>
+      <div class="book-spine" style="width:24px;height:210px;background:#3d2510;"><span>The Alchemist</span></div>
+      <div class="book-spine" style="width:28px;height:185px;background:#253d2c;"><span>Untamed</span></div>
+      <div class="book-spine" style="width:20px;height:220px;background:#4d3015;"><span>Man's Search for Meaning</span></div>
+      <div class="book-spine" style="width:36px;height:260px;background:#1a3520;"><span>Educated</span></div>
+      <div class="book-spine" style="width:22px;height:190px;background:#3d1a0a;"><span>The Alchemist</span></div>
+      <div class="book-spine" style="width:26px;height:215px;background:#2c4a3e;"><span>Daring Greatly</span></div>
+      <div class="book-spine" style="width:30px;height:235px;background:#4a2010;"><span>The Body Keeps the Score</span></div>
+      <div class="book-spine" style="width:18px;height:175px;background:#1d3520;"><span>Maybe You Should Talk</span></div>
+      <div class="book-spine" style="width:32px;height:250px;background:#3a2808;"><span>Thinking Fast and Slow</span></div>
+      <div class="book-spine" style="width:24px;height:200px;background:#253020;"><span>The Four Agreements</span></div>
+      <div class="book-spine" style="width:28px;height:225px;background:#4d2a12;"><span>Ikigai</span></div>
+      <div class="book-spine" style="width:22px;height:185px;background:#1a3a28;"><span>Stillness is the Key</span></div>
+    </div>
+
+    <!-- Featured book -->
+    <div class="book-feature">
+      <div class="book-feature-image">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a0906,#1a1208);"></div>
+        <div class="book-cover-mock" style="background:#2C4A3E;position:relative;z-index:1;">
+          <div>
+            <div style="width:24px;height:2px;background:#B8955A;margin-bottom:12px;"></div>
+            <div style="font-family:'Playfair Display',serif;font-size:18px;color:#f5f0e8;line-height:1.2;">Atomic Habits</div>
+          </div>
+          <div style="font-size:10px;color:rgba(245,240,232,0.5);letter-spacing:0.1em;">JAMES CLEAR</div>
+        </div>
+      </div>
+      <div class="book-feature-text">
+        <p class="book-cat">How We Build</p>
+        <h3 class="book-title">Atomic Habits</h3>
+        <p class="book-author">James Clear</p>
+        <p class="book-why">"The reason this is on the list isn't the system — it's the framing. You don't rise to the level of your goals. You fall to the level of your systems. That one sentence changed how I think about everything."</p>
+      </div>
+    </div>
+
+    <p class="concept-a-desc">Atmosphere: Dark, atmospheric, warm candlelight. Feels like entering a private members' library at night. Books are tactile and physical — you browse by spine, click to open. Editorial voice throughout.</p>
+  </div>
+
+  <!-- ══ CONCEPT B: THE CATALOGUE ══ -->
+  <div class="concept concept-b" onclick="select(this, 'B', 'The Catalogue')">
+    <div class="concept-label" style="background:#1A1714;color:#B8955A;">B</div>
+    <div class="select-badge" style="background:rgba(245,240,232,0.9);border-color:#1A1714;color:#1A1714;">Select this direction →</div>
+
+    <div class="cat-header">
+      <div>
+        <div style="font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#B8955A;margin-bottom:12px;">Mintbrooks</div>
+        <h2 class="cat-title">The Library</h2>
+      </div>
+      <div class="cat-meta">
+        <div>Est. 2024</div>
+        <div>20 Volumes</div>
+        <div>Curated by the editors</div>
+        <div style="color:#B8955A;">Open collection</div>
+      </div>
+    </div>
+
+    <!-- Drawer grid -->
+    <div class="catalogue-grid">
+      <div class="catalogue-drawer">
+        <div class="drawer-num">01 — 04</div>
+        <div class="drawer-title">How We Think</div>
+        <div class="drawer-handle"></div>
+      </div>
+      <div class="catalogue-drawer">
+        <div class="drawer-num">05 — 08</div>
+        <div class="drawer-title">How We Live</div>
+        <div class="drawer-handle"></div>
+      </div>
+      <div class="catalogue-drawer" style="background:#1A1714;border-color:#1A1714;">
+        <div class="drawer-num" style="color:#B8955A;">09 — 12</div>
+        <div class="drawer-title" style="color:#f5f0e8;">How We Feel</div>
+        <div class="drawer-handle"></div>
+      </div>
+      <div class="catalogue-drawer">
+        <div class="drawer-num">13 — 16</div>
+        <div class="drawer-title">How We Spend</div>
+        <div class="drawer-handle"></div>
+      </div>
+      <div class="catalogue-drawer">
+        <div class="drawer-num">17 — 20</div>
+        <div class="drawer-title">How We See</div>
+        <div class="drawer-handle"></div>
+      </div>
+    </div>
+
+    <!-- Catalogue card -->
+    <div class="catalogue-card">
+      <div class="card-tab">
+        <div>
+          <div class="call-num">001</div>
+          <div class="dewey">158.1 CLR</div>
+        </div>
+        <div style="font-size:9px;letter-spacing:0.15em;color:#78716c;line-height:1.8;">
+          HOW WE THINK<br>
+          HABITS · SYSTEMS<br>
+          NON-FICTION
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="card-field title-field">
+          <label>Title</label>
+          <span>Atomic Habits</span>
+        </div>
+        <div class="card-field">
+          <label>Author</label>
+          <span>Clear, James, 1986–</span>
+        </div>
+        <div class="card-field">
+          <label>Why it's here</label>
+          <span style="font-size:13px;color:#78716c;line-height:1.7;">The book that reframes how you think about change. Not willpower — architecture. One of the most useful things we've ever read.</span>
+        </div>
+        <div class="card-stamp">In the collection</div>
+      </div>
+    </div>
+
+    <p class="concept-b-desc">Aesthetic: Library card catalogue — archival, typographic, cream and forest. Feels like a rare private collection. Light mode contrast to the rest of the site. Unique in the lifestyle space.</p>
+  </div>
+
+  <!-- ══ CONCEPT C: THE OPENS ══ -->
+  <div class="concept concept-c" onclick="select(this, 'C', 'The Opens')">
+    <div class="concept-label">C</div>
+    <div class="select-badge">Select this direction →</div>
+
+    <div class="opens-header">
+      <h2 class="opens-title">The<br><em>Library</em></h2>
+      <div class="opens-nav">
+        <span>20 books</span>
+        <span>5 categories</span>
+        <a>How We Think</a>
+        <a>How We Live</a>
+        <a>How We Feel</a>
+      </div>
+    </div>
+
+    <!-- Horizontal scroll spreads -->
+    <div class="opens-track" id="spreads">
+
+      <!-- Spread 1 -->
+      <div class="book-spread">
+        <div class="spread-image">
+          <div class="spread-bg" style="background:linear-gradient(135deg,#0d2018,#1a3520);"></div>
+          <div class="spread-gradient"></div>
+          <div class="spread-num">01</div>
+          <!-- Book cover mockup -->
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+            <div style="width:170px;height:255px;background:#2C4A3E;border-radius:2px 10px 10px 2px;box-shadow:0 30px 80px rgba(0,0,0,0.7),-10px 0 30px rgba(0,0,0,0.5);display:flex;flex-direction:column;justify-content:space-between;padding:24px 20px;">
+              <div style="width:30px;height:3px;background:#B8955A;"></div>
+              <div>
+                <div style="font-family:'Playfair Display',serif;font-size:20px;color:#f5f0e8;line-height:1.2;margin-bottom:6px;">Atomic Habits</div>
+                <div style="font-size:10px;color:rgba(245,240,232,0.4);letter-spacing:0.1em;">JAMES CLEAR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spread-content">
+          <p class="spread-category">How We Think · No. 01</p>
+          <h3 class="spread-title">Atomic Habits</h3>
+          <p class="spread-author">James Clear</p>
+          <p class="spread-quote">"You don't rise to the level of your goals. You fall to the level of your systems."</p>
+          <p class="spread-why">The reason this is on the list isn't the framework — it's the permission it gives you to think small. Small changes, compounded. The most useful book we've read on how to actually change.</p>
+          <a class="spread-cta">Get this book</a>
+        </div>
+      </div>
+
+      <!-- Spread 2 -->
+      <div class="book-spread">
+        <div class="spread-image">
+          <div class="spread-bg" style="background:linear-gradient(135deg,#1a0a05,#3d1508);"></div>
+          <div class="spread-gradient"></div>
+          <div class="spread-num">02</div>
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;">
+            <div style="width:170px;height:255px;background:#4a2010;border-radius:2px 10px 10px 2px;box-shadow:0 30px 80px rgba(0,0,0,0.7),-10px 0 30px rgba(0,0,0,0.5);display:flex;flex-direction:column;justify-content:space-between;padding:24px 20px;">
+              <div style="width:30px;height:3px;background:#B8955A;"></div>
+              <div>
+                <div style="font-family:'Playfair Display',serif;font-size:16px;color:#f5f0e8;line-height:1.2;margin-bottom:6px;">Educated</div>
+                <div style="font-size:10px;color:rgba(245,240,232,0.4);letter-spacing:0.1em;">TARA WESTOVER</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spread-content">
+          <p class="spread-category">How We See · No. 02</p>
+          <h3 class="spread-title">Educated</h3>
+          <p class="spread-author">Tara Westover</p>
+          <p class="spread-quote">"You can love someone and still choose to say goodbye to them."</p>
+          <p class="spread-why">A memoir that asks what it means to build a self from scratch. We recommend it to anyone who has ever wondered whether the story they were told about themselves is true.</p>
+          <a class="spread-cta">Get this book</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="opens-scroll-hint">
+      <div class="scroll-dots">
+        <div class="scroll-dot"></div>
+        <div class="scroll-dot dim"></div>
+        <div class="scroll-dot dim"></div>
+      </div>
+      Scroll through all 20
+    </div>
+
+    <p class="concept-c-desc">Experience: Horizontal scroll — each book is a full magazine spread moment. Dramatic, immersive. Readers move through the collection like turning pages. The most editorial and scroll-native of the three.</p>
+  </div>
+
+</div>
+
+<div class="selection-bar">
+  <p id="sel-text">Click a concept above to choose a direction</p>
+  <p class="selected-name" id="sel-name"></p>
+</div>
+
+<script>
+let selectedEl = null;
+function select(el, letter, name) {
+  if (selectedEl) selectedEl.classList.remove('selected');
+  el.classList.add('selected');
+  selectedEl = el;
+  document.getElementById('sel-text').textContent = `Direction ${letter} selected —`;
+  document.getElementById('sel-name').textContent = name;
+
+  // Record to events file via beacon
+  try {
+    const data = JSON.stringify({type:'click',choice:letter.toLowerCase(),text:name,timestamp:Date.now()});
+    fetch('/event', {method:'POST',body:data,headers:{'Content-Type':'application/json'}}).catch(()=>{});
+  } catch(e) {}
+}
+</script>
+</body>
+</html>

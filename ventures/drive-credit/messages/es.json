@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "homeDecor": "Hogar & Deco",
+    "wellness": "Bienestar",
+    "beauty": "Belleza",
+    "kitchen": "Cocina",
+    "finance": "Finanzas",
+    "articles": "Artículos",
+    "subscribe": "Suscribirse",
+    "menu": "Menú",
+    "close": "Cerrar"
+  },
+  "footer": {
+    "tagline": "La Buena Vida, Curada.",
+    "explore": "Explorar",
+    "legal": "Legal",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso",
+    "affiliate_disclosure": "Mintbrooks participa en el Programa de Afiliados de Amazon, un programa de publicidad de afiliados diseñado para proporcionar a los sitios un medio para ganar tarifas publicitarias anunciando y enlazando a Amazon.",
+    "copyright": "© {year} Mintbrooks. Todos los derechos reservados."
+  },
+  "article": {
+    "read_time": "{minutes} min de lectura",
+    "share": "Compartir",
+    "buy_on_amazon": "Comprar en Amazon",
+    "check_price": "Ver precio",
+    "view_on_amazon": "Ver en Amazon",
+    "back_to_articles": "Volver a artículos",
+    "related": "También te puede gustar",
+    "updated": "Actualizado el {date}"
+  },
+  "newsletter": {
+    "heading": "Vive bien, gasta con inteligencia.",
+    "subheading": "Descubrimientos semanales, curados para la vida que estás construyendo.",
+    "placeholder": "Tu dirección de correo",
+    "cta": "Únete a la lista",
+    "privacy_note": "Sin spam. Cancela cuando quieras.",
+    "success": "¡Ya eres parte! Revisa tu bandeja de entrada.",
+    "error": "Algo salió mal. Inténtalo de nuevo."
+  },
+  "category": {
+    "home_decor": "Hogar & Decoración",
+    "wellness": "Bienestar",
+    "beauty": "Belleza & Cuidado de la Piel",
+    "kitchen": "Cocina",
+    "finance": "Dinero & Crédito",
+    "all": "Todas las categorías"
+  },
+  "common": {
+    "back": "Atrás",
+    "loading": "Cargando...",
+    "see_all": "Ver todo {category}",
+    "products_title": "Productos que amamos",
+    "read_more": "Leer más",
+    "search_placeholder": "Buscar en Mintbrooks...",
+    "no_results": "Sin resultados para \"{query}\"",
+    "language": "Idioma"
+  },
+  "quiz": {
+    "start": "Hacer el quiz",
+    "heading": "Encuentra tu combinación perfecta"
+  }
+}

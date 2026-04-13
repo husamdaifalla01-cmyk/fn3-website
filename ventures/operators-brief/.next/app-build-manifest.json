@@ -1,0 +1,115 @@
+{
+  "pages": {
+    "/_not-found": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/app/_not-found-05710fc7f986ac28.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/css/c6d865dd96931d16.css",
+      "static/chunks/app/layout-5199c6862ab6a43b.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/page-cb6fe97131021974.js"
+    ],
+    "/issues/restaurant-operations-ai/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/restaurant-operations-ai/page-102c1450fd7f2317.js"
+    ],
+    "/issues/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/page-a62023e4d481a23a.js"
+    ],
+    "/best-of/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/best-of/page-5d02bc124c40d6b4.js"
+    ],
+    "/issues/real-estate-lead-qualification-ai/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/real-estate-lead-qualification-ai/page-c4ee634ef17c5f6a.js"
+    ],
+    "/issues/sample/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/sample/page-ac05317c38a9e81a.js"
+    ],
+    "/welcome/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/welcome/page-53bf3866ff118e28.js"
+    ],
+    "/library/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/library/page-254de9fab3e5f842.js"
+    ],
+    "/what-you-get/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/what-you-get/page-57ea1c4f5c614985.js"
+    ],
+    "/issues/customer-service-ai-ecommerce/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/customer-service-ai-ecommerce/page-cc258b0bad3a133b.js"
+    ],
+    "/issues/law-firm-ai-billing/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/law-firm-ai-billing/page-08974837e6ccef0e.js"
+    ],
+    "/issues/how-accountants-cut-reporting-time/page": [
+      "static/chunks/webpack-629893ffc2cebb63.js",
+      "static/chunks/fd9d1056-534a3af521b04580.js",
+      "static/chunks/69-9c3c64001cadfd4c.js",
+      "static/chunks/main-app-7453d35497d9f9b6.js",
+      "static/chunks/250-5ea11ac6ae7fbab6.js",
+      "static/chunks/app/issues/how-accountants-cut-reporting-time/page-e886a79b2fd4fe02.js"
+    ]
+  }
+}

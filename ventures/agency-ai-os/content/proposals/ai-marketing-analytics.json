@@ -1,0 +1,31 @@
+{
+  "service": "AI Marketing Analytics & Reporting",
+  "templates": [
+    {
+      "id": "analytics-001",
+      "variant": "Multi-Channel Brand — Unified Reporting",
+      "sections": {
+        "executive_summary": "This proposal covers an AI-powered marketing analytics and reporting system for [Company Name] — connecting your paid social, paid search, email, SEO, and CRM data into a single source of truth, with AI-generated analysis delivered on a weekly and monthly cadence. The goal: your team spends 2 hours reviewing insights instead of 15 hours pulling and formatting data.\n\nMonthly investment: $3,500/month. 3-month minimum.",
+        "problem_statement": "You're running campaigns across [Meta / Google / LinkedIn / email / organic] and getting reports from each platform — but no unified view of what's actually driving revenue. Your marketing team or agency spends the first week of every month pulling numbers from separate platforms, pasting them into a spreadsheet, and trying to tell a coherent story. By the time the report is done, it's already old.\n\nThe bigger problem isn't the time — it's the decisions that aren't getting made because no one has time to do the analysis. You know there are patterns in the data. You know some channels are working better than others. But without a system that surfaces those insights automatically, they stay buried.",
+        "proposed_solution": "**Phase 1: Data Infrastructure (Weeks 1–2)**\nWe connect all your data sources to a unified reporting layer:\n- Ad platforms: Meta Ads, Google Ads, LinkedIn Ads\n- Analytics: GA4, or your existing analytics tool\n- Email: Klaviyo, Mailchimp, or your ESP\n- CRM: Salesforce, HubSpot, or equivalent\n- Ecommerce: Shopify, WooCommerce if applicable\n\nAll data flows into a clean, normalized dashboard in Looker Studio (or your preferred tool) with consistent date ranges, attribution settings, and metric definitions that match how your business actually measures performance.\n\n**Phase 2: Reporting Automation (Week 3)**\nWe configure two report types:\n- Weekly pulse report (AI-generated narrative covering week-over-week performance, anomalies, and one actionable recommendation — delivered every Monday morning)\n- Monthly performance review (comprehensive AI analysis: what worked, what didn't, budget allocation recommendations, trend identification — delivered on the first business day of the new month)\n\n**Phase 3: Ongoing Optimization (Month 2+)**\nAs we learn your business, the AI analysis gets sharper. We add: anomaly alerting (when a metric moves significantly outside normal range, you get an alert before it becomes a problem), attribution modeling adjustments, and quarterly strategic reviews.",
+        "deliverables_and_timeline": "**Month 1:**\n- All data sources connected and validated\n- Unified dashboard live\n- Custom metric definitions and attribution model configured\n- First weekly and monthly reports delivered\n\n**Month 2+:**\n- Weekly AI reports (Monday delivery)\n- Monthly AI analysis reports (first business day)\n- Anomaly alerts (real-time)\n- Monthly 30-minute review call\n- Quarterly strategy session",
+        "investment": "**Monthly Retainer: $3,500/month**\n\nIncludes:\n- All data source connections (up to 8 platforms)\n- Custom dashboard build and maintenance\n- Weekly AI pulse report\n- Monthly AI analysis report\n- Anomaly alerting\n- Monthly review call\n- Quarterly strategy session\n\n**Additional platforms beyond 8:** $200/month each.\n\n**For context:** A marketing analytics consultant charges $150–$250/hour. The setup and ongoing analysis in this retainer would cost $6,000–$10,000/month at hourly rates. A dedicated data analyst hire would cost $70,000–$100,000/year — without the AI layer that processes patterns humans would miss.",
+        "team": "[Your Name] as lead analytics strategist and system architect. Background in marketing analytics for brands spending $50K–$2M/month in paid channels. Tools expertise: Looker Studio, Supermetrics, GA4, all major ad platforms.",
+        "next_steps": "1. Confirm scope and retainer start date\n2. Sign service agreement\n3. Complete data access form (we'll send — lists all platform credentials needed)\n4. Pay month 1 invoice ($3,500)\n5. Onboarding call: [DATE] — 60 minutes to review your KPIs, reporting goals, and stakeholder formats"
+      }
+    },
+    {
+      "id": "analytics-002",
+      "variant": "Agency — Multi-Client Reporting Automation",
+      "sections": {
+        "executive_summary": "This proposal covers reporting automation infrastructure for [Agency Name] — allowing you to generate comprehensive monthly reports for up to [X] clients in a fraction of the current time. The goal: what takes your team 3–5 days each month takes 4 hours.\n\nProject investment: $4,500 setup + $1,000/month per 5 clients managed.",
+        "problem_statement": "Reporting is eating your agency's capacity. Every client needs a monthly report. Each one requires pulling data from multiple platforms, formatting it into a deck, writing commentary, and sending it out — often with last-minute changes. Your team spends 2–4 hours per client per month just on reporting, none of which is billable in a way that reflects the true effort.",
+        "proposed_solution": "Build a standardized reporting system that pulls client data automatically, generates AI commentary for each client, and produces a finished report (PDF or live dashboard) with minimal human touch. Each client gets a consistent format that your team can customize in under 30 minutes if needed — but usually won't need to.",
+        "deliverables_and_timeline": "Weeks 1–2: Design master report template; connect first client's data sources\nWeeks 3–4: Build automation pipeline; test with 2–3 clients\nWeek 5–6: Roll out to full client base; team training\nOngoing: Monthly updates as client portfolios change",
+        "investment": "$4,500 setup + $1,000/month per 5 clients. Setup includes up to 3 client configurations. Additional client setups: $500 each.",
+        "team": "[Your Name].",
+        "next_steps": "Share your current report template and a list of data sources for 2–3 pilot clients. Schedule kickoff call."
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "number": 6,
+  "title": "The real estate team that automated their entire lead nurture sequence — 40% more conversions, zero extra work",
+  "date": "March 2026",
+  "summary": "A 9-agent residential real estate team in Phoenix automated their lead nurture sequence using AI-personalized follow-up. Converted leads increased from 3.2% to 4.5% of pipeline. At their volume (1,400 leads/year), that's 18 additional closed deals. At $9,200 average commission, that's $165,600 in incremental annual GCI.",
+  "case_study": "The Garrison Group (name changed) is a high-producing residential real estate team in Phoenix, AZ. 9 agents, $42M in annual sales volume, average commission: $9,200 per transaction. Their lead problem wasn't lead volume — they were generating 1,400 inbound leads per year from Zillow, Realtor.com, Google Ads, and referrals. Their problem was lead response and nurture.\n\nThe data was brutal: 47% of their leads never received a follow-up within 24 hours. Of leads that did receive follow-up, 60% received only one attempt before being abandoned. Industry data shows that real estate leads require an average of 8 touchpoints before converting. They were averaging 2.3.\n\nThe team leader knew the solution wasn't 'agents need to follow up more.' Agents were busy. Manual nurture of 1,400 leads/year per 9 agents is 155 leads per agent — at 8 touchpoints each, that's 1,240 individual communications per agent per year just on lead nurture. Nobody was going to do that.\n\nWhat they built:\n\nA Claude-powered lead nurture system integrated with their CRM (Follow Up Boss). Every new lead triggers an automated AI-personalized sequence:\n\n— Lead intake: CRM captures lead source, property they inquired about, any notes from initial contact, and buyer timeline data from the lead form.\n\n— AI personalization layer: Claude generates 8 touchpoint messages personalized to: the specific property type and neighborhood they showed interest in, their timeline (active buyer vs. 6+ months out), lead source context (Zillow browser vs. referral has very different intent), and the time of year / market conditions. Messages are pre-generated for the full sequence at lead intake, stored in the CRM, and sent on the programmed schedule.\n\n— Behavior triggers: If the lead opens but doesn't respond, the sequence continues. If they click a property link, an agent is notified for immediate manual outreach. If they respond to any message, the sequence pauses and routes to the assigned agent.\n\n— Handoff quality: When a lead does convert to a real conversation, the agent receives a briefing document: what messages the lead received, what they opened, what they clicked, their property history, and a recommended conversation starter.\n\nThe agents' reaction after 30 days: almost entirely positive. They stopped wasting time on cold manual follow-up and spent their time on conversations with people who had already been warmed up.",
+  "implementation_guide": "Step 1 — Audit your current lead follow-up data. Pull: average response time to new leads, number of follow-up attempts per lead, lead-to-conversation rate, conversation-to-close rate. These are your baseline metrics.\n\nStep 2 — Lead segmentation. Don't build one nurture sequence. Build separate sequences for: high intent (active buyers, short timeline), medium intent (browsing, 3-6 month timeline), and low intent (6+ months, just researching). The personalization parameters differ significantly.\n\nStep 3 — Message sequence design. Plan 8-12 touchpoints over 90 days. Typical cadence: Day 1 (immediate), Day 3, Day 7, Day 14, Day 21, Day 30, Day 45, Day 60, Day 90. Each message should provide value (market insight, relevant listing, neighborhood data) — not just 'just checking in.'\n\nStep 4 — Build the AI message generation pipeline. For each lead, pass to Claude: lead data (property interest, timeline, source), message number in sequence, local market context for this month, and your firm's voice guidelines. Claude returns the personalized message.\n\nStep 5 — CRM integration. Store generated messages in your CRM with scheduled send dates. Zapier or native CRM automation handles the actual sending. Build the behavior trigger rules (open, click, reply) before going live.\n\nStep 6 — Measure conversion rate per sequence segment, not just overall. You'll find significant variation between high/medium/low intent leads. Optimize the lowest-performing segment first.",
+  "numbers": {
+    "annual_leads": 1400,
+    "before_lead_to_close_pct": 3.2,
+    "after_lead_to_close_pct": 4.5,
+    "incremental_closes_annually": 18.2,
+    "average_commission": 9200,
+    "incremental_annual_gci": 167440,
+    "before_avg_follow_up_attempts": 2.3,
+    "after_avg_follow_up_attempts": 8.1,
+    "before_24hr_response_rate_pct": 53,
+    "after_24hr_response_rate_pct": 98,
+    "implementation_cost": 6400,
+    "monthly_tool_cost": 310,
+    "annual_tool_cost": 3720,
+    "net_annual_benefit": 163720,
+    "roi_12_months": "2456%"
+  },
+  "tool_stack": [
+    {
+      "tool": "Follow Up Boss CRM",
+      "use": "Lead management, sequence storage, agent routing",
+      "cost": "$499/month for 9 agents (existing)"
+    },
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Message personalization at lead intake",
+      "cost": "$85/month at 1,400 leads/year"
+    },
+    {
+      "tool": "Zapier",
+      "use": "CRM trigger → Claude API → message storage workflow",
+      "cost": "$99/month (existing)"
+    },
+    {
+      "tool": "Mailgun",
+      "use": "Email delivery for nurture sequence",
+      "cost": "$35/month"
+    },
+    {
+      "tool": "Twilio",
+      "use": "SMS touchpoints (4 of 8 touchpoints are SMS)",
+      "cost": "$90/month at their volume"
+    }
+  ],
+  "what_failed": "Attempt 1 — Fully automated AI responses to replies: They initially built the system to have AI respond to any lead reply automatically. First week, a lead replied 'stop messaging me' and received an AI response saying 'Great, I'd love to help! What neighborhoods are you considering?' The lead left a Google review. They immediately removed AI from reply handling — all replies route to the agent.\n\nAttempt 2 — Over-personalization causing delays: First version of the system called the Claude API at send-time for each message. API latency plus occasional rate limits caused a significant percentage of messages to send hours late or fail silently. The fix: generate all 8 messages at lead intake and store them. Send-time is just retrieval, not generation.\n\nAttempt 3 — Same message cadence for all leads: The initial system sent the same number of touchpoints regardless of intent level. High-intent leads found 8 messages over 90 days too slow. Low-intent leads found them too frequent. Segmentation by intent level was the most impactful single optimization.",
+  "takeaway": "Real estate lead nurture automation is one of the clearest ROI cases in AI for service businesses. The math is simple: more consistent touchpoints at personalized quality = higher conversion rate. The implementation isn't technically complex. The discipline is in the sequence design and the intent segmentation — that's where most teams underinvest."
+}

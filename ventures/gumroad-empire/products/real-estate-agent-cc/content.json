@@ -1,0 +1,384 @@
+{
+  "title": "The Real Estate Agent AI Command Center",
+  "subtitle": "500+ Tested Prompts & Workflows to Close More Deals, Faster",
+  "tagline": "Stop spending 80% of your time on tasks AI can do in seconds",
+  "price": 97,
+  "how_to_use": "This Command Center is your permanent operating system for AI-powered real estate. Do not read it cover to cover on day one. Instead, go directly to Section 8 (The Quick-Start Protocol) for your first-30-days action plan, then return to each section as you need it. Every prompt in this guide is copy-paste ready. Replace the brackets with your specifics, paste into ChatGPT, Claude, or any capable AI, and you will have professional-grade output in under 60 seconds. The agents who see the biggest results use this system consistently — not perfectly. Start with listing descriptions this week. Add buyer follow-up sequences next week. Within 30 days, you will wonder how you ever practiced without it.",
+  "sections": [
+    {
+      "title": "Section 1: The AI-Powered Listing System",
+      "content": "Your listing description is the first showing. Most buyers see it before they ever set foot in the property. Yet most agents spend 45 minutes writing one, then settle for something mediocre. With AI, you can produce five different high-quality descriptions in 10 minutes — one for MLS, one for email, one for Instagram, one for Facebook, and one long-form for Zillow — and pick the best. This section gives you the prompts for every property type, every price point, and every marketing channel.",
+      "subsections": [
+        {
+          "title": "Core Listing Description Prompts",
+          "content": "Use these prompts as your baseline. Fill in the brackets with property-specific details before running.",
+          "type": "framework",
+          "items": [
+            "SINGLE-FAMILY HOME — STANDARD: 'Write a compelling MLS listing description for a [bedrooms]-bedroom, [bathrooms]-bathroom single-family home at [address]. Key features: [list 5-7 features like updated kitchen, hardwood floors, large backyard, etc.]. The home is [year built] and has [square footage] sq ft. Price: $[price]. Target buyer: [first-time buyer / move-up buyer / luxury buyer / investor]. Tone: warm and inviting. Lead with the most emotionally compelling feature. End with a call to action. Maximum 250 words.'",
+            "LUXURY HOME ($750K+): 'Write a premium listing description for a [bedrooms]-bedroom luxury home at [address]. Property highlights: [features]. Price point: $[price]. This is NOT a generic luxury listing. Use specific, sensory language that places the reader inside the home. Reference the neighborhood prestige, unique architectural details, and lifestyle this home enables. Target buyer is discerning and has seen hundreds of listings. You have 275 words to make this one unforgettable.'",
+            "CONDO/TOWNHOME: 'Write an MLS listing description for a [bedrooms]-bedroom condo/townhome at [address]. Building: [building name or type]. Floor: [floor number]. Views: [yes/no — describe]. HOA includes: [amenities]. Monthly HOA: $[amount]. Key unit features: [list]. Position this as a lifestyle upgrade, not just a residence. Highlight the lock-and-leave convenience, building amenities, and walkability. 200 words maximum.'",
+            "INVESTMENT PROPERTY: 'Write a listing description for an investment property at [address]. Current rents: $[amount]/month. Units: [number and configuration]. Cap rate: [if known]. Recent updates: [list]. Write TWO versions: Version 1 targets the owner-occupant who will house-hack. Version 2 targets the pure investor focused on returns. Both versions should be under 200 words and lead with the financial opportunity.'",
+            "FIXER-UPPER/AS-IS: 'Write a listing description for a fixer-upper at [address]. Condition: [describe honestly]. Price: $[price]. Comparable updated homes in the area sell for $[amount]. Write a description that is honest about condition but frames the opportunity powerfully. Target buyers are investors and handy homeowners. Lead with the upside potential and ARV opportunity. Do not hide flaws — position them as negotiating points the buyer already controls. 175 words.'",
+            "NEW CONSTRUCTION: 'Write a listing description for a new construction home at [address] built by [builder name]. Features: [standard finishes and upgrades]. Community: [community name and amenities]. Builder warranty: [years]. Lead with the appeal of owning something no one else has lived in. Highlight the energy efficiency, modern layout, and warranty protection. Compare implicitly to older homes without mentioning them directly. 225 words.'",
+            "WATERFRONT/VIEW PROPERTY: 'Write a listing description for a [waterfront/mountain view/city view] property at [address]. The view: [describe specifically — what can you see, what time of day is it best, what is the water frontage]. Key features: [list]. This description must make the reader feel the view before they visit. Use sensory, cinematic language. Every other feature is secondary to the view — lead with it, weave it throughout, close with it. 250 words.'",
+            "HISTORIC HOME: 'Write a listing description for a historic home built in [year] at [address]. Original features preserved: [list]. Updates made: [list]. National/local historic register: [yes/no]. The buyer for this home does not want a generic house — they want a story. Write a description that honors the history of this property while being honest about the trade-offs of older construction. 250 words.'",
+            "LAND/LOT: 'Write a listing description for [acreage] acres at [address or description]. Zoning: [residential/agricultural/commercial/mixed]. Utilities: [available/not available]. Topography: [flat/rolling/wooded/cleared]. Access: [road frontage details]. Best use: [builder lot/farm/recreational/development]. Write for the buyer who is imagining what they will build here. Paint the picture of possibility. 175 words.'",
+            "MULTI-FAMILY (5+ UNITS): 'Write a listing description for a [number]-unit apartment building at [address]. Gross income: $[amount]/year. Vacancy rate: [percentage]. Cap rate: [percentage]. Recent capital improvements: [list]. Write for a sophisticated investor. Lead with the numbers, then support with the story of the asset. Include one paragraph on value-add opportunities. No fluff. 225 words.'"
+          ]
+        },
+        {
+          "title": "MLS Optimization Prompts",
+          "content": "MLS search is keyword-driven. These prompts help you maximize visibility by embedding the terms buyers actually search.",
+          "type": "framework",
+          "items": [
+            "KEYWORD EXTRACTION: 'I am listing a property with these features: [describe property]. List the top 15 MLS search keywords buyers use when looking for a home like this. Include neighborhood terms, school district names, feature terms (e.g., pool, garage, basement), and lifestyle terms. Then rewrite this listing description to naturally include the top 8 keywords without sounding keyword-stuffed: [paste current description].'",
+            "SCHOOL DISTRICT HIGHLIGHT: 'The property at [address] is in the [school district name] school district, specifically zoned for [elementary school], [middle school], and [high school]. These are [describe school ratings/reputation]. Rewrite this listing description to lead with the school district advantage in a way that speaks directly to families without excluding non-family buyers: [paste description].'",
+            "PRICE TIER OPTIMIZATION: 'This home is listed at $[price], which puts it at the [top/middle/bottom] of the $[range] search tier on most platforms. Rewrite the listing description to justify the price point and create urgency around the value at this price compared to alternatives in the market. Reference comparable properties implicitly without naming them: [paste description].'"
+          ]
+        },
+        {
+          "title": "Photography Direction Scripts",
+          "content": "Most listing photos underperform because agents do not brief their photographers. These scripts tell the photographer exactly what to capture.",
+          "type": "action-steps",
+          "items": [
+            "PRE-SHOOT BRIEFING EMAIL: 'Compose a photography briefing email for my real estate photographer before shooting [address]. The property's best features are: [list top 5 features]. The target buyer is [describe buyer]. The listing price is $[price]. Tell the photographer: (1) which rooms to prioritize, (2) what time of day captures the best light for the exterior, (3) any staging notes for specific rooms, (4) specific angles that highlight the best features, and (5) any shots that are absolutely must-have for marketing. Write this as a professional, specific briefing — not generic advice.'",
+            "DRONE SHOT DIRECTION: 'Write specific drone photography instructions for a listing at [address]. The property sits on [lot size] and is adjacent to [describe surroundings — park, golf course, water, mountain, etc.]. We want drone shots that show [specific features — backyard, proximity to amenity, lot size, neighborhood context]. List 6 specific drone angles with precise descriptions of what each shot should capture and why it matters for marketing this property.'",
+            "STAGING CHECKLIST PROMPT: 'Generate a room-by-room staging checklist for a photography shoot at a [describe home type and size]. I have [occupied/vacant/partially staged] conditions. Budget for staging: $[amount or zero]. List what to add, what to remove, and what to rearrange in each room: living room, kitchen, master bedroom, bathrooms, and exterior. Be specific — not \"declutter\" but \"remove all items from kitchen counters except one decorative item and the coffee maker\".'"
+          ]
+        },
+        {
+          "title": "Open House Announcement Copy",
+          "content": "Multi-channel open house announcements that drive attendance across social, email, and text.",
+          "type": "framework",
+          "items": [
+            "SOCIAL MEDIA ANNOUNCEMENT (INSTAGRAM/FACEBOOK): 'Write 3 different social media posts announcing an open house at [address] on [date/time]. Post 1: Feature-led (highlight the best single feature). Post 2: Lifestyle-led (paint the picture of living there). Post 3: Urgency-led (why serious buyers should not miss this). Each post: under 150 words, ends with address and open house time, and includes a line about scheduling a private showing for those who cannot attend. Include 10 relevant hashtags.'",
+            "EMAIL ANNOUNCEMENT: 'Write an open house announcement email for my database. Property: [address, brief description]. Open house: [date, time]. Price: $[price]. Subject line options: provide 5 subject lines with different angles (curiosity, urgency, feature-specific, neighborhood-specific, deal-focused). Email body: 150-200 words. Include one compelling image caption instruction. End with a strong CTA and my contact info placeholder.'",
+            "TEXT MESSAGE BLAST: 'Write 3 short text message announcements for an open house at [address] on [date/time]. Each text must be under 160 characters. Version 1: Invitation tone. Version 2: Urgency tone. Version 3: Personal/conversational tone (as if texting a friend). Include address and time in each.'",
+            "NEIGHBOR DOOR-KNOCK SCRIPT: 'Write a door-knocking script for notifying neighbors about an open house at [address] on [date/time]. The script should: introduce me as the listing agent, invite them warmly (and strategically — neighbors often refer buyers), mention the property's best feature, give them the date and time, and leave a door hanger or card. The tone should be neighborly and non-salesy. Also write the copy for the door hanger itself.'"
+          ]
+        },
+        {
+          "title": "Price Reduction Announcement Scripts",
+          "content": "Price reductions handled wrong look desperate. Handled right, they create a second wave of buyer interest. These prompts turn bad news into opportunity.",
+          "type": "framework",
+          "items": [
+            "EMAIL TO DATABASE: 'Write a price reduction announcement email for [address]. Original price: $[amount]. New price: $[amount]. Days on market: [number]. The tone must not sound desperate. Frame this as a strategic pricing adjustment that creates an opportunity for the right buyer. Mention 2-3 compelling features that still justify value at the new price. Subject line options: provide 4 options. Email length: 150 words. End with urgency CTA.'",
+            "SOCIAL MEDIA POST: 'Write a social media post announcing that [address] has been repriced from $[original] to $[new price]. This is NOT a distressed sale post — frame it as smart buyer opportunity. Lead with a compelling feature of the home, then reveal the new price as the \"best part.\" Under 100 words. Include hashtags. Tone: excited, not apologetic.'",
+            "AGENT-TO-AGENT EMAIL (CO-OP): 'Write an email to buyer's agents in my market announcing a price reduction on [address] from $[original] to $[new]. This email goes to colleagues, not clients. Be direct about the pricing opportunity. Mention the buyer profile this home is ideal for. Ask them to think of any clients they may have shown in this price range previously. Include commission details: [buyer agent co-op percentage].'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 2: Buyer Conversion Engine",
+      "content": "Most deals are lost not in the negotiation — they are lost in the follow-up gap between showing and offer. Buyers see 10-15 homes and the agent who stays top-of-mind with the most useful communication wins the client. This section gives you every follow-up sequence, offer-writing tool, and buyer conversation framework you need to convert prospects into signed clients and signed clients into closed deals.",
+      "subsections": [
+        {
+          "title": "First Showing Follow-Up Sequences",
+          "content": "The 48 hours after a showing are critical. Use this 3-email, 5-text sequence to keep the buyer engaged and position yourself as their trusted advisor.",
+          "type": "framework",
+          "items": [
+            "EMAIL 1 — SAME DAY (within 3 hours): 'Write a follow-up email to send to [buyer name] within 3 hours of showing them [address] and [address 2] today. They seemed most interested in [property] but mentioned [specific concern or hesitation]. I want to: (1) thank them genuinely, (2) provide one useful piece of information about their top property, (3) address their hesitation briefly without being pushy, and (4) set up the next step. Tone: friendly, knowledgeable, no pressure. Under 200 words.'",
+            "EMAIL 2 — DAY 3 (market intelligence): 'Write a follow-up email for 3 days after showing [property] to [buyer name]. They have not responded to my first email. I want to add value by sharing relevant market information — specifically [a new listing in their target area / a price reduction on something similar / a market stat about how fast homes in their range are moving]. Do not ask if they are ready to buy. Position this as a helpful market update from their agent. Under 150 words.'",
+            "EMAIL 3 — DAY 7 (alternative options): 'Write a follow-up email for 7 days after our showing. Include 2-3 new listing recommendations based on what [buyer name] said they wanted: [describe their criteria]. For each listing, write one compelling sentence about why I thought of them specifically. End with a soft ask to schedule a showing. Tone: personal, not automated. Under 200 words.'",
+            "TEXT 1 — SAME DAY (post-showing): 'Write a text message to send within 1 hour of a showing. Buyer name: [name]. Property shown: [address]. Their reaction seemed [positive/neutral/mixed]. The text should feel like a thoughtful colleague checking in, not a salesperson following up. Under 3 sentences. Do not ask for a decision.'",
+            "TEXT 2 — DAY 2 (light touch): 'Write a follow-up text for day 2 after showing [property] to [buyer name]. Do NOT reference the property or ask about their decision. Instead, send something useful — a tip, a local resource, a relevant piece of news. Something that makes them glad they got the text. Under 2 sentences.'",
+            "TEXT 3 — DAY 4 (soft check-in): 'Write a day-4 text to [buyer name] after showing them [property]. At this point I want to gently re-open the conversation. One approach: send a question that invites them to tell me more about what they want. Another: share a new listing that just came to my attention. Write both versions and let me choose.'",
+            "TEXT 4 — DAY 8 (new option): 'Write a text message introducing a new listing at [address] that just came to market. I am sending this to [buyer name] who has been looking in [area] with a budget of $[range]. The new listing is priced at $[price] and has [key features]. Make it feel like I thought of them specifically when I saw it — not a mass blast.'",
+            "TEXT 5 — DAY 14 (breakup text): 'Write a final follow-up text for a buyer I showed homes to 14 days ago who has gone quiet. This is my last outreach before I move them to my long-term drip. The goal is to create a small amount of pressure without being pushy, leave the door wide open, and make them feel like I am genuinely rooting for them to find the right home — even if it is not with me.'"
+          ]
+        },
+        {
+          "title": "Offer Writing Assistance Prompts",
+          "content": "A great offer is more than price. These prompts help you craft the narrative components — the personal letter and the strategic cover note to the listing agent — that can tip a close competition.",
+          "type": "framework",
+          "items": [
+            "PERSONAL LETTER (BUYER TO SELLER): 'Write a personal offer letter from my buyers [buyer profile: couple/family/single person, describe briefly] to the sellers of [address]. My buyers want to share: [1-2 personal details they are comfortable sharing about why they love the home and what it means to them]. Important: Do NOT include any information that could indicate race, religion, family status, or national origin as this can create Fair Housing issues. Keep the letter genuine, brief (3 short paragraphs), and focused on the home itself and what the sellers built there. The tone should be heartfelt without being manipulative.'",
+            "COVER NOTE TO LISTING AGENT: 'Write a cover email I will send to the listing agent along with an offer on [address]. My offer terms: price $[amount], down payment [percentage], financing [conventional/FHA/cash], closing date [date], contingencies [list]. The sellers' timeline is [describe any known preferences]. I want this email to: (1) position my buyers as serious and qualified, (2) highlight any favorable terms for the seller, (3) invite a conversation if they receive multiple offers, and (4) build goodwill with the agent. Tone: professional, confident, collaborative.'",
+            "ESCALATION CLAUSE EXPLANATION: 'Write a short explanation I can send to my buyer [name] explaining how an escalation clause works on their offer for [address]. They are nervous about using one and do not fully understand it. Explain: what it is, how it protects them, the risk of exposing their top number, and in what situations I recommend it for this specific property. Use plain language, no jargon. Under 300 words.'",
+            "MULTIPLE OFFER STRATEGY EMAIL TO BUYER: 'Write an email to [buyer name] explaining that we are likely in a multiple offer situation on [address]. I need to: (1) set realistic expectations without panicking them, (2) explain what makes our offer competitive, (3) ask for any final decisions they need to make (price, terms, down payment), and (4) tell them the timeline for hearing back. Keep the tone calm, professional, and decisive — I am the expert guiding them through this.'"
+          ]
+        },
+        {
+          "title": "Counter-Offer Strategy Prompts",
+          "content": "Counter-offers require quick thinking. These prompts help you respond strategically and communicate effectively with your buyer.",
+          "type": "framework",
+          "items": [
+            "EXPLAINING A COUNTER TO YOUR BUYER: 'Write a message to [buyer name] explaining that we received a counter-offer on [address]. Counter terms: price $[amount], [list any other changed terms]. Our original offer: $[amount]. I want to explain: (1) what the sellers countered and why it is likely, (2) what I recommend we do and why, (3) what our options are, and (4) ask for their decision. Tone: clear, calm, decisive. I am advising them, not just reporting. Under 250 words.'",
+            "RESPONDING TO AN UNREASONABLE COUNTER: 'The sellers of [address] countered my buyer at $[amount] — only $[difference] below asking despite [time on market / condition issues / recent comps showing lower value]. Write a professional, firm counter-response cover note I can send back with a revised offer of $[amount]. Support the revised price with: [comp data or market reasoning I will provide]. Tone: respectful, well-reasoned, and confident — not aggressive.'",
+            "MULTIPLE COUNTER ROUNDS — KEEPING THE DEAL ALIVE: 'We are on round [number] of negotiations on [address]. The gap between buyer and seller is now $[amount]. Both sides are getting frustrated. Write a message I can send to the listing agent designed to find a creative path to closing this deal — beyond just splitting the difference. Include ideas like: closing cost credits, repair allowances, flexible closing date, rent-back options, inclusion/exclusion of personal property. Tone: creative problem-solver, not adversarial.'"
+          ]
+        },
+        {
+          "title": "Pre-Qualification Conversation Scripts",
+          "content": "Qualifying buyers early prevents wasted time and builds the relationship on the right foundation.",
+          "type": "framework",
+          "items": [
+            "INITIAL QUALIFICATION CALL SCRIPT: 'Write a phone conversation script for my first call with a new buyer lead named [name] who inquired about [how they found me]. The call should: (1) open warmly and build rapport, (2) uncover their timeline, budget, and motivation, (3) ask about their financing status without being transactional, (4) introduce my value proposition briefly, and (5) set up a buyer consultation meeting. Include both my lines and suggested response branches for common answers. The tone is conversational — this is a script I will adapt, not read verbatim.'",
+            "LENDER REFERRAL TRANSITION: 'Write a script for transitioning a buyer conversation to my lender referral. The buyer [name] seems serious but has not gotten pre-approved yet. I want to: (1) explain why pre-approval helps them compete, (2) introduce my lender recommendation enthusiastically, (3) reduce any anxiety about the credit check, and (4) set the expectation that we will start showing homes once they have a pre-approval letter. Under 200 words. Tone: helpful, not pushy.'",
+            "CASH BUYER QUALIFICATION: 'Write a script for qualifying a buyer who claims to be a cash buyer for properties in the $[range]. I need to understand: proof of funds availability, their timeline for closing, whether they are also looking at other properties or agents, and what their decision-making process looks like. Do this without sounding like I am interrogating them — frame it as helping them move fast when the right property comes up.'"
+          ]
+        },
+        {
+          "title": "Dream Home Discovery Interview Framework",
+          "content": "The agents who write winning offers do so because they know exactly what their buyer wants. This framework extracts the real criteria — not just the stated ones.",
+          "type": "framework",
+          "items": [
+            "FULL DISCOVERY INTERVIEW PROMPT: 'Create a buyer consultation question framework for a 45-minute meeting with new buyers [names]. They want to buy in [area] with a budget of $[range] by [timeline]. I need to uncover: (1) their must-haves vs. nice-to-haves, (2) their dealbreakers, (3) their emotional drivers for buying now, (4) any previous home search experience and why they did not buy, (5) what their ideal closing timeline looks like, and (6) their decision-making process. Write 20 questions — 10 practical/tactical and 10 emotional/motivational. Include notes on what each question is designed to reveal.'",
+            "HIDDEN OBJECTION UNCOVERING: 'Write 5 follow-up questions I can ask when a buyer says they \"want to think about it\" after seeing a home they clearly liked. Each question should be non-threatening, genuinely curious, and designed to surface the real hesitation without pressuring them. I need to know if the issue is price, fear, a specific feature, a competing property, or relationship dynamics.',",
+            "COMPETING WITH ANOTHER AGENT: 'A buyer couple told me they are also working with another agent. Write a script for having a direct, professional conversation about how I work, what makes my service different, and how we should structure our relationship going forward. I do not want to badmouth the other agent. I want to position my value so clearly that they choose to work exclusively with me. Under 300 words.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 3: Seller Listing Presentation System",
+      "content": "Winning listing appointments is a system, not a talent. The agents who consistently win listings are not necessarily better agents — they are better prepared. AI lets you walk into every listing appointment with better research, better narrative, and better objection responses than any competitor who prepared manually. This section covers the full listing presentation workflow from pre-appointment research through the signed agreement.",
+      "subsections": [
+        {
+          "title": "Pre-Listing Appointment Research Prompts",
+          "content": "Walk in knowing more about the seller, their property, and their neighborhood than they do.",
+          "type": "framework",
+          "items": [
+            "PROPERTY RESEARCH BRIEF: 'Generate a pre-listing research brief for my appointment at [address] on [date]. I know the following about the property: [what you already know from MLS history, public records, or the homeowner]. I need you to help me structure: (1) the key questions I should ask the sellers about the property, (2) what MLS data I should pull and how to interpret it for them, (3) what neighborhood information will be relevant to the pricing conversation, and (4) any flags or opportunities this property might have based on what I know. Format as a one-page brief I can review before the appointment.'",
+            "SELLER MOTIVATION DISCOVERY QUESTIONS: 'Write 10 questions I should ask at the beginning of a listing appointment to uncover the sellers' true motivation and timeline. I want to understand: why they are selling, where they are going, what success looks like for them, what their financial situation requires from the sale, and any concerns they have about the process. Frame these as conversational, not interrogative. Include notes on what each question is designed to reveal about their decision-making.'",
+            "COMPETITIVE LISTING ANALYSIS: 'I am preparing a listing presentation for [address]. Current active competition in the neighborhood: [list competing active listings with address, price, days on market, and any notes]. Recent sales: [list comparable sales]. Help me build a narrative that positions [my client's property] favorably against the competition. What are the legitimate differentiators? How should I frame the pricing discussion? What is the single strongest argument for my recommended list price of $[amount]?'"
+          ]
+        },
+        {
+          "title": "CMA Presentation Narrative Generator",
+          "content": "Numbers without narrative lose listings. These prompts help you tell the story behind your CMA in a way that builds confidence and leads to the right price.",
+          "type": "framework",
+          "items": [
+            "CMA EXECUTIVE SUMMARY: 'Write a 2-paragraph narrative summary of my CMA for [address]. The comparables support a value range of $[low] to $[high]. My recommended list price is $[amount]. The key factors that influenced my analysis: [list 3-4 factors — condition, location nuances, recent market movement, competition]. This summary will be the first thing the sellers read when I hand them the CMA packet. It must be confident, clear, and set the stage for accepting my recommendation. Avoid jargon.'",
+            "ABOVE-CMA OBJECTION PREEMPTION: 'The sellers of [address] believe their home is worth $[their price] based on [their reasoning]. My CMA supports $[my price] — a difference of $[amount]. Write a presentation script for walking them through the data that supports my number without being dismissive of theirs. I want to validate their perspective, then systematically show them why the market data tells a different story. Include a bridge line that transitions from their number to mine without confrontation.'",
+            "PRICING STRATEGY OPTIONS FRAMEWORK: 'Write a presentation of three pricing strategy options for the sellers of [address]. Option 1: Aggressive market pricing at $[price]. Option 2: At-market pricing at $[price]. Option 3: Above-market pricing at $[price]. For each option, explain: the likely buyer pool, expected days on market, risk of price reductions, and the psychological impact on buyers. Present this as an informed menu of choices, not as me pushing one option — though I will recommend Option [1/2] at the end.'"
+          ]
+        },
+        {
+          "title": "Objection Handling Library",
+          "content": "Every listing presentation objection you will ever face — with tested responses.",
+          "type": "framework",
+          "items": [
+            "COMMISSION OBJECTION — 'YOUR FEE IS TOO HIGH': 'Write a confident, non-defensive response to a seller who says my [commission percentage]% fee is too high and they want to negotiate it down or list with a discount broker. My response should: (1) acknowledge their concern without apologizing, (2) reframe commission as a marketing investment, not a cost, (3) explain what the discounters actually cut (marketing, negotiation, service), (4) quantify the value of professional representation in dollars — not percentages, and (5) invite them to make a decision based on value, not just price. Under 300 words.'",
+            "TIMING OBJECTION — 'WE WANT TO WAIT UNTIL SPRING': 'Write a response to sellers who want to wait until spring to list. My market data shows: [current market conditions]. The objection I am addressing: waiting means missing [X weeks] of active buyers, increased competition in spring, and [any other relevant market factor]. I do not want to scare them into listing — I want to inform them so they can make the best decision. Present the trade-offs honestly.'",
+            "EXPERIENCE OBJECTION — 'WE WANT SOMEONE WITH MORE EXPERIENCE': 'Write a response to sellers who say they were considering a more experienced agent. I have been in real estate for [X years] and have sold [Y homes]. My competitive differentiator is [describe your actual edge — technology, market knowledge, specific track record, team support]. Write a response that is confident without being defensive, pivots from volume-of-experience to quality-of-service, and asks a clarifying question to understand what they really mean by \"experience\".'",
+            "FSBO OBJECTION — 'WE THINK WE CAN SELL IT OURSELVES': 'Write a consultative response to sellers considering FSBO. Do not lecture them. Do not lead with statistics they have heard before. Instead, ask them what their specific plan is for [finding qualified buyers, negotiating the contract, handling inspections, navigating the appraisal, managing the closing timeline]. Use their own gaps in the process to illustrate where a professional adds value. Close by offering to be their resource even if they try FSBO first — which builds the relationship for when they eventually list.'",
+            "PRICING OBJECTION — 'THE OTHER AGENT SAID WE CAN GET MORE': 'Write a response to sellers who tell me another agent quoted them $[higher price] and they want to know if I can match it. I need to: (1) not panic or immediately adjust my price, (2) ask what that agent's CMA was based on, (3) explain the concept of \"buying a listing\" (when agents overprice to win the business), (4) present the risk of an overpriced listing — extended DOM, price reductions, stigma, and eventual lower sale price, (5) stay at my recommended price or explain what would need to be true for a higher price to be justified.'",
+            "INTERVIEW MULTIPLE AGENTS OBJECTION: 'Write a closing script for the end of a listing appointment when the seller says they are interviewing two other agents before deciding. I want to: (1) affirm that it is smart to interview multiple agents, (2) give them a decision-making framework (what to compare across agents), (3) make sure my differentiators are the criteria they use, (4) create some urgency without being pushy, and (5) set a specific follow-up time. Under 200 words.'",
+            "ZILLOW/ONLINE VALUATION OBJECTION: 'Write a response to sellers who cite the Zestimate of $[amount] as evidence their home is worth more than my CMA of $[amount]. Explain — calmly and credibly — why automated valuations are systematically inaccurate and what inputs they miss (interior condition, recent renovations, micro-location factors, negotiated sale terms). Use a simple analogy. Then redirect to the actual comparable sales data I have in front of me.'"
+          ]
+        },
+        {
+          "title": "Listing Agreement Follow-Up Sequence",
+          "content": "After a signed listing agreement, the relationship deepens or disappears based on your first two weeks of communication.",
+          "type": "framework",
+          "items": [
+            "DAY 1 — CONFIRMATION EMAIL: 'Write an email to send to sellers [names] the evening they sign the listing agreement for [address]. This email should: (1) confirm what was agreed, (2) outline the next 7 days of activity (photography, MLS entry, marketing launch), (3) express genuine enthusiasm for representing their home, and (4) tell them exactly when they will hear from me next. Set the tone: I am organized, proactive, and in control.'",
+            "DAY 3 — MARKETING PREVIEW: 'Write an email to my new sellers showing them their marketing assets before launch: photos are [ready/pending], listing description is [attached], social media posts are [ready/pending]. Ask for their feedback and approval on the description. Set the launch date. Create excitement around the go-live moment. Under 200 words.'",
+            "DAY 7 — FIRST WEEK REPORT: 'Write a first-week activity report email for sellers at [address]. Their listing went live [X] days ago. Activity so far: [showings, online views, inquiries]. Feedback from showings: [summarize]. Market context: [any relevant new comps or market news]. My recommendation for this week: [what I am doing next]. Tone: confident and data-driven. Length: under 300 words. No fluff.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 4: Market Intelligence Mastery",
+      "content": "The agent who controls the information controls the relationship. Clients who believe you know the market better than anyone else call you first, refer you most, and accept your pricing and negotiation guidance. These prompts let you produce expert-level market analysis in minutes instead of hours.",
+      "subsections": [
+        {
+          "title": "Weekly Market Update Template",
+          "content": "A consistent weekly market update newsletter positions you as the local expert and keeps you top-of-mind with your entire database. Run this every week and you will never run out of content.",
+          "type": "framework",
+          "items": [
+            "WEEKLY NEWSLETTER GENERATOR: 'Write a real estate market update newsletter for my [city/neighborhood] farm area. Market stats for the week: new listings: [number], sold: [number], average days on market: [number], median price: $[amount], price change from last week: [up/down X%]. Include: (1) a headline that makes the stats interesting, not just reportable, (2) one paragraph of what this week's data means for buyers, (3) one paragraph for sellers, (4) one local market observation or anecdote (I will fill in the specific detail), and (5) a brief CTA to call me. Length: 300-350 words. Tone: knowledgeable neighbor, not corporate.'",
+            "MARKET SHIFT ALERT: 'Write a special market alert email for my database. The market is showing: [describe the shift — inventory building up, prices softening, multiple offers returning, interest rate change impact]. This is notable because [context]. I want to send this to both buyers and sellers with different implications for each. Write a single email that addresses both audiences with a section for each. Subject line options: provide 4 that create urgency without being alarmist.'",
+            "MONTHLY MARKET SNAPSHOT: 'Generate a monthly market snapshot summary for [month/year] in [market area]. I will provide the raw data: [paste MLS statistics]. Transform this data into: (1) an executive summary paragraph, (2) three key takeaways for sellers, (3) three key takeaways for buyers, (4) a 6-month trend summary, and (5) one prediction for next month with my reasoning. Format for use in an email newsletter and a social media caption version.'"
+          ]
+        },
+        {
+          "title": "Neighborhood Report Generator",
+          "content": "Hyperlocal reports demonstrate expertise that national and even city-wide data cannot. These prompts create neighborhood-specific content for your farm area.",
+          "type": "framework",
+          "items": [
+            "NEIGHBORHOOD ANNUAL REPORT: 'Write a neighborhood real estate annual report for [neighborhood name] covering [year]. I am providing the following data: [paste sales data — addresses, prices, sizes, DOM]. Create a report that includes: (1) an introduction establishing why [neighborhood] is a distinct market, (2) year-in-review statistics with meaningful commentary, (3) notable sales and what they indicate about value, (4) how this neighborhood compared to the broader market, and (5) what 2026 looks like based on current inventory and demand signals. This report will be mailed to every homeowner in [neighborhood] as a value piece.'",
+            "NEW RESIDENT WELCOME PACKET: 'Write a neighborhood guide for new residents moving into [neighborhood]. Include: 5 must-know local restaurants and cafes, the best parks and outdoor spaces, local services (dry cleaners, grocery, hardware), community events and neighborhood association info, and one insider tip that only locals know. This will be part of my closing gift to buyers. Tone: warm, personal, like advice from a friend who lives there.'"
+          ]
+        },
+        {
+          "title": "Interest Rate Impact Explainer",
+          "content": "When rates move, your phone rings. Be ready to explain it clearly, accurately, and in a way that moves people toward action.",
+          "type": "framework",
+          "items": [
+            "RATE INCREASE EXPLAINER (FOR BUYERS): 'Write a clear, calm email to buyer clients explaining a recent increase in mortgage rates. Rates have moved from [X]% to [X]%. On a $[price] purchase with [down payment]% down, this change means the monthly payment goes from $[amount] to $[amount]. I want to: (1) acknowledge the news without dramatizing it, (2) put it in historical context, (3) explain the real monthly impact on their specific search, (4) discuss whether waiting for rates to come down is a sound strategy, and (5) keep them engaged and not panicked. Under 300 words.'",
+            "RATE DECREASE OPPORTUNITY (FOR DATABASE): 'Write an email to my full database announcing a meaningful drop in mortgage interest rates. Rates are now at [X]%. This is an opportunity email — I want to re-engage buyers who paused their search, give renters a reason to reconsider buying, and prompt current homeowners to think about equity opportunities. Write three short sections: one for active buyers, one for renters, one for current homeowners. Total length under 350 words. Subject line options: provide 5.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 5: Client Communication Automation",
+      "content": "Transaction coordination is where deals die and client relationships erode. A client who hears nothing for a week assumes nothing is happening — and starts worrying. The prompts in this section give you a professional communication system for every stage of the transaction, turning a stressful process into a confidence-building experience.",
+      "subsections": [
+        {
+          "title": "Transaction Coordination Update Templates",
+          "content": "Weekly and milestone updates that keep clients informed, calm, and confident in your representation.",
+          "type": "framework",
+          "items": [
+            "UNDER CONTRACT CELEBRATION: 'Write a message to [buyer/seller name] to send immediately after going under contract on [address]. They should feel: excited, in good hands, clear on what happens next. Include: (1) a genuine congratulations, (2) the key dates going forward (inspection deadline, appraisal, final walk-through, closing), (3) what they need to do in the next 48 hours, and (4) my promise of how I will keep them updated. Under 250 words.'",
+            "WEEKLY TRANSACTION UPDATE: 'Write a weekly transaction update for [client name] on [address]. This week: [list what happened — inspection completed, appraisal ordered, loan processing update, title work, etc.]. Next week: [what is scheduled]. Any issues: [describe or say none]. The tone should be matter-of-fact and reassuring — I am in control. Under 200 words.'",
+            "INSPECTION RESULTS SUMMARY: 'Write a message to [buyer name] summarizing the home inspection results for [address]. The inspection found: [list the main items — I will include severity]. I want to: (1) normalize that every home has inspection findings, (2) clearly separate serious issues from minor ones, (3) explain what I recommend we ask the seller to address and what I recommend we accept, and (4) prepare them for the repair request negotiation. Tone: calm, analytical, experienced. Under 300 words.'",
+            "CLOSING COUNTDOWN (7 DAYS OUT): 'Write a \"7 days to close\" message to [client name] for the property at [address]. Include: (1) the closing is confirmed for [date] at [time] at [location], (2) what they need to bring (ID, cashier check amount, etc.), (3) when the final walk-through is scheduled, (4) utilities to transfer and the contact numbers, and (5) a genuine expression of excitement about the milestone. Make this feel like the celebration lead-up it should be.'"
+          ]
+        },
+        {
+          "title": "Inspection Issue Explanation Prompts",
+          "content": "Home inspections produce scary-sounding reports. Your job is to translate them into clear, rational guidance.",
+          "type": "framework",
+          "items": [
+            "TRANSLATING AN INSPECTION REPORT: 'I am sending my buyers [names] the inspection report for [address]. The report flags [number] items. I need to write them a message that: (1) leads with the positive — the home is fundamentally sound, (2) categorizes the findings into: safety issues, major systems, cosmetic, and maintenance, (3) identifies the 3 items I recommend we put in a repair request, (4) explains what we should accept as-is and why, and (5) sets up a call to discuss. Tone: the experienced agent who has seen 500 inspections reassuring someone on their first one.'",
+            "SEPTIC/WELL/ROOF CONCERN EXPLANATION: 'Write an explanation email to my buyer about a [septic/well/roof] issue flagged in the inspection at [address]. The inspector noted: [describe the issue]. I need to explain: (1) what this means in plain language, (2) whether this is common or serious, (3) what it would cost to repair or replace, (4) how I recommend we handle it in negotiations, and (5) whether this should affect their decision to proceed. Under 300 words. No alarmism, no minimizing. Just clarity.'"
+          ]
+        },
+        {
+          "title": "Appraisal Challenge Scripts",
+          "content": "A low appraisal does not have to kill a deal. These scripts help you navigate the situation professionally.",
+          "type": "framework",
+          "items": [
+            "LOW APPRAISAL — EXPLAINING TO SELLER: 'Write a message to my sellers explaining that the appraisal for [address] came in at $[amount] — $[shortfall] below the contract price of $[amount]. I need to explain: (1) what the appraisal means, (2) what options we have (price reduction, buyer makes up the gap, dispute the appraisal, renegotiate split), (3) what I recommend and why, and (4) the timeline for responding. Tone: clear-headed, experienced, decisive. Under 300 words.'",
+            "APPRAISAL DISPUTE PACKAGE: 'Help me write a reconsideration of value request to submit to the appraiser for [address]. The appraised value was $[amount]. The contract price is $[amount]. I believe the value is supported by the following comparables the appraiser missed or under-weighted: [list comps with reasoning]. Write the formal letter that presents these comparables professionally and makes the strongest case for reconsideration. Include the legal framing that this is a factual addendum, not an attempt to influence the appraiser inappropriately.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 6: Social Media Content Engine",
+      "content": "Social media is the modern farm. It is how clients who have not met you yet decide they trust you, and how past clients stay connected to you between transactions. The agents who dominate their markets on social do not have more time — they have better systems. This section gives you enough content to never run out of ideas and enough structure to build a recognizable brand.",
+      "subsections": [
+        {
+          "title": "365-Day Content Calendar Framework",
+          "content": "A full year of content themes, rotated weekly, so you always know what to post.",
+          "type": "framework",
+          "items": [
+            "ANNUAL CONTENT CALENDAR GENERATOR: 'Create a 52-week social media content calendar for a real estate agent in [city/market]. I post 4 times per week on [platforms]. My brand personality is [describe: professional/friendly/educational/local authority/humor-driven]. Organize by content pillars: (1) Market education, (2) Local community, (3) Client stories and social proof, (4) Personal brand/behind the scenes, (5) Listings and market activity. For each week, give me: the weekly theme, one post idea for each pillar, and the recommended format (photo, video, carousel, story). I will use this as my production calendar.'",
+            "MONTHLY THEME GENERATOR: 'Generate a social media content theme for [month] for a real estate agent. Include: the overarching monthly theme, 4 weekly sub-themes, 16 specific post ideas with captions, 8 suggested story or reel ideas, and 4 engagement questions to drive comments. Tailor the content to what is happening in real estate and the general culture in [month] — holidays, seasons, market events.'",
+            "BATCH CONTENT CREATION SESSION: 'Help me batch-create 2 weeks of social media content in one session. I am a real estate agent in [market]. My recent activities include: [new listings, closings, open houses, local events attended]. My market stats this week: [brief stats]. Generate 8 complete posts — captions, hashtag sets, and image direction for each. Alternate between content types: listing, market update, local life, educational tip, client win, personal brand.'"
+          ]
+        },
+        {
+          "title": "Just Listed / Just Sold Templates",
+          "content": "The posts that matter most — make them memorable.",
+          "type": "framework",
+          "items": [
+            "JUST LISTED POST: 'Write 3 different social media captions for announcing a new listing at [address] priced at $[price]. The home has [key features]. Open house: [date/time]. Post 1: Feature-forward, descriptive. Post 2: Buyer-focused, aspirational lifestyle. Post 3: Market-scarcity angle — why this home in this area at this price is rare. Each under 150 words. Include a hashtag set for each.'",
+            "JUST SOLD POST: 'Write a just sold social media post for [address]. Sale price: $[amount]. Original list price: $[amount]. Days on market: [number]. A brief, compelling story about [one anonymized detail that makes this sale notable — multiple offers, sold above asking, seller moving to [destination], buyers who had been searching for X months]. Do not reveal client-identifying information. Make this feel like a genuine win worth celebrating.'",
+            "SOLD ABOVE ASKING ANNOUNCEMENT: 'Write a social media post celebrating a sale at $[amount] — $[overage] above the asking price of $[amount]. [Number] offers received. Days on market: [number]. The post should: (1) announce the result powerfully, (2) give buyers a brief lesson on why pricing and marketing strategy mattered here, (3) invite sellers who want the same result to contact me. Under 200 words.'"
+          ]
+        },
+        {
+          "title": "Testimonial Request Messages",
+          "content": "Reviews compound over time. These prompts make it easy to ask — and easy for clients to say yes.",
+          "type": "framework",
+          "items": [
+            "POST-CLOSING REVIEW REQUEST: 'Write a post-closing message to [client name] asking for a Google review and/or Zillow review. The closing was [number] days ago. I want to: (1) celebrate the milestone first, (2) ask naturally and without pressure, (3) make it as easy as possible (include direct link), and (4) suggest 3-4 specific things they could mention so they are not staring at a blank page. The ask should not feel transactional — it should feel like a natural part of wrapping up a great experience. Under 200 words.'",
+            "VIDEO TESTIMONIAL REQUEST: 'Write a message asking a past client [name] if they would record a 60-second video testimonial about their experience working with me. They should feel: flattered, not obligated, and clear on how easy it is. Include: what I am asking (just their phone camera, 60 seconds, their honest experience), what I will use it for (website, social media), and a list of prompts they can answer: [what was your situation before we worked together / what was the experience like / would you recommend me and why]. Make the ask warm and personal.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 7: Database Nurture System",
+      "content": "Your database is your retirement plan. The agents who generate 50%+ of their business from referrals and repeat clients are not luckier — they are more consistent. These prompts give you a full-year nurture system that stays top-of-mind without being annoying, builds genuine relationship, and generates a steady stream of referrals.",
+      "subsections": [
+        {
+          "title": "Annual Check-In Email Templates",
+          "content": "Quarterly and annual touchpoints that feel personal, not automated.",
+          "type": "framework",
+          "items": [
+            "ANNUAL CHECK-IN: 'Write an annual check-in email to a past client [name] who bought/sold [address] approximately [X] years ago. I want to: (1) reference something personal or specific about their transaction to prove this is not a mass email, (2) give them a brief update on what their home is worth now (I will fill in the value), (3) ask how they are enjoying the home, and (4) remind them naturally that I am here for referrals. Zero sales pressure. This should read like a note from a trusted friend in the business. Under 200 words.'",
+            "MARKET ANNIVERSARY UPDATE: 'Write an email to past clients marking the [1-year/2-year/5-year] anniversary of their purchase at [address]. Include: (1) a congratulations on the anniversary, (2) a quick update on neighborhood value trends (I will add the specific numbers), (3) a useful tip for homeowners at this stage (tax reassessment review, refinancing consideration, HELOC opportunity, etc.), and (4) an easy, non-pushy reminder of my referral program. Under 250 words.'"
+          ]
+        },
+        {
+          "title": "Home Anniversary Messages",
+          "content": "The home anniversary message is the single most effective touchpoint in real estate. These prompts make them memorable.",
+          "type": "framework",
+          "items": [
+            "HOME ANNIVERSARY EMAIL: 'Write a home anniversary email for [client name] marking [X] year(s) in their home at [address]. Make it personal and warm. Include: (1) a genuine celebration of the milestone, (2) one interesting data point about what has changed in their neighborhood since they bought, (3) a useful resource (home maintenance checklist, home improvement ROI guide, etc.), and (4) an invitation to reach out for anything real estate related. This should be the email they actually forward to their partner and say \"how sweet\" — not one they delete.'",
+            "HOME ANNIVERSARY TEXT: 'Write a short, warm anniversary text to past client [name] on the [X]-year anniversary of closing on [address]. The text should feel personal, like it came from their agent who actually remembers them — not from a CRM automation. Reference something real and specific if possible. Under 50 words. Include an offer to help if they have any home questions.'"
+          ]
+        },
+        {
+          "title": "Referral Request System",
+          "content": "Most agents ask for referrals occasionally. The top agents ask systematically. These prompts build a referral machine.",
+          "type": "framework",
+          "items": [
+            "DIRECT REFERRAL ASK: 'Write a direct but non-pushy referral request email to my past client database. The email should: (1) update them on my business briefly (what I have been working on, recent wins), (2) make the referral ask specific — not \"let me know if you know anyone\" but \"I am looking for [3-4 specific client profiles I serve best]\", (3) explain what a referral means to my business in human terms, and (4) tell them exactly how to refer someone to me (just forward this email / send me their number / make an intro on text). Under 250 words.'",
+            "REFERRAL THANK YOU: 'Write a thank you message to [name] who referred [client name] to me. The referral is [at what stage — just consulted / now a client / just closed]. The thank you should: feel genuinely personal, be proportional to the stage of the referral (more effusive if they closed), include a specific acknowledgment of what it means, and suggest how I will take care of the person they referred. Also draft a handwritten note version for a card.',",
+            "PAST CLIENT REACTIVATION: 'Write a reactivation email to a past client [name] who I have not contacted in [X] months/years. They bought [address] in [year] with me. I want to re-establish the relationship without making it awkward that I lost touch. Approach: lead with a relevant piece of value for them (market update on their home value, a resource, a neighborhood development), not with my business needs. Warm, genuine, low-pressure. Under 200 words.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 8: The Quick-Start Protocol",
+      "content": "You just bought the most comprehensive AI operating system available for real estate agents. Here is exactly how to use it without getting overwhelmed. Follow this 30-day protocol and you will have a fully functioning AI practice by the end of Month 1.",
+      "subsections": [
+        {
+          "title": "Week 1: Foundation (Days 1-7)",
+          "content": "Your first week is about building the AI habit with your highest-leverage activities.",
+          "type": "action-steps",
+          "items": [
+            "DAY 1 — Set up your AI tool: Open a paid ChatGPT, Claude, or Gemini account if you do not already have one. These prompts work with any. Bookmark this file. Create a folder called 'Real Estate AI' in your notes app where you will save your customized prompts.",
+            "DAY 1 — Run your first prompt: Go to Section 1 and run the Single-Family Home listing description prompt on a current listing or a recently sold property. Compare what AI produces to what you would have written. Refine the output by asking the AI to adjust tone, length, or emphasis. Take 20 minutes. This is your calibration session.",
+            "DAY 2-3 — Listing system setup: Run listing description prompts for every property type you commonly list. Save the best outputs as templates in your notes app. Customize the base prompts to include your market-specific language.",
+            "DAY 4-5 — Follow-up sequences: Take your current active buyers and run their first showing follow-up through the 3-email sequence in Section 2. Do not wait for new buyers. Test it now on real situations.",
+            "DAY 6-7 — Social media batch: Use the batch content creation prompt in Section 6 to generate 2 weeks of social media content. Schedule it in your scheduling tool. You now have content done for the next 14 days."
+          ]
+        },
+        {
+          "title": "Week 2: Seller System (Days 8-14)",
+          "content": "Week 2 is about dominating listing appointments.",
+          "type": "action-steps",
+          "items": [
+            "DAY 8-9 — Listing presentation upgrade: Take your current listing presentation and run it through the CMA narrative generator and objection handling library. Identify the three objections you face most often and script your responses using Section 3.",
+            "DAY 10-11 — Objection role-play: Read the objection responses in Section 3 out loud. Adapt them to your voice. You are not memorizing a script — you are internalizing a framework. The difference is that a framework helps you even when the objection comes in a form you have not seen before.",
+            "DAY 12-14 — Seller communication templates: Set up your transaction update email templates in your email system. The Under Contract email, Weekly Update, and Closing Countdown should be ready to send within seconds for every future transaction."
+          ]
+        },
+        {
+          "title": "Week 3: Market Authority (Days 15-21)",
+          "content": "Week 3 establishes you as the market expert in your farm area.",
+          "type": "action-steps",
+          "items": [
+            "DAY 15-16 — Launch your weekly market update: Write your first weekly market newsletter using the generator in Section 4. Send it to your full database. Commit to sending this every week for 52 weeks. The compounding effect of consistency here is enormous.",
+            "DAY 17-18 — Neighborhood report: Choose your top farm neighborhood and create its annual report using the prompts in Section 4. Print 100 copies and mail or hand-deliver them. This single piece of marketing positions you as the neighborhood expert.",
+            "DAY 19-21 — Content calendar: Use the 52-week calendar prompt to plan your full year of social media content. You do not have to create it all now — just have the plan so you never again stare at your phone wondering what to post."
+          ]
+        },
+        {
+          "title": "Week 4: Database Activation (Days 22-30)",
+          "content": "Week 4 turns your dormant database into an active referral pipeline.",
+          "type": "action-steps",
+          "items": [
+            "DAY 22-24 — Past client audit: Go through your CRM or contact list. Identify: (1) past clients who have never gotten a review request, (2) clients whose home anniversary is this month, (3) clients you have not touched in over 6 months. These are your Week 4 targets.",
+            "DAY 25-27 — Personalized outreach: Use the annual check-in and home anniversary prompts to write personalized messages to your top 20 past clients. Make each one feel individual — add a specific detail that proves you remember them. Send 3-5 per day so you are not overwhelmed.",
+            "DAY 28-30 — Referral system launch: Send the Direct Referral Ask email to your full database using the template in Section 7. Set a calendar reminder to send a version of this every 90 days. After 3 months, your referral flow will be fundamentally different.",
+            "DAY 30 — Assessment: Count how many hours you saved this month by using AI vs. your previous workflow. Count how many more pieces of content you produced. Count how many more follow-up sequences you ran. This is your baseline. The next 30 days will be better."
+          ]
+        },
+        {
+          "title": "The Golden Rule of AI in Real Estate",
+          "content": "AI produces the first draft. You produce the final draft. Never send AI output directly to a client without reading it, personalizing it, and making sure it sounds like you. The prompts in this guide are designed to give you 80% of the work in seconds. The remaining 20% — your voice, your specific knowledge, your relationship — is what makes the difference. That 20% is also the part AI will never replace. Your job just changed: you are now an AI director, not a solo writer. The agents who figure this out in 2026 will be unbeatable by 2028.",
+          "type": "callout",
+          "items": [
+            "Always read AI output before sending — even from these prompts",
+            "Personalize with at least one specific detail that only you would know",
+            "Adjust tone to match the relationship — not every client gets the same voice",
+            "Fact-check any market statistics or legal language the AI includes",
+            "Use AI for speed and volume — use your judgment for strategy and relationship"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "homeDecor": "Wohnen & Deko",
+    "wellness": "Wellness",
+    "beauty": "Schönheit",
+    "kitchen": "Küche",
+    "finance": "Finanzen",
+    "articles": "Artikel",
+    "subscribe": "Abonnieren",
+    "menu": "Menü",
+    "close": "Schließen"
+  },
+  "footer": {
+    "tagline": "Das gute Leben, kuratiert.",
+    "explore": "Entdecken",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "affiliate_disclosure": "Mintbrooks ist Teilnehmer des Amazon-Partnerprogramms, einem Affiliate-Werbeprogramm, das Websites die Möglichkeit bietet, Werbegebühren durch Werbung und Links zu Amazon zu verdienen.",
+    "copyright": "© {year} Mintbrooks. Alle Rechte vorbehalten."
+  },
+  "article": {
+    "read_time": "{minutes} Min. Lesezeit",
+    "share": "Teilen",
+    "buy_on_amazon": "Bei Amazon kaufen",
+    "check_price": "Preis prüfen",
+    "view_on_amazon": "Bei Amazon ansehen",
+    "back_to_articles": "Zurück zu Artikeln",
+    "related": "Das könnte Ihnen gefallen",
+    "updated": "Aktualisiert am {date}"
+  },
+  "newsletter": {
+    "heading": "Schön leben, klug ausgeben.",
+    "subheading": "Wöchentliche Fundstücke, kuratiert für das Leben, das Sie aufbauen.",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "cta": "Zur Liste hinzufügen",
+    "privacy_note": "Kein Spam. Jederzeit abmelden.",
+    "success": "Sie sind dabei! Überprüfen Sie Ihren Posteingang.",
+    "error": "Etwas ist schief gelaufen. Versuchen Sie es erneut."
+  },
+  "category": {
+    "home_decor": "Wohnen & Deko",
+    "wellness": "Wellness",
+    "beauty": "Schönheit & Pflege",
+    "kitchen": "Küche",
+    "finance": "Geld & Kredit",
+    "all": "Alle Kategorien"
+  },
+  "common": {
+    "back": "Zurück",
+    "loading": "Laden...",
+    "see_all": "Alle {category} sehen",
+    "products_title": "Produkte, die wir lieben",
+    "read_more": "Weiterlesen",
+    "search_placeholder": "Mintbrooks durchsuchen...",
+    "no_results": "Keine Ergebnisse für \"{query}\"",
+    "language": "Sprache"
+  },
+  "quiz": {
+    "start": "Quiz starten",
+    "heading": "Finden Sie Ihren perfekten Match"
+  }
+}

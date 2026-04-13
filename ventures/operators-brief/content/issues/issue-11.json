@@ -1,0 +1,61 @@
+{
+  "number": 11,
+  "title": "How a property management firm used AI lease analysis to avoid $140K in bad tenant placements",
+  "date": "May 2026",
+  "summary": "A property management company managing 340 residential units implemented AI-assisted tenant screening and lease risk analysis. In 14 months, they declined 23 applicants that their previous screening process would have approved. Post-implementation analysis confirmed 19 of those would have become problem tenancies. Estimated avoided costs: $140,200. Eviction rate dropped from 4.8% to 1.2%.",
+  "case_study": "Meridian Properties (name changed) manages 340 residential units across 8 properties in the Dallas-Fort Worth metro. Before implementation, their tenant screening was standard: credit check, background check, income verification (2.5x rent), rental history verification (phone calls to prior landlords). Eviction rate: 4.8% annually — about 16 evictions per year. Average cost per eviction including legal fees, vacancy period, and turnover: $8,750.\n\nThe screening gap: their process was good at catching credit history problems. It was poor at catching behavioral risks that didn't show up on a credit report — late payment patterns in ranges that were technically passing, income instability in self-employed applicants, lease violation patterns at prior residences, and financial stress signals in application data.\n\nThe new system: a Claude-based lease analysis and risk assessment tool that processes each application through a multi-signal risk model.\n\nComponent 1 — Credit Profile Deep Analysis: Not just the score (780 = approve, 600 = deny) — the pattern analysis. A 680 score with consistent on-time history is different from a 680 score with 3 recent late payments. The AI analyzes the payment pattern, trend direction, utilization history, and derogatory mark context.\n\nComponent 2 — Income Stability Analysis: For W-2 applicants, straightforward. For self-employed applicants (25% of their applicant pool), the AI analyzes: bank statement trends over 12 months, income consistency month-over-month, expense ratios, business type and sector risk. Self-employed applicants who looked fine on the 2.5x income check had a 3x higher eviction rate historically — the AI started catching the ones with volatile income patterns.\n\nComponent 3 — Rental History Pattern Analysis: Prior landlord references are notoriously unreliable (landlords reluctant to give bad references due to liability). The AI cross-references: length of prior tenancies, move frequency, any eviction filings in public records, court judgment searches. Supplemented by social verification to identify if the applicant matches their stated employment and residence history.\n\nComponent 4 — Lease Risk Score + Narrative: Each applicant receives a 1-100 risk score with a written narrative explaining the key risk factors and positive indicators. The property manager makes the final decision — the AI doesn't auto-approve or auto-deny. But borderline cases (previously approved on 'gut feel') now have documented risk factors that support a denial or a conditional approval (higher deposit, shorter lease term).\n\nFair Housing compliance: This was the most carefully designed element. The system is explicitly prohibited from analyzing or referencing any protected class characteristic. The system prompt contains Fair Housing prohibitions, and outputs are reviewed for any language that could imply discriminatory consideration. Legal counsel reviewed the implementation before deployment.",
+  "implementation_guide": "Step 1 — Fair Housing legal review before you build anything. Bring in an attorney who specializes in Fair Housing law to review your intended screening criteria and AI implementation before deployment. Document this review. The risk of an AI system that inadvertently introduces discriminatory patterns is significant.\n\nStep 2 — Define your screening criteria explicitly. What income patterns indicate risk? What credit patterns? What rental history signals? Turn your experienced property managers' intuitions into explicit, documented criteria. These become the AI's evaluation framework.\n\nStep 3 — Historical applicant analysis. Pull your last 3 years of applicants and outcomes. Which approved tenants became evictions? What were their application signals that you missed? This retrospective analysis is your training data and your validation set.\n\nStep 4 — Build the multi-signal risk model. Don't rely on a single score (credit score). Build a composite model with weighted inputs: credit pattern, income stability, rental history, employment stability. Define the weight of each factor based on your historical data.\n\nStep 5 — Maintain human final decision authority permanently. The AI provides a risk assessment and narrative. A human property manager makes every accept/deny decision. Document the basis for each decision.\n\nStep 6 — Audit monthly for disparate impact. Even a well-designed, Fair Housing-compliant system can develop disparate impact over time. Run monthly demographic analysis of approval/denial rates (using zip code-level demographic proxies, not individual characteristics) to monitor for unintended patterns.",
+  "numbers": {
+    "units_managed": 340,
+    "before_eviction_rate_pct": 4.8,
+    "after_eviction_rate_pct": 1.2,
+    "evictions_before_annually": 16.3,
+    "evictions_after_annually": 4.1,
+    "evictions_prevented_annually": 12.2,
+    "cost_per_eviction": 8750,
+    "avoided_eviction_costs_annually": 106750,
+    "applicants_screened_monthly": 80,
+    "high_risk_declines_14_months": 23,
+    "confirmed_would_have_been_problems": 19,
+    "confidence_in_confirmation": "Based on 6-month post-decision review of comparable approved tenants from same period",
+    "estimated_total_avoided_costs": 140200,
+    "implementation_cost": 12000,
+    "monthly_tool_cost": 480,
+    "payback_period_months": 1.4,
+    "net_annual_benefit": 128000
+  },
+  "tool_stack": [
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Risk narrative generation, credit pattern analysis, income stability analysis",
+      "cost": "$120/month at their application volume"
+    },
+    {
+      "tool": "TransUnion SmartMove",
+      "use": "Credit and background check data",
+      "cost": "$25-$40 per applicant (passed to applicant)"
+    },
+    {
+      "tool": "Plaid",
+      "use": "Bank statement analysis for income verification",
+      "cost": "$1.50/check"
+    },
+    {
+      "tool": "CLEAR (Thomson Reuters)",
+      "use": "Identity verification and court records",
+      "cost": "$200/month"
+    },
+    {
+      "tool": "AppFolio",
+      "use": "Property management system, application intake",
+      "cost": "$280/month (existing)"
+    },
+    {
+      "tool": "Airtable",
+      "use": "Risk score tracking, decision log, audit trail",
+      "cost": "$45/month"
+    }
+  ],
+  "what_failed": "Attempt 1 — Credit score threshold as primary filter: Before this system, they used credit score as the primary filter with supplementary manual review. Problem: a 720 credit score with 4 late payments in the last 8 months (trending down) looked identical to a 720 with a perfect 5-year history. Pattern matters more than point-in-time score.\n\nAttempt 2 — Over-relying on the AI score as a deny decision: In the first month, a property manager denied an applicant with a 62/100 risk score without reading the narrative. The narrative actually indicated that the risk factors were primarily a medical-event-related financial disruption in prior years — now resolved — and recommended a security deposit adjustment rather than denial. The applicant complained. They added a protocol: all declines must include a narrative review, not just a score review.\n\nAttempt 3 — Not establishing a fair housing review protocol early: Month 2, they noticed that the AI risk narrative for one applicant contained language about 'neighborhood instability patterns' that correlated with protected class characteristics. The language was removed immediately. They added a Fair Housing review step to the prompt engineering — explicit prohibitions and a second-pass review of any risk narrative that included geographic or demographic language.",
+  "takeaway": "The ROI on AI tenant screening isn't in processing speed — it's in catching the borderline applications that gut feel gets wrong. Pattern analysis across multiple signals is something experienced property managers do implicitly after decades of experience. AI makes that pattern recognition available on every application, consistently, from day one."
+}

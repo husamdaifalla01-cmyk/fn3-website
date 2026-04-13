@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "homeDecor": "Wonen & Deco",
+    "wellness": "Wellness",
+    "beauty": "Schoonheid",
+    "kitchen": "Keuken",
+    "finance": "Financiën",
+    "articles": "Artikelen",
+    "subscribe": "Abonneren",
+    "menu": "Menu",
+    "close": "Sluiten"
+  },
+  "footer": {
+    "tagline": "Het Goede Leven, Gecureerd.",
+    "explore": "Verkennen",
+    "legal": "Juridisch",
+    "privacy": "Privacybeleid",
+    "terms": "Gebruiksvoorwaarden",
+    "affiliate_disclosure": "Mintbrooks is deelnemer aan het Amazon Associates-programma, een affiliate advertentieprogramma dat websites de mogelijkheid biedt om advertentiekosten te verdienen door te adverteren en te linken naar Amazon.",
+    "copyright": "© {year} Mintbrooks. Alle rechten voorbehouden."
+  },
+  "article": {
+    "read_time": "{minutes} min lezen",
+    "share": "Delen",
+    "buy_on_amazon": "Kopen op Amazon",
+    "check_price": "Prijs bekijken",
+    "view_on_amazon": "Bekijken op Amazon",
+    "back_to_articles": "Terug naar artikelen",
+    "related": "Misschien vind je dit ook leuk",
+    "updated": "Bijgewerkt op {date}"
+  },
+  "newsletter": {
+    "heading": "Mooi leven, slim uitgeven.",
+    "subheading": "Wekelijkse vondsten, gecureerd voor het leven dat je opbouwt.",
+    "placeholder": "Jouw e-mailadres",
+    "cta": "Word lid van de lijst",
+    "privacy_note": "Geen spam. Op elk moment uitschrijven.",
+    "success": "Je bent erbij! Controleer je inbox.",
+    "error": "Er ging iets mis. Probeer het opnieuw."
+  },
+  "category": {
+    "home_decor": "Wonen & Decoratie",
+    "wellness": "Wellness",
+    "beauty": "Schoonheid & Huidverzorging",
+    "kitchen": "Keuken",
+    "finance": "Geld & Krediet",
+    "all": "Alle categorieën"
+  },
+  "common": {
+    "back": "Terug",
+    "loading": "Laden...",
+    "see_all": "Bekijk alle {category}",
+    "products_title": "Producten die we liefhebben",
+    "read_more": "Meer lezen",
+    "search_placeholder": "Zoek op Mintbrooks...",
+    "no_results": "Geen resultaten voor \"{query}\"",
+    "language": "Taal"
+  },
+  "quiz": {
+    "start": "Doe de quiz",
+    "heading": "Vind jouw perfecte match"
+  }
+}

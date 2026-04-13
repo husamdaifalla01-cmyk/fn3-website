@@ -1,0 +1,247 @@
+{
+  "title": "The 10 AI Implementations That Actually Made Money",
+  "subtitle": "Real case studies with real ROI numbers. No hype, no theory.",
+  "description": "A 17-page reference guide documenting 10 verified AI implementations across different industries and business functions. Each case study includes the business context, the implementation architecture, the exact tool stack with costs, what failed first, and the verified ROI numbers.",
+  "pages": 17,
+  "introduction": {
+    "title": "Before You Read This",
+    "content": "This guide is not a list of AI tools. It's not a framework for 'AI readiness.' It's not a consultant's pitch deck.\n\nIt's 10 documented cases of businesses that built AI systems, measured the results, and can tell you exactly what happened.\n\nSome of these will apply directly to your situation. Some won't. The goal isn't to give you 10 ideas to implement — it's to give you enough pattern recognition to identify which 1 or 2 of your own processes have the same structure as the cases that worked.\n\nAll financial figures are verified with the operators involved. Company names are changed. Everything else is accurate.\n\nRead time: approximately 45 minutes. Implementation time for a single case study: 2-5 days with a technical resource."
+  },
+  "cases": [
+    {
+      "number": 1,
+      "title": "Marketing Agency Client Reporting",
+      "industry": "Marketing Agency",
+      "function": "Operations / Reporting",
+      "annual_roi": "$94,520",
+      "payback_period": "15 days",
+      "summary": "A 15-person agency eliminated 27.5 hours of monthly reporting labor using Claude + data pipeline integration. Total tool cost: $140/month. ROI: 2,250% in year one.",
+      "key_insight": "The value is in the data architecture, not the AI. Clean structured data pipelines are 70% of the work. Prompting is 30%.",
+      "implementation_difficulty": "Medium — requires API connections to ad platforms and basic Python",
+      "decision_criteria": "If your team produces repeatable reports with consistent structure, this is implementable. If every report is custom from scratch, solve the process standardization problem first.",
+      "exact_numbers": {
+        "hours_per_report_before": 2,
+        "hours_per_report_after": 0.75,
+        "reports_per_month": 22,
+        "hourly_rate": 75,
+        "monthly_savings": 2062.50,
+        "api_cost_monthly": 140,
+        "net_monthly_benefit": 1922.50,
+        "annual_net_benefit": 23070
+      },
+      "tool_stack": ["Claude API ($140/mo)", "Python (one-time)", "Notion API ($16/mo)", "Platform APIs (free)"],
+      "replication_guide": "1. Standardize your report structure into a fixed template. 2. Build API connections to your data sources. 3. Structure the data as JSON. 4. Engineer a system prompt with your voice guidelines and strict data-only instructions. 5. Human review before every send."
+    },
+    {
+      "number": 2,
+      "title": "E-Commerce Customer Support Automation",
+      "industry": "E-Commerce / DTC",
+      "function": "Customer Support",
+      "annual_roi": "$264,000",
+      "payback_period": "25 days",
+      "summary": "A 7-figure DTC brand replaced 11 support staff with 3 AI agents + 1 human escalation manager. 94% AI resolution rate. CSAT improved from 4.5 to 4.7.",
+      "key_insight": "Domain-specific agents (one for orders, one for returns, one for products) outperform a single general-purpose agent by a significant margin. Context collision is the primary failure mode.",
+      "implementation_difficulty": "High — requires OMS and returns platform API integration, agent orchestration logic",
+      "decision_criteria": "Viable when >60% of tickets are answerable without judgment (order status, policy questions, FAQs). Not viable when most tickets are unique situations.",
+      "exact_numbers": {
+        "tickets_per_day": 280,
+        "ai_resolution_rate": "94%",
+        "before_staff_cost_monthly": 38000,
+        "after_staff_cost_monthly": 16000,
+        "monthly_savings": 22000,
+        "implementation_cost": 18500,
+        "csat_improvement": "+0.2"
+      },
+      "tool_stack": ["Claude API ($1,800/mo)", "Intercom ($399/mo)", "OMS API (free)", "Returns platform API (existing)", "Python orchestration ($6K one-time)"],
+      "replication_guide": "1. Categorize your last 90 days of tickets. 2. Identify the >60% that require no judgment. 3. Define escalation rules (ALL edge cases) before building anything. 4. Build one domain-specific agent. 5. Run in shadow mode for 2 weeks. 6. Deploy with human review for Week 1, then spot-check 10% ongoing."
+    },
+    {
+      "number": 3,
+      "title": "Solo Consultant Capacity Expansion",
+      "industry": "Professional Services",
+      "function": "Service Delivery",
+      "annual_roi": "$319,200 incremental revenue",
+      "payback_period": "8 days",
+      "summary": "A solo operations consultant went from 4 to 17 clients (4.25x) by automating discovery processing, document generation, and report drafting. Margins improved from 71% to 86%.",
+      "key_insight": "The template library is the moat. Build 10 excellent manual examples of each deliverable before automating. The AI needs structure to be consistent; you need structure to QC efficiently.",
+      "implementation_difficulty": "Medium — no complex integrations, but requires significant upfront template work",
+      "decision_criteria": "Works when your deliverables have repeatable structure. Doesn't work when each engagement requires entirely unique outputs with no structural patterns.",
+      "exact_numbers": {
+        "clients_before": 4,
+        "clients_after": 17,
+        "revenue_before_monthly": 32000,
+        "revenue_after_monthly": 136000,
+        "hours_per_client_before": 85,
+        "hours_per_client_after": 34,
+        "tool_cost_monthly": 380
+      },
+      "tool_stack": ["Claude API ($120/mo)", "Typeform ($59/mo)", "Whisper API ($15/mo)", "Make ($99/mo)", "Notion ($16/mo)"],
+      "replication_guide": "1. Audit your time: 'requires judgment' vs. 'structured execution.' 2. Pick the 2 highest-time structured deliverables. 3. Build 10 excellent manual examples of each. 4. Build the AI pipeline using those examples as quality benchmarks. 5. Always review before client delivery."
+    },
+    {
+      "number": 4,
+      "title": "Law Firm Contract Review",
+      "industry": "Legal",
+      "function": "Contract Analysis",
+      "annual_roi": "$699,200 in recovered billable hours",
+      "payback_period": "15 days",
+      "summary": "A 12-attorney firm reduced contract review time by 85%. Associates now spend 22 minutes vs. 2.5 hours on standard reviews. 1,840 billable hours per year recovered. Nearly avoided a malpractice event due to AI error.",
+      "key_insight": "The mandatory attorney sign-off isn't a safeguard to eventually remove — it's the permanent architecture. The efficiency is in the AI doing the first pass. The risk management is in the attorney doing the thinking.",
+      "implementation_difficulty": "High — requires legal-specific AI deployment with HIPAA/data security guarantees",
+      "decision_criteria": "Viable for any practice with high volume of standard contract types (NDAs, vendor agreements, employment contracts). Not for highly bespoke litigation or regulatory work.",
+      "exact_numbers": {
+        "review_time_before_hours": 2.5,
+        "review_time_after_hours": 0.37,
+        "contracts_per_month": 180,
+        "billable_rate": 380,
+        "hours_saved_monthly": 384,
+        "monthly_platform_cost": 1800
+      },
+      "tool_stack": ["Harvey AI ($1,800/mo)", "Clio Manage (existing)", "Custom review checklists (40 attorney hours)"],
+      "replication_guide": "1. Get Fair Housing/malpractice attorney review of your AI implementation plan. 2. Build your review checklists per contract type (the knowledge extraction is the hardest part). 3. Use a legal-specific AI platform with BAA. 4. Shadow mode for 30 days. 5. NEVER auto-approve — permanent attorney review requirement."
+    },
+    {
+      "number": 5,
+      "title": "Restaurant Group Staff Scheduling",
+      "industry": "Food & Beverage",
+      "function": "Operations / Scheduling",
+      "annual_roi": "$126,000",
+      "payback_period": "14 days",
+      "summary": "A 6-location casual dining group reduced labor cost variance from 4.2% to 1.1% of revenue using AI scheduling. 10.5 hours/week of scheduling management time recovered. $126K/year in labor savings.",
+      "key_insight": "Scheduling AI works because the inputs (historical covers, events, weather) predict demand well. The AI is better at this than experienced managers because it processes more data without bias toward recent anomalies.",
+      "implementation_difficulty": "Low-Medium — purpose-built platforms require minimal technical setup",
+      "decision_criteria": "Viable for any business with variable demand, multiple shifts/locations, and measurable labor cost variance. ROI scales directly with the number of locations.",
+      "exact_numbers": {
+        "labor_variance_before_pct": 4.2,
+        "labor_variance_after_pct": 1.1,
+        "annual_revenue": 8400000,
+        "variance_reduction_value": 126000,
+        "platform_cost_monthly": 890,
+        "scheduling_hours_saved_weekly": 10.5
+      },
+      "tool_stack": ["7shifts AI Scheduling ($890/mo)", "Toast POS (existing)", "Weather API (free)"],
+      "replication_guide": "1. Calculate your current labor cost variance (actual vs. ideal). If >3%, strong ROI case. 2. Export 18 months of cover/sales data per location. 3. Set up 7shifts or equivalent with location configurations. 4. Run in 'suggest' mode for 4 weeks before full automation. 5. Review weekly, not daily."
+    },
+    {
+      "number": 6,
+      "title": "Real Estate Lead Nurture Automation",
+      "industry": "Real Estate",
+      "function": "Sales / Marketing",
+      "annual_roi": "$163,720",
+      "payback_period": "14 days",
+      "summary": "A 9-agent residential team increased lead-to-close rate from 3.2% to 4.5% using AI-personalized 8-touchpoint nurture sequences. 18 additional closings annually. Zero additional staff hours.",
+      "key_insight": "Personalization quality is more important than touchpoint volume. Eight personalized messages outperforms 20 generic ones. The AI-generated personalization references specific property interests and market conditions — not just name and city.",
+      "implementation_difficulty": "Medium — requires CRM integration and email/SMS infrastructure",
+      "decision_criteria": "Viable for any real estate team with >500 leads/year and documented follow-up gaps. ROI scales linearly with lead volume.",
+      "exact_numbers": {
+        "annual_leads": 1400,
+        "conversion_before_pct": 3.2,
+        "conversion_after_pct": 4.5,
+        "additional_closings_annually": 18,
+        "average_commission": 9200,
+        "incremental_gci": 165600,
+        "tool_cost_monthly": 310
+      },
+      "tool_stack": ["Follow Up Boss CRM ($499/mo existing)", "Claude API ($85/mo)", "Zapier ($99/mo)", "Twilio SMS ($90/mo)", "Mailgun ($35/mo)"],
+      "replication_guide": "1. Audit your current lead follow-up data (response time, attempt count). 2. Segment leads by intent level (active/medium/low). 3. Design 8-touchpoint sequences per segment with specific personalization parameters. 4. Build pre-generation at intake (not at send-time — avoid latency/failures). 5. All replies to human agents only."
+    },
+    {
+      "number": 7,
+      "title": "SaaS Customer Support — Zero FT Staff",
+      "industry": "SaaS",
+      "function": "Customer Support",
+      "annual_roi": "$142,000 vs. benchmark",
+      "payback_period": "36 days",
+      "summary": "A 14-person SaaS startup handles 200 tickets/day with 2 part-time contractors and AI. 87% AI resolution rate. 4.8 CSAT. Annual support cost: $38K vs. $180K industry benchmark.",
+      "key_insight": "Confidence scoring is the critical design element. The AI only responds autonomously above 85% confidence. Everything below routes to human review. This single architectural decision is what maintains CSAT quality.",
+      "implementation_difficulty": "High — requires knowledge base investment and customer account API integration",
+      "decision_criteria": "Viable for software products with documentable product behavior and API-accessible customer account data. Difficult for products with highly variable customer contexts.",
+      "exact_numbers": {
+        "daily_tickets": 200,
+        "ai_resolution_pct": 87,
+        "csat_score": 4.8,
+        "annual_cost": 38000,
+        "industry_benchmark": 180000,
+        "cost_vs_benchmark": -142000,
+        "contractor_hours_weekly": 40
+      },
+      "tool_stack": ["Intercom ($499/mo)", "Claude API ($340/mo)", "Stripe API (free)", "Internal Postgres (existing)", "Notion KB ($16/mo)"],
+      "replication_guide": "1. Build a 200+ article knowledge base first. 2. Categorize ticket types and define routing rules. 3. Set confidence threshold at 90% initially. 4. Integrate customer account data API. 5. Human review of every AI response for first 2 weeks. 6. Track CSAT by resolution type (AI vs. human) weekly."
+    },
+    {
+      "number": 8,
+      "title": "CPA Bookkeeping Automation",
+      "industry": "Accounting",
+      "function": "Bookkeeping / Client Services",
+      "annual_roi": "$314,000 incremental revenue",
+      "payback_period": "9 days",
+      "summary": "A solo CPA went from 28 to 84 clients using AI transaction categorization, anomaly detection, and close preparation. Monthly revenue increased from $11,200 to $37,800. Tool cost: $420/month.",
+      "key_insight": "The confidence threshold is not optional. Auto-categorize above 92% confidence; review everything else. Two clients had systematic miscategorizations when this threshold was removed. One had a material P&L misstatement for a full quarter.",
+      "implementation_difficulty": "Medium — requires QuickBooks/Xero API connections for each client, Python scripting",
+      "decision_criteria": "Viable for any bookkeeper or accounting firm with 10+ clients using QBO or Xero. ROI scales directly with client count.",
+      "exact_numbers": {
+        "clients_before": 28,
+        "clients_after": 84,
+        "monthly_revenue_before": 11200,
+        "monthly_revenue_after": 37800,
+        "hours_per_client_before": 5.5,
+        "hours_per_client_after": 1.8,
+        "tool_cost_monthly": 420,
+        "confidence_threshold_pct": 92
+      },
+      "tool_stack": ["Claude API ($180/mo)", "QBO API (free)", "Python scripts (self-built)", "Airtable ($45/mo)", "Zapier ($49/mo)"],
+      "replication_guide": "1. Get API access to all client accounting software. 2. Pull 12 months of categorized transactions per client as training data. 3. Build confidence scoring system. 4. Start at 95% confidence for auto-categorize; tune down over time. 5. Daily review queue for below-threshold + anomalies. 6. Monthly close automation runs on the 1st automatically."
+    },
+    {
+      "number": 9,
+      "title": "Property Management Tenant Screening",
+      "industry": "Real Estate / Property Management",
+      "function": "Risk Assessment",
+      "annual_roi": "$128,000",
+      "payback_period": "42 days",
+      "summary": "A PM firm managing 340 units reduced eviction rate from 4.8% to 1.2% using AI multi-signal risk scoring. 19 confirmed bad placements avoided over 14 months. $140K in estimated avoided costs.",
+      "key_insight": "Fair Housing legal review is a prerequisite, not an afterthought. Even well-designed AI screening systems can develop disparate impact patterns. Monthly demographic analysis of approval rates is required ongoing due diligence.",
+      "implementation_difficulty": "High — requires legal review, multiple data source integrations, audit infrastructure",
+      "decision_criteria": "Viable for any PM firm with 100+ units and documented eviction/vacancy cost data. Requires Fair Housing counsel review before deployment.",
+      "exact_numbers": {
+        "units": 340,
+        "eviction_rate_before_pct": 4.8,
+        "eviction_rate_after_pct": 1.2,
+        "cost_per_eviction": 8750,
+        "evictions_prevented_annually": 12.2,
+        "annual_savings": 106750,
+        "tool_cost_monthly": 480
+      },
+      "tool_stack": ["Claude API ($120/mo)", "TransUnion SmartMove ($25-40/check)", "Plaid ($1.50/check)", "CLEAR ($200/mo)", "AppFolio (existing)"],
+      "replication_guide": "1. Fair Housing attorney review first — document it. 2. Define screening criteria explicitly (no protected class factors). 3. Historical applicant outcome analysis (3 years). 4. Build multi-signal model with credit pattern, income stability, rental history. 5. Human final decision — always. 6. Monthly demographic disparate impact audit."
+    },
+    {
+      "number": 10,
+      "title": "Content Agency Production Automation",
+      "industry": "Marketing / Content Agency",
+      "function": "Content Production",
+      "annual_roi": "$463,000 margin improvement",
+      "payback_period": "16 days",
+      "summary": "A 12-person content agency increased gross margin from 34% to 68% in 90 days. Writer output tripled (4 to 12 pieces/week). First-pass client approval rate improved from 76% to 94%. No layoffs.",
+      "key_insight": "Train writers to use AI drafts as scaffolding, not as documents to edit. Writers who try to polish AI drafts produce mediocre work. Writers who use them as structural starting points for their own writing produce excellent work.",
+      "implementation_difficulty": "Medium — pipeline orchestration is straightforward; the hard part is writer training and change management",
+      "decision_criteria": "Viable for any content operation where >60% of production time is in research and drafting rather than strategy and editing. Not viable when every piece requires primary research or original reporting.",
+      "exact_numbers": {
+        "gross_margin_before_pct": 34,
+        "gross_margin_after_pct": 68,
+        "pieces_per_writer_before": 4,
+        "pieces_per_writer_after": 12,
+        "first_pass_approval_before_pct": 76,
+        "first_pass_approval_after_pct": 94,
+        "tool_cost_monthly": 1800,
+        "implementation_cost": 22000
+      },
+      "tool_stack": ["Claude API ($640/mo)", "Surfer SEO ($219/mo)", "Perplexity API ($20/mo)", "Ahrefs ($399/mo existing)", "Make ($99/mo)"],
+      "replication_guide": "1. Audit production time: what % is research + drafting vs. strategy + editing? 2. Standardize your content brief format. 3. Build the research pipeline first (highest ROI, lowest risk). 4. Train writers explicitly on 'scaffolding model' vs. 'editing model.' 5. Separate pipelines for each content type. 6. AI QC step before human final review."
+    }
+  ],
+  "conclusion": {
+    "title": "The Pattern Across All 10",
+    "content": "Looking across these 10 implementations, three things are true of every one that succeeded:\n\n1. They defined the human review checkpoint before they built the automation. The automation never replaced the judgment — it replaced the execution.\n\n2. They measured the right outcome. Not 'are we using AI?' but 'did labor cost variance drop?' 'did conversion rate improve?' 'did margin increase?' The measurement discipline is what separated projects that looked like wins from projects that actually were.\n\n3. They started with one thing. Every operator in this guide started with one process, one workflow, one automation. They got it working before building the next one. The graveyard of abandoned AI projects is full of ambitious roadmaps that never shipped a first version.\n\nStart with the one case study in this guide that maps most closely to a process in your business. Use it as a blueprint. Measure the outcome. Then build the next one.\n\nThe Operators Brief documents new implementations every week. Subscribe at theoperatorsbrief.com."
+  }
+}

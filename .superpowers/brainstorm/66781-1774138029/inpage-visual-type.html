@@ -1,0 +1,60 @@
+<h2>In-page visuals — Remotion or live React?</h2>
+<p class="subtitle">For the Results charts and How FN3 Fixes It demo (not the hero). Click or answer in terminal.</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Live React animations</h3>
+      <p>Built directly in React — bar charts animate on scroll, numbers count up, agent log streams in real-time. Already matches the home page style. No video files. Feels alive and interactive.</p>
+      <div style="margin-top:14px; background:#fff8f8; border:1px solid #fde8e8; border-radius:4px; padding:14px;">
+        <div style="font-size:11px; font-family:monospace; color:#b91c1c; margin-bottom:8px; letter-spacing:0.1em;">RESULTS — animates on scroll</div>
+        <div style="display:flex; gap:16px; align-items:flex-end; height:50px;">
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <div style="background:#b91c1c; width:28px; height:100%; border-radius:2px 2px 0 0;"></div>
+            <span style="font-size:10px; color:#888; font-family:monospace;">-60%</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <div style="background:#b91c1c; width:28px; height:60%; border-radius:2px 2px 0 0; opacity:0.7;"></div>
+            <span style="font-size:10px; color:#888; font-family:monospace;">+35%</span>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+            <div style="background:#b91c1c; width:28px; height:45%; border-radius:2px 2px 0 0; opacity:0.5;"></div>
+            <span style="font-size:10px; color:#888; font-family:monospace;">-8hrs</span>
+          </div>
+        </div>
+        <div style="margin-top:10px; font-size:11px; color:#555; font-family:monospace;">✓ No video file &nbsp;✓ Scroll-triggered &nbsp;✓ Always fresh</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Remotion videos throughout</h3>
+      <p>All visuals are Remotion — hero video, results video, demo video. Consistent format, pre-rendered quality. Heavier to build but maximum visual control.</p>
+      <div style="margin-top:14px; background:#0c0a0a; border-radius:4px; padding:14px; font-family:monospace; font-size:11px; color:rgba(255,255,255,0.5);">
+        <div style="margin-bottom:6px;">Hero video — 8s Remotion</div>
+        <div style="margin-bottom:6px;">Results video — 5s Remotion</div>
+        <div>Demo video — 6s Remotion</div>
+        <div style="margin-top:10px; color:#f87171;">⚠ 3× video files per niche = 15 total</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Remotion hero + live React everywhere else</h3>
+      <p>Hero gets the full Remotion video treatment (flow → dashboard). Results and agent demos are live React — scroll-triggered, always on. Best of both: cinematic hero, interactive page body.</p>
+      <div style="margin-top:14px; background:#f8f4f4; border:1px solid #e8e0e0; border-radius:4px; padding:12px; font-size:12px; font-family:monospace;">
+        <div style="background:#b91c1c; color:white; padding:5px 10px; margin-bottom:5px; border-radius:2px;">HERO — Remotion video (flow → dashboard)</div>
+        <div style="background:#ece8e8; padding:5px 10px; margin-bottom:5px; border-radius:2px; color:#555;">How FN3 Fixes It — live React agent stream</div>
+        <div style="background:#ece8e8; padding:5px 10px; border-radius:2px; color:#555;">Results — live React animated bar charts</div>
+        <div style="margin-top:10px; color:#b91c1c;">✓ 1 video per niche &nbsp;✓ Live interactivity &nbsp;✓ Less to build</div>
+      </div>
+    </div>
+  </div>
+
+</div>

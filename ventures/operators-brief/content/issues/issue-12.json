@@ -1,0 +1,65 @@
+{
+  "number": 12,
+  "title": "The content agency that automated 80% of production and doubled margins in 90 days",
+  "date": "May 2026",
+  "summary": "A 12-person content marketing agency automated 80% of their production workflow using an AI content pipeline. Gross margin increased from 34% to 68% in 90 days without cutting a single headcount. They used the freed capacity to take on $140K in incremental revenue, reducing staff from generalists to specialists, and raised their average project value by 40%.",
+  "case_study": "Inkwell Digital (name changed) is a 12-person content marketing agency specializing in B2B SaaS and technology companies. Pre-automation revenue: $1.1M. Gross margin: 34% — abysmal for an agency. The problem: they were competing on price with offshore content mills and losing, while their quality was meaningfully better. But they couldn't charge for quality because delivery still required the same labor hours.\n\nThe owner's diagnosis: 80% of content production time was in work that didn't require their team's expertise — research aggregation, first drafts, structural formatting, SEO optimization, internal linking, image briefing. The expertise was in strategy, client voice matching, subject matter accuracy, and final quality control.\n\nWhat they built over 6 weeks:\n\nResearch Aggregation Engine: For each content brief, a Claude pipeline pulls and synthesizes: competitor content analysis (what's ranking, what's thin), SERP analysis for the target keyword, subject matter source identification (industry reports, case studies, expert interviews from public transcripts), and brand voice examples from the client's existing content. Delivers a structured research brief to the writer in 8 minutes vs. 2 hours of manual research.\n\nFirst Draft Generation: Claude generates a complete structured draft from the research brief + client content guidelines. This is not the final content — it's a first draft that a writer transforms. But the draft cuts writing time from 4 hours to 1.5 hours per 1,500-word piece.\n\nSEO Optimization Pass: A separate AI step (not Claude — they use a dedicated SEO AI tool, Surfer SEO's AI) optimizes the draft for target keyword density, semantic coverage, and structural optimization. Runs in 3 minutes; previously 45 minutes of manual optimization.\n\nQuality Control Checklist: A Claude-based QC step runs on every final piece before client delivery: fact verification flags, brand voice consistency check, internal linking suggestions, SEO metadata generation, and a reading level assessment. Catches issues before human final review.\n\nThe result: a writer who previously produced 4 pieces per week now produces 12, with better average quality scores (measured by client approval rate: 76% to 94% first-pass approval). They redeployed 4 writers from 12-piece/month production to strategy, client management, and content performance analysis. Two writers who couldn't adapt to the new workflow were transitioned out over 60 days; replacements were hired at the same salary but a different skill profile (strategic thinkers vs. volume producers).",
+  "implementation_guide": "Step 1 — Content production audit. Map your current workflow: every step, every tool, time per step. Calculate what percentage of total production time is 'original creative judgment' vs. 'structured execution.' If structured execution exceeds 60%, you have automation potential.\n\nStep 2 — Brief standardization. AI content pipelines require standardized inputs. Before automating, standardize your content brief format: client voice guidelines, target keyword, content goal, target audience, source requirements, length and format. If your briefs are inconsistent, your outputs will be inconsistent.\n\nStep 3 — Build the research pipeline first. Research aggregation is where the time savings are largest and the quality risk is lowest. A structured research brief that takes 8 minutes to produce vs. 2 hours is the highest-ROI first step.\n\nStep 4 — First draft as scaffolding, not final output. Train your writers to treat the AI first draft as scaffolding — a starting point to transform, not a document to edit. Writers who try to polish the AI draft produce mediocre work. Writers who use it as a structural starting point for their own writing produce excellent work.\n\nStep 5 — Quality control systematization. As volume scales, quality control becomes the bottleneck. The AI QC step (fact checks, brand voice consistency, SEO) catches the mechanical issues. Human QC focuses on subjective quality, strategic accuracy, and client-specific nuances.\n\nStep 6 — Repricing your services. Once your cost structure improves, your pricing should reflect your new positioning — not just more margin on the old price. Use the capacity gain to compete at a higher level: longer-form content, research-backed content, content strategy — work that was previously too time-intensive to offer profitably.",
+  "numbers": {
+    "before_revenue_annual": 1100000,
+    "after_revenue_annual": 1240000,
+    "revenue_increase": 140000,
+    "before_gross_margin_pct": 34,
+    "after_gross_margin_pct": 68,
+    "before_gross_profit": 374000,
+    "after_gross_profit": 843200,
+    "gross_profit_increase": 469200,
+    "pieces_per_writer_per_week_before": 4,
+    "pieces_per_writer_per_week_after": 12,
+    "first_pass_approval_before_pct": 76,
+    "first_pass_approval_after_pct": 94,
+    "implementation_cost": 22000,
+    "monthly_ai_tool_cost": 1800,
+    "payback_period_days": 16,
+    "net_annual_margin_improvement": 463000
+  },
+  "tool_stack": [
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Research synthesis, first draft generation, QC checklist",
+      "cost": "$640/month at their production volume"
+    },
+    {
+      "tool": "Surfer SEO (AI features)",
+      "use": "SEO optimization pass, keyword coverage analysis",
+      "cost": "$219/month"
+    },
+    {
+      "tool": "Perplexity API",
+      "use": "Real-time research and source identification",
+      "cost": "$20/month"
+    },
+    {
+      "tool": "Ahrefs",
+      "use": "SERP analysis, competitor content research",
+      "cost": "$399/month (existing)"
+    },
+    {
+      "tool": "Notion",
+      "use": "Content brief templates, client guidelines library, workflow tracking",
+      "cost": "$16/month (existing)"
+    },
+    {
+      "tool": "Make (Integromat)",
+      "use": "Pipeline orchestration: brief → research → draft → QC → delivery",
+      "cost": "$99/month"
+    },
+    {
+      "tool": "Google Docs API",
+      "use": "Client deliverable formatting and sharing",
+      "cost": "Free"
+    }
+  ],
+  "what_failed": "Attempt 1 — Trying to fully automate final content: In week 1, the owner tested publishing AI-generated content directly to client blogs with minimal human editing to see if clients would notice. Two clients noticed immediately. One paused their engagement. The quality gap between 'AI-transformed by a skilled writer' and 'AI + light editing' is visible to anyone who reads content professionally. They abandoned full automation and committed to the hybrid model.\n\nAttempt 2 — One generic pipeline for all content types: First version used the same pipeline for all content types: blog posts, case studies, white papers, LinkedIn posts. The case study output was unusable — case studies require original interviews and proprietary data that AI can't fabricate. LinkedIn posts sounded like AI regardless of prompting. They built separate pipelines for each content type with different automation depths.\n\nAttempt 3 — Skipping the writer training phase: They deployed the new system without training writers on how to use AI drafts effectively. Half the team tried to polish the AI draft line by line — which is slower than writing from scratch and produces worse output. Two weeks of process training on 'how to work with an AI first draft' changed adoption and output quality significantly.\n\nThe staffing transition (the honest account): Two writers couldn't adapt. One preferred volume production over strategic work and left voluntarily when the role changed. One struggled with the new pace expectations (12 pieces/week felt overwhelming even with AI assistance). These transitions were handled with 60-day notice periods and job placement support. The owner's view: 'This was a skill transition, not a headcount reduction. The writers who stayed are earning more and doing better work.'",
+  "takeaway": "Content agency economics are broken at scale without automation — you're selling time and buying time, and the math never works. The agencies that survive the AI transition are the ones that move from selling production to selling judgment. AI handles the production. Your team handles the thinking. The margin difference between those two businesses is the story of this case study."
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "credit-system-broken-v1",
+  "pillar": "Empathy",
+  "utmUrl": "https://afflat3e3.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=27618&c=918277&a=769106&k=D083BC665DB0EC415E23BE307260F10E&l=36989&utm_source=tiktok&utm_medium=video&utm_campaign=credit-system-broken-v1",
+  "success": false,
+  "assets": {
+    "problem-statement": {
+      "sceneId": "problem-statement",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/problem-statement_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in urban street corner, gritty authentic feel, overcast light. African American man, early 20s, contemporary streetwear, confident posture, natural styling. visual metaphor: wall with \"NEED CREDIT TO GET CREDIT\" graffiti text, broken cycle diagram, African American man, early 20s, contemporary streetwear, confident posture, natural styling. arms crossed, knowing look at camera, slight head shake. heightened alertness, direct eye contact with viewer, forward camera presence, compressed space. natural human eye perspective, balanced spatial relationship, 50mm standard lens, f/1.8 shallow depth of field, subject sharp background bokeh, slight high camera angle, rule of thirds composition. natural window light from left, soft diffused daylight, authentic real-world quality, honest illumination, slight blue-white cast. 6000K color temperature, cool daylight quality. undefined. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. bold high-energy aesthetic, desaturated cool tones with warm skin pop, authentic urban setting, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    },
+    "solution-reveal": {
+      "sceneId": "solution-reveal",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/solution-reveal_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in car interior, steering wheel visible, warm interior lighting. African American man, early 20s, contemporary streetwear, confident posture, natural styling. close-up of car key fob and a real Visa credit card side by side, text overlay \"Your car = your credit\", African American man, early 20s, contemporary streetwear, confident posture, natural styling. confident smile, holding both card and key, direct eye contact with camera. heightened alertness, direct eye contact with viewer, forward camera presence, compressed space. flattering portrait compression, shallow depth of field, separated subject, 85mm portrait lens, f/1.8 shallow depth of field, subject sharp background bokeh, eye level camera angle, rule of thirds composition. broad soft lighting, large diffuse source on lit side, gentle gradients, editorial quality, flattering wrap. 5000K color temperature, neutral balanced illumination. undefined. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. bold high-energy aesthetic, desaturated cool tones with warm skin pop, authentic urban setting, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    },
+    "cta": {
+      "sceneId": "cta",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/cta_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in minimal dark background, spotlight on phone, premium feel. African American man, early 20s, contemporary streetwear, confident posture, natural styling. clean smartphone showing approval screen, \"Approved: $6,500 Visa Credit Card\" in green, car icon badge. heightened alertness, direct eye contact with viewer, forward camera presence, compressed space. natural human eye perspective, balanced spatial relationship, 50mm standard lens, f/11 deep focus entire scene sharp, top down camera angle, centered symmetry composition. butterfly lighting, frontal overhead key, soft double shadow under nose, beauty lighting, smooth even skin illumination. 5500K color temperature, neutral balanced illumination. undefined. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. bold high-energy aesthetic, desaturated cool tones with warm skin pop, authentic urban setting, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    }
+  },
+  "remotionConfig": {
+    "assetMap": {
+      "problem-statement": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/problem-statement_regen3.png",
+      "solution-reveal": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/solution-reveal_regen3.png",
+      "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/cta_regen3.png"
+    },
+    "sceneOrder": [
+      "problem-statement",
+      "solution-reveal",
+      "cta"
+    ],
+    "totalDurationFrames": 630,
+    "compositionId": "VideoContentCreator",
+    "outputDir": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1"
+  },
+  "errors": {
+    "hook": "400: Setting negativePrompt is no longer supported."
+  },
+  "summary": {
+    "totalScenes": 4,
+    "generated": 3,
+    "approved": 0,
+    "regenned": 3,
+    "failed": 1,
+    "totalTime": 512436,
+    "directorApprovalRate": 0
+  }
+}

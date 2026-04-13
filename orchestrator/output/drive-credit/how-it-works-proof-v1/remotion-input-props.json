@@ -1,0 +1,13 @@
+{
+  "assetMap": {
+    "walkthrough-step1": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/how-it-works-proof-v1/walkthrough-step1_regen1.png",
+    "walkthrough-approved": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/how-it-works-proof-v1/walkthrough-approved_regen2.png",
+    "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/how-it-works-proof-v1/cta_regen3.png"
+  },
+  "sceneOrder": [
+    "walkthrough-step1",
+    "walkthrough-approved",
+    "cta"
+  ],
+  "totalDurationFrames": 630
+}

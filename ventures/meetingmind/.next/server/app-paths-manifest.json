@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/analyze-meeting/route": "app/api/analyze-meeting/route.js",
+  "/analyze/page": "app/analyze/page.js",
+  "/api/parse-vtt/route": "app/api/parse-vtt/route.js",
+  "/auth/page": "app/auth/page.js",
+  "/page": "app/page.js",
+  "/dashboard/page": "app/dashboard/page.js"
+}

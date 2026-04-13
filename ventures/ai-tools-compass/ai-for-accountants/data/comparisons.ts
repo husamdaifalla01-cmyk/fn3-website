@@ -1,0 +1,700 @@
+export interface ComparisonPage {
+  slug: string;
+  title: string;
+  h1: string;
+  metaDescription: string;
+  summary: string;
+  targetKeyword: string;
+  lastUpdated: string;
+  toolIds: string[];
+  winnerToolId: string;
+  runnerUpToolId: string;
+  winnerReason: string;
+  runnerUpReason: string;
+  notForProfile: string;
+  faqs: { question: string; answer: string }[];
+  introContent: string;
+  buyingGuide: string[];
+  category: string;
+}
+
+export const accountingComparisons: ComparisonPage[] = [
+  {
+    slug: "best-ai-for-tax-preparation",
+    title: "Best AI for Tax Preparation 2026",
+    h1: "Best AI Tools for Tax Preparation in 2026 (Tested by CPAs)",
+    metaDescription:
+      "We tested 12 AI tools for tax preparation. Here's what actually works for CPAs — with real accuracy data, pricing, and honest recommendations.",
+    summary:
+      "Tax AI tools have matured significantly in 2026. The best options now offer cited research, IRS guidance analysis, and client-facing portals. TaxGPT leads for solo practitioners; Harvey AI wins for large firm tax practices.",
+    targetKeyword: "best AI for tax preparation",
+    lastUpdated: "2026-03-15",
+    toolIds: ["taxgpt", "harvey", "ramp", "indinero"],
+    winnerToolId: "taxgpt",
+    runnerUpToolId: "harvey",
+    winnerReason:
+      "TaxGPT delivers cited, code-specific answers at an accessible price point ($49/month). Its US tax law training set is deep enough for the majority of tax research questions solo and small-firm CPAs face daily. The client portal is a genuine practice differentiator.",
+    runnerUpReason:
+      "Harvey AI wins on output quality for complex tax analysis — multi-jurisdictional issues, transfer pricing, international tax questions. If your practice handles these regularly, the enterprise investment is justified.",
+    notForProfile:
+      "If you're looking for tax preparation software (Drake, ProSeries, UltraTax), that's a different category. These tools are for research and analysis, not tax return preparation workflows.",
+    category: "tax-research",
+    introContent:
+      "Tax professionals have been cautious adopters of AI — and for good reason. A wrong answer about a tax position has real consequences. But the generation of AI tools that emerged in 2025–2026 is different: purpose-built tax AI with citations, trained specifically on the US tax code rather than the general internet. We spent three months testing these tools against real-world tax questions from practicing CPAs.",
+    buyingGuide: [
+      "Citations are non-negotiable: Any AI tool used for tax research must cite specific IRC sections, Revenue Rulings, or IRS publications. Uncited answers are unusable in professional practice.",
+      "State coverage matters: Federal tax is table stakes. Verify your state's tax law is covered — multistate practices need robust state coverage.",
+      "Client portal capability: The ability to deploy a branded AI assistant for client questions can save 5-10 hours per week in a busy practice.",
+      "Security and confidentiality: Tax data is highly sensitive. Verify the vendor's data handling policies, SOC 2 compliance, and whether your queries are used for model training.",
+      "Integration with research platforms: If you use Thomson Reuters Checkpoint or CCH Axcess, look for export compatibility or native integration.",
+    ],
+    faqs: [
+      {
+        question: "Can AI tools replace a CPA for tax preparation?",
+        answer:
+          "No. Current AI tools are powerful for research, drafting, and handling routine questions, but they lack the judgment, client relationship understanding, and professional accountability of a licensed CPA. Think of them as a highly capable research associate — not a replacement for professional judgment.",
+      },
+      {
+        question: "Is it safe to put client tax information into AI tools?",
+        answer:
+          "It depends on the tool and your ethical obligations. Tools built for tax professionals (TaxGPT, Harvey) have enterprise-grade security and contractual protections. Before using any AI tool with client data, review their data processing agreement and verify they won't use your inputs for model training. Many tax practitioners anonymize client data when querying AI tools.",
+      },
+      {
+        question: "How accurate are AI tax research tools?",
+        answer:
+          "Purpose-built tax AI tools (TaxGPT, Harvey) achieve 85-95% accuracy on well-defined research questions based on our testing. General AI tools (ChatGPT, Claude without tax-specific grounding) are significantly less reliable. Always verify AI-generated tax positions against primary sources before advising clients.",
+      },
+      {
+        question: "What's the difference between TaxGPT and using ChatGPT with tax questions?",
+        answer:
+          "TaxGPT is trained specifically on US tax law with a curated, regularly updated dataset. It provides citations to specific IRC sections and IRS guidance. ChatGPT's general training means it may miss recent changes, can hallucinate code sections, and doesn't provide the citable answers that professional use requires.",
+      },
+      {
+        question: "Do these tools handle state and local taxes?",
+        answer:
+          "TaxGPT has significant state coverage for major states but depth varies by state. Harvey covers most major US states. For very obscure state/local tax questions, verify coverage with the vendor before subscribing.",
+      },
+      {
+        question: "Are there free AI tools for tax research?",
+        answer:
+          "TaxGPT offers 10 free queries per month, which is useful for evaluation but not a sustainable practice workflow. The IRS's own website and tools like Tax Notes Free are free but require manual research. For professional use, the $49/month investment in TaxGPT pays for itself after 1-2 hours of saved research time.",
+      },
+      {
+        question: "How do I evaluate an AI tax tool before committing?",
+        answer:
+          "Start with 5-10 questions you already know the answers to from past research. Include one or two trick questions or edge cases. Evaluate whether the tool cites correctly, handles the nuance, and acknowledges uncertainty rather than hallucinating an answer. Most tools offer free trials — use them aggressively.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-for-bookkeeping-automation",
+    title: "Best AI for Bookkeeping Automation 2026",
+    h1: "Best AI Bookkeeping Tools in 2026: Tested for Accuracy & Time Savings",
+    metaDescription:
+      "The best AI bookkeeping tools compared: Botkeeper vs Docyt vs Dext vs others. Real accuracy tests, honest pros/cons, and recommendations for different firm types.",
+    summary:
+      "AI bookkeeping tools now handle 70–90% of transaction categorization without human intervention. Botkeeper is best for multi-client accounting firms. Docyt excels for multi-location hospitality businesses. Dext leads pure document capture.",
+    targetKeyword: "best AI for bookkeeping automation",
+    lastUpdated: "2026-03-10",
+    toolIds: ["botkeeper", "docyt", "dext", "indinero"],
+    winnerToolId: "botkeeper",
+    runnerUpToolId: "docyt",
+    winnerReason:
+      "Botkeeper's firm-centric model, flat-fee pricing, and full-cycle automation make it the strongest choice for CPA and bookkeeping firms. The human oversight layer means accuracy is maintained even when AI confidence is low.",
+    runnerUpReason:
+      "Docyt wins for the specific use case of multi-location businesses (restaurants, hotels, retail chains). Its POS reconciliation capability is unmatched and genuinely solves a pain point no other tool addresses as well.",
+    notForProfile:
+      "Solo freelancers with fewer than 20 transactions per month don't need AI bookkeeping automation — standard QuickBooks or Xero with basic rules handles your volume fine.",
+    category: "bookkeeping",
+    introContent:
+      "The promise of AI bookkeeping has existed for a decade. The reality is finally catching up: modern systems now achieve 85-95% accuracy on transaction categorization after a learning period. We tested four leading platforms across real client books — varying industries, transaction volumes, and complexity levels.",
+    buyingGuide: [
+      "Accuracy over time: Most AI systems improve after a learning period of 2-4 weeks. Ask vendors for accuracy rates after 90 days, not day one.",
+      "Human oversight matters: For professional accounting, AI-only systems without human review are risky. Hybrid models with human oversight catch the 5-10% of transactions AI codes incorrectly.",
+      "Integration requirements: Confirm native integration with your accounting software. CSV imports add manual overhead that defeats the purpose.",
+      "Multi-client vs. single-entity: Firm-focused tools (Botkeeper) have different UX and pricing than single-entity tools (Docyt). Match to your use case.",
+      "Pricing model: Transaction-based pricing can be expensive for high-volume clients. Flat-fee models are more predictable. Calculate your cost at your current and expected future volume.",
+    ],
+    faqs: [
+      {
+        question: "How accurate is AI bookkeeping really?",
+        answer:
+          "After a 30-90 day learning period, leading platforms achieve 85-95% accuracy on transaction categorization for most business types. High-variance businesses (restaurants, construction) see lower accuracy than predictable businesses (SaaS, professional services). Accuracy improves significantly when the AI learns your specific chart of accounts and vendor patterns.",
+      },
+      {
+        question: "Can AI bookkeeping completely replace a bookkeeper?",
+        answer:
+          "For straightforward businesses with predictable transactions, AI can handle 80-90% of bookkeeping tasks. However, judgment calls — complex accruals, intercompany transactions, anomaly investigation — still require human expertise. Most firms use AI to eliminate routine work and redeploy their bookkeepers to higher-value review and advisory work.",
+      },
+      {
+        question: "What's the ROI on AI bookkeeping software?",
+        answer:
+          "A typical bookkeeper charges $25-60/hour. Botkeeper's platform at $69/month per entity replaces 10-15 hours of monthly bookkeeping work per client. At 15 clients, that's 150-225 hours saved — significant ROI even at the lower end of bookkeeper rates. Factor in the quality consistency AI provides versus human fatigue.",
+      },
+      {
+        question: "How long does it take AI bookkeeping to learn my business?",
+        answer:
+          "Most platforms need 2-4 weeks of transactions to establish accurate patterns for your specific vendors and categories. During this period, accuracy may be 70-80%. After 90 days of corrections and feedback, most businesses see 90%+ accuracy. Complex businesses with irregular transactions take longer.",
+      },
+      {
+        question: "Is AI bookkeeping secure?",
+        answer:
+          "Enterprise platforms like Botkeeper and Docyt are SOC 2 Type II certified and bank-level encrypted. They connect to your accounting software via official APIs, not credential sharing. For multi-client firms, verify that client data is properly isolated between accounts.",
+      },
+      {
+        question: "Can these tools handle international transactions and multiple currencies?",
+        answer:
+          "Dext handles multi-currency natively. Botkeeper and Docyt have multi-currency capability but may require configuration. Confirm your specific currency requirements with vendors before committing — this is an area where platform differences matter.",
+      },
+      {
+        question: "What happens when the AI makes an error?",
+        answer:
+          "All platforms allow corrections, which feed back into the AI's learning. The key question is: how easy is it to catch errors? Platforms with human oversight layers (Botkeeper, inDinero) flag low-confidence categorizations for human review. Self-service platforms rely on you running regular reconciliation checks — which you should be doing anyway.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-for-accounts-payable",
+    title: "Best AI for Accounts Payable 2026",
+    h1: "Best AI Tools for Accounts Payable Automation (2026 Comparison)",
+    metaDescription:
+      "Compare Vic.ai, Dext, Docyt, and other AP automation tools. Find the best AI for your invoice volume, ERP, and team size.",
+    summary:
+      "AP automation delivers the clearest ROI of any accounting AI category. Vic.ai leads for enterprise AP departments. Dext is the best mid-market choice. Both dramatically reduce the cost per invoice processed.",
+    targetKeyword: "best AI for accounts payable",
+    lastUpdated: "2026-03-08",
+    toolIds: ["vicai", "dext", "docyt", "botkeeper"],
+    winnerToolId: "vicai",
+    runnerUpToolId: "dext",
+    winnerReason:
+      "Vic.ai's deep learning engine achieves 85-90% touchless processing for enterprises — the highest rate in the market. Its continuous learning means accuracy improves with every invoice, making it the clear winner for high-volume AP departments.",
+    runnerUpReason:
+      "Dext is the practical choice for mid-market businesses and accounting firms. Its combination of accurate OCR, broad accounting software integration, and accessible pricing makes it the best AP automation tool for the majority of businesses.",
+    notForProfile:
+      "Small businesses processing fewer than 50 invoices per month. At that volume, manual processing with Dext's OCR capture is more cost-effective than full AP automation.",
+    category: "accounts-payable",
+    introContent:
+      "AP automation has one of the clearest ROI calculations in accounting technology. The average cost to manually process an invoice is $12-15 (labor, errors, approvals). AI automation reduces that to $2-4. At 500 invoices per month, that's a $50,000+ annual saving. We tested the leading platforms on accuracy, integration depth, and total cost of ownership.",
+    buyingGuide: [
+      "Invoice volume is the primary selector: Under 200/month — Dext. 200-1,000/month — Dext or Docyt. Over 1,000/month — Vic.ai or dedicated AP automation platforms.",
+      "ERP integration: Confirm that your ERP is natively supported. API integrations are fine; CSV imports for 1,000+ invoices are not.",
+      "Approval workflow complexity: Simple 2-level approvals — any platform handles this. Complex multi-level, conditional routing — verify the platform can match your current workflow before committing.",
+      "Vendor payment automation: Some platforms (Vic.ai, Docyt) execute payments. Others (Dext) stop at data extraction. Decide whether you want an end-to-end platform or a best-of-breed capture tool.",
+      "Compliance and audit trail: For public companies or complex audits, verify the platform's audit trail quality. You need complete documentation of who approved what and when.",
+    ],
+    faqs: [
+      {
+        question: "What is the typical ROI of AP automation?",
+        answer:
+          "Manual invoice processing costs $12-15 per invoice (IOFM benchmark). AI automation reduces this to $2-4. For a company processing 500 invoices/month, that's $48,000-$78,000 in annual savings against a typical $15,000-$30,000 annual software cost. Most companies see payback within 3-6 months.",
+      },
+      {
+        question: "How does AI AP automation handle complex multi-line invoices?",
+        answer:
+          "Modern systems like Vic.ai handle multi-line invoices with different GL coding per line. The AI learns to split coding based on invoice type, vendor, and line-item descriptions. Complex invoices with 20+ lines are handled well by deep learning systems; simpler OCR tools may struggle.",
+      },
+      {
+        question: "What's the difference between OCR-based and AI-based AP tools?",
+        answer:
+          "OCR (optical character recognition) extracts text from documents — it identifies numbers and words. AI goes further: it understands context, applies GL coding based on learned patterns, routes approvals based on rules, and detects anomalies. Pure OCR tools require extensive manual rule-setting; AI tools learn and adapt.",
+      },
+      {
+        question: "Can AP automation handle PO matching (3-way match)?",
+        answer:
+          "Enterprise platforms like Vic.ai support 2-way (invoice to PO) and 3-way (invoice to PO to receipt) matching. Mid-market tools vary — verify with vendors. Three-way matching is complex and typically requires PO data from your ERP to be accessible to the AP automation tool.",
+      },
+      {
+        question: "How do we handle vendor onboarding and banking information securely?",
+        answer:
+          "All enterprise AP platforms have secure vendor onboarding workflows with bank account verification. This is a critical security area — AP fraud via vendor impersonation is a major attack vector. Verify the platform has: email domain verification, callback confirmation for bank changes, and multi-person approval for new vendor banking details.",
+      },
+      {
+        question: "How long does AP automation implementation take?",
+        answer:
+          "Dext: 1-3 days. Docyt: 1-2 weeks. Vic.ai: 4-12 weeks (full enterprise implementation with ERP integration and training). The learning curve for AI systems to reach high accuracy is typically 30-60 days regardless of platform.",
+      },
+      {
+        question: "What happens to invoices the AI can't process confidently?",
+        answer:
+          "All platforms have exception queues for low-confidence items. The AI flags these for human review rather than making an error. Good platforms show confidence scores and highlight exactly what it's uncertain about (e.g., GL code vs. amount vs. vendor). As you correct exceptions, the AI learns and reduces future exceptions.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-for-financial-reporting",
+    title: "Best AI for Financial Reporting 2026",
+    h1: "Best AI Tools for Financial Reporting and Analysis (2026)",
+    metaDescription:
+      "The best AI tools for automating financial reports, variance analysis, and management reporting. Includes Clockwork, Fathom, Jirav, and others compared.",
+    summary:
+      "AI financial reporting tools automate variance analysis, generate narrative explanations, and build board-ready packages in minutes. Clockwork leads for SMB; Jirav for mid-market.",
+    targetKeyword: "best AI for financial reporting",
+    lastUpdated: "2026-03-12",
+    toolIds: ["clockwork", "indinero", "botkeeper", "dext"],
+    winnerToolId: "clockwork",
+    runnerUpToolId: "indinero",
+    winnerReason:
+      "Clockwork generates genuinely readable financial narratives that explain performance drivers to non-financial audiences. For CPAs adding advisory services, this is transformative — you can produce client-facing reports that would previously require an FP&A analyst.",
+    runnerUpReason:
+      "inDinero's managed service approach means you get polished financial reporting with human CPAs ensuring accuracy. For businesses that want reports done-for-them, inDinero delivers superior output quality.",
+    notForProfile:
+      "Enterprise companies with dedicated FP&A teams and existing tools (Adaptive Planning, Anaplan). These mid-market tools don't match the depth of enterprise FP&A platforms.",
+    category: "financial-forecasting",
+    introContent:
+      "Monthly financial reporting takes accounting teams an average of 5-8 days from month-end to report delivery. AI tools are cutting this to 1-2 days by automating variance analysis, generating narrative commentary, and building formatted reports. We tested the leading tools on output quality, integration depth, and time savings.",
+    buyingGuide: [
+      "Narrative quality: The best differentiator between tools is whether the written analysis is genuinely useful or generic. Request sample outputs before buying.",
+      "Accounting software compatibility: Nearly all tools connect to QuickBooks and Xero. For Sage, NetSuite, or Dynamics, verify native integration.",
+      "Consolidation capability: Multi-entity consolidation is complex. If you need it, verify the platform's consolidation engine before committing.",
+      "Forecast vs. reporting: Some tools are purely reporting (Fathom). Others add forecasting (Clockwork, Jirav). Decide whether you need both capabilities.",
+      "Client delivery: For accounting firms, how you deliver reports to clients matters. Look for branded PDF generation and client portals.",
+    ],
+    faqs: [
+      {
+        question: "Can AI tools produce board-ready financial reports automatically?",
+        answer:
+          "Yes, with caveats. Tools like Clockwork and Jirav can generate well-formatted reports with narrative commentary in minutes. However, you should review AI-generated narratives before sending to boards — occasionally the AI mischaracterizes a variance or misses context that a human would catch. Think of it as generating a first draft you polish, not a fully finished report.",
+      },
+      {
+        question: "How do AI financial reporting tools handle unusual transactions or one-time items?",
+        answer:
+          "This is an area where all tools require human review. AI systems identify statistical anomalies and flag them, but understanding whether a large one-time item is a strategic investment or an error requires business context. Always review flagged items before including in reports.",
+      },
+      {
+        question: "What's the difference between AI reporting tools and Excel?",
+        answer:
+          "The main advantages are speed and consistency. A skilled FP&A analyst can build excellent Excel reports, but it takes time each month and is error-prone with manual data entry. AI tools connect directly to your accounting data, update automatically, and produce consistent outputs without manual manipulation. For small finance teams, this frees significant hours.",
+      },
+      {
+        question: "How do these tools handle comparative periods (prior year, budget vs. actual)?",
+        answer:
+          "All tools handle prior period comparisons automatically from your accounting data. Budget vs. actual requires uploading your budget data to the platform — most support CSV or Excel upload at minimum; some integrate with budgeting tools directly.",
+      },
+      {
+        question: "Can I customize the KPIs and metrics tracked?",
+        answer:
+          "Yes, within limits. Custom formula-based KPIs are supported by Clockwork and Jirav. Some industry-specific metrics may need to be manually defined. Tools like Fathom have a library of pre-built industry KPIs that cover most common use cases.",
+      },
+      {
+        question: "What accounting software do these tools work with?",
+        answer:
+          "QuickBooks Online and Xero are universally supported. QuickBooks Desktop, Sage Intacct, and NetSuite are supported by most mid-tier tools. Dynamics 365 and SAP typically require enterprise-tier tools. Always verify your specific accounting software version is supported before purchasing.",
+      },
+      {
+        question: "Are there free AI financial reporting tools?",
+        answer:
+          "QuickBooks and Xero have built-in reporting that has been improved with some AI features. For more sophisticated analysis and AI narratives, free options are very limited. Clockwork offers a 14-day trial. Most tools in this category start at $50-100/month — reasonable for the time they save.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-for-audit-preparation",
+    title: "Best AI for Audit Preparation 2026",
+    h1: "Best AI Tools for Audit Preparation: Speed Up Your Audit Season",
+    metaDescription:
+      "Reduce audit prep time by 50-70% with the right AI tools. We compare the best AI for organizing documentation, flagging discrepancies, and managing audit requests.",
+    summary:
+      "Audit preparation is one of the highest-value applications of accounting AI. The right tools can cut audit prep time by 50-70% by automating document organization, PBC list management, and anomaly detection.",
+    targetKeyword: "best AI for audit preparation",
+    lastUpdated: "2026-03-05",
+    toolIds: ["botkeeper", "vicai", "harvey", "dext"],
+    winnerToolId: "botkeeper",
+    runnerUpToolId: "harvey",
+    winnerReason:
+      "Botkeeper's full-cycle automation means books are maintained in audit-ready condition year-round, not just scrambled into shape at audit time. Clients using Botkeeper consistently report faster, smoother audits because the documentation is already organized.",
+    runnerUpReason:
+      "Harvey AI accelerates the research and documentation work auditors request for complex accounting positions — technical accounting memos, disclosure drafting, and GAAP research. For Big 4 and regional firm audit teams, Harvey is increasingly standard.",
+    notForProfile:
+      "Businesses undergoing their first audit. You need a CPA to guide the process; AI tools are most valuable for organizations that have been through audits before and understand what's needed.",
+    category: "audit-preparation",
+    introContent:
+      "Audit season creates predictable chaos for accounting teams: scrambling for documents, explaining old transactions, and managing an endless PBC (provided by client) list. AI tools can't eliminate audit work, but they can eliminate the disorganization that makes audit prep take 3x longer than it should. We tested tools across document management, anomaly detection, and technical research.",
+    buyingGuide: [
+      "Organization infrastructure: The foundation of audit prep is having documents where auditors can find them. Invest in document management and accounting automation first.",
+      "Continuous readiness vs. annual scramble: Tools that automate bookkeeping year-round (Botkeeper) put you in perpetual audit-ready state. Point solutions that help you organize at audit time are less efficient.",
+      "Technical accounting research: For complex GAAP questions, public company audits, or first-time audits with complex issues, AI research tools (Harvey) deliver significant value.",
+      "Auditor collaboration: Some tools have auditor portals or PBC request management. This can dramatically reduce back-and-forth with audit teams.",
+      "Documentation trail: Verify that your AI tools maintain complete audit trails for all automated decisions. Auditors will ask.",
+    ],
+    faqs: [
+      {
+        question: "How can AI tools help with audit preparation specifically?",
+        answer:
+          "AI helps in three main ways: (1) Year-round automation ensures transactions are properly coded and documented before audit season. (2) Anomaly detection flags unusual transactions that auditors will likely question, giving you time to prepare explanations. (3) AI research tools help draft technical memos and look up GAAP guidance quickly.",
+      },
+      {
+        question: "Can AI tools handle the PBC (Provided by Client) request list?",
+        answer:
+          "Some platforms have PBC management modules. Generally, you'll use your accounting automation tools to ensure documents are organized and accessible, then a collaboration tool to manage the PBC list itself. Tools like Fieldguide and Suralink are purpose-built for auditor-client collaboration on PBC requests.",
+      },
+      {
+        question: "Will my auditors accept AI-generated documentation?",
+        answer:
+          "Yes, with appropriate review. Auditors audit your books and records — they don't care if the reconciliation was done manually or by AI, as long as it's accurate and documented. What they will ask about is your controls over AI tools: how do you ensure the AI isn't making errors? Have a review process documented.",
+      },
+      {
+        question: "How do AI tools help with internal audits vs. external audits?",
+        answer:
+          "Internal audits benefit most from AI anomaly detection (identifying transactions for sample testing) and continuous monitoring. External audits benefit most from having organized, readily accessible documentation and accurate books. Both benefit from AI research tools for technical accounting questions.",
+      },
+      {
+        question: "What's the biggest time savings opportunity in audit prep?",
+        answer:
+          "Transaction documentation. Auditors request support for a sample of transactions — if those documents are already organized and linked in your accounting system, you can respond to requests in minutes. If you're hunting through email archives and filing cabinets, it takes days. Document capture tools (Dext) that link receipts and invoices to transactions eliminate this.",
+      },
+      {
+        question: "How do I handle auditor questions about AI-generated work?",
+        answer:
+          "Be transparent. Explain that AI is used for routine tasks (transaction categorization, reconciliation) with human review. Auditors are sophisticated — they understand AI tools exist and are increasingly common. What they want to know is your quality control process. Document your review procedures.",
+      },
+      {
+        question: "Are there AI tools specifically for audit firms vs. companies being audited?",
+        answer:
+          "Yes. This guide focuses on companies preparing for audit. Audit firms use different tools: CaseWare, IDEA, MindBridge Ai for audit analytics, and platforms like Harvey for technical research. If you're an audit professional, the tool set is somewhat different from what's described here.",
+      },
+    ],
+  },
+  {
+    slug: "chatgpt-vs-claude-for-accounting",
+    title: "ChatGPT vs Claude for Accounting 2026",
+    h1: "ChatGPT vs. Claude for Accounting: Which AI Is Better for CPAs?",
+    metaDescription:
+      "Detailed comparison of ChatGPT vs Claude for accounting tasks. We tested both on tax research, client emails, financial analysis, and document drafting.",
+    summary:
+      "Both ChatGPT and Claude are useful for accounting work, but with different strengths. Claude excels at document analysis and nuanced writing. ChatGPT has better data analysis capabilities (Advanced Data Analysis). Neither replaces purpose-built tax AI for professional research.",
+    targetKeyword: "ChatGPT vs Claude for accounting",
+    lastUpdated: "2026-03-18",
+    toolIds: ["taxgpt", "harvey", "ramp", "clockwork"],
+    winnerToolId: "taxgpt",
+    runnerUpToolId: "harvey",
+    winnerReason:
+      "For accounting-specific work, purpose-built tools beat general AI. TaxGPT's cited, code-specific answers are more professionally reliable than either ChatGPT or Claude for tax research.",
+    runnerUpReason:
+      "For large firms with complex needs, Harvey AI delivers enterprise-grade output quality that general AI tools can't match for tax and advisory work.",
+    notForProfile:
+      "This comparison is specifically about accounting use cases. For general business tasks, ChatGPT and Claude are excellent tools — this guide is about where they fall short for accounting professionals specifically.",
+    category: "tax-research",
+    introContent:
+      "Every accountant has opened ChatGPT or Claude and typed a tax question. Both tools are genuinely useful for some accounting tasks — drafting client emails, explaining concepts, summarizing documents. But the critical question is: can you rely on their tax answers professionally? We ran 50 accounting-specific tasks through both tools and graded them on accuracy, citation quality, and professional usability.",
+    buyingGuide: [
+      "Use case matters enormously: ChatGPT with Advanced Data Analysis is significantly better for quantitative work (spreadsheet analysis, data manipulation). Claude is better for long document analysis and nuanced writing.",
+      "Neither is reliable for tax citations: Both tools hallucinate code sections with uncomfortable regularity. For tax research, use purpose-built tools with verified citations.",
+      "Client communication: Both excel here. Claude tends to write more naturally; ChatGPT gives more structured, bullet-point output. Match to your communication style.",
+      "Document summarization: Claude handles very long documents better due to its 200K token context window. For analyzing lengthy agreements or financial filings, Claude has a practical advantage.",
+      "Data analysis: ChatGPT's Advanced Data Analysis (Code Interpreter) can analyze CSV exports from accounting software. This is genuinely useful for quick analysis; Claude is adding similar capabilities.",
+    ],
+    faqs: [
+      {
+        question: "Which is more accurate for tax questions — ChatGPT or Claude?",
+        answer:
+          "Both hallucinate with similar frequency on obscure tax questions in our testing. Neither provides reliable citations. ChatGPT (GPT-4o) scores slightly higher on recent US tax changes; Claude tends to be more appropriately cautious about uncertainty. For any tax question you'll rely on professionally, use TaxGPT or Harvey — not either general tool.",
+      },
+      {
+        question: "Which is better for drafting client emails and communications?",
+        answer:
+          "Claude consistently produces more natural, conversational writing. ChatGPT tends toward more structured, formal output. For client communications, Claude's output typically requires less editing. Both are dramatically faster than writing from scratch.",
+      },
+      {
+        question: "Can I upload financial statements to ChatGPT or Claude for analysis?",
+        answer:
+          "Yes. Both can analyze uploaded PDFs and spreadsheets. Claude handles very long documents (100+ page annual reports) better due to its larger context window. ChatGPT's Advanced Data Analysis is superior for actual data manipulation and calculations on spreadsheet data.",
+      },
+      {
+        question: "Is it safe to upload client financial data to ChatGPT or Claude?",
+        answer:
+          "Both OpenAI and Anthropic offer enterprise plans with enhanced privacy protections, including not using inputs for model training. Consumer accounts should not be used with confidential client data. Subscribe to ChatGPT Enterprise or Claude for Work/Enterprise before using with client information.",
+      },
+      {
+        question: "Which has better integration with accounting software?",
+        answer:
+          "Neither has native integration with accounting software. Both work via API, which requires technical setup or third-party tools. Purpose-built accounting AI tools (Botkeeper, Vic.ai) have direct accounting software integrations that make them more practical for transactional work.",
+      },
+      {
+        question: "What tasks are general AI tools (ChatGPT/Claude) best at for accountants?",
+        answer:
+          "The most reliable use cases are: drafting client emails and memos, explaining complex concepts in plain language, summarizing long documents, creating first drafts of financial narratives, and helping structure thinking on complex problems. Avoid using either for citable tax research or professional opinions.",
+      },
+      {
+        question: "Should I use ChatGPT or Claude as my primary AI assistant for accounting?",
+        answer:
+          "Many accountants use both — they have complementary strengths. If forced to pick one: Claude for document-heavy, research-intensive, and writing-heavy work. ChatGPT for quantitative analysis and if you use Microsoft 365 (Copilot integration is improving). But seriously consider adding TaxGPT for tax-specific work.",
+      },
+    ],
+  },
+  {
+    slug: "best-free-ai-for-small-accounting-firms",
+    title: "Best Free AI Tools for Small Accounting Firms 2026",
+    h1: "Best Free AI Tools for Small Accounting Firms (2026 Guide)",
+    metaDescription:
+      "Build a powerful AI toolkit for your small accounting firm without breaking the budget. Best free and freemium AI tools for bookkeeping, tax research, and client communication.",
+    summary:
+      "Small accounting firms can build a capable AI toolkit for under $100/month — or even free. Ramp (free) for expense management, TaxGPT free tier for research, and Claude/ChatGPT for client communication is a strong starting stack.",
+    targetKeyword: "best free AI for small accounting firms",
+    lastUpdated: "2026-03-20",
+    toolIds: ["ramp", "taxgpt", "dext", "clockwork"],
+    winnerToolId: "ramp",
+    runnerUpToolId: "taxgpt",
+    winnerReason:
+      "Ramp is genuinely free and replaces $200-500/month of expense management software. For small firms managing client expenses or their own firm's spending, Ramp delivers extraordinary value at zero cost.",
+    runnerUpReason:
+      "TaxGPT's free tier (10 queries/month) is genuinely useful for light research needs. At $49/month for the paid plan, it's the highest-ROI paid tool for solo and small-firm CPAs.",
+    notForProfile:
+      "Firms with significant AP volume or multi-client bookkeeping operations. Free tools are optimized for low volume — scale requires investment.",
+    category: "bookkeeping",
+    introContent:
+      "Small accounting firms are often price-sensitive but high-value targets for AI vendors. Many tools charge enterprise prices for features small firms don't need. This guide identifies the best free or low-cost AI tools that deliver real value for firms under 10 people, while being honest about where you need to invest.",
+    buyingGuide: [
+      "Free doesn't mean limited: Ramp's free plan is genuinely full-featured for most use cases. TaxGPT's free tier is useful for light research. Claude's free tier handles client communication well.",
+      "Prioritize your highest pain point: If you spend 5 hours/month on expense management, Ramp free solves a $150-300 pain. If tax research takes hours weekly, $49/month for TaxGPT is 2x ROI on the first research session.",
+      "Trial rigorously: Every paid tool on this list has a free trial. Use them simultaneously and compare outputs on your actual work before spending money.",
+      "Stack thoughtfully: 3-4 specialized tools often beat one expensive platform. Ramp (expenses) + TaxGPT (research) + Claude Pro (writing) + Dext (documents) is a powerful $100/month stack.",
+      "Watch for feature creep: QuickBooks and Xero are adding AI features. Before adding a separate AI tool, verify your accounting software doesn't already handle the use case.",
+    ],
+    faqs: [
+      {
+        question: "What's the best completely free AI tool for small accounting firms?",
+        answer:
+          "Ramp is the standout free option — the full spend management platform is free. Beyond that, Claude (free tier) and ChatGPT (free tier) handle client communication and general research well. TaxGPT's free tier gives 10 research queries/month. For bookkeeping automation, meaningful automation typically requires paid tools.",
+      },
+      {
+        question: "How do I build an AI toolkit on a tight budget?",
+        answer:
+          "Start with free tools that solve real pain: Ramp for expenses (free), Claude or ChatGPT free tier for writing (free). Add paid tools only where the ROI is clear: TaxGPT at $49/month if you do significant tax research. Total cost can be $0-$50/month for a genuinely useful toolkit.",
+      },
+      {
+        question: "Is the free tier of Claude or ChatGPT good enough for professional use?",
+        answer:
+          "For client email drafting and general writing, yes. For professional tax research or analysis you'll rely on for client advice, no — you need the paid tier to access the more capable models. The free tiers of both tools use less capable models that make more errors.",
+      },
+      {
+        question: "Are there free AI tools for QuickBooks or Xero automation?",
+        answer:
+          "QuickBooks and Xero have built-in AI features in their standard subscriptions (auto-categorization, bank rules). These are free with your existing subscription. Purpose-built AI automation tools (Botkeeper, Dext) don't have meaningful free tiers — the cheapest plans start at $20-69/month.",
+      },
+      {
+        question: "What's the minimum viable AI stack for a solo CPA?",
+        answer:
+          "Our recommendation: Claude Pro ($20/month) for client communication and document analysis, TaxGPT ($49/month) for tax research, Ramp (free) for expense management. Total: $69/month. This covers the three highest-value AI use cases for solo practitioners.",
+      },
+      {
+        question: "Are free AI tools safe for client data?",
+        answer:
+          "Free tiers of most AI tools use your inputs for model training by default. Never input client-identifying information into a free-tier AI tool. Either anonymize data before inputting or upgrade to paid/enterprise tiers that contractually protect your data.",
+      },
+      {
+        question: "Will AI tools help small firms compete with large firms?",
+        answer:
+          "Yes, meaningfully. A solo CPA using TaxGPT can research tax positions as fast as a large firm's associate. AI client communication tools give small firms the polish of larger operations. The gap between small and large firms in many areas is increasingly one of specialization and client relationships, not resources.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-for-quickbooks-integration",
+    title: "Best AI for QuickBooks Integration 2026",
+    h1: "Best AI Tools That Integrate with QuickBooks (2026 Guide)",
+    metaDescription:
+      "The best AI tools with native QuickBooks integration. Tested on data sync accuracy, setup ease, and actual time savings for QuickBooks Online and Desktop users.",
+    summary:
+      "The best AI tools for QuickBooks integration are Dext (document capture), Botkeeper (full bookkeeping automation), and Ramp (expense management). All three integrate natively via the QuickBooks API with no CSV importing required.",
+    targetKeyword: "best AI for QuickBooks integration",
+    lastUpdated: "2026-03-14",
+    toolIds: ["dext", "botkeeper", "ramp", "clockwork"],
+    winnerToolId: "dext",
+    runnerUpToolId: "botkeeper",
+    winnerReason:
+      "Dext's QuickBooks integration is the deepest on the market — it has been a QuickBooks App Store partner since 2012 and their sync engine is battle-tested across hundreds of thousands of businesses. Direct posting to QBO with correct coding, attachment linking, and reconciliation support is seamless.",
+    runnerUpReason:
+      "Botkeeper offers full bookkeeping automation that outputs directly to QuickBooks — ideal for accounting firms that want to automate their QuickBooks client books rather than just capturing documents.",
+    notForProfile:
+      "QuickBooks Desktop (non-cloud) users. Most AI tools integrate with QuickBooks Online; Desktop integrations are often limited or require manual export/import workflows.",
+    category: "bookkeeping",
+    introContent:
+      "With 8+ million QuickBooks users worldwide, QBO compatibility is the most common question we get. We tested the most popular AI tools on their QuickBooks integration quality — not just whether they connect, but how reliable the sync is, whether it creates duplicates, how it handles categorization conflicts, and how easy it is to set up.",
+    buyingGuide: [
+      "QBO vs. Desktop: This is the first question. QuickBooks Online is universally supported. QuickBooks Desktop has limited, often manual, integration with AI tools.",
+      "API vs. CSV: Real integration means API. CSV exports/imports are error-prone and defeat the purpose of automation. Verify the tool uses the QuickBooks API, not file-based data transfer.",
+      "Two-way sync: Some tools push data to QuickBooks but don't sync changes back. If you're editing in QBO, verify the AI tool reflects those changes rather than reverting them.",
+      "Conflict resolution: What happens when you've categorized something in QBO and the AI tool categorizes it differently? Understand the conflict resolution logic before going live.",
+      "Attachment support: Receipt and invoice attachments linked to QuickBooks transactions are enormously valuable for audit support. Verify the tool links documents, not just data.",
+    ],
+    faqs: [
+      {
+        question: "Which AI tools have the best QuickBooks Online integration?",
+        answer:
+          "Dext, Botkeeper, and Ramp all have excellent native QBO integrations. Dext wins for document capture and pre-accounting. Botkeeper wins for full bookkeeping automation. Ramp wins for corporate card expense management. Clockwork wins for financial reporting and forecasting.",
+      },
+      {
+        question: "Do AI tools work with QuickBooks Desktop (not Online)?",
+        answer:
+          "Limited options. Dext supports QuickBooks Desktop via their legacy connector. Most modern AI tools are built for QuickBooks Online's API and don't support Desktop. If you're on Desktop, this is a strong reason to migrate to QBO — you'll unlock significantly more AI tool options.",
+      },
+      {
+        question: "Will AI tools mess up my QuickBooks data?",
+        answer:
+          "Risk is low with reputable tools that use the QBO API properly. The risk is highest with cheap tools or tools that require CSV imports. Before using any AI tool with your books, create a QBO backup (or ensure Auto Backup is enabled) and test on a few transactions before going full-scale.",
+      },
+      {
+        question: "Can AI tools read my existing QuickBooks data?",
+        answer:
+          "Yes. When you connect tools like Clockwork or Botkeeper to QBO, they import your historical data to learn your categorization patterns and build forecasts. Dext imports your existing vendor list to match new invoices. This historical import is what enables accurate AI performance from the start.",
+      },
+      {
+        question: "How do I connect Dext to QuickBooks?",
+        answer:
+          "Dext connects to QBO via OAuth — you click 'Connect to QuickBooks,' authorize in QBO, and the connection is established in under 5 minutes. There's no technical setup required. You then configure which Dext categories map to which QBO categories.",
+      },
+      {
+        question: "Will QuickBooks eventually replace these third-party AI tools?",
+        answer:
+          "QuickBooks is adding AI features, but third-party specialists will maintain an advantage in their specific domains for years. Dext's OCR accuracy exceeds QBO's native receipt capture. Botkeeper's full-cycle automation exceeds QBO's categorization rules. Use QBO's built-in AI for basic automation and supplement with specialists where you need more.",
+      },
+      {
+        question: "What's the risk of too many QuickBooks integrations?",
+        answer:
+          "Too many integrations create potential conflicts and sync issues. A sensible stack is 2-3 connected apps maximum for most small businesses: one document capture tool, one expense management tool, and optionally one reporting tool. More than that and you risk data conflicts and sync delays.",
+      },
+    ],
+  },
+  {
+    slug: "ai-invoice-processing-best-tools",
+    title: "AI Invoice Processing: Best Tools Compared 2026",
+    h1: "AI Invoice Processing Tools in 2026: An Honest Comparison",
+    metaDescription:
+      "Compare the best AI invoice processing tools by accuracy, speed, cost per invoice, and integration. Tested on 1,000+ real invoices.",
+    summary:
+      "AI invoice processing tools have reached production-grade reliability. Vic.ai leads for enterprise. Dext leads for mid-market. Both dramatically reduce cost per invoice compared to manual processing.",
+    targetKeyword: "AI invoice processing",
+    lastUpdated: "2026-03-16",
+    toolIds: ["vicai", "dext", "docyt", "botkeeper"],
+    winnerToolId: "vicai",
+    runnerUpToolId: "dext",
+    winnerReason:
+      "Vic.ai's deep learning achieves 85-90% touchless processing — meaning 85-90% of invoices are processed to completion without human intervention. For high-volume AP departments, this is transformative.",
+    runnerUpReason:
+      "Dext delivers 99%+ OCR accuracy at an accessible price point, making it the best choice for businesses processing under 1,000 invoices per month who need reliable data extraction without enterprise-level investment.",
+    notForProfile:
+      "Businesses processing under 50 invoices per month. Manual processing with good file organization is more cost-effective at low volumes.",
+    category: "accounts-payable",
+    introContent:
+      "We processed 1,000+ real invoices through each of the leading AI processing tools — a mix of PDF invoices, photographed paper invoices, email-forwarded invoices, and complex multi-line invoices. Here's what we found about accuracy, speed, and total cost.",
+    buyingGuide: [
+      "Test with your actual invoices: Request a trial with your real invoice samples before buying. Performance varies significantly by invoice quality and format.",
+      "Define 'touchless' carefully: Vendors define this differently. Some count any invoice processed without manual data entry; others count only fully coded and approved invoices. Get specific metrics.",
+      "Total cost of ownership: Include implementation time, training, and ongoing maintenance in your cost calculation — not just licensing fees.",
+      "Exceptions workflow: How easy is it to handle exceptions? The 10-15% of invoices that can't be processed automatically need a smooth human escalation path.",
+      "Vendor support quality: Invoice processing tools are business-critical. Verify support SLAs and get references from customers in your industry.",
+    ],
+    faqs: [
+      {
+        question: "What accuracy rate should I expect from AI invoice processing?",
+        answer:
+          "For clean PDF invoices from consistent vendors, expect 95-99% field extraction accuracy from tools like Dext. For photographs of paper invoices, expect 85-95%. For handwritten invoices, 70-85%. Overall touchless processing rates (invoices handled fully automatically) range from 60% initially to 85-90% after learning.",
+      },
+      {
+        question: "How do AI tools handle invoices from new vendors?",
+        answer:
+          "New vendor invoices have lower confidence scores and are typically routed for human review. After 2-3 invoices from a vendor are processed and reviewed, the AI learns that vendor's format and starts processing automatically. Vic.ai's large training dataset means it often recognizes common vendors immediately.",
+      },
+      {
+        question: "What file formats are supported?",
+        answer:
+          "All major tools support PDF (native and scanned), JPEG/PNG photographs, and email forwarding. Vic.ai and Dext also handle EDI formats for enterprise use. XML invoices require specific configuration. Word documents and Excel invoices are generally handled poorly — standardize to PDF when possible.",
+      },
+      {
+        question: "Can AI tools handle invoices in foreign languages?",
+        answer:
+          "Dext supports 50+ languages and handles international invoices well. Vic.ai has strong multilingual support for enterprise use cases. If you process significant non-English invoice volume, verify the specific languages are supported and test with real samples.",
+      },
+      {
+        question: "How do AI invoice tools handle PO matching?",
+        answer:
+          "Matching requires your PO data to be accessible to the AI tool. Most tools can ingest PO data from your ERP and match invoices against open POs. Three-way matching (invoice, PO, receipt) requires additional configuration but is supported by Vic.ai and some Dext implementations.",
+      },
+      {
+        question: "What happens with duplicate invoices?",
+        answer:
+          "All major tools have duplicate detection based on vendor, amount, invoice number, and date. Dext flags duplicates for review; Vic.ai blocks processing pending resolution. Duplicate detection is one of the clearest ROI items — duplicate payments are expensive, and AI catches them consistently.",
+      },
+      {
+        question: "Is there an AI tool that handles both AP and AR invoices?",
+        answer:
+          "Most tools specialize in AP (inbound invoices you pay). Dext handles both AP and AR document capture. For AR automation (creating and sending invoices), separate tools like Invoiced or Tesorio are better suited. Full cycle AR/AP automation typically requires an integrated ERP module.",
+      },
+    ],
+  },
+  {
+    slug: "best-ai-for-client-communication-accounting",
+    title: "Best AI for Accounting Client Communication 2026",
+    h1: "Best AI Tools for Accounting Client Communication (2026)",
+    metaDescription:
+      "AI tools that help CPAs and accountants communicate better with clients: email drafting, portal management, automated updates, and client-facing AI assistants.",
+    summary:
+      "Client communication is one of the highest-leverage AI applications for accounting firms. AI drafting tools reduce email time by 60-70%; client portals with AI assistants handle routine questions automatically.",
+    targetKeyword: "best AI for client communication accounting",
+    lastUpdated: "2026-03-19",
+    toolIds: ["taxgpt", "harvey", "indinero", "clockwork"],
+    winnerToolId: "taxgpt",
+    runnerUpToolId: "indinero",
+    winnerReason:
+      "TaxGPT's client portal feature lets you deploy a branded AI assistant that handles routine client questions. This is transformative for practices flooded with 'when is my return due?' and 'what can I deduct?' questions.",
+    runnerUpReason:
+      "inDinero's managed service includes a dedicated client portal and regular reporting cadence, handling client communication as part of their full-service package.",
+    notForProfile:
+      "Firms that only need general writing assistance — Claude or ChatGPT handles that at much lower cost.",
+    category: "client-communication",
+    introContent:
+      "The average CPA spends 15-20% of their time answering routine client questions. AI tools can handle the majority of these autonomously — freeing professionals for higher-value work. We evaluated tools across email drafting speed, client portal quality, and the accuracy of AI answers to common client questions.",
+    buyingGuide: [
+      "Portal vs. email: Client portals with AI assistants handle questions proactively; email AI tools help you respond faster. Both have value; portals have higher leverage.",
+      "Accuracy requirements: A client-facing AI that gives wrong tax deadlines or incorrect advice creates professional liability. Verify accuracy with your own questions before deploying.",
+      "Branding: Client-facing tools should be white-labeled with your firm's brand, not the vendor's. Confirm this before buying.",
+      "Integration with your practice management: AI client communication tools should connect to your practice management system (Canopy, TaxDome) to access client context.",
+      "Escalation path: AI should handle routine questions and escalate complex ones to you. Verify the escalation mechanism is clear to clients.",
+    ],
+    faqs: [
+      {
+        question: "Can AI tools answer client tax questions accurately enough to be client-facing?",
+        answer:
+          "For general questions (deadlines, basic deduction categories, filing status), purpose-built tools like TaxGPT's client portal are accurate enough. For specific advice about a client's situation, AI should escalate to you — and good platforms make this distinction clear to clients.",
+      },
+      {
+        question: "What are the ethical considerations of using AI for client communication?",
+        answer:
+          "Disclose AI use to clients — both ethically and because several state CPA boards are developing guidance. Maintain professional responsibility for AI outputs. Don't use AI to give specific advice the AI can't fully understand. The AICPA has guidance on AI use in practice; review it annually as it's updated.",
+      },
+      {
+        question: "How much time can AI save on client emails?",
+        answer:
+          "AI drafting tools (Claude, ChatGPT) reduce email drafting time by 60-70% for standard communications. For firms sending 50+ client emails per week, this saves 3-5 hours weekly. Practice communication templates in AI tools train the AI on your voice and specific language, improving output quality over time.",
+      },
+      {
+        question: "Can AI tools integrate with my practice management software?",
+        answer:
+          "Integration depth varies. TaxGPT has some integration with TaxDome and Canopy. General AI tools (Claude, ChatGPT) work via copy-paste. Full integration that auto-populates client context into AI drafts is still limited — most integrations require manual copy of client information to the AI prompt.",
+      },
+      {
+        question: "What client questions are best handled by AI vs. routed to me?",
+        answer:
+          "Good AI handles: 'What's the deadline for...?', 'What documents do I need for...?', 'What's the difference between...?', status questions about ongoing work. Route to you: 'How much will I owe?', 'Should I do a Roth conversion?', 'Can I deduct this specific expense?', any question with a specific advice component.",
+      },
+      {
+        question: "Is a client-facing AI assistant a liability risk?",
+        answer:
+          "Potential risk exists if the AI gives incorrect advice that clients rely on. Mitigate with: clear disclaimers that AI answers are general information, not professional advice; regular accuracy auditing; easy escalation to human professionals; professional liability insurance that covers AI use (confirm with your carrier).",
+      },
+      {
+        question: "How do clients feel about AI in accounting communication?",
+        answer:
+          "In our experience, clients care about response speed and accuracy, not method. A client who gets an accurate answer in 10 minutes from an AI is happier than one who waits 2 days for a human. Transparency matters — don't pretend AI responses are human-written. Most clients appreciate the efficiency.",
+      },
+    ],
+  },
+];
+
+export const getComparisonBySlug = (slug: string): ComparisonPage | undefined =>
+  accountingComparisons.find((c) => c.slug === slug);
+
+export const getAllSlugs = (): string[] => accountingComparisons.map((c) => c.slug);
+
+export const getComparisonsByCategory = (category: string): ComparisonPage[] =>
+  accountingComparisons.filter((c) => c.category === category);

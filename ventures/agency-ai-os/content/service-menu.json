@@ -1,0 +1,293 @@
+{
+  "product": "Agency AI OS — Service Menu",
+  "version": "1.0",
+  "last_updated": "2026-03-21",
+  "services": [
+    {
+      "id": "ai-content-strategy",
+      "name": "AI Content Strategy & Production",
+      "tagline": "Build a content engine that runs at scale without a full creative team",
+      "price_range": "$2,000–$5,000/month",
+      "engagement_type": "Retainer",
+      "description": "You set up and manage an AI-powered content system that produces consistent, on-brand content across channels — blog, social, email, and ads. This isn't content generated and dumped into a Google Doc. It's a documented process: brand voice training, editorial calendar, prompt library, review workflow, and publishing cadence. The client gets a content operation they can hand off to a junior coordinator within 90 days.",
+      "ideal_client": "B2B companies with 10–200 employees that are publishing inconsistently or spending $8,000+ per month on a content agency. Also works well for e-commerce brands scaling product descriptions and email flows.",
+      "deliverables": [
+        "Brand voice document and AI prompt library (customized to client)",
+        "Monthly editorial calendar (30–60 pieces across formats)",
+        "Blog post production (4–8 posts/month, fully written and formatted)",
+        "Social media content (20–40 posts/month with captions and hooks)",
+        "Email newsletter production (4 emails/month)",
+        "Monthly performance report with AI-assisted analysis",
+        "Content repurposing workflow (1 blog → multiple formats)"
+      ],
+      "timeline": "Setup in weeks 1–2; full production begins week 3; month 2 onward is steady-state",
+      "how_to_scope": "Start by auditing what they currently publish and what's working. Count their channels. If they need more than 60 pieces/month or have 4+ channels, price at the $4,500–$5,000 range. Fewer than 3 channels and under 30 pieces/month, start at $2,000–$2,500. Add $500–$1,000 if they need SEO keyword research layered in.",
+      "common_pitfalls": [
+        "Not building a review step — AI content without human QA will eventually embarrass the client",
+        "Promising 'unlimited' output without defining what counts as a deliverable",
+        "Skipping brand voice training and just using the client's website as context — it's not enough",
+        "Not documenting the process from day one, making yourself a bottleneck instead of building a system"
+      ],
+      "tools_typically_used": ["Claude or GPT-4", "Jasper (enterprise)", "Surfer SEO", "Airtable or Notion for editorial calendar", "Buffer or Later for scheduling"],
+      "upsell_path": "AI Marketing Analytics & Reporting (service 5) pairs naturally once content is running"
+    },
+    {
+      "id": "ai-customer-service",
+      "name": "AI Customer Service Implementation",
+      "tagline": "Deflect 40–70% of support tickets before they reach a human",
+      "price_range": "$3,000–$8,000 setup + $1,000–$2,000/month",
+      "engagement_type": "Project + Retainer",
+      "description": "You implement an AI-powered customer service system — typically a chatbot plus automated email triage — trained on the client's actual support data, knowledge base, and product documentation. The goal is measurable ticket deflection. Most clients are paying $4,000–$12,000/month on support staff or a support outsourcing firm. This service should pay for itself within 60–90 days.",
+      "ideal_client": "E-commerce brands getting 200+ support tickets/month. SaaS companies with repetitive onboarding questions. Service businesses with high inquiry volume (real estate, legal, healthcare adjacent). Any company where support is a cost center they're trying to reduce.",
+      "deliverables": [
+        "Support ticket audit and categorization (what's automatable vs. what needs humans)",
+        "Knowledge base cleanup and structuring (or creation from scratch)",
+        "AI chatbot configuration and training on client-specific data",
+        "Automated email triage with routing rules",
+        "Escalation path design (what triggers a human handoff)",
+        "Staff training on monitoring and maintaining the system",
+        "30-day post-launch monitoring and tuning",
+        "Monthly performance report (deflection rate, CSAT, response time)"
+      ],
+      "timeline": "4–6 weeks for setup. Ongoing management from month 2.",
+      "how_to_scope": "Get the client's monthly ticket volume and average handle time. Calculate what they're currently spending on support labor. Price the setup at 15–25% of their annual support spend — this makes the ROI argument obvious. If they have a messy or nonexistent knowledge base, add $1,500–$2,500 for knowledge base work. Monthly retainer covers monitoring, retraining, and new FAQ additions.",
+      "common_pitfalls": [
+        "Deploying without enough training data — the bot will hallucinate or give wrong answers",
+        "Not designing the escalation path, leading to customer frustration",
+        "Underestimating knowledge base cleanup time — this is often the biggest time sink",
+        "Promising a specific deflection rate before you've audited ticket data"
+      ],
+      "tools_typically_used": ["Intercom Fin", "Zendesk AI", "Freshdesk Freddy", "Custom GPT-4 via API", "Voiceflow for complex flows"],
+      "upsell_path": "AI Workflow Automation Audit (service 7) once support is running — there are always adjacent processes to automate"
+    },
+    {
+      "id": "ai-sales-automation",
+      "name": "AI Sales Automation Setup",
+      "tagline": "Build a sales system that researches, sequences, and follows up without manual effort",
+      "price_range": "$4,000–$10,000 project",
+      "engagement_type": "Project (with optional retainer for ongoing management)",
+      "description": "You design and implement an AI-powered sales automation system covering prospecting, personalized outreach, follow-up sequences, and CRM enrichment. The deliverable isn't just a configured tool — it's a documented sales playbook that the client's team can run, with AI doing the research and drafting work so reps focus on conversations, not data entry.",
+      "ideal_client": "B2B companies with a defined ICP and a sales team that's manually doing a lot of research and email writing. Typically $1M–$20M revenue range. Founder-led sales teams moving to a dedicated sales hire. Also strong for outbound-heavy agencies.",
+      "deliverables": [
+        "ICP definition workshop and documentation",
+        "Prospect research automation setup (AI-enriched lead lists)",
+        "CRM audit and cleanup (or setup if they don't have one)",
+        "AI-powered email sequence templates (5–8 touch sequence)",
+        "Personalization variable framework (company-specific hooks)",
+        "CRM workflow automation (lead routing, task creation, follow-up triggers)",
+        "Sales team training (2-hour session + SOPs)",
+        "30-day QA and optimization"
+      ],
+      "timeline": "4–6 weeks from kickoff to fully operational",
+      "how_to_scope": "Base price at $4,000 for a single-channel (email only) setup for a team under 5 reps. Add $1,000–$1,500 per additional channel (LinkedIn, SMS). Add $1,500 if CRM needs to be set up from scratch. Enterprise or 10+ rep teams start at $7,500. The ceiling is $10,000 for multi-channel, multi-team with custom integrations.",
+      "common_pitfalls": [
+        "Building automation before validating the ICP — garbage in, garbage out",
+        "Overpromising reply rates — position it as process improvement, not magic",
+        "Not documenting the system so the client team can maintain it independently",
+        "Ignoring deliverability — cold email automation without warming will get emails marked as spam"
+      ],
+      "tools_typically_used": ["Clay", "Apollo.io", "Instantly or Lemlist", "HubSpot or Salesforce", "ChatGPT or Claude for sequence writing"],
+      "upsell_path": "AI Marketing Analytics & Reporting (service 5) to close the loop on what's converting"
+    },
+    {
+      "id": "ai-document-processing",
+      "name": "AI Document Processing & Automation",
+      "tagline": "Eliminate manual document work with AI extraction, classification, and routing",
+      "price_range": "$3,000–$8,000 project",
+      "engagement_type": "Project",
+      "description": "You build AI-powered pipelines that process documents automatically — contracts, invoices, applications, forms, reports. Instead of humans reading, extracting, and re-entering data, AI does the parsing and routes outputs to the right systems. This is high-ROI work because you're replacing hours of repetitive labor with a system that runs 24/7.",
+      "ideal_client": "Law firms, accounting firms, real estate offices, logistics companies, insurance agencies, HR departments. Basically any business that has staff spending more than 5 hours per week manually processing documents.",
+      "deliverables": [
+        "Document workflow audit (what's being processed, by whom, at what volume)",
+        "Document classification and extraction system (reads and parses specified document types)",
+        "Data extraction templates for each document type",
+        "Integration with target systems (CRM, ERP, spreadsheets, cloud storage)",
+        "Validation rules and exception handling (what happens when confidence is low)",
+        "Staff training and documentation",
+        "Testing with real documents before go-live"
+      ],
+      "timeline": "3–5 weeks depending on document complexity and number of integrations",
+      "how_to_scope": "Count the document types and volume. Calculate current manual hours per week × hourly cost. Price at 2–4x the monthly labor savings for the setup. Low complexity (1–2 document types, simple extraction) starts at $3,000. High complexity (5+ document types, multiple system integrations, exception handling) reaches $7,000–$8,000.",
+      "common_pitfalls": [
+        "Not testing with edge cases — real documents are messier than samples",
+        "Skipping exception handling — the system will fail on unusual documents and you need a plan",
+        "Underestimating integration complexity with legacy systems",
+        "Not accounting for document volume spikes in pricing (month-end, tax season, etc.)"
+      ],
+      "tools_typically_used": ["AWS Textract", "Azure Form Recognizer", "Reducto", "LlamaParse", "Make or Zapier for integration", "Python for custom extraction logic"],
+      "upsell_path": "AI Workflow Automation Audit (service 7) — once documents are flowing, there are usually downstream processes to automate too"
+    },
+    {
+      "id": "ai-marketing-analytics",
+      "name": "AI Marketing Analytics & Reporting",
+      "tagline": "Replace 10-hour monthly reporting with AI-generated insight packages delivered in 30 minutes",
+      "price_range": "$2,000–$4,000/month",
+      "engagement_type": "Retainer",
+      "description": "You set up an AI-powered analytics and reporting system that pulls data from all marketing channels, identifies patterns and anomalies, generates written commentary, and produces consistent reports for stakeholders. The client goes from spending 10–20 hours monthly on reporting to reviewing a polished package in an hour.",
+      "ideal_client": "Marketing teams at $2M–$50M companies running multiple paid channels. Marketing agencies managing reports for multiple clients. E-commerce brands with complex attribution questions. Any company where the CMO or founder is spending meaningful time on reporting instead of strategy.",
+      "deliverables": [
+        "Data source audit and connection setup (ad platforms, GA4, CRM, email)",
+        "Unified dashboard build (Looker Studio, Power BI, or Databox)",
+        "AI-generated weekly performance summary (written narrative, not just charts)",
+        "Monthly AI analysis report with recommendations",
+        "Anomaly detection and alerting setup",
+        "Attribution model configuration",
+        "Quarterly strategy review document"
+      ],
+      "timeline": "Setup in weeks 1–3; reporting cadence begins week 4",
+      "how_to_scope": "Count their data sources and report recipients. Base price ($2,000) covers up to 5 data sources and monthly reporting. Add $500 per additional major platform. Add $1,000 for weekly cadence. $4,000 is appropriate for 10+ data sources, weekly reporting, and multiple stakeholder formats (board-level vs. tactical).",
+      "common_pitfalls": [
+        "Data source connections breaking — always build with error notifications",
+        "Over-engineering the dashboard before understanding what decisions it needs to support",
+        "Not getting stakeholder buy-in on the report format before building",
+        "Using AI to generate commentary without human review — occasional interpretations are wrong"
+      ],
+      "tools_typically_used": ["Looker Studio", "Power BI", "Supermetrics", "Databox", "ChatGPT or Claude for narrative generation", "Make for data pipeline automation"],
+      "upsell_path": "AI Content Strategy (service 1) — if you're reporting on what's working, you can also produce it"
+    },
+    {
+      "id": "ai-chatbot-development",
+      "name": "AI Chatbot Development & Deployment",
+      "tagline": "Custom AI chatbots that actually know your business — not generic FAQ bots",
+      "price_range": "$5,000–$15,000 project",
+      "engagement_type": "Project (with optional $1,500–$3,000/month maintenance)",
+      "description": "You design, build, and deploy custom AI chatbots for specific use cases: lead qualification, customer support, internal knowledge retrieval, onboarding, or sales assistance. The differentiator here vs. plug-and-play tools is deep customization — trained on client-specific data, connected to their systems, and designed around actual user journeys rather than a generic flow.",
+      "ideal_client": "Companies with high website traffic that aren't converting enough leads. SaaS products needing better in-app support. Large teams needing internal knowledge retrieval. Real estate, insurance, financial services, legal — any sector with complex qualification or lookup needs.",
+      "deliverables": [
+        "Use case definition and conversation design document",
+        "Knowledge base preparation and chunking",
+        "Chatbot build (custom or on platform — Voiceflow, Botpress, or custom API)",
+        "Integration with CRM, calendar, helpdesk, or other systems",
+        "Conversation flow testing and QA",
+        "Analytics and conversation monitoring setup",
+        "Staff handover documentation",
+        "30-day post-launch monitoring and optimization"
+      ],
+      "timeline": "Simple bots: 3–4 weeks. Complex multi-intent bots with integrations: 6–10 weeks.",
+      "how_to_scope": "Start with a use case definition session. Count the number of intents (things users want to do). Base price ($5,000) covers a single use case (e.g., lead capture) with up to 3 system integrations. Complex bots with 10+ intents, multiple integrations, or real-time data lookups run $10,000–$15,000. Custom API development adds $2,000–$5,000.",
+      "common_pitfalls": [
+        "Building too many flows before testing core flows with real users",
+        "Underestimating knowledge base preparation time",
+        "Not designing a graceful fallback when the bot can't answer",
+        "Ignoring mobile experience — many chatbot platforms render poorly on mobile"
+      ],
+      "tools_typically_used": ["Voiceflow", "Botpress", "OpenAI Assistants API", "Pinecone or Weaviate for RAG", "Zapier/Make for integrations"],
+      "upsell_path": "AI Customer Service Implementation (service 2) to extend the chatbot into a full support system"
+    },
+    {
+      "id": "ai-workflow-automation",
+      "name": "AI Workflow Automation Audit & Implementation",
+      "tagline": "Find the 10 hours per week hiding in manual processes and automate them",
+      "price_range": "$2,500–$6,000",
+      "engagement_type": "Project (audit-first model)",
+      "description": "You start with a structured automation audit — mapping how work actually flows through the business and identifying where AI can eliminate manual steps. Then you build. This is a discovery-led service that positions you as a strategic partner, not just a developer. Clients who've had this done correctly often say it's the most valuable engagement they've done in years.",
+      "ideal_client": "Operations-heavy businesses: agencies, law firms, accounting firms, logistics companies, real estate teams, e-commerce operators. Any company with 10+ employees where the answer to 'why do you do it that way?' is 'we've always done it that way.'",
+      "deliverables": [
+        "3-hour workflow mapping workshop (remote or in-person)",
+        "Automation opportunity report (ranked by time savings × implementation effort)",
+        "Priority automation builds (3–5 workflows depending on scope)",
+        "Before/after time tracking documentation",
+        "Implementation documentation and SOPs",
+        "Team training on maintaining automations",
+        "30-day check-in call"
+      ],
+      "timeline": "Audit: 1 week. Implementation: 2–4 weeks depending on automation count and complexity.",
+      "how_to_scope": "Sell the audit first at $1,500–$2,500 (included in the full project price if they proceed). This de-risks the engagement for both sides. Full implementation pricing depends on automation count: 3 automations = $2,500–$3,500; 5+ automations = $4,500–$6,000. Complex integrations with APIs or legacy systems add cost.",
+      "common_pitfalls": [
+        "Starting with implementation before completing the audit — you'll build the wrong things",
+        "Automating broken processes instead of fixing them first",
+        "Building fragile automations that break when data formats change",
+        "Not documenting automations properly, making the client dependent on you for every change"
+      ],
+      "tools_typically_used": ["Make (Integromat)", "Zapier", "n8n", "Airtable", "Notion", "Custom Python scripts for complex logic"],
+      "upsell_path": "Fractional AI Officer (service 9) to continue the relationship strategically after project completion"
+    },
+    {
+      "id": "ai-training-enablement",
+      "name": "AI Training & Enablement",
+      "tagline": "Get your entire team using AI effectively within 30 days — not just the tech-savvy few",
+      "price_range": "$3,000–$8,000",
+      "engagement_type": "Project (workshops + follow-up program)",
+      "description": "You design and deliver an AI training program tailored to the client's industry, tools, and team composition. Not a generic 'intro to ChatGPT' session — role-specific training that shows each team member exactly how AI applies to their daily work. Marketing gets prompt libraries for campaigns. Sales gets sequences and research workflows. Operations gets automation guides. Everyone gets a reason to adopt.",
+      "ideal_client": "Companies with 10–150 employees starting an AI initiative. Professional services firms (accounting, law, consulting). Marketing and creative agencies. Any organization where leadership has mandated AI adoption but hasn't provided a roadmap.",
+      "deliverables": [
+        "Team assessment (survey to understand current AI usage and comfort levels)",
+        "Custom training curriculum design (role-specific modules)",
+        "Live workshop delivery (half-day or full-day, remote or in-person)",
+        "Role-specific prompt libraries (one per department/function)",
+        "Tool setup guidance for each team member",
+        "Post-training implementation guide (30-day adoption plan)",
+        "Follow-up Q&A session at week 3",
+        "Slack/Teams channel template for ongoing AI sharing"
+      ],
+      "timeline": "Curriculum design: 1–2 weeks. Workshop delivery: 1 day. Follow-up: 4 weeks post-workshop.",
+      "how_to_scope": "Base price ($3,000) covers a half-day workshop for up to 15 people with standard prompt libraries. Full-day workshop with custom role-specific content and follow-up program: $5,000–$6,000. Enterprise with custom LMS integration, manager certification program, or multi-session delivery: $7,000–$8,000.",
+      "common_pitfalls": [
+        "Delivering generic training not tied to their actual tools and workflows",
+        "No follow-up — adoption falls off a cliff without a 30-day reinforcement plan",
+        "Training everyone the same way when a content writer and an accountant need completely different things",
+        "Skipping the assessment and building curriculum blind"
+      ],
+      "tools_typically_used": ["ChatGPT", "Claude", "Notion for prompt library delivery", "Loom for async follow-up content", "Typeform for pre-training assessment"],
+      "upsell_path": "Fractional AI Officer (service 9) to maintain strategic oversight of their AI program long-term"
+    },
+    {
+      "id": "fractional-ai-officer",
+      "name": "Fractional AI Officer",
+      "tagline": "A Chief AI Officer without the $250K salary — strategic AI leadership embedded in your business",
+      "price_range": "$3,000–$8,000/month",
+      "engagement_type": "Retainer",
+      "description": "You function as the client's embedded AI strategist — attending leadership meetings, evaluating AI tool investments, training the team, managing AI vendor relationships, and building a multi-year AI roadmap. This is your highest-leverage retainer because you're not delivering tasks; you're shaping direction. Best sold after completing a project engagement where you've proven your strategic value.",
+      "ideal_client": "Companies between $2M–$50M revenue that know AI is strategically important but don't have the internal expertise to lead it. Often sold to a CEO or COO who is personally driving the AI initiative but can't dedicate enough time to it. Also strong for PE-backed portfolio companies implementing AI across holdings.",
+      "deliverables": [
+        "Monthly AI strategy review and roadmap update",
+        "AI tool evaluation and procurement support (unbiased vendor assessment)",
+        "Team AI capability assessments and training coordination",
+        "AI project oversight and QA",
+        "Vendor and partner relationship management",
+        "Board or leadership AI update presentations (quarterly)",
+        "AI policy and governance documentation",
+        "Weekly async update + monthly 90-minute strategy call"
+      ],
+      "timeline": "Ongoing. Minimum 3-month commitment recommended. Value compounds over time as you build institutional knowledge.",
+      "how_to_scope": "Price based on engagement intensity. $3,000/month = 4–6 hours/month (strategy calls + async review). $5,000–$6,000/month = 8–12 hours (active project oversight + strategy). $7,000–$8,000/month = 15–20 hours (embedded in leadership rhythm, attending team meetings, real-time availability). Always require a 3-month minimum; 6-month recommended.",
+      "common_pitfalls": [
+        "Not defining what decisions require your input vs. what the client can do independently",
+        "Creeping into implementation work when you're positioned as strategic — this devalues the retainer",
+        "Not documenting your work, making it hard to show value at renewal",
+        "Taking on too many Fractional AI Officer clients — your credibility depends on being genuinely engaged"
+      ],
+      "tools_typically_used": ["Notion for roadmap and documentation", "Loom for async updates", "Calendly for scheduling", "Linear or Asana for project oversight"],
+      "upsell_path": "Any implementation service (1–7) when a strategic need gets identified through the advisory relationship"
+    },
+    {
+      "id": "ai-agent-deployment",
+      "name": "AI Agent Deployment",
+      "tagline": "Custom agentic workflows that complete multi-step tasks autonomously — not just answer questions",
+      "price_range": "$8,000–$25,000 project",
+      "engagement_type": "Project (with optional $2,000–$5,000/month for hosting, monitoring, and iteration)",
+      "description": "You design and build autonomous AI agents that complete complex, multi-step tasks without human intervention. This is the frontier of what AI can do operationally: research agents that compile competitive intelligence daily, agents that monitor inboxes and draft responses for approval, agents that manage project task creation and assignment, or agents that run entire outbound prospecting cycles. This is your premium flagship service.",
+      "ideal_client": "Tech-forward companies with a clear, high-value repetitive process they want automated end-to-end. B2B SaaS companies. Venture-backed startups with operational bottlenecks. Companies that have already automated simple workflows (Tier 1) and are ready to go deeper.",
+      "deliverables": [
+        "Agent design session (defining the goal, inputs, outputs, decision boundaries)",
+        "Tool and data access architecture",
+        "Agent build and testing (custom code or low-code depending on complexity)",
+        "Human-in-the-loop controls and approval workflows where appropriate",
+        "Monitoring and alerting setup",
+        "Deployment to production environment",
+        "Runbook documentation (how the agent works, how to modify it, what to do when it fails)",
+        "30-day post-launch support and iteration"
+      ],
+      "timeline": "Simple agents (single task, limited tools): 3–5 weeks. Complex multi-agent systems: 8–14 weeks.",
+      "how_to_scope": "Start with an agent scoping session ($1,500–$2,500, credited toward the project). Price based on: number of distinct tasks the agent must complete, number of external systems it must interact with, degree of autonomy required, compliance and security requirements. Single-task agent with 2–3 integrations: $8,000–$12,000. Multi-agent system with 5+ integrations and human-in-the-loop controls: $18,000–$25,000.",
+      "common_pitfalls": [
+        "Building without defining the failure boundary — what does the agent do when it's unsure?",
+        "Not including human-in-the-loop checkpoints for high-stakes actions",
+        "Underestimating infrastructure and hosting costs",
+        "Skipping the scoping session and building based on a vague brief"
+      ],
+      "tools_typically_used": ["LangChain or LangGraph", "OpenAI Assistants API", "Anthropic Claude API", "CrewAI for multi-agent", "n8n or Make for orchestration", "Supabase or Postgres for state management"],
+      "upsell_path": "Fractional AI Officer (service 9) to oversee the growing agentic infrastructure strategically"
+    }
+  ]
+}

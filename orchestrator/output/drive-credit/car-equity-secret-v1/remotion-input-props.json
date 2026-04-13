@@ -1,0 +1,11 @@
+{
+  "assetMap": {
+    "education-reveal": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1/education-reveal_regen3.png",
+    "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1/cta_regen3.png"
+  },
+  "sceneOrder": [
+    "education-reveal",
+    "cta"
+  ],
+  "totalDurationFrames": 480
+}

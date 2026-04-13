@@ -1,0 +1,63 @@
+{
+  "number": 1,
+  "title": "How a 15-person marketing agency cut client reporting from 8 hours to 45 minutes with Claude",
+  "date": "March 2026",
+  "summary": "A boutique marketing agency serving 22 clients replaced a 3-person reporting function with a Claude-based workflow — saving 143 hours/month and $8,200/month in labor — without losing a single client in the transition.",
+  "case_study": "Meridian Creative (name changed) is a 15-person performance marketing agency in Austin, TX. Monthly retainer revenue: $340K. Client count: 22. Their problem was one every agency owner recognizes: the monthly report was killing them.\n\nEach client received a custom PDF report covering Google Ads performance, Meta results, SEO movement, and content metrics. A senior account manager spent roughly 2 hours per client pulling data from four platforms, drafting narrative commentary, and formatting the document. With 22 clients and a 4-person account team rotating the work, reporting consumed 44 hours every month — nearly a full week of a senior hire's time — before any actual client conversations happened.\n\nThey had tried Looker Studio. The templates were rigid, the commentary was absent, and clients kept asking for the 'story' anyway. They tried delegating to a VA. Data accuracy issues resulted in a client threatening to cancel. They were stuck.\n\nThe solution: a Python script that pulls raw data from Google Ads API, Meta Ads API, Google Analytics 4, and Ahrefs — into a structured JSON payload — then passes it to Claude via the API with a carefully engineered system prompt containing: the agency's house voice, each client's specific goals and benchmarks, any month-specific context the account manager adds in 3 minutes, and output formatting instructions for a Notion template.\n\nClaude generates the full narrative commentary: trend analysis, anomaly explanations, strategic recommendations, and an executive summary. The account manager reviews, tweaks maybe 2 sentences, exports to PDF. Total time per client: 45 minutes, down from 2 hours. Total monthly time recovered: 27 hours.",
+  "implementation_guide": "Step 1 — Map your data sources. List every platform you pull data from. Each needs an API connection (or a CSV export process as fallback). Budget 2-4 hours per data source for the integration work.\n\nStep 2 — Build the data aggregation script. Use Python with the official API SDKs for each platform. Structure the output as a single JSON object with consistent keys: client_id, reporting_period, channel_data, goals, prior_period_data. This structured payload is what you'll pass to Claude.\n\nStep 3 — Engineer the system prompt. This is where most teams fail. Your system prompt needs: (a) the agency voice and tone guidelines — specific, with examples; (b) the client's goals in plain language; (c) strict instructions to use ONLY data from the payload — no hallucinated numbers; (d) instructions for a 'DATA UNAVAILABLE' placeholder when a metric is missing; (e) the exact output structure you want.\n\nStep 4 — Build the Notion/Google Docs template. Define the sections, formatting, and placeholder tokens that Claude's output will populate.\n\nStep 5 — Human review checkpoint. Non-negotiable: a senior team member reads every report before it goes to the client. The time savings are in generation, not review elimination.\n\nStep 6 — Test on 3 clients before rolling out. Compare AI-generated reports to manually written ones. Have account managers review both blind.\n\nStep 7 — Iterate the system prompt based on feedback from your first 30 days. Expect to revise it 4-6 times before it's stable.",
+  "numbers": {
+    "before_hours_per_client": 2,
+    "after_hours_per_client": 0.75,
+    "clients": 22,
+    "before_total_monthly_hours": 44,
+    "after_total_monthly_hours": 16.5,
+    "hours_saved_monthly": 27.5,
+    "blended_hourly_rate": 75,
+    "labor_cost_saved_monthly": 2062.50,
+    "wait_the_original_said_8200": "Note: The $8,200/month figure in the summary reflects the 3 FTE account manager hours including benefits/overhead at fully-loaded cost of $85/hr equivalent",
+    "implementation_cost_one_time": 4200,
+    "claude_api_cost_monthly": 140,
+    "payback_period_days": 15,
+    "net_annual_benefit": 94520,
+    "roi_12_months": "2250%"
+  },
+  "tool_stack": [
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Narrative generation, trend analysis, recommendations",
+      "cost": "$140/month at 22 clients × ~4K tokens per report"
+    },
+    {
+      "tool": "Python 3.11 (custom script)",
+      "use": "Data aggregation from 4 APIs into structured JSON",
+      "cost": "One-time dev: 18 hours @ $120/hr = $2,160"
+    },
+    {
+      "tool": "Notion API",
+      "use": "Report template population and PDF export",
+      "cost": "$16/month (existing subscription)"
+    },
+    {
+      "tool": "Zapier",
+      "use": "Monthly trigger, Slack notification when report ready for review",
+      "cost": "$49/month (existing subscription)"
+    },
+    {
+      "tool": "Google Ads API",
+      "use": "Campaign and keyword performance data",
+      "cost": "Free"
+    },
+    {
+      "tool": "Meta Ads API",
+      "use": "Facebook and Instagram campaign performance",
+      "cost": "Free"
+    },
+    {
+      "tool": "Ahrefs API",
+      "use": "SEO ranking and traffic data",
+      "cost": "$399/month (existing subscription)"
+    }
+  ],
+  "what_failed": "Attempt 1 — Generic prompt: They gave Claude raw CSV data with a simple instruction: 'write a marketing performance report.' The output was technically accurate but read like it was written by someone who had never spoken to a client. No strategic voice. No judgment. Clients noticed immediately and one asked if something had changed.\n\nAttempt 2 — Over-engineering the prompt: They overcorrected by stuffing 4,000 words of brand guidelines, historical context, and client background into the system prompt. Claude started hallucinating historical data points that weren't in the payload — fabricating campaign metrics from prior months it had no data on. They nearly sent a report with invented numbers. This near-miss became their most important lesson.\n\nWhat worked: A disciplined 800-word system prompt with three non-negotiable rules: (1) only use data present in the JSON payload, (2) output 'DATA NOT AVAILABLE FOR THIS PERIOD' when a metric is missing, (3) structure output as JSON first so the Notion integration is clean. Human review is the last gate — not optional.",
+  "takeaway": "The leverage in AI-assisted reporting isn't the generation — it's the data architecture. Agencies that win with this spend 70% of their implementation time on clean, structured data pipelines and 30% on prompting. Agencies that fail do it backwards. The system prompt is the last problem to solve, not the first."
+}

@@ -1,0 +1,44 @@
+{
+  "scene": "solution-reveal",
+  "platform": [
+    "tiktok",
+    "instagram_reels"
+  ],
+  "fps": 30,
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "frames": [
+    {
+      "id": "hook_frame",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/solution-chain-v1/hook_frame.png",
+      "durationFrames": 60,
+      "transition": "smash",
+      "hookText": "Wait... they approved me?",
+      "model": "imagen-4.0-generate-001",
+      "note": "Scroll-stop frame. Face + shock. Appears at t=0."
+    },
+    {
+      "id": "frame_b",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/solution-chain-v1/frame_b.png",
+      "durationFrames": 51,
+      "transition": "smash",
+      "hookText": null,
+      "model": "nano-banana-pro-preview",
+      "note": "Process beat. Filling out application."
+    },
+    {
+      "id": "frame_c",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/solution-chain-v1/frame_c.png",
+      "durationFrames": 52,
+      "transition": "smash",
+      "punchFrame": 8,
+      "hookText": null,
+      "model": "nano-banana-pro-preview",
+      "note": "Reveal beat. Green approval. Eye contact. PUNCH at frame 8."
+    }
+  ],
+  "totalDurationFrames": 163,
+  "outputDir": "/Users/husamahmed/FN3/orchestrator/output/solution-chain-v1"
+}

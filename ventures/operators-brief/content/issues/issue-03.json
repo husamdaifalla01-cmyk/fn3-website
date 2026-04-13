@@ -1,0 +1,64 @@
+{
+  "number": 3,
+  "title": "How a solo consultant 4x'd their client capacity without hiring using AI workflow automation",
+  "date": "March 2026",
+  "summary": "A solo operations consultant went from serving 4 clients at $8K/month each to 17 clients at the same price point — $136K/month — by systematically automating the repeatable 60% of every engagement. Revenue grew 4.25x. Margins improved from 71% to 86%.",
+  "case_study": "David Chen (name changed) is an operations consultant based in Denver. He specializes in helping mid-market companies (50-300 employees) clean up operational chaos: process documentation, team structure, KPI frameworks, vendor rationalization.\n\nAt 4 clients, he was at capacity. Each engagement looked the same: 3-4 weeks of discovery (interviews, data gathering, process mapping), 2 weeks of analysis and framework building, 2 weeks of documentation and presentation prep, then ongoing advisory. The discovery and documentation phases were killing him — 60% of his time on work that was structurally identical across every engagement.\n\nHis insight: the thinking was unique per client. The structure was universal. He needed to automate the structure so he could spend all his time on the thinking.\n\nWhat he built over 6 weeks:\n\n— AI-Assisted Discovery: A structured intake system where clients complete a 45-minute pre-engagement questionnaire in Typeform. A Claude-based pipeline processes the responses, cross-references against his framework library, generates a preliminary findings document, and identifies the 8-12 questions he needs to investigate in live sessions. Live interview time per client dropped from 22 hours to 8 hours.\n\n— Process Documentation Engine: He built a template library of 40 process documentation frameworks (hiring workflows, AP processes, sales handoffs, etc). When a client needs a process documented, he records a 15-minute Loom walkthrough with the client's team lead. Whisper transcribes it. Claude takes the transcript plus the relevant template and generates a complete process document. His review time: 20 minutes. Previously: 4 hours of writing.\n\n— KPI Framework Generator: A Claude-based tool that takes a company's revenue model, team structure, and stated goals, and generates a draft KPI framework with definitions, measurement methods, and owner assignments. He reviews and customizes — 45 minutes vs. 6 hours from scratch.\n\n— Client Communication System: Weekly status updates, meeting summaries, and project milestone reports are now drafted by Claude from structured notes he dictates into a voice memo app during his commute. He reviews and sends.\n\nWith these systems, the same quality of work takes 40% of the time. He took on 13 new clients over 14 months. Raised his rate from $8K to $10K/month for new engagements. Now considering hiring one junior analyst to handle the remaining manual work and expand to 25 clients.",
+  "implementation_guide": "Step 1 — Audit your time ruthlessly. Track every hour for 2 weeks. Tag each activity: 'requires my judgment' or 'is structurally repeatable.' The ratio tells you your automation potential.\n\nStep 2 — Identify your 3-5 highest-volume repeatable deliverables. For a consultant, this might be process maps, KPI frameworks, proposal templates, or status reports. Pick the one that takes the most time.\n\nStep 3 — Build a template library before you build any AI system. The AI needs structure to work with. Write 5-10 excellent examples of the deliverable manually. These become your training examples and your quality bar.\n\nStep 4 — Build the input capture system. The AI output quality is limited by input quality. Design intake forms, voice capture systems, or structured client questionnaires that give Claude everything it needs.\n\nStep 5 — Build the Claude pipeline. For each deliverable type: define the system prompt (your expertise, your standards), the input format, and the output format. Test with 3 past client examples where you know what the right output is.\n\nStep 6 — Establish your review checkpoint. Never send AI-generated client deliverables without review. But design the review to take 20 minutes, not 2 hours — that means the output format needs to be close to final.\n\nStep 7 — Price your expanded capacity correctly. If you double your client count without raising rates, you're leaving money on the table. New capacity should be deployed partly to serve more clients, partly to raise rates.",
+  "numbers": {
+    "before_clients": 4,
+    "after_clients": 17,
+    "before_monthly_revenue": 32000,
+    "after_monthly_revenue": 136000,
+    "revenue_increase": 325,
+    "before_margin_pct": 71,
+    "after_margin_pct": 86,
+    "hours_per_client_before": 85,
+    "hours_per_client_after": 34,
+    "time_reduction_pct": 60,
+    "tool_costs_monthly": 380,
+    "build_time_hours": 60,
+    "build_time_cost_equivalent": 9000,
+    "payback_period_days": 8,
+    "annual_incremental_revenue": 1248000
+  },
+  "tool_stack": [
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Discovery processing, document generation, report drafting",
+      "cost": "$120/month"
+    },
+    {
+      "tool": "Typeform",
+      "use": "Client intake questionnaires",
+      "cost": "$59/month"
+    },
+    {
+      "tool": "OpenAI Whisper API",
+      "use": "Loom/voice memo transcription",
+      "cost": "$15/month at his volume"
+    },
+    {
+      "tool": "Loom",
+      "use": "Client process walkthroughs",
+      "cost": "$15/month (existing)"
+    },
+    {
+      "tool": "Notion",
+      "use": "Template library, deliverable storage, client portals",
+      "cost": "$16/month (existing)"
+    },
+    {
+      "tool": "Make (Integromat)",
+      "use": "Automation orchestration between tools",
+      "cost": "$99/month"
+    },
+    {
+      "tool": "Granola",
+      "use": "AI meeting notes for live client sessions",
+      "cost": "$18/month"
+    }
+  ],
+  "what_failed": "Attempt 1 — Automating discovery interviews themselves: David tried to replace live interviews with a longer questionnaire and AI analysis. Clients hated it. The questionnaire felt like homework. More importantly, 30% of his key insights came from things clients said off-script in conversation. He abandoned this and focused automation on everything except live sessions.\n\nAttempt 2 — Generic AI documents without templates: His first attempt at AI-generated process docs used a broad system prompt with minimal structure. The outputs looked professional but had no consistency. Clients who engaged him for multiple deliverables noticed the inconsistency in framework and terminology across documents.\n\nWhat worked: Building a proper template library first (took 2 weeks of manual work), then using Claude to populate the templates. The templates define the structure; Claude fills the content. Consistent output, scalable execution.",
+  "takeaway": "The solo consultant automation playbook isn't about replacing your expertise — it's about building infrastructure that lets you spend 100% of your time on the work only you can do. Most consultants are spending 40-60% of their time on work that has no leverage. That's the leverage gap AI closes."
+}
