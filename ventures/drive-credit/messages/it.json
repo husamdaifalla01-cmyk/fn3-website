@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "homeDecor": "Casa & Arredo",
+    "wellness": "Benessere",
+    "beauty": "Bellezza",
+    "kitchen": "Cucina",
+    "finance": "Finanze",
+    "articles": "Articoli",
+    "subscribe": "Iscriviti",
+    "menu": "Menu",
+    "close": "Chiudi"
+  },
+  "footer": {
+    "tagline": "La Bella Vita, Curata.",
+    "explore": "Esplora",
+    "legal": "Legale",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di utilizzo",
+    "affiliate_disclosure": "Mintbrooks partecipa al Programma di Affiliazione Amazon, un programma pubblicitario di affiliazione progettato per fornire ai siti un mezzo per guadagnare commissioni pubblicizzando e collegando prodotti Amazon.",
+    "copyright": "© {year} Mintbrooks. Tutti i diritti riservati."
+  },
+  "article": {
+    "read_time": "{minutes} min di lettura",
+    "share": "Condividi",
+    "buy_on_amazon": "Acquista su Amazon",
+    "check_price": "Controlla il prezzo",
+    "view_on_amazon": "Vedi su Amazon",
+    "back_to_articles": "Torna agli articoli",
+    "related": "Potrebbe piacerti anche",
+    "updated": "Aggiornato il {date}"
+  },
+  "newsletter": {
+    "heading": "Vivi bene, spendi con intelligenza.",
+    "subheading": "Scoperte settimanali, curate per la vita che stai costruendo.",
+    "placeholder": "Il tuo indirizzo email",
+    "cta": "Unisciti alla lista",
+    "privacy_note": "Niente spam. Cancellati in qualsiasi momento.",
+    "success": "Sei dentro! Controlla la tua casella di posta.",
+    "error": "Qualcosa è andato storto. Riprova."
+  },
+  "category": {
+    "home_decor": "Casa & Arredo",
+    "wellness": "Benessere",
+    "beauty": "Bellezza & Cura della Pelle",
+    "kitchen": "Cucina",
+    "finance": "Denaro & Credito",
+    "all": "Tutte le categorie"
+  },
+  "common": {
+    "back": "Indietro",
+    "loading": "Caricamento...",
+    "see_all": "Vedi tutto {category}",
+    "products_title": "Prodotti che amiamo",
+    "read_more": "Leggi di più",
+    "search_placeholder": "Cerca su Mintbrooks...",
+    "no_results": "Nessun risultato per \"{query}\"",
+    "language": "Lingua"
+  },
+  "quiz": {
+    "start": "Fai il quiz",
+    "heading": "Trova il tuo abbinamento perfetto"
+  }
+}

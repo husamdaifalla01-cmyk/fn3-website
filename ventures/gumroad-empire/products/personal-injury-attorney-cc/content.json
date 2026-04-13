@@ -1,0 +1,196 @@
+{
+  "title": "The Personal Injury Attorney AI Command Center",
+  "subtitle": "Close More Cases, Faster — The AI System Built for PI Law",
+  "tagline": "The exact prompts that turn potential clients into signed retainers",
+  "price": 147,
+  "how_to_use": "This Command Center is built specifically for plaintiff-side personal injury attorneys. The prompts are designed to accelerate the administrative, communication, and drafting work that consumes the hours you should be spending on strategy and client service. Important legal disclaimer that you know better than most: AI output is a starting point, not a finished work product. Every demand letter, client communication, and legal document must be reviewed, edited, and approved by a licensed attorney before use. These prompts dramatically reduce drafting time — the legal judgment still belongs to you. Start with Section 1 (Intake Conversion) to see immediate ROI in your first week. The highest-value section for most firms is Section 2 (Case Development) — run one demand letter through this system and you will immediately see the time savings. At $147, this pays for itself on the first hour you save.",
+  "sections": [
+    {
+      "title": "Section 1: Intake Conversion System",
+      "content": "In personal injury, intake is everything. A potential client who calls your office is often calling 3-5 firms. The firm that responds fastest, communicates most clearly, and makes the client feel most understood wins the case — regardless of whether it is the best firm. These prompts give you the communication infrastructure to win more intakes consistently.",
+      "subsections": [
+        {
+          "title": "Initial Consultation Follow-Up Sequences",
+          "content": "Speed and quality of follow-up are the two variables that most reliably predict intake conversion. Use these sequences immediately after every consultation.",
+          "type": "framework",
+          "items": [
+            "POST-CONSULTATION EMAIL — SAME DAY: 'Write a follow-up email to a personal injury consultation client [name] to send within 2 hours of our meeting. Their situation: [describe the case type — car accident / slip and fall / medical malpractice / dog bite / etc.]. They have not signed yet. I want to: (1) thank them for coming in and acknowledge that this is a difficult time, (2) briefly summarize what I heard about their case to show I was listening, (3) give them 2-3 specific reasons this case appears viable (without making specific outcome promises), (4) explain clearly what happens next if they retain us, and (5) invite any questions. Tone: warm, confident, client-first. Under 300 words. This is competing with 4 other emails they are getting from other firms tonight.'",
+            "POST-CONSULTATION TEXT — SAME DAY: 'Write a follow-up text message to send within 1 hour of an initial PI consultation with [name]. The case: [brief description]. The text should feel personal and prompt — not automated. Under 3 sentences. The goal is to stay top of mind while they are still making their decision. Do not pressure. Express genuine interest in helping them.'",
+            "DAY 2 FOLLOW-UP — ADDRESSING HESITATION: 'Write a Day 2 follow-up email for a PI prospect [name] who seemed interested during the consultation but expressed hesitation about [describe their hesitation — worried about the cost, not sure they have a strong case, nervous about the process, concerned about time commitment]. I want to address this specific hesitation directly and honestly. Do not oversell. If the hesitation is legitimate, acknowledge it. If it is based on a misunderstanding, correct it gently. Under 250 words.'",
+            "DAY 5 FOLLOW-UP — LAST CONTACT: 'Write a final follow-up email to a PI prospect [name] who consulted with me 5 days ago and has not signed or responded to my follow-up. This is my last outreach. I want to: (1) not be pushy or guilt-inducing, (2) remind them that statute of limitations and evidence preservation matter, (3) leave the door completely open for future contact, and (4) wish them well genuinely regardless of their decision. Short — under 200 words. Warm, not desperate.'",
+            "CONTINGENCY FEE EXPLANATION EMAIL: 'Write an email to a new PI intake prospect [name] explaining our contingency fee structure. Our fee: [X]% (or sliding scale if applicable). I want to explain: (1) what contingency means — they pay nothing unless we win, (2) exactly what comes out of the recovery and in what order (our fee, case expenses, medical liens, then their net), (3) an example using hypothetical numbers they can follow, (4) why this fee is fair given the risk we take on as a firm, and (5) what expenses they might be responsible for if the case is lost (if any). Under 300 words. Make them feel like this fee structure is on their side — because it is.'"
+          ]
+        },
+        {
+          "title": "Case Evaluation Explanation Prompts",
+          "content": "Clients rarely understand the factors that make a case strong or weak. When you explain your evaluation clearly, you build trust even when the news is not perfect.",
+          "type": "framework",
+          "items": [
+            "CASE STRENGTH EXPLANATION: 'Write an explanation to a PI prospect [name] of why their case appears viable. Case type: [auto accident / slip and fall / other]. Liability factors working in their favor: [list]. Damages: [describe — medical bills, lost wages, pain and suffering]. Any complicating factors: [list, or state \"none at this time\"]. The explanation should: (1) tell them clearly that I believe they have a case, (2) explain the key elements their case has (duty, breach, causation, damages) in plain language, (3) describe what the process would look like, and (4) set realistic expectations about timeline and outcome range — without promising specific dollar amounts. Under 300 words.',",
+            "WEAK CASE HONEST ASSESSMENT: 'Write an email to a PI prospect [name] explaining why I cannot take their case after evaluation. The issues: [describe — liability is unclear / damages are minimal / statute may have run / comparative negligence issues]. I need to: (1) be direct and compassionate — not lead them on, (2) explain specifically why the case presents challenges without being dismissive of their experience, (3) give them options if any exist (consult another firm, handle it themselves, settle directly with the insurer), and (4) wish them well genuinely. This person deserves honesty, not a false hope rejection. Under 250 words.'",
+            "COMPETING FIRM COMPARISON SCRIPT: 'Write a script for a prospect [name] who says they are considering us and one other law firm: [competitor name if known, or generic]. I do not want to put down the competitor. I want to: (1) acknowledge that it is smart to consult multiple firms, (2) outline what makes our firm specifically qualified for their type of case, (3) mention our specific track record or approach (I will insert actual numbers), (4) describe what the client experience will be like working with us (communication standards, access to the attorney, etc.), and (5) invite them to ask any remaining questions. Under 300 words.'"
+          ]
+        },
+        {
+          "title": "Retainer Agreement Explanation Scripts",
+          "content": "Clients who understand what they are signing are better clients. These prompts make the retainer conversation smooth.",
+          "type": "framework",
+          "items": [
+            "RETAINER WALKTHROUGH EMAIL: 'Write an email walking [new client name] through our retainer agreement before they sign. The key provisions I want to explain: (1) the contingency fee structure, (2) the client's obligation to cooperate and attend required appointments, (3) our authority to settle (or not) on their behalf, (4) the lien management process (Medicare/Medicaid, health insurance, medical providers), and (5) what happens if they want to terminate the representation. The tone should demystify the legal document, not make it scarier. Short explanations of each provision in plain language. Under 350 words.'",
+            "POST-SIGNING WELCOME AND NEXT STEPS: 'Write a welcome message to [new client name] who just signed their retainer agreement for their [case type] case. The message should: (1) make them feel that choosing us was the right decision, (2) tell them exactly what happens in the next 30 days in their case, (3) tell them what we need from them (medical records authorization, recorded statement prohibition, social media warning), (4) give them my direct contact information and when/how to reach me, and (5) set the tone for a professional, communicative relationship. Under 300 words. This is the start of a relationship — make it feel like one.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 2: Case Development Workflows",
+      "content": "Case development — from building the damages picture to drafting and negotiating the demand — is where the real work of PI practice happens. These prompts do not replace your legal judgment. They accelerate the mechanical work: organizing facts, drafting narrative, extracting information from records, and structuring arguments. A demand letter that took you 4 hours can take 45 minutes. The quality will be the same or better because you are editing, not writing from scratch.",
+      "subsections": [
+        {
+          "title": "Demand Letter Drafting Prompts",
+          "content": "The demand letter is your most powerful negotiation tool. These prompts help you produce thorough, compelling demands efficiently.",
+          "type": "framework",
+          "items": [
+            "COMPLETE DEMAND LETTER — AUTO ACCIDENT: 'Draft a personal injury demand letter for an auto accident case. Client: [name], Date of loss: [date], Location: [city/state], Liability summary: [brief description of how the accident occurred and why the defendant is at fault], Medical treatment summary: [describe treatment — ER, diagnosis, specialist visits, therapy, surgeries, current status], Medical bills total: $[amount], Lost wages: $[amount and calculation basis], Future treatment: [if any — describe], Pain and suffering summary: [describe the impact on client's life, activities, relationships]. Structure the demand letter with: (1) introduction and summary, (2) liability narrative, (3) injuries and treatment section, (4) damages itemization, (5) pain and suffering narrative, (6) demand amount and response deadline. The tone should be factual and thorough — not inflammatory. Note: this is a draft for attorney review before sending. I will verify all medical and legal accuracy.',",
+            "PAIN AND SUFFERING NARRATIVE: 'Write the pain and suffering narrative section of a demand letter for [client name]. Their story: [describe the impact of their injuries on their daily life — activities they can no longer do, how sleep has been affected, impact on family relationships, work limitations, emotional impact, any permanent changes to their life]. The narrative should be specific, human, and factual — not melodramatic. Use their own words where I provide them. This section should make the adjuster see a real person, not just a file. 400-600 words.'",
+            "MEDICAL SUMMARY FOR DEMAND: 'Summarize the following medical records for inclusion in a demand letter. The summary should include: diagnosis, treatment timeline, all treating providers and the dates of treatment, total bills (I will provide), current status, and any permanent impairment noted. Organize chronologically. Write in clear, plain language that explains medical terms as needed. Here are the records: [paste or describe the key records]. Note: this summary will be reviewed by the attorney for accuracy before use in any legal document.'",
+            "DEMAND FOR SURGICAL CASE: 'Draft a demand letter for a personal injury case involving surgery. Client: [name], Accident: [describe], Surgery type: [describe], Surgeon: [name], Date of surgery: [date], Hospital: [name], Pre-surgical treatment: [describe], Post-surgical recovery: [current status], Future treatment or restrictions: [describe], Total medical bills: $[amount], Lost wages: $[amount]. For a surgical case, the demand letter should: (1) establish clear causation between the accident and the need for surgery, (2) detail the severity of the surgical intervention, (3) describe the recovery experience specifically, (4) identify any permanent limitations, and (5) present a damages calculation that accounts for future medical needs. Draft for attorney review.'",
+            "LOST WAGES CALCULATION AND NARRATIVE: 'Help me write the lost wages section of a demand letter for [client name]. Employment information: [employer, job title, hourly rate or salary, hours/days missed, documentation available (pay stubs, employer letter)]. If self-employed: [describe income documentation and calculation method]. Calculate the total lost wages and write a clear, well-supported narrative explaining the basis for the calculation. If future lost wages or lost earning capacity is an issue, note that a vocational expert report will be referenced. Draft for attorney review.'"
+          ]
+        },
+        {
+          "title": "Medical Records Summary Prompts",
+          "content": "Medical records review is one of the most time-consuming activities in a PI practice. These prompts help you extract the key facts fast.",
+          "type": "framework",
+          "items": [
+            "RECORDS REVIEW EXTRACTION PROMPT: 'I am reviewing medical records for a PI case. I will describe or paste portions of the records. Extract and organize: (1) all diagnoses mentioned, (2) all treatment received and dates, (3) any statements about causation (\"injury consistent with\" or \"patient reports\" type language), (4) any pre-existing conditions noted, (5) any references to objective findings (imaging, lab results, physical examination findings), and (6) any gaps in treatment or inconsistencies that an insurance adjuster might raise. Flag any records that are particularly strong or weak for the claim. Note: this is an organizational tool only — attorney must review all records for legal assessment.'",
+            "PRE-EXISTING CONDITION RESPONSE: 'My client [name] has pre-existing conditions ([describe — prior back injury, prior accident, chronic condition]) that the insurance adjuster is using to argue they are responsible for less of my client's current damages. Help me draft the section of the demand letter that addresses the pre-existing condition issue. The legal theory: the \"eggshell plaintiff\" doctrine / aggravation of pre-existing condition. The facts: [describe how the accident aggravated the condition and how you will demonstrate this medically]. The medical support we have: [describe]. Under 400 words. For attorney review.'",
+            "GAP IN TREATMENT EXPLANATION: 'My client [name] had a [X]-week/month gap in medical treatment after their accident. The insurance adjuster will argue this shows they were not seriously injured. Here are the actual reasons for the gap: [describe — financial issues, transportation, caretaking obligations, gap between referrals, etc.]. Write the section of the demand letter that explains and contextualizes the treatment gap. Be honest and specific — do not gloss over it. A credible explanation is better than no explanation. Under 200 words. For attorney review.'"
+          ]
+        },
+        {
+          "title": "Deposition Preparation and Settlement Prompts",
+          "content": "Preparation and negotiation tools for the litigation phase.",
+          "type": "framework",
+          "items": [
+            "CLIENT DEPOSITION PREPARATION GUIDE: 'Create a client deposition preparation guide for [client name] who will be deposed on [date] in their [case type] case. The guide should cover: (1) what a deposition is and how it works, (2) the ground rules (answer only what is asked, it is okay to say you don't know/don't remember, ask for clarification), (3) the 5 areas they will almost certainly be asked about in their specific case (I will add the case-specific areas), (4) common tricks deponents fall into and how to avoid them, (5) how to handle aggressive questioning, and (6) what to wear and how to present themselves. Write this as a readable guide they will take home and study. Under 600 words.'",
+            "SETTLEMENT EVALUATION MEMO: 'Help me draft a settlement evaluation memo for my client [name] on an offer of $[amount]. My case assessment: [describe your view of liability, damages, and range of outcomes at trial]. The offer represents [describe as a percentage of your damages calculation and how it compares to your demand]. Write a memo structured as: (1) summary of the offer, (2) our assessed damages range, (3) litigation risks if we reject and proceed to trial, (4) strengths in our favor, (5) my recommendation and reasoning. This memo will help the client make an informed decision. For attorney review before client delivery.'",
+            "SETTLEMENT NEGOTIATION COUNTER STRATEGY: 'The insurance adjuster offered $[amount] on a case where we demanded $[demand amount]. Their stated reasons for the low offer: [list their arguments]. Help me structure a counter-response that: (1) addresses each of their arguments specifically with our best counter, (2) identifies the weakest points in their position, (3) proposes a realistic counter amount with justification, and (4) sets the tone for a productive negotiation rather than an adversarial one. My counter will be $[amount]. Format as talking points I can use in a call with the adjuster.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 3: Client Communication System",
+      "content": "PI clients are anxious, often in pain, often financially stressed, and being handled by an insurance system that is not designed for their benefit. The attorney who communicates proactively, clearly, and compassionately retains clients, gets better cooperation, and generates more referrals. These prompts give you a complete client communication system for every stage of the case.",
+      "subsections": [
+        {
+          "title": "Treatment Compliance Coaching Messages",
+          "content": "Clients who do not follow their treatment plan undermine their own cases. These prompts help you address compliance compassionately and clearly.",
+          "type": "framework",
+          "items": [
+            "TREATMENT COMPLIANCE REMINDER: 'Write a message to client [name] who has been missing medical appointments for their [injury type] treatment. I need to explain: (1) why consistent treatment is critical for their health, (2) how gaps in treatment affect their case value (insurance adjusters will argue the gaps mean they were not seriously injured), (3) what I need them to do — schedule the next appointment and tell me the date, and (4) that I am here to help remove any barriers (transportation, cost, schedule). The tone must be caring and practical, not threatening or lecturing. Under 250 words.'",
+            "SOCIAL MEDIA WARNING: 'Write a message to new client [name] warning them about social media during their PI case. The message should: (1) explain that the insurance company can and will review their social media profiles, (2) describe the specific types of posts that can hurt their case (photos of activities, posts about feeling well, anything that contradicts their claimed limitations), (3) give them clear, specific instructions (do not post about the case, do not post photos of physical activity, consider making profiles private), and (4) explain that this is standard legal advice for every client, not a judgment. Under 200 words. Tone: protective advisor, not scolding.'"
+          ]
+        },
+        {
+          "title": "Case Status Update Templates",
+          "content": "Regular case updates prevent anxious phone calls and build confidence in your representation.",
+          "type": "framework",
+          "items": [
+            "MONTHLY STATUS UPDATE: 'Write a monthly case status update for client [name] on their [case type] case. Current status: [describe where the case is — still in treatment / demand submitted / negotiating / filed suit / in discovery / scheduled for trial]. What happened this month: [describe the activity]. What happens next: [describe the next 30-60 days]. Key dates to know: [list any]. I want to: (1) be completely honest about where we stand, (2) never overpromise timeline or outcome, (3) give them something substantive — not a non-answer, and (4) tell them what, if anything, I need from them. Under 250 words. No legal jargon.'",
+            "DEMAND SUBMITTED NOTIFICATION: 'Write a message to client [name] letting them know their demand letter has been submitted to [insurance company] for $[demand amount]. I want to explain: (1) what the demand letter contains (summary of their damages), (2) what happens now (the adjuster reviews it, they may ask for more documentation, they will respond with an offer or denial), (3) the typical timeline for an initial response, (4) what a realistic outcome range looks like (without promising specifics), and (5) that I will update them the moment I hear anything. Under 250 words. Make them feel like this is a confident step forward.'",
+            "SETTLEMENT OFFER COMMUNICATION: 'Write a message to client [name] communicating a settlement offer of $[amount] from [insurance company]. My assessment of the offer: [your professional view]. I need to: (1) present the offer completely and fairly — not shade it to steer their decision, (2) explain what the offer represents relative to our demand and our damages, (3) walk them through the net calculation (offer minus our fee, expenses, and liens = their take-home), (4) explain their options (accept, counter, reject and proceed), and (5) recommend a decision discussion call. Under 300 words. This is their money and their decision — my job is to inform, not decide for them.'",
+            "LITIGATION DECISION EXPLANATION: 'Write a message to client [name] explaining my recommendation to file suit rather than continue negotiating on their case. The situation: [describe why negotiation has stalled]. My recommendation: file in [jurisdiction] and pursue the case through litigation. I want to explain: (1) why I believe litigation is the right path, (2) what the litigation process looks like for them practically (timeline, their involvement, what they will need to do), (3) the potential upside and downside of this path, and (4) that this decision is ultimately theirs. Tone: confident recommendation, honest risk disclosure. Under 350 words.'"
+          ]
+        },
+        {
+          "title": "Lien Management Explanation Prompts",
+          "content": "Liens are the most confusing part of PI for clients. Clear explanations prevent post-settlement disputes and disappointment.",
+          "type": "framework",
+          "items": [
+            "MEDICAL LIEN EXPLANATION: 'Write an explanation for client [name] about the medical liens on their case. Lien holders: [list — health insurance subrogation, Medicare, Medicaid, treating providers, etc.]. Total liens: approximately $[amount]. I want to explain: (1) what a lien is in plain language, (2) why these entities have a right to be repaid from the settlement, (3) what I can do to negotiate the liens down, (4) how the final distribution will work (settlement minus fees and expenses minus liens equals their net), and (5) that we will work to maximize their net recovery. Under 300 words. This is usually the most frustrating part of their settlement — prepare them for it honestly.'",
+            "MEDICARE LIEN NEGOTIATION EXPLANATION: 'Write an explanation to client [name] about a Medicare conditional payment lien of $[amount] on their case. The settlement is $[amount]. I want to explain: (1) why Medicare has a right to reimbursement, (2) the conditional payment process and our right to dispute it, (3) the proportionate share reduction and our arguments for reducing the lien, (4) the timeline for resolution, and (5) whether they need to take any action. Under 250 words. Medicare liens are complicated — make this feel manageable.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 4: Marketing and Referral System",
+      "content": "PI firms grow primarily through referrals — from past clients, from other attorneys, and from medical providers. A systematic referral and review program multiplies the cases you get without adding marketing spend. These prompts give you a complete marketing and referral infrastructure.",
+      "subsections": [
+        {
+          "title": "Google Review Request Sequences",
+          "content": "Google reviews are the most powerful marketing asset a PI firm has. Most firms under-invest in getting them.",
+          "type": "framework",
+          "items": [
+            "POST-SETTLEMENT REVIEW REQUEST: 'Write a message to former client [name] whose case settled [X weeks ago] requesting a Google review. I want to: (1) celebrate the resolution of their case first, (2) ask for the review naturally and with genuine appreciation, (3) make it easy — provide the direct Google review link, (4) suggest 3-4 things they might mention so they are not staring at a blank page (without scripting their words), and (5) thank them for trusting us with their case. The ask should feel personal — not like an automated CRM blast. Under 200 words.'",
+            "REVIEW FOLLOW-UP (NO RESPONSE): 'Write a gentle follow-up to former client [name] who has not left a review after my first request 2 weeks ago. I want to make one more ask without being annoying. Reference the first request, express understanding that they are busy, make the link available again, and keep it brief. Under 75 words. No guilt trip.'",
+            "REFERRAL THANK YOU (CLIENT): 'Write a message to former client [name] who referred [new client name] to our firm. The referral is at [what stage — just consulted / signed / settled]. Express: (1) genuine appreciation for their trust in referring someone to us, (2) that we will take excellent care of the person they sent us, and (3) if appropriate and legal in your jurisdiction, mention any referral acknowledgment. Keep it warm and personal. Under 150 words.'"
+          ]
+        },
+        {
+          "title": "Attorney and Physician Referral Relationships",
+          "content": "Co-counsel and professional referral relationships are the highest-value growth channel for most PI firms.",
+          "type": "framework",
+          "items": [
+            "REFERRING ATTORNEY CULTIVATION EMAIL: 'Write an email to a [family law / criminal defense / estate planning / business] attorney I want to develop as a referral source for PI cases. Their practice: [describe]. My firm's PI practice: [describe]. The connection: [how we met or know each other]. I want to: (1) acknowledge the informal referral relationship that may already exist, (2) formalize the understanding of what types of cases I handle and what I do not, (3) explain what happens when they send a client to me (I take care of the client, communicate proactively, protect the referring attorney relationship), and (4) invite a lunch or call to get to know each other better. Under 200 words. Warm and colleague-to-colleague.'",
+            "PHYSICIAN REFERRAL RELATIONSHIP: 'Write an educational letter to send to [orthopedic surgeons / chiropractors / pain management physicians] in my area introducing my firm and explaining how we work with treating physicians. Key points: (1) we are plaintiff-side PI attorneys, (2) we work to ensure their patients get the compensation they need for medical care, (3) we handle all case aspects so they can focus on treatment, (4) we work on liens and billing questions collaboratively, and (5) patients we represent generally have a dedicated attorney managing their case. This is an informational introduction — not a solicitation for letters of protection, which I will handle separately if allowed in my jurisdiction. Under 300 words.'"
+          ]
+        },
+        {
+          "title": "Social Media and Content Marketing",
+          "content": "Educational, trust-building content that generates inbound inquiries without looking like an ambulance chaser.",
+          "type": "framework",
+          "items": [
+            "EDUCATIONAL SOCIAL POST — WHAT TO DO AFTER AN ACCIDENT: 'Write a social media post (Facebook and Instagram) educating the public on what to do in the immediate aftermath of a car accident. Tone: helpful community member, not aggressive law firm. Content: the 5 most important steps (document the scene, seek medical attention, do not admit fault, do not give recorded statements, consult an attorney). Under 200 words. Include a CTA that invites questions — not a hard sell. Include relevant hashtags.'",
+            "FAQ CONTENT SERIES: 'Create a 10-post FAQ social media series answering the questions PI prospects ask most. For each question, write: the question as a post title, a clear 2-3 paragraph answer, and a soft CTA. Questions to cover: (1) How does a contingency fee work? (2) How long do I have to file a claim? (3) Do I need a lawyer if the insurance company seems cooperative? (4) What is my case worth? (5) How long will my case take? (6) What if I was partly at fault? (7) Should I give a recorded statement to the insurance company? (8) What happens to my medical bills during the case? (9) What if the at-fault driver has no insurance? (10) Do I have to go to court? Each post should be educational, accurate, and make us look like the expert — not the predator.'",
+            "CASE RESULT ANNOUNCEMENT (ETHICALLY COMPLIANT): 'Write a social media post announcing a case result for our firm. We obtained [result — settlement/verdict] of $[amount or range — or \"significant compensation\" if you prefer not to disclose]. Case type: [car accident / slip and fall / etc.]. Important: craft this in a way that (1) complies with your state bar rules on advertising results (do not imply this result is typical), (2) focuses on the justice obtained for the client rather than the money, (3) humanizes the client story without identifying them, and (4) includes the required disclaimer that results vary and past results do not guarantee future outcomes. Under 150 words.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 5: Insurance Adjuster Negotiation",
+      "content": "Insurance adjusters are professional negotiators who handle hundreds of claims a year. Most injured people have never negotiated anything significant. Your job is to neutralize that experience advantage. These prompts give you the communication tools to negotiate confidently and strategically.",
+      "subsections": [
+        {
+          "title": "Initial Demand Response Scripts",
+          "content": "The adjuster's first response sets the tone for the entire negotiation. Be prepared.",
+          "type": "framework",
+          "items": [
+            "RESPONDING TO A LOWBALL FIRST OFFER: 'The insurance adjuster for [claim] responded to our demand of $[amount] with an offer of $[amount]. Their stated rationale: [describe their arguments — comparative negligence / pre-existing conditions / treatment was excessive / they dispute certain bills]. Help me draft a counter-response letter that: (1) acknowledges the offer professionally, (2) addresses each of their arguments specifically and directly, (3) reaffirms our damages calculation with supporting references to the records, (4) makes a counter-demand of $[amount] with justification, and (5) sets a response deadline. Tone: firm, professional, not adversarial. For attorney review.'",
+            "COVERAGE DISPUTE ESCALATION: 'The insurance company is disputing coverage for my client [name]'s claim on the basis of [describe their coverage argument]. I need to draft a letter to the adjuster's supervisor and/or a reservation of rights response that: (1) refutes their coverage denial with the specific policy language and case law supporting coverage, (2) demands that they immediately provide the full policy for review, (3) puts them on notice that we are documenting this dispute for a potential bad faith claim, and (4) demands a written response within [X] days. For attorney review before sending.'",
+            "POLICY LIMIT DEMAND LETTER: 'Draft a policy limits demand letter for [client name]'s claim against [defendant] insured by [insurance company]. Policy limit: $[amount if known] or [I believe the limit is around $X based on registration information]. My client's damages: [total — exceeds the policy limit]. The demand should: (1) clearly present damages that exceed the policy limits, (2) demand the policy limits be tendered within [30/15] days, (3) put the insurance company on notice that failure to tender limits when the claim clearly exceeds them may constitute bad faith, (4) protect my client's ability to pursue the insured personally if appropriate, and (5) be formatted as a formal demand with a clear acceptance deadline. For attorney review.'",
+            "BAD FAITH DOCUMENTATION: 'Help me draft documentation for a potential bad faith claim against [insurance company] on behalf of [client name]. The conduct I am documenting: [describe — unreasonable delay / failure to investigate / low-ball offers despite clear liability / failure to tender policy limits / etc.]. The documentation should: (1) create a chronological record of the insurance company's handling of the claim, (2) identify the specific acts that constitute bad faith under [state] law, (3) reference any applicable statutory standards for claims handling, and (4) lay the groundwork for a bad faith claim if the underlying case proceeds to litigation. For attorney review.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 6: Settlement and Closing",
+      "content": "Closing a case well is as important as opening it well. A client who receives their settlement feeling informed, respected, and fairly treated refers people. A client who is blindsided by liens, confused by the math, or disappointed by the net amount — even if it was fair — does not refer people. These prompts build an excellent client experience at the finish line.",
+      "subsections": [
+        {
+          "title": "Settlement Explanation and Distribution Templates",
+          "content": "Make the final settlement experience transparent and celebratory.",
+          "type": "framework",
+          "items": [
+            "SETTLEMENT AGREEMENT REVIEW EMAIL: 'Write an email to client [name] to accompany a settlement agreement for their review and signature. Settlement amount: $[amount]. I want to explain: (1) what the agreement says in plain terms, (2) the key provisions they should understand before signing (release of all claims, confidentiality if applicable, no admission of liability), (3) what they are giving up by settling (the right to pursue more compensation later), and (4) that they should contact me with any questions before signing. Tone: clear, thorough, no rushing. This is a major financial and legal decision. Under 350 words.'",
+            "FINAL DISTRIBUTION EXPLANATION: 'Write a closing statement explanation for client [name]. Gross settlement: $[amount]. Attorney fee: $[amount] ([X]%). Case expenses: $[amount]. Medical liens negotiated to: $[amount] (original: $[amount]). Other deductions: $[amount if any]. NET TO CLIENT: $[amount]. I want to walk them through this calculation in a way that: (1) makes the math transparent and understandable, (2) highlights the lien negotiations as a win (we reduced their liens by $[amount]), (3) clearly tells them the exact net amount they will receive, (4) explains the check disbursement process and timeline, and (5) feels like a celebration — they went through something hard and received compensation for it. Under 300 words.'",
+            "POST-SETTLEMENT FOLLOW-UP: 'Write a post-settlement follow-up message to former client [name] to send 2-4 weeks after their case closed. I want to: (1) check in on how they are doing medically, (2) make sure they received everything they needed from us, (3) give them my contact information for any future needs, (4) ask if they know anyone who might need our help (referral request, soft), and (5) express genuine pride in the outcome we achieved together. Under 200 words. This is relationship maintenance — one of the most valuable activities in PI practice.'"
+          ]
+        },
+        {
+          "title": "Post-Case Review Generation",
+          "content": "Every closed case is a data point. These prompts help you extract lessons and generate reviews.",
+          "type": "framework",
+          "items": [
+            "CASE DEBRIEF PROMPT: 'Help me conduct a case debrief for [client name]'s case, which closed with a [settlement/verdict] of $[amount]. I will provide case facts and you will help me identify: (1) what went well in case development and negotiation, (2) what I would do differently in intake, investigation, or negotiation, (3) the key turning points in the case, (4) any documentation or evidence gaps that affected the outcome, and (5) lessons to apply to future cases of this type. This is an internal learning tool only. Case facts: [describe].'",
+            "CLIENT SATISFACTION SURVEY: 'Create a 5-question client satisfaction survey for a PI client whose case just settled. The questions should: (1) be easy to answer (scale of 1-5 or short answer), (2) ask about communication quality, (3) ask about outcome satisfaction, (4) ask what we could have done better, and (5) ask if they would refer friends or family to our firm. Keep it short — 5 questions maximum. Also write the email that delivers the survey link to the client. Total reading time under 1 minute.'"
+          ]
+        }
+      ]
+    }
+  ]
+}

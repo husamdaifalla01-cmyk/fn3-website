@@ -3,21 +3,29 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-
-const NAV_LINKS: { label: string; href: string }[] = [
-  { label: 'Home',        href: '/' },
-  { label: 'Home & Decor', href: '/home-decor' },
-  { label: 'Wellness',    href: '/wellness' },
-  { label: 'Beauty',      href: '/beauty' },
-  { label: 'Kitchen',     href: '/kitchen' },
-  { label: 'Finance',     href: '/finance' },
-  { label: 'Articles',    href: '/articles' },
-]
+import { useTranslations, useLocale } from 'next-intl'
+import LocaleSelector from '@/components/LocaleSelector'
 
 export default function LifestyleNav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const pathname = usePathname()
+  const t = useTranslations('nav')
+  const locale = useLocale()
+
+  // Build locale-aware href: English = /path, others = /fr/path
+  const localePath = (path: string) =>
+    locale === 'en' ? path : `/${locale}${path}`
+
+  const NAV_LINKS = [
+    { label: t('home'),      href: localePath('/') },
+    { label: t('homeDecor'), href: localePath('/home-decor') },
+    { label: t('wellness'),  href: localePath('/wellness') },
+    { label: t('beauty'),    href: localePath('/beauty') },
+    { label: t('kitchen'),   href: localePath('/kitchen') },
+    { label: t('finance'),   href: '/finance' }, // always English
+    { label: t('articles'),  href: localePath('/articles') },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -26,7 +34,7 @@ export default function LifestyleNav() {
   }, [])
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/'
+    if (href === '/' || href === `/${locale}`) return pathname === '/' || pathname === `/${locale}`
     return pathname === href || pathname.startsWith(href + '/')
   }
 
@@ -50,7 +58,7 @@ export default function LifestyleNav() {
     >
       {/* Wordmark */}
       <Link
-        href="/"
+        href={localePath('/')}
         style={{
           fontFamily: '"Playfair Display", Georgia, serif',
           fontSize: '22px',
@@ -65,11 +73,7 @@ export default function LifestyleNav() {
 
       {/* Desktop nav */}
       <div
-        style={{
-          display: 'flex',
-          gap: '28px',
-          alignItems: 'center',
-        }}
+        style={{ display: 'flex', gap: '28px', alignItems: 'center' }}
         className="ls-desktop-nav"
       >
         {NAV_LINKS.map((link) => {
@@ -86,59 +90,41 @@ export default function LifestyleNav() {
                   color: active ? '#1D3A2F' : '#1A1714',
                   textDecoration: 'none',
                   opacity: active ? 1 : 0.7,
-                  transition: 'opacity 0.2s, color 0.2s, font-weight 0.2s',
+                  transition: 'opacity 0.2s, color 0.2s',
                 }}
-                onMouseEnter={(e) => {
-                  if (!active) e.currentTarget.style.opacity = '1'
-                }}
-                onMouseLeave={(e) => {
-                  if (!active) e.currentTarget.style.opacity = '0.7'
-                }}
+                onMouseEnter={(e) => { if (!active) e.currentTarget.style.opacity = '1' }}
+                onMouseLeave={(e) => { if (!active) e.currentTarget.style.opacity = '0.7' }}
               >
                 {link.label}
               </Link>
               {active && (
-                <span
-                  style={{
-                    display: 'block',
-                    width: '4px',
-                    height: '4px',
-                    borderRadius: '50%',
-                    background: '#B8955A',
-                    position: 'absolute',
-                    bottom: '-8px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                  }}
-                />
+                <span style={{
+                  display: 'block', width: '4px', height: '4px',
+                  borderRadius: '50%', background: '#B8955A',
+                  position: 'absolute', bottom: '-8px',
+                  left: '50%', transform: 'translateX(-50%)',
+                }} />
               )}
             </div>
           )
         })}
+
+        {/* Language selector */}
+        <LocaleSelector />
+
+        {/* Subscribe pill */}
         <Link
-          href="/#newsletter"
+          href={localePath('/#newsletter')}
           style={{
-            fontSize: '11px',
-            fontWeight: 700,
-            letterSpacing: '0.12em',
-            textTransform: 'uppercase',
-            color: '#1D3A2F',
-            textDecoration: 'none',
-            border: '1.5px solid #1D3A2F',
-            padding: '8px 20px',
-            borderRadius: '100px',
-            transition: 'all 0.2s',
+            fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em',
+            textTransform: 'uppercase', color: '#1D3A2F', textDecoration: 'none',
+            border: '1.5px solid #1D3A2F', padding: '8px 20px',
+            borderRadius: '100px', transition: 'all 0.2s',
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = '#1D3A2F'
-            e.currentTarget.style.color = '#FDFAF6'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'transparent'
-            e.currentTarget.style.color = '#1D3A2F'
-          }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = '#1D3A2F'; e.currentTarget.style.color = '#FDFAF6' }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#1D3A2F' }}
         >
-          Subscribe
+          {t('subscribe')}
         </Link>
       </div>
 
@@ -146,35 +132,20 @@ export default function LifestyleNav() {
       <button
         onClick={() => setMenuOpen(!menuOpen)}
         className="ls-mobile-menu-btn"
-        style={{
-          background: 'none',
-          border: 'none',
-          cursor: 'pointer',
-          padding: '4px',
-          display: 'none',
-        }}
-        aria-label="Toggle menu"
+        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', display: 'none' }}
+        aria-label={menuOpen ? t('close') : t('menu')}
       >
         <div style={{ width: 24, height: 2, background: '#1A1714', marginBottom: 6, transition: 'all 0.3s', transform: menuOpen ? 'rotate(45deg) translateY(8px)' : 'none' }} />
         <div style={{ width: 24, height: 2, background: '#1A1714', marginBottom: 6, opacity: menuOpen ? 0 : 1, transition: 'all 0.3s' }} />
         <div style={{ width: 24, height: 2, background: '#1A1714', transition: 'all 0.3s', transform: menuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
       </button>
 
-      {/* Mobile menu */}
+      {/* Mobile full-screen menu */}
       {menuOpen && (
         <div style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: '#FDFAF6',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '32px',
-          zIndex: 99,
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          background: '#FDFAF6', display: 'flex', flexDirection: 'column',
+          alignItems: 'center', justifyContent: 'center', gap: '32px', zIndex: 99,
         }}>
           {NAV_LINKS.map((link) => {
             const active = isActive(link.href)
@@ -185,8 +156,7 @@ export default function LifestyleNav() {
                 onClick={() => setMenuOpen(false)}
                 style={{
                   fontFamily: '"Playfair Display", Georgia, serif',
-                  fontSize: '32px',
-                  fontWeight: 700,
+                  fontSize: '32px', fontWeight: 700,
                   color: active ? '#1D3A2F' : '#1A1714',
                   textDecoration: active ? 'underline' : 'none',
                   textDecorationColor: '#B8955A',
@@ -197,6 +167,10 @@ export default function LifestyleNav() {
               </Link>
             )
           })}
+          {/* Language selector in mobile menu */}
+          <div style={{ marginTop: '8px' }}>
+            <LocaleSelector />
+          </div>
         </div>
       )}
 

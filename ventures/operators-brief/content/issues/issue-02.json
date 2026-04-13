@@ -1,0 +1,59 @@
+{
+  "number": 2,
+  "title": "The e-commerce brand that replaced their entire customer support team with 3 AI agents (and what happened to the humans)",
+  "date": "March 2026",
+  "summary": "A 7-figure DTC brand moved from 11 support staff to 3 AI agents plus one human escalation manager. 94% of tickets are resolved without human intervention. Monthly support cost dropped from $38K to $16K. CSAT held at 4.7. The 10 support reps were reassigned — none were laid off.",
+  "case_study": "Thornfield Home Goods (name changed) sells premium kitchen products direct-to-consumer. $4.2M annual revenue, 340 orders/day average. Their support operation was a mess — not because of poor management, but because of volume math.\n\nAt peak, they were getting 280 support tickets per day. 73% of those tickets were the same 11 questions: order status, return requests, product compatibility questions, shipping delays, and promo code issues. They had 11 support staff handling this — 8 full-time at $18/hr, 3 part-time. Fully loaded including benefits and management overhead: $38K/month.\n\nThe CEO tried Zendesk macros. Reduced handle time but didn't reduce headcount pressure. Tried outsourcing to a BPO in the Philippines. Quality degraded and return rate increased — they brought it back in-house at a loss. The problem wasn't the people. It was that 73% of the work required no judgment at all.\n\nWhat they built: Three AI agents using Claude, each with a specific domain:\n\n— Agent 1 (Order Intelligence): Connected to Shopify and ShipBob APIs. Handles all order status, tracking, and shipping delay tickets autonomously. Pulls live data, writes natural-language responses. Closes 140 tickets/day without human touch.\n\n— Agent 2 (Returns & Exchanges): Connected to their returns portal (Loop Returns). Handles all return authorizations, exchange requests, and refund status questions. Applies their policy rules automatically. Escalates edge cases (damaged goods, wrong item, >$200 orders) to the human manager.\n\n— Agent 3 (Product & Compatibility): Trained on product catalog, compatibility guides, and care instructions. Answers product questions. Flags anything requiring a custom recommendation.\n\nAll three route to a human escalation queue for: orders over $200, repeat contacts (same customer, same issue within 7 days), and anything containing words like 'lawyer,' 'BBB,' or 'credit card dispute.'\n\nThe 10 support reps: 4 were redeployed to customer success (proactive outreach to high-LTV customers). 4 moved to operations (fulfillment QC, supplier communication). 2 chose to leave and were replaced with one escalation manager at $52K salary.",
+  "implementation_guide": "Step 1 — Ticket taxonomy audit. Pull your last 90 days of tickets. Categorize every ticket type. Calculate the percentage that are 'answerable without judgment' — order status, policy questions, FAQs. If that number is above 60%, you have an automation opportunity.\n\nStep 2 — Build your escalation rules FIRST. Before you write a single prompt, define every scenario that requires a human. Write these as explicit rules. This is your safety net.\n\nStep 3 — Connect your data sources. Your AI agents need live data access, not static knowledge. Order status agents need API access to your OMS (Shopify, WooCommerce, etc). Return agents need access to your returns platform.\n\nStep 4 — Build and test Agent 1 in shadow mode. Run it alongside your human team for 2 weeks. The agent responds in a staging environment; a human sends the actual response. Compare quality. Measure agreement rate.\n\nStep 5 — Deploy Agent 1 live with human review of every response for Week 1. Then spot-check 10% going forward. Graduate to full autonomy only when 95%+ of reviewed responses are approved unchanged.\n\nStep 6 — Repeat for Agents 2 and 3. Don't parallelize deployment — sequential rollout lets you catch systemic issues.\n\nStep 7 — Set CSAT measurement on AI-handled tickets vs. human-handled tickets. Monitor weekly for the first 60 days. Be ready to pull back if CSAT drops more than 0.3 points.",
+  "numbers": {
+    "before_daily_tickets": 280,
+    "after_ai_resolved_pct": 94,
+    "after_ai_resolved_daily": 263,
+    "before_support_staff": 11,
+    "after_support_staff": 1,
+    "before_monthly_cost": 38000,
+    "after_monthly_cost": 16000,
+    "monthly_savings": 22000,
+    "implementation_cost": 18500,
+    "ai_agent_monthly_cost": 2200,
+    "csat_before": 4.5,
+    "csat_after": 4.7,
+    "payback_period_days": 25,
+    "annual_savings": 264000,
+    "return_rate_change": "-8% (improved: AI consistent policy application)"
+  },
+  "tool_stack": [
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "All three agent response generation",
+      "cost": "$1,800/month at ~280 tickets/day"
+    },
+    {
+      "tool": "Intercom",
+      "use": "Ticket routing, agent orchestration, human escalation queue",
+      "cost": "$399/month"
+    },
+    {
+      "tool": "Shopify API",
+      "use": "Live order status, customer history",
+      "cost": "Free (existing)"
+    },
+    {
+      "tool": "ShipBob API",
+      "use": "Fulfillment and tracking data",
+      "cost": "Free (existing)"
+    },
+    {
+      "tool": "Loop Returns API",
+      "use": "Return authorization, exchange status",
+      "cost": "$299/month (existing)"
+    },
+    {
+      "tool": "Custom Python orchestration layer",
+      "use": "Agent routing logic, escalation rules engine",
+      "cost": "One-time dev: 40 hours @ $150/hr = $6,000"
+    }
+  ],
+  "what_failed": "Attempt 1 — Single monolithic agent: They first built one AI agent to handle everything. The prompt became impossibly long. Context collisions between return policy knowledge and product knowledge caused confused responses. A customer asking about a return got a product recommendation instead.\n\nAttempt 2 — Aggressive escalation rules (too few escalations): They tried to maximize automation by minimizing escalation. Set the threshold at only 'credit card dispute' mentions. Missed a customer who had received the wrong product twice in a row and was considering a chargeback — the AI kept closing the ticket with a return authorization that wasn't solving the core issue. Customer posted a negative review and it went mildly viral in a home goods community.\n\nThe fix: Domain-specific agents (avoids context collision) plus a 'repeat contact within 7 days on same order' escalation rule — which catches exactly the type of frustrated customer who needs a human.",
+  "takeaway": "The question for e-commerce support automation isn't 'can AI handle this?' — it's 'what percentage of tickets require judgment?' For most DTC brands, that number is 20-30%. Build your system around that 20%, not around the 80% AI can handle on day one. The 20% is where your brand reputation lives."
+}

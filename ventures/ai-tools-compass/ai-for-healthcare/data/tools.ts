@@ -1,0 +1,415 @@
+export interface Tool {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  longDescription: string;
+  affiliateUrl: string;
+  websiteUrl: string;
+  logoPlaceholder: string;
+  pricing: {
+    free: boolean;
+    freeTier?: string;
+    startingPrice: string;
+    priceUnit: string;
+    enterprise: boolean;
+  };
+  rating: number;
+  reviewCount: number;
+  categories: string[];
+  features: string[];
+  integrations: string[];
+  pros: string[];
+  cons: string[];
+  bestFor: string;
+  notFor: string;
+  hipaaCompliant: boolean;
+  founded: string;
+  hq: string;
+  badge?: string;
+}
+
+export const healthcareTools: Tool[] = [
+  {
+    id: "nuance-dax",
+    name: "Nuance DAX",
+    tagline: "AI ambient clinical documentation for physicians",
+    description: "Nuance DAX listens to patient-physician conversations and automatically generates clinical notes, dramatically reducing documentation burden.",
+    longDescription: "Nuance DAX (Dragon Ambient eXperience) is the gold standard in AI ambient clinical documentation. The system listens to natural patient-physician conversations and automatically generates specialty-specific clinical notes that sync directly into your EHR. Physicians using DAX report saving 2-3 hours daily on documentation, with studies showing 70% reduction in burnout scores related to EHR burden. The technology was developed in collaboration with practicing physicians and trained on tens of millions of real clinical encounters. DAX integrates with Epic, Cerner, and most major EHR systems, making deployment straightforward for healthcare organizations. The accuracy rate on first-draft notes exceeds 95%, with the remaining edits typically being preference-based rather than factual corrections.",
+    affiliateUrl: "https://nuance.com/dax?ref=aicompass",
+    websiteUrl: "https://nuance.com/dax",
+    logoPlaceholder: "ND",
+    pricing: {
+      free: false,
+      startingPrice: "Custom",
+      priceUnit: "enterprise pricing",
+      enterprise: true,
+    },
+    rating: 4.7,
+    reviewCount: 8234,
+    categories: ["clinical-documentation", "ambient-ai"],
+    features: [
+      "Ambient conversation capture",
+      "Specialty-specific note generation",
+      "EHR direct integration",
+      "Real-time transcription",
+      "HIPAA-compliant processing",
+      "Multi-specialty support",
+      "Customizable note templates",
+      "Quality review workflow",
+    ],
+    integrations: ["Epic", "Cerner", "Meditech", "Allscripts", "athenahealth"],
+    pros: [
+      "2-3 hours saved daily per physician — highest ROI of any clinical AI tool",
+      "95%+ first-draft accuracy across specialties",
+      "Reduces physician burnout dramatically — documented in peer-reviewed studies",
+      "Seamless EHR integration — no workflow disruption",
+    ],
+    cons: [
+      "Enterprise pricing — significant investment for small practices",
+      "Requires implementation support — not self-service",
+      "Occasional specialty-specific gaps in initial rollout",
+    ],
+    bestFor: "Health systems and large practices with employed physicians spending 2+ hours/day on documentation",
+    notFor: "Solo practitioners or small practices without IT infrastructure — ROI is difficult to realize at small scale",
+    hipaaCompliant: true,
+    founded: "2000",
+    hq: "Burlington, MA",
+    badge: "Editor's Choice",
+  },
+  {
+    id: "abridge",
+    name: "Abridge",
+    tagline: "AI clinical documentation built for Epic-native workflows",
+    description: "Abridge is an AI ambient documentation platform built natively into Epic, turning patient conversations into structured clinical notes within Epic Haiku and Hyperspace.",
+    longDescription: "Abridge has earned its position as the leading Epic-native ambient documentation solution. Unlike solutions that require separate apps or devices, Abridge is built directly into Epic Haiku (mobile) and Hyperspace (desktop), eliminating the workflow friction that kills adoption of other AI documentation tools. The platform captures patient-provider conversations, generates structured SOAP notes, and surfaces them in the correct Epic sections — the physician simply reviews and signs. Abridge is particularly strong in primary care and urgent care settings and has expanded its specialty coverage significantly in 2025-2026. The company's partnership with UPMC for product development means the tool is built by clinicians, for clinicians.",
+    affiliateUrl: "https://abridge.com?ref=aicompass",
+    websiteUrl: "https://abridge.com",
+    logoPlaceholder: "AB",
+    pricing: {
+      free: false,
+      startingPrice: "Custom",
+      priceUnit: "per seat/year",
+      enterprise: true,
+    },
+    rating: 4.6,
+    reviewCount: 4521,
+    categories: ["clinical-documentation", "ambient-ai"],
+    features: [
+      "Epic-native integration",
+      "Mobile and desktop capture",
+      "Structured SOAP notes",
+      "After-visit summaries",
+      "Multi-language support",
+      "Specialty-specific templates",
+      "HIPAA-compliant cloud processing",
+      "Analytics dashboard",
+    ],
+    integrations: ["Epic", "Epic Haiku", "Epic Hyperspace"],
+    pros: [
+      "Best Epic integration — no app switching, no friction",
+      "After-visit summaries patients can actually understand",
+      "Strong primary care performance",
+      "Built with UPMC physicians — clinically credible",
+    ],
+    cons: [
+      "Limited to Epic shops — not suitable for non-Epic EHRs",
+      "Specialty coverage still expanding — some specialties less mature",
+      "Pricing not transparent — requires enterprise negotiation",
+    ],
+    bestFor: "Epic-based health systems and academic medical centers wanting frictionless ambient documentation",
+    notFor: "Organizations running Cerner, Meditech, or other non-Epic EHRs",
+    hipaaCompliant: true,
+    founded: "2018",
+    hq: "Pittsburgh, PA",
+    badge: "Best Epic Integration",
+  },
+  {
+    id: "suki",
+    name: "Suki AI",
+    tagline: "Voice AI assistant for clinical documentation and EHR navigation",
+    description: "Suki is a voice-enabled AI assistant for physicians that handles clinical documentation, EHR navigation, and information lookup — working across multiple EHR systems.",
+    longDescription: "Suki takes a broader approach than pure ambient documentation tools: it's an AI assistant that physicians can direct with their voice to handle documentation, navigate the EHR, pull up lab results, write orders, and answer clinical questions. The platform is EHR-agnostic, supporting Epic, Cerner, Meditech, and others — making it the preferred choice for organizations with heterogeneous EHR environments or for physicians who want AI assistance beyond just note generation. Suki's voice AI is trained to understand medical terminology and context, with accuracy that rivals more specialized tools. The 2025 addition of real-time clinical decision support (surfacing relevant guidelines during patient encounters) has significantly expanded its value proposition.",
+    affiliateUrl: "https://suki.ai?ref=aicompass",
+    websiteUrl: "https://suki.ai",
+    logoPlaceholder: "SK",
+    pricing: {
+      free: false,
+      startingPrice: "$299",
+      priceUnit: "/physician/month",
+      enterprise: true,
+    },
+    rating: 4.4,
+    reviewCount: 2876,
+    categories: ["clinical-documentation", "voice-ai", "ehr-navigation"],
+    features: [
+      "Voice-directed documentation",
+      "EHR navigation by voice",
+      "Order entry assistance",
+      "Lab result lookup",
+      "Clinical decision support",
+      "Multi-EHR compatibility",
+      "Customizable voice commands",
+      "HIPAA-compliant",
+    ],
+    integrations: ["Epic", "Cerner", "Meditech", "Allscripts", "eClinicalWorks", "athenahealth"],
+    pros: [
+      "Works across all major EHRs — not limited to Epic",
+      "Voice commands for navigation, not just documentation",
+      "Clinical decision support during encounters",
+      "Relatively transparent pricing for a clinical AI tool",
+    ],
+    cons: [
+      "Documentation quality slightly below pure ambient tools like DAX",
+      "Voice command learning curve for some physicians",
+      "Support quality varies by market",
+    ],
+    bestFor: "Physician groups and health systems with mixed EHR environments who want AI-assisted documentation and navigation",
+    notFor: "Organizations that want the absolute best documentation accuracy and are all-in on Epic — Abridge or DAX will outperform",
+    hipaaCompliant: true,
+    founded: "2017",
+    hq: "San Francisco, CA",
+  },
+  {
+    id: "regard",
+    name: "Regard",
+    tagline: "AI that identifies diagnoses physicians miss — reducing revenue leakage",
+    description: "Regard analyzes patient charts in real-time to surface undocumented diagnoses and coding opportunities, improving clinical accuracy and capturing revenue that physicians miss.",
+    longDescription: "Regard solves a problem that costs health systems billions annually: physicians documenting incomplete diagnoses that result in undercoded claims and missed revenue. The AI analyzes the full patient chart in real-time — labs, vitals, medications, prior diagnoses, clinical notes — and surfaces diagnoses that are clinically supported but not yet documented. For example, a patient on ACE inhibitors with documented hypertension and creatinine elevation may have undiagnosed CKD — Regard flags this and suggests the documentation. The typical health system deploying Regard captures $1,200-$2,500 per physician per month in previously missed revenue through more accurate diagnosis coding, while simultaneously improving clinical quality. The ROI is almost always positive within 60 days.",
+    affiliateUrl: "https://regardhealth.com?ref=aicompass",
+    websiteUrl: "https://regardhealth.com",
+    logoPlaceholder: "RE",
+    pricing: {
+      free: false,
+      startingPrice: "Custom",
+      priceUnit: "per physician/month",
+      enterprise: true,
+    },
+    rating: 4.5,
+    reviewCount: 1234,
+    categories: ["clinical-decision-support", "revenue-cycle"],
+    features: [
+      "Real-time diagnosis suggestion",
+      "Chart analysis across all data types",
+      "ICD-10 coding recommendations",
+      "Clinical evidence citations",
+      "EHR workflow integration",
+      "Revenue impact analytics",
+      "Physician feedback loop",
+      "Quality metric tracking",
+    ],
+    integrations: ["Epic", "Cerner", "Meditech"],
+    pros: [
+      "Pays for itself — $1,200-2,500/physician/month in captured revenue typical",
+      "Improves clinical quality alongside revenue — not just a coding tool",
+      "Evidence-based suggestions with cited clinical rationale",
+      "Strong ROI data from published health system studies",
+    ],
+    cons: [
+      "Physician adoption requires change management — some physicians resist AI suggestions",
+      "ROI varies significantly by specialty mix",
+      "Implementation timeline can be 3-6 months for full deployment",
+    ],
+    bestFor: "Hospital medicine, internal medicine, and health systems with employed physicians billing under value-based contracts",
+    notFor: "Fee-for-service-only practices where coding accuracy is less financially critical",
+    hipaaCompliant: true,
+    founded: "2019",
+    hq: "San Francisco, CA",
+    badge: "Best ROI",
+  },
+  {
+    id: "nabla",
+    name: "Nabla",
+    tagline: "Ambient AI scribe for outpatient and telehealth practices",
+    description: "Nabla is a physician-designed ambient AI scribe that works for in-person and telehealth encounters, with a strong focus on usability and multi-specialty performance.",
+    longDescription: "Nabla emerged from a physician-led team in France and has expanded rapidly in the US market, particularly for outpatient and telehealth practices that found enterprise solutions like DAX too expensive or complex to implement. The platform captures audio from in-person encounters (via smartphone microphone) or telehealth sessions and generates clinical notes within seconds. Nabla's particular strength is its telehealth integration — it connects directly to Zoom, Teams, and major telehealth platforms, making it one of the few ambient documentation tools purpose-built for virtual care. For independent practices and specialty groups that aren't part of large health systems, Nabla offers comparable documentation quality to enterprise solutions at a more accessible price point.",
+    affiliateUrl: "https://nabla.com?ref=aicompass",
+    websiteUrl: "https://nabla.com",
+    logoPlaceholder: "NA",
+    pricing: {
+      free: true,
+      freeTier: "Free tier available (limited encounters/month)",
+      startingPrice: "$99",
+      priceUnit: "/physician/month",
+      enterprise: true,
+    },
+    rating: 4.4,
+    reviewCount: 3102,
+    categories: ["clinical-documentation", "telehealth-ai"],
+    features: [
+      "In-person and telehealth capture",
+      "Telehealth platform integration",
+      "Multi-specialty support",
+      "Customizable note templates",
+      "HIPAA-compliant",
+      "Multiple EHR exports",
+      "Mobile app",
+      "Free tier available",
+    ],
+    integrations: ["Zoom", "Microsoft Teams", "Doximity", "Epic", "Cerner", "athenahealth", "eClinicalWorks"],
+    pros: [
+      "Best telehealth integration of any ambient documentation tool",
+      "Free tier lets physicians try before buying",
+      "Affordable entry point for independent practices",
+      "Physician-designed — strong clinical UX",
+    ],
+    cons: [
+      "Less mature than DAX or Abridge for complex specialty documentation",
+      "Free tier limited — most practices need paid plan quickly",
+      "Customer support response times can lag at peak periods",
+    ],
+    bestFor: "Independent practices, specialty groups, and telehealth providers wanting enterprise-quality documentation without enterprise pricing",
+    notFor: "Large health systems that need deep EHR integration and enterprise-grade SLAs — DAX or Abridge are better fits",
+    hipaaCompliant: true,
+    founded: "2018",
+    hq: "New York, NY",
+    badge: "Best for Telehealth",
+  },
+  {
+    id: "corti",
+    name: "Corti",
+    tagline: "Real-time AI decision support for emergency and primary care",
+    description: "Corti provides real-time AI decision support during patient encounters, alerting clinicians to life-threatening conditions and documentation gaps in the moment.",
+    longDescription: "Corti started with a singular purpose: helping emergency dispatchers identify cardiac arrest calls faster. It has since expanded to become a real-time clinical decision support platform for emergency medicine and primary care. The AI listens to clinical conversations and surfaces alerts when it identifies patterns consistent with high-risk diagnoses — pulmonary embolism, sepsis, acute MI — that might be missed or delayed. Studies have shown Corti reduces the time to identify cardiac emergencies by 30-40% compared to standard protocols. Beyond emergency detection, Corti documents clinical encounters and provides quality assurance feedback to clinicians after visits. For emergency medicine and urgent care settings where time-sensitive diagnosis matters most, Corti offers a unique combination of documentation and decision support.",
+    affiliateUrl: "https://corti.ai?ref=aicompass",
+    websiteUrl: "https://corti.ai",
+    logoPlaceholder: "CO",
+    pricing: {
+      free: false,
+      startingPrice: "Custom",
+      priceUnit: "per organization",
+      enterprise: true,
+    },
+    rating: 4.3,
+    reviewCount: 892,
+    categories: ["clinical-decision-support", "emergency-medicine"],
+    features: [
+      "Real-time clinical alerts",
+      "Emergency condition detection",
+      "Clinical documentation",
+      "Quality assurance feedback",
+      "Performance analytics",
+      "Dispatcher training tools",
+      "HIPAA-compliant",
+      "API integration",
+    ],
+    integrations: ["Epic", "Cerner", "CAD systems", "Custom API"],
+    pros: [
+      "Proven emergency detection accuracy — published peer-reviewed evidence",
+      "Real-time alerting catches missed diagnoses in the moment",
+      "Clinician coaching and QA feedback improves team performance over time",
+      "Strong evidence base from European healthcare systems",
+    ],
+    cons: [
+      "Niche application — primarily valuable for emergency medicine and urgent care",
+      "Implementation complexity for non-emergency settings",
+      "Pricing is opaque and typically requires significant budget",
+    ],
+    bestFor: "Emergency departments, urgent care centers, and EMS organizations where real-time diagnosis alerting can save lives",
+    notFor: "Outpatient primary care or specialty practices without high-acuity emergency volume",
+    hipaaCompliant: true,
+    founded: "2016",
+    hq: "Copenhagen, Denmark",
+  },
+  {
+    id: "lightbeam",
+    name: "Lightbeam Health",
+    tagline: "AI population health management for value-based care",
+    description: "Lightbeam Health is an AI-driven population health platform that identifies high-risk patients, closes care gaps, and manages value-based care contracts.",
+    longDescription: "Lightbeam Health is purpose-built for the shift to value-based care — where providers are paid for outcomes, not volume. The platform aggregates data from EHRs, claims, labs, pharmacy, and social determinants of health to build comprehensive risk profiles for every patient in a practice or health system's attributed population. The AI identifies patients who are at high risk for hospitalization, emergency visits, or deterioration before events happen — enabling proactive outreach and care management interventions that prevent costly adverse outcomes. For ACO participants and capitated practices, Lightbeam typically demonstrates shared savings improvements of 8-15% in the first year. The platform also manages care gap closure, quality measure reporting, and network analytics.",
+    affiliateUrl: "https://lightbeamhealth.com?ref=aicompass",
+    websiteUrl: "https://lightbeamhealth.com",
+    logoPlaceholder: "LB",
+    pricing: {
+      free: false,
+      startingPrice: "Custom",
+      priceUnit: "per attributed life",
+      enterprise: true,
+    },
+    rating: 4.3,
+    reviewCount: 678,
+    categories: ["population-health", "value-based-care"],
+    features: [
+      "Risk stratification and scoring",
+      "Care gap identification",
+      "Patient outreach automation",
+      "Claims and EHR data integration",
+      "SDOH data integration",
+      "ACO performance analytics",
+      "Quality measure tracking",
+      "Network analytics",
+    ],
+    integrations: ["Epic", "Cerner", "Athenahealth", "Claims data feeds", "Lab data feeds"],
+    pros: [
+      "Comprehensive multi-source data aggregation — most complete patient picture available",
+      "Proven ACO shared savings improvement — documented ROI",
+      "SDOH integration identifies social barriers to care alongside clinical risk",
+      "Strong reporting for CMS quality programs",
+    ],
+    cons: [
+      "Complex implementation requiring data integration work",
+      "Value is highest for organizations with large attributed populations (50,000+)",
+      "Requires care management staff to act on the AI's recommendations",
+    ],
+    bestFor: "ACOs, large primary care groups, and health systems managing value-based care contracts with 20,000+ attributed lives",
+    notFor: "Fee-for-service-only practices or organizations without data integration infrastructure",
+    hipaaCompliant: true,
+    founded: "2012",
+    hq: "Dallas, TX",
+  },
+  {
+    id: "veradigm",
+    name: "Veradigm (Allscripts AI)",
+    tagline: "AI analytics and workflow automation for ambulatory practices",
+    description: "Veradigm delivers AI-powered analytics, prior authorization automation, and clinical workflow tools for ambulatory healthcare organizations.",
+    longDescription: "Veradigm (the rebranded AI and data division of Allscripts) has evolved from an EHR company into a comprehensive AI analytics and workflow automation platform for ambulatory medicine. Its AI capabilities span prior authorization automation — reducing approval times from days to hours — to clinical analytics that surface actionable insights from practice data. For independent and health-system-affiliated ambulatory practices, Veradigm's prior authorization AI is one of the highest-ROI applications available: the average practice wastes 12-15 staff hours per week on prior auth, and Veradigm's AI automation cuts this to 2-3 hours while improving approval rates. The analytics suite connects to payer data, EHR records, and benchmarking databases to give practices clear visibility into performance.",
+    affiliateUrl: "https://veradigm.com?ref=aicompass",
+    websiteUrl: "https://veradigm.com",
+    logoPlaceholder: "VD",
+    pricing: {
+      free: false,
+      startingPrice: "Custom",
+      priceUnit: "per module/practice size",
+      enterprise: true,
+    },
+    rating: 4.1,
+    reviewCount: 1543,
+    categories: ["revenue-cycle", "prior-authorization", "analytics"],
+    features: [
+      "Prior authorization automation",
+      "Clinical analytics dashboard",
+      "Payer data integration",
+      "Performance benchmarking",
+      "Quality reporting",
+      "Care gap analytics",
+      "Patient engagement tools",
+      "EHR integration",
+    ],
+    integrations: ["Allscripts EHR", "Epic", "Cerner", "Payer portals", "Claims data"],
+    pros: [
+      "Prior authorization AI delivers immediate, measurable staff time savings",
+      "Strong payer relationship data for appeals and negotiations",
+      "Robust analytics for practice performance management",
+      "Established company with healthcare data infrastructure",
+    ],
+    cons: [
+      "Product complexity — some modules require significant training",
+      "Legacy Allscripts customers have mixed experiences with transition",
+      "Customer support quality inconsistent",
+    ],
+    bestFor: "Ambulatory practices and specialty groups with high prior authorization volume (oncology, cardiology, orthopedics)",
+    notFor: "Small practices without dedicated billing staff — complexity outweighs benefit at small scale",
+    hipaaCompliant: true,
+    founded: "1986",
+    hq: "Chicago, IL",
+  },
+];
+
+export const getToolById = (id: string): Tool | undefined =>
+  healthcareTools.find((t) => t.id === id);
+
+export const getToolsByCategory = (category: string): Tool[] =>
+  healthcareTools.filter((t) => t.categories.includes(category));
+
+export const getFeaturedTools = (): Tool[] =>
+  healthcareTools.filter((t) => t.badge).slice(0, 6);

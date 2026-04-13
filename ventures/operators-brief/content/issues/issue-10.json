@@ -1,0 +1,64 @@
+{
+  "number": 10,
+  "title": "The bootstrapped founder who automated sales outreach and got to $20K MRR without a sales team",
+  "date": "May 2026",
+  "summary": "A solo B2B SaaS founder built an AI-powered outbound sales system that generates, sends, and manages 400 personalized outreach sequences per week. Went from $3K MRR to $20K MRR in 11 months without hiring a single salesperson. Monthly tool cost for the system: $290. Annual revenue added: $204K.",
+  "case_study": "Marcus Webb (name changed) launched a B2B SaaS product for HVAC service companies — a field service management tool with AI-powered scheduling optimization. $99-$299/month per company. Solo founder, no co-founder, no funding.\n\nAt $3K MRR (30 customers), inbound was flat. He had no marketing budget and no sales experience. He couldn't afford a SDR ($55K base + commission). He had a product that worked and a customer segment he knew deeply — he had run an HVAC company for 8 years before building this.\n\nHe built an outbound system over 3 weekends:\n\nProspect Intelligence: A Python script scrapes HVAC companies from Google Maps API in target metros: name, address, phone, website, Google review count, average rating. A Claude-based enrichment step researches each company's website and classifies them: company size estimate, software mentioned on site (scheduling software competitor or none), evidence of growth (multiple locations, recent reviews), and pain points visible in negative reviews (scheduling complaints, response time issues — his product's core use case).\n\nPersonalized Sequence Generation: For each qualified prospect, Claude generates a 3-email sequence. The personalization is specific: references their Google review patterns, mentions their service area, addresses their likely current software situation. Not 'Hi [first name]' personalization — genuine industry and company-specific personalization.\n\nEmail Infrastructure: Using his personal domain + SendGrid for warm outbound. Sequences go out at 400/week — 200 initial emails, 200 follow-ups from prior weeks. Running deliverability discipline: custom domain, SPF/DKIM/DMARC, gradual warm-up, manual unsubscribe processing.\n\nReply Management: All replies route to his inbox. He has no automation in the reply handling — that's the 1 hour/day this system requires. But instead of cold prospecting, he's having 15-25 conversations per week with pre-warmed HVAC operators.\n\nConversion path: Demo → 14-day trial → paid. Trial-to-paid at 62%. Average new MRR from outbound: $18K-$22K/month at current velocity.\n\nAt $20K MRR he's now planning his first hire — not a salesperson, but a customer success person to reduce churn as the base grows.",
+  "implementation_guide": "Step 1 — Define your ideal customer profile precisely. 'Small businesses' is not a target. 'HVAC companies with 3-15 technicians, in markets with over 200K population, who have been in business 3+ years, with a Google rating below 4.3 suggesting operational friction' — that's a target. The more specific your ICP, the better your personalization.\n\nStep 2 — Build your prospect list pipeline. Google Maps API, LinkedIn (within ToS), industry directories, local business databases. Automate the collection; manually define the quality criteria. Your list quality is your conversion rate.\n\nStep 3 — Build the enrichment layer. Before writing a single email, enrich each prospect with: website analysis, technology detection (BuiltWith API), public review analysis, news/press mentions. Claude can do this from raw website text and review data in seconds.\n\nStep 4 — Build 3-5 email templates for your sequence variations. Templates define structure and tone; Claude fills in the personalization. Templates also make QC faster — you know what the output should look like.\n\nStep 5 — Email infrastructure is not optional to set up correctly. Sending from a new domain without warm-up and proper DNS records will land you in spam within a week. Buy a sending domain, warm it up over 4 weeks, configure SPF/DKIM/DMARC, use a sending platform (Instantly, Lemlist, or SendGrid) with reputation monitoring.\n\nStep 6 — Volume discipline. 200 new prospects per week is a sustainable volume for a solo operator with quality personalization. At 400/week you're at the edge of what you can manage replies for alone. Scale volume only when you have reply management covered.\n\nStep 7 — Measure: open rate (target 35-50% with good personalization), reply rate (target 8-15% for a narrow ICP), positive reply rate (target 3-6%), demo booking rate from positive replies (target 60%+).",
+  "numbers": {
+    "before_mrr": 3000,
+    "after_mrr": 20000,
+    "months_to_achieve": 11,
+    "outreach_volume_weekly": 400,
+    "open_rate_pct": 48,
+    "reply_rate_pct": 11,
+    "positive_reply_rate_pct": 4.2,
+    "demos_per_week": 16,
+    "trial_to_paid_pct": 62,
+    "new_customers_per_month": 8,
+    "average_new_customer_mrr": 180,
+    "monthly_tool_cost": 290,
+    "founder_time_daily_hours": 1,
+    "incremental_annual_revenue": 204000,
+    "roi_comment": "$290/month in tools producing $204K ARR annually = 5862% annual ROI"
+  },
+  "tool_stack": [
+    {
+      "tool": "Google Maps API",
+      "use": "Prospect discovery — HVAC companies by metro",
+      "cost": "$45/month at his search volume"
+    },
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Company enrichment analysis + email sequence generation",
+      "cost": "$80/month"
+    },
+    {
+      "tool": "Instantly",
+      "use": "Email sequencing, deliverability monitoring, inbox rotation",
+      "cost": "$97/month"
+    },
+    {
+      "tool": "BuiltWith API",
+      "use": "Technology detection on prospect websites",
+      "cost": "$39/month"
+    },
+    {
+      "tool": "Python (custom scripts)",
+      "use": "Data pipeline: scrape → enrich → generate → queue",
+      "cost": "20 hours to build (self-built)"
+    },
+    {
+      "tool": "Airtable",
+      "use": "Prospect tracking, sequence management, reply logging",
+      "cost": "$20/month"
+    },
+    {
+      "tool": "Calendly",
+      "use": "Demo scheduling in reply emails",
+      "cost": "$12/month (existing)"
+    }
+  ],
+  "what_failed": "Attempt 1 — Generic personalization ('I noticed your HVAC company...'): His first sequences used company name and city as 'personalization.' Reply rate: 1.3%. Essentially spam with extra steps. The shift to genuine personalization — referencing specific review patterns, mentioning current software they appeared to use, addressing visible operational signals — moved reply rate to 11%.\n\nAttempt 2 — Too high volume, too fast: Week 3, he ramped to 600 emails/day on a new domain. Domain blacklisted in 4 days. Spent a week digging out of spam filters. Rebuilt with a second domain, slower warm-up, and capped at 200/day.\n\nAttempt 3 — Automating reply handling: He tried using an AI chatbot to handle initial replies. Prospects who replied positively and got an AI bot as the next touch dropped by 80% in demo conversion. Sales at this price point and in this industry requires a human in the reply thread. He kept the system as outreach-only; all replies go to his personal inbox.",
+  "takeaway": "The leverage in AI-powered outbound isn't in the volume — it's in the personalization quality at scale. A 200-person list with genuine, research-backed personalization outperforms a 2,000-person generic blast by every metric. The AI doesn't replace the sales judgment; it makes the research and drafting that precedes a good email take 30 seconds instead of 20 minutes."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "subzii-v1",
+  "concept": "You were already going to the party",
+  "platform": [
+    "tiktok",
+    "instagram_reels"
+  ],
+  "fps": 30,
+  "resolution": {
+    "width": 1080,
+    "height": 1920
+  },
+  "clips": [
+    {
+      "id": "hook_frame",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/subzii-v1/hook_frame_clip.mp4",
+      "durationSeconds": 5,
+      "transition": "smash",
+      "hookText": "My friend just sent me $200\nfor... going to a party?",
+      "punchAtSecond": null
+    },
+    {
+      "id": "frame_b",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/subzii-v1/frame_b_clip.mp4",
+      "durationSeconds": 8,
+      "transition": "smash",
+      "hookText": null,
+      "punchAtSecond": null
+    },
+    {
+      "id": "frame_c",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/subzii-v1/frame_c_clip.mp4",
+      "durationSeconds": 8,
+      "transition": "smash",
+      "hookText": "You share a link.\nThey buy a ticket.\nYou get paid.",
+      "punchAtSecond": 1.5
+    },
+    {
+      "id": "frame_d",
+      "file": "/Users/husamahmed/FN3/orchestrator/output/subzii-v1/frame_d_clip.mp4",
+      "durationSeconds": 8,
+      "transition": "slideleft",
+      "hookText": "You're literally already there.\nLink in bio →",
+      "punchAtSecond": null
+    }
+  ],
+  "totalDurationSeconds": 20,
+  "outputDir": "/Users/husamahmed/FN3/orchestrator/output/subzii-v1"
+}

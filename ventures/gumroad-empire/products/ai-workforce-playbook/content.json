@@ -1,0 +1,2421 @@
+{
+  "title": "Deploy Your AI Workforce",
+  "subtitle": "Build Autonomous AI Agents For Your Business — No Code Required",
+  "tagline": "Your competitors already have AI employees. Do you?",
+  "price": 127,
+  "sections": [
+    {
+      "id": 1,
+      "title": "What AI Agents Actually Are (And What They're Not)",
+      "content": "Let's kill the hype first. You've been pitched AI agents by every SaaS vendor, every LinkedIn influencer, and probably your nephew who just finished a bootcamp. Most of what you've heard is either wrong, oversimplified, or designed to sell you a subscription you don't need. This section gives you the real foundation — the kind that lets you evaluate any tool or vendor claim without needing a computer science degree.\n\n**The Real Definition**\n\nAn AI agent is software that takes actions autonomously toward a goal. That's it. Three parts: autonomy (it acts without you clicking buttons), actions (it does things in the world — sends emails, reads files, makes API calls), and a goal (it has a defined objective it's working toward).\n\nThe word 'autonomous' is doing a lot of work here. It doesn't mean the agent is sentient or will go rogue. It means that once you configure it and trigger it, it executes a sequence of steps without requiring you to babysit every decision. Your accounts payable person doesn't need you standing over them confirming every line item — you trust them to follow the process. An agent works the same way.\n\n**What ChatGPT Is Not**\n\nChatGPT — the website, the app, the thing you type questions into — is not an agent. It's a conversational interface. You give it a prompt, it gives you a response, and then it waits for your next prompt. Nothing happens unless you type. No emails get sent. No spreadsheets get updated. No leads get researched. It's an incredibly powerful tool for generating text, but it is fundamentally reactive. You are the agent when you use ChatGPT; you're doing the reading, deciding, copying, pasting, and acting.\n\nThis distinction matters enormously for your business. If your 'AI strategy' is 'we have people using ChatGPT,' you have productivity software, not AI agents. That's fine — ChatGPT saves real time — but it requires human time to operate. A true agent runs while you sleep.\n\nThe confusion exists because the same AI models that power ChatGPT (GPT-4o, Claude, Gemini) are the reasoning engines inside actual agents. The model is the brain. The agent is the brain plus a body: inputs, outputs, memory, and the ability to take action.\n\n**The Spectrum From Automation to Agent**\n\nThere's a meaningful spectrum here, and placing yourself correctly on it determines which tools you need.\n\nAt one end: simple automation. A Zap that copies a new HubSpot contact into a Google Sheet. No AI involved. Rule-based: if X then Y. Reliable, cheap, appropriate for high-volume predictable tasks.\n\nOne step up: AI-augmented automation. The same Zap, but before copying to the sheet, it passes the contact through Claude to classify the lead quality. Still mostly rule-based, with an AI step in the middle. This is where most businesses should start.\n\nFurther up: multi-step agents. The system receives a company name, decides to look it up on LinkedIn, then reads their website, then checks recent news, then synthesizes a brief — choosing which steps to take based on what it finds along the way. The path isn't fully predetermined. This is a true agent.\n\nAt the far end: agentic systems. Multiple agents working together. A research agent feeds a drafting agent which feeds a review agent which triggers a send agent. Agents that can spawn sub-agents. This is where enterprise is headed, and where cautious SMBs will be in 18 months.\n\nFor most businesses reading this, you'll spend the majority of your effort in the middle two zones. The sweet spot is AI-augmented automation for predictable tasks and simple multi-step agents for research and analysis tasks.\n\n**The 4 Components of Any AI Agent**\n\nEvery agent, regardless of what tool builds it, has four components. Understanding these lets you diagnose problems when an agent breaks and design better agents from the start.\n\n*Perception* is how the agent receives information. This might be an incoming email, a new row in a spreadsheet, a webhook trigger from your CRM, a scheduled time, or a file dropped in a folder. Without a trigger and input, an agent never starts. Most agent failures trace back to broken perception — the trigger didn't fire, or the input data wasn't in the format the agent expected.\n\n*Reasoning* is the AI model doing the thinking. This is where Claude, GPT-4o, or Gemini lives. The reasoning component receives the input, follows the instructions you've written, and decides what to do next — what to extract, how to classify, what to draft, what action to take. The quality of your instructions (called a system prompt) is the single biggest lever you have on agent performance. We'll spend significant time on this.\n\n*Memory* is how the agent retains information across steps or across sessions. Short-term memory is information passed from one step to the next within a single workflow run — the agent extracts an email address in step 3 and uses it in step 7. Long-term memory is persistent storage the agent can read and write to across multiple runs — a database of customers it's already researched, a log of emails it's already sent. Most SMB agents only need short-term memory. Long-term memory requires more architecture but enables dramatically more capable agents.\n\n*Action* is what the agent does with its reasoning. Sending an email. Writing a row to a spreadsheet. Creating a task in Asana. Posting to Slack. Making an API call to your CRM. Triggering another workflow. The richness of available actions determines how useful your agent can be. This is why the integration layer — connecting your agent to your actual business tools — is so important.\n\n**Three Real Agent Examples**\n\nAbstract definitions only get you so far. Here's what these four components look like in practice.\n\n*The Customer Service Agent:* Perception — a new email arrives in support@yourcompany.com. Reasoning — Claude reads the email, classifies it by type (billing, technical, general inquiry, complaint), assesses urgency, and drafts an appropriate response from a set of templates you've provided. Memory — it checks a connected spreadsheet to see if this customer has contacted you before and what their account status is. Action — if the classification is routine, it sends the drafted response immediately. If classified as complaint or high-value customer, it creates a ticket in your helpdesk and Slacks your support lead.\n\n*The Lead Research Agent:* Perception — a sales rep adds a new company name to a designated column in your Google Sheet. Reasoning — Claude determines what information would be most useful for a sales call: company size, recent news, tech stack signals, likely pain points. Memory — it passes each piece of research as context to the next step. Action — it searches the web, reads the company's website, pulls recent LinkedIn posts if available, then writes a structured briefing back into the same sheet and emails it to the rep.\n\n*The Invoice Processing Agent:* Perception — an invoice arrives as an email attachment to invoices@yourcompany.com. Reasoning — Claude extracts vendor name, invoice number, line items, total, due date, and payment terms. It cross-references against expected vendor amounts you've configured and flags anything more than 15% over typical. Memory — previous invoices from the same vendor are logged so anomalies can be detected. Action — it creates a row in your accounting spreadsheet, attaches the PDF to a Notion database entry, and either marks it approved for payment (if within threshold) or Slacks your finance lead for review.\n\nNotice what all three have in common: they handle high-frequency, time-consuming tasks that follow a pattern but require judgment. The pattern makes them automatable. The judgment makes AI necessary. That intersection — patterned but judgment-intensive — is where agents deliver the most value.\n\n**The 3 Questions to Ask Before Building Any Agent**\n\nBefore you build anything, answer these three questions. They save enormous amounts of time and prevent the most common mistake: building an agent for a task that isn't actually worth automating.\n\n*Question 1: Does this task happen at least 10 times per week?* If something happens twice a month, the ROI of a custom agent rarely makes sense unless it takes 3+ hours each time. The economics of agents work best on high-frequency tasks. Email triage, lead research, content repurposing, report generation — these happen daily. One-time analysis tasks, strategic decisions, relationship-sensitive communications — these are for humans.\n\n*Question 2: Can I describe exactly what a good output looks like?* If you can write a one-page process document describing how a skilled employee would do this task, you can probably build an agent for it. If you struggle to describe what 'done well' means because it requires deep contextual judgment every time, it's not ready for an agent. Agents follow instructions. The better you can write instructions, the better your agent performs.\n\n*Question 3: What's the cost of a mistake?* A customer service agent drafting a response that goes out with a typo: low cost. An agent that sends an email to the wrong person with confidential pricing: high cost. Before deploying any agent, design the error handling. High-stakes tasks get a human-in-the-loop approval step. Low-stakes tasks can run fully automated. Be honest with yourself about which is which."
+    },
+    {
+      "id": 2,
+      "title": "Choosing Your Agent Infrastructure",
+      "content": "The tool you build on determines your ceiling, your monthly costs, and how much time you spend maintaining versus running. This section gives you an honest comparison of every major option in 2026 — including the ones vendors don't want you comparing against each other.\n\n**The Landscape in 2026**\n\nThe agent tool market has matured significantly. In 2023, building agents required custom code or duct-taped together Zapier workflows that broke constantly. In 2026, you have purpose-built no-code agent platforms that are genuinely capable. The consolidation hasn't happened yet, which means you have real choices — and real tradeoffs.\n\nThe four main categories: workflow automation platforms (n8n, Make, Zapier), dedicated agent platforms (relevanceai, Lindy, Voiceflow for conversational), infrastructure-level tools (LangChain, CrewAI — require code), and AI-native workspaces (Notion AI, HubSpot AI, built into tools you already use). We're focused on the first two categories because they give non-technical operators real leverage without needing a developer.\n\n**n8n: The Power Choice**\n\nn8n is the tool this playbook is built around. It's open-source, self-hostable, has a generous cloud tier, and has more native integrations than any competitor. As of 2026 it supports over 400 integrations natively and has purpose-built AI agent nodes — including direct Claude and GPT-4o support with conversation memory, tool calling, and multi-agent orchestration.\n\nThe honest tradeoffs: n8n has a steeper learning curve than Zapier. The interface is a visual canvas (think Miro for workflows) rather than a linear step-by-step builder. This is both its strength and its weakness. You can build genuinely complex branching logic that would be impossible in Zapier. You can also confuse yourself in about 20 minutes if you don't understand the data flow model.\n\nFor agent work specifically, n8n's AI Agent node is best-in-class for no-code tools. It supports: system prompts, conversation history, tool definitions (so the agent can call APIs, read spreadsheets, search the web), and output parsing. The tool-calling capability is particularly important — this is what separates a 'Claude in a text box' from a real agent that takes actions.\n\nCost: n8n Cloud Starter is $24/month for 2,500 workflow executions. Pro is $60/month for 10,000 executions. For most SMBs running moderate agent workloads, the Starter tier handles it. If you're processing hundreds of items daily, Pro is worth it. Self-hosting on a $6/month VPS is an option for technical comfort, but adds maintenance overhead.\n\nWho should use n8n: Anyone serious about agents. If you're willing to spend 3-4 hours learning the interface, n8n pays that back many times over. It's the right tool for 80% of the businesses reading this.\n\n**Make (formerly Integromat): The Middle Ground**\n\nMake sits between Zapier's simplicity and n8n's power. It uses a visual canvas similar to n8n but with a slightly more approachable learning curve. The AI capabilities are less developed than n8n's dedicated agent nodes — Make treats AI as another integration rather than a first-class citizen. You can absolutely build agent workflows in Make, but you're configuring HTTP requests to AI APIs rather than using purpose-built agent tooling.\n\nMake's strengths: excellent documentation, strong community with pre-built templates, reliable execution, and a very generous free tier (1,000 operations/month). It handles complex branching, iterators, and data transformations well. For businesses that need sophisticated data processing alongside AI steps, Make often wins.\n\nCost: Free tier for 1,000 ops/month. Core plan is $10.59/month for 10,000 ops. Pro is $18.82/month for 40,000 ops. Very cost-effective for high-volume workflows.\n\nWho should use Make: Businesses running high-volume data processing workflows where AI is one step among many. If you're already using Make for other automations, adding AI steps is straightforward. If you're starting fresh purely for agents, n8n is better suited.\n\n**Zapier: The Safe Choice (With Limits)**\n\nZapier is the most recognizable name and the easiest to get started with. As of 2026, Zapier has added AI steps including an 'AI by Zapier' feature and connections to major AI models. For simple agent-like workflows — trigger, one AI step, action — Zapier works fine.\n\nThe critical limitation: Zapier's architecture is fundamentally linear. It was built for 'if this, then that' logic. Complex agent workflows — ones where the AI needs to decide between multiple paths, loop back based on results, or dynamically choose which tools to call — are difficult or impossible to express in Zapier without building multiple separate Zaps and stringing them together awkwardly.\n\nCost: Free tier is limited. Starter is $29.99/month for 750 tasks. Professional is $73.50/month for 2,000 tasks. These costs add up quickly for agent workloads that might process 50-100 items daily. Zapier is notably more expensive per task than n8n or Make at any meaningful volume.\n\nWho should use Zapier: Businesses that already have a significant Zapier investment and need to add light AI functionality. Businesses where the person building will never move beyond very simple workflows. If you're starting fresh and serious about agents, the cost-to-capability ratio pushes you toward n8n.\n\n**AI Model Selection: Claude vs GPT-4o vs Gemini**\n\nThe model is the reasoning engine of your agent. Different models have different strengths that matter for specific use cases.\n\nClaude (Anthropic) is the recommended default for most business agent work. Claude's strengths are instruction-following, long context (up to 200K tokens, meaning it can read very long documents), nuanced writing quality, and consistency. Claude very rarely hallucinates in factual extraction tasks when given proper instructions — which matters enormously for invoice processing, data extraction, and research agents. Claude is also notably better at following complex formatting instructions, which is critical when agents need to output structured data.\n\nGPT-4o (OpenAI) excels at tasks requiring code generation, complex mathematical reasoning, and vision tasks (reading images). If you're building an agent that needs to analyze charts, read screenshots, or process image-based documents, GPT-4o's vision capabilities are stronger. GPT-4o is also slightly faster than Claude for high-volume tasks where latency matters.\n\nGemini (Google) has a compelling advantage for businesses deeply embedded in Google Workspace. Gemini's native integration with Google Docs, Sheets, and Gmail is tighter than competitors. For agents that live primarily within Google's ecosystem, Gemini can reduce integration complexity. Gemini 1.5 Pro's 1M token context window is also unmatched for processing extremely long documents.\n\nThe practical decision framework: Start with Claude for everything. If you hit a specific capability wall — complex image analysis, heavy code generation, need for sub-second response times at very high volume — evaluate GPT-4o for that specific use case. If your entire business runs on Google Workspace, test Gemini integrations. Don't over-engineer model selection before you've actually hit limits.\n\nCost context: As of 2026, Claude Sonnet is roughly $3/million input tokens and $15/million output tokens. A typical customer service agent processing a 500-word email and generating a 200-word response costs about $0.003 per email. Processing 1,000 emails/month costs about $3 in AI API costs. The AI model cost is almost never the limiting factor for SMBs — it's the platform cost and your time.\n\n**The 'Good Enough' Principle**\n\nThe most expensive mistake in agent deployment is over-engineering. The temptation to use the most sophisticated tool, the most powerful model, the most elaborate architecture is real — and it's almost always wrong.\n\nStart with the minimum viable architecture. One trigger, one AI step, one action. Get that working perfectly. Then add complexity only when you have a specific, demonstrated need that simpler isn't meeting. Businesses that try to build their final-form agentic system on day one almost always fail to deploy anything. Businesses that deploy a simple agent on day one and iterate end up with sophisticated systems by month three.\n\n**Starting Under $50/Month**\n\nHere's the complete stack to get started with real AI agents for under $50/month:\n\nn8n Cloud Starter: $24/month. This is your workflow engine — where you build and run all your agents.\n\nAnthropic API (Claude): Pay-as-you-go. For a small business running 3-4 agents processing moderate volume, budget $10-20/month. Start by depositing $20 and monitor actual usage before budgeting more.\n\nTotal: $34-44/month to run a real AI agent infrastructure.\n\nOptional additions that are often worth it: A Perplexity API or Tavily API key for web search capabilities ($10-20/month depending on volume). This is what lets your research agents actually look things up rather than hallucinating from training data. A dedicated email address for agent inputs through Google Workspace ($6/month for a Google Workspace starter account if you don't already have one).\n\nNoticeably absent from this list: expensive no-code AI agent platforms charging $99-299/month for pretty interfaces on top of the same underlying APIs. You are paying for convenience with those tools. This playbook teaches you to build directly, which costs less and gives you more control."
+    },
+    {
+      "id": 3,
+      "title": "Designing Agents That Actually Complete Tasks",
+      "content": "The graveyard of failed AI agent projects is enormous. Most of them died for the same reasons: unclear instructions, no error handling, and a fundamental mismatch between what the builder wanted the agent to do and what the agent was actually capable of doing reliably. This section is the difference between a demo that works once and a system that runs for months without intervention.\n\n**Why Most DIY Agents Fail**\n\nAfter deploying agents across dozens of businesses, the failure patterns are predictable. Here are the top five, in order of how often they kill projects.\n\n*Failure Mode 1: Instructions that work for humans but not for AI.* 'Research this company and write a good brief' is excellent guidance for an employee. For an agent, it's useless. What does 'research' mean — what sources, what depth? What does 'good brief' mean — what sections, what length, what format? The agent will produce something, but it won't be what you wanted, and you'll spend time editing it every time. We'll cover instruction writing in depth below.\n\n*Failure Mode 2: No handling for unexpected inputs.* Your invoice processing agent works beautifully for PDF invoices from your three regular vendors. Then a new vendor sends a Word document. Then someone accidentally forwards an unrelated email to your invoices address. Then a vendor sends an invoice image embedded in an HTML email. Each of these breaks an agent that wasn't designed to handle variance. Production agents need explicit handling for the inputs that don't fit the expected pattern.\n\n*Failure Mode 3: Trusting AI output without validation.* Claude is very good. Claude is not perfect. When an agent extracts a dollar amount from an invoice and writes it to your accounting spreadsheet, you need sanity checks: is the amount between $0 and your maximum expected invoice size? Is the vendor name one you recognize? Is the date in the future or past by more than 90 days? These are not hard to implement and they catch the 2% of cases where the model made an error before that error causes a downstream problem.\n\n*Failure Mode 4: Building everything at once.* Developers call this 'big bang deployment.' You spend three weeks building a comprehensive 12-step agent, then deploy it and discover a fundamental flaw in step 3 that breaks everything downstream. Build one step at a time, test each step, then connect them. This isn't just for non-technical builders — it's good practice for anyone.\n\n*Failure Mode 5: No monitoring.* The agent runs fine for two weeks. Then an API changes. Then a Google Sheet gets renamed. Then the email format your vendor uses shifts slightly. Agents in production need monitoring so that when they stop working, you know immediately — not when a customer complains.\n\n**The Task Decomposition Framework**\n\nBefore writing a single node in n8n, write out the task on paper. This is the most important pre-building step, and most people skip it. Here's the framework.\n\nStep 1: Write the task as a paragraph, as if explaining it to a new employee. 'When we get an email at support@company.com, read it, figure out what category it falls into (billing, technical, general, complaint), check if the sender is in our customer database, draft a response appropriate to the category, and either send it automatically if it's routine or flag it for Sarah if it's a complaint or we don't recognize the sender.'\n\nStep 2: Identify every distinct action and every decision point. Actions: receive email, read email, categorize, check database, draft response, send or flag. Decisions: is it routine or a complaint? Is the sender in our database?\n\nStep 3: For each decision point, define the criteria explicitly. 'A complaint is any email containing the words: refund, angry, frustrated, terrible, cancel, lawsuit, or BBB, OR where the tone is clearly negative.' 'Routine means: billing questions, feature questions, how-to questions.'\n\nStep 4: For each action, define the exact input and output. 'The categorization step receives the full email body as text and outputs exactly one of these five categories: BILLING, TECHNICAL, GENERAL, COMPLAINT, UNKNOWN. No other output.'\n\nStep 5: Define what happens when things go wrong. 'If categorization returns UNKNOWN, treat it as COMPLAINT and flag for human review.' 'If the database lookup fails, proceed but add a note that customer status is unverified.' 'If draft generation fails, create a task in Asana for manual response.'\n\nThis exercise — which takes 20-30 minutes for a typical agent — saves hours of iteration. It also reveals when a task is too complex for a single agent and should be broken into multiple coordinated agents.\n\n**Writing Instructions Agents Can Follow**\n\nThe system prompt is your agent's job description, training manual, and quality standards document in one. Writing it well is a learnable skill. Here's the structure that works.\n\nSection 1 — Role and context. 'You are a customer service assistant for Acme Corp, a B2B software company that sells project management tools to construction companies. Our customers are project managers and operations leads at companies with 10-500 employees. Our tone is professional, helpful, and direct — not overly formal, not casual.'\n\nSection 2 — Task definition. 'Your job is to read incoming support emails and do two things: (1) classify the email into exactly one category from the list below, (2) draft a response based on the classification.'\n\nSection 3 — Exact specifications. This is where most system prompts are too vague. Be obsessively specific. 'Classification must be exactly one of: BILLING_QUESTION, TECHNICAL_ISSUE, FEATURE_REQUEST, GENERAL_INQUIRY, COMPLAINT, SPAM. Do not create new categories. If you are unsure, choose GENERAL_INQUIRY. Return the classification as a single word with no other text.'\n\nSection 4 — Output format. 'Your output must be valid JSON in this exact format: {\"classification\": \"BILLING_QUESTION\", \"confidence\": \"HIGH\", \"draft_response\": \"...\", \"flag_for_human\": false, \"flag_reason\": null}. Do not include any text outside the JSON object.'\n\nSection 5 — Examples. Provide two or three examples of input and ideal output. 'Example input: [paste a real email]. Example output: [paste the ideal response].'\n\nSection 6 — Edge case handling. 'If the email is not in English, set flag_for_human to true and flag_reason to NON_ENGLISH. If the email appears to be spam or automated, set classification to SPAM and draft_response to null.'\n\nThe instruction to return JSON is critical. When your agent outputs structured JSON, the next step in your workflow can parse it reliably. Free-form text output requires another AI step to interpret, which adds cost, latency, and failure points.\n\n**Testing Before Deploying**\n\nNever deploy to production without testing. Here's the testing protocol.\n\nPhase 1: Unit testing each step. In n8n, you can run individual nodes with sample data. For each step in your workflow, prepare five test inputs: the perfect happy-path input, a slightly malformed version, an edge case, an unexpected input type, and an empty/null input. Confirm each step handles all five gracefully.\n\nPhase 2: End-to-end testing with real data. Take 10 real examples from your actual data (real emails, real invoices, real leads) and run the complete workflow manually, watching each step. Check that outputs match your expectations. Note any failures or near-misses.\n\nPhase 3: Volume testing. Run 50-100 items through the workflow. Look for patterns in failures — often the same edge case type causes 80% of errors. Fix those before deploying.\n\nPhase 4: Shadow testing. Run the agent in parallel with your human process for one to two weeks. Compare agent outputs to what your human team would do. Identify divergences and decide whether they represent agent errors or process improvements.\n\n**The Human-in-the-Loop Decision**\n\nEvery agent you build needs a clear policy on when it acts autonomously versus when it escalates to a human. This is not just a safety measure — it's what makes agents trustworthy enough to actually use.\n\nUse this framework: assign every possible output from your agent a consequence score on a 1-10 scale. Score 1-3 (low consequence, easily reversible): agent acts automatically. Score 4-6 (moderate consequence, not easily reversible): agent drafts and queues, human approves with one click. Score 7-10 (high consequence, significant impact): agent surfaces for full human review and decision.\n\nFor customer service: sending a FAQ answer = score 2, agent sends automatically. Offering a discount = score 6, agent drafts and queues for manager to approve. Responding to a complaint threatening legal action = score 9, agent creates ticket and alerts team immediately.\n\nIn n8n, implementing this is straightforward: after your agent's reasoning step, add an IF node that checks a field in the output JSON (like 'flag_for_human: true/false'). Route true outcomes to a Slack notification or email to the responsible human. Route false outcomes to automatic execution.\n\n**Rate Limiting and Cost Controls**\n\nTwo practical safeguards every production agent needs.\n\nRate limiting: AI APIs have rate limits, and if you have a workflow that could process thousands of items at once (like when you first connect it to an existing backlog), you can exceed them and cause errors. In n8n, add a 'Wait' node between processing steps when running batch operations. A 1-2 second wait between AI API calls is invisible to users but prevents rate limit errors.\n\nCost controls: Set a monthly spend cap on your Anthropic API account. Start conservatively — set it at 2x your expected cost. Check actual costs after the first week and adjust. Enable cost alerts at 50% and 80% of your cap. An agent with a logic error can loop unexpectedly and accumulate API costs quickly — a cap prevents a bug from becoming an invoice surprise.\n\nAlso implement maximum iteration limits on any agent that can loop. If an agent is supposed to process a list of leads and the list input is accidentally the entire 10,000-contact database instead of today's 20 new ones, a maximum iteration setting of 100 stops it before processing — and billing for — 10,000 API calls."
+    },
+    {
+      "id": 4,
+      "title": "Your First 5 Agent Workflows (Copy These Exactly)",
+      "content": "These are not theoretical examples. These are configurations pulled from real deployments, simplified to the point where you can implement them in n8n following these instructions. Each workflow includes the exact setup steps, the system prompt text, and the configuration details for every node.\n\n**Workflow A: Lead Research Agent**\n\n*What it does:* A sales rep adds a company name (and optionally a contact name) to a designated Google Sheet. The agent runs, researches the company using web search, reads key pages from their website, compiles a structured briefing, and writes it back to the sheet. The rep has a research brief waiting for them within 5 minutes, without lifting another finger.\n\n*Business impact:* At most businesses, pre-call research takes 20-45 minutes per prospect. A rep making 5 calls per day gets back 100-225 minutes — over 3 hours — every single day.\n\n*n8n Setup:*\n\nNode 1 — Google Sheets Trigger: Set to 'Row Added' on your leads sheet. Configure to trigger when a new row is added to a sheet named 'Leads Queue.' Map the columns: Column A = Company Name, Column B = Contact Name (optional), Column C = Status (will be written back by agent).\n\nNode 2 — Set Status to Processing: Use a Google Sheets node to update Column C of the new row to 'Researching...' so reps know the agent is working.\n\nNode 3 — Web Search Tool (Tavily or Perplexity API): Set up an HTTP Request node pointed at Tavily's search API (api.tavily.com/search). Pass the company name as the search query with parameters: search_depth=advanced, include_answer=true, max_results=5. This returns recent news and web results about the company.\n\nNode 4 — Extract Website URL: Use an AI step (Claude) with a short prompt: 'From these search results, identify the company's official website URL. Return only the URL, nothing else.' Pass the Tavily results as input.\n\nNode 5 — Fetch Website Content: Use an HTTP Request node to fetch the company's homepage. Add a second HTTP request for their /about page (append /about to the URL). Note: some sites block scrapers — if you get a 403 error, use a service like Jina.ai's reader API (r.jina.ai/URL) which strips HTML and returns clean text.\n\nNode 6 — AI Agent Node (Claude): This is the main reasoning step. Set model to claude-sonnet-4-5. System prompt:\n\n'You are a B2B sales research assistant. Your job is to create a concise, useful pre-call briefing for a sales representative.\n\nYou will receive:\n- Company name and optional contact name\n- Web search results about the company\n- Content from the company website\n\nCreate a briefing with exactly these sections:\n\n**COMPANY SNAPSHOT** (3-4 sentences: what they do, who they serve, approximate size)\n\n**RECENT DEVELOPMENTS** (2-3 bullet points of news/changes in last 6 months, or note if none found)\n\n**LIKELY PAIN POINTS** (2-3 bullet points based on industry, size, and any signals from content)\n\n**CONVERSATION STARTERS** (2-3 specific, informed questions this rep could open with)\n\n**RED FLAGS** (anything that suggests this might not be a good fit or requires careful handling, or write NONE)\n\nKeep the entire briefing under 400 words. Be specific — use company names, actual numbers, real details. Do not pad with generic observations.\n\nIf you cannot find meaningful information about a company, say so clearly rather than inventing details.'\n\nNode 7 — Write Briefing to Sheet: Google Sheets node, update the row. Write the agent's output to Column D. Update Column C from 'Researching...' to 'Ready.'\n\nNode 8 — Send Slack Notification (optional): Post to your sales Slack channel: '[Company Name] brief is ready — check the leads sheet.'\n\n*Common issues and fixes:* If the website fetch fails (many sites block bots), use Jina.ai reader API as a fallback. If Tavily returns no results for a small company, fall back to a Google Custom Search API call. Add error handling nodes after each HTTP request that catch failures and route to a fallback path.\n\n---\n\n**Workflow B: Customer Support Triage Agent**\n\n*What it does:* Reads every email arriving at your support address. Classifies the request type and urgency. Drafts a response. Sends routine responses automatically. Routes complex, urgent, or sensitive emails to a human with a draft ready for review.\n\n*Business impact:* Most support inboxes contain 60-70% routine questions that follow predictable patterns. Automating those responses frees your team for the 30-40% that actually require human attention and relationship management.\n\n*n8n Setup:*\n\nNode 1 — Gmail Trigger (or IMAP): Watch your support@yourdomain.com inbox. Trigger on new unread emails. Configure to fetch: sender email, sender name, subject, body (plain text), any attachments metadata.\n\nNode 2 — Check for Auto-Responders: Add an IF node. If the email subject contains 'Auto-Reply', 'Out of Office', 'Automatic response', or 'Do not reply' — route to a 'Mark Read and Skip' path. This prevents response loops.\n\nNode 3 — Lookup Sender in CRM/Sheet: Use a Google Sheets or HubSpot node to look up the sender's email address. Return customer tier (if applicable), previous ticket count, account status. If not found, return 'Unknown Customer.'\n\nNode 4 — AI Triage Node (Claude): System prompt:\n\n'You are a customer support triage agent for [Your Company]. Analyze this support email and produce a structured assessment.\n\nCustomer context: {{customer_data}}\n\nEmail subject: {{subject}}\nEmail body: {{email_body}}\n\nReturn JSON in exactly this format:\n{\n  \"category\": \"BILLING | TECHNICAL | FEATURE_REQUEST | GENERAL | COMPLAINT | SPAM\",\n  \"urgency\": \"LOW | MEDIUM | HIGH | CRITICAL\",\n  \"sentiment\": \"POSITIVE | NEUTRAL | NEGATIVE | HOSTILE\",\n  \"key_issue\": \"one sentence summarizing the core request or problem\",\n  \"auto_respond\": true or false,\n  \"auto_respond_reasoning\": \"brief explanation of why auto-respond is or is not appropriate\",\n  \"draft_response\": \"the full response email text, professional, under 200 words\",\n  \"internal_note\": \"any context a human reviewer should know\"\n}\n\nSet auto_respond to FALSE if any of these apply:\n- Category is COMPLAINT\n- Urgency is HIGH or CRITICAL\n- Sentiment is HOSTILE\n- Customer tier is ENTERPRISE or PREMIUM (requires personalized response)\n- The issue requires account access or technical investigation\n- You are not confident in the appropriate response\n\nFor the draft_response, use a professional, warm tone. Sign off as [Your Name], Customer Support.\n\nFor BILLING questions, never discuss specific pricing or offer discounts — instead acknowledge and say the billing team will follow up within 1 business day.\nFor TECHNICAL issues, acknowledge the issue, ask for any relevant details (OS, browser version, steps to reproduce), and set expectation of response within 4 hours during business hours.'\n\nNode 5 — Route by Auto-Respond: IF node checking auto_respond field. True path: send the draft_response via Gmail. False path: continue to escalation.\n\nNode 6 — Escalation (False path): Create a task in your helpdesk (Zendesk, Linear, or Asana node). Subject = key_issue. Description = internal_note + full email. Assign based on category: BILLING goes to billing queue, TECHNICAL goes to tech queue, COMPLAINT goes to team lead. Post to Slack with urgency, category, customer name, and link to ticket.\n\nNode 7 — Label and Archive: Apply a Gmail label ('Agent-Handled' or 'Agent-Queued') and mark as read.\n\n---\n\n**Workflow C: Content Repurposing Agent**\n\n*What it does:* You paste a long-form blog post, podcast transcript, or article into a Notion page or Google Doc. The agent reads it and produces: 10 social media posts (LinkedIn and Twitter/X variants), 3 email newsletter snippets, and 1 executive summary. All outputs appear in a structured Notion database entry.\n\n*Business impact:* A 2,000-word blog post should generate weeks of social content. Most businesses let that content sit idle because repurposing takes time. This agent turns every piece of long-form content into a full distribution package automatically.\n\n*n8n Setup:*\n\nNode 1 — Notion Trigger: Watch a specific Notion database for new entries with Status = 'Repurpose Queue.' Required fields: Title, Content (long text), Brand Voice (dropdown: Professional / Conversational / Bold), Audience.\n\nNode 2 — AI Agent (Claude): System prompt:\n\n'You are a social media and content strategist. You specialize in repurposing long-form content into high-performing short-form pieces.\n\nSource content:\nTitle: {{title}}\nBrand voice: {{brand_voice}}\nTarget audience: {{audience}}\nContent: {{content}}\n\nCreate the following outputs and return as valid JSON:\n\n{\n  \"linkedin_posts\": [\n    {\n      \"hook\": \"first line designed to stop scrolling, under 15 words\",\n      \"body\": \"main content, 150-250 words, no hashtags in body\",\n      \"cta\": \"specific call to action\",\n      \"hashtags\": [\"3-5 relevant hashtags\"]\n    }\n    // 5 posts total, each covering a different angle from the source content\n  ],\n  \"twitter_threads\": [\n    {\n      \"thread\": [\"tweet 1\", \"tweet 2\", \"tweet 3\", \"tweet 4\", \"tweet 5\"],\n      \"angle\": \"brief description of the thread angle\"\n    }\n    // 5 threads total\n  ],\n  \"email_snippets\": [\n    {\n      \"subject_line\": \"email subject under 50 characters\",\n      \"preview_text\": \"preview text under 90 characters\",\n      \"body\": \"email body 100-150 words, ends with a link placeholder {{LINK}}\"\n    }\n    // 3 snippets total\n  ],\n  \"executive_summary\": \"3-5 sentence summary of the key insight and why it matters to the audience\"\n}\n\nBrand voice guidelines:\n- Professional: authoritative, data-backed, no slang, no rhetorical questions\n- Conversational: direct, relatable, short sentences, light use of contractions\n- Bold: provocative, challenges assumptions, uses strong language, takes clear positions\n\nDo not repeat the same insight across multiple posts. Each piece of content should cover a distinct point or angle from the source material.'\n\nNode 3 — Parse JSON Output: Use n8n's Set node to extract each section from the JSON.\n\nNode 4 — Create Notion Output Page: Create a new page in a 'Repurposed Content' database with the following structure: one section per content type, formatted as blocks. Use Notion's append-blocks API to add each post as a separate bulleted item with its own section.\n\nNode 5 — Update Status: Update the original Notion entry Status to 'Repurposed' and add a link to the output page.\n\n---\n\n**Workflow D: Invoice Processing Agent**\n\n*What it does:* Invoices arrive via email to a dedicated address. The agent reads the attachment or email body, extracts structured data, cross-references against expected amounts, logs to a Google Sheet, and either marks approved or flags for review.\n\n*n8n Setup:*\n\nNode 1 — Gmail Trigger: Watch invoices@yourdomain.com. Trigger on new emails. Fetch email body, attachments metadata, sender email.\n\nNode 2 — Handle Attachment: If the email has a PDF attachment, use n8n's Extract From File node (PDF parsing is native in n8n 1.x+). Extract raw text from the PDF. If no attachment, use the email body as the document text.\n\nNode 3 — AI Extraction (Claude): System prompt:\n\n'You are an invoice data extraction specialist. Extract the following fields from this invoice document and return them as JSON. Be precise — if a field is not clearly present in the document, set it to null rather than guessing.\n\n{\n  \"vendor_name\": \"exact name as it appears on the invoice\",\n  \"vendor_email\": \"billing contact email if present\",\n  \"invoice_number\": \"invoice or reference number\",\n  \"invoice_date\": \"YYYY-MM-DD format\",\n  \"due_date\": \"YYYY-MM-DD format, or null\",\n  \"line_items\": [\n    {\"description\": \"...\", \"quantity\": number, \"unit_price\": number, \"total\": number}\n  ],\n  \"subtotal\": number,\n  \"tax_amount\": number or null,\n  \"total_amount\": number,\n  \"currency\": \"USD/EUR/GBP/etc\",\n  \"payment_terms\": \"Net 30 / Due on receipt / etc or null\",\n  \"purchase_order_number\": \"PO number if referenced, or null\"\n}\n\nReturn only the JSON object. No preamble, no explanation.'\n\nNode 4 — Validation Checks: Use n8n IF/Switch nodes to check: Is total_amount less than $0 or greater than $50,000 (your configurable threshold)? Is invoice_date more than 90 days in the past? Is vendor_name in your approved vendor list (stored in a reference sheet)? Is this invoice number already logged (VLOOKUP equivalent in Google Sheets)?\n\nNode 5 — Route by Validation: If all checks pass → log to approved sheet. If any flag → log to review sheet and send Slack notification with specific flag reason.\n\nNode 6 — Log to Google Sheets: Append a row with all extracted fields plus: received_date, processing_status (APPROVED/REVIEW), flag_reason, source_email_id.\n\nNode 7 — Reply to Sender: Send a brief automated reply confirming receipt: 'We've received your invoice #[number] for $[amount]. Our records show it's been logged for payment processing. You can expect payment by [due_date].'\n\n---\n\n**Workflow E: Meeting Prep Agent**\n\n*What it does:* Triggered each morning (or 2 hours before each meeting), the agent reads your calendar events for the day, identifies external attendees, researches them and their companies, and creates a briefing document in Notion or Google Docs.\n\n*n8n Setup:*\n\nNode 1 — Schedule Trigger: Run at 7:00 AM daily, or alternatively use a Google Calendar trigger set to fire 2 hours before each event.\n\nNode 2 — Fetch Today's Calendar: Use Google Calendar node. Fetch all events for today. Filter to only external meetings (exclude internal-only events by checking that attendees include at least one email not at your domain).\n\nNode 3 — Extract Attendees: For each meeting, extract external attendee names and email domains. The email domain tells you the company.\n\nNode 4 — Research Loop: For each external attendee, run a sub-workflow:\n  a. Web search for '[Name] [Company]' to find LinkedIn, recent articles, mentions\n  b. Search for '[Company]' recent news via Tavily\n  c. Fetch company website homepage if not already in your database\n\nNode 5 — AI Briefing Generation (Claude): System prompt:\n\n'You are an executive briefing assistant. Create a concise pre-meeting brief.\n\nMeeting details:\n- Title: {{meeting_title}}\n- Time: {{meeting_time}}\n- Duration: {{duration}}\n- Attendees: {{attendee_list}}\n\nResearch gathered:\n{{research_data}}\n\nCreate a briefing with:\n\n**MEETING CONTEXT** (what is this meeting likely about, based on title and attendees)\n\n**ATTENDEE PROFILES**\nFor each external attendee:\n- Name, Title, Company\n- Career background (2-3 sentences)\n- Recent activity or news\n- Potential interests or priorities\n\n**COMPANY SNAPSHOT** (for each external company represented)\n- What they do, size, relevant context\n- Any recent news in last 3 months\n\n**SUGGESTED AGENDA ITEMS** (3-5 specific items based on context)\n\n**POTENTIAL TALKING POINTS** (2-3 ways to build rapport or demonstrate preparation)\n\nKeep total length under 600 words. Be specific. If you cannot find information about an attendee, say so — do not invent details.'\n\nNode 6 — Create Notion/Docs Briefing: Create a new page in your 'Meeting Briefs' Notion database. Set title to '[Date] — [Meeting Title].' Add briefing content. Add a link property pointing to the Google Calendar event.\n\nNode 7 — Deliver Briefing: Send email to yourself (or the meeting host) with the briefing inline. Subject: 'Meeting Brief: [Meeting Title] at [Time].' Alternatively, post to a dedicated Slack channel '#meeting-briefs'."
+    },
+    {
+      "id": 5,
+      "title": "Connecting Claude to Your Business Tools",
+      "content": "The value of an AI agent is entirely determined by what it can connect to. An agent that can only read and write text is a glorified text editor. An agent that can read your Gmail, write to your CRM, post to Slack, and update your spreadsheets is an employee. This section covers the practical reality of building those connections — not just 'you can connect to X' but how to actually do it without breaking things.\n\n**Authentication: The Part Nobody Explains Well**\n\nEvery integration requires authentication — proving to an external service that your agent has permission to access it. There are three types you'll encounter, and understanding them prevents hours of debugging.\n\n*OAuth 2.0* is what Google, HubSpot, Slack, and most modern SaaS tools use. It's the 'Connect with Google' button you've clicked a thousand times. In n8n, you create a Credential for each service. Click New Credential, choose the service type, and n8n will open a browser popup where you log into the service and authorize n8n's access. The resulting token is stored encrypted in n8n's credential store. You don't ever see or manage the token directly.\n\nImportant: use a dedicated service account for agent credentials, not your personal account. Create a support@yourdomain.com Google account or a dedicated HubSpot user called 'AI Agent.' This has two benefits: you can set precise permissions (the agent gets access only to what it needs), and when the agent takes an action, it's attributed to 'AI Agent' in audit logs — not your personal account, which makes reviewing agent activity much easier.\n\n*API Keys* are what Anthropic (Claude), Tavily, Notion (legacy), Airtable, and most developer-oriented tools use. An API key is a long string like 'sk-ant-api03-...' that you paste into n8n's credential store. Get your API key from the tool's settings or developer dashboard. Never paste an API key directly into a workflow node — always store it in n8n credentials and reference it by name. This prevents accidentally sharing your key if you export a workflow template.\n\n*Webhooks* are inbound connections — rather than n8n polling a service to check for new data, the service pushes data to n8n when something happens. Shopify order webhooks, Stripe payment webhooks, Typeform submission webhooks — these are all push-based. n8n generates a unique webhook URL for each trigger. You copy that URL into the external service's webhook settings. When an event occurs, the service sends an HTTP POST to your n8n URL, which triggers the workflow instantly. Webhooks are faster and more efficient than polling.\n\n**Gmail Integration**\n\nn8n's Gmail node covers 95% of what you need. For incoming mail, use the Gmail Trigger node with 'New Email' event. Configure: which label to watch (recommended: create a specific label like 'Agent-Process' and have Gmail filters route relevant emails there — this prevents the agent from processing every email in your inbox), whether to mark as read after triggering, and what fields to extract.\n\nFor outgoing mail, the Gmail node's 'Send Email' action needs: To, Subject, Body (HTML or plain text), and optionally: CC, BCC, Reply-To (set this to a human address so replies don't come back to the agent's inbox), and attachments.\n\nCommon Gmail integration pitfalls: Gmail's API rate limit is 250 quota units per second. For most business volumes this is never a problem. If you're processing hundreds of emails per minute, add delays between operations. Also note: Gmail API doesn't allow sending from addresses you haven't verified — you can only send from addresses associated with the authenticated Google account.\n\n**Slack Integration**\n\nSlack is the easiest integration and should be your notification layer for almost every agent. When agents flag things for human review, Slack is where humans get notified. When agents complete significant tasks, Slack is how you stay informed without checking dashboards.\n\nIn n8n, create a Slack OAuth credential. The Slack node supports: Post Message (to a channel or a specific user via DM), Update Message (for dynamic status messages), Add Reaction, and Create Channel.\n\nFor agent notifications, use Block Kit formatting. Plain text messages get ignored in busy Slack channels. A well-formatted Block Kit message with sections, fields, and action buttons stands out. n8n's Slack node has a Block Kit builder — use it. A good agent notification includes: what the agent did, the key output or finding, and (for review items) action buttons that trigger n8n webhooks to approve or reject.\n\nExample Slack message structure for an invoice flagged for review:\n```\n:warning: Invoice Review Required\n*Vendor:* Acme Supplies\n*Amount:* $12,400 (47% above typical)\n*Invoice #:* INV-2024-0891\n*Flag reason:* Amount exceeds threshold\n[View in Sheet] [Approve] [Reject]\n```\n\nThe [Approve] and [Reject] buttons can be configured as Slack interactive components that POST to an n8n webhook, triggering the next workflow step. This turns Slack into a lightweight approval interface.\n\n**Google Sheets Integration**\n\nGoogle Sheets is the most versatile data store for non-technical operators. It's your agent's database, your dashboard, and your audit log. n8n's Google Sheets node is robust and supports: Append Row, Update Row, Read Row(s), Lookup (equivalent to VLOOKUP), and Delete Row.\n\nKey design decisions for agent-connected sheets:\n\nUse a dedicated 'Queue' sheet and 'Processed' sheet rather than modifying one sheet. The Queue sheet is where humans add inputs for agents to process. The Processed sheet is where agents write results. This separation makes it easy to review what's been processed and prevents accidental overwrites.\n\nAlways include a 'Status' column that agents update: 'Queued' → 'Processing' → 'Done' or 'Error'. This is your real-time visibility into what the agent is doing.\n\nUse column letter references (A, B, C) rather than column names in n8n configurations. Column name lookups fail if someone renames a column — letter references don't.\n\n**Notion Integration**\n\nNotion is ideal for agent outputs that require rich formatting — research briefs, meeting notes, content drafts. n8n's Notion node uses the official Notion API (you'll need to create a Notion Integration at notion.so/my-integrations and share your database with it).\n\nKey operations: Create Page (in a database), Update Page Properties, Append Blocks to Page (for adding content to existing pages), Query Database (filter and sort database entries).\n\nNotion's block-based content structure requires specific formatting. When writing rich content, use the 'Append Block Children' operation with properly formatted block objects. For most agent outputs, the simplest approach is: create the page with basic properties, then append a single 'paragraph' block containing all the content. For more structured outputs, create 'heading_2' blocks for sections and 'bulleted_list_item' blocks for lists.\n\n**HubSpot Integration**\n\nHubSpot is where most SMB CRM work happens. n8n's HubSpot node covers: Contact CRUD, Company CRUD, Deal management, Note creation, and Task creation.\n\nFor lead research agents, the workflow is: receive lead → research → update HubSpot contact with enriched data as a Note. The Note appears in the contact's activity timeline and is visible to any rep who views that contact.\n\nFor customer service agents, the workflow is: receive email → identify or create contact → create HubSpot Conversation or Ticket → log response. This keeps HubSpot as your system of record even when agents are handling the communication.\n\nHubSpot's API rate limit is 100 calls per 10 seconds (Basic tier) or 150/10 seconds (Professional). For batch operations, add rate limiting in n8n. The most common error in HubSpot integrations is 429 (too many requests) — handle this with a retry node set to wait 10 seconds and retry up to 3 times.\n\n**Airtable Integration**\n\nAirtable occupies a middle ground between spreadsheet simplicity and database power. It's excellent as an agent data store when you need relational data — linked records, multiple views, formula fields. n8n's Airtable node supports full CRUD operations via API key or OAuth.\n\nAirtable is particularly well-suited as the backend for customer-facing agents. An e-commerce business might use Airtable to track product inventory, return requests, and customer notes — all readable and writable by service agents.\n\n**Shopify Integration**\n\nFor e-commerce businesses, Shopify integration opens up order management, inventory, and customer service agents. n8n's Shopify trigger supports: New Order, Order Updated, New Customer, New Product. Action nodes support: Create/Update Order, Update Product Inventory, Send Customer Email, and more.\n\nThe most immediately valuable Shopify agent for most e-commerce businesses: an order status inquiry agent. When a customer emails 'Where is my order?' the agent reads the email, extracts the order number (or looks up orders by customer email), fetches the order status and tracking info from Shopify, and replies with exact status and tracking link. This handles the single highest-volume customer service question for e-commerce businesses completely automatically.\n\n**When You Hit Rate Limits**\n\nEvery API has rate limits. When you exceed them, you get 429 errors and your workflow fails. The correct response is not to retry immediately — that makes it worse. Implement exponential backoff: wait 5 seconds, retry. If still failing, wait 15 seconds, retry. If still failing, wait 60 seconds, retry. If still failing after 3 attempts, route to an error handler that logs the failure and notifies you.\n\nIn n8n, implement this with the 'Wait' node and error routing. Set up an 'On Error' path from each API node that routes to a Wait → Retry loop with a maximum iteration count.\n\nFor predictable high-volume operations, pre-emptively add Wait nodes rather than waiting for rate limit errors. Processing 500 HubSpot contacts? Add a 200ms wait between each update. The total extra time is 100 seconds — invisible in a background workflow, but it prevents all rate limit errors."
+    },
+    {
+      "id": 6,
+      "title": "Monitoring, Costs, and Error Handling",
+      "content": "A deployed agent is a production system. Production systems fail. The difference between an agent that quietly corrupts your data for two weeks before you notice and an agent that alerts you within minutes of a problem is entirely in how you set up monitoring. This section covers the operational layer that most guides skip.\n\n**Setting Up Failure Notifications**\n\nEvery workflow in n8n should have error handling configured at two levels: node-level error handling for expected failure modes, and workflow-level error handling for unexpected failures.\n\nWorkflow-level error handling in n8n: Go to workflow settings and set 'On Error' to trigger a specific 'Error Workflow.' Create one Error Workflow that applies to all your agent workflows. This error workflow receives: the workflow name, which node failed, the error message, the timestamp, and the input data that caused the failure. It then posts all of this to a designated Slack channel (#agent-errors) and optionally sends you an email.\n\nYour error Slack channel should be a non-negotiable part of your setup. Every agent failure should post here. Check it daily. Most businesses should aim for fewer than 2 unexpected agent failures per week — if you're seeing more, there's a systemic issue to diagnose.\n\nFor node-level error handling, in n8n you can right-click any node and add 'Error Output' — a second output branch that activates when that specific node fails. Use this for expected failure modes: the web scrape fails because a site is down (route to a 'Use cached data' path), the PDF extraction fails because the attachment is password-protected (route to a 'Flag for manual review' path), the AI API returns an error (route to a retry path).\n\n**Understanding and Monitoring AI Costs**\n\nClaude API pricing as of 2026 works on a token-based model. A 'token' is roughly 0.75 words. Understanding this helps you estimate and control costs.\n\nTypical token usage per workflow run:\n- Customer service triage: ~800 input tokens (email + system prompt) + ~400 output tokens = ~1,200 tokens per email\n- Lead research brief: ~4,000 input tokens (search results + website content + system prompt) + ~600 output tokens = ~4,600 tokens per lead\n- Invoice extraction: ~2,000 input tokens (invoice text + system prompt) + ~300 output tokens = ~2,300 tokens per invoice\n- Content repurposing: ~3,000 input tokens (article + system prompt) + ~1,500 output tokens = ~4,500 tokens per piece\n\nAt Claude Sonnet pricing (~$3/M input, ~$15/M output), the costs per run:\n- Customer service triage: ~$0.008 per email\n- Lead research: ~$0.021 per lead\n- Invoice extraction: ~$0.011 per invoice\n- Content repurposing: ~$0.031 per piece\n\nFor a business running all four agents at moderate volume (200 customer emails/month, 100 leads/month, 50 invoices/month, 20 content pieces/month), the monthly Claude API cost is approximately: $1.60 + $2.10 + $0.55 + $0.62 = **$4.87/month in AI model costs.** The platform cost (n8n at $24/month) is the dominant expense, not the AI.\n\nAt high volume — 5,000 customer emails/month, 500 leads, 200 invoices, 100 content pieces — monthly API cost is roughly $40-60/month. Still very manageable. The point: for most SMBs, AI model costs are not the limiting factor. Quality and reliability are the limiting factors.\n\n**Monitoring Cost Anomalies**\n\nSet a monthly spend cap in your Anthropic account dashboard. Start at 2x your expected cost. Enable email alerts at 50% and 90% of your cap. Check your actual usage weekly for the first month.\n\nThe most common cause of unexpected cost spikes: an agent entering a loop. A workflow with a bug that calls the API in a loop 10,000 times will burn through budget quickly. After setting your cap, the second safeguard is a maximum execution count on any loop in n8n — always set a 'Max Items' or 'Max Retries' on loop nodes.\n\nIn n8n Cloud, you can also view execution history and see the number of nodes run per execution. If you see a workflow running an unexpected number of nodes (normally 8, now suddenly 4,000), investigate immediately.\n\n**Building Visibility Dashboards**\n\nYou need a lightweight dashboard to answer these questions at a glance: What did my agents do today? Are they running? Did anything fail?\n\nThe simplest effective approach: a Google Sheet with one 'Agent Activity Log' tab. Every agent workflow has a final node that appends a row to this sheet with: timestamp, agent name, status (SUCCESS/FAILURE), items processed, execution time (in seconds), notes.\n\nTurn this sheet into a dashboard using Google Sheets' built-in charts: a daily bar chart of items processed per agent, a pie chart of success vs. failure rates, a table of recent failures. This takes 30 minutes to set up and gives you clear operational visibility.\n\nFor more advanced visibility, n8n has a built-in execution log you can view in the Executions panel — every workflow run is logged with status, duration, and node-level detail. Review this weekly.\n\n**The Incident Response Playbook**\n\nWhen an agent breaks in production, follow this sequence. Don't try to debug under pressure without a process.\n\nStep 1 — Contain (5 minutes): Disable the affected workflow immediately. Do not try to fix it while it's running. If it's sending emails or writing to data, every additional run could compound the problem.\n\nStep 2 — Assess damage (10 minutes): Look at what the agent did since it last worked correctly. Review the Google Sheets log. Check sent emails in Gmail. Check any CRM activity attributed to the agent account. How many items were affected? What's the worst-case impact?\n\nStep 3 — Notify stakeholders (5 minutes): If agent failures affect customer-facing processes (support auto-replies, order confirmations), immediately notify your team that the agent is down and that manual handling is required. Don't leave a gap in coverage.\n\nStep 4 — Diagnose (15-30 minutes): Look at the n8n execution log for the first failed run. Identify which node failed. Read the error message. Common causes: API key expired or revoked, external service changed its response format, a sheet was renamed or restructured, an input arrived in an unexpected format, API rate limit exceeded.\n\nStep 5 — Fix and test (variable): Make the fix in n8n. Test with the exact input that caused the failure. Then run end-to-end tests with 5 varied inputs. Only re-enable after successful testing.\n\nStep 6 — Document (10 minutes): Write a one-paragraph incident note in a Notion 'Agent Incidents' page: what happened, why, what you fixed, what you're doing to prevent recurrence. This takes 10 minutes and is invaluable when a similar issue happens 6 months later.\n\n**Logging for Non-Technical Operators**\n\nYour logs don't need to be technical to be useful. What you need to capture — and what every agent workflow should record — is:\n\n1. When did the agent run, and for what input?\n2. What did it decide or output?\n3. Did it complete successfully or fail?\n4. If it failed, what was the last successful step?\n\nIn n8n, the execution log captures all of this automatically at the technical level. For business-level logging, maintain a simple summary in Google Sheets. Each workflow's final 'log' node writes: timestamp, input summary (e.g., 'Invoice from Acme, $4,200'), output summary ('Logged to sheet, flagged for review'), and status.\n\nThis log serves double duty: it's your operational dashboard and your audit trail. When a vendor asks 'Did you receive my invoice?' you have a record. When a customer asks 'Did you reply to my email?' you have a record. When you're doing a monthly agent performance review, you have data."
+    },
+    {
+      "id": 7,
+      "title": "Scaling from 1 Agent to Your Full AI Workforce",
+      "content": "One working agent is a proof of concept. Three working agents is infrastructure. Ten working agents coordinating across your business is a genuine competitive advantage. This section covers how to get from one to ten without the wheels coming off.\n\n**The Scaling Progression**\n\nDon't try to build your full agent workforce in month one. Every business that successfully deploys multiple agents follows roughly the same progression:\n\n*Weeks 1-2:* Deploy one agent for a high-frequency, low-risk task. Get it working reliably. Monitor it closely. Build confidence.\n\n*Weeks 3-4:* Add a second agent. Focus on a different function — if your first was internal (lead research), make your second customer-facing (support triage) or vice versa. You'll learn things from your first agent that make the second faster to build.\n\n*Month 2:* Add two more agents. By now you understand your infrastructure, your common failure modes, and what 'reliable' looks like. Two more agents take half the time the first one did.\n\n*Month 3:* Start connecting agents. The output of the lead research agent feeds into the CRM. The invoice processing agent notifies the same Slack channel that the support triage agent uses. Agents begin to form a coordinated system.\n\n*Month 4 and beyond:* Introduce agent-to-agent handoffs. The support triage agent that flags a complaint creates a task that triggers a customer success workflow. The content repurposing agent output feeds into a scheduling workflow that posts to social media. You now have an agent network.\n\n**Which Functions to Automate First**\n\nNot all business functions are equally ready for agents. Use this prioritization framework: score each candidate function on three dimensions (each 1-5), then add the scores. Highest scores get built first.\n\nFrequency (1=monthly, 5=daily or more often). An agent that runs daily has 30x the impact of one that runs monthly.\n\nRule-clarity (1=highly judgment-intensive, 5=clear rules and criteria). The more clearly you can define the process, the more reliably an agent executes it.\n\nCurrent human cost (1=5 minutes/week total, 5=multiple hours/day). Automating something that takes 10 hours per week has 40x the impact of automating something that takes 15 minutes.\n\nTop scoring categories for most SMBs: \n- Email triage and routing (frequency 5, clarity 4, cost 4 = 13)\n- Lead research and enrichment (frequency 4, clarity 4, cost 4 = 12)\n- Content repurposing (frequency 3, clarity 5, cost 4 = 12)\n- Invoice processing (frequency 3, clarity 5, cost 3 = 11)\n- Report generation (frequency 4, clarity 4, cost 3 = 11)\n- Meeting prep (frequency 4, clarity 3, cost 3 = 10)\n\n**ROI Calculation Framework**\n\nBefore building any agent, calculate the expected ROI. This keeps you focused on high-value work and gives you numbers to share with your team or leadership.\n\nFormula: Monthly ROI = (Hours saved/month × Hourly rate) - (Monthly agent cost)\n\nFor a lead research agent:\n- Volume: 80 leads researched per month\n- Time per lead before agent: 25 minutes\n- Hours saved: 80 × 25/60 = 33.3 hours/month\n- Hourly rate for the person doing research (sales rep, SDR): $35-60/hour\n- Hours saved value: 33.3 × $45 = $1,500/month\n- Agent cost: $24 (n8n) + ~$2 (API costs) = $26/month\n- Monthly ROI: $1,500 - $26 = $1,474/month\n- Annual ROI: $17,688 for one agent\n\nFor customer support triage:\n- Volume: 400 support emails/month\n- 65% handled automatically (260 emails)\n- Time per email before agent (read, categorize, draft, send): 8 minutes\n- Hours saved: 260 × 8/60 = 34.7 hours/month\n- Hourly rate for support staff: $25-40/hour\n- Hours saved value: 34.7 × $30 = $1,040/month\n- Agent cost: $26/month\n- Monthly ROI: $1,014/month\n\nThese aren't dramatic numbers — until you run three or four agents simultaneously. Three agents delivering $1,000-1,500/month in value each produce $36,000-54,000 in annual value from a $312/year infrastructure investment.\n\n**The 90-Day Transformation Roadmap**\n\nHere is a concrete week-by-week roadmap for going from zero agents to a functioning AI operations layer.\n\n*Week 1:* Set up infrastructure. Create n8n Cloud account. Create Anthropic API account and deposit $20. Create a dedicated Gmail address for agent inputs (agents@yourdomain.com or similar). Read this entire playbook. Identify your first agent target.\n\n*Week 2:* Build and deploy Agent 1. Follow the exact workflow instructions in Section 4. Don't customize yet — deploy it exactly as specified, then refine. Monitor every execution manually this week.\n\n*Week 3:* Refine Agent 1. Review outputs. Improve the system prompt based on what you observed. Add any edge case handling you discovered. Let it run with lighter supervision.\n\n*Week 4:* Calculate actual ROI from Agent 1. Build and deploy Agent 2. Start monitoring both.\n\n*Weeks 5-6:* Let Agents 1 and 2 run. Fix issues as they arise. Build familiarity with the error patterns. Identify Agent 3.\n\n*Week 7:* Build Agent 3. This one should take half the time Agent 1 did — you know the platform and the patterns now.\n\n*Week 8:* Build Agent 4 (or first agent-to-agent connection if the opportunity is clear).\n\n*Weeks 9-10:* Stabilization sprint. Review all four agents. Improve monitoring. Create a one-page 'Agent Operations' doc for your team. Calculate cumulative ROI.\n\n*Weeks 11-12:* Plan the next quarter. With four agents running, identify the next highest-value opportunities. Consider your first agentic system — two agents that coordinate.\n\n**Managing Humans and Agents Together**\n\nThe integration challenge isn't technical — it's organizational. When you introduce agents that handle tasks previously done by people, you need to be intentional about the transition.\n\nBe explicit about what the agent does and doesn't do. Your support team should know: 'The agent handles FAQ-type emails automatically. You handle everything else. Here's how to tell which is which.' Ambiguity about responsibility creates gaps where things fall through.\n\nGive humans control over the agents they work with. The support rep should be able to see every email the agent handled and override any response. The sales rep should be able to edit the lead brief before using it. Agents that feel like black boxes generate distrust; agents with clear visibility generate adoption.\n\nMeasure before and after. Track how many items humans handle before you deploy an agent, then after. Share these numbers with the team. '260 emails handled automatically last month — you handled 140' is a concrete, appreciable improvement that makes agents feel like teammates, not threats.\n\nAddress the fear directly. Some team members will worry about job security. The honest truth for SMBs: agents are almost never used to reduce headcount — they're used to handle growth without adding headcount, or to free people to do higher-value work. If that's true for your business, say so explicitly.\n\n**Building Internal Documentation for Agent Improvement**\n\nAgents improve over time when you treat them as systems under continuous improvement — not set-it-and-forget-it software.\n\nFor each agent, maintain a simple document (a Notion page works well) with:\n- Agent name and purpose\n- Current system prompt (the full text)\n- Known edge cases and how they're handled\n- Change log: date, what was changed, why\n- Performance metrics: volume processed, error rate, last review date\n\nThis documentation serves multiple purposes: it lets anyone on your team understand what each agent does and how, it provides context when you need to update an agent months later (why did you write that instruction?), and it creates an institutional memory of how your AI operations system works.\n\n**The Monthly Agent Audit**\n\nSchedule 60 minutes on the last Friday of every month for an agent audit. This is non-negotiable if you want your agent system to stay high-quality as your business and tools evolve.\n\nAudit checklist:\n1. Review execution logs for each agent. What's the error rate? Up or down from last month?\n2. Sample 10 outputs from each agent. Review quality. Has it degraded? Improved?\n3. Check API costs. In line with expectations? Any anomalies?\n4. Review the error log. Any recurring error types that need systematic fixing?\n5. Check integration health. Any API version warnings? Any credentials expiring?\n6. Review the process each agent handles. Has anything changed in the underlying business process that the agent should account for?\n7. Identify improvements. Based on your review, what one change would most improve each agent?\n\nThe monthly audit prevents the 'silent degradation' problem: agents that still run but produce lower-quality outputs because the business has changed, tools have updated, or the system prompt hasn't kept pace with new knowledge.\n\n**The Path to an Autonomous Department**\n\nThe end state to work toward is what I call an 'autonomous department' — a function of your business where agents handle 70-80% of the volume and humans handle the high-stakes remainder. Marketing is usually first to get there: an agent creates content variants, another schedules them, a third monitors engagement and reports. Humans define strategy and approve major initiatives. The execution layer runs continuously and largely without human intervention.\n\nCustomer service is second. Invoice processing and vendor management is third. Lead enrichment and CRM hygiene is fourth. Sales development (not closing — qualifying and researching) is fifth.\n\nEach of these doesn't happen overnight. It happens through the compounding of incremental agents, each one making the process a little more autonomous, until the cumulative effect is a genuinely self-running operation. The businesses that will have this by the end of 2026 started deploying agents in early 2025. The ones that start now will have it by mid-2027. The ones that wait will be paying for it with headcount and overhead while competitors operate leaner.\n\nStart with one agent. Make it work. Add another. The compounding starts the day you deploy something real."
+    }
+  ],
+  "workflows": [
+    {
+      "id": "wf_001",
+      "name": "Lead Research Agent",
+      "description": "Watches a Google Sheet for new company names, researches them via web search and website scraping, and writes a structured briefing back to the sheet.",
+      "n8n_json": {
+        "name": "Lead Research Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "pollTimes": {
+                "item": [
+                  {
+                    "mode": "everyMinute"
+                  }
+                ]
+              },
+              "operation": "appendOrUpdate",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Leads Queue",
+                "mode": "name"
+              },
+              "filtersUI": {
+                "values": [
+                  {
+                    "lookupColumn": "Status",
+                    "lookupValue": "Queued"
+                  }
+                ]
+              }
+            },
+            "id": "trigger-gs",
+            "name": "Watch Leads Sheet",
+            "type": "n8n-nodes-base.googleSheetsTrigger",
+            "typeVersion": 4,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "update",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Leads Queue",
+                "mode": "name"
+              },
+              "columns": {
+                "mappingMode": "defineBelow",
+                "value": {
+                  "Status": "Researching..."
+                }
+              },
+              "where": {
+                "values": [
+                  {
+                    "column": "Row Number",
+                    "value": "={{ $json['Row Number'] }}"
+                  }
+                ]
+              }
+            },
+            "id": "update-status-processing",
+            "name": "Set Status: Researching",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.tavily.com/search",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "bodyParameters": {
+                "parameters": [
+                  {
+                    "name": "api_key",
+                    "value": "={{ $credentials.tavilyApiKey }}"
+                  },
+                  {
+                    "name": "query",
+                    "value": "={{ $json['Company Name'] }} company overview recent news"
+                  },
+                  {
+                    "name": "search_depth",
+                    "value": "advanced"
+                  },
+                  {
+                    "name": "include_answer",
+                    "value": true
+                  },
+                  {
+                    "name": "max_results",
+                    "value": 5
+                  }
+                ]
+              }
+            },
+            "id": "tavily-search",
+            "name": "Web Search (Tavily)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 256,\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"From these search results, extract the official website URL for the company '{{ $('Watch Leads Sheet').item.json['Company Name'] }}'. Return ONLY the URL, nothing else. If you cannot find the URL, return NULL.\\n\\nSearch results: {{ JSON.stringify($json.results) }}\"\n  }]\n}"
+            },
+            "id": "extract-url",
+            "name": "Extract Website URL",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              900,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "GET",
+              "url": "=https://r.jina.ai/{{ $json.content[0].text.trim() }}",
+              "options": {
+                "timeout": 15000
+              }
+            },
+            "id": "fetch-website",
+            "name": "Fetch Website (Jina Reader)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              1120,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1024,\n  \"system\": \"You are a B2B sales research assistant. Create concise, useful pre-call briefings for sales reps. Always be specific — use real details from the research. Never invent information. If you cannot find data for a section, say so.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Create a sales briefing for: {{ $('Watch Leads Sheet').item.json['Company Name'] }}\\n\\nContact (if known): {{ $('Watch Leads Sheet').item.json['Contact Name'] || 'Not specified' }}\\n\\nWeb search results:\\n{{ JSON.stringify($('Web Search (Tavily)').item.json.results) }}\\n\\nWebsite content:\\n{{ $json.body.substring(0, 3000) }}\\n\\nFormat your response with these exact sections:\\n## COMPANY SNAPSHOT\\n(3-4 sentences: what they do, who they serve, approximate size)\\n\\n## RECENT DEVELOPMENTS\\n(2-3 bullet points of news/changes in last 6 months, or note NONE FOUND)\\n\\n## LIKELY PAIN POINTS\\n(2-3 bullets based on industry and size signals)\\n\\n## CONVERSATION STARTERS\\n(2-3 specific questions the rep could open with)\\n\\n## RED FLAGS\\n(anything suggesting poor fit, or write NONE)\"\n  }]\n}"
+            },
+            "id": "generate-brief",
+            "name": "Generate Research Brief",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              1340,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "update",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Leads Queue",
+                "mode": "name"
+              },
+              "columns": {
+                "mappingMode": "defineBelow",
+                "value": {
+                  "Status": "Ready",
+                  "Research Brief": "={{ $json.content[0].text }}",
+                  "Researched At": "={{ new Date().toISOString() }}"
+                }
+              },
+              "where": {
+                "values": [
+                  {
+                    "column": "Row Number",
+                    "value": "={{ $('Watch Leads Sheet').item.json['Row Number'] }}"
+                  }
+                ]
+              }
+            },
+            "id": "write-brief",
+            "name": "Write Brief to Sheet",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+              1560,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "authentication": "oAuth2",
+              "channel": "#sales-briefs",
+              "text": "=:briefcase: Research brief ready for *{{ $('Watch Leads Sheet').item.json['Company Name'] }}*\n\nCheck the leads sheet for the full brief.",
+              "otherOptions": {}
+            },
+            "id": "slack-notify",
+            "name": "Notify Slack",
+            "type": "n8n-nodes-base.slack",
+            "typeVersion": 2.2,
+            "position": [
+              1780,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "Watch Leads Sheet": {
+            "main": [
+              [
+                {
+                  "node": "Set Status: Researching",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Set Status: Researching": {
+            "main": [
+              [
+                {
+                  "node": "Web Search (Tavily)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Web Search (Tavily)": {
+            "main": [
+              [
+                {
+                  "node": "Extract Website URL",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Extract Website URL": {
+            "main": [
+              [
+                {
+                  "node": "Fetch Website (Jina Reader)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Fetch Website (Jina Reader)": {
+            "main": [
+              [
+                {
+                  "node": "Generate Research Brief",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Generate Research Brief": {
+            "main": [
+              [
+                {
+                  "node": "Write Brief to Sheet",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Write Brief to Sheet": {
+            "main": [
+              [
+                {
+                  "node": "Notify Slack",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_002",
+      "name": "Customer Support Triage Agent",
+      "description": "Monitors support inbox, classifies emails, drafts responses, auto-sends routine replies, escalates complex ones to Slack.",
+      "n8n_json": {
+        "name": "Customer Support Triage Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "pollTimes": {
+                "item": [
+                  {
+                    "mode": "everyMinute"
+                  }
+                ]
+              },
+              "filters": {
+                "labelIds": [
+                  "Label_support_queue"
+                ]
+              },
+              "format": "resolved",
+              "downloadAttachments": false
+            },
+            "id": "gmail-trigger",
+            "name": "New Support Email",
+            "type": "n8n-nodes-base.gmailTrigger",
+            "typeVersion": 1,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.subject }}",
+                    "operation": "contains",
+                    "value2": "auto-reply"
+                  },
+                  {
+                    "value1": "={{ $json.subject }}",
+                    "operation": "contains",
+                    "value2": "out of office"
+                  },
+                  {
+                    "value1": "={{ $json.subject }}",
+                    "operation": "contains",
+                    "value2": "automatic response"
+                  }
+                ],
+                "combineOperation": "any"
+              }
+            },
+            "id": "check-auto-responder",
+            "name": "Is Auto-Responder?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 2,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1024,\n  \"system\": \"You are a customer support triage agent. Analyze the email and return ONLY valid JSON with no preamble.\\n\\nCategories: BILLING_QUESTION, TECHNICAL_ISSUE, FEATURE_REQUEST, GENERAL_INQUIRY, COMPLAINT, SPAM\\nUrgency: LOW, MEDIUM, HIGH, CRITICAL\\nSentiment: POSITIVE, NEUTRAL, NEGATIVE, HOSTILE\\n\\nSet auto_respond false if: complaint, urgency HIGH/CRITICAL, sentiment HOSTILE, or you're not confident.\\n\\nReturn format:\\n{\\\"category\\\": \\\"...\\\", \\\"urgency\\\": \\\"...\\\", \\\"sentiment\\\": \\\"...\\\", \\\"key_issue\\\": \\\"one sentence\\\", \\\"auto_respond\\\": true/false, \\\"draft_response\\\": \\\"full email text under 200 words\\\", \\\"internal_note\\\": \\\"context for human reviewer\\\"}\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"From: {{ $('New Support Email').item.json.from.value[0].address }}\\nSubject: {{ $('New Support Email').item.json.subject }}\\nBody: {{ $('New Support Email').item.json.text.substring(0, 2000) }}\"\n  }]\n}"
+            },
+            "id": "ai-triage",
+            "name": "AI Triage (Claude)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              420
+            ]
+          },
+          {
+            "parameters": {
+              "jsCode": "const raw = $input.item.json.content[0].text;\nconst parsed = JSON.parse(raw);\nreturn { json: parsed };"
+            },
+            "id": "parse-triage",
+            "name": "Parse Triage JSON",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              900,
+              420
+            ]
+          },
+          {
+            "parameters": {
+              "conditions": {
+                "boolean": [
+                  {
+                    "value1": "={{ $json.auto_respond }}",
+                    "value2": true
+                  }
+                ]
+              }
+            },
+            "id": "route-by-auto-respond",
+            "name": "Auto-Respond?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 2,
+            "position": [
+              1120,
+              420
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "reply",
+              "messageId": "={{ $('New Support Email').item.json.id }}",
+              "message": "={{ $('Parse Triage JSON').item.json.draft_response }}",
+              "options": {
+                "sendAsPlainText": true
+              }
+            },
+            "id": "send-auto-reply",
+            "name": "Send Auto Reply",
+            "type": "n8n-nodes-base.gmail",
+            "typeVersion": 2.1,
+            "position": [
+              1340,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "authentication": "oAuth2",
+              "channel": "#support-queue",
+              "text": "=:mailbox: *New support email requires attention*\n\n*From:* {{ $('New Support Email').item.json.from.value[0].address }}\n*Category:* {{ $('Parse Triage JSON').item.json.category }}\n*Urgency:* {{ $('Parse Triage JSON').item.json.urgency }}\n*Issue:* {{ $('Parse Triage JSON').item.json.key_issue }}\n*Note:* {{ $('Parse Triage JSON').item.json.internal_note }}\n\n*Draft response ready — review and send:*\n{{ $('Parse Triage JSON').item.json.draft_response }}",
+              "otherOptions": {}
+            },
+            "id": "escalate-slack",
+            "name": "Escalate to Slack",
+            "type": "n8n-nodes-base.slack",
+            "typeVersion": 2.2,
+            "position": [
+              1340,
+              540
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "addLabels",
+              "messageId": "={{ $('New Support Email').item.json.id }}",
+              "labelIds": [
+                "Label_agent_handled"
+              ]
+            },
+            "id": "label-email",
+            "name": "Label: Agent Handled",
+            "type": "n8n-nodes-base.gmail",
+            "typeVersion": 2.1,
+            "position": [
+              1560,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "New Support Email": {
+            "main": [
+              [
+                {
+                  "node": "Is Auto-Responder?",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Is Auto-Responder?": {
+            "main": [
+              [
+                {
+                  "node": "Label: Agent Handled",
+                  "type": "main",
+                  "index": 0
+                }
+              ],
+              [
+                {
+                  "node": "AI Triage (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "AI Triage (Claude)": {
+            "main": [
+              [
+                {
+                  "node": "Parse Triage JSON",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Parse Triage JSON": {
+            "main": [
+              [
+                {
+                  "node": "Auto-Respond?",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Auto-Respond?": {
+            "main": [
+              [
+                {
+                  "node": "Send Auto Reply",
+                  "type": "main",
+                  "index": 0
+                }
+              ],
+              [
+                {
+                  "node": "Escalate to Slack",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Send Auto Reply": {
+            "main": [
+              [
+                {
+                  "node": "Label: Agent Handled",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_003",
+      "name": "Content Repurposing Agent",
+      "description": "Watches Notion database for new content entries, generates social posts, email snippets, and a summary, writes output back to Notion.",
+      "n8n_json": {
+        "name": "Content Repurposing Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "pollTimes": {
+                "item": [
+                  {
+                    "mode": "everyHour"
+                  }
+                ]
+              },
+              "databaseId": "YOUR_NOTION_DATABASE_ID",
+              "filterProperties": [
+                {
+                  "key": "Status",
+                  "type": "select",
+                  "select": {
+                    "equals": "Repurpose Queue"
+                  }
+                }
+              ]
+            },
+            "id": "notion-trigger",
+            "name": "Watch Content Queue",
+            "type": "n8n-nodes-base.notionTrigger",
+            "typeVersion": 1,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "update",
+              "pageId": "={{ $json.id }}",
+              "propertiesUi": {
+                "propertyValues": [
+                  {
+                    "key": "Status",
+                    "type": "select",
+                    "selectValue": "Processing"
+                  }
+                ]
+              }
+            },
+            "id": "set-processing",
+            "name": "Set Status: Processing",
+            "type": "n8n-nodes-base.notion",
+            "typeVersion": 2.2,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 4096,\n  \"system\": \"You are a content strategist specializing in repurposing long-form content. You create high-performing, platform-native short-form content. Each piece must cover a distinct angle. Return ONLY valid JSON.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Title: {{ $('Watch Content Queue').item.json.properties.Title.title[0].plain_text }}\\nBrand Voice: {{ $('Watch Content Queue').item.json.properties['Brand Voice'].select.name }}\\nAudience: {{ $('Watch Content Queue').item.json.properties.Audience.rich_text[0].plain_text }}\\nContent: {{ $('Watch Content Queue').item.json.properties.Content.rich_text[0].plain_text.substring(0, 4000) }}\\n\\nCreate repurposed content as JSON:\\n{\\\"linkedin_posts\\\": [{\\\"hook\\\": \\\"\\\", \\\"body\\\": \\\"\\\", \\\"cta\\\": \\\"\\\", \\\"hashtags\\\": []}],\\\"twitter_threads\\\": [{\\\"thread\\\": [], \\\"angle\\\": \\\"\\\"}],\\\"email_snippets\\\": [{\\\"subject_line\\\": \\\"\\\", \\\"preview_text\\\": \\\"\\\", \\\"body\\\": \\\"\\\"}],\\\"executive_summary\\\": \\\"\\\"}\\n\\n5 linkedin_posts, 5 twitter_threads, 3 email_snippets, 1 executive_summary.\"\n  }]\n}"
+            },
+            "id": "repurpose-content",
+            "name": "Repurpose Content (Claude)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "jsCode": "const raw = $input.item.json.content[0].text;\nconst parsed = JSON.parse(raw);\nreturn { json: parsed };"
+            },
+            "id": "parse-content",
+            "name": "Parse Content JSON",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              900,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "create",
+              "databaseId": "YOUR_OUTPUT_DATABASE_ID",
+              "title": "={{ 'Repurposed: ' + $('Watch Content Queue').item.json.properties.Title.title[0].plain_text }}",
+              "propertiesUi": {
+                "propertyValues": [
+                  {
+                    "key": "Source",
+                    "type": "relation",
+                    "relationValue": "={{ $('Watch Content Queue').item.json.id }}"
+                  },
+                  {
+                    "key": "Status",
+                    "type": "select",
+                    "selectValue": "Ready to Use"
+                  },
+                  {
+                    "key": "Created By",
+                    "type": "select",
+                    "selectValue": "AI Agent"
+                  }
+                ]
+              },
+              "content": "=# LinkedIn Posts\n\n{{ $json.linkedin_posts.map((p, i) => `**Post ${i+1}**\\n**Hook:** ${p.hook}\\n${p.body}\\n${p.cta}\\n${p.hashtags.join(' ')}`).join('\\n\\n---\\n\\n') }}\n\n# Twitter/X Threads\n\n{{ $json.twitter_threads.map((t, i) => `**Thread ${i+1}: ${t.angle}**\\n${t.thread.map((tw, j) => `${j+1}. ${tw}`).join('\\n')}`).join('\\n\\n---\\n\\n') }}\n\n# Email Snippets\n\n{{ $json.email_snippets.map((e, i) => `**Snippet ${i+1}**\\nSubject: ${e.subject_line}\\nPreview: ${e.preview_text}\\n\\n${e.body}`).join('\\n\\n---\\n\\n') }}\n\n# Executive Summary\n\n{{ $json.executive_summary }}"
+            },
+            "id": "create-output-page",
+            "name": "Create Output in Notion",
+            "type": "n8n-nodes-base.notion",
+            "typeVersion": 2.2,
+            "position": [
+              1120,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "update",
+              "pageId": "={{ $('Watch Content Queue').item.json.id }}",
+              "propertiesUi": {
+                "propertyValues": [
+                  {
+                    "key": "Status",
+                    "type": "select",
+                    "selectValue": "Repurposed"
+                  }
+                ]
+              }
+            },
+            "id": "update-source-status",
+            "name": "Update Source Status",
+            "type": "n8n-nodes-base.notion",
+            "typeVersion": 2.2,
+            "position": [
+              1340,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "Watch Content Queue": {
+            "main": [
+              [
+                {
+                  "node": "Set Status: Processing",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Set Status: Processing": {
+            "main": [
+              [
+                {
+                  "node": "Repurpose Content (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Repurpose Content (Claude)": {
+            "main": [
+              [
+                {
+                  "node": "Parse Content JSON",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Parse Content JSON": {
+            "main": [
+              [
+                {
+                  "node": "Create Output in Notion",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Create Output in Notion": {
+            "main": [
+              [
+                {
+                  "node": "Update Source Status",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_004",
+      "name": "Invoice Processing Agent",
+      "description": "Monitors invoice inbox, extracts structured data from email/PDF, validates amounts, logs to Google Sheets, routes for approval.",
+      "n8n_json": {
+        "name": "Invoice Processing Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "pollTimes": {
+                "item": [
+                  {
+                    "mode": "everyMinute"
+                  }
+                ]
+              },
+              "filters": {
+                "labelIds": [
+                  "Label_invoices"
+                ]
+              },
+              "format": "resolved",
+              "downloadAttachments": true
+            },
+            "id": "invoice-email-trigger",
+            "name": "New Invoice Email",
+            "type": "n8n-nodes-base.gmailTrigger",
+            "typeVersion": 1,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "conditions": {
+                "number": [
+                  {
+                    "value1": "={{ $json.attachments?.length || 0 }}",
+                    "operation": "larger",
+                    "value2": 0
+                  }
+                ]
+              }
+            },
+            "id": "has-attachment",
+            "name": "Has PDF Attachment?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 2,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "pdf",
+              "binaryPropertyName": "attachment_0"
+            },
+            "id": "extract-pdf",
+            "name": "Extract PDF Text",
+            "type": "n8n-nodes-base.extractFromFile",
+            "typeVersion": 1,
+            "position": [
+              680,
+              200
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1024,\n  \"system\": \"You are an invoice data extraction specialist. Extract invoice data and return ONLY valid JSON. If a field is not clearly present, set it to null — never guess.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Extract invoice data from this document:\\n\\n{{ $json.text || $('New Invoice Email').item.json.text }}\\n\\nReturn JSON: {\\\"vendor_name\\\": \\\"\\\", \\\"vendor_email\\\": null, \\\"invoice_number\\\": \\\"\\\", \\\"invoice_date\\\": \\\"YYYY-MM-DD\\\", \\\"due_date\\\": null, \\\"line_items\\\": [{\\\"description\\\": \\\"\\\", \\\"quantity\\\": 1, \\\"unit_price\\\": 0, \\\"total\\\": 0}], \\\"subtotal\\\": 0, \\\"tax_amount\\\": null, \\\"total_amount\\\": 0, \\\"currency\\\": \\\"USD\\\", \\\"payment_terms\\\": null, \\\"purchase_order_number\\\": null}\"\n  }]\n}"
+            },
+            "id": "ai-extract",
+            "name": "Extract Invoice Data (Claude)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              900,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "jsCode": "const raw = $input.item.json.content[0].text;\nconst parsed = JSON.parse(raw);\n\n// Validation flags\nconst flags = [];\nconst MAX_INVOICE = 50000;\n\nif (parsed.total_amount > MAX_INVOICE) {\n  flags.push(`Amount $${parsed.total_amount} exceeds threshold $${MAX_INVOICE}`);\n}\nif (parsed.total_amount <= 0) {\n  flags.push('Invalid amount: zero or negative');\n}\n\n// Check if invoice date is more than 90 days old\nif (parsed.invoice_date) {\n  const invoiceDate = new Date(parsed.invoice_date);\n  const daysDiff = (Date.now() - invoiceDate.getTime()) / (1000 * 60 * 60 * 24);\n  if (daysDiff > 90) {\n    flags.push(`Invoice date is ${Math.round(daysDiff)} days old`);\n  }\n}\n\nparsed.flags = flags;\nparsed.needs_review = flags.length > 0;\nparsed.received_at = new Date().toISOString();\nparsed.source_email = $('New Invoice Email').item.json.id;\n\nreturn { json: parsed };"
+            },
+            "id": "validate-invoice",
+            "name": "Validate & Flag",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              1120,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "append",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_INVOICES_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Invoice Log",
+                "mode": "name"
+              },
+              "columns": {
+                "mappingMode": "defineBelow",
+                "value": {
+                  "Received At": "={{ $json.received_at }}",
+                  "Vendor": "={{ $json.vendor_name }}",
+                  "Invoice Number": "={{ $json.invoice_number }}",
+                  "Invoice Date": "={{ $json.invoice_date }}",
+                  "Due Date": "={{ $json.due_date }}",
+                  "Total Amount": "={{ $json.total_amount }}",
+                  "Currency": "={{ $json.currency }}",
+                  "Status": "={{ $json.needs_review ? 'REVIEW REQUIRED' : 'APPROVED' }}",
+                  "Flags": "={{ $json.flags.join('; ') }}",
+                  "Source Email ID": "={{ $json.source_email }}"
+                }
+              }
+            },
+            "id": "log-to-sheet",
+            "name": "Log to Invoice Sheet",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+              1340,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "conditions": {
+                "boolean": [
+                  {
+                    "value1": "={{ $('Validate & Flag').item.json.needs_review }}",
+                    "value2": true
+                  }
+                ]
+              }
+            },
+            "id": "needs-review-check",
+            "name": "Needs Review?",
+            "type": "n8n-nodes-base.if",
+            "typeVersion": 2,
+            "position": [
+              1560,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "authentication": "oAuth2",
+              "channel": "#finance-review",
+              "text": "=:warning: *Invoice Review Required*\n\n*Vendor:* {{ $('Validate & Flag').item.json.vendor_name }}\n*Invoice #:* {{ $('Validate & Flag').item.json.invoice_number }}\n*Amount:* {{ $('Validate & Flag').item.json.currency }} {{ $('Validate & Flag').item.json.total_amount }}\n*Due:* {{ $('Validate & Flag').item.json.due_date || 'Not specified' }}\n\n*Flags:*\n{{ $('Validate & Flag').item.json.flags.join('\\n') }}",
+              "otherOptions": {}
+            },
+            "id": "alert-finance",
+            "name": "Alert Finance Team",
+            "type": "n8n-nodes-base.slack",
+            "typeVersion": 2.2,
+            "position": [
+              1780,
+              200
+            ]
+          }
+        ],
+        "connections": {
+          "New Invoice Email": {
+            "main": [
+              [
+                {
+                  "node": "Has PDF Attachment?",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Has PDF Attachment?": {
+            "main": [
+              [
+                {
+                  "node": "Extract PDF Text",
+                  "type": "main",
+                  "index": 0
+                }
+              ],
+              [
+                {
+                  "node": "Extract Invoice Data (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Extract PDF Text": {
+            "main": [
+              [
+                {
+                  "node": "Extract Invoice Data (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Extract Invoice Data (Claude)": {
+            "main": [
+              [
+                {
+                  "node": "Validate & Flag",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Validate & Flag": {
+            "main": [
+              [
+                {
+                  "node": "Log to Invoice Sheet",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Log to Invoice Sheet": {
+            "main": [
+              [
+                {
+                  "node": "Needs Review?",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Needs Review?": {
+            "main": [
+              [
+                {
+                  "node": "Alert Finance Team",
+                  "type": "main",
+                  "index": 0
+                }
+              ],
+              []
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_005",
+      "name": "Meeting Prep Agent",
+      "description": "Runs each morning, fetches calendar events with external attendees, researches them, creates briefing docs in Notion.",
+      "n8n_json": {
+        "name": "Meeting Prep Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 7 * * 1-5"
+                  }
+                ]
+              }
+            },
+            "id": "schedule",
+            "name": "Daily 7AM (Mon-Fri)",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "getAll",
+              "calendar": {
+                "__rl": true,
+                "value": "primary",
+                "mode": "list"
+              },
+              "timeMin": "={{ new Date().toISOString() }}",
+              "timeMax": "={{ new Date(Date.now() + 86400000).toISOString() }}",
+              "singleEvents": true,
+              "orderBy": "startTime"
+            },
+            "id": "fetch-calendar",
+            "name": "Fetch Today's Events",
+            "type": "n8n-nodes-base.googleCalendar",
+            "typeVersion": 1.3,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "jsCode": "const myDomain = 'yourdomain.com'; // CHANGE THIS\nconst items = $input.all();\nconst externalMeetings = [];\n\nfor (const item of items) {\n  const event = item.json;\n  if (!event.attendees || event.attendees.length === 0) continue;\n  \n  const externalAttendees = event.attendees.filter(a => \n    a.email && !a.email.includes(myDomain) && !a.email.includes('resource.calendar.google.com')\n  );\n  \n  if (externalAttendees.length > 0) {\n    externalMeetings.push({\n      id: event.id,\n      title: event.summary,\n      start: event.start?.dateTime || event.start?.date,\n      end: event.end?.dateTime || event.end?.date,\n      external_attendees: externalAttendees.map(a => ({\n        name: a.displayName || a.email.split('@')[0],\n        email: a.email,\n        company: a.email.split('@')[1]\n      }))\n    });\n  }\n}\n\nreturn externalMeetings.map(m => ({ json: m }));"
+            },
+            "id": "filter-external",
+            "name": "Filter External Meetings",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.tavily.com/search",
+              "sendBody": true,
+              "bodyParameters": {
+                "parameters": [
+                  {
+                    "name": "api_key",
+                    "value": "={{ $credentials.tavilyApiKey }}"
+                  },
+                  {
+                    "name": "query",
+                    "value": "={{ $json.external_attendees.map(a => a.name + ' ' + a.company).join(' AND ') }} company overview"
+                  },
+                  {
+                    "name": "search_depth",
+                    "value": "basic"
+                  },
+                  {
+                    "name": "max_results",
+                    "value": 5
+                  }
+                ]
+              }
+            },
+            "id": "research-attendees",
+            "name": "Research Attendees",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              900,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  },
+                  {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1500,\n  \"system\": \"You are an executive briefing assistant. Create concise, specific pre-meeting briefs. Be specific — use real details. If you cannot find information, say so rather than inventing it.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Meeting: {{ $('Filter External Meetings').item.json.title }}\\nTime: {{ $('Filter External Meetings').item.json.start }}\\nAttendees: {{ JSON.stringify($('Filter External Meetings').item.json.external_attendees) }}\\n\\nResearch:\\n{{ JSON.stringify($json.results) }}\\n\\nCreate a briefing with sections: MEETING CONTEXT, ATTENDEE PROFILES, COMPANY SNAPSHOT, SUGGESTED AGENDA ITEMS, POTENTIAL TALKING POINTS. Under 600 words.\"\n  }]\n}"
+            },
+            "id": "generate-brief",
+            "name": "Generate Meeting Brief",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              1120,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "create",
+              "databaseId": "YOUR_MEETING_BRIEFS_DB_ID",
+              "title": "={{ $('Filter External Meetings').item.json.title + ' — ' + new Date($('Filter External Meetings').item.json.start).toLocaleDateString() }}",
+              "propertiesUi": {
+                "propertyValues": [
+                  {
+                    "key": "Meeting Date",
+                    "type": "date",
+                    "dateValue": "={{ $('Filter External Meetings').item.json.start }}"
+                  },
+                  {
+                    "key": "Status",
+                    "type": "select",
+                    "selectValue": "Ready"
+                  }
+                ]
+              },
+              "content": "={{ $json.content[0].text }}"
+            },
+            "id": "create-notion-brief",
+            "name": "Create Brief in Notion",
+            "type": "n8n-nodes-base.notion",
+            "typeVersion": 2.2,
+            "position": [
+              1340,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "Daily 7AM (Mon-Fri)": {
+            "main": [
+              [
+                {
+                  "node": "Fetch Today's Events",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Fetch Today's Events": {
+            "main": [
+              [
+                {
+                  "node": "Filter External Meetings",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Filter External Meetings": {
+            "main": [
+              [
+                {
+                  "node": "Research Attendees",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Research Attendees": {
+            "main": [
+              [
+                {
+                  "node": "Generate Meeting Brief",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Generate Meeting Brief": {
+            "main": [
+              [
+                {
+                  "node": "Create Brief in Notion",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_006",
+      "name": "Weekly Report Generator",
+      "description": "Every Monday morning, pulls metrics from multiple Google Sheets, generates an executive summary, and emails it to the leadership team.",
+      "n8n_json": {
+        "name": "Weekly Report Generator",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 8 * * 1"
+                  }
+                ]
+              }
+            },
+            "id": "weekly-trigger",
+            "name": "Every Monday 8AM",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "readRows",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_METRICS_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Weekly Metrics",
+                "mode": "name"
+              },
+              "filtersUI": {
+                "values": [
+                  {
+                    "lookupColumn": "Week",
+                    "lookupValue": "Current"
+                  }
+                ]
+              }
+            },
+            "id": "fetch-metrics",
+            "name": "Fetch Weekly Metrics",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1500,\n  \"system\": \"You are a business analyst writing weekly executive reports. Be concise, data-driven, and highlight what matters. Flag anomalies. Suggest one action per key area.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Generate a weekly executive report from this data:\\n{{ JSON.stringify($json) }}\\n\\nInclude: HEADLINE NUMBERS (top 3 metrics with WoW change), WINS (what went well), CONCERNS (what needs attention), THIS WEEK'S PRIORITY (single most important action). Format as clean HTML for email.\"\n  }]\n}"
+            },
+            "id": "generate-report",
+            "name": "Generate Report (Claude)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "send",
+              "toList": [
+                "leadership@yourdomain.com"
+              ],
+              "subject": "=Weekly Report — Week of {{ new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric'}) }}",
+              "message": "={{ $json.content[0].text }}",
+              "options": {
+                "bodyType": "html"
+              }
+            },
+            "id": "send-report",
+            "name": "Email Report",
+            "type": "n8n-nodes-base.gmail",
+            "typeVersion": 2.1,
+            "position": [
+              900,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "Every Monday 8AM": {
+            "main": [
+              [
+                {
+                  "node": "Fetch Weekly Metrics",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Fetch Weekly Metrics": {
+            "main": [
+              [
+                {
+                  "node": "Generate Report (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Generate Report (Claude)": {
+            "main": [
+              [
+                {
+                  "node": "Email Report",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_007",
+      "name": "New Customer Onboarding Agent",
+      "description": "Triggered when a new customer is created in HubSpot. Researches them, creates a personalized onboarding checklist, and assigns a CSM task.",
+      "n8n_json": {
+        "name": "New Customer Onboarding Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "eventsUi": {
+                "eventValues": [
+                  {
+                    "name": "contact.creation"
+                  }
+                ]
+              },
+              "additionalFields": {}
+            },
+            "id": "hubspot-trigger",
+            "name": "New HubSpot Contact",
+            "type": "n8n-nodes-base.hubspotTrigger",
+            "typeVersion": 1,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.tavily.com/search",
+              "sendBody": true,
+              "bodyParameters": {
+                "parameters": [
+                  {
+                    "name": "api_key",
+                    "value": "={{ $credentials.tavilyApiKey }}"
+                  },
+                  {
+                    "name": "query",
+                    "value": "={{ $json.properties.company + ' ' + $json.properties.industry + ' company overview 2024 2025' }}"
+                  },
+                  {
+                    "name": "max_results",
+                    "value": 3
+                  }
+                ]
+              }
+            },
+            "id": "research-customer",
+            "name": "Research Customer Company",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1024,\n  \"system\": \"You are a customer success strategist. Create personalized onboarding plans based on company context.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"New customer: {{ $('New HubSpot Contact').item.json.properties.firstname }} {{ $('New HubSpot Contact').item.json.properties.lastname }} from {{ $('New HubSpot Contact').item.json.properties.company }}\\n\\nCompany research:\\n{{ JSON.stringify($json.results) }}\\n\\nCreate: 1) A 3-sentence company context note for the CSM, 2) 5 personalized onboarding priorities based on their likely use case, 3) One specific question the CSM should ask in the first call. Return as JSON: {\\\"context_note\\\": \\\"\\\", \\\"onboarding_priorities\\\": [], \\\"first_call_question\\\": \\\"\\\"}\"\n  }]\n}"
+            },
+            "id": "generate-onboarding",
+            "name": "Generate Onboarding Plan",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "jsCode": "const raw = $input.item.json.content[0].text;\nreturn { json: JSON.parse(raw) };"
+            },
+            "id": "parse-plan",
+            "name": "Parse Plan",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              900,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "create",
+              "additionalFields": {
+                "note": "={{ $json.context_note + '\\n\\nOnboarding Priorities:\\n' + $json.onboarding_priorities.join('\\n') + '\\n\\nFirst Call Question: ' + $json.first_call_question }}",
+                "contactId": "={{ $('New HubSpot Contact').item.json.id }}"
+              }
+            },
+            "id": "hubspot-note",
+            "name": "Add Note to HubSpot",
+            "type": "n8n-nodes-base.hubspot",
+            "typeVersion": 2,
+            "position": [
+              1120,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "New HubSpot Contact": {
+            "main": [
+              [
+                {
+                  "node": "Research Customer Company",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Research Customer Company": {
+            "main": [
+              [
+                {
+                  "node": "Generate Onboarding Plan",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Generate Onboarding Plan": {
+            "main": [
+              [
+                {
+                  "node": "Parse Plan",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Parse Plan": {
+            "main": [
+              [
+                {
+                  "node": "Add Note to HubSpot",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_008",
+      "name": "Social Media Monitoring Agent",
+      "description": "Daily check for brand mentions and competitor news. Summarizes findings and posts digest to Slack.",
+      "n8n_json": {
+        "name": "Social Monitoring Agent",
+        "nodes": [
+          {
+            "parameters": {
+              "rule": {
+                "interval": [
+                  {
+                    "field": "cronExpression",
+                    "expression": "0 9 * * 1-5"
+                  }
+                ]
+              }
+            },
+            "id": "daily-trigger",
+            "name": "Daily 9AM",
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.tavily.com/search",
+              "sendBody": true,
+              "bodyParameters": {
+                "parameters": [
+                  {
+                    "name": "api_key",
+                    "value": "={{ $credentials.tavilyApiKey }}"
+                  },
+                  {
+                    "name": "query",
+                    "value": "\"Your Brand Name\" OR \"Competitor 1\" OR \"Competitor 2\" news last 24 hours"
+                  },
+                  {
+                    "name": "search_depth",
+                    "value": "advanced"
+                  },
+                  {
+                    "name": "max_results",
+                    "value": 10
+                  },
+                  {
+                    "name": "days",
+                    "value": 1
+                  }
+                ]
+              }
+            },
+            "id": "monitor-mentions",
+            "name": "Search Brand Mentions",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 800,\n  \"system\": \"You monitor brand and competitor news. Be concise and flag anything actionable.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Summarize today's monitoring results. Highlight: 1) anything about our brand, 2) significant competitor news, 3) industry trends. Flag anything requiring immediate action. Keep to 200 words max.\\n\\nResults:\\n{{ JSON.stringify($json.results) }}\"\n  }]\n}"
+            },
+            "id": "summarize",
+            "name": "Summarize (Claude)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "authentication": "oAuth2",
+              "channel": "#market-intelligence",
+              "text": "=:newspaper: *Daily Market Monitor — {{ new Date().toLocaleDateString() }}*\n\n{{ $json.content[0].text }}",
+              "otherOptions": {}
+            },
+            "id": "post-digest",
+            "name": "Post Digest to Slack",
+            "type": "n8n-nodes-base.slack",
+            "typeVersion": 2.2,
+            "position": [
+              900,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "Daily 9AM": {
+            "main": [
+              [
+                {
+                  "node": "Search Brand Mentions",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Search Brand Mentions": {
+            "main": [
+              [
+                {
+                  "node": "Summarize (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Summarize (Claude)": {
+            "main": [
+              [
+                {
+                  "node": "Post Digest to Slack",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_009",
+      "name": "Job Application Screener",
+      "description": "Receives resumes via email, scores candidates against a job description stored in Notion, routes top candidates to ATS.",
+      "n8n_json": {
+        "name": "Job Application Screener",
+        "nodes": [
+          {
+            "parameters": {
+              "pollTimes": {
+                "item": [
+                  {
+                    "mode": "everyHour"
+                  }
+                ]
+              },
+              "filters": {
+                "labelIds": [
+                  "Label_applications"
+                ]
+              },
+              "format": "resolved",
+              "downloadAttachments": true
+            },
+            "id": "resume-email-trigger",
+            "name": "New Application Email",
+            "type": "n8n-nodes-base.gmailTrigger",
+            "typeVersion": 1,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "pdf",
+              "binaryPropertyName": "attachment_0"
+            },
+            "id": "extract-resume",
+            "name": "Extract Resume Text",
+            "type": "n8n-nodes-base.extractFromFile",
+            "typeVersion": 1,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "get",
+              "pageId": "YOUR_JOB_DESCRIPTION_PAGE_ID"
+            },
+            "id": "fetch-jd",
+            "name": "Fetch Job Description",
+            "type": "n8n-nodes-base.notion",
+            "typeVersion": 2.2,
+            "position": [
+              460,
+              480
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-sonnet-4-5\",\n  \"max_tokens\": 1024,\n  \"system\": \"You are a hiring specialist. Evaluate candidates objectively against job requirements. Be specific — cite evidence from the resume.\",\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Job Description:\\n{{ $('Fetch Job Description').item.json.properties.Description.rich_text[0].plain_text }}\\n\\nResume:\\n{{ $('Extract Resume Text').item.json.text.substring(0, 3000) }}\\n\\nReturn JSON: {\\\"candidate_name\\\": \\\"\\\", \\\"overall_score\\\": 1-10, \\\"top_qualifications\\\": [], \\\"gaps\\\": [], \\\"recommendation\\\": \\\"ADVANCE|HOLD|DECLINE\\\", \\\"summary\\\": \\\"2-3 sentence rationale\\\"}\"\n  }]\n}"
+            },
+            "id": "score-candidate",
+            "name": "Score Candidate (Claude)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              680,
+              390
+            ]
+          },
+          {
+            "parameters": {
+              "jsCode": "const raw = $input.item.json.content[0].text;\nreturn { json: JSON.parse(raw) };"
+            },
+            "id": "parse-score",
+            "name": "Parse Score",
+            "type": "n8n-nodes-base.code",
+            "typeVersion": 2,
+            "position": [
+              900,
+              390
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "append",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_APPLICANTS_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Applicants",
+                "mode": "name"
+              },
+              "columns": {
+                "mappingMode": "defineBelow",
+                "value": {
+                  "Applied At": "={{ new Date().toISOString() }}",
+                  "Name": "={{ $json.candidate_name }}",
+                  "Score": "={{ $json.overall_score }}",
+                  "Recommendation": "={{ $json.recommendation }}",
+                  "Summary": "={{ $json.summary }}",
+                  "Top Qualifications": "={{ $json.top_qualifications.join('; ') }}",
+                  "Gaps": "={{ $json.gaps.join('; ') }}"
+                }
+              }
+            },
+            "id": "log-applicant",
+            "name": "Log to Applicants Sheet",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+              1120,
+              390
+            ]
+          }
+        ],
+        "connections": {
+          "New Application Email": {
+            "main": [
+              [
+                {
+                  "node": "Extract Resume Text",
+                  "type": "main",
+                  "index": 0
+                },
+                {
+                  "node": "Fetch Job Description",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Extract Resume Text": {
+            "main": [
+              [
+                {
+                  "node": "Score Candidate (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Fetch Job Description": {
+            "main": [
+              [
+                {
+                  "node": "Score Candidate (Claude)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Score Candidate (Claude)": {
+            "main": [
+              [
+                {
+                  "node": "Parse Score",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Parse Score": {
+            "main": [
+              [
+                {
+                  "node": "Log to Applicants Sheet",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "wf_010",
+      "name": "Error Monitoring Master Workflow",
+      "description": "Catch-all error handler for all other workflows. Logs failures to a sheet and posts to Slack with diagnosis.",
+      "n8n_json": {
+        "name": "Agent Error Handler",
+        "nodes": [
+          {
+            "parameters": {},
+            "id": "error-trigger",
+            "name": "Error Workflow Trigger",
+            "type": "n8n-nodes-base.errorTrigger",
+            "typeVersion": 1,
+            "position": [
+              240,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "method": "POST",
+              "url": "https://api.anthropic.com/v1/messages",
+              "authentication": "genericCredentialType",
+              "genericAuthType": "httpHeaderAuth",
+              "sendHeaders": true,
+              "headerParameters": {
+                "parameters": [
+                  {
+                    "name": "x-api-key",
+                    "value": "={{ $credentials.anthropicApiKey }}"
+                  },
+                  {
+                    "name": "anthropic-version",
+                    "value": "2023-06-01"
+                  }
+                ]
+              },
+              "sendBody": true,
+              "specifyBody": "json",
+              "jsonBody": "={\n  \"model\": \"claude-haiku-20240307\",\n  \"max_tokens\": 300,\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"A workflow error occurred. Error message: {{ $json.error.message }}. Workflow: {{ $json.workflow.name }}. Node: {{ $json.execution.lastNodeExecuted }}. Suggest the most likely cause in one sentence and one action to fix it.\"\n  }]\n}"
+            },
+            "id": "diagnose-error",
+            "name": "Diagnose Error (Claude Haiku)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.2,
+            "position": [
+              460,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "authentication": "oAuth2",
+              "channel": "#agent-errors",
+              "text": "=:red_circle: *Agent Workflow Failed*\n\n*Workflow:* {{ $('Error Workflow Trigger').item.json.workflow.name }}\n*Failed Node:* {{ $('Error Workflow Trigger').item.json.execution.lastNodeExecuted }}\n*Error:* {{ $('Error Workflow Trigger').item.json.error.message }}\n*Time:* {{ new Date().toLocaleString() }}\n\n*Likely cause and fix:*\n{{ $json.content[0].text }}",
+              "otherOptions": {}
+            },
+            "id": "alert-error-slack",
+            "name": "Alert: Error in Slack",
+            "type": "n8n-nodes-base.slack",
+            "typeVersion": 2.2,
+            "position": [
+              680,
+              300
+            ]
+          },
+          {
+            "parameters": {
+              "operation": "append",
+              "documentId": {
+                "__rl": true,
+                "value": "YOUR_ERROR_LOG_SHEET_ID",
+                "mode": "id"
+              },
+              "sheetName": {
+                "__rl": true,
+                "value": "Error Log",
+                "mode": "name"
+              },
+              "columns": {
+                "mappingMode": "defineBelow",
+                "value": {
+                  "Timestamp": "={{ new Date().toISOString() }}",
+                  "Workflow": "={{ $('Error Workflow Trigger').item.json.workflow.name }}",
+                  "Failed Node": "={{ $('Error Workflow Trigger').item.json.execution.lastNodeExecuted }}",
+                  "Error Message": "={{ $('Error Workflow Trigger').item.json.error.message }}",
+                  "AI Diagnosis": "={{ $('Diagnose Error (Claude Haiku)').item.json.content[0].text }}",
+                  "Status": "Open"
+                }
+              }
+            },
+            "id": "log-error",
+            "name": "Log Error to Sheet",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+              900,
+              300
+            ]
+          }
+        ],
+        "connections": {
+          "Error Workflow Trigger": {
+            "main": [
+              [
+                {
+                  "node": "Diagnose Error (Claude Haiku)",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Diagnose Error (Claude Haiku)": {
+            "main": [
+              [
+                {
+                  "node": "Alert: Error in Slack",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          },
+          "Alert: Error in Slack": {
+            "main": [
+              [
+                {
+                  "node": "Log Error to Sheet",
+                  "type": "main",
+                  "index": 0
+                }
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "tool_stack": {
+    "description": "Complete tool stack for a non-technical AI agent infrastructure. Prices as of 2026.",
+    "categories": [
+      {
+        "category": "Workflow Automation (Agent Engine)",
+        "tools": [
+          {
+            "tool": "n8n Cloud",
+            "use_case": "Primary agent workflow builder and runner. Build all automation logic here.",
+            "pricing": "$24/mo (Starter, 2,500 executions) / $60/mo (Pro, 10,000 executions)",
+            "learning_curve": "Medium — 4-6 hours to get comfortable",
+            "verdict": "RECOMMENDED PRIMARY TOOL",
+            "pros": "Best AI agent nodes in class, 400+ integrations, visual canvas, self-hostable option",
+            "cons": "Steeper curve than Zapier, canvas UI can get messy with complex workflows"
+          },
+          {
+            "tool": "Make (Integromat)",
+            "use_case": "Alternative to n8n for data-heavy workflows. Better for complex data transformations.",
+            "pricing": "Free (1,000 ops) / $10.59/mo (10,000 ops) / $18.82/mo (40,000 ops)",
+            "learning_curve": "Medium — similar to n8n",
+            "verdict": "GOOD ALTERNATIVE",
+            "pros": "Very cost-effective at volume, excellent docs, strong data processing",
+            "cons": "AI agent capabilities less mature than n8n, dedicated agent nodes absent"
+          },
+          {
+            "tool": "Zapier",
+            "use_case": "Simple automations and integrations. Limited for true multi-step agents.",
+            "pricing": "$29.99/mo (Starter, 750 tasks) / $73.50/mo (Professional, 2,000 tasks)",
+            "learning_curve": "Easy — 1-2 hours",
+            "verdict": "ONLY IF ALREADY COMMITTED",
+            "pros": "Easiest to learn, widest brand recognition, good existing workflow library",
+            "cons": "Expensive at scale, limited agent logic, no native AI agent node"
+          }
+        ]
+      },
+      {
+        "category": "AI Reasoning Models",
+        "tools": [
+          {
+            "tool": "Anthropic Claude (API)",
+            "use_case": "Primary reasoning engine for all agents. Extraction, drafting, classification, analysis.",
+            "pricing": "Claude Sonnet: ~$3/M input tokens, ~$15/M output tokens. Claude Haiku: ~$0.25/M input, ~$1.25/M output",
+            "learning_curve": "Easy — write system prompts in plain English",
+            "verdict": "RECOMMENDED PRIMARY MODEL",
+            "pros": "Best instruction-following, excellent JSON output reliability, 200K context, minimal hallucination on extraction tasks",
+            "cons": "Slightly slower than GPT-4o for high-volume use cases"
+          },
+          {
+            "tool": "OpenAI GPT-4o (API)",
+            "use_case": "Vision tasks (reading images/charts), code generation, very high-volume where speed matters.",
+            "pricing": "$2.50/M input tokens, $10/M output tokens",
+            "learning_curve": "Easy",
+            "verdict": "USE FOR SPECIFIC USE CASES",
+            "pros": "Best vision capabilities, very fast, strong code generation",
+            "cons": "Slightly less reliable JSON output consistency than Claude for complex schemas"
+          },
+          {
+            "tool": "Google Gemini (API)",
+            "use_case": "Google Workspace-native workflows. 1M token context for very long documents.",
+            "pricing": "Gemini 1.5 Pro: $3.50/M input, $10.50/M output",
+            "learning_curve": "Easy",
+            "verdict": "USE IF GOOGLE-NATIVE",
+            "pros": "Native Google Workspace integration, massive context window, competitive pricing",
+            "cons": "Less mature API ecosystem than Anthropic/OpenAI in 2026"
+          }
+        ]
+      },
+      {
+        "category": "Web Search & Research",
+        "tools": [
+          {
+            "tool": "Tavily API",
+            "use_case": "AI-optimized web search. Powers lead research, competitive monitoring, meeting prep agents.",
+            "pricing": "Free (1,000 searches/mo) / $29/mo (10,000 searches) / $99/mo (100,000 searches)",
+            "learning_curve": "Easy — single API call",
+            "verdict": "RECOMMENDED",
+            "pros": "Built for AI agents, returns clean structured results, recent content, fact-checking mode",
+            "cons": "Smaller index than Google. May miss niche/local content."
+          },
+          {
+            "tool": "Perplexity API",
+            "use_case": "Alternative search with cited sources. Better for research requiring source attribution.",
+            "pricing": "$5/1,000 requests (sonar-medium model)",
+            "learning_curve": "Easy",
+            "verdict": "GOOD ALTERNATIVE TO TAVILY",
+            "pros": "Strong source citation, good for research briefs, conversational query support",
+            "cons": "Slightly more expensive than Tavily for volume"
+          },
+          {
+            "tool": "Jina.ai Reader API",
+            "use_case": "Convert any URL to clean markdown text. Use when web scraping is needed.",
+            "pricing": "Free tier (200 requests/day) / $0.02 per 1,000 tokens beyond free",
+            "learning_curve": "Trivial — prepend r.jina.ai/ to any URL",
+            "verdict": "ESSENTIAL UTILITY",
+            "pros": "Handles JavaScript-rendered pages, strips ads/nav, returns clean readable text",
+            "cons": "Some sites block; handles paywalled content inconsistently"
+          }
+        ]
+      },
+      {
+        "category": "Data Storage & Databases",
+        "tools": [
+          {
+            "tool": "Google Sheets",
+            "use_case": "Agent queues, output logs, reference data, simple databases. Use for everything structured.",
+            "pricing": "Free (Google account) / $6/mo (Google Workspace Starter)",
+            "learning_curve": "Easy — you already know it",
+            "verdict": "PRIMARY DATA LAYER",
+            "pros": "Universal familiarity, excellent n8n integration, visual, shareable, free",
+            "cons": "Not appropriate for >100,000 rows; no real-time push notifications"
+          },
+          {
+            "tool": "Notion",
+            "use_case": "Rich output storage — research briefs, meeting notes, content drafts. Agent-readable knowledge bases.",
+            "pricing": "Free (personal) / $10/mo per user (Plus)",
+            "learning_curve": "Easy — similar to Google Docs",
+            "verdict": "RECOMMENDED FOR RICH CONTENT",
+            "pros": "Great for formatted outputs, can build internal knowledge base, strong API",
+            "cons": "API rate limits (3 requests/second) require care at volume"
+          },
+          {
+            "tool": "Airtable",
+            "use_case": "Relational data needs — linked records, multi-view data, customer records with relationships.",
+            "pricing": "Free (1,000 records/base) / $20/mo per user (Team)",
+            "learning_curve": "Easy-Medium",
+            "verdict": "USE WHEN RELATIONAL DATA IS NEEDED",
+            "pros": "Relational structure, multiple views, strong filtering, good API",
+            "cons": "Gets expensive with multiple users; overkill for simple flat data"
+          }
+        ]
+      },
+      {
+        "category": "Communication & Notifications",
+        "tools": [
+          {
+            "tool": "Slack",
+            "use_case": "Agent notifications, approval requests, human-in-the-loop interfaces, error alerts.",
+            "pricing": "Free (90-day history limit) / $7.25/mo per user (Pro)",
+            "learning_curve": "Easy",
+            "verdict": "PRIMARY NOTIFICATION LAYER",
+            "pros": "Universal adoption, interactive buttons for approvals, channels for different agent types",
+            "cons": "Cost scales with team size; free tier loses message history"
+          },
+          {
+            "tool": "Gmail (Google Workspace)",
+            "use_case": "Incoming triggers (support, invoices, applications), outgoing automated responses.",
+            "pricing": "$6/mo (Google Workspace Starter)",
+            "learning_curve": "Easy",
+            "verdict": "ESSENTIAL",
+            "pros": "Near-universal, n8n integration is excellent, dedicated email addresses for agents",
+            "cons": "Rate limits on sends; domain reputation management needed for high volume"
+          }
+        ]
+      },
+      {
+        "category": "CRM & Business Systems",
+        "tools": [
+          {
+            "tool": "HubSpot",
+            "use_case": "Contact enrichment, deal updates, note creation, task creation, customer segmentation.",
+            "pricing": "Free CRM / Starter $20/mo / Professional $890/mo",
+            "learning_curve": "Easy-Medium",
+            "verdict": "RECOMMENDED CRM FOR SMBs",
+            "pros": "Generous free tier, strong n8n integration, most SMB agents work well with HubSpot API",
+            "cons": "Professional tier is expensive; some webhook features require paid plans"
+          },
+          {
+            "tool": "Shopify",
+            "use_case": "E-commerce agents — order status, inventory checks, customer lookups.",
+            "pricing": "Basic $39/mo / Shopify $105/mo",
+            "learning_curve": "Easy",
+            "verdict": "USE IF E-COMMERCE",
+            "pros": "Excellent webhooks, comprehensive API, strong n8n node",
+            "cons": "Platform-specific — only relevant if you sell on Shopify"
+          }
+        ]
+      },
+      {
+        "category": "Document Processing",
+        "tools": [
+          {
+            "tool": "n8n Extract From File (built-in)",
+            "use_case": "PDF text extraction — invoices, resumes, contracts.",
+            "pricing": "Included in n8n",
+            "learning_curve": "Easy",
+            "verdict": "USE FIRST",
+            "pros": "No additional cost, handles most PDFs, built-in to your workflow",
+            "cons": "Fails on image-based PDFs (scanned documents) — use Textract for those"
+          },
+          {
+            "tool": "AWS Textract (via HTTP Request)",
+            "use_case": "Scanned PDF and image-based document extraction. When n8n built-in fails.",
+            "pricing": "$1.50 per 1,000 pages (detect text) / $15 per 1,000 pages (analyze)",
+            "learning_curve": "Medium — requires AWS account setup",
+            "verdict": "USE FOR SCANNED DOCUMENTS",
+            "pros": "Handles handwritten text, scanned images, tables in PDFs",
+            "cons": "AWS setup complexity; adds cost"
+          }
+        ]
+      }
+    ]
+  },
+  "quick_start": "# Your First Working Agent in 48 Hours\n\nThis guide assumes zero prior experience with n8n or AI APIs. Follow every step exactly. By the end, you will have a working Customer Support Triage Agent that reads emails, classifies them, and drafts responses.\n\n## Hour 1: Account Setup\n\n**Step 1: Create your n8n Cloud account**\nGo to n8n.io. Click 'Start for free.' Create an account with your work email. Verify your email. You'll land in the n8n dashboard — a blank canvas. Don't click anything yet.\n\n**Step 2: Get your Anthropic API key**\nGo to console.anthropic.com. Sign up for an account. Navigate to 'API Keys' in the left sidebar. Click 'Create Key.' Name it 'n8n Agent.' Copy the key — it starts with 'sk-ant-api03-'. **Save this somewhere safe — you will not see it again.**\n\nClick 'Billing' and add a payment method. Set a spending limit of $20. This prevents any surprise charges while you're learning.\n\n**Step 3: Set up your agent email address**\nIn Gmail or Google Workspace, create a label called 'agent-queue.' In Gmail Settings > Filters, create a filter: emails sent to your support address → apply label 'agent-queue.' This is where your agent will watch for new emails.\n\n---\n\n## Hour 2: Connect n8n to Claude\n\n**Step 4: Add your Anthropic credential in n8n**\nIn n8n, click the puzzle piece icon (Credentials) in the left sidebar. Click 'Add Credential.' Search for 'HTTP Header Auth.' Name it 'Anthropic API.' In the 'Name' field enter: x-api-key. In the 'Value' field, paste your API key. Click Save.\n\n**Step 5: Test that Claude works**\nClick 'New Workflow' to create a blank workflow. Click the '+' button in the center of the canvas. Search for 'HTTP Request.' Drag it onto the canvas.\n\nIn the node settings:\n- Method: POST\n- URL: https://api.anthropic.com/v1/messages\n- Authentication: Header Auth → select your Anthropic API credential\n- Send Headers: ON → add header: anthropic-version = 2023-06-01\n- Send Body: ON, Body Type: JSON\n- JSON Body (paste this exactly):\n\n```json\n{\n  \"model\": \"claude-haiku-20240307\",\n  \"max_tokens\": 100,\n  \"messages\": [{\"role\": \"user\", \"content\": \"Say hello in one sentence.\"}]\n}\n```\n\nClick the 'Test' button on the node. You should see a green success indicator and a response containing Claude's hello message. If you see a 401 error, your API key is wrong — re-check Step 4. If you see a 400 error, the JSON body has a formatting issue — copy it again exactly.\n\n**You just confirmed Claude is working inside n8n.** This is the foundation everything else builds on.\n\n---\n\n## Hours 3-4: Build Your First Agent\n\nYou'll build a simplified version of the Customer Support Triage Agent. Simplified means: one AI step, routes to Slack. Perfect for learning — you add complexity once this works.\n\n**Step 6: Create a new workflow and name it**\nCreate a new workflow. Click the workflow name at the top and rename it 'Support Triage Agent v1.'\n\n**Step 7: Add the Gmail Trigger**\nClick '+' to add a node. Search 'Gmail Trigger.' Select 'New Email.'\n\nAuthentication: Click 'Create New' → 'Sign in with Google.' Allow n8n access to Gmail. **Important:** Sign in with your support email account (or personal if testing).\n\nIn the node settings:\n- Label Filter: select the 'agent-queue' label you created\n- Format: Resolved\n- Download Attachments: Off\n\nClick 'Test Step' — n8n will ask you to send a test email to your inbox with the agent-queue label applied. Send one. You should see the email data appear in the node output.\n\n**Step 8: Add the Claude Classification node**\nAdd an HTTP Request node connected to the Gmail trigger. Configure exactly:\n\n- Method: POST\n- URL: https://api.anthropic.com/v1/messages\n- Authentication: your Anthropic credential\n- Headers: anthropic-version = 2023-06-01\n- Body type: JSON\n- JSON Body:\n\n```json\n{\n  \"model\": \"claude-haiku-20240307\",\n  \"max_tokens\": 512,\n  \"system\": \"You are a support email classifier. Analyze the email and return ONLY a JSON object: {\\\"category\\\": \\\"BILLING|TECHNICAL|GENERAL|COMPLAINT|SPAM\\\", \\\"urgency\\\": \\\"LOW|MEDIUM|HIGH\\\", \\\"one_line_summary\\\": \\\"brief description\\\"}\",\n  \"messages\": [{\"role\": \"user\", \"content\": \"Subject: {{ $json.subject }}\\nBody: {{ $json.text }}\"}]\n}\n```\n\nNote the `{{ $json.subject }}` syntax — this is how n8n pulls data from the previous node into this one. $json refers to the output of the previous step.\n\nTest this node. You should see a response with Claude's classification JSON.\n\n**Step 9: Add a Code node to parse the JSON**\nAdd a Code node (search 'Code'). Set language to JavaScript. Paste:\n\n```javascript\nconst responseText = $input.item.json.content[0].text;\nconst parsed = JSON.parse(responseText);\nreturn { json: parsed };\n```\n\nTest it. You should now see the structured fields: category, urgency, one_line_summary.\n\n**Step 10: Add a Slack notification**\nAdd a Slack node connected to the Code node.\n\nAuthentication: Create New → sign in with Slack, allow permissions.\n\nSettings:\n- Resource: Message\n- Operation: Post Message\n- Channel: paste your Slack channel name (e.g., #support-queue)\n- Text:\n```\n:email: New support email\n*From:* {{ $('New Email').item.json.from.value[0].address }}\n*Category:* {{ $json.category }}\n*Urgency:* {{ $json.urgency }}\n*Summary:* {{ $json.one_line_summary }}\n```\n\nTest the Slack node. You should see the formatted message appear in your Slack channel.\n\n**Step 11: Activate the workflow**\nToggle the workflow from 'Inactive' to 'Active' using the toggle in the top-right corner of the canvas. The workflow is now live.\n\nSend a test email to your support address with the agent-queue label. Within 60 seconds, you should see a Slack notification with the classification.\n\n**Congratulations. You have a working AI agent.**\n\n---\n\n## Hours 5-8: Improve and Add Auto-Response\n\nOnce your basic triage is working, add the auto-response capability.\n\n**Step 12: Add an IF node for routing**\nAfter the Code node, add an IF node. Condition: `{{ $json.category }}` is NOT EQUAL TO 'COMPLAINT' AND `{{ $json.urgency }}` is NOT EQUAL TO 'HIGH'.\n\nTrue output = auto-respond path. False output = escalation path (the Slack notification you already have).\n\n**Step 13: Add a second Claude node for drafting**\nOn the True path, add another HTTP Request node (same Claude setup). Update the system prompt to draft a response:\n\n```json\n{\n  \"model\": \"claude-haiku-20240307\",\n  \"max_tokens\": 400,\n  \"system\": \"You are a helpful customer support agent. Write a professional, friendly response to this email. Keep it under 150 words. Sign off as 'Support Team.'\",\n  \"messages\": [{\"role\": \"user\", \"content\": \"Category: {{ $('Parse JSON').item.json.category }}\\nOriginal email: {{ $('New Email').item.json.text }}\"}]\n}\n```\n\n**Step 14: Add Gmail Reply node**\nAdd a Gmail node on the True path:\n- Operation: Reply\n- Message ID: `{{ $('New Email').item.json.id }}`\n- Message: `{{ $json.content[0].text }}`\n\nTest with a real email. The agent should reply automatically to BILLING/TECHNICAL/GENERAL emails and route COMPLAINTs and HIGH urgency to your Slack.\n\n---\n\n## Hour 8-48: Monitor and Refine\n\nFor the first 48 hours, manually review every email the agent processes. Check the Gmail 'Sent' folder to see auto-responses. Check Slack for escalations.\n\nFor each email, ask: Would I have classified it the same way? Is the auto-response appropriate? If not, note the pattern — then update the system prompt to handle that pattern explicitly.\n\nAfter 48 hours of monitoring, you'll have a much better system prompt and high confidence in your agent. At that point: reduce manual review to a daily spot-check.\n\n**What to tweak first:**\n- If the agent is auto-responding to things it shouldn't, make the COMPLAINT and HIGH urgency rules more sensitive\n- If too much is being escalated, the opposite: loosen the escalation criteria\n- If responses are too formal or too casual, adjust the tone guidance in the system prompt\n- If a common email type isn't being categorized right, add a specific example to the system prompt\n\nYou've now built, deployed, and started improving a production AI agent. The pattern you learned here applies to every other agent in this playbook.",
+  "about_author": "Sarah Chen is an AI Operations Consultant who has deployed over 60 AI agent systems for businesses ranging from 3-person startups to 200-person companies across industries including e-commerce, professional services, SaaS, real estate, and healthcare administration.\n\nSarah spent five years in enterprise operations at a Fortune 500 before going independent in 2022, initially helping businesses implement traditional automation (Zapier, Make) and process improvement. When large language models became capable enough for business use in 2023, she pivoted entirely to AI agent deployment and has since become one of the most sought-after non-technical AI operations consultants in the SMB market.\n\nWhat makes Sarah's approach different: she learned to deploy agents without a coding background. She started with n8n tutorials and API documentation, failed a lot in the first six months, and built a rigorous methodology from what actually worked across dozens of real business deployments. Her clients regularly describe her as the person who 'translates AI hype into things that actually run in my business.'\n\nNotable deployments include: a 12-agent content operations system for a 40-person media company that eliminated 3 full-time contractor positions while increasing output by 40%; a customer service agent network for a 200-person e-commerce brand handling 15,000 emails/month with 72% auto-resolution rate; and a due diligence research agent for a boutique M&A advisory firm that reduced research time per target from 8 hours to 45 minutes.\n\nSarah runs a monthly live Q&A for purchasers of this playbook and maintains an active update schedule — every quarter, she reviews the tool stack, updates configurations for API changes, and adds new workflow templates based on patterns from current client work.\n\nHer view on the moment we're in: 'Most SMB owners are 18 months behind where they could be because they're waiting for AI to be simpler, or for their developer friends to have time, or for a plug-and-play solution that doesn't exist yet. The tools are here. The barrier is just knowing what to plug in where. That's what this playbook solves.'"
+}

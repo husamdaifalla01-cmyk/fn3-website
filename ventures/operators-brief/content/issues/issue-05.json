@@ -1,0 +1,54 @@
+{
+  "number": 5,
+  "title": "A restaurant group's experiment: AI for scheduling, menu optimization, and review management — what worked, what didn't",
+  "date": "March 2026",
+  "summary": "A 6-location casual dining group ran a 120-day AI experiment across three operational domains: staff scheduling, menu mix optimization, and online review management. Two of the three delivered measurable ROI. One was quietly abandoned. Total annual benefit from the two that worked: $187K.",
+  "case_study": "Coastal Table Group (name changed) operates 6 casual dining restaurants in the Southeast US. Combined annual revenue: $8.4M. The GM of operations had been tasked by the ownership group to find $200K in annual operational improvements without cutting service quality or staff. He ran three parallel AI experiments.\n\nExperiment 1 — AI Staff Scheduling (WORKED): Their scheduling problem was classic: overstaffed on slow nights, understaffed on event nights, constant last-minute shift scrambles. A scheduling manager was spending 12 hours per week on 6 locations. They implemented a scheduling AI (7shifts AI Scheduling) that ingests: historical cover data by day/daypart, weather forecasts, local events calendar (sports, concerts, festivals), and prior-year seasonality. It generates weekly schedules for all 6 locations in 90 minutes of human review vs. 12 hours of building. Labor cost variance (actual vs. ideal) dropped from 4.2% to 1.1% of revenue. Annual labor cost savings: $126,000.\n\nExperiment 2 — Menu Mix Optimization (WORKED): They had gut-feel pricing and menu engineering. The AI analysis (a custom Claude pipeline fed 18 months of POS data) categorized every menu item by profitability and popularity (standard menu engineering matrix), identified pricing elasticity opportunities, flagged items with high food cost percentage and low popularity, and suggested 12 specific pricing adjustments. They implemented 9 of the 12. Average check increased by $1.40. At 1,800 covers/week across all 6 locations, that's $131K/year in incremental revenue at minimal cost.\n\nExperiment 3 — AI Review Management (ABANDONED): They set up an AI system to monitor and draft responses to Google, Yelp, and TripAdvisor reviews. The responses were accurate, professional, and timely. They also felt hollow. Two GMs independently noticed that response rates from reviewers (the percentage of people who removed or updated a negative review after a response) dropped from 22% to 6% when AI responses went out vs. personalized manager responses. Quantified impact: customer recovery rate collapsed. They shut it down after 60 days.",
+  "implementation_guide": "For AI Scheduling (the implementation worth replicating):\n\nStep 1 — Audit your scheduling variance. Pull the last 12 months of labor data. Calculate your average variance between scheduled hours and ideal hours based on actual covers. If variance is above 3%, scheduling AI has a clear ROI case.\n\nStep 2 — Data inputs setup. Your scheduling AI needs: 18+ months of historical cover data by location and daypart, a local events feed (most cities have public APIs), weather API integration, your labor cost targets by role.\n\nStep 3 — Platform selection. For restaurants: 7shifts AI Scheduling, HotSchedules, or Sling with AI add-on. For 1-5 locations, 7shifts is strongest. For 6+, HotSchedules.\n\nStep 4 — Run in 'suggest' mode for 4 weeks. The AI suggests; managers approve and override. Track the override rate and the outcomes of overrides vs. AI recommendations. After 4 weeks, you'll have enough data to trust the system.\n\nStep 5 — Review weekly, not daily. The ROI in scheduling AI is in blocking 12 hours of weekly management time, not in achieving perfect optimization every day.\n\nFor Menu Engineering:\nFeed your POS data into the menu engineering matrix framework. Have Claude analyze the matrix and cross-reference with your food cost data. The outputs are suggestions — still require GM and chef judgment before implementation.",
+  "numbers": {
+    "scheduling_labor_variance_before_pct": 4.2,
+    "scheduling_labor_variance_after_pct": 1.1,
+    "scheduling_annual_labor_savings": 126000,
+    "scheduling_hours_saved_weekly": 10.5,
+    "menu_avg_check_increase": 1.40,
+    "menu_weekly_covers": 1800,
+    "menu_annual_incremental_revenue": 131040,
+    "review_management_abandoned": true,
+    "review_recovery_rate_before": "22%",
+    "review_recovery_rate_after_ai": "6%",
+    "total_annual_benefit_from_working_experiments": 187000,
+    "implementation_cost_scheduling": 4800,
+    "implementation_cost_menu": 2200,
+    "scheduling_platform_monthly": 890,
+    "payback_period_scheduling_days": 14
+  },
+  "tool_stack": [
+    {
+      "tool": "7shifts AI Scheduling",
+      "use": "Automated schedule generation for 6 locations",
+      "cost": "$890/month (6 locations × $149)"
+    },
+    {
+      "tool": "Toast POS",
+      "use": "Cover data and check average source for scheduling and menu AI",
+      "cost": "$165/month (existing)"
+    },
+    {
+      "tool": "Claude claude-sonnet-4-5 API (custom pipeline)",
+      "use": "Menu engineering analysis — POS data + food cost analysis",
+      "cost": "$45/month (run monthly, not continuously)"
+    },
+    {
+      "tool": "Yelp Fusion API + Google Business API",
+      "use": "Review monitoring (the part that still works; just monitoring, not AI response)",
+      "cost": "Free"
+    },
+    {
+      "tool": "Airtable",
+      "use": "Menu engineering matrix tracking, pricing experiment logging",
+      "cost": "$24/month (existing)"
+    }
+  ],
+  "what_failed": "The review management experiment failure deserves a full explanation because it's a warning for anyone considering AI for customer-facing communication in high-trust service businesses.\n\nThe AI responses weren't bad. They were appropriate, empathetic, and addressed the specific complaint. The failure was subtler: they didn't feel like they came from a person who was embarrassed about the experience. Restaurant review responses work because they're person-to-person. The guest who had a bad experience wants to know a real human read their review and cared.\n\nWhen the GMs compared AI responses to their own handwritten responses on similar complaints, the difference in recovery rate (22% vs. 6%) was stark. The AI responses were performing a template of caring; the manager responses were expressing actual care.\n\nThe lesson isn't that AI can't help with reviews — it's that AI assistance in high-trust B2C contexts requires human voice, not AI voice. A better implementation: AI monitors and flags reviews requiring response, drafts key facts and context, human manager writes the actual response in their own words.",
+  "takeaway": "Not every AI implementation in your business has positive ROI. The restaurant group's willingness to kill an experiment that wasn't working — even one that looked like it was working on the surface — is the mark of operational discipline. Measure what matters: for review management, that's recovery rate, not response time."
+}

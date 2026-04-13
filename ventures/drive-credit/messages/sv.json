@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Hem",
+    "homeDecor": "Hem & Inredning",
+    "wellness": "Wellness",
+    "beauty": "Skönhet",
+    "kitchen": "Kök",
+    "finance": "Ekonomi",
+    "articles": "Artiklar",
+    "subscribe": "Prenumerera",
+    "menu": "Meny",
+    "close": "Stäng"
+  },
+  "footer": {
+    "tagline": "Det Goda Livet, Kurerat.",
+    "explore": "Utforska",
+    "legal": "Juridiskt",
+    "privacy": "Integritetspolicy",
+    "terms": "Användarvillkor",
+    "affiliate_disclosure": "Mintbrooks deltar i Amazon Associates-programmet, ett affiliate-reklamprogram utformat för att ge webbplatser ett sätt att tjäna reklamavgifter genom att annonsera och länka till Amazon.",
+    "copyright": "© {year} Mintbrooks. Alla rättigheter förbehållna."
+  },
+  "article": {
+    "read_time": "{minutes} min läsning",
+    "share": "Dela",
+    "buy_on_amazon": "Köp på Amazon",
+    "check_price": "Kontrollera priset",
+    "view_on_amazon": "Visa på Amazon",
+    "back_to_articles": "Tillbaka till artiklar",
+    "related": "Du kanske också gillar",
+    "updated": "Uppdaterad {date}"
+  },
+  "newsletter": {
+    "heading": "Lev vackert, spendera klokt.",
+    "subheading": "Veckans fynd, kurerade för livet du bygger.",
+    "placeholder": "Din e-postadress",
+    "cta": "Gå med i listan",
+    "privacy_note": "Ingen spam. Avsluta prenumerationen när som helst.",
+    "success": "Du är med! Kolla din inkorg.",
+    "error": "Något gick fel. Försök igen."
+  },
+  "category": {
+    "home_decor": "Hem & Inredning",
+    "wellness": "Wellness",
+    "beauty": "Skönhet & Hudvård",
+    "kitchen": "Kök",
+    "finance": "Pengar & Kredit",
+    "all": "Alla kategorier"
+  },
+  "common": {
+    "back": "Tillbaka",
+    "loading": "Laddar...",
+    "see_all": "Se alla {category}",
+    "products_title": "Produkter vi älskar",
+    "read_more": "Läs mer",
+    "search_placeholder": "Sök på Mintbrooks...",
+    "no_results": "Inga resultat för \"{query}\"",
+    "language": "Språk"
+  },
+  "quiz": {
+    "start": "Ta quizet",
+    "heading": "Hitta din perfekta matchning"
+  }
+}

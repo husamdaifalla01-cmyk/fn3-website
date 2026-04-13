@@ -1,0 +1,51 @@
+{
+  "slug": "car-equity-secret-v1",
+  "pillar": "Education",
+  "utmUrl": "https://afflat3e3.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=27618&c=918277&a=769106&k=D083BC665DB0EC415E23BE307260F10E&l=36989&utm_source=tiktok&utm_medium=video&utm_campaign=car-equity-secret-v1",
+  "success": false,
+  "assets": {
+    "education-reveal": {
+      "sceneId": "education-reveal",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1/education-reveal_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in modern apartment living room, soft warm lighting. Hispanic millennial woman, late 20s, dark hair, professional casual attire, warm skin tone, expressive eyes. infographic overlay showing car value converting to credit line: car icon → arrow → Visa card icon → $10,000, Hispanic millennial woman, late 20s, dark hair, professional casual attire, warm skin tone, expressive eyes. excited expression pointing at phone screen, mouth slightly open in surprise. head slightly tilted, engaged forward lean, eyes bright and questioning, active listening posture. flattering portrait compression, shallow depth of field, separated subject, 85mm portrait lens, f/1.8 shallow depth of field, subject sharp background bokeh, eye level camera angle, rule of thirds composition. broad soft lighting, large diffuse source on lit side, gentle gradients, editorial quality, flattering wrap. 5000K color temperature, neutral balanced illumination. warm golden tones, soft cream whites, rich mid-tones, lifestyle warmth. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. modern aspirational lifestyle, warm color grading, authentic documentary style, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    },
+    "cta": {
+      "sceneId": "cta",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1/cta_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in clean white surface, soft diffused lighting, premium product feel. Hispanic millennial woman, late 20s, dark hair, professional casual attire, warm skin tone, expressive eyes. smartphone showing credit card approval screen, green checkmark, $7,500 credit limit, Visa logo. head slightly tilted, engaged forward lean, eyes bright and questioning, active listening posture. natural human eye perspective, balanced spatial relationship, 50mm standard lens, f/11 deep focus entire scene sharp, top down camera angle, centered symmetry composition. butterfly lighting, frontal overhead key, soft double shadow under nose, beauty lighting, smooth even skin illumination. 5500K color temperature, neutral balanced illumination. warm golden tones, soft cream whites, rich mid-tones, lifestyle warmth. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. modern aspirational lifestyle, warm color grading, authentic documentary style, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    }
+  },
+  "remotionConfig": {
+    "assetMap": {
+      "education-reveal": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1/education-reveal_regen3.png",
+      "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1/cta_regen3.png"
+    },
+    "sceneOrder": [
+      "education-reveal",
+      "cta"
+    ],
+    "totalDurationFrames": 480,
+    "compositionId": "VideoContentCreator",
+    "outputDir": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/car-equity-secret-v1"
+  },
+  "errors": {
+    "hook": "400: Setting negativePrompt is no longer supported."
+  },
+  "summary": {
+    "totalScenes": 3,
+    "generated": 2,
+    "approved": 0,
+    "regenned": 2,
+    "failed": 1,
+    "totalTime": 471361,
+    "directorApprovalRate": 0
+  }
+}

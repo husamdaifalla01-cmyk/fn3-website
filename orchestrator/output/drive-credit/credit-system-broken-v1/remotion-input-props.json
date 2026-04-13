@@ -1,0 +1,13 @@
+{
+  "assetMap": {
+    "problem-statement": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/problem-statement_regen3.png",
+    "solution-reveal": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/solution-reveal_regen3.png",
+    "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/credit-system-broken-v1/cta_regen3.png"
+  },
+  "sceneOrder": [
+    "problem-statement",
+    "solution-reveal",
+    "cta"
+  ],
+  "totalDurationFrames": 630
+}

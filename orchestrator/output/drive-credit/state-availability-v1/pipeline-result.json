@@ -1,0 +1,51 @@
+{
+  "slug": "state-availability-v1",
+  "pillar": "Urgency",
+  "utmUrl": "https://afflat3e3.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=27618&c=918277&a=769106&k=D083BC665DB0EC415E23BE307260F10E&l=36989&utm_source=tiktok&utm_medium=video&utm_campaign=state-availability-v1",
+  "success": false,
+  "assets": {
+    "state-check": {
+      "sceneId": "state-check",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1/state-check_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in casual home environment, warm ambient light. diverse young adult, early 30s, modern professional casual, relatable everyday appearance. phone screen showing state selector with user selecting their state, green checkmark appearing: \"✓ Texas — You qualify!\", diverse young adult, early 30s, modern professional casual, relatable everyday appearance. tapping phone screen with anticipation, then big smile at result. heightened alertness, direct eye contact with viewer, forward camera presence, compressed space. natural human eye perspective, balanced spatial relationship, 50mm standard lens, f/1.8 shallow depth of field, subject sharp background bokeh, slight high camera angle, rule of thirds composition. natural window light from left, soft diffused daylight, authentic real-world quality, honest illumination, slight blue-white cast. 6000K color temperature, cool daylight quality. warm golden tones, soft cream whites, rich mid-tones, lifestyle warmth. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. balanced lifestyle aesthetic, warm neutral grading, authentic real-world environments, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    },
+    "cta": {
+      "sceneId": "cta",
+      "filePath": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1/cta_regen3.png",
+      "model": "nano-banana-pro-preview",
+      "promptUsed": "Set in clean minimal background, phone centered, bright accent lighting. diverse young adult, early 30s, modern professional casual, relatable everyday appearance. phone screen showing \"Check your state now →\" button with map thumbnail, urgency badge \"Available now in your state\". heightened alertness, direct eye contact with viewer, forward camera presence, compressed space. natural human eye perspective, balanced spatial relationship, 50mm standard lens, f/11 deep focus entire scene sharp, top down camera angle, centered symmetry composition. butterfly lighting, frontal overhead key, soft double shadow under nose, beauty lighting, smooth even skin illumination. 5500K color temperature, neutral balanced illumination. warm golden tones, soft cream whites, rich mid-tones, lifestyle warmth. vertical 9:16 mobile-first framing, subject positioned upper two-thirds. cinematic quality, high detail, highly detailed, intricate sharp details, professional color grading, photorealistic, smooth, 4K. physically correct lighting, coherent shadows, natural skin texture, accurate depth of field. balanced lifestyle aesthetic, warm neutral grading, authentic real-world environments, consistent visual style, same color grading throughout, consistent motivated lighting direction, same color temperature across scenes., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances., sharp in-focus subject, 8K quality equivalent, clean image without compression artifacts. Avoid: uniform AI smoothness, plastic skin, impossible shadows, uniform sharpness across all distances.",
+      "critiqueScore": 0,
+      "critiquePass": false,
+      "regenCount": 3
+    }
+  },
+  "remotionConfig": {
+    "assetMap": {
+      "state-check": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1/state-check_regen3.png",
+      "cta": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1/cta_regen3.png"
+    },
+    "sceneOrder": [
+      "state-check",
+      "cta"
+    ],
+    "totalDurationFrames": 270,
+    "compositionId": "VideoContentCreator",
+    "outputDir": "/Users/husamahmed/FN3/orchestrator/output/drive-credit/state-availability-v1"
+  },
+  "errors": {
+    "hook": "400: Setting negativePrompt is no longer supported."
+  },
+  "summary": {
+    "totalScenes": 3,
+    "generated": 2,
+    "approved": 0,
+    "regenned": 2,
+    "failed": 1,
+    "totalTime": 345853,
+    "directorApprovalRate": 0
+  }
+}

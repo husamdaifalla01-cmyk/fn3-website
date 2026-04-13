@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "homeDecor": "Dom & Wystrój",
+    "wellness": "Wellness",
+    "beauty": "Uroda",
+    "kitchen": "Kuchnia",
+    "finance": "Finanse",
+    "articles": "Artykuły",
+    "subscribe": "Subskrybuj",
+    "menu": "Menu",
+    "close": "Zamknij"
+  },
+  "footer": {
+    "tagline": "Dobre Życie, Kuratowane.",
+    "explore": "Odkryj",
+    "legal": "Prawne",
+    "privacy": "Polityka prywatności",
+    "terms": "Warunki użytkowania",
+    "affiliate_disclosure": "Mintbrooks uczestniczy w Programie Partnerskim Amazon, programie reklamy afiliacyjnej zaprojektowanym w celu zapewnienia witrynom możliwości zarabiania opłat reklamowych poprzez reklamowanie i linkowanie do Amazon.",
+    "copyright": "© {year} Mintbrooks. Wszelkie prawa zastrzeżone."
+  },
+  "article": {
+    "read_time": "{minutes} min czytania",
+    "share": "Udostępnij",
+    "buy_on_amazon": "Kup na Amazon",
+    "check_price": "Sprawdź cenę",
+    "view_on_amazon": "Zobacz na Amazon",
+    "back_to_articles": "Powrót do artykułów",
+    "related": "Może ci się również spodobać",
+    "updated": "Zaktualizowano {date}"
+  },
+  "newsletter": {
+    "heading": "Żyj pięknie, wydawaj mądrze.",
+    "subheading": "Tygodniowe odkrycia, kuratowane dla życia, które budujesz.",
+    "placeholder": "Twój adres e-mail",
+    "cta": "Dołącz do listy",
+    "privacy_note": "Bez spamu. Wypisz się w dowolnym momencie.",
+    "success": "Jesteś w środku! Sprawdź swoją skrzynkę odbiorczą.",
+    "error": "Coś poszło nie tak. Spróbuj ponownie."
+  },
+  "category": {
+    "home_decor": "Dom & Wystrój",
+    "wellness": "Wellness",
+    "beauty": "Uroda & Pielęgnacja",
+    "kitchen": "Kuchnia",
+    "finance": "Pieniądze & Kredyt",
+    "all": "Wszystkie kategorie"
+  },
+  "common": {
+    "back": "Wstecz",
+    "loading": "Ładowanie...",
+    "see_all": "Zobacz wszystkie {category}",
+    "products_title": "Produkty, które kochamy",
+    "read_more": "Czytaj więcej",
+    "search_placeholder": "Szukaj na Mintbrooks...",
+    "no_results": "Brak wyników dla \"{query}\"",
+    "language": "Język"
+  },
+  "quiz": {
+    "start": "Rozwiąż quiz",
+    "heading": "Znajdź swoje idealne dopasowanie"
+  }
+}

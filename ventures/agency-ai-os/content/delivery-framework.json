@@ -1,0 +1,178 @@
+{
+  "title": "Client Delivery Framework for AI Services",
+  "subtitle": "A systematic playbook for delivering AI projects from kickoff to completion — without chaos, scope creep, or disappointed clients",
+  "word_count_approx": 1800,
+  "phases": [
+    {
+      "phase": "Week 1",
+      "name": "Discovery & Technical Audit",
+      "objective": "Understand the client's current state completely before writing a single line of configuration. This week is about listening, not building.",
+      "activities": [
+        {
+          "activity": "Kickoff call (90 minutes)",
+          "description": "Cover: business goals, definition of success, key stakeholders, current pain points, technical environment, timeline constraints. Record the call. Assign yourself a note-taker or use a transcription tool. The notes from this call are the source of truth for the entire engagement.",
+          "output": "Kickoff notes document shared with client within 24 hours"
+        },
+        {
+          "activity": "Technical environment audit",
+          "description": "Access client systems. Document what tools they're using, how data flows between them, what APIs are available, what data quality looks like, and where the integration pain points are. Don't assume anything from the pre-sale conversation — systems are always messier than described.",
+          "output": "Technical environment document"
+        },
+        {
+          "activity": "Stakeholder mapping",
+          "description": "Who are the actual users of what you're building? Who is the economic buyer vs. the day-to-day contact? Who are the skeptics? Understanding the internal politics early prevents delivery problems later. A system that works technically but that three team members have decided not to use is a failed delivery.",
+          "output": "Stakeholder map with communication preferences noted"
+        },
+        {
+          "activity": "Data quality assessment",
+          "description": "AI systems are only as good as the data they run on. This week, assess: Is the client's knowledge base complete and accurate? Is their CRM data clean enough to power automations? Are their documents in formats you can parse? Surface data quality issues now, not in week 3 when you're trying to train a model on garbage.",
+          "output": "Data quality report with remediation plan"
+        }
+      ],
+      "qa_checkpoint": "Before moving to Week 2: Does the client agree with your assessment of the current state? Have you identified all technical blockers? Are there any data quality issues that will delay the project? Confirm in writing.",
+      "common_pitfalls": [
+        "Rushing through discovery because you're eager to build",
+        "Not getting access to all systems before the call ends — chase credentials proactively",
+        "Failing to document decisions made on the kickoff call — memory diverges fast"
+      ]
+    },
+    {
+      "phase": "Week 2",
+      "name": "Strategy & Architecture",
+      "objective": "Design the solution before building it. Present the plan to the client and get explicit approval before implementation begins.",
+      "activities": [
+        {
+          "activity": "Solution architecture document",
+          "description": "Based on week 1 findings, document the proposed solution: system components, data flows, integration points, user journey (how a person will interact with what you build), and what's out of scope. This document prevents scope creep by making the boundaries explicit from the start.",
+          "output": "Solution architecture document (shared with client for sign-off)"
+        },
+        {
+          "activity": "Success metrics definition",
+          "description": "Agree in writing on how success will be measured. Be specific: not 'improved customer service' but 'ticket deflection rate ≥50% by day 60.' Without agreed metrics, clients can retrospectively redefine success. With them, you have a defensible project outcome.",
+          "output": "Success metrics document with client signature"
+        },
+        {
+          "activity": "Scope document and change order policy",
+          "description": "Formalize what's in scope. Explain how out-of-scope requests will be handled: they're welcome, they're quoted, they're approved before work begins. This conversation is easier in week 2 than in week 5 when the client asks for three new features the day before launch.",
+          "output": "Scope document with change order policy acknowledged"
+        },
+        {
+          "activity": "Tool and access setup",
+          "description": "Provision all accounts, access, and tools needed for the build phase. Don't start week 3 waiting for credentials. Chase anything outstanding from week 1 this week.",
+          "output": "All required access confirmed and documented"
+        }
+      ],
+      "qa_checkpoint": "Before moving to Week 3: Has the client reviewed and approved the solution architecture? Are success metrics agreed in writing? Is all required access available? Red flag: client approval is vague or verbal. Require written sign-off (email confirmation is fine) before proceeding.",
+      "common_pitfalls": [
+        "Skipping the architecture document and jumping straight to building",
+        "Not defining success metrics — this is the most common source of client dissatisfaction",
+        "Leaving access issues unresolved — they will cause delays in weeks 3–4"
+      ]
+    },
+    {
+      "phase": "Weeks 3–4",
+      "name": "Build & Configure",
+      "objective": "Build the core system. This is where most of the technical work happens. Communicate progress regularly — silence during build phases creates client anxiety.",
+      "activities": [
+        {
+          "activity": "Core system build",
+          "description": "Build according to the approved architecture. Document as you go — configuration notes, integration credentials, decision rationale. If you have to come back to this system in 6 months, your documentation should be the only context you need.",
+          "output": "Working system at end of week 4"
+        },
+        {
+          "activity": "Weekly progress update",
+          "description": "Send a brief written update every Friday covering: what was completed this week, what's planned for next week, any blockers or decisions needed from client. Keep it under 300 words. This is not a status meeting — it's a written record that keeps clients calm and informed without interrupting your focus.",
+          "output": "Written weekly update (email or Notion page)"
+        },
+        {
+          "activity": "Mid-build check-in (end of week 3)",
+          "description": "A 30-minute call to show the client early work and confirm direction. Show something real — even if it's not complete. Seeing progress builds confidence. Catching misalignment at week 3 is far less painful than catching it at week 5.",
+          "output": "Client confirmation that direction is correct"
+        },
+        {
+          "activity": "Integration build",
+          "description": "Connect the system to the client's existing tools. Test each integration with real data, not test data. Integration issues are the most common source of last-minute delays.",
+          "output": "All integrations live and tested"
+        }
+      ],
+      "qa_checkpoint": "End of week 4 QA: Does the system do what the architecture said it would? Does it integrate correctly with all required systems? Have you tested with real data? What are the known edge cases and how does the system handle them?",
+      "common_pitfalls": [
+        "Building in silence and presenting a finished product the client hasn't seen develop — increases rejection risk",
+        "Testing only with ideal/clean data — real client data is always messier",
+        "Allowing scope changes during build without a change order — this is how projects become unprofitable"
+      ]
+    },
+    {
+      "phase": "Week 5",
+      "name": "Testing & Training",
+      "objective": "QA the system thoroughly with real data and real users. Train the client team before launch so they feel confident, not dependent.",
+      "activities": [
+        {
+          "activity": "User acceptance testing (UAT)",
+          "description": "Have the client's actual users test the system with real tasks. Observe where they get confused. Observe where the system fails. Document everything. Fix critical issues before launch; document non-critical ones as backlog for post-launch iteration.",
+          "output": "UAT results document; critical issue list; backlog list"
+        },
+        {
+          "activity": "Edge case testing",
+          "description": "Specifically test: what happens when inputs are unexpected, when integrations are slow or unavailable, when data is incomplete or malformed? An AI system that fails ungracefully erodes trust fast. Build and test failure modes explicitly.",
+          "output": "Edge case test results; failure mode handling documented"
+        },
+        {
+          "activity": "Staff training session",
+          "description": "A 60–90 minute training session covering: how to use the system day-to-day, how to handle exceptions, how to update content or settings (within the scope of what they should manage), and what to do when something looks wrong. Record this session. First-day-on-job hires should be able to watch the recording and get up to speed.",
+          "output": "Training session delivered + recording + written guide"
+        },
+        {
+          "activity": "Documentation delivery",
+          "description": "System documentation delivered this week: architecture overview, integration notes, user guide, FAQ, and a 'what to do when X happens' troubleshooting guide. This documentation is as much a part of the deliverable as the system itself.",
+          "output": "Complete documentation package delivered"
+        }
+      ],
+      "qa_checkpoint": "Launch readiness checklist: All UAT critical issues resolved? Staff trained and confident? Documentation complete? Client sign-off on pre-launch checklist? If any answer is no, do not launch. A soft launch with known issues is worse than a delayed launch with a clean system.",
+      "common_pitfalls": [
+        "Rushing to launch because the build is done — UAT and training are not optional extras",
+        "Training only the technical contact and not the actual daily users",
+        "Delivering documentation after launch rather than before"
+      ]
+    },
+    {
+      "phase": "Week 6+",
+      "name": "Launch & Ongoing Management",
+      "objective": "Launch cleanly, monitor actively, and establish the rhythm for ongoing engagement.",
+      "activities": [
+        {
+          "activity": "Monitored launch",
+          "description": "Be available on launch day. Check in at end of day 1 and end of week 1. Review any error logs or performance metrics. Address issues within 24 hours in the first month. The first 30 days of a live system are the highest-risk period.",
+          "output": "Launch day report; week 1 monitoring summary"
+        },
+        {
+          "activity": "30-day performance review",
+          "description": "At day 30, review the agreed success metrics. Are they being met? If not, what's the gap and what adjustments are needed? Document this review. It's both a QA checkpoint and a value-demonstration moment for the client.",
+          "output": "30-day performance report with metrics vs. targets"
+        },
+        {
+          "activity": "Ongoing communication cadence",
+          "description": "Establish the regular communication rhythm for ongoing engagements: weekly async update (Friday email), monthly call (30–60 minutes), quarterly review (90 minutes). The exact cadence depends on engagement type, but there should always be one. Clients who don't hear from you assume things aren't working.",
+          "output": "Communication calendar established and shared"
+        }
+      ],
+      "qa_checkpoint": "At 30 days: Are success metrics on track? Is the client team actually using the system? Are there any technical issues outstanding? What's the plan for month 2?",
+      "common_pitfalls": [
+        "Disappearing after launch — the first 30 days are when most issues surface",
+        "Not reviewing success metrics at 30 days — this is the most important signal of client satisfaction",
+        "Letting the communication cadence slip — silence is interpreted as neglect"
+      ]
+    }
+  ],
+  "scope_change_protocol": {
+    "title": "Handling Scope Changes",
+    "content": "Scope changes are normal. What's not normal is handling them without a process. Every scope change should follow this protocol:\n\n1. Client requests something not in the original scope. You acknowledge it: 'That's a great addition. Let me assess what it would take to include that.'\n2. You assess: time required, impact on current timeline, cost.\n3. You deliver a written change order: 'Adding X will require Y hours and will move the launch date by Z days. The additional investment is $[amount]. Please confirm to proceed.'\n4. Client confirms in writing before any work begins.\n5. The change order is filed alongside the original agreement.\n\nThe only exception: very small requests (under 30 minutes of work) that are clearly within the spirit of the original scope can be absorbed with a note. But document them — accumulated small requests add up to scope creep.\n\nThe phrase that protects you: 'I want to make sure we can deliver this at the quality it deserves — let me get you a proper assessment of what it would take.'"
+  },
+  "client_communication_cadence": {
+    "title": "Standard Communication Cadence by Engagement Type",
+    "project": "Weekly Friday update (email, <300 words) + mid-project check-in call + launch day support",
+    "retainer": "Weekly Friday update + monthly 30-minute call + quarterly 90-minute strategy review",
+    "fractional": "Weekly async Loom (10 min) + monthly 90-minute strategy call + quarterly board summary",
+    "notes": "All key decisions made on calls are confirmed in a follow-up email within 24 hours. This creates a paper trail that prevents 'I thought we agreed...' conversations."
+  }
+}

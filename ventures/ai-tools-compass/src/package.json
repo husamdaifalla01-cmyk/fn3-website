@@ -1,0 +1,17 @@
+{
+  "name": "ai-tools-compass-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly content generation scripts for AI Tools Compass",
+  "scripts": {
+    "generate:all": "ts-node generate-content.ts --all",
+    "generate:accountants": "ts-node generate-content.ts --site=accountants",
+    "generate:real-estate": "ts-node generate-content.ts --site=real-estate",
+    "generate:healthcare": "ts-node generate-content.ts --site=healthcare"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.0"
+  }
+}

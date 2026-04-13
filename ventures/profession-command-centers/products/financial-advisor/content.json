@@ -1,0 +1,199 @@
+{
+  "title": "The Financial Advisor AI Command Center",
+  "subtitle": "Automate the 60% of Your Practice That Isn't Advising",
+  "tagline": "Every prompt compliant-ready. Every workflow tested by advisors.",
+  "price": 127,
+  "how_to_use": "This Command Center is built for RIAs and fee-based advisors who want to reclaim the hours currently consumed by writing, research, and administrative communication. The prompts in this guide are designed with compliance awareness built in — they prompt you to insert your required disclosures and avoid specific, unsubstantiated performance claims. However, you must have your compliance officer or OSJ review any client-facing material before sending. These prompts accelerate production; your compliance review is still required. Start with Section 1 (Client Meeting Intelligence) to see immediate time savings in your next week of client meetings. Then build outward. The advisors who see the greatest results treat this as a permanent operating system, not a one-time resource.",
+  "sections": [
+    {
+      "title": "Section 1: Client Meeting Intelligence System",
+      "content": "The average advisor spends 45-90 minutes preparing for each client meeting — researching the portfolio, reviewing notes, building the agenda, and drafting follow-up. AI compresses this to 10-15 minutes without reducing quality. In fact, AI-assisted preparation produces more thorough, more personalized meetings because it forces you to articulate what you know about each client and surfaces gaps in your knowledge before you walk in the room.",
+      "subsections": [
+        {
+          "title": "Pre-Meeting Research Prompts",
+          "content": "Prepare for any client meeting in 15 minutes.",
+          "type": "framework",
+          "items": [
+            "COMPLETE PRE-MEETING BRIEF: 'I am preparing for a client meeting with [client name(s)] on [date]. Here is what I know about them: [paste client profile — age, retirement timeline, risk tolerance, goals, current portfolio allocation, last meeting summary, any life events]. Generate a pre-meeting brief that includes: (1) 5 key agenda items based on their current situation, (2) 3 questions I should ask to deepen my understanding of their current life and goals, (3) any market developments from the past 90 days that are specifically relevant to their portfolio, (4) one potential planning opportunity I may have missed, and (5) any time-sensitive items requiring action. Format as a one-page brief.'",
+            "NEWS AND EVENTS CONTEXT: 'I am meeting with clients who have the following portfolio and concerns: [describe]. What economic news, market events, and policy changes from the past 30-60 days are most relevant to bring up in this meeting? Specifically, I want to address: [list 1-3 specific topics they care about — Social Security, interest rates, tax law, healthcare costs, etc.]. Give me the key facts with enough context to explain them clearly, plus the relevance to their specific situation.'",
+            "ANNIVERSARY REVIEW PREPARATION: 'I am preparing for the annual review meeting with [client name], who has been a client for [X] years. We last met on [date]. Their plan goals are: [list]. Progress since last review: [describe any changes in portfolio, milestones reached, or goals that shifted]. Generate: (1) a structured agenda for a 60-minute annual review, (2) the key progress metrics to present, (3) any adjustments worth discussing, and (4) 3 discovery questions to make sure their goals and priorities have not changed in the past year. Note any life events that should prompt a planning conversation (upcoming retirement, college enrollment, estate planning age, etc.).'",
+            "NEW CLIENT ONBOARDING PREPARATION: 'I am meeting with a new prospect/new client named [name], age [age]. They came to me through [referral source/how they found me]. What I know about them: [describe their situation — income, assets, family, goals, concerns]. Generate a structured first meeting agenda that: (1) sets the tone for a long-term advisory relationship, (2) asks the right discovery questions without overwhelming them, (3) demonstrates my expertise without lecturing, and (4) moves naturally toward next steps. Include: the 8 most important questions to ask a new client and what each question is designed to reveal.'"
+          ]
+        },
+        {
+          "title": "Meeting Notes to Action Items",
+          "content": "After the meeting, turn raw notes into actionable next steps in minutes.",
+          "type": "framework",
+          "items": [
+            "NOTES TO ACTION ITEMS: 'Here are my raw notes from a client meeting with [name] on [date]: [paste notes]. Extract and organize into: (1) action items for me with deadlines, (2) action items for the client with deadlines, (3) topics that need follow-up in the next meeting, (4) any compliance or planning flags I should be aware of, and (5) key personal details or life events mentioned that I should note in their CRM. Format as a clean, bulleted summary.'",
+            "POST-MEETING FOLLOW-UP LETTER: 'Write a professional post-meeting follow-up letter to [client name] following our meeting on [date]. Topics we discussed: [list]. Decisions made: [list]. Action items agreed upon: [list — who does what by when]. Next meeting: [date/time]. The letter should: feel personal and not like a boilerplate, confirm what was decided clearly, and reinforce the trust I am building with them. Add a placeholder for required disclosures at the bottom. Length: 250-350 words.'"
+          ]
+        },
+        {
+          "title": "Annual Review Preparation Workflows",
+          "content": "A complete workflow for preparing, running, and following up on annual reviews efficiently.",
+          "type": "action-steps",
+          "items": [
+            "ANNUAL REVIEW AGENDA GENERATOR: 'Generate a customized annual review agenda for client [name]. Their profile: [age, risk tolerance, goals, current portfolio summary, last year's key changes]. The agenda should cover: (1) personal life update — what has changed in their life, work, family, health, (2) goals review — are we on track, have priorities shifted, (3) portfolio performance and positioning review, (4) financial plan progress update, (5) tax and estate planning housekeeping, (6) new opportunities or concerns for the coming year, and (7) action items. Include suggested time allocations for a 60-minute meeting.',",
+            "PERFORMANCE REVIEW NARRATIVE: 'Write a performance review narrative for my client [name] covering [time period]. Portfolio return: [X]%. Benchmark return: [Y]%. Key contributors to performance: [list]. Key detractors: [list]. Changes made to the portfolio during the period: [list]. Important: do NOT make promises about future performance. Focus on explaining what happened and why, tying decisions back to the client's stated goals and risk tolerance. Avoid comparison language that sounds like bragging. This narrative will be reviewed by compliance before distribution. Suggest where to insert standard performance disclosure language.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 2: Financial Plan Writing Engine",
+      "content": "A comprehensive written financial plan is one of the most valuable deliverables an advisor can provide — and one of the most time-consuming to produce. These prompts help you generate the narrative components of financial plans in a fraction of the time, freeing you to focus on the strategic analysis that actually requires your expertise.",
+      "subsections": [
+        {
+          "title": "Executive Summary Generation",
+          "content": "The executive summary is the most read section of any financial plan. These prompts produce clear, compelling summaries tailored to each client.",
+          "type": "framework",
+          "items": [
+            "COMPREHENSIVE PLAN EXECUTIVE SUMMARY: 'Write a financial plan executive summary for clients [names], aged [ages]. Their situation: [describe — income, assets, debts, goals, timeline, family situation]. Key plan recommendations: [list 4-6 key recommendations from the plan]. The executive summary should: (1) open with their specific situation and goals in 2-3 sentences, (2) summarize the current state of their finances clearly, (3) highlight the 4-5 most important actions in the plan, (4) give them a sense of what their financial future looks like if they follow the plan, and (5) be written in plain, accessible language — no jargon. Length: 400-500 words. This will be the first thing they read, so make it compelling and personal.'",
+            "GOAL-BASED PLAN SECTION — RETIREMENT: 'Write the retirement planning section of a financial plan for [client name], aged [age], with a target retirement age of [age]. Current retirement savings: $[amount]. Current savings rate: $[amount/year]. Projected need at retirement (pre-calculated): $[amount]. The section should explain: (1) where they stand today vs. where they need to be, (2) the specific strategies recommended to close the gap, (3) the projected outcome if they follow the plan, and (4) key milestones and decision points along the way. Avoid specific performance projections. Use ranges and assumptions I will specify: [growth rate assumption, inflation assumption]. Add a placeholder for the Monte Carlo simulation results.'",
+            "GOAL-BASED PLAN SECTION — EDUCATION: 'Write the college funding section of a financial plan for [client name]. Children: [names and ages]. Target colleges: [state school / private / unknown]. Estimated annual cost in today's dollars: $[amount]. Current 529 balance: $[amount]. Monthly contribution: $[amount]. Write a section that: (1) explains the education funding gap clearly, (2) describes the 529 strategy and its tax advantages, (3) addresses the \"what if they don't go to college\" question, and (4) places this goal in context of their other financial priorities. Language should be reassuring — these parents are likely anxious about costs.'"
+          ]
+        },
+        {
+          "title": "Risk Tolerance Explanation Prompts",
+          "content": "Translating a risk questionnaire score into a meaningful conversation is harder than it looks. These prompts produce clear, client-friendly explanations.",
+          "type": "framework",
+          "items": [
+            "RISK SCORE TO PLAIN LANGUAGE: 'My client [name] scored a [conservative/moderate conservative/moderate/moderate aggressive/aggressive] on our risk questionnaire. Their score was driven mainly by: [describe key answers — age, investment experience, reaction to hypothetical losses, timeline]. Write a 2-paragraph explanation I can include in their plan that: (1) explains what their risk tolerance means for how their portfolio will be constructed, (2) describes what they can expect to experience during a significant market downturn (in percentage terms — I will verify), and (3) confirms that this allocation aligns with their stated goals and timeline. Tone: clear, reassuring, adult — not condescending.'",
+            "EXPLAINING VOLATILITY TO A NERVOUS CLIENT: 'Write a plain-language explanation of market volatility for a client [name] who is [age] and [just retired / 10 years from retirement / significantly invested in equities]. They are anxious about recent market movement of [X]%. The explanation should: (1) normalize volatility as a permanent feature of investing, (2) put the current movement in historical context, (3) explain why their specific plan is designed to handle volatility, (4) describe what, if anything, we are doing in response, and (5) reassure without making any performance promises. Under 350 words. Avoid the phrase \"don't worry\" — show the reasoning instead.'"
+          ]
+        },
+        {
+          "title": "Retirement Income Strategy Descriptions",
+          "content": "Retirement income planning is the most complex and most valued service an advisor provides. These prompts help you articulate the strategy clearly.",
+          "type": "framework",
+          "items": [
+            "RETIREMENT INCOME PLAN NARRATIVE: 'Write the retirement income distribution section of a financial plan for [client name], retiring at age [age]. Income sources: Social Security $[amount/month] starting at age [age], pension $[amount/month if applicable], portfolio withdrawal rate of [X]% from $[portfolio size], [any other sources]. Monthly income need: $[amount]. Write a narrative that: (1) shows how the income sources work together, (2) explains the sequencing strategy (which accounts to draw from first and why), (3) addresses longevity risk and how the plan handles it, (4) explains how inflation will be managed, and (5) describes the guardrails or adjustment rules if spending needs to change. Tone: confident and clear — this client needs to feel secure.',",
+            "SOCIAL SECURITY OPTIMIZATION EXPLANATION: 'Write an explanation for [client name], aged [age], of the Social Security claiming analysis I have done. My recommendation: [claim at age X vs Y]. The analysis shows: [describe the break-even analysis and any spousal benefit considerations]. Write this in plain language that explains: (1) why the timing of claiming matters, (2) the break-even concept in simple terms, (3) why I am recommending [age X], and (4) what would change the recommendation. This is not advice I am delivering in this document — include a note that final decisions should be made in consultation with me and reviewed by their tax advisor. Under 350 words.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 3: Prospect Conversion System",
+      "content": "Acquiring a new client costs 5-25x more than retaining an existing one. But you still need a pipeline. These prompts give you a complete prospect conversion system — from discovery meeting follow-up through the fee conversation — built for the way high-net-worth prospects actually make decisions.",
+      "subsections": [
+        {
+          "title": "Discovery Meeting Follow-Up Sequences",
+          "content": "The follow-up after a discovery meeting is often where the deal is won or lost.",
+          "type": "framework",
+          "items": [
+            "POST-DISCOVERY FOLLOW-UP EMAIL: 'Write a follow-up email to a prospect [name] after our discovery meeting on [date]. Key things I learned about them: [list 3-4 specific things — their goals, concerns, current situation, or things they mentioned about their current advisor]. I want to: (1) thank them for their time genuinely, (2) demonstrate that I was listening by referencing something specific, (3) give them one piece of value related to their specific situation — not a sales pitch, (4) outline the next step, and (5) let them know what to expect from my proposal. Do not pressure. Tone: confident advisor who has done this thousands of times. Under 250 words.'",
+            "PROPOSAL DELIVERY EMAIL: 'Write the cover email for delivering a financial planning proposal to prospect [name]. The proposal covers: [list 3-4 services you are proposing]. Your fee: [fee structure]. Key differentiators of your approach: [list your actual differentiators]. The email should: (1) frame the proposal as a summary of what you heard them say they needed, (2) highlight 2-3 points in the proposal they will find most relevant to their stated goals, (3) suggest a time to review it together rather than just leaving them to read it alone, and (4) express genuine enthusiasm for potentially working together — not desperation. Under 200 words.'",
+            "FOLLOW-UP AFTER NO RESPONSE: 'Write a follow-up email to a prospect [name] who has not responded in [X] days after receiving my proposal. I want to: (1) not be pushy or needy, (2) add a small piece of relevant value (market observation, resource, relevant article), (3) check in on whether they have questions about the proposal, and (4) open the door for a conversation about their timeline. If they are not ready, I want them to think of me when they are. Tone: confident, low-pressure, genuinely helpful. Under 150 words.'"
+          ]
+        },
+        {
+          "title": "Financial Pain Point Exploration Framework",
+          "content": "Prospects do not hire advisors because of impressive credentials. They hire advisors because they feel understood. These prompts help you surface the real concerns.",
+          "type": "framework",
+          "items": [
+            "DISCOVERY QUESTION FRAMEWORK: 'Generate a discovery meeting question guide for a prospect [name], aged approximately [age], who [describe what you know about them — entrepreneur/corporate exec/pre-retiree/recent liquidity event/etc.]. The questions should uncover: (1) their current financial situation and who manages it now, (2) what they are not happy about with their current situation or advisor, (3) what a successful financial life looks like to them specifically, (4) what keeps them up at night financially, (5) what has prevented them from getting better advice before, and (6) their decision-making process — who else is involved, what their timeline is. Include 15 questions, organized by category, with a note on what each question reveals.'",
+            "PAIN POINT VALIDATION EMAIL: 'During our discovery meeting, [prospect name] mentioned that [describe the specific concern or pain — \"I feel like my current advisor doesn't call me unless I call first\" / \"I have no idea if I can actually retire at 60\" / \"I know I'm paying too much in taxes but nobody has addressed it\"]. Write a follow-up email that: (1) demonstrates I heard and understood this concern specifically, (2) briefly explains how my approach addresses this exact pain point, and (3) invites them to continue the conversation. Do not solve the problem in the email — create curiosity and schedule the next conversation. Under 200 words.'"
+          ]
+        },
+        {
+          "title": "Fee Conversation Scripts",
+          "content": "The fee conversation is where more advisory relationships end before they start. These scripts make it confident, clear, and client-centered.",
+          "type": "framework",
+          "items": [
+            "EXPLAINING AUM FEES: 'Write a script for explaining my AUM fee of [percentage]% to a prospect who asks what I charge. The script should: (1) state the fee clearly and directly — no dancing around it, (2) translate it to dollars based on their expected portfolio size, (3) reframe the fee as what they get vs. what they pay (comprehensive planning, investment management, and ongoing advisory access), (4) position the fee as an investment in a financial system that should more than pay for itself, and (5) invite them to ask any questions. Under 250 words. Tone: confident, not defensive.'",
+            "FEE OBJECTION — \"YOU'RE MORE EXPENSIVE THAN MY CURRENT ADVISOR\": 'Write a response to a prospect who says my fee is higher than their current advisor or a competing RIA. I charge [my fee]. They currently pay [their fee or a competitor's fee]. My response should: (1) acknowledge the difference directly and without embarrassment, (2) ask a clarifying question about what services they currently receive for that fee, (3) compare what I include vs. what they describe (financial planning, tax coordination, estate coordination, etc.), (4) shift the frame from cost to value and outcome, and (5) not put down their current advisor. Under 300 words.'",
+            "FLAT FEE / RETAINER EXPLANATION: 'Write a script for explaining my flat-fee financial planning model of $[amount]/year (or $[amount] one-time plan fee). The prospect is accustomed to AUM-based pricing. I need to explain: (1) why I charge this way and what they get, (2) how this aligns my interests with theirs vs. an asset-based fee, (3) what the flat fee includes, and (4) how this compares to the percentage-based alternative at their asset level. Keep it conversational and direct. Under 250 words.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 4: Client Education Content",
+      "content": "Educated clients make better decisions, panic less during volatility, stay longer, and refer more. An advisor who produces consistent client education content is not just adding value — they are building an inoculation system against the noise that causes clients to do the wrong thing at the wrong time. These prompts give you the client communication toolkit for every market environment and life situation.",
+      "subsections": [
+        {
+          "title": "Market Volatility Communication Templates",
+          "content": "When markets fall, clients need calm, rational perspective from their advisor immediately. These prompts prepare that communication before the phone starts ringing.",
+          "type": "framework",
+          "items": [
+            "MARKET DECLINE COMMUNICATION (MODERATE — 5-15% DROP): 'Write a client communication email for a [X]% market decline over the past [time period]. My clients are [describe general profile — primarily pre-retirees / a mix of ages / primarily retirees]. I want to: (1) acknowledge the decline without minimizing it, (2) put it in historical context (how does this compare to past corrections — I will verify the statistics), (3) explain what we are doing and why (staying the course / rebalancing / tax-loss harvesting), (4) differentiate between the noise in the news and what actually matters for their long-term plan, and (5) invite them to call me if they are concerned. Important: do NOT make any promises about market recovery. Subject line options: provide 4. Under 350 words.'",
+            "MARKET DECLINE COMMUNICATION (SEVERE — 20%+ DROP): 'Write a client communication for a significant market downturn of [X]%. This is a more serious communication that requires more substance. Sections: (1) What is happening and why (I will provide the macro context), (2) Historical perspective on bear markets and recovery, (3) What their specific financial plan was designed to handle — and why this scenario was contemplated, (4) What actions we are taking or recommending, (5) An honest acknowledgment that uncertainty is real while maintaining a long-term perspective. This letter will be reviewed by compliance before sending. Include placeholders for required disclosures. Length: 500-600 words. Tone: measured authority — the calm voice in a stormy room.'",
+            "VOLATILITY PROACTIVE CALL SCRIPT: 'Write a phone call script for proactively calling a client [name] during market volatility. I want to reach out before they call me worried. The call should: (1) open by checking in on them personally before discussing markets, (2) acknowledge the current environment matter-of-factly, (3) connect their specific situation to why their plan is built for this, (4) ask how they are feeling about things — not assume, (5) address any specific concerns they raise, and (6) close by reaffirming the plan and the relationship. Script both my lines and common client responses. This should sound like a caring advisor, not a damage-control call.'"
+          ]
+        },
+        {
+          "title": "Tax and Estate Planning Client Education",
+          "content": "Tax and estate planning conversations are where advisors create enormous value — if they can communicate the concepts clearly. These prompts help.",
+          "type": "framework",
+          "items": [
+            "TAX-LOSS HARVESTING EXPLANATION: 'Write a plain-language explanation of tax-loss harvesting for my client [name]. They are in the [tax bracket]% federal bracket. Their portfolio has both gains and losses this year. I want to explain: (1) what tax-loss harvesting is in simple terms, (2) how the wash-sale rule works, (3) the potential tax savings in their specific situation (I will fill in the numbers), and (4) why we are doing this now vs. waiting until year-end. Note that they should review with their CPA as this has tax consequences. Under 300 words. No jargon.',",
+            "ROTH CONVERSION OPPORTUNITY EXPLANATION: 'Write an explanation for [client name] of a potential Roth conversion opportunity. Their situation: [current age, tax bracket this year, expected future tax bracket, IRA balance, other income sources]. I want to explain: (1) how a Roth conversion works, (2) why this year may be a favorable time to convert [amount] (lower income year, before RMDs, after retirement, etc.), (3) the tax bill they would owe, (4) the long-term benefit if their assumptions about tax rates hold, and (5) the trade-offs. Remind them to consult with their CPA before executing. Under 350 words.',",
+            "BENEFICIARY DESIGNATION REMINDER: 'Write a client communication prompting [client name] to review their beneficiary designations. They have not updated their designations in [X] years. Life changes since then: [describe — marriage, divorce, children born, parent deceased, etc.]. The communication should: (1) explain why beneficiary designations matter more than people realize, (2) tell them which accounts to check (IRAs, 401ks, life insurance, annuities), (3) explain what happens if they never update them (the cautionary scenario — estate goes to the wrong person, goes through probate, etc.), and (4) give them specific next steps. Under 250 words. Urgent but not alarming.'"
+          ]
+        },
+        {
+          "title": "Medicare and Social Security Education",
+          "content": "Pre-retirees are desperate for clear guidance on Medicare and Social Security. Advisors who speak confidently on these topics build enormous trust.",
+          "type": "framework",
+          "items": [
+            "MEDICARE ENROLLMENT PRIMER: 'Write a Medicare enrollment overview for a client [name] who is turning 65 in [month/year]. They are currently covered by [employer health insurance / COBRA / marketplace plan / none]. I need to explain: (1) Part A vs. Part B vs. Part C vs. Part D — the basics, (2) when they need to enroll to avoid the late enrollment penalty, (3) the interaction between employer coverage and Medicare, (4) the IRMAA surcharge and whether they may be subject to it based on their income, and (5) next steps and who to contact. Recommend they also work with a Medicare specialist for final decisions. Under 400 words.',",
+            "SOCIAL SECURITY BASICS EXPLAINER: 'Write a Social Security basics overview for a pre-retiree client [name], aged [age]. Key points to cover: (1) when they can claim (62, FRA at [age], or 70), (2) the impact of claiming early vs. late on their monthly benefit, (3) how it interacts with their other retirement income sources, (4) spousal benefit options if applicable, (5) the earnings test if they plan to work while claiming, and (6) how Social Security income is taxed. Note that a detailed analysis will be done in their financial plan. Under 400 words. Plain language only.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 5: Compliance-Ready Communication",
+      "content": "Compliance is not the enemy of good client communication — sloppy compliance thinking is. These prompts are built with an awareness of FINRA, SEC, and state advisor regulations. Every prompt reminds you to insert disclosures, avoid specific performance claims, and have material reviewed before distribution. Use these to produce drafts faster, then run them through your normal compliance review before sending.",
+      "subsections": [
+        {
+          "title": "Disclosure Integration Prompts",
+          "content": "Prompts that build compliance awareness into your drafting process.",
+          "type": "framework",
+          "items": [
+            "COMPLIANCE DISCLOSURE WRAPPER: 'I have drafted the following client communication: [paste your draft]. Review this draft and: (1) flag any statements that make specific performance promises or future predictions that could be a compliance issue, (2) identify where standard disclosures should be inserted (mark these with [DISCLOSURE NEEDED]), (3) suggest alternative language for any problematic statements, and (4) note any claims that need to be substantiated before use. Format your response as a marked-up version of the draft with compliance notes in brackets.'",
+            "PERFORMANCE REPORTING NARRATIVE: 'Write a quarterly performance report narrative for [client name] covering Q[X] [year]. Portfolio return: [X]%. I will insert benchmark comparisons separately after compliance review. The narrative should explain: (1) the major market events of the quarter and how they affected the portfolio, (2) any allocation changes made and the rationale, (3) how the performance relates to the client's specific goals and timeline — not just the number in isolation, (4) what we are watching going into next quarter. Avoid: specific future return projections, comparison language that implies I beat the market consistently, and anything that sounds like a guarantee. Insert [COMPLIANCE REVIEW] at any point where standard disclosure language should be added.'",
+            "ADV PART 2 UPDATE COMMUNICATION: 'Write a client communication notifying clients of a material update to my ADV Part 2. The change is: [describe the change — fee adjustment, new service offering, change in ownership, disciplinary disclosure, etc.]. The communication should: (1) clearly state that their ADV Part 2 has been updated, (2) summarize the material change in plain language, (3) tell them how to access the updated document (delivery method), (4) invite questions, and (5) confirm that this notice is part of our annual ADV delivery requirement. Include appropriate legal framing that this is a required regulatory disclosure. Under 200 words.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 6: Business Development System",
+      "content": "Growth for a fee-based advisor comes from two sources: retaining and deepening existing client relationships, and systematically developing new referral channels and centers of influence. AI does not replace relationship building — it gives you the content and consistency to build relationships at scale. This section gives you a full business development content system.",
+      "subsections": [
+        {
+          "title": "LinkedIn Content Calendar (52 Weeks)",
+          "content": "Consistent LinkedIn presence establishes you as a thought leader and generates inbound referrals from COIs and prospects. These prompts produce an entire year of content.",
+          "type": "framework",
+          "items": [
+            "ANNUAL LINKEDIN CALENDAR: 'Create a 52-week LinkedIn content calendar for an independent financial advisor in [specialty — retirement planning / wealth management / comprehensive financial planning]. I post 2x per week. My target audience is [describe — executives in their 50s / business owners / dual-income professionals / etc.]. Content pillars: (1) financial education (non-advice educational content), (2) behavioral finance / mindset, (3) market commentary (factual, not predictive), (4) client success stories (anonymized), (5) personal brand / advisor life. For each month, give me: the monthly theme, 8 post ideas (2/week), recommended format for each, and one longer-form content piece idea. This calendar will be my LinkedIn production guide for the year.'",
+            "EDUCATIONAL POST GENERATOR: 'Write a LinkedIn post explaining [financial concept — sequence of returns risk / the tax diversification strategy / how to think about asset location / etc.] to a non-financial professional audience. The post should: (1) open with a hook that makes a financial professional or intelligent non-expert want to read, (2) explain the concept clearly without jargon or condescension, (3) include one memorable analogy or illustration, (4) end with a question or insight that drives comments, and (5) be under 300 words. Do not give specific investment advice. This is educational content.'",
+            "MARKET COMMENTARY POST (COMPLIANCE-AWARE): 'Write a LinkedIn post commenting on [recent market event or economic data]. Important constraints: (1) make observations, not predictions, (2) no specific investment recommendations, (3) acknowledge uncertainty, (4) connect the event to a broader financial principle, not to a buy or sell signal. The post should demonstrate expertise and thoughtfulness without creating any compliance exposure. Include a standard educational content disclaimer suggestion at the end. Under 250 words.'"
+          ]
+        },
+        {
+          "title": "Center of Influence Development",
+          "content": "CPAs, estate attorneys, and divorce attorneys are the most valuable referral sources for financial advisors. These prompts help you cultivate those relationships systematically.",
+          "type": "framework",
+          "items": [
+            "CPA INTRODUCTION EMAIL: 'Write an introductory email to a CPA I want to develop as a referral partner. Their firm: [name]. Their specialty: [describe]. I learned about them through [how]. My firm: [describe]. My specialty: [describe]. The email should: (1) introduce me professionally but briefly, (2) immediately pivot to them and their practice, (3) propose a coffee meeting framed as a mutual value conversation — not a pitch for referrals, (4) mention one way I specifically serve CPA clients well (coordinating on tax planning, communicating tax implications proactively, etc.), and (5) end with a specific ask for 20-30 minutes. Under 200 words. This email should feel like it was written specifically for them, not a mass template.',",
+            "ESTATE ATTORNEY COI CULTIVATION: 'Write a cultivation email for an estate planning attorney I have already met. We met at [event/through whom] [X] weeks ago. I want to: (1) follow up on something specific we discussed, (2) share a relevant resource or insight that would be valuable to them (or their clients), (3) propose a more formal meeting to discuss how we might collaborate for our mutual clients, and (4) suggest a specific next step. The goal is to move from \"we met once\" to \"we actively refer to each other.\" Under 200 words.',",
+            "DIVORCE ATTORNEY REFERRAL PARTNERSHIP: 'Write an email to a divorce attorney proposing a referral relationship. My value proposition for their clients: [describe — I help divorcing individuals understand the financial implications of settlement options, QDRO analysis, post-divorce financial planning, etc.]. The email should: (1) acknowledge that not every divorce attorney wants a financial advisor referral relationship, (2) explain specifically how I help their clients (not just them), (3) describe my process for handling referred clients sensitively given the emotional nature of divorce, and (4) propose a 30-minute introductory call. Position me as a resource that makes their clients' lives better and their practice more comprehensive. Under 250 words.'"
+          ]
+        },
+        {
+          "title": "Niche Market Penetration Strategy",
+          "content": "Advisors who niche down grow faster. These prompts help you develop and market to a specific ideal client profile.",
+          "type": "framework",
+          "items": [
+            "NICHE POSITIONING STATEMENT: 'Help me write a positioning statement and elevator pitch for my advisory practice, which specializes in serving [niche — tech employees with RSUs / federal employees / physicians / business owners / women in transition]. My credentials: [list]. My specific expertise in this niche: [describe]. What makes my approach different: [describe]. Write: (1) a one-sentence positioning statement, (2) a 30-second elevator pitch, (3) a 2-paragraph bio written from the niche audience's perspective, and (4) a tagline. Each version should speak directly to the specific pain points and goals of [niche] clients.',",
+            "NICHE CONTENT CAMPAIGN: 'Create a 12-month content campaign targeting [niche audience] on [primary platform — LinkedIn / email newsletter / local publication]. Each month: the key financial topic most relevant to this audience in that season, 4 content pieces (with outlines), one email touchpoint, and one in-person or virtual event idea. The campaign should build my authority in this niche by consistently demonstrating that I understand their specific financial situation better than a generalist advisor.'"
+          ]
+        }
+      ]
+    }
+  ]
+}

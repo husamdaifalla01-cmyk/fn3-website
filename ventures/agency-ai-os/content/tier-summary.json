@@ -1,0 +1,52 @@
+{
+  "product": "The Agency AI OS",
+  "tiers": [
+    {
+      "name": "Agency Starter Pack",
+      "price": 297,
+      "tagline": "Everything you need to launch your AI service offering this week.",
+      "included_files": [
+        "service-menu.json — 10 AI services with full descriptions, ideal clients, deliverables, pricing, and scoping guidance",
+        "pricing-methodology.json — 2,400-word guide covering value anchoring, packaging, and objection-handling for price pushback",
+        "Discovery Call Script (included in delivery-framework.json Phase 1)",
+        "proposals/ai-content-strategy.json — 2 proposal templates",
+        "proposals/ai-customer-service.json — 2 proposal templates",
+        "proposals/ai-workflow-automation.json — 2 proposal templates (partial)",
+        "proposals/ai-sales-automation.json — 1 proposal template",
+        "proposals/fractional-ai-officer.json — 1 proposal template"
+      ],
+      "total_proposal_templates": 5,
+      "summary": "The Starter Pack gives you the service menu to know what to sell, the pricing methodology to know what to charge, and 5 real proposal templates to start sending immediately."
+    },
+    {
+      "name": "Agency Pro",
+      "price": 597,
+      "tagline": "Add delivery systems, onboarding, and 20 more proposal templates.",
+      "included_files": [
+        "Everything in Starter Pack",
+        "delivery-framework.json — Full 6-phase client delivery framework with QA checkpoints",
+        "All remaining proposal templates (20 additional across all 10 services)",
+        "objections.json — 30 objections with scripted responses",
+        "AI Project Kickoff Deck template (provided as structured content)",
+        "Scope creep prevention playbook (included in delivery-framework.json)",
+        "Client onboarding email sequence (5-email sequence provided as text)"
+      ],
+      "total_proposal_templates": 25,
+      "summary": "Pro adds the operational layer: how to deliver what you sell, how to handle scope changes, how to onboard clients, and 20 more proposal templates covering every service in the menu."
+    },
+    {
+      "name": "Agency OS Complete",
+      "price": 997,
+      "tagline": "The full operating system: everything in Pro plus calculator, case study templates, team training, and tool stack.",
+      "included_files": [
+        "Everything in Pro",
+        "pricing-calculator/ — Interactive Next.js pricing calculator web app",
+        "10 case study templates (structured formats for different service types)",
+        "Team training framework (how to train employees to deliver AI services)",
+        "Agency AI Stack recommendations (curated tool recommendations by service type)",
+        "Client success metrics template (what to track and report for each service)"
+      ],
+      "summary": "The Complete tier is the full operating system — from pricing and proposals to delivery, team training, and measurement. Everything a serious AI agency needs in one place."
+    }
+  ]
+}

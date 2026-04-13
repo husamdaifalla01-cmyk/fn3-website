@@ -1,0 +1,189 @@
+{
+  "title": "The Executive Coach AI Command Center",
+  "subtitle": "Deliver 10x More Value Per Client With AI-Enhanced Coaching",
+  "tagline": "Stop spending coaching hours on homework you could do in minutes",
+  "price": 97,
+  "how_to_use": "This Command Center is for certified executive coaches who want to dramatically reduce the preparation and documentation time that currently eats into their coaching hours. The prompts in this guide accelerate session preparation, progress documentation, and business development — they do not replace your coaching judgment, your presence, or your relationship with clients. An AI cannot hold powerful space, hear the emotion beneath the words, or know when to stay in silence. You can. These prompts handle the structural work so you can bring more of yourself to the work that matters. Start with Section 2 (Session Preparation Engine) for immediate time savings in your next coaching week. Then build out your onboarding system and content presence using the other sections.",
+  "sections": [
+    {
+      "title": "Section 1: Client Onboarding System",
+      "content": "The onboarding experience sets the container for the entire coaching engagement. Clients who are well-onboarded trust the process faster, go deeper sooner, and get better results. These prompts help you create a thorough, professional onboarding experience efficiently — including the discovery session, assessment debriefs, goal-setting, and development plan — so you can focus on the relationship rather than the paperwork.",
+      "subsections": [
+        {
+          "title": "Discovery Session Question Frameworks",
+          "content": "The discovery session is one of the most important conversations in a coaching engagement. These frameworks help you prepare a rich, tailored discovery conversation for each new client.",
+          "type": "framework",
+          "items": [
+            "CORPORATE EXECUTIVE DISCOVERY: 'Create a discovery session question framework for a new executive coaching client [name], [title] at [company type]. What I know about them: [brief description — referred by whom, any presenting issues, seniority level, industry context]. The discovery should uncover: (1) what prompted them to engage a coach now — the burning platform, (2) what success would look like at 3, 6, and 12 months, (3) what has been tried before and what worked or did not, (4) their current strengths as they see them, (5) what feedback they consistently receive (the pattern), (6) how they prefer to be challenged vs. supported, (7) any organizational dynamics relevant to their development, and (8) what they are most afraid of or most resistant to in this process. Generate 20 questions across these areas with a note on what each is designed to reveal. Include 5 questions specifically designed to surface resistance or blind spots.'",
+            "FOUNDER/ENTREPRENEUR COACHING DISCOVERY: 'Create a discovery framework for coaching a founder or entrepreneur [name]. Context: [company stage, size, what they are facing — scaling, leadership transition, burnout, team problems, etc.]. The discovery should explore: (1) their relationship to the company — are they leading it or is it leading them, (2) the gap between the leader they are and the leader the company needs right now, (3) their decision-making patterns under stress, (4) who holds them accountable currently and how effectively, (5) the personal cost of the current trajectory, (6) what they want to protect, and (7) what would need to be true for them to call this engagement a 10/10. Include a deeper set of questions around identity — founders often conflate themselves with their company.'",
+            "SENIOR WOMAN LEADER DISCOVERY: 'Create a discovery question framework for a senior woman executive [name] who is working with me on [presenting focus — executive presence, executive advancement, navigating organizational politics, leading through a major transition]. Include questions that: (1) explore her relationship with power and authority, (2) surface any internalized beliefs about what is appropriate for women in leadership, (3) examine the organizational and cultural context she operates in, (4) identify her support system and any isolation, (5) surface her vision for the leader she wants to become, and (6) address what might be most challenging about this coaching work specifically. Handle this with cultural sensitivity — 15 questions.'",
+            "NEW MANAGER FIRST-TIME LEADER: 'Generate a discovery framework for a first-time manager [name], recently promoted from individual contributor to [role]. The key developmental tensions for first-time managers: letting go of doing the work / gaining authority without position power / managing former peers / shifting identity from expert to enabler. Design a discovery that: (1) explores their motivation for becoming a manager, (2) surfaces assumptions they have about what management should look like, (3) identifies their immediate challenges with specific team members or situations, (4) assesses their natural coaching vs. telling tendency, and (5) calibrates how much they understand about what is actually hard about this transition. 15 questions.'"
+          ]
+        },
+        {
+          "title": "360-Degree Assessment Debrief Prompts",
+          "content": "Debriefing assessment results is a high-skill coaching moment. These prompts help you prepare the structure and language for powerful debrief conversations.",
+          "type": "framework",
+          "items": [
+            "360 DEBRIEF PREPARATION: 'Help me prepare for a 360-degree feedback debrief session with client [name]. Assessment used: [name of tool or describe the 360 format]. Key themes in the data: [describe — 2-3 strengths highlighted, 2-3 development areas, any outliers or surprises, any gaps between self-assessment and others]. Prepare: (1) an opening framework for how I will structure the 2-hour debrief conversation, (2) 5 powerful questions to explore the development areas without triggering defensiveness, (3) language for introducing the biggest surprise or painful finding compassionately but directly, (4) questions to help them make meaning of the data rather than just receive it, and (5) a framework for helping them prioritize which themes to work on first.'",
+            "DEFENSIVE CLIENT RESPONSE TO FEEDBACK: 'My client [name] received their 360 results and their initial reaction is defensive — they are questioning the reliability of the data, minimizing key findings, and attributing negative feedback to political motivations. Prepare: (1) a set of questions that meet their defensiveness with curiosity rather than confrontation, (2) language for validating their emotional reaction without reinforcing the defensiveness, (3) a reframe that helps them see feedback as data about their impact rather than a verdict on their character, (4) one powerful question that could be the pivot point in this conversation, and (5) a reminder for me: what is my own coaching posture when clients are defensive about feedback they need to hear?'"
+          ]
+        },
+        {
+          "title": "Development Plan Writing Templates",
+          "content": "A well-crafted individual development plan is one of the most tangible deliverables in a coaching engagement.",
+          "type": "framework",
+          "items": [
+            "INDIVIDUAL DEVELOPMENT PLAN: 'Write an individual development plan (IDP) for coaching client [name], [title]. Coaching focus areas from discovery and assessment: [list 2-3 primary development themes]. Organizational context: [describe what the organization needs from them]. Timeframe: [X months]. For each development area, create: (1) a clear, behavioral development goal written in terms of observable behavior change, (2) the current state and the desired state, (3) 3-4 specific development activities (experiences, conversations, practice, reading, etc.), (4) how progress will be measured, and (5) any potential obstacles and how to address them. The IDP should be ambitious but achievable — a developmental stretch, not an impossible standard.'",
+            "GOAL-SETTING SESSION FACILITATION: 'Prepare a facilitation guide for a 90-minute goal-setting session with new coaching client [name]. Based on what I know about them from discovery: [key themes, presenting issues, organizational context]. The session should: (1) open by connecting to their purpose and motivation for this work, (2) use a structured framework to move from aspirational direction to specific goals, (3) generate 2-3 coaching focus areas that are meaningful to them and relevant to the organization, (4) establish how they will know they have succeeded, and (5) close by addressing any anxiety about the work ahead. Include: the facilitation outline, the key questions for each phase, and a template for capturing the session outputs.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 2: Session Preparation Engine",
+      "content": "Most coaches spend 30-45 minutes preparing for each session — reviewing notes, identifying themes, planning the opening, thinking through possible directions. AI compresses this to 10 minutes without reducing quality. When your preparation is faster, you can take on more clients, prepare more thoroughly, or simply have more energy for the sessions themselves. This section gives you the full session preparation toolkit.",
+      "subsections": [
+        {
+          "title": "Pre-Session Note Review Prompts",
+          "content": "A structured review of prior session notes produces better session preparation than re-reading notes linearly.",
+          "type": "framework",
+          "items": [
+            "SESSION NOTES SYNTHESIS: 'Here are my session notes from the past [number] sessions with client [name]: [paste notes]. Synthesize these notes into: (1) the central developmental theme or thread across these sessions, (2) the most significant insight or breakthrough from recent sessions, (3) any commitments the client made and whether they followed through, (4) any recurring patterns, defenses, or resistances I am noticing, (5) where they are in the arc of the coaching engagement, and (6) any questions or concerns I should bring to supervision. This synthesis is my preparation tool — I use it to decide where to focus in the next session.'",
+            "BETWEEN-SESSION TRACKING: 'My client [name] shared the following update between sessions: [describe what they sent — email check-in, voice note, text]. They reported: [what they did, what they noticed, what happened]. Based on this and our prior session focus, what are the most productive angles to explore in our next session? Generate: (1) 3-4 possible opening questions for the session, (2) any pattern I should notice across their update and prior sessions, and (3) one deeper question that could take the session to a new level if the timing is right.'"
+          ]
+        },
+        {
+          "title": "Session Agenda Generation Templates",
+          "content": "A prepared agenda — held lightly — produces better sessions than showing up with no structure.",
+          "type": "framework",
+          "items": [
+            "SESSION AGENDA BUILDER: 'Build a session agenda for my next coaching session with [client name]. Session length: [60/75/90] minutes. What I know going in: [describe — what they are bringing, their recent update, any context from their work, where we are in the engagement]. The agenda should: (1) include a proposed opening question, (2) identify 1-2 primary threads to explore (held loosely — we follow the client), (3) suggest a midpoint check (\"Where are we? What is most important to spend our remaining time on?\"), (4) identify any commitments or forward action to explore in the closing, and (5) list 3-4 powerful questions on standby if the conversation needs direction. Format as a coach's preparation guide, not a rigid agenda.'",
+            "CHALLENGING QUESTION LIBRARY BY TOPIC: 'Generate a library of 50 powerful coaching questions organized by topic for use in executive coaching sessions. Topics to cover: (1) clarity and vision (10 questions), (2) leadership impact and blind spots (10 questions), (3) relationships and stakeholder navigation (8 questions), (4) decision-making and judgment (8 questions), (5) resilience and self-management (7 questions), (6) organizational politics and influence (7 questions). For each question, note: the coaching situation where it is most useful, the response it is designed to open up, and any caution about when to avoid it. This is my ongoing reference library.'"
+          ]
+        },
+        {
+          "title": "Accountability Check-In Formats",
+          "content": "Accountability is a central function of coaching. These formats make it meaningful, not punitive.",
+          "type": "framework",
+          "items": [
+            "COMMITMENT REVIEW FRAMEWORK: 'Prepare a commitment review framework for the opening of a coaching session with [client name]. Commitments they made last session: [list]. How I want to open the review: not as a report card, but as an exploration. Generate: (1) an opening question that invites them to reflect on their commitments before we review them item by item, (2) language for responding to partial or non-completion in a way that is curious rather than disappointed, (3) a question to explore what the follow-through (or lack of it) says about their priorities or obstacles, and (4) language for celebrating genuine completion in a way that acknowledges their effort without being patronizing.'",
+            "BETWEEN-SESSION CHECK-IN TEMPLATE: 'Create a between-session check-in template I can send to executive coaching clients 3-4 days before our next session. The template should: (1) prompt them to reflect on their commitments since the last session, (2) ask what has been on their mind most, (3) invite them to name what they want to bring to our next session, and (4) ask a single reflection question that primes our conversation (I will customize this question by client). Keep the template under 150 words — it should take 5 minutes to complete. Also create 10 interchangeable reflection questions I can rotate each session.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 3: Leadership Development Content",
+      "content": "As an executive coach, you are not just facilitating conversations — you are providing developmental experiences and frameworks that help clients grow as leaders. These prompts give you the tools to bring richer models, exercises, and frameworks to your clients without spending hours creating them from scratch.",
+      "subsections": [
+        {
+          "title": "Situational Leadership Prompt Library",
+          "content": "Leadership situation analysis and coaching frameworks for the challenges clients bring most often.",
+          "type": "framework",
+          "items": [
+            "UNDERPERFORMING TEAM MEMBER COACHING: 'My client [name] is dealing with an underperforming team member [describe briefly — role, performance issue, how long it has been happening]. They are frustrated and uncertain about what to do. Create a coaching framework for this session that: (1) helps them get clear on whether this is a skill issue, will issue, or situational issue, (2) explores what they have already tried and why it has not worked, (3) surfaces any ways they may be contributing to the pattern (without over-pathologizing), (4) helps them decide: is this a coaching, managing, or exiting situation, and (5) helps them design a clear, specific conversation with the team member. Include 8 coaching questions across the session arc.'",
+            "EXECUTIVE PRESENCE DEVELOPMENT: 'My client [name] has received feedback that they lack executive presence. The specific behaviors noted: [describe feedback — too detailed in presentations / hedging language / not confident in executive meetings / not perceived as strategic / etc.]. Create a 3-session coaching module on executive presence that: (1) helps them develop their own working definition of executive presence (not a generic one), (2) identifies the specific behavioral changes that would make the most difference in their specific context, (3) provides concrete practices they can use in real situations, and (4) addresses the mindset or identity work underlying the behavior change. Include: session-by-session outline, key questions for each session, and 3 practical exercises they can try between sessions.'",
+            "STAKEHOLDER CONFLICT NAVIGATION: 'My client [name] is in a significant conflict with a key stakeholder [describe the relationship and the conflict briefly]. They are stuck between wanting to maintain the relationship and feeling their position is being undermined. Create a coaching framework that: (1) helps them get clear on what they actually want — the relationship or the position, (2) explores what they know vs. assume about the stakeholder's motivations, (3) examines how their own behavior may be escalating or maintaining the conflict, (4) helps them identify their options and the trade-offs of each, and (5) prepares them for a direct conversation with the stakeholder. Include: a 5-step stakeholder conversation preparation framework and 6 session questions.'",
+            "LEADING THROUGH ORGANIZATIONAL CHANGE: 'My client [name] is [leading a major reorganization / absorbing an acquisition / managing layoffs / transitioning their team through a leadership change]. Create a coaching framework for the next 2-3 sessions that helps them: (1) process their own emotional experience of the change (they cannot lead others through what they have not processed themselves), (2) clarify their leadership stance and message, (3) develop a communication strategy for different stakeholder groups, (4) build resilience for the long road of change, and (5) identify the leadership behaviors that matter most right now. Include: the core coaching thread, session-by-session focus, and the 5 most powerful questions for a leader navigating significant change.'"
+          ]
+        },
+        {
+          "title": "Strategic Thinking Development Prompts",
+          "content": "Strategic thinking is one of the most requested development areas for senior leaders. These frameworks help you coach it effectively.",
+          "type": "framework",
+          "items": [
+            "STRATEGIC THINKING ASSESSMENT: 'My client [name] has received feedback that they need to be more strategic. Help me design a 2-session exploration of their current relationship to strategic thinking. Session 1: What does \"strategic\" mean to them and to those who gave the feedback? What is the gap between how they currently show up and how they need to show up? What are their natural thinking patterns and where do they break down? Session 2: Develop a personal practice for thinking more strategically — specific habits, routines, questions to ask themselves, and ways to signal strategic thinking to others. Include: the key questions for each session and a self-assessment framework the client can use before we begin.'",
+            "STRATEGY HORIZON EXERCISE: 'Create a structured coaching exercise to help my client [name] shift from operational to strategic thinking. The exercise: have them spend 30 minutes mapping their current work across three time horizons — Horizon 1 (next 90 days), Horizon 2 (next 12-24 months), and Horizon 3 (3-5 years and beyond). Then bring this map to the coaching session and explore: (1) What percentage of their energy is in each horizon — and where does their role require them to be? (2) What are they avoiding in Horizons 2 and 3? (3) What strategic questions should they be asking that they are not? (4) What would shift if they spent 30% more time in Horizon 3 thinking? Write the exercise instructions for the client and the coaching questions for our debrief.'"
+          ]
+        },
+        {
+          "title": "Conflict Resolution Coaching Frameworks",
+          "content": "Conflict avoidance and conflict mismanagement are among the most common leadership derailers. These frameworks help clients build genuine conflict competence.",
+          "type": "framework",
+          "items": [
+            "CONFLICT AVOIDANCE PATTERN: 'My client [name] consistently avoids difficult conversations. The pattern: [describe — they delay, delegate, or soften the message until it loses impact]. The cost: [describe — team performance, their credibility, their own stress]. Create a coaching arc for the next 3 sessions: Session 1 — understand the origin and function of the avoidance pattern. What is it protecting them from? Session 2 — develop a different relationship with conflict. What does healthy conflict look like for a leader in their role? Session 3 — prepare for and debrief one specific difficult conversation they have been avoiding. Include: the key questions for each session, the core reframe for conflict avoidance, and a conflict-readiness self-assessment tool.',",
+            "GIVING DIFFICULT FEEDBACK PREPARATION: 'My client [name] needs to have a performance conversation with a team member [describe the situation]. They have been avoiding it for [timeframe]. Coach them to have this conversation. Generate: (1) a framework for the conversation (SBI — Situation Behavior Impact, or similar), (2) the specific words they might use to open the conversation without it feeling like an ambush, (3) how to handle the emotional response they are anticipating, (4) how to close with clear expectations and follow-up, and (5) how to manage their own anxiety in the moment. Then write the reflection questions for our debrief after they have the conversation.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 4: Client Progress Documentation",
+      "content": "Documentation in executive coaching serves two purposes: capturing the client's development journey for their benefit, and demonstrating the ROI of the engagement for the sponsor (often the organization or the client's company). These prompts give you a complete documentation system that is thorough without being bureaucratic.",
+      "subsections": [
+        {
+          "title": "Session Summary Generation Prompts",
+          "content": "Session summaries close the loop on each session and build the developmental record over time.",
+          "type": "framework",
+          "items": [
+            "POST-SESSION SUMMARY: 'Write a session summary for my coaching session with [client name] on [date]. What we discussed: [describe the main themes and conversation flow]. Key insights or breakthroughs: [describe any]. Commitments made by the client: [list]. What I noticed about them in the session (energy, emotion, resistance, breakthrough moments): [describe]. Write a summary structured as: (1) session focus, (2) key exploration and insights, (3) commitments and next steps, (4) what I am tracking as a coach (internal notes for my eyes only — keep separate from client-facing version). Generate both a client-facing version (under 200 words) and my private coaching notes version (unlimited, reflective).'",
+            "MIDPOINT ENGAGEMENT REVIEW: 'Generate a midpoint review document for coaching client [name], now at the [midpoint] of a [total length] engagement. Based on the following session summaries and notes: [paste or describe]. The review should include: (1) progress against each original development goal, (2) themes that have emerged that were not in the original plan, (3) notable breakthroughs or pivots, (4) what remains to be worked on in the second half, and (5) any adjustments to the coaching focus I am recommending. This document will be shared with the client and, in edited form, with the organizational sponsor. Write both a client version and an executive sponsor summary version.'"
+          ]
+        },
+        {
+          "title": "ROI Documentation Prompts",
+          "content": "Demonstrating coaching ROI is critical for renewals and for building a practice that gets referrals from sponsoring organizations.",
+          "type": "framework",
+          "items": [
+            "ENGAGEMENT COMPLETION REPORT: 'Write a coaching engagement completion report for client [name], [title] at [company]. Engagement duration: [dates]. Original development goals: [list]. Progress and outcomes: [describe]. Organizational impact indicators (where visible): [describe — promotions, team performance, 360 improvement, projects led, etc.]. Client self-reported growth areas: [describe]. The report should: (1) tell a clear before/after story using behavioral language, (2) connect individual growth to organizational impact where possible, (3) acknowledge ongoing development areas honestly, (4) recommend any follow-on coaching or support, and (5) be written in a way the client can use with their HR partner or organizational sponsor. Executive summary: 1 page. Full report: 2-3 pages.',",
+            "ROI CALCULATION FRAMEWORK: 'Help me construct an ROI framework for my executive coaching practice that I can use with organizational buyers. I coach [describe your client profile]. My fees: [fee structure]. Create a framework that: (1) identifies the categories of return from effective executive coaching (retention value, leadership effectiveness multiplier, team performance, decision quality, etc.), (2) helps me and the buyer estimate the dollar value of these returns based on the executive's compensation and span of control, (3) creates a comparison between the coaching investment and the estimated return, and (4) includes qualitative ROI dimensions that matter to organizational buyers (engagement, succession readiness, culture influence). Format as both a narrative and a simple calculation worksheet.'"
+          ]
+        },
+        {
+          "title": "Milestone Celebration Messages",
+          "content": "Recognizing progress explicitly is part of the coaching work — and builds the relationship.",
+          "type": "framework",
+          "items": [
+            "BREAKTHROUGH ACKNOWLEDGMENT: 'Write a message to coaching client [name] acknowledging a significant breakthrough or milestone from our most recent session. The breakthrough: [describe specifically — they finally had the difficult conversation, they got the promotion, they presented their strategy to the board, they made the decision they had been avoiding, etc.]. I want to: (1) name exactly what I witnessed and why it matters, (2) connect it to the work they have done in our coaching, (3) honor the difficulty of what they did, and (4) look forward without overdoing the celebration. Under 150 words. This message should make them feel genuinely seen.',",
+            "END-OF-ENGAGEMENT REFLECTION LETTER: 'Write a closing reflection letter to coaching client [name] at the end of our [X]-month engagement. Based on our work together: [describe the arc — where they started, what they worked on, who they have become]. The letter should: (1) honor where they started, (2) name the specific growth I witnessed in behavioral, specific terms, (3) acknowledge the courage the work required, (4) speak to who they are becoming as a leader, and (5) wish them forward with genuine warmth and confidence. This letter should be worth keeping. 300-400 words. This is not a report — it is a celebration of a human being's growth.'"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Section 5: Program Design and Marketing",
+      "content": "Great coaches are often poor marketers — not because the work is not valuable, but because translating transformative work into compelling packages and content requires a different skill set. These prompts close that gap. This section covers package design, proposal writing, thought leadership content, and case study creation — everything you need to build a full practice without becoming a marketer.",
+      "subsections": [
+        {
+          "title": "Coaching Package Description Templates",
+          "content": "Your package descriptions need to communicate what coaching feels like, not just what it includes.",
+          "type": "framework",
+          "items": [
+            "INDIVIDUAL EXECUTIVE COACHING PACKAGE: 'Write a package description for my [X]-month individual executive coaching engagement. What I offer: [describe your approach, session frequency, any assessments, any between-session support]. My target client: [describe — senior leaders, founders, high-potential executives, etc.]. Investment: $[amount]. The description should: (1) open with the transformation, not the deliverables, (2) describe who this is for specifically (and who it is NOT for), (3) walk through what the engagement experience is like, not just what is included, (4) address the ROI in human terms — what changes for the leader and for the people around them, and (5) end with a clear next step. 400-500 words. Tone: sophisticated, warm, confident. Not corporate-speak.'",
+            "CORPORATE COACHING PROGRAM: 'Write a proposal-ready description of an executive coaching program for organizations. The program: [describe — coaching for high-potential leaders / newly promoted executives / senior team members / C-suite succession candidates]. Designed for groups of [number] leaders over [duration]. Includes: [list program components]. Investment: [pricing structure]. The description should position this as a strategic leadership investment, not a remedial program. Target reader: CHRO or Chief Learning Officer. The language should resonate with someone who thinks in terms of talent ROI and leadership pipeline. 500-600 words.',",
+            "LEADERSHIP INTENSIVE (SHORT FORMAT): 'Write a marketing description for a 1-day or 2-day leadership intensive I offer. Format: [describe — individual VIP day / group leadership sprint / team coaching intensive]. What participants get: [list outcomes, not just activities]. Investment: $[amount]. The description should create compelling urgency — why do this in 1-2 intensive days vs. stretched out over months? What makes the concentrated format powerful? Who is the ideal participant? What should they expect to leave with? 300-400 words.'"
+          ]
+        },
+        {
+          "title": "Proposal Writing Prompts",
+          "content": "Winning proposals tell the story of transformation, not just the story of services.",
+          "type": "framework",
+          "items": [
+            "CORPORATE COACHING PROPOSAL: 'Write a coaching services proposal for [company name], a [describe the company briefly]. I met with [HR contact name / sponsor name] on [date]. What I learned about their needs: [describe — what they told you they need, what challenges they are facing, what outcomes they are seeking]. My proposed solution: [describe your recommended program]. Investment: $[amount]. The proposal should: (1) open with a mirror of what I heard them say they need — demonstrating that I listened, (2) articulate the problem in their language before presenting the solution, (3) describe the specific program with enough detail to answer questions but not so much that it reads like a brochure, (4) include a section on how I work and what makes my approach relevant to their context, (5) present the investment clearly, and (6) close with a clear call to action. 3-4 pages.'",
+            "INDIVIDUAL COACHING PROPOSAL: 'Write a coaching proposal for an individual executive [name], [title], who came to me through [referral source]. What I learned in the discovery conversation: [describe their situation, goals, and concerns]. My recommendation: [describe proposed engagement]. Investment: $[amount]. The proposal should feel like it was written specifically for them — because it was. It should reference what they shared, name their specific goals, and explain why this engagement design serves their particular situation. Do not make it generic. 2-3 pages. Close with next steps for moving forward.'"
+          ]
+        },
+        {
+          "title": "LinkedIn Thought Leadership Content Calendar",
+          "content": "Executive coaches who post consistently on LinkedIn generate inbound inquiries from exactly the right people.",
+          "type": "framework",
+          "items": [
+            "52-WEEK LINKEDIN CALENDAR: 'Create a 52-week LinkedIn content calendar for an executive coach specializing in [your specialty]. I post [X] times per week. My target audience: [describe ideal clients and ideal referrers]. Content pillars: (1) leadership insights (short, powerful observations), (2) coaching philosophy and approach, (3) client transformation stories (anonymized), (4) provocative leadership questions, (5) behind-the-scenes of the coaching practice. For each month: the monthly theme, 8 post ideas with brief outlines, recommended format for each, and one longer-form article idea. The calendar should build authority in [specialty] and attract exactly the clients and sponsors I want.'",
+            "LEADERSHIP INSIGHT POST: 'Write a LinkedIn post sharing one important leadership insight I have observed through my coaching practice. The insight: [describe]. Frame it as: something I have seen repeatedly in my coaching work, what it means, and the question or implication it leaves the reader with. Under 300 words. Open with a hook that stops the scroll. Do not lecture — share and inquire. End with a question that drives genuine comments.',",
+            "CLIENT STORY (ANONYMIZED): 'Write a LinkedIn post sharing an anonymized coaching story. The story: [describe the situation, the coaching arc, and the transformation — without identifying details]. Frame as: a leader I worked with who faced [challenge] and through our coaching work discovered/developed/changed [growth area]. What this story illustrates about leadership development: [the broader insight]. Keep the focus on the client's growth, not on how great my coaching was. Under 350 words. End with a question that invites the reader to reflect on their own leadership journey.'"
+          ]
+        },
+        {
+          "title": "Case Study Writing Templates",
+          "content": "Written case studies are among the most powerful marketing assets for coaches — if they tell a real story.",
+          "type": "framework",
+          "items": [
+            "COACHING CASE STUDY: 'Write a coaching case study based on the following engagement (I will anonymize identifying details before publishing). Client profile: [age, gender, role level, industry — all can be generalized]. Presenting situation: [describe what they came in with]. Coaching focus: [the main development areas]. Key moments in the coaching: [describe 2-3 pivotal sessions or breakthroughs]. Outcomes: [describe what changed — behavioral, situational, relational]. Quote (if available): [paste a real testimonial or describe the sentiment]. The case study should: (1) be specific enough to feel real, (2) demonstrate my coaching approach and philosophy, (3) make a reader in a similar situation see themselves and feel hopeful, and (4) close with a reflective observation about what this engagement taught me. 500-700 words.',",
+            "SPEAKING TOPIC DEVELOPMENT: 'Develop a speaking topic and abstract for an executive coaching thought leadership talk. My area of expertise: [describe your specialty]. Target audience: [HR leaders / executive teams / leadership conferences / etc.]. The topic I want to develop: [describe your idea]. Create: (1) a compelling talk title (provide 5 options), (2) a 250-word abstract that would convince a conference organizer to book this talk, (3) a 3-sentence speaker bio tailored to this topic, (4) an outline of the talk structure (3-5 key points), and (5) the key insight or takeaway the audience should leave with. Make the abstract feel like an experience, not a description of a lecture.'"
+          ]
+        }
+      ]
+    }
+  ]
+}

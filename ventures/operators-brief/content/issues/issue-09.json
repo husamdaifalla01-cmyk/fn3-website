@@ -1,0 +1,50 @@
+{
+  "number": 9,
+  "title": "A healthcare practice's journey to AI-assisted documentation: 2 hours/day saved per clinician",
+  "date": "April 2026",
+  "summary": "A 6-physician family medicine practice implemented AI-assisted clinical documentation using ambient AI transcription and note generation. Each physician saves an average of 2.1 hours per day on documentation. Collective annual time savings: 3,066 physician hours. Physician satisfaction scores improved from 6.2 to 8.7 out of 10. Zero patient safety incidents in 14 months of deployment.",
+  "case_study": "Riverside Family Medicine (name changed) is a 6-physician independent family medicine practice in suburban Columbus, OH. 18,000 patient visits per year, 3,000 per physician. Pre-implementation, documentation — SOAP notes, after-visit summaries, referral letters — was consuming an average of 2.8 hours per physician per day. In a 10-hour clinical day, that's 28% of their time spent typing notes.\n\nThis was the leading factor in physician burnout survey scores. Two physicians were considering reducing hours. One was considering leaving medicine. The administrator calculated that replacing one physician cost $280,000 in recruiting, onboarding, and lost revenue during transition.\n\nThe implementation: Ambient AI clinical documentation via Abridge (an ambient AI tool built on large language models and designed specifically for HIPAA-compliant clinical environments).\n\nHow it works: Physicians enable the ambient recording on their tablet or phone at the start of a patient encounter. The AI listens to the conversation, identifies clinical content (chief complaint, history, exam findings, assessment, plan), and generates a structured SOAP note draft within 90 seconds of the encounter ending. The physician reviews the note, makes edits (average: 4 minutes of editing vs. 20 minutes of dictation or typing), and signs.\n\nAdditional features used:\n— After-visit summaries: Generated automatically from the note, in plain language for the patient\n— Referral letters: Drafted from note content with relevant history\n— Medication reconciliation: Flags potential interactions based on new prescriptions + existing medication list\n\nCompliance and safety protocol: They retained a dedicated 30-minute weekly 'note review' meeting for the first 3 months where physicians reviewed a random sample of AI-generated notes together to identify systemic errors or missed elements. They created a 'near-miss log' for any documentation error caught before signing. In 14 months, 6 near-misses were logged, all caught before patient impact.\n\nPhysician adoption at 6 months: 6/6 physicians were using the system for at least 80% of encounters. The two physicians considering reduced hours are now at full capacity and reporting higher job satisfaction.",
+  "implementation_guide": "Step 1 — HIPAA compliance first. Do not implement any AI documentation tool without verifying: Business Associate Agreement (BAA) with the vendor, data residency requirements met, breach notification policies, audit log availability. This is non-negotiable in any clinical setting.\n\nStep 2 — Select an ambient AI documentation platform built for clinical use. Do not attempt to build this with a general-purpose AI API in a clinical setting unless you have dedicated healthcare compliance infrastructure. Purpose-built platforms: Abridge, Nabla, Nuance DAX, Suki. Each has different EHR integration strengths.\n\nStep 3 — EHR integration planning. Determine if the platform integrates natively with your EHR (Epic, Athenahealth, Cerner, etc.) or requires a bridge. Native integration is significantly better — notes flow directly into the chart. Bridge solutions require copy-paste workflows that reduce adoption.\n\nStep 4 — Physician onboarding with realistic expectations. The note quality on day 1 is not the note quality at day 30. The AI learns your physicians' documentation style over time. Set expectations: first 2 weeks will feel like more work (learning the review process); weeks 3-4 will break even; week 5+ shows the time savings.\n\nStep 5 — Establish a structured review and error-catching protocol. Random note audits for the first 90 days. Near-miss log from day one. Weekly review meeting to identify systemic issues. This isn't bureaucracy — it's how you catch model errors before they become patient safety events.\n\nStep 6 — Measure the right outcomes: documentation time per encounter (before/after), after-hours charting time (a major burnout factor), physician satisfaction scores, and note quality (audited by a clinical lead).",
+  "numbers": {
+    "physicians": 6,
+    "patient_visits_annually": 18000,
+    "documentation_hours_before_daily_per_physician": 2.8,
+    "documentation_hours_after_daily_per_physician": 0.7,
+    "daily_time_saved_per_physician": 2.1,
+    "annual_physician_hours_saved": 3066,
+    "physician_satisfaction_before": 6.2,
+    "physician_satisfaction_after": 8.7,
+    "cost_to_replace_one_physician": 280000,
+    "retention_risk_physicians_before": 2,
+    "platform_monthly_cost": 2400,
+    "implementation_cost": 8500,
+    "after_hours_charting_reduction_pct": 74,
+    "patient_safety_incidents": 0,
+    "near_misses_caught": 6,
+    "roi_comment": "Retention of 2 at-risk physicians alone represents $560K in avoided replacement cost"
+  },
+  "tool_stack": [
+    {
+      "tool": "Abridge",
+      "use": "Ambient AI clinical documentation — SOAP notes, summaries, referral letters",
+      "cost": "$400/month per physician = $2,400/month"
+    },
+    {
+      "tool": "Athenahealth EHR",
+      "use": "Native integration for note routing",
+      "cost": "Existing EHR subscription"
+    },
+    {
+      "tool": "iPad (existing hardware)",
+      "use": "Ambient recording device per exam room",
+      "cost": "Existing hardware"
+    },
+    {
+      "tool": "Custom near-miss log (Google Forms)",
+      "use": "Documentation error tracking for safety monitoring",
+      "cost": "Free"
+    }
+  ],
+  "what_failed": "Attempt 1 — Starting with a general-purpose AI transcription tool: Before the formal implementation, one physician tried using Otter.ai to transcribe encounters and then manually feeding transcripts to ChatGPT to generate notes. HIPAA exposure was immediate and obvious when it was discovered. This created physician skepticism about 'AI in the exam room' that the administrator had to actively manage before the Abridge rollout.\n\nAttempt 2 — Deploying without physician champions: The first rollout attempt had the administrator leading adoption. Physicians were told to use it. Adoption was 2/6 after 30 days. The fix: identify 1-2 physicians who are early adopters, have them present their experience at a staff meeting with actual time data from their own use. Peer adoption rose to 6/6 within 8 weeks.\n\nAttempt 3 — No review protocol initially: First month, physicians were signing AI notes with minimal review. A midlevel caught an AI-generated note that had transposed a patient's medication dosage in the plan section. No patient harm occurred but it was close. Formal note review protocol implemented immediately.",
+  "takeaway": "Healthcare is where the stakes for AI documentation errors are highest and where the upside of getting it right is most compelling. The practices that succeed with ambient AI documentation share one characteristic: they treat the AI as a first-draft tool with mandatory physician review, and they build the audit infrastructure before they need it — not after."
+}

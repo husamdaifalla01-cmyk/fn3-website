@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "homeDecor": "Maison & Déco",
+    "wellness": "Bien-être",
+    "beauty": "Beauté",
+    "kitchen": "Cuisine",
+    "finance": "Finances",
+    "articles": "Articles",
+    "subscribe": "S'abonner",
+    "menu": "Menu",
+    "close": "Fermer"
+  },
+  "footer": {
+    "tagline": "La Belle Vie, Curatée.",
+    "explore": "Explorer",
+    "legal": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "affiliate_disclosure": "Mintbrooks est partenaire du Programme d'Associés Amazon, un programme d'affiliation publicitaire conçu pour permettre aux sites de gagner des frais de publicité en faisant de la publicité et en créant des liens vers Amazon.",
+    "copyright": "© {year} Mintbrooks. Tous droits réservés."
+  },
+  "article": {
+    "read_time": "{minutes} min de lecture",
+    "share": "Partager",
+    "buy_on_amazon": "Acheter sur Amazon",
+    "check_price": "Voir le prix",
+    "view_on_amazon": "Voir sur Amazon",
+    "back_to_articles": "Retour aux articles",
+    "related": "Vous aimerez aussi",
+    "updated": "Mis à jour le {date}"
+  },
+  "newsletter": {
+    "heading": "Vivez bien, dépensez intelligemment.",
+    "subheading": "Des découvertes hebdomadaires, curatées pour la vie que vous construisez.",
+    "placeholder": "Votre adresse e-mail",
+    "cta": "Rejoindre la liste",
+    "privacy_note": "Pas de spam. Désinscription à tout moment.",
+    "success": "Vous êtes inscrit ! Vérifiez votre boîte mail.",
+    "error": "Une erreur s'est produite. Réessayez."
+  },
+  "category": {
+    "home_decor": "Maison & Décoration",
+    "wellness": "Bien-être",
+    "beauty": "Beauté & Soins",
+    "kitchen": "Cuisine",
+    "finance": "Argent & Crédit",
+    "all": "Toutes les catégories"
+  },
+  "common": {
+    "back": "Retour",
+    "loading": "Chargement...",
+    "see_all": "Voir tout {category}",
+    "products_title": "Produits que nous adorons",
+    "read_more": "Lire la suite",
+    "search_placeholder": "Rechercher sur Mintbrooks...",
+    "no_results": "Aucun résultat pour \"{query}\"",
+    "language": "Langue"
+  },
+  "quiz": {
+    "start": "Faire le quiz",
+    "heading": "Trouvez votre match parfait"
+  }
+}

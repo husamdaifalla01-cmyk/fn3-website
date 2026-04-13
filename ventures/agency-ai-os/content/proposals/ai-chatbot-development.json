@@ -1,0 +1,44 @@
+{
+  "service": "AI Chatbot Development & Deployment",
+  "templates": [
+    {
+      "id": "chatbot-001",
+      "variant": "Lead Qualification Bot — High Traffic Website",
+      "sections": {
+        "executive_summary": "This proposal covers the design, build, and deployment of a lead qualification chatbot for [Company Name]'s website. The bot will engage visitors, qualify them against your ICP criteria, capture contact information, and book meetings directly with your sales team — 24/7, without a sales rep's involvement. Based on your current traffic and conversion data, we project capturing [X] additional qualified meetings per month.\n\nProject investment: $7,500. Timeline: 4 weeks.",
+        "problem_statement": "[Company Name] has [X] monthly website visitors, but only [Y%] convert to any kind of contact. Most visitors leave without identifying themselves — and without a way for your team to follow up. The ones who do convert hit a contact form, submit, and then wait for someone to email them back. If that response takes more than a few hours, they've already moved on to a competitor.\n\nYour sales team is also receiving inbound inquiries that are a poor fit — wrong company size, wrong budget, wrong use case. They invest time qualifying these and it slows pipeline velocity.",
+        "proposed_solution": "**Conversation Design:**\nWe start with a conversation map that defines the user journey. The bot greets visitors contextually based on the page they're on (pricing page visitors get a different conversation than blog readers). It asks qualifying questions in a way that feels helpful, not interrogative — focused on understanding what they're trying to do, not gatekeeping.\n\nQualifying questions embedded naturally:\n- Company size and industry (gauges ICP fit)\n- Current challenge or goal (gauges urgency and use case)\n- Timeline and decision process (gauges sales readiness)\n\nIf qualified: schedules a meeting via Calendly integration. Passes full conversation context to the assigned rep before the meeting.\nIf not qualified: provides helpful resources, adds to nurture sequence, does not book a meeting that wastes your team's time.\n\n**Build Stack:**\nVoiceflow for conversation flow. OpenAI for natural language understanding. Calendly for booking. HubSpot/Salesforce for CRM logging. Native web widget deployment.\n\n**Analytics:**\nConversation analytics dashboard showing: engagement rate, qualification rate, meeting rate, and drop-off points (where visitors leave the conversation). This data drives continuous improvement.",
+        "deliverables_and_timeline": "**Week 1:** Conversation map design and approval. ICP qualification criteria documentation.\n**Week 2:** Bot build in Voiceflow. Knowledge base preparation.\n**Week 3:** CRM integration, Calendly integration. QA testing with internal team.\n**Week 4:** Website deployment. Go-live. 7-day monitoring period.\n**Post-launch:** 30-day optimization included. Monthly monitoring optional at $750/month.",
+        "investment": "**Project Total: $7,500**\n\nIncludes: conversation design, bot build, all integrations, QA, deployment, and 30-day post-launch monitoring.\n\n**Monthly Maintenance (optional): $750/month**\nCovers: conversation updates, new intent additions, performance reporting, A/B testing of key conversation branches.\n\n**Payment:** 50% on signing, 50% at launch.\n\n**ROI Context:** If this bot books 4 additional qualified meetings per month and your average deal closes at $5,000, that's $20,000 in incremental pipeline per month from a one-time $7,500 investment. Most clients see ROI within the first 60 days.",
+        "team": "[Your Name] as conversation designer and technical lead. Background in chatbot deployments across SaaS, professional services, and e-commerce verticals.",
+        "next_steps": "1. Confirm start date and sign agreement\n2. Pay 50% deposit ($3,750)\n3. Complete conversation brief (15-minute form covering your ICP, qualifying criteria, and key objections)\n4. Kickoff call: [DATE]\n\nNote: bot deployment requires access to your website CMS. If your site is on Webflow, WordPress, or Squarespace, deployment is straightforward. If it's a custom build, we'll need developer access for the embed snippet."
+      }
+    },
+    {
+      "id": "chatbot-002",
+      "variant": "Internal Knowledge Bot — Team Productivity",
+      "sections": {
+        "executive_summary": "This proposal covers an internal AI knowledge bot for [Company Name] — a searchable, conversational interface into all of your company's documentation, policies, SOPs, and institutional knowledge. New employees get answers instantly. Experienced employees stop answering the same questions repeatedly. Knowledge lives in a system, not in people's heads.\n\nProject investment: $8,500. Timeline: 5 weeks.",
+        "problem_statement": "Knowledge transfer is a silent productivity killer at [Company Name]. When a new hire has a question, they interrupt a colleague. When that colleague is unavailable, the work stalls. Your documentation exists in multiple places — some in Notion, some in shared drives, some in email threads from 2021. Knowing which document to look at, and where it lives, is itself a skill that takes 3–6 months to develop.\n\nSenior employees are regularly pulled into answering operational questions that shouldn't require their involvement. An audit of your top performer's calendars would likely show 30–60 minutes per day spent answering questions that are already written down somewhere.",
+        "proposed_solution": "An internal AI assistant trained on all your company knowledge — SOPs, policies, product documentation, FAQ documents, past project notes. Accessible via Slack command or web interface. Answers questions conversationally with citations to the source document. Escalates to a human when the answer isn't in the knowledge base, and logs that question as a documentation gap.",
+        "deliverables_and_timeline": "Week 1: Knowledge audit — inventory all documentation sources, assess quality and gaps\nWeek 2: Knowledge base preparation — clean, chunk, and index all documents\nWeek 3: Bot build with RAG pipeline and Slack/web integration\nWeek 4: Testing with real employee questions; gap identification; supplemental documentation\nWeek 5: Company-wide rollout and training session",
+        "investment": "$8,500 total. Covers up to 500 documents / 2MB of indexed knowledge. Add $1,000 for each additional 500 documents. Monthly hosting and updates: $800/month.",
+        "team": "[Your Name] as technical lead.",
+        "next_steps": "Provide access to your documentation systems (Notion, Google Drive, Confluence). Complete knowledge audit intake form. Schedule kickoff."
+      }
+    },
+    {
+      "id": "chatbot-003",
+      "variant": "E-Commerce — Product Recommendation + Support",
+      "sections": {
+        "executive_summary": "This proposal covers a combined product recommendation and customer support chatbot for [E-Commerce Store Name]. Visitors get personalized product suggestions. Customers get instant support answers. The bot works as a 24/7 sales assistant and support agent — increasing conversion rate and decreasing support burden simultaneously.\n\nProject investment: $9,500. Timeline: 5 weeks.",
+        "problem_statement": "Online shoppers have questions before they buy — about fit, compatibility, use cases, delivery times. When answers aren't immediately available, they leave. Your add-to-cart rate of [X%] and your conversion rate of [Y%] suggest that a significant portion of visitors have intent but are leaving with unresolved questions.\n\nPost-purchase, the same customers become support tickets. The 'Where is my order?' and 'Can I return this?' questions are answerable without human involvement but are currently requiring it.",
+        "proposed_solution": "A dual-purpose bot:\n1. Pre-purchase: Asks a few questions about what the customer is looking for and suggests specific products from your catalog. Handles objections ('Is this machine washable?' 'Will this work with an iPhone?') using your product data.\n2. Post-purchase: Provides order tracking, answers returns questions, handles common complaints with pre-defined resolution paths.\n\nSeamlessly escalates to live chat or email for anything outside its scope.",
+        "deliverables_and_timeline": "5 weeks. Weeks 1–2: product catalog ingestion and recommendation logic; Weeks 3–4: support flow build and integration; Week 5: testing and launch.",
+        "investment": "$9,500 project. Optional managed service at $1,500/month for ongoing catalog updates and performance optimization.",
+        "team": "[Your Name].",
+        "next_steps": "Provide product catalog export, current FAQs, and access to your e-commerce platform."
+      }
+    }
+  ]
+}

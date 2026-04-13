@@ -1,0 +1,62 @@
+{
+  "number": 8,
+  "title": "The accountant who built an AI bookkeeping assistant and now serves 3x the clients",
+  "date": "April 2026",
+  "summary": "A solo CPA in Nashville went from 28 bookkeeping clients at $400/month to 84 clients at the same price point — $33,600/month vs. $11,200 — by building an AI bookkeeping assistant that handles transaction categorization, anomaly detection, and monthly close preparation. Annual revenue increase: $268,800.",
+  "case_study": "Rachel Vo (name changed) is a CPA who runs a solo practice specializing in bookkeeping and monthly close services for small businesses ($500K-$5M revenue). Her typical client pays $400/month for clean books, monthly close, and quarterly check-ins.\n\nAt 28 clients, Rachel was at capacity. Monthly close season (first 2 weeks of every month) was brutal: she was working 65-hour weeks to get all clients closed by the 15th. She tried hiring a junior bookkeeper — the training and QC overhead ate most of the time savings. She was stuck at 28 clients and couldn't grow.\n\nShe spent 8 weeks building an AI bookkeeping assistant:\n\nTransaction Categorization Engine: Connected to QuickBooks Online via API for all 28 clients. A Claude-based pipeline processes new transactions nightly: transaction description + merchant data + account history → category suggestion with confidence score. Transactions above 92% confidence are auto-categorized. Transactions below 92% queue for Rachel's review each morning. She reviews the queue in 15-20 minutes vs. 2-3 hours of categorization work previously.\n\nAnomaly Detection: The same pipeline flags: duplicate transactions, unusual amounts compared to 12-month history, missing expected recurring transactions (rent, utilities), and transactions in unexpected categories (personal purchase on business card). Rachel reviews anomaly flags during monthly close — catches errors that would have required client restatements.\n\nMonthly Close Preparation: A Claude pipeline runs on the 1st of each month for each client: pulls all transactions from prior month, checks for completeness, flags unreconciled items, compares P&L to prior 3 months, and generates a close preparation brief. The brief tells Rachel: what needs her attention, what's clean, and any anomalies. Her close time per client dropped from 3 hours to 55 minutes.\n\nClient Reports: Monthly management reports are generated from the close data with Claude writing the narrative commentary (this month's trends, notable line items, quarter-to-date trajectory). Rachel reviews and sends. Client communication time per client: 20 minutes vs. 45 minutes.\n\nWith these systems, she took on 56 new clients over 18 months. Raised her rate to $450 for new clients. Is now considering bringing on one part-time bookkeeper to take her to 130 clients.",
+  "implementation_guide": "Step 1 — QuickBooks/Xero API access. Set up API connections to your clients' accounting software. This requires client authorization. Build this as a standardized onboarding step — 'connect your accounting software in 3 minutes' — rather than a manual setup per client.\n\nStep 2 — Transaction categorization training. For each client, you need a 'chart of accounts + categorization rules' document. Pull the last 12 months of categorized transactions per client. This becomes your training data for the confidence scoring model.\n\nStep 3 — Build the confidence scoring system. For each AI-suggested category, generate a confidence score based on: match quality vs. historical transactions, merchant recognition, and category consensus across similar merchants. Set your auto-categorize threshold conservatively at first (95%), then tune down as you validate accuracy.\n\nStep 4 — Design the daily review queue. Your morning review queue should show: all below-threshold transactions needing categorization, all anomaly flags, any failed API connections. This replaces hours of manual work with a focused 15-30 minute review.\n\nStep 5 — Monthly close automation. The close prep script should run on the 1st of every month automatically. Build it to produce a consistent format for every client — you should be able to look at any client's close prep brief in the same structure.\n\nStep 6 — Client communication templates. Build 4-5 narrative templates for common report patterns (revenue up, expenses elevated, good month, seasonal variation). Claude fills in the specifics; you have a consistent report structure clients learn to read efficiently.",
+  "numbers": {
+    "before_clients": 28,
+    "after_clients": 84,
+    "client_rate_before": 400,
+    "client_rate_after_new_clients": 450,
+    "before_monthly_revenue": 11200,
+    "after_monthly_revenue": 37800,
+    "monthly_revenue_increase": 26600,
+    "annual_revenue_increase": 319200,
+    "before_hours_per_client_monthly": 5.5,
+    "after_hours_per_client_monthly": 1.8,
+    "time_reduction_pct": 67,
+    "close_hours_per_client_before": 3,
+    "close_hours_per_client_after": 0.92,
+    "build_time_weeks": 8,
+    "implementation_cost": 7200,
+    "tool_monthly_cost": 420,
+    "payback_period_days": 9,
+    "net_annual_benefit": 314000
+  },
+  "tool_stack": [
+    {
+      "tool": "Claude claude-sonnet-4-5 API",
+      "use": "Transaction categorization, anomaly detection, report narrative",
+      "cost": "$180/month at 84 clients"
+    },
+    {
+      "tool": "QuickBooks Online API",
+      "use": "Transaction data ingestion and write-back for all clients",
+      "cost": "Free API access with client QBO subscriptions"
+    },
+    {
+      "tool": "Python (custom scripts)",
+      "use": "Nightly categorization pipeline, monthly close preparation",
+      "cost": "One-time dev: 30 hours self-built"
+    },
+    {
+      "tool": "Airtable",
+      "use": "Client management, anomaly log, review queue interface",
+      "cost": "$45/month"
+    },
+    {
+      "tool": "Zapier",
+      "use": "Nightly trigger, email notifications for flagged items",
+      "cost": "$49/month"
+    },
+    {
+      "tool": "Google Sheets",
+      "use": "ROI calculator template for client reporting",
+      "cost": "Free"
+    }
+  ],
+  "what_failed": "Attempt 1 — Rule-based categorization (pre-AI): Rachel first tried to build a rule-based system in QBO using bank rules. Worked for ~60% of transactions. The remaining 40% required manual review — and the 60% that auto-categorized had enough errors to require verification anyway. Not worth the setup time.\n\nAttempt 2 — Fully autonomous categorization (no confidence threshold): Her first AI version auto-categorized everything above 70% confidence with no human review. Two clients had systematic miscategorizations that persisted for 6 weeks before she caught them during quarterly review. One client's P&L was materially misstated for Q3. The fix: confidence threshold of 92% for auto-categorization, daily review queue for everything else.\n\nAttempt 3 — Rushing the API setup for new clients: When she started scaling, she was setting up new client API connections manually as they onboarded. At 15+ clients, setup became a bottleneck. She built a standardized onboarding flow (Typeform → API authorization → automated setup) that reduced new client setup from 2 hours to 25 minutes.",
+  "takeaway": "The accounting firm automation opportunity is structural, not marginal. The transaction categorization work that consumes most of a bookkeeper's time is pattern-matching — exactly what AI does well. The judgment work (what is this transaction actually for?) is the small percentage that requires the accountant. Build systems that sort those two categories automatically."
+}
