@@ -6,6 +6,11 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts')
 const nextConfig: NextConfig = {
   typescript: { ignoreBuildErrors: true },
   eslint: { ignoreDuringBuilds: true },
+  experimental: {
+    // Disable webpack build worker threads — prevents next-intl alias race
+    // condition when multiple static generation workers run in parallel
+    webpackBuildWorker: false,
+  },
   turbopack: {
     root: __dirname,
   },
