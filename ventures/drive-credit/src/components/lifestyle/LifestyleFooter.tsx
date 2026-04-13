@@ -25,9 +25,10 @@ export default function LifestyleFooter() {
     {
       heading: 'Mintbrooks',
       links: [
-        { label: 'About',      href: localePath('/about') },
-        { label: 'Newsletter', href: localePath('/#newsletter') },
-        { label: 'Pinterest',  href: 'https://pinterest.com/mintbrooks' },
+        { label: 'About',        href: localePath('/about') },
+        { label: 'Reading List', href: localePath('/reading-list') },
+        { label: 'Newsletter',   href: localePath('/#newsletter') },
+        { label: 'Pinterest',    href: 'https://pinterest.com/mintbrooks' },
       ],
     },
     {

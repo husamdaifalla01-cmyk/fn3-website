@@ -7,6 +7,7 @@ import { getProductsByCategory } from '@/lib/lifestyle/products'
 import CategoryEditorial from '@/components/lifestyle/CategoryEditorial'
 import CarCalculator from '@/components/CarCalculator'
 import { OFFERS, buildAffiliateUrl } from '@/lib/offers'
+import NavBar from '@/components/NavBar'
 
 const YENDO_FINANCE_CALC = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'seo', 'finance-calculator')
 const SLAM_DUNK_FINANCE  = buildAffiliateUrl(OFFERS.slamDunk.url, 'organic', 'seo', 'finance-calculator')
@@ -106,6 +107,7 @@ export default function FinancePage() {
     <div
       style={{ background: '#FDFAF6', color: '#1A1714', overflowX: 'hidden' }}
     >
+      <NavBar />
       {/* ── Finance Hero ──────────────────────────────────────────────── */}
       <section
         style={{
