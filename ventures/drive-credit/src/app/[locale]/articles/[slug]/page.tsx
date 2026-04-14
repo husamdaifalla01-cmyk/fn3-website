@@ -164,6 +164,20 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Clean Beauty Foundation Face-Off: Harvest Natural Beauty vs. Jerome Alexander', slug: 'clean-beauty-foundation-comparison-harvest-natural-beauty-jerome-alexander-clinique-bareminerals', readTime: '9 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 6, 2026', excerpt: 'Comparing Harvest Natural Beauty, Jerome Alexander, Clinique, and bareMinerals to find your ideal clean beauty foundation, whether you need full coverage or an everyday option.' },
 
   { title: 'Vitamin C vs. Niacinamide: Brighten Skin or Shrink Pores?', slug: 'vitamin-c-vs-niacinamide-for-skin', readTime: '12 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 6, 2026', excerpt: 'Confused about vitamin C vs niacinamide for skin? Discover which serum is best for brightening, large pores, and uneven tone on Mintbrooks.' },
+
+  { title: 'Best Overnight Hair Serum 2024: Kerastase & More for Dry Hair', slug: 'best-overnight-hair-serum', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 14, 2026', excerpt: 'Discover the best overnight hair serum for deep nourishment and repair. Our 2024 guide, featuring Kerastase, helps you choose the ideal night serum for dry hair.' },
+
+  { title: 'Best Anti-Aging Serum 2024: Expert Guide for Firmer Skin', slug: 'best-anti-aging-serum-guide', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 14, 2026', excerpt: 'Our 2024 expert guide helps you choose the best anti-aging serum for your specific needs, focusing on effective ingredients for wrinkles and firming.' },
+
+  { title: 'Best Mini Air Fryers 2024: Compact & Mighty Kitchen Gadgets', slug: 'best-mini-air-fryers', readTime: '6 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'April 14, 2026', excerpt: 'Looking for the best mini air fryers for your tiny kitchen, dorm, or RV? Our 2024 guide reviews compact air fryers, with the CHEFMAN 2Qt as our top pick.' },
+
+  { title: 'Best Chunky Knit Throw Blankets for Cozy Homes (2024)', slug: 'best-chunky-knit-throw-blankets', readTime: '5 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 14, 2026', excerpt: 'Discover the best chunky knit throw blankets for a cozy and aesthetic home. Our top pick for 2024 is the Cream Chunky Knit Throw Blanket, offering incredible value and style.' },
+
+  { title: 'Best Travel Body Care Kits 2024: Sol de Janeiro & More', slug: 'best-travel-body-care-kit', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 14, 2026', excerpt: 'Discover the best travel body care kit for your next trip. Our 2024 guide, featuring the luxurious Sol de Janeiro Jet Set, ensures you stay fresh on the go.' },
+
+  { title: 'Best Women\'s Gardening Tool Sets for Every Gardener in 2024', slug: 'best-womens-gardening-tool-set', readTime: '6 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 14, 2026', excerpt: 'Discover the best women\'s gardening tool sets of 2024, featuring lightweight, durable, and stylish options perfect for every gardener. Find your ideal ladies garden tool set today.' },
+
+  { title: 'Is the Birthday Self-Care Package for Women Worth It? Honest Review', slug: 'birthday-self-care-package-women-worth-it-review', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 14, 2026', excerpt: 'Wondering if the Birthday Self-Care Package for Women is worth the price? Our honest review breaks down its value, quality, and if it\'s the right gift for her.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
