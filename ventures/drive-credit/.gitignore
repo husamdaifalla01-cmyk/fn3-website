@@ -39,3 +39,4 @@ yarn-error.log*
 next-env.d.ts
 # vercel — project.json tracked (no secrets, just project IDs)
 .vercel/output
+
