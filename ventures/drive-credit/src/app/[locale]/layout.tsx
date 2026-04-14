@@ -96,9 +96,6 @@ export async function generateMetadata({
     keywords: 'lifestyle blog, home decor, wellness, beauty, kitchen, credit building, curated finds',
     metadataBase: new URL(SITE_URL),
     alternates,
-    other: {
-      'p:domain_verify': 'e8324e340ff49d09cff7b317a9211b3d',
-    },
     openGraph: {
       title: 'Mintbrooks — The Good Life, Curated',
       description: 'Home. Wellness. Beauty. Kitchen. And the financial foundation to build it all.',
@@ -163,6 +160,7 @@ export default async function LocaleLayout({
     <html lang={lang} className={playfair.variable}>
       <head>
         <link rel="canonical" href={SITE_URL} />
+        <meta name="p:domain_verify" content="e8324e340ff49d09cff7b317a9211b3d" />
       </head>
       <body
         style={{
