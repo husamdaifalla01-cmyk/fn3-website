@@ -1,7 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { ARTICLES, CATEGORY_META } from '@/lib/lifestyle/articles'
 
-export const runtime = 'edge'
 export const alt = 'Mintbrooks article'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
