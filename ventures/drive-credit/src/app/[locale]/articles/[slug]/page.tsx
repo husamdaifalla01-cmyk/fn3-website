@@ -178,6 +178,20 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Women\'s Gardening Tool Sets for Every Gardener in 2024', slug: 'best-womens-gardening-tool-set', readTime: '6 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 14, 2026', excerpt: 'Discover the best women\'s gardening tool sets of 2024, featuring lightweight, durable, and stylish options perfect for every gardener. Find your ideal ladies garden tool set today.' },
 
   { title: 'Is the Birthday Self-Care Package for Women Worth It? Honest Review', slug: 'birthday-self-care-package-women-worth-it-review', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 14, 2026', excerpt: 'Wondering if the Birthday Self-Care Package for Women is worth the price? Our honest review breaks down its value, quality, and if it\'s the right gift for her.' },
+
+  { title: 'Olaplex No. 7 vs Kerastase Gloss: Your Best Hair Oil Pick', slug: 'olaplex-no-7-vs-kerastase-gloss-hair-oil', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 16, 2026', excerpt: 'Struggling to choose between Olaplex No. 7 and Kerastase Gloss? This guide helps you find the best hair oil for shine, repair, and your specific hair needs.' },
+
+  { title: 'La Roche-Posay Retinol vs. Paula\'s Choice: Which is Better?', slug: 'la-roche-posay-retinol-vs-paulas-choice', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 16, 2026', excerpt: 'Comparing La Roche-Posay Pure Retinol Face Serum and Paula\'s Choice to help you decide which is better for anti-aging and sensitive skin needs.' },
+
+  { title: 'Is Simple&Opulence Linen Duvet Cover Worth It? Honest Review', slug: 'simple-opulence-linen-duvet-cover-review', readTime: '7 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 16, 2026', excerpt: 'Wondering if the Simple&Opulence linen duvet cover is worth its price? Get an honest, in-depth review of its quality, feel, and value.' },
+
+  { title: 'Too Faced Born This Way Natural Nudes Palette Review', slug: 'too-faced-born-this-way-natural-nudes-palette-review', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 16, 2026', excerpt: 'An honest Too Faced Born This Way Natural Nudes Palette review covering shades, pigmentation, longevity, and if it\'s worth it for everyday use.' },
+
+  { title: 'Harvest Natural Beauty Foundation Review: 6 Weeks Tested', slug: 'harvest-natural-beauty-foundation-review', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 16, 2026', excerpt: 'After 6 weeks of testing, get my honest Harvest Natural Beauty Foundation review. Discover its coverage, ingredients, and if it\'s right for you.' },
+
+  { title: 'Is the 66Ft Automatic Drip Irrigation Kit Worth It? Honest Review', slug: '66ft-automatic-drip-irrigation-kit-review', readTime: '7 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 16, 2026', excerpt: 'Considering the 66Ft Automatic Drip Irrigation Kit? Our honest review assesses its value, ease of use, and performance for your home garden.' },
+
+  { title: 'Is the 14-Piece Vintage Self-Care Gift Basket Worth It? (Honest Review)', slug: '14-piece-vintage-self-care-gift-basket-review-worth-it', readTime: '6 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 16, 2026', excerpt: 'Wondering if the 14-Piece Vintage Self-Care Gift Basket is worth it? Our honest review breaks down its value, contents, and if it\'s the right choice for you.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
