@@ -208,6 +208,20 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Drip Irrigation Systems for Beginners: Easy Garden Watering', slug: 'best-drip-irrigation-systems-for-beginners', readTime: '6 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 17, 2026', excerpt: 'New to gardening? Discover the best drip irrigation systems for beginners that are easy to install and use, making garden watering simple and efficient.' },
 
   { title: 'Self Care Gifts Get Well Soon Basket: Is It Worth The Price?', slug: 'self-care-gifts-get-well-soon-basket-worth-it-review', readTime: '8 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 17, 2026', excerpt: 'Wondering if the Self Care Gifts Get Well Soon Basket is worth the price? We dive deep into its value, quality, and what reviewers say to help you decide.' },
+
+  { title: 'Is Olaplex No. 7 Worth It? An Honest Look at the Price Tag', slug: 'is-olaplex-no-7-worth-it', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 18, 2026', excerpt: 'Wondering if Olaplex No. 7 Bonding Oil is worth its $32 price tag? We evaluate its value, benefits, and unique technology for damaged hair.' },
+
+  { title: 'Is La Roche-Posay Retinol Serum Worth It? An Honest Take', slug: 'is-la-roche-posay-retinol-serum-worth-it', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 18, 2026', excerpt: 'Wondering if La Roche-Posay Retinol Serum is worth the price? We break down its effectiveness, ingredients, and user experience to help you decide.' },
+
+  { title: 'Anova Precision Cooker Nano Review: After 3 Months of Use', slug: 'anova-precision-cooker-nano-review-long-term', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 18, 2026', excerpt: 'Curious about the Anova Precision Cooker Nano? Our honest review after 3 months of use covers its performance, pros, and cons for beginners.' },
+
+  { title: 'Best Linen Duvet Covers for Hot Sleepers: Stay Cool All Night', slug: 'best-linen-duvet-covers-hot-sleepers', readTime: '7 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 18, 2026', excerpt: 'Tired of night sweats? Discover the best linen duvet covers for hot sleepers designed to keep you cool and comfortable all night long. Find your perfect breathable bedding.' },
+
+  { title: 'Best Natural Foundation for Beginners: Easy & Flawless Start', slug: 'best-natural-foundation-for-beginners', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 18, 2026', excerpt: 'Starting your clean beauty journey? Discover the best natural foundation for beginners that offers easy application and a flawless finish, curated by Mintbrooks.' },
+
+  { title: 'How to Install a Drip Irrigation System: A Beginner\'s Guide', slug: 'how-to-install-drip-irrigation-beginner-guide', readTime: '6 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 18, 2026', excerpt: 'Learn how to install a drip irrigation system with this easy DIY guide, perfect for beginners looking to set up their garden drip system effortlessly. Get started today!' },
+
+  { title: 'Glow Recipe Hue Drops Review: Is This Bronzing Serum Worth It?', slug: 'glow-recipe-hue-drops-review-worth-it', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 18, 2026', excerpt: 'Considering the Glow Recipe Hue Drops Bronzing Serum? Our in-depth review covers performance, ingredients, and if this customizable bronzer is worth it for a natural glow.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
