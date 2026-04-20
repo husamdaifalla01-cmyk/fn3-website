@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ArticleNewsletter from './ArticleNewsletter'
 import ArticleSidebar from './ArticleSidebar'
-import { EDITORIAL_CONTENT } from '@/lib/editorial-content'
+import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { getProducts, getProductsByCategory } from '@/lib/lifestyle/products'
 
 // ─── Article Data ─────────────────────────────────────────────────────────────
@@ -250,15 +250,13 @@ const ALL_ARTICLES: Article[] = [
   { title: '14-Piece Vintage Self-Care Gift Basket Review: 2 Months Later', slug: '14-piece-vintage-self-care-gift-basket-review-long-term', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 20, 2026', excerpt: 'Curious about the 14-piece vintage self-care gift basket? We\'ve tested ASIN B0G2RWQ5J5 for two months to give you an honest, buyer-focused review.' },
 ]
 
-async function getAffiliateBodyHtml(slug: string, siteUrl: string): Promise<string | null> {
-  // 1. Check bundled editorial content (no network fetch needed)
-  if (EDITORIAL_CONTENT[slug]) {
-    return injectLinkAttrs(EDITORIAL_CONTENT[slug])
-  }
-
-  // 2. Try affiliate article (still fetched at runtime)
+async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
+  // Fetch article HTML from static asset via Cloudflare ASSETS binding (avoids self-referencing HTTP)
   try {
-    const res = await fetch(`${siteUrl}/articles/affiliate/${slug}/index.html`, { cache: 'no-store' })
+    const { env } = await getCloudflareContext({ async: true })
+    const res = await (env as { ASSETS: { fetch: (r: Request) => Promise<Response> } }).ASSETS.fetch(
+      new Request(`https://assets.local/articles/affiliate/${slug}/index.html`)
+    )
     if (res.ok) {
       const raw = await res.text()
       const match = raw.match(/<article>([\s\S]*?)<\/article>/)
