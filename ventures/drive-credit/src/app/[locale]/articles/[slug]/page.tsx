@@ -248,6 +248,18 @@ const ALL_ARTICLES: Article[] = [
   { title: 'How to Choose Natural Foundation for Your Skin Type: A Guide', slug: 'how-to-choose-natural-foundation', readTime: '9 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 20, 2026', excerpt: 'Struggling to find the right clean foundation? Learn how to choose natural foundation for your skin type, from oily to dry, with our expert guide.' },
 
   { title: '14-Piece Vintage Self-Care Gift Basket Review: 2 Months Later', slug: '14-piece-vintage-self-care-gift-basket-review-long-term', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 20, 2026', excerpt: 'Curious about the 14-piece vintage self-care gift basket? We\'ve tested ASIN B0G2RWQ5J5 for two months to give you an honest, buyer-focused review.' },
+
+  { title: 'How to Use Olaplex No. 7 Bonding Oil for Best Results', slug: 'how-to-use-olaplex-no-7-bonding-oil', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 20, 2026', excerpt: 'Unlock the full potential of Olaplex No. 7 Bonding Oil. Learn how to use Olaplex No. 7 for maximum shine, frizz control, and heat protection for damaged hair.' },
+
+  { title: 'How to Use Retinol Serum for Beginners: A Step-by-Step Guide', slug: 'how-to-use-retinol-serum-for-beginners', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 20, 2026', excerpt: 'New to retinol? Learn how to use retinol serum for beginners with this easy step-by-step guide, focusing on how to apply retinol without irritation.' },
+
+  { title: 'How to Use Anova Nano: A Beginner\'s Guide to Sous Vide', slug: 'how-to-use-anova-nano-beginner-guide-sous-vide', readTime: '6 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'April 20, 2026', excerpt: 'First time using your Anova Nano? This beginner\'s guide walks you through setting up, cooking, and enjoying your first sous vide meal with ease. Learn how to use Anova Nano step-by-step.' },
+
+  { title: 'How to Wash & Care for Linen Duvet Covers: Extend Their Life', slug: 'how-to-wash-linen-duvet-cover', readTime: '8 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'April 20, 2026', excerpt: 'Learn the step-by-step process of how to wash linen duvet covers to maintain their softness, longevity, and luxurious feel. A complete linen bedding care guide.' },
+
+  { title: 'Too Faced Born This Way Natural Nudes Palette Dupes', slug: 'too-faced-born-this-way-natural-nudes-palette-dupes', readTime: '6 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 20, 2026', excerpt: 'Looking for budget-friendly Too Faced Born This Way Natural Nudes Palette dupes? Discover affordable eyeshadow palettes with similar shades and quality.' },
+
+  { title: 'Self Care Gifts Get Well Soon Basket Review: After 2 Weeks', slug: 'self-care-gifts-get-well-soon-basket-review', readTime: '6 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 20, 2026', excerpt: 'Curious about the Self Care Gifts Get Well Soon Gift Basket? Our detailed review covers the unboxing, contents, and recipient\'s experience after two weeks. Discover if it\'s the right choice for your loved one.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
