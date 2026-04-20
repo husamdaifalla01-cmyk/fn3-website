@@ -85,7 +85,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const description = LOCALE_DESCRIPTIONS[locale] ?? LOCALE_DESCRIPTIONS['en']
-  const alternates = buildHreflangAlternates('/')
+  const alternates = buildHreflangAlternates('/', locale)
 
   return {
     title: {
@@ -159,7 +159,6 @@ export default async function LocaleLayout({
   return (
     <html lang={lang} className={playfair.variable}>
       <head>
-        <link rel="canonical" href={SITE_URL} />
         <meta name="p:domain_verify" content="e8324e340ff49d09cff7b317a9211b3d" />
       </head>
       <body

@@ -8,24 +8,25 @@ const SITE_URL = 'https://mintbrooks.com'
  * English gets no prefix: mintbrooks.com/articles/...
  * Others get prefix:      mintbrooks.com/fr/articles/...
  */
-export function buildHreflangAlternates(path: string) {
+export function buildHreflangAlternates(path: string, locale = 'en') {
   const languages: Record<string, string> = {}
 
-  for (const locale of routing.locales) {
+  for (const loc of routing.locales) {
     const url =
-      locale === 'en'
+      loc === 'en'
         ? `${SITE_URL}${path === '/' ? '' : path}`
-        : `${SITE_URL}/${locale}${path === '/' ? '' : path}`
-    languages[locale] = url
+        : `${SITE_URL}/${loc}${path === '/' ? '' : path}`
+    languages[loc] = url
   }
 
   // x-default always points to English
   languages['x-default'] = `${SITE_URL}${path === '/' ? '' : path}`
 
+  // Each locale self-canonicalizes to its own URL
   const canonical =
-    routing.defaultLocale === 'en'
+    locale === 'en'
       ? `${SITE_URL}${path === '/' ? '' : path}`
-      : `${SITE_URL}${path === '/' ? '' : path}`
+      : `${SITE_URL}/${locale}${path === '/' ? '' : path}`
 
   return { canonical, languages }
 }

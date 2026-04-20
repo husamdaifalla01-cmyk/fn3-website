@@ -43,6 +43,14 @@ const COOKIE_MAX_AGE = 60 * 60 * 24 * 365 // 1 year
 const intlMiddleware = createMiddleware(routing)
 
 export default function middleware(request: NextRequest) {
+  // Redirect www → non-www
+  const host = request.headers.get('host') ?? ''
+  if (host.startsWith('www.')) {
+    const url = request.nextUrl.clone()
+    url.host = host.slice(4)
+    return NextResponse.redirect(url, 301)
+  }
+
   const pathname = request.nextUrl.pathname
 
   // Skip exempt paths
