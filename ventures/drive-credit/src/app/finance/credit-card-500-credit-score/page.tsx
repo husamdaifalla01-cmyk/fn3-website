@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
+import FinanceEmailCapture from '@/components/FinanceEmailCapture'
 import AffiliateLink from '@/components/AffiliateLink'
 import { YENDO_500_HERO, YENDO_500_CARD, YENDO_500_CTA } from '@/lib/affiliateUrls'
 
 export const metadata: Metadata = {
   title: 'Credit Card with a 500 Credit Score: What Are Your Real Options? — Mintbrooks',
   description: 'What credit cards can you actually get with a 500 credit score? Here are your realistic options — ranked by approval odds, not features.',
-  alternates: { canonical: 'https://mintbrooks.com/credit-card-500-credit-score' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/credit-card-500-credit-score' },
 }
 
 const faqs = [
@@ -221,6 +222,8 @@ export default function Page() {
         <div className="text-xs pt-8 leading-relaxed" style={{ color: '#a8a29e', borderTop: '1px solid rgba(28,25,23,0.07)' }}>
           Mintbrooks is an independent educational resource. Card details are based on publicly available information and may change. We may earn a commission when you apply through our links. This is not financial advice. Always verify terms directly with the card issuer.
         </div>
+      
+        <FinanceEmailCapture source="finance" />
       </article>
     </>
   )

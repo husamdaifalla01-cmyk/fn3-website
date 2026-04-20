@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
+import FinanceEmailCapture from '@/components/FinanceEmailCapture'
 import AffiliateLink from '@/components/AffiliateLink'
 import MoneyResetCTA from '@/components/MoneyResetCTA'
 import { YENDO_BUILD_CREDIT_HERO, YENDO_BUILD_CREDIT_CTA } from '@/lib/affiliateUrls'
@@ -8,7 +9,7 @@ import { YENDO_BUILD_CREDIT_HERO, YENDO_BUILD_CREDIT_CTA } from '@/lib/affiliate
 export const metadata: Metadata = {
   title: 'How to Build Credit with Bad Credit (2026) — 7 Realistic Steps',
   description: 'Step-by-step guide to building credit when you have bad credit or no credit history. Real strategies that work, ranked by effectiveness and accessibility.',
-  alternates: { canonical: 'https://mintbrooks.com/how-to-build-credit-with-bad-credit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/how-to-build-credit-with-bad-credit' },
   openGraph: {
     title: 'How to Build Credit with Bad Credit — 7 Realistic Steps',
     description: 'Practical credit-building strategies for people with damaged or thin credit files.',
@@ -357,6 +358,8 @@ export default function HowToBuildCreditBadCreditPage() {
         <div className="text-xs pt-8 leading-relaxed" style={{ color: '#a8a29e', borderTop: '1px solid rgba(28,25,23,0.07)' }}>
           <strong>Affiliate Disclosure:</strong> Mintbrooks is an independent educational resource. We may earn a commission when you apply through our links at no extra cost to you. This does not influence our editorial content. Card details are based on publicly available information and may change at any time. Approval decisions are made solely by the card issuer — Mintbrooks makes no guarantee of approval and is not a lender. This content is for informational purposes only and does not constitute financial advice. Always verify current terms, rates, and eligibility requirements directly with the issuer before applying.
         </div>
+      
+        <FinanceEmailCapture source="finance" />
       </article>
     </>
   )

@@ -3,12 +3,13 @@ import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
 import MoneyResetCTA from '@/components/MoneyResetCTA'
+import FinanceEmailCapture from '@/components/FinanceEmailCapture'
 import { YENDO_BAD_CREDIT_HERO, YENDO_BAD_CREDIT_CARD, YENDO_BAD_CREDIT_CTA } from '@/lib/affiliateUrls'
 
 export const metadata: Metadata = {
   title: 'Best Credit Cards for Bad Credit 2026 — Real Approval Odds',
   description: 'The actual best credit cards if you have bad credit (below 580). Ranked by approval odds, fees, and whether they actually help you build credit.',
-  alternates: { canonical: 'https://mintbrooks.com/bad-credit-credit-card' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/bad-credit-credit-card' },
 }
 
 const jsonLd = {
@@ -92,6 +93,8 @@ export default function BadCreditPage() {
         <p className="mb-8 leading-relaxed" style={{ color: '#78716c' }}>Credit utilization (how much of your available credit you use) accounts for roughly 30% of a FICO score. A higher credit limit at the same spending level means lower utilization — which can meaningfully improve your score faster than a low-limit secured card.</p>
 
         <MoneyResetCTA variant="end" />
+
+        <FinanceEmailCapture source="finance" />
 
         <div className="rounded-2xl p-6 text-center mb-12" style={{ background: '#1c1917' }}>
           <h3 className="text-xl font-black text-white mb-2">Use Your Car to Skip the Score Barrier</h3>

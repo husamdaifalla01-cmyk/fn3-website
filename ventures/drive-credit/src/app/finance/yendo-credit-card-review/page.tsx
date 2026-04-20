@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
+import FinanceEmailCapture from '@/components/FinanceEmailCapture'
 import AffiliateLink from '@/components/AffiliateLink'
 import { YENDO_REVIEW_HERO, YENDO_REVIEW_CTA } from '@/lib/affiliateUrls'
 
 export const metadata: Metadata = {
   title: 'Yendo Credit Card Review (2026) — Is It Worth It? Honest Analysis',
   description: 'Unbiased Yendo credit card review. How the car-secured Visa works, real pros and cons, who it\'s best for, and whether it\'s worth the trade-offs.',
-  alternates: { canonical: 'https://mintbrooks.com/yendo-credit-card-review' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/yendo-credit-card-review' },
   openGraph: {
     title: 'Yendo Credit Card Review (2026) — Honest Analysis',
     description: 'Comprehensive review of the Yendo car-secured Visa credit card.',
@@ -306,6 +307,8 @@ export default function YendoCreditCardReviewPage() {
         <div className="text-xs pt-8 leading-relaxed" style={{ color: '#a8a29e', borderTop: '1px solid rgba(28,25,23,0.07)' }}>
           <strong>Affiliate Disclosure:</strong> Mintbrooks is an independent educational resource. We may earn a commission when you apply through our links at no extra cost to you. This does not influence our editorial content. Card details are based on publicly available information and may change at any time. Approval decisions are made solely by the card issuer — Mintbrooks makes no guarantee of approval and is not a lender. This content is for informational purposes only and does not constitute financial advice. Always verify current terms, rates, and eligibility requirements directly with the issuer before applying.
         </div>
+      
+        <FinanceEmailCapture source="finance" />
       </article>
     </>
   )

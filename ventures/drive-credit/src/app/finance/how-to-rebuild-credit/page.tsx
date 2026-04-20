@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
+import FinanceEmailCapture from '@/components/FinanceEmailCapture'
 import AffiliateLink from '@/components/AffiliateLink'
 import MoneyResetCTA from '@/components/MoneyResetCTA'
 import {
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title: 'How to Rebuild Credit Fast in 2026 — Practical Steps That Actually Work',
   description: 'Rebuilding credit with bad credit takes strategy, not luck. This guide covers the fastest legal methods to raise your score — including one most people miss.',
   keywords: 'how to rebuild credit, rebuild credit fast, rebuild credit with bad credit, how to fix bad credit, credit repair steps, raise credit score bad credit',
-  alternates: { canonical: 'https://mintbrooks.com/how-to-rebuild-credit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/how-to-rebuild-credit' },
   openGraph: {
     title: 'How to Rebuild Credit Fast in 2026 — Practical Steps That Actually Work',
     description: 'Rebuild your credit score from bad or thin with these practical, zero-gimmick steps.',
@@ -437,6 +438,10 @@ export default function HowToRebuildCredit() {
             no cost to you. We are not a lender.
           </p>
         </section>
+
+        <div className="max-w-3xl mx-auto px-4 pb-14">
+          <FinanceEmailCapture source="finance" />
+        </div>
       </main>
     </>
   )
