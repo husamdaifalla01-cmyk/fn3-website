@@ -6,8 +6,8 @@ import AffiliateLink from '@/components/AffiliateLink'
 import { YENDO_500_HERO, YENDO_500_CARD, YENDO_500_CTA } from '@/lib/affiliateUrls'
 
 export const metadata: Metadata = {
-  title: 'Credit Card with a 500 Credit Score: What Are Your Real Options? — Mintbrooks',
-  description: 'What credit cards can you actually get with a 500 credit score? Here are your realistic options — ranked by approval odds, not features.',
+  title: 'Credit Cards for 500 Credit Score (2026): Cards That Actually Approve',
+  description: 'If your score is 500, here are cards with real approval odds — not aspirational lists. Secured and unsecured options ranked for 500-score applicants.',
   alternates: { canonical: 'https://mintbrooks.com/finance/credit-card-500-credit-score' },
 }
 
@@ -34,14 +34,47 @@ const faqs = [
   },
 ]
 
+const PAGE_URL = 'https://mintbrooks.com/finance/credit-card-500-credit-score'
+
 const jsonLd = [
   {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Credit Card with a 500 Credit Score: What Are Your Real Options?',
-    description: 'Realistic credit card options for people with 500 credit scores.',
+    headline: 'Credit Cards for 500 Credit Score (2026): Cards That Actually Approve',
+    description: 'Realistic credit card options for people with 500 credit scores — ranked by approval odds.',
     datePublished: '2026-01-01',
     dateModified: '2026-04-05',
+    url: PAGE_URL,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
+    image: {
+      '@type': 'ImageObject',
+      url: 'https://mintbrooks.com/lifestyle/editorial.jpg',
+      width: 1200,
+      height: 630,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Mintbrooks Editorial',
+      url: 'https://mintbrooks.com/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Mintbrooks',
+      url: 'https://mintbrooks.com',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://mintbrooks.com/lifestyle/logo.png',
+      },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Mintbrooks', item: 'https://mintbrooks.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Finance', item: 'https://mintbrooks.com/finance' },
+      { '@type': 'ListItem', position: 3, name: 'Credit Cards for 500 Credit Score' },
+    ],
   },
   {
     '@context': 'https://schema.org',

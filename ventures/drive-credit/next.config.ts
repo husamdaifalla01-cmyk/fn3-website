@@ -53,6 +53,12 @@ const nextConfig: NextConfig = {
     }))
 
     return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.mintbrooks.com' }],
+        destination: 'https://mintbrooks.com/:path*',
+        permanent: true,
+      },
       { source: '/en/:path*', destination: '/:path*', permanent: true },
       ...lifestyleRedirects,
       ...financeRedirects,

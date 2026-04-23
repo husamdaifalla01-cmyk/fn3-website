@@ -1,111 +1,140 @@
 import { MetadataRoute } from 'next'
 import { ARTICLES } from '@/lib/lifestyle/articles'
 import { routing } from '@/i18n/routing'
+import { execSync } from 'child_process'
 import fs from 'fs'
 import path from 'path'
+
+// Per-URL lastmod: Google weighs this as a freshness signal. We derive it from
+// the real file mtime (git commit time when available; filesystem mtime as
+// fallback) so the value reflects actual content changes, not build time.
+function gitMtime(relPath: string): Date {
+  try {
+    const iso = execSync(`git log -1 --format=%cI -- "${relPath}"`, {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+    }).trim()
+    if (iso) return new Date(iso)
+  } catch {}
+  try {
+    return fs.statSync(path.join(process.cwd(), relPath)).mtime
+  } catch {}
+  return new Date()
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://mintbrooks.com'
   const locales = routing.locales
-  const now = new Date('2026-04-13')
 
   // Lifestyle pages — translated for every locale
-  const lifestylePaths = [
-    '', '/home-decor', '/wellness', '/beauty', '/kitchen', '/articles', '/about', '/reading-list', '/search', '/privacy', '/terms',
+  const lifestylePages: { path: string; src: string }[] = [
+    { path: '',             src: 'src/app/[locale]/page.tsx' },
+    { path: '/home-decor',  src: 'src/app/[locale]/home-decor/page.tsx' },
+    { path: '/wellness',    src: 'src/app/[locale]/wellness/page.tsx' },
+    { path: '/beauty',      src: 'src/app/[locale]/beauty/page.tsx' },
+    { path: '/kitchen',     src: 'src/app/[locale]/kitchen/page.tsx' },
+    { path: '/articles',    src: 'src/app/[locale]/articles/page.tsx' },
+    { path: '/about',       src: 'src/app/[locale]/about/page.tsx' },
+    { path: '/reading-list',src: 'src/app/[locale]/reading-list/page.tsx' },
+    { path: '/search',      src: 'src/app/[locale]/page.tsx' },
+    { path: '/privacy',     src: 'src/app/[locale]/privacy/page.tsx' },
+    { path: '/terms',       src: 'src/app/[locale]/terms/page.tsx' },
   ]
 
   // Finance pages — English only, no locale prefix
-  const financePages = [
-    '/finance', '/finance/calculator', '/finance/bad-credit-credit-card',
-    '/finance/credit-card-500-credit-score', '/finance/use-car-as-collateral',
-    '/finance/no-credit-history-credit-card', '/finance/credit-card-no-deposit',
-    '/finance/emergency-cash-between-paychecks', '/finance/how-it-works',
-    '/finance/car-title-loan-alternative', '/finance/car-equity-vs-secured-cards',
-    '/finance/how-to-build-credit-with-bad-credit',
-    '/finance/how-to-get-credit-card-bad-credit-no-deposit',
-    '/finance/yendo-states-guide', '/finance/yendo-credit-card-review',
-    '/finance/auto-equity-loan', '/finance/credit-builder-loan',
-    '/finance/secured-credit-card-bad-credit', '/finance/qualify',
-    '/finance/how-to-rebuild-credit', '/finance/first-credit-card-bad-credit',
-    '/finance/credit-card-to-rebuild-credit',
-    '/finance/faq', '/finance/yendo-review',
-    '/finance/car-equity-credit-card-reviews',
-    '/finance/does-applying-for-credit-card-hurt-credit',
-    '/finance/no-credit-check-credit-card',
-    '/finance/build-credit-with-your-car',
-    '/finance/debt-consolidation-check',
-    '/finance/personal-loans-up-to-50k',
-    '/finance/car-equity-loan-requirements',
-    '/finance/what-credit-score-do-you-need-for-a-credit-card',
-    '/finance/links',
-  ]
+  const financePages: { path: string; src: string }[] = [
+    ['finance',                                      'page.tsx'],
+    ['finance/calculator',                           'calculator/page.tsx'],
+    ['finance/bad-credit-credit-card',               'bad-credit-credit-card/page.tsx'],
+    ['finance/credit-card-500-credit-score',         'credit-card-500-credit-score/page.tsx'],
+    ['finance/use-car-as-collateral',                'use-car-as-collateral/page.tsx'],
+    ['finance/no-credit-history-credit-card',        'no-credit-history-credit-card/page.tsx'],
+    ['finance/credit-card-no-deposit',               'credit-card-no-deposit/page.tsx'],
+    ['finance/emergency-cash-between-paychecks',     'emergency-cash-between-paychecks/page.tsx'],
+    ['finance/how-it-works',                         'how-it-works/page.tsx'],
+    ['finance/car-title-loan-alternative',           'car-title-loan-alternative/page.tsx'],
+    ['finance/car-equity-vs-secured-cards',          'car-equity-vs-secured-cards/page.tsx'],
+    ['finance/how-to-build-credit-with-bad-credit',  'how-to-build-credit-with-bad-credit/page.tsx'],
+    ['finance/how-to-get-credit-card-bad-credit-no-deposit', 'how-to-get-credit-card-bad-credit-no-deposit/page.tsx'],
+    ['finance/yendo-states-guide',                   'yendo-states-guide/page.tsx'],
+    ['finance/yendo-credit-card-review',             'yendo-credit-card-review/page.tsx'],
+    ['finance/auto-equity-loan',                     'auto-equity-loan/page.tsx'],
+    ['finance/credit-builder-loan',                  'credit-builder-loan/page.tsx'],
+    ['finance/secured-credit-card-bad-credit',       'secured-credit-card-bad-credit/page.tsx'],
+    ['finance/qualify',                              'qualify/page.tsx'],
+    ['finance/how-to-rebuild-credit',                'how-to-rebuild-credit/page.tsx'],
+    ['finance/first-credit-card-bad-credit',         'first-credit-card-bad-credit/page.tsx'],
+    ['finance/credit-card-to-rebuild-credit',        'credit-card-to-rebuild-credit/page.tsx'],
+    ['finance/faq',                                  'faq/page.tsx'],
+    ['finance/yendo-review',                         'yendo-review/page.tsx'],
+    ['finance/car-equity-credit-card-reviews',       'car-equity-credit-card-reviews/page.tsx'],
+    ['finance/does-applying-for-credit-card-hurt-credit', 'does-applying-for-credit-card-hurt-credit/page.tsx'],
+    ['finance/no-credit-check-credit-card',          'no-credit-check-credit-card/page.tsx'],
+    ['finance/build-credit-with-your-car',           'build-credit-with-your-car/page.tsx'],
+    ['finance/debt-consolidation-check',             'debt-consolidation-check/page.tsx'],
+    ['finance/personal-loans-up-to-50k',             'personal-loans-up-to-50k/page.tsx'],
+    ['finance/car-equity-loan-requirements',         'car-equity-loan-requirements/page.tsx'],
+    ['finance/what-credit-score-do-you-need-for-a-credit-card', 'what-credit-score-do-you-need-for-a-credit-card/page.tsx'],
+    ['finance/links',                                'links/page.tsx'],
+  ].map(([p, rel]) => ({ path: `/${p}`, src: `src/app/finance/${rel}` }))
 
-  // Dynamic — reads /public/articles/* at build time, always up to date
-  const publicDir = path.join(process.cwd(), 'public', 'articles')
-  const editorialSlugs = fs.existsSync(path.join(publicDir, 'editorial'))
-    ? fs.readdirSync(path.join(publicDir, 'editorial'))
-        .filter(f => f.endsWith('.html'))
-        .map(f => f.replace('.html', ''))
-    : []
-  const affiliateSlugs = fs.existsSync(path.join(publicDir, 'affiliate'))
-    ? fs.readdirSync(path.join(publicDir, 'affiliate'))
-        .filter(f => fs.statSync(path.join(publicDir, 'affiliate', f)).isDirectory())
-    : []
-
+  // Articles — share lastmod of the source data file
+  const articlesSrc = 'src/lib/lifestyle/articles.ts'
+  const articlesMtime = gitMtime(articlesSrc)
   const articleSlugs = ARTICLES.map((a) => `/articles/${a.slug}`)
+
+  // Editorial + affiliate HTML under /public/articles
+  const publicDir = path.join(process.cwd(), 'public', 'articles')
+  const editorialDir = path.join(publicDir, 'editorial')
+  const affiliateDir = path.join(publicDir, 'affiliate')
+
+  const editorialEntries = fs.existsSync(editorialDir)
+    ? fs.readdirSync(editorialDir)
+        .filter(f => f.endsWith('.html'))
+        .map(f => ({
+          slug: f.replace('.html', ''),
+          mtime: fs.statSync(path.join(editorialDir, f)).mtime,
+        }))
+    : []
+
+  const affiliateEntries = fs.existsSync(affiliateDir)
+    ? fs.readdirSync(affiliateDir)
+        .filter(f => fs.statSync(path.join(affiliateDir, f)).isDirectory())
+        .map(f => ({
+          slug: f,
+          mtime: fs.statSync(path.join(affiliateDir, f)).mtime,
+        }))
+    : []
 
   const entries: MetadataRoute.Sitemap = []
 
-  // Locale-aware lifestyle pages
   for (const locale of locales) {
     const prefix = locale === 'en' ? '' : `/${locale}`
-    for (const path of lifestylePaths) {
-      entries.push({
-        url: `${base}${prefix}${path || '/'}`.replace(/\/$/, '') || base,
-        lastModified: now,
-        changeFrequency: 'weekly',
-        priority: path === '' ? (locale === 'en' ? 1.0 : 0.9) : 0.8,
-      })
+    for (const { path: p, src } of lifestylePages) {
+      // Skip /articles for default locale: /public/articles/ static dir
+      // shadows the dynamic /[locale]/articles route on Cloudflare Pages,
+      // so the no-prefix URL returns 404. Locale-prefixed URLs are unaffected.
+      if (locale === 'en' && (p === '/articles')) continue
+      const url = `${base}${prefix}${p || '/'}`.replace(/\/$/, '') || base
+      entries.push({ url, lastModified: gitMtime(src) })
     }
-    // Article pages per locale
     for (const slug of articleSlugs) {
-      entries.push({
-        url: `${base}${prefix}${slug}`,
-        lastModified: now,
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      })
+      if (locale === 'en') continue
+      entries.push({ url: `${base}${prefix}${slug}`, lastModified: articlesMtime })
     }
   }
 
-  // Finance pages — English only
-  for (const path of financePages) {
-    entries.push({
-      url: `${base}${path}`,
-      lastModified: new Date('2026-03-22'),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    })
+  for (const { path: p, src } of financePages) {
+    entries.push({ url: `${base}${p}`, lastModified: gitMtime(src) })
   }
 
-  // Static editorial HTML articles
-  for (const slug of editorialSlugs) {
-    entries.push({
-      url: `${base}/articles/editorial/${slug}.html`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    })
+  for (const { slug, mtime } of editorialEntries) {
+    entries.push({ url: `${base}/articles/editorial/${slug}.html`, lastModified: mtime })
   }
 
-  // Static affiliate HTML articles
-  for (const slug of affiliateSlugs) {
-    entries.push({
-      url: `${base}/articles/affiliate/${slug}/`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    })
+  for (const { slug, mtime } of affiliateEntries) {
+    entries.push({ url: `${base}/articles/affiliate/${slug}/`, lastModified: mtime })
   }
 
   return entries

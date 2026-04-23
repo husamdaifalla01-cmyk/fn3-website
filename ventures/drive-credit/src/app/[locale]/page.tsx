@@ -10,13 +10,13 @@ export const metadata: Metadata = {
   title: 'Mintbrooks — The Good Life, Curated',
   description:
     'Home, wellness, beauty, kitchen, and the credit to build it all. Mintbrooks is the lifestyle guide for people building a life worth living.',
-  alternates: { canonical: 'https://mintbrooks.com/lifestyle' },
+  // canonical + hreflang inherited from [locale]/layout.tsx via buildHreflangAlternates('/', locale)
   openGraph: {
     title: 'Mintbrooks — The Good Life, Curated',
     description:
       'Home, wellness, beauty, kitchen, and the credit to build it all. Mintbrooks is the lifestyle guide for people building a life worth living.',
     type: 'website',
-    url: 'https://mintbrooks.com/lifestyle',
+    url: 'https://mintbrooks.com/',
     images: [{ url: 'https://mintbrooks.com/lifestyle/editorial.jpg', width: 1200, height: 630, alt: 'Mintbrooks — The Good Life, Curated' }],
   },
   twitter: {
