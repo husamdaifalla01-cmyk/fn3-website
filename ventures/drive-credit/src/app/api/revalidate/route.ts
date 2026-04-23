@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 import { pingIndexNow, pingGoogleSitemap } from '@/lib/indexnow'
 
-export const runtime = 'edge'
-
 export async function POST(req: NextRequest) {
   const secret = req.headers.get('x-revalidate-secret')
   if (!process.env.REVALIDATE_SECRET || secret !== process.env.REVALIDATE_SECRET) {

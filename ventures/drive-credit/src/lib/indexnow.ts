@@ -1,5 +1,6 @@
 const HOST = 'mintbrooks.com'
-const KEY = process.env.INDEXNOW_KEY ?? ''
+// Existing verified IndexNow key (public/338e4f9275e14f2880a23aae2ef100dc.txt)
+const KEY = process.env.INDEXNOW_KEY ?? '338e4f9275e14f2880a23aae2ef100dc'
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`
 
 export async function pingIndexNow(urls: string[]): Promise<void> {
