@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ArticleNewsletter from './ArticleNewsletter'
 import ArticleSidebar from './ArticleSidebar'
+import ArticleConversionBody from '@/components/cpa/ArticleConversionBody'
+import AuthorBox from '@/components/cpa/AuthorBox'
 import { getCloudflareContext } from '@opennextjs/cloudflare'
 import { getProducts, getProductsByCategory } from '@/lib/lifestyle/products'
 
@@ -391,6 +393,22 @@ function getCategoryProduct(categorySlug: string): TopProduct | null {
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
+// Map CPA article slugs → offer_id so ArticleConversionBody renders the
+// score-routed quiz + decision matrix (CPA-only surfaces). Non-CPA articles
+// get the niche-tuned InlineCTA instead.
+const CPA_SLUG_TO_OFFER: Record<string, string> = {
+  'yendo-bad-credit-approval-odds': 'yendo',
+  'slamdunk-debt-consolidation-real-options': 'slamdunk_finance',
+  'fast-personal-loans-bad-credit-approval': 'fastloansgroup',
+  'emergency-cash-loans-bad-credit': 'fast_cash_online',
+  'compare-personal-loans-bad-credit-20-lenders': 'comparemefunds',
+  'personal-loans-up-to-50k-bad-credit': 'lifefunds_net_loans_up_to_50k_revshare_us',
+}
+
+function inferOfferIdFromSlug(slug: string): string | undefined {
+  return CPA_SLUG_TO_OFFER[slug]
+}
+
 function getArticle(slug: string): Article | undefined {
   return ALL_ARTICLES.find((a) => a.slug === slug)
 }
@@ -740,12 +758,18 @@ export default async function ArticleDetailPage({
             />
           </figure>
 
-          {/* Article body */}
+          {/* Article body — interactive surfaces render as real React
+              components spliced in at <!--MB_*--> marker comments emitted by
+              the generators. Prose chunks between markers ship as HTML. */}
           {affiliateBodyHtml ? (
-            <div
-              className="article-body affiliate-body"
-              dangerouslySetInnerHTML={{ __html: affiliateBodyHtml }}
-            />
+            <>
+              <AuthorBox published={article.date} />
+              <ArticleConversionBody
+                html={affiliateBodyHtml}
+                offerId={inferOfferIdFromSlug(slug)}
+                categorySlug={article.categorySlug}
+              />
+            </>
           ) : isGlassSkin ? (
             <GlassSkinBody />
           ) : (
