@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   title: 'Articles — Mintbrooks',
   description:
     'Guides, reviews, and honest advice on home decor, wellness, beauty, kitchen, and personal finance.',
+  alternates: { canonical: 'https://mintbrooks.com/articles' },
   openGraph: {
     title: 'Articles — Mintbrooks',
     description:
