@@ -5,6 +5,12 @@ import { execSync } from 'child_process'
 import fs from 'fs'
 import path from 'path'
 
+// Prerender at build so fs.readdirSync(public/articles/...) runs on the build
+// host (where the repo filesystem exists) rather than on the Cloudflare Worker
+// (where it doesn't). Without this the editorial + affiliate static articles
+// silently drop out of the sitemap at runtime.
+export const dynamic = 'force-static'
+
 // Per-URL lastmod: Google weighs this as a freshness signal. We derive it from
 // the real file mtime (git commit time when available; filesystem mtime as
 // fallback) so the value reflects actual content changes, not build time.

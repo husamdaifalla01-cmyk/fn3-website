@@ -533,27 +533,6 @@ export const ARTICLES: Article[] = [
     bg: '#EEF3F1',
     accent: '#1D3A2F',
   },
-
-  {
-    slug: 'yendo-bad-credit-approval-odds-20260424',
-    title: "Yendo Review: Real Approval Odds with Bad Credit (2026)",
-    category: 'finance',
-    categoryLabel: 'Money & Credit',
-    readTime: '9 min',
-    excerpt: "Independent editorial review: yendo credit card bad credit approval \u2014 real approval odds, eligibility, and the fastest path through.",
-    bg: '#EEF3F1',
-    accent: '#1D3A2F',
-  },
-  {
-    slug: 'slamdunk-debt-consolidation-real-options-20260424',
-    title: "Debt Consolidation With Bad Credit: What Actually Works (2026 Guide)",
-    category: 'finance',
-    categoryLabel: 'Money & Credit',
-    readTime: '9 min',
-    excerpt: "Independent editorial review: debt consolidation bad credit \u2014 real approval odds, eligibility, and the fastest path through.",
-    bg: '#EEF3F1',
-    accent: '#1D3A2F',
-  },
 ]
 
 /** Alias for ARTICLES — used by content-ranking API route */
