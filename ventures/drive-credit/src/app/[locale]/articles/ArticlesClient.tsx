@@ -9,6 +9,11 @@ import { EDITORIAL_ARTICLES, getFeaturedEditorialArticles } from '@/lib/lifestyl
 const FILTERS = ['All', 'Home & Decor', 'Wellness', 'Beauty', 'Kitchen', 'Finance', 'Trending'] as const
 type Filter = (typeof FILTERS)[number]
 
+// Articles store the finance category as 'Money & Credit'; the filter label reads 'Finance' for brevity
+const FILTER_CATEGORY: Partial<Record<Filter, string>> = {
+  Finance: 'Money & Credit',
+}
+
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ArticlesClient() {
@@ -21,7 +26,7 @@ export default function ArticlesClient() {
       ? EDITORIAL_ARTICLES
       : active === 'Trending'
       ? EDITORIAL_ARTICLES.filter((a) => a.featured)
-      : EDITORIAL_ARTICLES.filter((a) => a.category === active)
+      : EDITORIAL_ARTICLES.filter((a) => a.category === (FILTER_CATEGORY[active] ?? active))
 
   return (
     <section
