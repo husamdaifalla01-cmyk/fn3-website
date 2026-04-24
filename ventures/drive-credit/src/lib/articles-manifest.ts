@@ -22,14 +22,12 @@ export const EDITORIAL_SLUGS: string[] = [
   "secured-vs-unsecured-cards",
   "shelf-decor-321-rule",
   "skincare-routine-sensitive-skin",
-  "slamdunk-debt-consolidation-real-options-20260424",
   "sleep-routine-vs-supplements",
   "spf-moisturizer-vs-sunscreen",
   "use-credit-card-responsibly",
   "vitamin-c-serum-review",
   "weighted-blankets-guide",
-  "what-is-credit-score",
-  "yendo-bad-credit-approval-odds-20260424"
+  "what-is-credit-score"
 ]
 
 export const AFFILIATE_SLUGS: string[] = [
@@ -83,7 +81,9 @@ export const AFFILIATE_SLUGS: string[] = [
   "kerastase-kenra-glass-hair-showdown",
   "kerastase-nutritive-8h-magic-night-serum-review",
   "la-roche-posay-vitamin-c-vs-retinol",
+  "slamdunk-debt-consolidation-real-options-20260424",
   "sous-vide-accessories-large-batches",
   "too-faced-born-this-way-vs-tarte-tartelette-in-bloom",
-  "vitamin-c-vs-niacinamide-for-skin"
+  "vitamin-c-vs-niacinamide-for-skin",
+  "yendo-bad-credit-approval-odds-20260424"
 ]

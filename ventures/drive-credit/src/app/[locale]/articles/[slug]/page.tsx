@@ -272,6 +272,10 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Top Birthday Gifts for Women Under $50: Thoughtful & Unique', slug: 'best-birthday-gifts-women-under-50', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 24, 2026', excerpt: 'Discover the best birthday gifts for women under $50 that are thoughtful, unique, and won\'t break the bank. Find the perfect affordable birthday gift for her.' },
 
   { title: 'How to Use a Neutral Eyeshadow Palette: Everyday & Glam Looks', slug: 'how-to-use-neutral-eyeshadow-palette', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 24, 2026', excerpt: 'Learn how to use a neutral eyeshadow palette for everyday looks or glam nights out. Our step-by-step guide helps you master natural eyeshadow application.' },
+
+  { title: 'Yendo Review: Real Approval Odds with Bad Credit (2026)', slug: 'yendo-bad-credit-approval-odds-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: yendo credit card bad credit approval — real approval odds, eligibility, and the fastest path through.' },
+
+  { title: 'Debt Consolidation With Bad Credit: What Actually Works (2026 Guide)', slug: 'slamdunk-debt-consolidation-real-options-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: debt consolidation bad credit — real approval odds, eligibility, and the fastest path through.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
@@ -283,7 +287,7 @@ async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<str
     )
     if (res.ok) {
       const raw = await res.text()
-      const match = raw.match(/<article>([\s\S]*?)<\/article>/)
+      const match = raw.match(/<article[^>]*>([\s\S]*?)<\/article>/)
       return match ? injectLinkAttrs(match[1].trim()) : null
     }
   } catch { /* fall through */ }
