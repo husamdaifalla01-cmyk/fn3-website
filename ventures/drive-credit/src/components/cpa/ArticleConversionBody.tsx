@@ -24,42 +24,59 @@ const QUIZ_ROUTES = {
   '640_plus': FUNNELS.comparemefunds,
 } as const
 
-// Category-weighted InlineCTA copy for editorial (non-CPA) niche articles.
-const NICHE_CTA: Record<string, { heading: string; body: string; cta: string }> = {
+// Extra MaxBounty tracking links not in the main FUNNELS map (used only for
+// niche-routed CTAs).
+const MB_LINKS = {
+  lifefunds:  'https://afflat3e1.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=16048&c=918277&a=769106&k=677670208C2E38CB550EBD7BB9366C82&l=18044&aff_sub=editorial_niche',
+  sweeps_1k:  'https://tracking.maxbounty.com/aff_c?offer_id=17164&aff_id=769106&url_id=1&aff_sub=editorial_niche',
+}
+
+// Category-weighted InlineCTA copy + funnel. Matched by reader mindset, not
+// topical label — MaxBounty inventory is finance-heavy, so we pair each niche
+// with the finance/loan offer whose framing fits the reader's likely intent.
+const NICHE_CTA: Record<string, { heading: string; body: string; cta: string; funnel: string }> = {
   'home-decor': {
-    heading: 'Furnishing on a budget? Check your credit options.',
-    body: "If you're stretching budget across furniture and decor, a secured card that reports to all 3 bureaus funds the essentials while rebuilding your score.",
-    cta: 'See your approval odds',
+    heading: 'Planning bigger purchases? See what you qualify for.',
+    body: "Furniture, renovations, the piece you've been putting off — personal loans up to $50K with soft-pull pre-qualification. No score impact to check.",
+    cta: 'See loan offers',
+    funnel: FUNNELS.lifefunds_net_loans_up_to_50k_revshare_us,
   },
   wellness: {
-    heading: 'The move that cuts stress more than any supplement',
-    body: 'Readers who rebuild their credit report noticeably lower financial stress within 90 days. Soft pull — no score impact.',
-    cta: 'Check in 90 seconds',
+    heading: 'Need a spa day? Enter to win $1,000.',
+    body: "Free entry. Email only. No credit check, no card — just a 30-second form. US residents 18+. Real treat-yourself money.",
+    cta: 'Enter to win',
+    funnel: MB_LINKS.sweeps_1k,
   },
   beauty: {
-    heading: "The glow-up that's actually long-term",
-    body: 'Rebuilding credit is the un-Instagrammable glow-up with the biggest payoff. Under 640? Here\'s the fastest path through.',
-    cta: 'See what you qualify for',
+    heading: 'Before the haul — enter to win $1,000.',
+    body: "Free to enter. Single email, no credit check. US residents 18+. Use it on the routine you've been eyeing.",
+    cta: 'Enter to win',
+    funnel: MB_LINKS.sweeps_1k,
   },
   kitchen: {
-    heading: 'Financing a kitchen upgrade without a 750 score',
-    body: 'Appliance financing with bad credit is brutal. A credit-builder card that reports monthly to all 3 bureaus can fund it and rebuild your score in one move.',
-    cta: 'Check your approval odds',
+    heading: 'Appliance died? Get funded in 24 hours.',
+    body: "Refrigerator, dishwasher, oven — personal loans up to $50K with bad-credit approval and same-day funding. Soft pull, no score impact.",
+    cta: 'Check approval odds',
+    funnel: FUNNELS.fastloansgroup,
   },
   finance: {
     heading: 'See your real approval odds in 90 seconds',
-    body: "Soft pull. No credit score impact. If your score is under 640, here are the lenders most likely to approve you right now.",
+    body: "Soft pull. No credit score impact. If your score is under 640, here's the lender most likely to approve you right now.",
     cta: 'Check eligibility',
+    funnel: FUNNELS.yendo,
+  },
+  gift_ideas: {
+    heading: 'Before you buy — enter to win a $1,000 gift card',
+    body: "Free entry. Email only. No credit check, no card, no catch — just a 30-second form. US residents 18+.",
+    cta: 'Enter to win',
+    funnel: MB_LINKS.sweeps_1k,
   },
 }
 
-const FUNNEL_BY_CATEGORY: Record<string, string> = {
-  'home-decor': FUNNELS.yendo,
-  wellness: FUNNELS.yendo,
-  beauty: FUNNELS.yendo,
-  kitchen: FUNNELS.yendo,
-  finance: FUNNELS.yendo,
-}
+// Legacy alias — kept for existing call sites. Resolves via NICHE_CTA above.
+const FUNNEL_BY_CATEGORY: Record<string, string> = Object.fromEntries(
+  Object.entries(NICHE_CTA).map(([k, v]) => [k, v.funnel])
+)
 
 export type ConvProps = {
   html: string
@@ -119,8 +136,7 @@ export default function ArticleConversionBody({ html, offerId, categorySlug }: C
           case 'CTA': {
             const cat = p.arg || categorySlug || 'finance'
             const copy = NICHE_CTA[cat] ?? NICHE_CTA.finance
-            const funnel = FUNNEL_BY_CATEGORY[cat] ?? FUNNELS.yendo
-            return <InlineCTA key={i} heading={copy.heading} body={copy.body} href={funnel} cta={copy.cta} />
+            return <InlineCTA key={i} heading={copy.heading} body={copy.body} href={copy.funnel} cta={copy.cta} />
           }
           default:
             return null // unknown marker → drop silently
