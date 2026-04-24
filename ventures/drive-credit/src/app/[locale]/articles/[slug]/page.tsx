@@ -726,10 +726,7 @@ export default async function ArticleDetailPage({
             <span>{article.date}</span>
           </div>
 
-          {/* Disclosure — inline, unobtrusive */}
-          <p className="article-disclosure-inline">
-            Contains affiliate links. We earn a small commission at no extra cost to you.
-          </p>
+          {/* Affiliate disclosure lives once in the global site footer — no inline repetition */}
 
           {/* Hero image — inline figure inside the article column */}
           <figure className="article-hero-figure">

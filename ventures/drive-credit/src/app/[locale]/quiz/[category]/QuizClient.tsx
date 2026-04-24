@@ -548,9 +548,7 @@ export default function QuizClient({ category }: { category: string }) {
                 )
               })}
             </div>
-            <p className="quiz-offer-disclosure">
-              Mintbrooks may earn a commission when you apply through our links. This doesn&apos;t affect our recommendations.
-            </p>
+            {/* Affiliate disclosure lives once in the global site footer */}
           </section>
         )}
       </>
