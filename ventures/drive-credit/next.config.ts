@@ -52,6 +52,21 @@ const nextConfig: NextConfig = {
       permanent: true,
     }))
 
+    // Old date-stamped CPA URLs from the initial rollout — redirect to the
+    // stable slugs that replaced them so bookmarks + social shares still work.
+    const cpaStableRedirects = [
+      ['yendo-bad-credit-approval-odds-20260424', 'yendo-bad-credit-approval-odds'],
+      ['slamdunk-debt-consolidation-real-options-20260424', 'slamdunk-debt-consolidation-real-options'],
+      ['fast-personal-loans-bad-credit-approval-20260424', 'fast-personal-loans-bad-credit-approval'],
+      ['emergency-cash-loans-bad-credit-20260424', 'emergency-cash-loans-bad-credit'],
+      ['compare-personal-loans-bad-credit-20-lenders-20260424', 'compare-personal-loans-bad-credit-20-lenders'],
+    ].flatMap(([oldSlug, newSlug]) => [
+      { source: `/articles/${oldSlug}`,                   destination: `/articles/${newSlug}`,                   permanent: true },
+      { source: `/:locale/articles/${oldSlug}`,           destination: `/:locale/articles/${newSlug}`,           permanent: true },
+      { source: `/articles/editorial/${oldSlug}`,         destination: `/articles/${newSlug}`,                   permanent: true },
+      { source: `/articles/editorial/${oldSlug}.html`,    destination: `/articles/${newSlug}`,                   permanent: true },
+    ])
+
     return [
       {
         source: '/:path*',
@@ -60,6 +75,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       { source: '/en/:path*', destination: '/:path*', permanent: true },
+      ...cpaStableRedirects,
       ...lifestyleRedirects,
       ...financeRedirects,
       { source: '/lifestyle', destination: '/', permanent: true },
