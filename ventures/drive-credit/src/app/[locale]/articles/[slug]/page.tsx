@@ -270,6 +270,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Spa Gift Baskets of 2024: Ultimate Self-Care Sets', slug: 'best-spa-gift-baskets', readTime: '8 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 24, 2026', excerpt: 'Searching for the best spa gift baskets? Our experts review top-rated self-care sets, helping you find the perfect luxury bath gift for any occasion in 2024.' },
 
   { title: 'Top Birthday Gifts for Women Under $50: Thoughtful & Unique', slug: 'best-birthday-gifts-women-under-50', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 24, 2026', excerpt: 'Discover the best birthday gifts for women under $50 that are thoughtful, unique, and won\'t break the bank. Find the perfect affordable birthday gift for her.' },
+
+  { title: 'How to Use a Neutral Eyeshadow Palette: Everyday & Glam Looks', slug: 'how-to-use-neutral-eyeshadow-palette', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 24, 2026', excerpt: 'Learn how to use a neutral eyeshadow palette for everyday looks or glam nights out. Our step-by-step guide helps you master natural eyeshadow application.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
