@@ -54,7 +54,7 @@ export default function ArticleCard({ article, layout }: ArticleCardProps) {
           }
         `}</style>
         <Link
-          href={`/lifestyle/articles/${article.slug}`}
+          href={`/articles/${article.slug}`}
           className="article-card-featured"
         >
           {/* Image */}
@@ -216,7 +216,7 @@ export default function ArticleCard({ article, layout }: ArticleCardProps) {
         }
       `}</style>
       <Link
-        href={`/lifestyle/articles/${article.slug}`}
+        href={`/articles/${article.slug}`}
         className="article-card-grid"
       >
         {/* Image */}

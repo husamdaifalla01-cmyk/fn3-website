@@ -798,7 +798,7 @@ export default async function ArticleDetailPage({
               {related.map((rel) => (
                 <Link
                   key={rel.slug}
-                  href={`/lifestyle/articles/${rel.slug}`}
+                  href={`/articles/${rel.slug}`}
                   className="related-card"
                   style={{
                     display: 'block',

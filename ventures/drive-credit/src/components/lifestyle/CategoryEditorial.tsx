@@ -31,7 +31,7 @@ function SidebarCard({ article }: { article: Article }) {
 
   return (
     <Link
-      href={`/lifestyle/articles/${article.slug}`}
+      href={`/articles/${article.slug}`}
       className="cated-sidebar-card"
       style={{
         display: 'flex',
@@ -114,7 +114,7 @@ function HeroCard({ article }: { article: Article }) {
 
   return (
     <Link
-      href={`/lifestyle/articles/${article.slug}`}
+      href={`/articles/${article.slug}`}
       className="cated-hero"
       style={{
         flex: '1.4',

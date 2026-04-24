@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   title: 'Money & Credit',
   description:
     'Credit education, financial guides, and tools to build real credit history — including Yendo (car-backed Visa, no hard pull) and SlamDunk Finance personal loans.',
-  alternates: { canonical: 'https://mintbrooks.com/lifestyle/finance' },
+  alternates: { canonical: 'https://mintbrooks.com/finance' },
   openGraph: {
     title: 'Money & Credit — Mintbrooks',
     description:
       'Credit education, financial guides, and tools to build real credit history — including Yendo (car-backed Visa, no hard pull) and SlamDunk Finance personal loans.',
     type: 'website',
-    url: 'https://mintbrooks.com/lifestyle/finance',
+    url: 'https://mintbrooks.com/finance',
     images: [{ url: 'https://mintbrooks.com/lifestyle/editorial.jpg', width: 1200, height: 630, alt: 'Mintbrooks Money & Credit' }],
   },
   twitter: {
@@ -1039,7 +1039,7 @@ export default function FinancePage() {
             {GUIDES.map((guide, i) => (
               <Link
                 key={guide.slug}
-                href={`/lifestyle/articles/${guide.slug}`}
+                href={`/articles/${guide.slug}`}
                 className="fin-guide-card"
                 style={{
                   display: 'block',
