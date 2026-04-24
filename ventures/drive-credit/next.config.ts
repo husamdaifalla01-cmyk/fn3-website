@@ -54,17 +54,26 @@ const nextConfig: NextConfig = {
 
     // Old date-stamped CPA URLs from the initial rollout — redirect to the
     // stable slugs that replaced them so bookmarks + social shares still work.
-    const cpaStableRedirects = [
+    // next-intl middleware rewrites to locale-prefixed URLs before Next.js
+    // redirects fire, and `:locale` as a source param doesn't match reliably
+    // on OpenNext/CF. So we enumerate every locale explicitly.
+    const LOCALES = ['en-CA', 'en-GB', 'fr', 'de', 'it', 'nl', 'pl', 'es', 'sv']
+    const cpaSlugPairs: [string, string][] = [
       ['yendo-bad-credit-approval-odds-20260424', 'yendo-bad-credit-approval-odds'],
       ['slamdunk-debt-consolidation-real-options-20260424', 'slamdunk-debt-consolidation-real-options'],
       ['fast-personal-loans-bad-credit-approval-20260424', 'fast-personal-loans-bad-credit-approval'],
       ['emergency-cash-loans-bad-credit-20260424', 'emergency-cash-loans-bad-credit'],
       ['compare-personal-loans-bad-credit-20-lenders-20260424', 'compare-personal-loans-bad-credit-20-lenders'],
-    ].flatMap(([oldSlug, newSlug]) => [
-      { source: `/articles/${oldSlug}`,                   destination: `/articles/${newSlug}`,                   permanent: true },
-      { source: `/:locale/articles/${oldSlug}`,           destination: `/:locale/articles/${newSlug}`,           permanent: true },
-      { source: `/articles/editorial/${oldSlug}`,         destination: `/articles/${newSlug}`,                   permanent: true },
-      { source: `/articles/editorial/${oldSlug}.html`,    destination: `/articles/${newSlug}`,                   permanent: true },
+    ]
+    const cpaStableRedirects = cpaSlugPairs.flatMap(([oldSlug, newSlug]) => [
+      { source: `/articles/${oldSlug}`,                destination: `/articles/${newSlug}`,                permanent: true },
+      { source: `/articles/editorial/${oldSlug}`,      destination: `/articles/${newSlug}`,                permanent: true },
+      { source: `/articles/editorial/${oldSlug}.html`, destination: `/articles/${newSlug}`,                permanent: true },
+      ...LOCALES.map((loc) => ({
+        source: `/${loc}/articles/${oldSlug}`,
+        destination: `/${loc}/articles/${newSlug}`,
+        permanent: true,
+      })),
     ])
 
     return [
