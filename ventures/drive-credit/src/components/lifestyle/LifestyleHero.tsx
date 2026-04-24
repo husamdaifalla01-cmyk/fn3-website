@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import Image from 'next/image'
 
 export default function LifestyleHero() {
   const headlineRef = useRef<HTMLHeadingElement>(null)
@@ -58,19 +57,37 @@ export default function LifestyleHero() {
     >
       {/* Full-bleed hero image — Ken Burns via JS on mount */}
       <div ref={imgRef} style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <Image
-          src="/hero.jpg"
-          alt="A beautifully styled morning bedroom — Mintbrooks lifestyle"
-          fill
-          priority
-          sizes="100vw"
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-            transform: 'scale(1.08)',
-          }}
-          className="ls-hero-img"
-        />
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcSet="/hero-mobile.webp"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcSet="/hero-mobile.jpg"
+            type="image/jpeg"
+          />
+          <source srcSet="/hero.webp" type="image/webp" />
+          <img
+            src="/hero.jpg"
+            alt="A beautifully styled morning bedroom — Mintbrooks lifestyle"
+            /* eslint-disable-next-line @next/next/no-img-element */
+            // @ts-expect-error — fetchpriority is a valid HTML attr not yet in React types
+            fetchpriority="high"
+            decoding="async"
+            className="ls-hero-img"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center',
+              transform: 'scale(1.08)',
+            }}
+          />
+        </picture>
       </div>
 
       {/* Gradient overlay — stronger mid-section where text lives */}

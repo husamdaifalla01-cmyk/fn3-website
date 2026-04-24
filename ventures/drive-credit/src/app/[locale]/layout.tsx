@@ -160,6 +160,19 @@ export default async function LocaleLayout({
     <html lang={lang} className={playfair.variable}>
       <head>
         <meta name="p:domain_verify" content="e8324e340ff49d09cff7b317a9211b3d" />
+        {/* LCP hero — preload the responsive sources so the browser starts the
+            fetch in parallel with HTML parsing. imagesrcset mirrors the
+            <picture> sources in LifestyleHero. */}
+        <link
+          rel="preload"
+          as="image"
+          href="/hero.webp"
+          type="image/webp"
+          // @ts-expect-error — imagesrcset + imagesizes are valid on <link rel=preload as=image>
+          imagesrcset="/hero-mobile.webp 768w, /hero.webp 1920w"
+          imagesizes="100vw"
+          fetchpriority="high"
+        />
       </head>
       <body
         style={{
