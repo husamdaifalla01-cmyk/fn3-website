@@ -262,6 +262,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Self Care Gifts Get Well Soon Basket Review: After 2 Weeks', slug: 'self-care-gifts-get-well-soon-basket-review', readTime: '6 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 20, 2026', excerpt: 'Curious about the Self Care Gifts Get Well Soon Gift Basket? Our detailed review covers the unboxing, contents, and recipient\'s experience after two weeks. Discover if it\'s the right choice for your loved one.' },
 
   { title: 'Best Spa Gift Baskets for Women 2024: Ultimate Self-Care Sets', slug: 'best-spa-gift-baskets-women', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 23, 2026', excerpt: 'Discover the best spa gift baskets for women in 2024. Our guide helps you find the perfect self-care set for relaxation and pampering.' },
+
+  { title: 'Top Birthday Gifts for Women Under $50: Thoughtful & Unique', slug: 'best-birthday-gifts-for-women-under-50', readTime: '8 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 24, 2026', excerpt: 'Discover the best birthday gifts for women under $50 that are thoughtful and unique. Find the perfect affordable birthday gift for her, mom, or girlfriend.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
