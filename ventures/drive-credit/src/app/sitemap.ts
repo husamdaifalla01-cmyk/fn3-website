@@ -11,6 +11,25 @@ import path from 'path'
 // silently drop out of the sitemap at runtime.
 export const dynamic = 'force-static'
 
+// Enumerate editorial + affiliate dirs at module load (build time on the
+// GitHub runner) so the results get baked into the bundle. Doing this inside
+// the exported function ran on the Cloudflare Worker where fs has no repo.
+const PUBLIC_ARTICLES = path.join(process.cwd(), 'public', 'articles')
+const EDITORIAL_FILES = (() => {
+  const dir = path.join(PUBLIC_ARTICLES, 'editorial')
+  if (!fs.existsSync(dir)) return [] as { slug: string; mtime: Date }[]
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.html'))
+    .map(f => ({ slug: f.replace('.html', ''), mtime: fs.statSync(path.join(dir, f)).mtime }))
+})()
+const AFFILIATE_FILES = (() => {
+  const dir = path.join(PUBLIC_ARTICLES, 'affiliate')
+  if (!fs.existsSync(dir)) return [] as { slug: string; mtime: Date }[]
+  return fs.readdirSync(dir)
+    .filter(f => fs.statSync(path.join(dir, f)).isDirectory())
+    .map(f => ({ slug: f, mtime: fs.statSync(path.join(dir, f)).mtime }))
+})()
+
 // Per-URL lastmod: Google weighs this as a freshness signal. We derive it from
 // the real file mtime (git commit time when available; filesystem mtime as
 // fallback) so the value reflects actual content changes, not build time.
@@ -90,28 +109,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articlesMtime = gitMtime(articlesSrc)
   const articleSlugs = ARTICLES.map((a) => `/articles/${a.slug}`)
 
-  // Editorial + affiliate HTML under /public/articles
-  const publicDir = path.join(process.cwd(), 'public', 'articles')
-  const editorialDir = path.join(publicDir, 'editorial')
-  const affiliateDir = path.join(publicDir, 'affiliate')
-
-  const editorialEntries = fs.existsSync(editorialDir)
-    ? fs.readdirSync(editorialDir)
-        .filter(f => f.endsWith('.html'))
-        .map(f => ({
-          slug: f.replace('.html', ''),
-          mtime: fs.statSync(path.join(editorialDir, f)).mtime,
-        }))
-    : []
-
-  const affiliateEntries = fs.existsSync(affiliateDir)
-    ? fs.readdirSync(affiliateDir)
-        .filter(f => fs.statSync(path.join(affiliateDir, f)).isDirectory())
-        .map(f => ({
-          slug: f,
-          mtime: fs.statSync(path.join(affiliateDir, f)).mtime,
-        }))
-    : []
+  // Use the module-level constants enumerated at build time
+  const editorialEntries = EDITORIAL_FILES
+  const affiliateEntries = AFFILIATE_FILES
 
   const entries: MetadataRoute.Sitemap = []
 
