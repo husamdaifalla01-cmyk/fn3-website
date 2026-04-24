@@ -51,6 +51,61 @@ const NICHE_URL: Record<string, string> = {
 
 const AMAZON_TAG = 'mintbrooks-20'
 
+// ── CPA offer → funnel URL map ────────────────────────────────────────────────
+// When source=cpa_<offer_id> comes in from an article's email capture form,
+// we fire a same-minute confirmation email with this funnel CTA, THEN enroll
+// the subscriber in the finance sequence for long-term nurture.
+const CPA_FUNNELS: Record<string, { name: string; funnel: string; cta: string }> = {
+  yendo: {
+    name: 'Yendo',
+    funnel: 'https://mintbrooks.com/finance/build-credit-with-your-car?utm_source=email&utm_medium=cpa_confirm&utm_campaign=yendo',
+    cta: 'See your Yendo approval odds (soft pull, 90 seconds)',
+  },
+  slamdunk_finance: {
+    name: 'SlamDunk',
+    funnel: 'https://mintbrooks.com/finance/debt-consolidation-check?utm_source=email&utm_medium=cpa_confirm&utm_campaign=slamdunk',
+    cta: 'Check your debt consolidation options',
+  },
+  fastloansgroup: {
+    name: 'FastLoansGroup',
+    funnel: 'https://afflat3e1.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=19452&c=918277&a=769106&k=0D8EA126D9B01D64D99AED932BF002E5&l=20426&aff_sub=email_confirm',
+    cta: 'See your loan offers (up to $50K, funded in 24 hours)',
+  },
+  fast_cash_online: {
+    name: 'Fast Cash Online',
+    funnel: 'https://afflat3e3.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=12940&c=918277&a=769106&k=CBCB19B53F865FD4B516A6030205801C&l=13434&aff_sub=email_confirm',
+    cta: 'Get matched with an emergency cash lender',
+  },
+  comparemefunds: {
+    name: 'CompareMeFunds',
+    funnel: 'https://afflat3e1.com/trk/lnk/39C31C1E-2822-4350-B92A-2693C829ED6A/?o=18576&c=918277&a=769106&k=ED393B6EF2DE462C0A98B2528BBEA265&l=19773&aff_sub=email_confirm',
+    cta: 'Compare offers from 20+ lenders — soft pull only',
+  },
+  lifefunds_net_loans_up_to_50k_revshare_us: {
+    name: 'Lifefunds',
+    funnel: 'https://mintbrooks.com/finance/personal-loans-up-to-50k?utm_source=email&utm_medium=cpa_confirm&utm_campaign=lifefunds',
+    cta: 'See personal loan offers up to $50K',
+  },
+}
+
+function cpaConfirmEmail(offerId: string, funnel: { name: string; funnel: string; cta: string }): string {
+  return `
+    <div style="font-family:Georgia,serif;max-width:560px;margin:0 auto;padding:24px;color:#1A1714;line-height:1.6">
+      <h1 style="font-family:'Playfair Display',Georgia,serif;font-size:28px;color:#1D3A2F;margin:0 0 12px">You're in. Here's your next step.</h1>
+      <p>Thanks for signing up. While you're here — the fastest way to see your real approval odds for ${funnel.name}:</p>
+      <p style="margin:24px 0">
+        <a href="${funnel.funnel}" target="_blank" rel="sponsored nofollow"
+           style="display:inline-block;padding:14px 28px;background:#1D3A2F;color:#FDFAF6;text-decoration:none;border-radius:8px;font-weight:700;font-size:16px">
+          ${funnel.cta} →
+        </a>
+      </p>
+      <p style="color:#6B6557;font-size:14px">Soft pull only. Won't touch your credit score. Takes under 2 minutes.</p>
+      <p style="margin-top:32px">Over the next 5 weeks I'll send you what actually works — the boring moves that move the needle, the scams to skip, and the specific lenders approving people with your situation right now.</p>
+      <p>— Mintbrooks Editorial</p>
+    </div>
+  `
+}
+
 // ── HTML resolution ───────────────────────────────────────────────────────────
 
 /** Build an Amazon affiliate search URL for a product search term */
@@ -152,7 +207,11 @@ export async function POST(req: NextRequest) {
 
   const resend    = new Resend(apiKey)
   const audienceId = process.env.RESEND_AUDIENCE_ID
-  const niche     = source in SEQUENCES ? source : 'default'
+  // CPA sources arrive as "cpa_<offer_id>" — extract + map to funnel.
+  const cpaMatch = source.startsWith('cpa_') ? source.slice(4) : ''
+  const cpaFunnel = cpaMatch && CPA_FUNNELS[cpaMatch] ? CPA_FUNNELS[cpaMatch] : null
+  // CPA subscribers land in the finance sequence for long-term nurture.
+  const niche     = cpaFunnel ? 'finance' : (source in SEQUENCES ? source : 'default')
   const sequence  = SEQUENCES[niche]
   const cleanEmail = email.trim().toLowerCase()
 
@@ -174,6 +233,21 @@ export async function POST(req: NextRequest) {
   // Send/schedule each email in the sequence independently.
   // One failed scheduled email must NOT block the rest.
   const sent: string[] = []
+
+  // ── CPA signups get an immediate funnel-CTA email BEFORE the nurture sequence
+  if (cpaFunnel) {
+    const { data, error } = await resend.emails.send({
+      from: `Mintbrooks <support@mintbrooks.com>`,
+      to: cleanEmail,
+      subject: `Your next step: ${cpaFunnel.cta}`,
+      html: cpaConfirmEmail(cpaMatch, cpaFunnel) + footerHtml(cleanEmail),
+    })
+    if (error) {
+      console.error(`[lifestyle/subscribe] CPA confirm email failed for ${cpaMatch}:`, error)
+    } else if (data?.id) {
+      sent.push(data.id)
+    }
+  }
 
   for (const entry of sequence.emails) {
     const fromName = (entry.from_name ?? 'Mintbrooks').trim()

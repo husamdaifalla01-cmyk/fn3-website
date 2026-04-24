@@ -276,6 +276,12 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Yendo Review: Real Approval Odds with Bad Credit (2026)', slug: 'yendo-bad-credit-approval-odds-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: yendo credit card bad credit approval — real approval odds, eligibility, and the fastest path through.' },
 
   { title: 'Debt Consolidation With Bad Credit: What Actually Works (2026 Guide)', slug: 'slamdunk-debt-consolidation-real-options-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: debt consolidation bad credit — real approval odds, eligibility, and the fastest path through.' },
+
+  { title: 'Fast Personal Loans for Bad Credit: Funded in 24 Hours (2026)', slug: 'fast-personal-loans-bad-credit-approval-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: fast personal loan bad credit — real approval odds, eligibility, and the fastest path through.' },
+
+  { title: 'Emergency Cash Loans With Bad Credit: What Actually Works in 2026', slug: 'emergency-cash-loans-bad-credit-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: emergency cash loan bad credit — real approval odds, eligibility, and the fastest path through.' },
+
+  { title: 'Compare Personal Loans for Bad Credit: Real Rates From 20+ Lenders (2026)', slug: 'compare-personal-loans-bad-credit-20-lenders-20260424', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: compare personal loans bad credit — real approval odds, eligibility, and the fastest path through.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
