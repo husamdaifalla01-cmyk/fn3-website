@@ -130,7 +130,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const { slug, mtime } of editorialEntries) {
-    entries.push({ url: `${base}/articles/editorial/${slug}.html`, lastModified: mtime })
+    // No .html — Next.js 308-redirects .html → no-extension; canonical matches
+    entries.push({ url: `${base}/articles/editorial/${slug}`, lastModified: mtime })
   }
 
   for (const { slug, mtime } of affiliateEntries) {
