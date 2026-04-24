@@ -268,6 +268,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'La Roche-Posay Pure Retinol Serum Review: 8 Weeks Use', slug: 'la-roche-posay-pure-retinol-serum-review', readTime: '9 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 24, 2026', excerpt: 'Considering La Roche-Posay Pure Retinol Serum? Our 8-week review details before and after results, effectiveness, and who it\'s best for. See if it\'s right for you.' },
 
   { title: 'Best Spa Gift Baskets of 2024: Ultimate Self-Care Sets', slug: 'best-spa-gift-baskets', readTime: '8 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 24, 2026', excerpt: 'Searching for the best spa gift baskets? Our experts review top-rated self-care sets, helping you find the perfect luxury bath gift for any occasion in 2024.' },
+
+  { title: 'Top Birthday Gifts for Women Under $50: Thoughtful & Unique', slug: 'best-birthday-gifts-women-under-50', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'April 24, 2026', excerpt: 'Discover the best birthday gifts for women under $50 that are thoughtful, unique, and won\'t break the bank. Find the perfect affordable birthday gift for her.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
