@@ -49,15 +49,18 @@ export default function LifestyleNav() {
         padding: scrolled ? '14px 40px' : '28px 40px',
         background: scrolled
           ? [
-              'linear-gradient(128deg, rgba(29,58,47,0.18) 0%, transparent 25%, rgba(29,58,47,0.10) 45%, transparent 65%, rgba(29,58,47,0.14) 85%, transparent 100%)',
-              'linear-gradient(52deg, rgba(92,61,46,0.12) 0%, transparent 35%, rgba(92,61,46,0.08) 55%, transparent 80%, rgba(92,61,46,0.10) 100%)',
-              'linear-gradient(108deg, #D8E8D4 0%, #F0EAE0 18%, #C8DCC4 32%, #EDE3D5 48%, #CCDEC8 62%, #EBE2D6 78%, #D2E4CE 92%, #F2EBE0 100%)',
+              /* thin forest-green marble veins at 127° */
+              'repeating-linear-gradient(127deg, transparent 0px, transparent 38px, rgba(29,58,47,0.22) 38px, rgba(29,58,47,0.22) 39px, transparent 39px, transparent 75px, rgba(29,58,47,0.12) 75px, rgba(29,58,47,0.12) 76px, transparent 76px, transparent 120px)',
+              /* thin walnut veins at 48° */
+              'repeating-linear-gradient(48deg, transparent 0px, transparent 55px, rgba(92,61,46,0.18) 55px, rgba(92,61,46,0.18) 56px, transparent 56px, transparent 110px, rgba(92,61,46,0.10) 110px, rgba(92,61,46,0.10) 111px, transparent 111px, transparent 180px)',
+              /* warm cream marble base */
+              'linear-gradient(110deg, #F5EFE6 0%, #EDE5D8 35%, #FAF6F0 55%, #E8DDD0 80%, #F2EBE0 100%)',
             ].join(', ')
           : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '2px solid rgba(29,58,47,0.35)' : 'none',
+        backdropFilter: scrolled ? 'blur(16px)' : 'none',
+        borderBottom: scrolled ? '3px solid #5C3D2E' : 'none',
         borderTop: scrolled ? '3px solid #1D3A2F' : 'none',
-        boxShadow: scrolled ? '0 4px 32px rgba(29,58,47,0.15), inset 0 1px 0 rgba(255,255,255,0.5)' : 'none',
+        boxShadow: scrolled ? '0 4px 28px rgba(29,58,47,0.18), inset 0 -1px 0 rgba(92,61,46,0.2)' : 'none',
         transition: 'all 0.45s ease',
         display: 'flex',
         alignItems: 'center',
@@ -96,7 +99,7 @@ export default function LifestyleNav() {
                   fontWeight: active ? 700 : 600,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  color: scrolled ? (active ? '#1D3A2F' : '#5C3D2E') : (active ? '#1D3A2F' : '#1A1714'),
+                  color: scrolled ? (active ? '#1D3A2F' : '#3D2A1A') : (active ? '#1D3A2F' : '#1A1714'),
                   textDecoration: 'none',
                   opacity: active ? 1 : 0.75,
                   transition: 'opacity 0.2s, color 0.4s',
