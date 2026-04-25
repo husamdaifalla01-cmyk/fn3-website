@@ -48,12 +48,16 @@ export default function LifestyleNav() {
         zIndex: 100,
         padding: scrolled ? '14px 40px' : '28px 40px',
         background: scrolled
-          ? 'linear-gradient(108deg, #F2EBE0 0%, #EDE3D5 18%, #F7F2EB 34%, #E8DDD0 50%, #F0E9DE 66%, #E4D9CA 82%, #EFE8DB 100%)'
+          ? [
+              'linear-gradient(128deg, rgba(29,58,47,0.18) 0%, transparent 25%, rgba(29,58,47,0.10) 45%, transparent 65%, rgba(29,58,47,0.14) 85%, transparent 100%)',
+              'linear-gradient(52deg, rgba(92,61,46,0.12) 0%, transparent 35%, rgba(92,61,46,0.08) 55%, transparent 80%, rgba(92,61,46,0.10) 100%)',
+              'linear-gradient(108deg, #D8E8D4 0%, #F0EAE0 18%, #C8DCC4 32%, #EDE3D5 48%, #CCDEC8 62%, #EBE2D6 78%, #D2E4CE 92%, #F2EBE0 100%)',
+            ].join(', ')
           : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(92,61,46,0.25)' : 'none',
-        borderTop: scrolled ? '2px solid #1D3A2F' : 'none',
-        boxShadow: scrolled ? '0 4px 32px rgba(92,61,46,0.12), inset 0 1px 0 rgba(255,255,255,0.6)' : 'none',
+        borderBottom: scrolled ? '2px solid rgba(29,58,47,0.35)' : 'none',
+        borderTop: scrolled ? '3px solid #1D3A2F' : 'none',
+        boxShadow: scrolled ? '0 4px 32px rgba(29,58,47,0.15), inset 0 1px 0 rgba(255,255,255,0.5)' : 'none',
         transition: 'all 0.45s ease',
         display: 'flex',
         alignItems: 'center',
