@@ -7,6 +7,7 @@ import { YENDO_CALCULATOR_PAGE, SLAM_DUNK_CALCULATOR_PAGE } from '@/lib/affiliat
 export const metadata: Metadata = {
   title: 'Car Equity Credit Calculator — How Much Credit Can Your Car Get You?',
   description: 'Free calculator: see how much credit you could get using your car as collateral. Takes 60 seconds. No credit score check.',
+  alternates: { canonical: 'https://mintbrooks.com/finance/calculator' },
 }
 
 export default function CalculatorPage() {
