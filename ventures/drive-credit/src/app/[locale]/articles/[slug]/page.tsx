@@ -283,6 +283,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Emergency Cash Loans With Bad Credit: What Actually Works in 2026', slug: 'emergency-cash-loans-bad-credit', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: emergency cash loan bad credit — real approval odds, eligibility, and the fastest path through.' },
 
   { title: 'Compare Personal Loans for Bad Credit: Real Rates From 20+ Lenders (2026)', slug: 'compare-personal-loans-bad-credit-20-lenders', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: compare personal loans bad credit — real approval odds, eligibility, and the fastest path through.' },
+
+  { title: 'Personal Loans Up to $50K With Bad Credit: Real Lenders, Real Terms (2026)', slug: 'personal-loans-up-to-50k-bad-credit', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 25, 2026', excerpt: 'Independent editorial review: personal loan bad credit 50k — real approval odds, eligibility, and the fastest path through.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {

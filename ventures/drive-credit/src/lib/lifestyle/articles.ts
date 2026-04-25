@@ -582,6 +582,16 @@ export const ARTICLES: Article[] = [
     bg: '#EEF3F1',
     accent: '#1D3A2F',
   },
+  {
+    slug: 'personal-loans-up-to-50k-bad-credit',
+    title: 'Personal Loans Up to $50K With Bad Credit: Real Lenders, Real Terms (2026)',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '9 min',
+    excerpt: 'Independent editorial review: personal loan bad credit 50k — real approval odds, eligibility, and the fastest path through.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
 
 ]
 
