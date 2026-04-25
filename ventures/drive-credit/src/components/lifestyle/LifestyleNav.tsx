@@ -46,10 +46,11 @@ export default function LifestyleNav() {
         left: 0,
         right: 0,
         zIndex: 100,
-        padding: scrolled ? '16px 40px' : '28px 40px',
-        background: scrolled ? 'rgba(253,250,246,0.96)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(12px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(184,149,90,0.15)' : 'none',
+        padding: scrolled ? '14px 40px' : '28px 40px',
+        background: scrolled ? 'rgba(29,58,47,0.97)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(16px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(184,149,90,0.3)' : 'none',
+        boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,0.18)' : 'none',
         transition: 'all 0.4s ease',
         display: 'flex',
         alignItems: 'center',
@@ -63,9 +64,10 @@ export default function LifestyleNav() {
           fontFamily: '"Playfair Display", Georgia, serif',
           fontSize: '22px',
           fontWeight: 700,
-          color: '#1A1714',
+          color: scrolled ? '#FDFAF6' : '#1A1714',
           textDecoration: 'none',
           letterSpacing: '-0.01em',
+          transition: 'color 0.4s ease',
         }}
       >
         Mintbrooks
@@ -87,13 +89,13 @@ export default function LifestyleNav() {
                   fontWeight: active ? 700 : 600,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  color: active ? '#1D3A2F' : '#1A1714',
+                  color: scrolled ? (active ? '#B8955A' : '#FDFAF6') : (active ? '#1D3A2F' : '#1A1714'),
                   textDecoration: 'none',
-                  opacity: active ? 1 : 0.7,
-                  transition: 'opacity 0.2s, color 0.2s',
+                  opacity: active ? 1 : 0.75,
+                  transition: 'opacity 0.2s, color 0.4s',
                 }}
                 onMouseEnter={(e) => { if (!active) e.currentTarget.style.opacity = '1' }}
-                onMouseLeave={(e) => { if (!active) e.currentTarget.style.opacity = '0.7' }}
+                onMouseLeave={(e) => { if (!active) e.currentTarget.style.opacity = '0.75' }}
               >
                 {link.label}
               </Link>
@@ -117,12 +119,20 @@ export default function LifestyleNav() {
           href={localePath('/#newsletter')}
           style={{
             fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em',
-            textTransform: 'uppercase', color: '#1D3A2F', textDecoration: 'none',
-            border: '1.5px solid #1D3A2F', padding: '8px 20px',
-            borderRadius: '100px', transition: 'all 0.2s',
+            textTransform: 'uppercase', textDecoration: 'none',
+            padding: '8px 20px', borderRadius: '100px', transition: 'all 0.3s',
+            background: scrolled ? '#B8955A' : 'transparent',
+            color: scrolled ? '#1A1714' : '#1D3A2F',
+            border: scrolled ? '1.5px solid #B8955A' : '1.5px solid #1D3A2F',
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = '#1D3A2F'; e.currentTarget.style.color = '#FDFAF6' }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#1D3A2F' }}
+          onMouseEnter={(e) => {
+            if (scrolled) { e.currentTarget.style.background = '#c9a96e'; e.currentTarget.style.borderColor = '#c9a96e' }
+            else { e.currentTarget.style.background = '#1D3A2F'; e.currentTarget.style.color = '#FDFAF6' }
+          }}
+          onMouseLeave={(e) => {
+            if (scrolled) { e.currentTarget.style.background = '#B8955A'; e.currentTarget.style.borderColor = '#B8955A'; e.currentTarget.style.color = '#1A1714' }
+            else { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#1D3A2F' }
+          }}
         >
           {t('subscribe')}
         </Link>
@@ -135,9 +145,9 @@ export default function LifestyleNav() {
         style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', display: 'none' }}
         aria-label={menuOpen ? t('close') : t('menu')}
       >
-        <div style={{ width: 24, height: 2, background: '#1A1714', marginBottom: 6, transition: 'all 0.3s', transform: menuOpen ? 'rotate(45deg) translateY(8px)' : 'none' }} />
-        <div style={{ width: 24, height: 2, background: '#1A1714', marginBottom: 6, opacity: menuOpen ? 0 : 1, transition: 'all 0.3s' }} />
-        <div style={{ width: 24, height: 2, background: '#1A1714', transition: 'all 0.3s', transform: menuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
+        <div style={{ width: 24, height: 2, background: scrolled ? '#FDFAF6' : '#1A1714', marginBottom: 6, transition: 'all 0.3s', transform: menuOpen ? 'rotate(45deg) translateY(8px)' : 'none' }} />
+        <div style={{ width: 24, height: 2, background: scrolled ? '#FDFAF6' : '#1A1714', marginBottom: 6, opacity: menuOpen ? 0 : 1, transition: 'all 0.3s' }} />
+        <div style={{ width: 24, height: 2, background: scrolled ? '#FDFAF6' : '#1A1714', transition: 'all 0.3s', transform: menuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
       </button>
 
       {/* Mobile full-screen menu */}
