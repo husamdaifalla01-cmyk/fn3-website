@@ -47,11 +47,14 @@ export default function LifestyleNav() {
         right: 0,
         zIndex: 100,
         padding: scrolled ? '14px 40px' : '28px 40px',
-        background: scrolled ? 'rgba(29,58,47,0.97)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(16px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(184,149,90,0.3)' : 'none',
-        boxShadow: scrolled ? '0 2px 24px rgba(0,0,0,0.18)' : 'none',
-        transition: 'all 0.4s ease',
+        background: scrolled
+          ? 'linear-gradient(108deg, #F2EBE0 0%, #EDE3D5 18%, #F7F2EB 34%, #E8DDD0 50%, #F0E9DE 66%, #E4D9CA 82%, #EFE8DB 100%)'
+          : 'transparent',
+        backdropFilter: scrolled ? 'blur(20px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(92,61,46,0.25)' : 'none',
+        borderTop: scrolled ? '2px solid #1D3A2F' : 'none',
+        boxShadow: scrolled ? '0 4px 32px rgba(92,61,46,0.12), inset 0 1px 0 rgba(255,255,255,0.6)' : 'none',
+        transition: 'all 0.45s ease',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
@@ -64,7 +67,7 @@ export default function LifestyleNav() {
           fontFamily: '"Playfair Display", Georgia, serif',
           fontSize: '22px',
           fontWeight: 700,
-          color: scrolled ? '#FDFAF6' : '#1A1714',
+          color: scrolled ? '#1D3A2F' : '#1A1714',
           textDecoration: 'none',
           letterSpacing: '-0.01em',
           transition: 'color 0.4s ease',
@@ -89,7 +92,7 @@ export default function LifestyleNav() {
                   fontWeight: active ? 700 : 600,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  color: scrolled ? (active ? '#B8955A' : '#FDFAF6') : (active ? '#1D3A2F' : '#1A1714'),
+                  color: scrolled ? (active ? '#1D3A2F' : '#5C3D2E') : (active ? '#1D3A2F' : '#1A1714'),
                   textDecoration: 'none',
                   opacity: active ? 1 : 0.75,
                   transition: 'opacity 0.2s, color 0.4s',
@@ -102,9 +105,10 @@ export default function LifestyleNav() {
               {active && (
                 <span style={{
                   display: 'block', width: '4px', height: '4px',
-                  borderRadius: '50%', background: '#B8955A',
+                  borderRadius: '50%', background: scrolled ? '#1D3A2F' : '#B8955A',
                   position: 'absolute', bottom: '-8px',
                   left: '50%', transform: 'translateX(-50%)',
+                  transition: 'background 0.4s',
                 }} />
               )}
             </div>
@@ -121,16 +125,17 @@ export default function LifestyleNav() {
             fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em',
             textTransform: 'uppercase', textDecoration: 'none',
             padding: '8px 20px', borderRadius: '100px', transition: 'all 0.3s',
-            background: scrolled ? '#B8955A' : 'transparent',
-            color: scrolled ? '#1A1714' : '#1D3A2F',
-            border: scrolled ? '1.5px solid #B8955A' : '1.5px solid #1D3A2F',
+            background: scrolled ? '#1D3A2F' : 'transparent',
+            color: scrolled ? '#F2EBE0' : '#1D3A2F',
+            border: scrolled ? '1.5px solid #1D3A2F' : '1.5px solid #1D3A2F',
+            boxShadow: scrolled ? '0 2px 8px rgba(29,58,47,0.18)' : 'none',
           }}
           onMouseEnter={(e) => {
-            if (scrolled) { e.currentTarget.style.background = '#c9a96e'; e.currentTarget.style.borderColor = '#c9a96e' }
-            else { e.currentTarget.style.background = '#1D3A2F'; e.currentTarget.style.color = '#FDFAF6' }
+            if (scrolled) { e.currentTarget.style.background = '#5C3D2E'; e.currentTarget.style.borderColor = '#5C3D2E' }
+            else { e.currentTarget.style.background = '#1D3A2F'; e.currentTarget.style.color = '#F2EBE0' }
           }}
           onMouseLeave={(e) => {
-            if (scrolled) { e.currentTarget.style.background = '#B8955A'; e.currentTarget.style.borderColor = '#B8955A'; e.currentTarget.style.color = '#1A1714' }
+            if (scrolled) { e.currentTarget.style.background = '#1D3A2F'; e.currentTarget.style.borderColor = '#1D3A2F'; e.currentTarget.style.color = '#F2EBE0' }
             else { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#1D3A2F' }
           }}
         >
@@ -145,9 +150,9 @@ export default function LifestyleNav() {
         style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '4px', display: 'none' }}
         aria-label={menuOpen ? t('close') : t('menu')}
       >
-        <div style={{ width: 24, height: 2, background: scrolled ? '#FDFAF6' : '#1A1714', marginBottom: 6, transition: 'all 0.3s', transform: menuOpen ? 'rotate(45deg) translateY(8px)' : 'none' }} />
-        <div style={{ width: 24, height: 2, background: scrolled ? '#FDFAF6' : '#1A1714', marginBottom: 6, opacity: menuOpen ? 0 : 1, transition: 'all 0.3s' }} />
-        <div style={{ width: 24, height: 2, background: scrolled ? '#FDFAF6' : '#1A1714', transition: 'all 0.3s', transform: menuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
+        <div style={{ width: 24, height: 2, background: scrolled ? '#1D3A2F' : '#1A1714', marginBottom: 6, transition: 'all 0.3s', transform: menuOpen ? 'rotate(45deg) translateY(8px)' : 'none' }} />
+        <div style={{ width: 24, height: 2, background: scrolled ? '#1D3A2F' : '#1A1714', marginBottom: 6, opacity: menuOpen ? 0 : 1, transition: 'all 0.3s' }} />
+        <div style={{ width: 24, height: 2, background: scrolled ? '#1D3A2F' : '#1A1714', transition: 'all 0.3s', transform: menuOpen ? 'rotate(-45deg) translateY(-8px)' : 'none' }} />
       </button>
 
       {/* Mobile full-screen menu */}
