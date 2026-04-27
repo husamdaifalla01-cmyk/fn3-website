@@ -7,7 +7,7 @@ import { SLAM_DUNK_EMERGENCY_CARD, SLAM_DUNK_EMERGENCY_CTA, YENDO_EMERGENCY_CARD
 export const metadata: Metadata = {
   title: 'Emergency Cash Between Paychecks: Real Options for 2026 — Mintbrooks',
   description: 'Short on cash before your next paycheck? Your real options — from personal loans to car-secured credit — ranked by speed and approval odds.',
-  alternates: { canonical: 'https://mintbrooks.com/emergency-cash-between-paychecks' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/emergency-cash-between-paychecks' },
 }
 
 const jsonLd = {
@@ -147,6 +147,18 @@ export default function EmergencyCashPage() {
             </AffiliateLink>
           </div>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate links · Mintbrooks is not a lender</p>
+        </div>
+
+        <div className="pt-8 mb-8" style={{ borderTop: '1px solid rgba(28,25,23,0.07)' }}>
+          <h3 className="text-sm font-bold mb-3" style={{ color: '#1c1917' }}>Related Guides</h3>
+          <div className="flex flex-col gap-2">
+            <Link href="/finance/credit-card-500-credit-score" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
+              → Credit Cards for 500 Credit Score: Cards That Actually Approve
+            </Link>
+            <Link href="/finance/bad-credit-credit-card" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
+              → Best Credit Cards for Bad Credit (2026)
+            </Link>
+          </div>
         </div>
 
         <div className="text-xs pt-8 leading-relaxed" style={{ color: '#a8a29e', borderTop: '1px solid rgba(28,25,23,0.07)' }}>

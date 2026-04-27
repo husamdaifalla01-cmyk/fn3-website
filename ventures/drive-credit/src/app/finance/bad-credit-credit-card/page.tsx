@@ -125,6 +125,9 @@ export default function BadCreditPage() {
             <Link href="/first-credit-card-bad-credit" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
               → Getting Your First Credit Card With Bad Credit (Complete Guide)
             </Link>
+            <Link href="/finance/credit-card-500-credit-score" className="text-sm font-medium hover:underline" style={{ color: '#d97706' }}>
+              → Credit Cards for 500 Credit Score: Cards That Actually Approve
+            </Link>
           </div>
         </div>
 

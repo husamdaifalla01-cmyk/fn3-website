@@ -285,6 +285,20 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Compare Personal Loans for Bad Credit: Real Rates From 20+ Lenders (2026)', slug: 'compare-personal-loans-bad-credit-20-lenders', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 24, 2026', excerpt: 'Independent editorial review: compare personal loans bad credit — real approval odds, eligibility, and the fastest path through.' },
 
   { title: 'Personal Loans Up to $50K With Bad Credit: Real Lenders, Real Terms (2026)', slug: 'personal-loans-up-to-50k-bad-credit', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'April 25, 2026', excerpt: 'Independent editorial review: personal loan bad credit 50k — real approval odds, eligibility, and the fastest path through.' },
+
+  { title: 'The Best Anti-Aging Serums for Beginners Under $50', slug: 'best-anti-aging-serum-for-beginners-under-50', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 26, 2026', excerpt: 'Starting your anti-aging journey? Discover the best anti-aging serums for beginners, including budget-friendly options under $50, tested by Mintbrooks.' },
+
+  { title: 'The 5 Best Clean Beauty Foundations for Beginners: Easy & Natural Looks', slug: 'best-clean-beauty-foundation-beginners', readTime: '12 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 26, 2026', excerpt: 'Discover the best clean beauty foundation for beginners. Our guide helps you find easy-to-use, natural makeup options for a flawless, non-toxic look.' },
+
+  { title: 'Best Hair Gloss & Oils for Damaged Hair: Repair and Shine', slug: 'best-hair-gloss-oil-damaged-hair', readTime: '12 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 26, 2026', excerpt: 'Discover the best hair gloss and oils for damaged hair to restore shine and health. Our guide covers top picks for repair, frizz control, and a glass-like finish.' },
+
+  { title: 'Best Linen Bedding Sets for Every Budget & Style in 2024', slug: 'best-linen-bedding', readTime: '9 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 26, 2026', excerpt: 'Discover the best linen bedding sets for your budget and style in 2024. Our expert reviews help you find the perfect linen duvet cover set.' },
+
+  { title: 'Best Sous Vide Cookers for Beginners: Start Smart', slug: 'best-sous-vide-cooker-for-beginners', readTime: '9 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'April 26, 2026', excerpt: 'New to sous vide? Discover the best sous vide cooker for beginners, focusing on ease of use, affordability, and reliable results. Mintbrooks tested and reviewed.' },
+
+  { title: 'Best Anti-Aging Serums for Every Skin Concern & Budget (2024)', slug: 'best-anti-aging-serums', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 26, 2026', excerpt: 'Discover the best anti-aging serums for your skin concerns and budget in 2024. Our guide features top retinol, Vitamin C, and niacinamide serums.' },
+
+  { title: 'The Best Clean Foundations for Beginners: Easy & Natural', slug: 'best-clean-foundation-for-beginners', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 26, 2026', excerpt: 'Discover the best clean foundation for beginners with easy, natural coverage. Mintbrooks reviews top picks for a flawless, eco-friendly look.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {

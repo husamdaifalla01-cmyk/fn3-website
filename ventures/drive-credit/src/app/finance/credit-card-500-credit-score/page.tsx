@@ -105,11 +105,17 @@ export default function Page() {
 
         <div className="section-label mb-3">Credit Guide</div>
         <h1 className="text-3xl md:text-4xl font-black mb-4 leading-tight" style={{ color: '#1c1917', letterSpacing: '-0.02em' }}>
-          Credit Card with a 500 Credit Score:<br />What Are Your Actual Options?
+          Credit Cards for 500 Credit Score:<br />Cards That Actually Approve
         </h1>
         <p className="text-lg mb-8 leading-relaxed" style={{ color: '#78716c' }}>
           Most lists of "credit cards for bad credit" include cards that will reject a 500 score in practice. This one doesn't.
         </p>
+
+        <FinanceEmailCapture
+          source="finance"
+          headline="Before You Apply: Get The 500-Score Approval Checklist"
+          subtext="The 7 things to fix in the next 30 minutes that decide whether your application gets auto-approved or auto-declined. Free, one email."
+        />
 
         {/* Car-secured callout */}
         <div className="rounded-2xl p-6 mb-10" style={{ background: '#fef9ee', border: '1px solid rgba(217,119,6,0.2)' }}>
@@ -236,6 +242,40 @@ export default function Page() {
           </AffiliateLink>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate link · Soft inquiry only · Mintbrooks is not a lender</p>
         </div>
+
+        {/* Internal link cluster — gives Googlebot a discovery path to the
+            deep finance pages that are otherwise only reachable via sitemap. */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-black mb-6" style={{ color: '#1c1917', letterSpacing: '-0.01em' }}>
+            Keep Reading: The Credit-Repair Sequence
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-3 text-sm">
+            <Link href="/finance/1-percent-credit-utilization-rule" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>The 1% Utilization Rule</div>
+              <div style={{ color: '#78716c' }}>Why $0 hurts and ~1% wins. The mechanism the bureaus don't publish.</div>
+            </Link>
+            <Link href="/finance/secured-credit-card-bad-credit" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>Secured Cards for Bad Credit</div>
+              <div style={{ color: '#78716c' }}>The $200-deposit option — and the cash-free alternative for car owners.</div>
+            </Link>
+            <Link href="/finance/yendo-credit-card-review" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>Yendo Credit Card Review</div>
+              <div style={{ color: '#78716c' }}>Car-equity-secured Visa with limits up to $10k at a 500 score.</div>
+            </Link>
+            <Link href="/finance/how-to-rebuild-credit" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>How To Rebuild Credit (in order)</div>
+              <div style={{ color: '#78716c' }}>The 90-day order of operations most credit-repair guides skip.</div>
+            </Link>
+            <Link href="/finance/does-applying-for-credit-card-hurt-credit" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>Does Applying Hurt Your Score?</div>
+              <div style={{ color: '#78716c' }}>The hard-pull math, the 14-day rule, and the soft-pull workaround.</div>
+            </Link>
+            <Link href="/products/90-day-money-reset" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>The 90-Day Money Reset</div>
+              <div style={{ color: '#78716c' }}>Full PDF — every move, in order. $24, instant, 60-day refund.</div>
+            </Link>
+          </div>
+        </section>
 
         {/* FAQ Section — triggers FAQPage rich snippet in Google */}
         <section className="mb-12">
