@@ -323,6 +323,18 @@ const ALL_ARTICLES: Article[] = [
   { title: 'The Best Hair Gloss & Bonding Oils for Damaged & Color-Treated Hair', slug: 'best-hair-gloss-damaged-color-treated-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 1, 2026', excerpt: 'Discover the best hair gloss and bonding oils for damaged and color-treated hair on Mintbrooks. Get salon-quality shine and repair at home.' },
 
   { title: 'Best Sous Vide Cookers for Every Home Chef: From Beginner to Pro', slug: 'best-sous-vide-cooker-reviews', readTime: '8 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'May 1, 2026', excerpt: 'Discover the best sous vide cooker for your kitchen, whether you\'re a beginner or a seasoned chef. Honest reviews and buyer-focused recommendations.' },
+
+  { title: 'Best Hair Gloss & Bonding Oils for Damaged Hair: Repair & Shine', slug: 'best-hair-gloss-bonding-oils-damaged-hair', readTime: '12 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 4, 2026', excerpt: 'Discover the best hair gloss for damaged hair and bonding oils to repair and add shine. Our team tested top products for color-treated and dry hair.' },
+
+  { title: 'Anova Nano vs. Inkbird ISV-100W: Best Sous Vide Cooker for You?', slug: 'anova-nano-vs-inkbird-isv-100w-sous-vide-cooker-comparison', readTime: '8 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'May 6, 2026', excerpt: 'Comparing the Anova Nano vs. Inkbird ISV-100W: find the best sous vide cooker for beginners or serious home cooks. Get honest reviews and expert advice.' },
+
+  { title: 'Best Linen Duvet Cover Sets: Luxury vs. Budget Options', slug: 'best-linen-duvet-cover-set', readTime: '10 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'May 6, 2026', excerpt: 'Discover the best linen duvet cover sets for luxury or budget-friendly options. We compare top-rated queen linen bedding for every home.' },
+
+  { title: 'The 5 Best Clean Beauty Foundations for Beginners Under $40', slug: 'best-clean-beauty-foundation-for-beginners-under-40', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 6, 2026', excerpt: 'Discover the best clean beauty foundation for beginners under $40. Our expert reviews help you choose an easy-to-use, natural makeup option perfect for everyday wear.' },
+
+  { title: 'Best Hair Gloss & Oils for Damaged Hair: Repair & Shine', slug: 'best-hair-gloss-oils-damaged-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 6, 2026', excerpt: 'Discover the best hair gloss and hair oils for damaged hair to restore shine and repair. Find top picks for all budgets, tested by real buyers.' },
+
+  { title: 'Best Linen Bedding for Luxurious & Comfortable Sleep (2024)', slug: 'best-linen-bedding-luxury-comfort', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 6, 2026', excerpt: 'Discover the best linen bedding for luxurious comfort and a great night\'s sleep in 2024. Our guide helps you choose the perfect linen duvet cover or comforter set.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {

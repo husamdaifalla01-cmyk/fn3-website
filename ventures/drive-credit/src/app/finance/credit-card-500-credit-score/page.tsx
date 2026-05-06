@@ -2,8 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import FinanceEmailCapture from '@/components/FinanceEmailCapture'
+import T3ProductLeadMagnet from '@/components/T3ProductLeadMagnet'
+import T3LeadMagnetCreditCard from '@/components/T3LeadMagnetCreditCard'
 import AffiliateLink from '@/components/AffiliateLink'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import { YENDO_500_HERO, YENDO_500_CARD, YENDO_500_CTA } from '@/lib/affiliateUrls'
+
+// Stripe checkout for Credit Sequence ($24 product)
+const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/14AbJ10u5c6McBb6Fa08g01'
 
 export const metadata: Metadata = {
   title: 'Credit Cards for 500 Credit Score (2026): Cards That Actually Approve',
@@ -107,6 +113,7 @@ export default function Page() {
         <h1 className="text-3xl md:text-4xl font-black mb-4 leading-tight" style={{ color: '#1c1917', letterSpacing: '-0.02em' }}>
           Credit Cards for 500 Credit Score:<br />Cards That Actually Approve
         </h1>
+        <FTCDisclosure />
         <p className="text-lg mb-8 leading-relaxed" style={{ color: '#78716c' }}>
           Most lists of "credit cards for bad credit" include cards that will reject a 500 score in practice. This one doesn't.
         </p>
@@ -116,6 +123,22 @@ export default function Page() {
           headline="Before You Apply: Get The 500-Score Approval Checklist"
           subtext="The 7 things to fix in the next 30 minutes that decide whether your application gets auto-approved or auto-declined. Free, one email."
         />
+
+        {/* Primary offer — Stripe $24 product */}
+        <div className="rounded-2xl p-6 mb-10" style={{ background: '#1c1917' }}>
+          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>The full playbook · $24</div>
+          <h3 className="text-xl font-black text-white mb-2">The 90-Day Money Reset</h3>
+          <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
+            Every move in this guide — sequenced day-by-day, with the bureau scripts, the statement-closing-date trick, and the secured-vs-Yendo decision tree. Instant PDF. 60-day refund.
+          </p>
+          <a
+            href={STRIPE_CHECKOUT_URL}
+            className="btn-primary inline-block py-2.5 px-6 text-sm"
+          >
+            Get The 90-Day Reset → $24
+          </a>
+          <p className="text-xs mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>Secure checkout via Stripe · One-time payment</p>
+        </div>
 
         {/* Car-secured callout */}
         <div className="rounded-2xl p-6 mb-10" style={{ background: '#fef9ee', border: '1px solid rgba(217,119,6,0.2)' }}>
@@ -224,6 +247,8 @@ export default function Page() {
           ))}
         </div>
 
+        <T3LeadMagnetCreditCard />
+
         <h2 className="text-2xl font-black mb-4" style={{ color: '#1c1917', letterSpacing: '-0.01em' }}>Why a Higher Limit Matters More Than You Think</h2>
         <p className="mb-4 leading-relaxed" style={{ color: '#78716c' }}>
           Credit utilization — how much of your available credit you use — accounts for roughly 30% of your FICO score. If your only card has a $200 limit and you spend $150/month on it, you're at 75% utilization. That actively hurts your score.
@@ -233,14 +258,18 @@ export default function Page() {
         </p>
 
         <div className="rounded-2xl p-6 text-center mb-12" style={{ background: '#1c1917' }}>
-          <h3 className="text-xl font-black text-white mb-2">Use Your Car to Skip the Score Barrier</h3>
+          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>The full playbook · $24</div>
+          <h3 className="text-xl font-black text-white mb-2">Get The 90-Day Credit Reset</h3>
           <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>
-            No credit score requirement. No deposit. Keep driving. Check eligibility in under 5 minutes.
+            Every move in this guide — sequenced day-by-day, with bureau scripts, the statement-closing-date trick, and the secured-vs-Yendo decision tree. Instant PDF. 60-day refund.
           </p>
-          <AffiliateLink href={YENDO_500_CTA} placement="500-score-guide-cta" className="btn-primary inline-block py-3 px-8">
-            Check My Car's Eligibility →
-          </AffiliateLink>
-          <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Affiliate link · Soft inquiry only · Mintbrooks is not a lender</p>
+          <a
+            href={STRIPE_CHECKOUT_URL}
+            className="btn-primary inline-block py-3 px-8"
+          >
+            Get The 90-Day Reset → $24
+          </a>
+          <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Secure checkout via Stripe · One-time payment · 60-day refund</p>
         </div>
 
         {/* Internal link cluster — gives Googlebot a discovery path to the
@@ -253,6 +282,26 @@ export default function Page() {
             <Link href="/finance/1-percent-credit-utilization-rule" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
               <div className="font-bold mb-1" style={{ color: '#1c1917' }}>The 1% Utilization Rule</div>
               <div style={{ color: '#78716c' }}>Why $0 hurts and ~1% wins. The mechanism the bureaus don't publish.</div>
+            </Link>
+            <Link href="/finance/0-vs-1-utilization" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>0% vs 1% Utilization — Side by Side</div>
+              <div style={{ color: '#78716c' }}>What each reports, the FICO impact, and the cost of zero.</div>
+            </Link>
+            <Link href="/finance/why-0-utilization-hurts-credit" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>Why 0% Utilization Hurts Credit</div>
+              <div style={{ color: '#78716c' }}>The dormancy penalty and the all-zero file problem.</div>
+            </Link>
+            <Link href="/finance/statement-closing-date-trick" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>The Statement-Closing-Date Trick</div>
+              <div style={{ color: '#78716c' }}>Time the snapshot, not the due date. The cheapest score lift.</div>
+            </Link>
+            <Link href="/finance/credit-sequence-order-of-operations" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>Credit Sequence — Order of Operations</div>
+              <div style={{ color: '#78716c' }}>What to fix first, second, third — and the cost of skipping.</div>
+            </Link>
+            <Link href="/finance/utilization-calculator" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
+              <div className="font-bold mb-1" style={{ color: '#1c1917' }}>1% Utilization Calculator</div>
+              <div style={{ color: '#78716c' }}>Free tool — exact dollar to leave on your card. No signup.</div>
             </Link>
             <Link href="/finance/secured-credit-card-bad-credit" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
               <div className="font-bold mb-1" style={{ color: '#1c1917' }}>Secured Cards for Bad Credit</div>
@@ -292,11 +341,16 @@ export default function Page() {
           </div>
         </section>
 
+        <T3ProductLeadMagnet
+          product="The 90-Day Money Reset"
+          price="$24"
+          productUrl="/products/90-day-money-reset"
+          productDescr="Full PDF guide — every move, in order. Instant download. 60-day refund."
+        />
+
         <div className="text-xs pt-8 leading-relaxed" style={{ color: '#a8a29e', borderTop: '1px solid rgba(28,25,23,0.07)' }}>
           Mintbrooks is an independent educational resource. Card details are based on publicly available information and may change. We may earn a commission when you apply through our links. This is not financial advice. Always verify terms directly with the card issuer.
         </div>
-      
-        <FinanceEmailCapture source="finance" />
       </article>
     </>
   )
