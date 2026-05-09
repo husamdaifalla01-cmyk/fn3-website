@@ -345,6 +345,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'The Best Clean Beauty Foundations for a Flawless Glow (Under $40)', slug: 'best-clean-beauty-foundations-under-40', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Discover the best clean beauty foundations under $40 for a flawless, healthy glow. Find natural liquid foundation and options for sensitive skin on Mintbrooks.' },
 
   { title: 'Best Hair Gloss & Treatments for Damaged Hair: Repair and Shine', slug: 'best-hair-gloss-for-damaged-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Revive your stressed strands! Discover the best hair gloss for damaged hair and treatments that deliver repair, shine, and frizz control, tested by real buyers.' },
+
+  { title: 'Olaplex No. 7 vs. Kerastase Gloss Absolu: Best for Damaged Hair?', slug: 'olaplex-no7-vs-kerastase-gloss-absolu-damaged-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Struggling with damaged, color-treated hair? Discover whether Olaplex No. 7 or Kerastase Gloss Absolu is the best hair gloss for damaged hair in our honest review.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
@@ -682,6 +684,137 @@ function GlassSkinBody() {
   )
 }
 
+// ─── How We Test Body ─────────────────────────────────────────────────────────
+
+function HowWeTestBody() {
+  return (
+    <div className="article-body">
+      <p className="article-lede">
+        Most affiliate sites link to products they have never held, tested, or used. They pull star
+        ratings from a retailer, add a sentence of commentary, and collect a commission. We
+        don&apos;t do that — and this article explains exactly what we do instead.
+      </p>
+
+      <div className="toc">
+        <p>In this article</p>
+        <ol>
+          <li><a href="#why-it-matters">Why our process exists</a></li>
+          <li><a href="#step-1-shortlist">Step 1: Building the shortlist</a></li>
+          <li><a href="#step-2-criteria">Step 2: What we actually evaluate</a></li>
+          <li><a href="#step-3-cut">Step 3: What gets cut and why</a></li>
+          <li><a href="#financial-products">How we evaluate financial products differently</a></li>
+          <li><a href="#what-this-means">What this means for you</a></li>
+        </ol>
+      </div>
+
+      <h2 id="why-it-matters">Why our process exists</h2>
+      <p>
+        Mintbrooks started because we were tired of recommendation lists that recommended everything.
+        When every product in a category gets five stars and a glowing write-up, the list stops being
+        useful. Curation means saying no — and saying no requires actually evaluating things.
+      </p>
+      <p>
+        We earn affiliate commissions on some products we recommend. That means we have a financial
+        incentive to link to things. It also means we have a reputational incentive to only link to
+        things that hold up — because if a product disappoints you, you&apos;re not coming back. Our
+        long-term interest is the same as yours: reliable recommendations.
+      </p>
+
+      <blockquote className="article-pullquote">
+        &ldquo;Curation means saying no. And saying no requires actually evaluating things.&rdquo;
+      </blockquote>
+
+      <h2 id="step-1-shortlist">Step 1: Building the shortlist</h2>
+      <p>
+        Every category we cover starts with a market survey. For physical products, that means
+        identifying the top-selling SKUs in the category on Amazon, then cross-referencing with
+        independent review aggregators — not retailer-hosted reviews. We look at:
+      </p>
+      <ul>
+        <li>Volume of verified purchases (not star count)</li>
+        <li>Review consistency across multiple retailers where available</li>
+        <li>Brand track record and return policy — a strong return policy signals confidence</li>
+        <li>Price-to-specification ratio against category benchmarks</li>
+      </ul>
+      <p>
+        For financial products — credit cards, loan matching services, credit-builder accounts —
+        the shortlist criteria are stricter. We only consider products we would recommend to a
+        family member with the same credit profile as our typical reader.
+      </p>
+
+      <h2 id="step-2-criteria">Step 2: What we actually evaluate</h2>
+      <p>
+        Depending on the product category, evaluation looks different. For physical goods the
+        question is: does this do what it says it does, reliably, at the price point it targets?
+        We don&apos;t require perfection — we require honesty about the tradeoffs.
+      </p>
+      <p>
+        A $28 serum should be evaluated against other $28 serums, not a $120 one. A budget cast
+        iron pan should be evaluated on durability and heat retention at its price tier, not against
+        a Lodge. We weight value-for-money heavily because most of our readers are not shopping for
+        luxury — they are shopping for quality within a real budget.
+      </p>
+      <p>For financial products, our evaluation checklist includes:</p>
+      <ul>
+        <li><strong>Approval rate transparency</strong> — does the issuer publish real approval criteria, or vague &ldquo;good credit required&rdquo; copy?</li>
+        <li><strong>Soft pull availability</strong> — can you check your odds without a hard inquiry?</li>
+        <li><strong>Fee clarity</strong> — are all fees disclosed upfront, not buried in terms?</li>
+        <li><strong>Regulatory standing</strong> — we check CFPB complaint data for patterns of predatory practices</li>
+        <li><strong>Real-world approval stories</strong> — forum data from r/CRedit and r/personalfinance where applicants share actual outcomes</li>
+      </ul>
+
+      <h2 id="step-3-cut">Step 3: What gets cut and why</h2>
+      <p>
+        We cut more than we publish. Common reasons a product doesn&apos;t make it through:
+      </p>
+      <ul>
+        <li>The category leader is meaningfully better at a similar price — we only recommend the best option for a given need, not the runner-up</li>
+        <li>The product has a pattern of quality control issues reviewers flag consistently, even if the average rating is high</li>
+        <li>The commission structure creates an incentive to over-recommend — if a product pays 3× what a better alternative pays, we are aware of that tension and resolve it in favor of the reader</li>
+        <li>For financial products: any product whose commission rewards us for sending applicants who are unlikely to be approved</li>
+      </ul>
+      <p>
+        That last point matters more than it sounds. Some credit-related lead generators pay per
+        application regardless of outcome. We will not recommend a product whose approval odds
+        are genuinely low for a reader at a given credit profile, regardless of what it pays us.
+      </p>
+
+      <h2 id="financial-products">How we evaluate financial products differently</h2>
+      <p>
+        Physical products are returnable. A bad skincare purchase costs you $30 and a trip to the
+        post office. A bad financial product can cost you a hard inquiry on your credit report, a
+        rejection that affects your confidence, or a high-fee account you get locked into before
+        you fully understand the terms.
+      </p>
+      <p>
+        Because the stakes are higher, our evaluation bar is higher. For every credit card, loan
+        product, or credit-building service we feature, we require that we can honestly answer yes
+        to this: <em>if someone with a 520 credit score follows our recommendation, are they
+        meaningfully better off than if they hadn&apos;t?</em>
+      </p>
+      <p>
+        Sometimes the honest answer is &ldquo;this product is not for a 520-score applicant.&rdquo;
+        When that&apos;s true, we say so in the article — and we point them to something that fits
+        their actual situation instead.
+      </p>
+
+      <h2 id="what-this-means">What this means for you</h2>
+      <p>
+        When you see a recommendation on Mintbrooks, it passed the criteria above. That does not
+        mean it will be perfect for your specific situation — no general recommendation can be.
+        But it means we evaluated it honestly, cut the alternatives that didn&apos;t hold up, and
+        disclosed our financial relationship clearly.
+      </p>
+      <p>
+        If you buy something through our links, we earn a commission. That commission does not
+        affect the price you pay, and it does not affect whether a product makes it through our
+        evaluation. The commission is what funds the editorial work — including the time it takes
+        to cut the products that didn&apos;t pass.
+      </p>
+    </div>
+  )
+}
+
 // ─── Fallback Body ────────────────────────────────────────────────────────────
 
 function FallbackBody({ article }: { article: Article }) {
@@ -715,6 +848,7 @@ export default async function ArticleDetailPage({
 
   const related = getRelated(article)
   const isGlassSkin = slug === 'glass-skin-routine'
+  const isHowWeTest = slug === 'how-we-test-affiliate-products'
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://mintbrooks.com'
   const affiliateBodyHtml = await getAffiliateBodyHtml(slug, siteUrl)
   // Only use a product if it's in our affiliate catalogue (has a nano banana image).
@@ -855,6 +989,8 @@ export default async function ArticleDetailPage({
             </>
           ) : isGlassSkin ? (
             <GlassSkinBody />
+          ) : isHowWeTest ? (
+            <HowWeTestBody />
           ) : (
             <FallbackBody article={article} />
           )}

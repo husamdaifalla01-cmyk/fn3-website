@@ -141,6 +141,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "linen-vs-cotton-bedding",
   "meal-prep-containers",
   "morning-rituals",
+  "olaplex-no7-vs-kerastase-gloss-absolu-damaged-hair",
   "personal-loans-up-to-50k-bad-credit",
   "pour-over-vs-french-press",
   "retinol-mistakes",
