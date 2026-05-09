@@ -100,6 +100,7 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Secured vs. unsecured credit cards', slug: 'secured-vs-unsecured-cards', readTime: '5 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg', date: 'March 12, 2026' },
   { title: 'Why credit utilization matters more than payment history', slug: 'credit-utilization-explained', readTime: '4 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg', date: 'March 5, 2026' },
   { title: 'Building credit with bad credit', slug: 'build-credit-bad-credit', readTime: '6 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/finance.jpg', date: 'February 27, 2026' },
+  { title: 'How I actually test affiliate products (and what gets cut)', slug: 'how-we-test-affiliate-products', readTime: '6 min', category: 'Finance', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'May 9, 2026', excerpt: 'Every product on Mintbrooks goes through a real evaluation before we link to it. Here is the full process — what we check, what fails, and why we publish fewer recommendations than most sites.' },
 
   { title: 'Best Hair Shine Sprays 2024: Get Mirror-Like Gloss', slug: 'best-hair-shine-spray', readTime: '5 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'April 12, 2026', excerpt: 'Searching for the best hair shine spray to achieve mirror-like gloss without breaking the bank? Our 2024 guide helps you find the perfect glossing spray for luminous hair.' },
 
@@ -335,6 +336,15 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Hair Gloss & Oils for Damaged Hair: Repair & Shine', slug: 'best-hair-gloss-oils-damaged-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 6, 2026', excerpt: 'Discover the best hair gloss and hair oils for damaged hair to restore shine and repair. Find top picks for all budgets, tested by real buyers.' },
 
   { title: 'Best Linen Bedding for Luxurious & Comfortable Sleep (2024)', slug: 'best-linen-bedding-luxury-comfort', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 6, 2026', excerpt: 'Discover the best linen bedding for luxurious comfort and a great night\'s sleep in 2024. Our guide helps you choose the perfect linen duvet cover or comforter set.' },
+
+  // Editorial
+  { title: 'How I Actually Test Affiliate Products', slug: 'how-i-test-affiliate-products', readTime: '7 min', category: 'Reading List', categorySlug: 'reading-list', bg: '#F0F4F8', accent: '#2D4A6B', image: '/editorial.jpg', date: 'May 8, 2026', excerpt: 'Behind the methodology: how every product recommendation on Mintbrooks gets evaluated before it earns a spot in an article.' },
+
+  { title: 'Best Anti-Aging Serums Under $50 for Beginners: Mintbrooks Review', slug: 'best-anti-aging-serum-under-50-beginners', readTime: '9 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Discover the best anti-aging serum under $50, perfect for beginners. Our Mintbrooks team reviews affordable, effective serums for youthful skin on a budget.' },
+
+  { title: 'The Best Clean Beauty Foundations for a Flawless Glow (Under $40)', slug: 'best-clean-beauty-foundations-under-40', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Discover the best clean beauty foundations under $40 for a flawless, healthy glow. Find natural liquid foundation and options for sensitive skin on Mintbrooks.' },
+
+  { title: 'Best Hair Gloss & Treatments for Damaged Hair: Repair and Shine', slug: 'best-hair-gloss-for-damaged-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Revive your stressed strands! Discover the best hair gloss for damaged hair and treatments that deliver repair, shine, and frizz control, tested by real buyers.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
@@ -713,8 +723,29 @@ export default async function ArticleDetailPage({
   const extracted = affiliateBodyHtml ? extractTopProduct(affiliateBodyHtml) : null
   const topProduct = (extracted?.image) ? extracted : getCategoryProduct(article.categorySlug)
 
+  const articleExcerpt = ALL_ARTICLES.find((a) => a.slug === slug)?.excerpt ?? `${article.readTime} read · ${article.category} · Mintbrooks`
+  const canonicalUrl = `https://mintbrooks.com/articles/${slug}`
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: articleExcerpt,
+    datePublished: article.date,
+    dateModified: article.date,
+    author: { '@type': 'Organization', name: 'Mintbrooks Editorial', url: 'https://mintbrooks.com' },
+    publisher: { '@type': 'Organization', name: 'Mintbrooks', url: 'https://mintbrooks.com', logo: { '@type': 'ImageObject', url: 'https://mintbrooks.com/logo.png' } },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+    url: canonicalUrl,
+    image: `https://mintbrooks.com${article.image}`,
+    articleSection: article.category,
+  }
+
   return (
     <div style={{ background: '#FDFAF6', color: '#1A1714' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       {/* ── Article Grid (header + body + sidebar) ────────────────────── */}
       <div className="article-layout-wrapper">
