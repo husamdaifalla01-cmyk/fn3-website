@@ -60,6 +60,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-clean-beauty-products-under-35",
   "best-clean-foundation-for-beginners",
   "best-clean-liquid-foundation",
+  "best-coffee-table-for-living-room",
   "best-compact-budget-air-fryer-small-kitchen",
   "best-dark-spot-corrector-serum-under-50",
   "best-drip-irrigation-kits",
