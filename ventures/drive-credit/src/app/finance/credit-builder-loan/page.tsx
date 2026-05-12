@@ -3,6 +3,7 @@ import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
 import MoneyResetCTA from '@/components/MoneyResetCTA'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   YENDO_CREDIT_BUILDER_HERO,
   YENDO_CREDIT_BUILDER_MID,
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Credit Builder Loan vs Car-Secured Credit Card — Which Builds Credit Faster?',
   description: 'Credit builder loans lock your money for 12–24 months. If you own a car, a car-secured credit card builds credit faster — starting today, not next year.',
   keywords: 'credit builder loan, credit builder loan vs secured card, build credit with bad credit, credit builder loan review, how credit builder loans work',
-  alternates: { canonical: 'https://mintbrooks.com/credit-builder-loan' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/credit-builder-loan' },
   openGraph: {
     title: 'Credit Builder Loan vs Car-Secured Credit Card — Which Builds Credit Faster?',
     description: 'If you own a car, skip the locked-up money. Build credit starting today.',
@@ -117,6 +118,7 @@ export default function CreditBuilderLoanPage() {
             Credit Builder Loan vs Car-Secured Credit Card:<br />
             Which Actually Builds Credit Faster?
           </h1>
+        <FTCDisclosure />
           <p className="text-xl text-stone-300 leading-relaxed mb-6">
             Credit builder loans lock your money for up to two years while you wait for your score to move.
             If you own a car, there&apos;s a faster path — one that gives you a real Visa card today.

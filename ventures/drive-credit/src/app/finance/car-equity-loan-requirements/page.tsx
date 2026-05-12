@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import AffiliateLink from '@/components/AffiliateLink'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   YENDO_CAR_REQ_HERO,
   YENDO_CAR_REQ_MID,
@@ -107,6 +108,7 @@ export default function CarEquityLoanRequirementsPage() {
         <h1 className="text-3xl md:text-4xl font-black leading-tight mb-4" style={{ letterSpacing: '-0.02em' }}>
           Car Equity Loan Requirements:<br />Do You Qualify in 2026?
         </h1>
+        <FTCDisclosure />
         <p className="text-lg mb-2 leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
           Car equity loans let you borrow against your vehicle's value — without a hard credit
           check or surrendering your keys. Here's exactly what lenders look for.

@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-articles-manifest.mjs",
     "build": "next build",
-    "build:cloudflare": "npx @opennextjs/cloudflare build",
+    "build:cloudflare": "node scripts/build-articles-manifest.mjs && npx @opennextjs/cloudflare build",
     "deploy": "npx wrangler pages deploy .open-next/assets --project-name drive-credit",
+    "deploy:worker": "npx wrangler deploy -c wrangler.workers.toml",
     "start": "next start",
     "lint": "eslint"
   },

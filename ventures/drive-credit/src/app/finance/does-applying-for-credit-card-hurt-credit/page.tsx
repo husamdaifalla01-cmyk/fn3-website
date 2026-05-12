@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
 import AffiliateLink from '@/components/AffiliateLink'
+import FTCDisclosure from '@/components/FTCDisclosure'
 import {
   YENDO_INQUIRY_HERO,
   YENDO_INQUIRY_MID,
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     'Applying for a credit card can drop your score 5–10 points temporarily. Here is exactly what happens, how long it lasts, and how to apply without the hard inquiry.',
   keywords:
     'does applying for a credit card hurt your credit, hard inquiry credit card, soft pull credit card, credit card application credit score, does checking credit card hurt score',
-  alternates: { canonical: 'https://mintbrooks.com/does-applying-for-credit-card-hurt-credit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/does-applying-for-credit-card-hurt-credit' },
   openGraph: {
     title: 'Does Applying for a Credit Card Hurt Your Credit Score?',
     description:
@@ -109,6 +110,7 @@ export default function DoesApplyingHurtCredit() {
           <h1 className="text-4xl sm:text-5xl font-black leading-tight mb-6">
             Does Applying for a Credit Card Hurt Your Credit Score?
           </h1>
+        <FTCDisclosure />
           <p className="text-stone-300 text-lg leading-relaxed mb-8">
             Short answer: yes — but less than you think, and only temporarily. Here is exactly
             what happens when you apply, how long the impact lasts, and how to find cards that
