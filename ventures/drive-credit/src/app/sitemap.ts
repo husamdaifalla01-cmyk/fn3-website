@@ -129,8 +129,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${base}/articles/editorial/${slug}`, lastModified: mtime })
   }
 
+  // Affiliate URLs: emit canonical (no trailing slash) so Next.js doesn't 308
+  // → locale-middleware → 404. The 308 chain was dropping 34 newly-shipped
+  // slugs out of Google's view even though their HTML existed on disk.
   for (const { slug, mtime } of affiliateEntries) {
-    entries.push({ url: `${base}/articles/affiliate/${slug}/`, lastModified: mtime })
+    entries.push({ url: `${base}/articles/affiliate/${slug}`, lastModified: mtime })
   }
 
   return entries
