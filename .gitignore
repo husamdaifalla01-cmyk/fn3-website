@@ -11,3 +11,9 @@ ventures/lexikit/
 # Vercel (no longer used)
 vercel.json
 .vercel/
+
+# Python bytecode (pinterest-bot and other scripts)
+__pycache__/
+*.pyc
+*.pyo
+pinterest-bot/__pycache__/
