@@ -349,6 +349,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Olaplex No. 7 vs. Kerastase Gloss Absolu: Best for Damaged Hair?', slug: 'olaplex-no7-vs-kerastase-gloss-absolu-damaged-hair', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 9, 2026', excerpt: 'Struggling with damaged, color-treated hair? Discover whether Olaplex No. 7 or Kerastase Gloss Absolu is the best hair gloss for damaged hair in our honest review.' },
 
   { title: 'Best Vintage Self-Care Gifts for Grandma Who Deserves Pampering', slug: 'vintage-self-care-gifts-grandma', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 13, 2026', excerpt: 'Searching for the perfect vintage self-care gifts for grandma? Discover thoughtful, retro-themed pampering ideas that evoke nostalgia and comfort for elderly women.' },
+
+  { title: 'Best Get Well Soon Gifts for Post-Surgery Recovery', slug: 'best-get-well-soon-gifts-post-surgery-recovery', readTime: '6 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 14, 2026', excerpt: 'Find the perfect get well soon gifts for surgery recovery. Our guide helps you choose thoughtful care packages and post-op comfort gifts.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
