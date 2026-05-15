@@ -351,6 +351,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Vintage Self-Care Gifts for Grandma Who Deserves Pampering', slug: 'vintage-self-care-gifts-grandma', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 13, 2026', excerpt: 'Searching for the perfect vintage self-care gifts for grandma? Discover thoughtful, retro-themed pampering ideas that evoke nostalgia and comfort for elderly women.' },
 
   { title: 'Best Get Well Soon Gifts for Post-Surgery Recovery', slug: 'best-get-well-soon-gifts-post-surgery-recovery', readTime: '6 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 14, 2026', excerpt: 'Find the perfect get well soon gifts for surgery recovery. Our guide helps you choose thoughtful care packages and post-op comfort gifts.' },
+
+  { title: 'Glow Recipe Hue Drops Dupes: Affordable Alternatives', slug: 'glow-recipe-hue-drops-dupes-affordable-alternatives', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 15, 2026', excerpt: 'Looking for a Glow Recipe Hue Drops dupe? Discover budget-friendly bronzing serum alternatives that give you a radiant, customizable glow without the high price tag.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
