@@ -355,6 +355,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Glow Recipe Hue Drops Dupes: Affordable Alternatives', slug: 'glow-recipe-hue-drops-dupes-affordable-alternatives', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'May 15, 2026', excerpt: 'Looking for a Glow Recipe Hue Drops dupe? Discover budget-friendly bronzing serum alternatives that give you a radiant, customizable glow without the high price tag.' },
 
   { title: 'Vintage Spa Day at Home: Create Relaxation with a Self-Care Basket', slug: 'how-to-create-vintage-spa-day-at-home-self-care-basket', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 17, 2026', excerpt: 'Discover how to create a relaxing vintage spa day at home using a self-care gift basket. Mintbrooks helps you maximize your relaxation themed home spa experience.' },
+
+  { title: 'How to Choose the Perfect Get Well Soon Gift Basket', slug: 'how-to-choose-get-well-soon-gift-basket', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 31, 2026', excerpt: 'Struggling with how to choose get well soon gift? Our guide helps you pick the ideal care package to show genuine support and comfort.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
