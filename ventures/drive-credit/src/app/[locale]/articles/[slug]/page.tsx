@@ -359,6 +359,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'How to Choose the Perfect Get Well Soon Gift Basket', slug: 'how-to-choose-get-well-soon-gift-basket', readTime: '7 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'May 31, 2026', excerpt: 'Struggling with how to choose get well soon gift? Our guide helps you pick the ideal care package to show genuine support and comfort.' },
 
   { title: '3 Things That Actually Matter in Retinol Serums (Most People Ignore #2)', slug: 'what-to-look-for-in-retinol-serum', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 5, 2026', excerpt: 'Discover the 3 hidden factors that determine retinol serum effectiveness — and why tolerance beats potency. Expert-tested guide for sensitive skin.' },
+
+  { title: 'How to Use Bronzing Serum Drops for a Flawless, Natural Glow', slug: 'how-to-use-bronzing-serum-drops', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 6, 2026', excerpt: 'Unlock a flawless, natural glow with our guide on how to use bronzing serum drops effectively. Learn to mix bronzing drops with moisturizer for a customizable, sun-kissed look without streaks.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
