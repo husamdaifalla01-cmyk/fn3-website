@@ -17,3 +17,8 @@ __pycache__/
 *.pyc
 *.pyo
 pinterest-bot/__pycache__/
+
+# brain-v2 / org scratch dirs — NEVER commit org drafts into the live site repo
+# (these caused the 800-commit divergence; keep them out so git add -A can't sweep them)
+ventures/drive-credit/amazon/
+ventures/drive-credit/hr/
