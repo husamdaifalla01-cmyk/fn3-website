@@ -24,3 +24,6 @@ ventures/drive-credit/amazon/
 ventures/drive-credit/hr/
 
 ventures/drive-credit/.wrangler/
+
+# OpenNext build output (regenerated each deploy; must not dirty the rebase)
+ventures/drive-credit/.open-next/
