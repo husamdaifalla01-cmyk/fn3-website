@@ -361,6 +361,8 @@ const ALL_ARTICLES: Article[] = [
   { title: '3 Things That Actually Matter in Retinol Serums (Most People Ignore #2)', slug: 'what-to-look-for-in-retinol-serum', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 5, 2026', excerpt: 'Discover the 3 hidden factors that determine retinol serum effectiveness — and why tolerance beats potency. Expert-tested guide for sensitive skin.' },
 
   { title: 'How to Use Bronzing Serum Drops for a Flawless, Natural Glow', slug: 'how-to-use-bronzing-serum-drops', readTime: '7 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 6, 2026', excerpt: 'Unlock a flawless, natural glow with our guide on how to use bronzing serum drops effectively. Learn to mix bronzing drops with moisturizer for a customizable, sun-kissed look without streaks.' },
+
+  { title: 'Best Vitamin C Serum for Brightening Dull Skin in 2026: La Roche-Posay vs. Budget Picks', slug: 'best-vitamin-c-serum-for-brightening-dull-skin', readTime: '13 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 7, 2026', excerpt: 'Discover the best vitamin C serum for brightening dull skin under $50. Real buyer results from La Roche-Posay and budget-friendly picks in 2026.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
