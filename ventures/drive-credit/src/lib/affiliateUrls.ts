@@ -17,6 +17,12 @@ export const YENDO_BRIDGE_CTA     = buildAffiliateUrl(OFFERS.yendo.url,      'pi
 export const SLAM_DUNK_BRIDGE_HERO = buildAffiliateUrl(OFFERS.slamDunk.url,  'pinterest', 'organic', 'slamdunk-bridge-hero')
 export const SLAM_DUNK_BRIDGE_MID  = buildAffiliateUrl(OFFERS.slamDunk.url,  'pinterest', 'organic', 'slamdunk-bridge-mid')
 export const SLAM_DUNK_BRIDGE_CTA  = buildAffiliateUrl(OFFERS.slamDunk.url,  'pinterest', 'organic', 'slamdunk-bridge-cta')
+
+// raise-credit-score article funnel (was imported but never exported → build break)
+export const YENDO_RAISE_SCORE_HERO = buildAffiliateUrl(OFFERS.yendo.url,    'blog', 'organic', 'yendo-raise-score-hero')
+export const YENDO_RAISE_SCORE_MID  = buildAffiliateUrl(OFFERS.yendo.url,    'blog', 'organic', 'yendo-raise-score-mid')
+export const YENDO_RAISE_SCORE_CTA  = buildAffiliateUrl(OFFERS.yendo.url,    'blog', 'organic', 'yendo-raise-score-cta')
+export const SLAM_DUNK_RAISE_SCORE  = buildAffiliateUrl(OFFERS.slamDunk.url, 'blog', 'organic', 'slamdunk-raise-score')
 export const LIFEFUNDS_BRIDGE_HERO = buildAffiliateUrl(OFFERS.lifefunds.url, 'pinterest', 'organic', 'lifefunds-bridge-hero')
 export const LIFEFUNDS_BRIDGE_MID  = buildAffiliateUrl(OFFERS.lifefunds.url, 'pinterest', 'organic', 'lifefunds-bridge-mid')
 export const LIFEFUNDS_BRIDGE_CTA  = buildAffiliateUrl(OFFERS.lifefunds.url, 'pinterest', 'organic', 'lifefunds-bridge-cta')

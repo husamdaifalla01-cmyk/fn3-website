@@ -1,0 +1,11 @@
+name = "drive-credit-worker"
+main = ".open-next/worker.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# @opennextjs/cloudflare Workers-mode output. mintbrooks.com + www.mintbrooks.com
+# are bound to this Worker (custom domains), NOT the legacy Pages project.
+# blog_scheduler._deploy_worker() deploys with: wrangler deploy -c wrangler.workers.toml
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"

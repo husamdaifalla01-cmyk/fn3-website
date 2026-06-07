@@ -61,13 +61,13 @@ export default async function Image() {
             marginBottom: 48,
           }}
         >
-          Get a $500–$10,000 Visa card using your car as collateral.
-          Soft pull only — check eligibility free in 2 minutes.
+          Get a $500-$10,000 Visa card using your car as collateral.
+          Soft pull only - check eligibility free in 2 minutes.
         </div>
 
         {/* Trust badges */}
         <div style={{ display: 'flex', gap: 32 }}>
-          {['No hard credit pull', '36+ states eligible', '$500–$10k limit'].map((badge) => (
+          {['No hard credit pull', '36+ states eligible', '$500-$10k limit'].map((badge) => (
             <div
               key={badge}
               style={{
@@ -80,7 +80,7 @@ export default async function Image() {
                 fontWeight: 700,
               }}
             >
-              ✓ {badge}
+              {badge}
             </div>
           ))}
         </div>

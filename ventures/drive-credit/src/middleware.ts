@@ -85,8 +85,22 @@ export default function middleware(request: NextRequest) {
 
   const detectedLocale = geoLocale ?? acceptLocale ?? 'en'
 
-  // If English, no redirect needed — just run intl middleware normally
+  // If English: this build prefixes every locale (incl. the default), so the
+  // bare root has no static page — redirect "/" → "/en" explicitly. Other
+  // English paths fall through to next-intl as before.
   if (detectedLocale === 'en') {
+    if (pathname === '/') {
+      const url = request.nextUrl.clone()
+      url.pathname = '/en'
+      const r = NextResponse.redirect(url, 307)
+      r.cookies.set(COOKIE_NAME, 'en', {
+        maxAge: COOKIE_MAX_AGE,
+        sameSite: 'lax',
+        secure: true,
+        path: '/',
+      })
+      return r
+    }
     const response = intlMiddleware(request)
     // Set cookie so next visits skip detection
     response.cookies.set(COOKIE_NAME, 'en', {
@@ -145,6 +159,10 @@ function parseAcceptLanguage(header: string): string | null {
 
 export const config = {
   matcher: [
+    // Match the bare root explicitly — the catch-all below does NOT reliably
+    // match "/" under OpenNext, so without this the root-redirect never runs
+    // and "/" serves a prerendered 404.
+    '/',
     // Match all paths except Next.js internals and static assets
     '/((?!_next/static|_next/image|favicon\\.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2)).*)',
   ],

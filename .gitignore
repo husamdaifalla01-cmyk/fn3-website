@@ -22,3 +22,5 @@ pinterest-bot/__pycache__/
 # (these caused the 800-commit divergence; keep them out so git add -A can't sweep them)
 ventures/drive-credit/amazon/
 ventures/drive-credit/hr/
+
+ventures/drive-credit/.wrangler/
