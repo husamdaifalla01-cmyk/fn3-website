@@ -62,6 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ['finance/calculator',                           'calculator/page.tsx'],
     ['finance/bad-credit-credit-card',               'bad-credit-credit-card/page.tsx'],
     ['finance/credit-card-500-credit-score',         'credit-card-500-credit-score/page.tsx'],
+    ['finance/credit-sequence-order-of-operations',  'credit-sequence-order-of-operations/page.tsx'],
     ['finance/use-car-as-collateral',                'use-car-as-collateral/page.tsx'],
     ['finance/no-credit-history-credit-card',        'no-credit-history-credit-card/page.tsx'],
     ['finance/credit-card-no-deposit',               'credit-card-no-deposit/page.tsx'],
