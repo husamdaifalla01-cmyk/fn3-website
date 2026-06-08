@@ -35,9 +35,25 @@ const nextConfig = {
       permanent: true,
     }))
 
+    // Planned related-guide pages that were linked but never built — consolidate
+    // into the Credit Sequence hub (utilization order-of-operations) + the
+    // existing calculator, so the ranking page has zero internal 404s.
+    const creditSequenceRedirects = [
+      'why-0-utilization-hurts-credit',
+      '0-vs-1-utilization',
+      '1-percent-credit-utilization-rule',
+      'statement-closing-date-trick',
+    ].map((path) => ({
+      source: `/finance/${path}`,
+      destination: '/finance/credit-sequence-order-of-operations',
+      permanent: true,
+    }))
+
     return [
       ...lifestyleRedirects,
       ...financeRedirects,
+      ...creditSequenceRedirects,
+      { source: '/finance/utilization-calculator', destination: '/finance/calculator', permanent: true },
       // Legacy redirects
       { source: '/lifestyle', destination: '/', permanent: true },
       { source: '/tiktok', destination: '/finance/links', permanent: false },
