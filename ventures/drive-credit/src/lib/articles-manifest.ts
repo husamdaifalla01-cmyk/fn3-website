@@ -70,6 +70,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-drip-irrigation-kits",
   "best-drip-irrigation-system",
   "best-everyday-eyeshadow-palette",
+  "best-eyeshadow-palette-everyday-neutral-looks",
   "best-eyeshadow-palette-under-30",
   "best-eyeshadow-palette-under-50",
   "best-garden-tool-set-for-women",
