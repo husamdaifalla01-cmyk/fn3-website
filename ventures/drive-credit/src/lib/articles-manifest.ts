@@ -56,6 +56,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-clean-beauty-foundation-beginners",
   "best-clean-beauty-foundation-for-beginners",
   "best-clean-beauty-foundation-for-beginners-under-40",
+  "best-clean-beauty-foundations-for-beginners",
   "best-clean-beauty-foundations-under-40",
   "best-clean-beauty-gifts-under-50-travel-luxury",
   "best-clean-beauty-products-under-35",
