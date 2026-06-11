@@ -1,4 +1,10 @@
-name: Deploy drive-credit to Cloudflare Pages
+name: Deploy drive-credit (production Worker)
+
+# Production is the Cloudflare Worker `drive-credit-worker` (wrangler.workers.toml),
+# NOT the `drive-credit` Pages project — this mirrors ventures/drive-credit/deploy.sh,
+# the only deploy path that reaches mintbrooks.com. The old Pages-targeting workflow
+# failed on every push since at least June 8 (lockfile drift + wrong target + a dead
+# IndexNow key); index submission now lives in the lean-core org's hourly cycles.
 
 on:
   push:
@@ -7,12 +13,15 @@ on:
       - 'ventures/drive-credit/**'
       - '.github/workflows/deploy-drive-credit.yml'
 
+concurrency:
+  group: deploy-drive-credit
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      deployments: write
 
     steps:
       - uses: actions/checkout@v4
@@ -27,46 +36,9 @@ jobs:
         working-directory: ventures/drive-credit
         run: npm ci
 
-      - name: Build with OpenNext
+      - name: Build + deploy production Worker
         working-directory: ventures/drive-credit
-        run: npx @opennextjs/cloudflare build
-
-      - name: Prepare deployment bundle
-        working-directory: ventures/drive-credit
-        run: |
-          # Copy all worker dependencies into assets/ so wrangler can bundle them
-          cp .open-next/worker.js .open-next/assets/_worker.js
-          find .open-next -maxdepth 1 -mindepth 1 \
-            ! -name assets ! -name worker.js \
-            -exec cp -r {} .open-next/assets/ \;
-          # Copy public/ files (images, fonts, etc.) into assets root
-          cp -r public/. .open-next/assets/
-          # Tell Cloudflare Pages to serve static files directly (bypass Worker)
-          echo '{"version":1,"include":["/*"],"exclude":["/_next/static/*","/_next/image*","/favicon.ico","/robots.txt","/*.txt","/*.jpg","/*.jpeg","/*.png","/*.gif","/*.webp","/*.svg","/*.ico","/*.mp4","/*.mp3","/*.woff","/*.woff2","/*.ttf","/articles/editorial/*","/articles/affiliate/*","/lifestyle/*"]}' > .open-next/assets/_routes.json
-
-      - name: Deploy to Cloudflare Pages
-        working-directory: ventures/drive-credit
-        run: npx wrangler pages deploy .open-next/assets --project-name=drive-credit --branch=main --commit-dirty=true
+        run: bash deploy.sh
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: cefaf46df9642a046481c8c6d7879cb9
-
-      - name: Ping IndexNow (Bing)
-        run: |
-          curl -s -X POST "https://api.indexnow.org/indexnow" \
-            -H "Content-Type: application/json; charset=utf-8" \
-            -d '{
-              "host": "mintbrooks.com",
-              "key": "338e4f9275e14f2880a23aae2ef100dc",
-              "keyLocation": "https://mintbrooks.com/338e4f9275e14f2880a23aae2ef100dc.txt",
-              "urlList": [
-                "https://mintbrooks.com/",
-                "https://mintbrooks.com/articles",
-                "https://mintbrooks.com/beauty",
-                "https://mintbrooks.com/wellness",
-                "https://mintbrooks.com/home-decor",
-                "https://mintbrooks.com/kitchen",
-                "https://mintbrooks.com/finance",
-                "https://mintbrooks.com/sitemap.xml"
-              ]
-            }' || true
