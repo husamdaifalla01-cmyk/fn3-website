@@ -365,6 +365,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Vitamin C Serum for Brightening Dull Skin in 2026: La Roche-Posay vs. Budget Picks', slug: 'best-vitamin-c-serum-for-brightening-dull-skin', readTime: '13 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 7, 2026', excerpt: 'Discover the best vitamin C serum for brightening dull skin under $50. Real buyer results from La Roche-Posay and budget-friendly picks in 2026.' },
 
   { title: 'Best Eyeshadow Palette for Everyday Neutral Looks: Born This Way vs. Stone Cold Fox', slug: 'best-eyeshadow-palette-everyday-neutral-looks', readTime: '14 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 8, 2026', excerpt: 'Discover the best eyeshadow palette for everyday neutral looks tested by real buyers. Born This Way vs. Stone Cold Fox & more — with honest reviews.' },
+
+  { title: 'Best Clean Beauty Foundations for Beginners in 2024: Tested & Ranked', slug: 'best-clean-beauty-foundations-for-beginners', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 11, 2026', excerpt: 'Looking for the best clean beauty foundation for beginners? We tested top-rated non-toxic foundations from bareMinerals, Clinique, and more. Find your perfect match.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
