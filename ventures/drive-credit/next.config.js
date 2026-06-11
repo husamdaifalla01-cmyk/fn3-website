@@ -49,6 +49,19 @@ const nextConfig = {
       permanent: true,
     }))
 
+    // Bare (unprefixed) paths serve a prerendered 404 on OpenNext — middleware never
+    // fires for them, which is how every ranked /articles/<slug> URL went dark (e.g.
+    // /articles/hatch-alarm-clock-review, 756 GSC impressions, 404). Route them
+    // permanently to their /en/ canonicals at the routing-manifest layer, which
+    // OpenNext evaluates reliably. Static public trees keep their bare URLs.
+    const bareToEnRedirects = [
+      ...['beauty', 'home-decor', 'kitchen', 'wellness', 'search', 'reading-list', 'about'].map(
+        (path) => ({ source: `/${path}`, destination: `/en/${path}`, permanent: true })
+      ),
+      { source: '/articles', destination: '/en/articles', permanent: true },
+      { source: '/articles/:slug((?!affiliate|editorial).*)', destination: '/en/articles/:slug', permanent: true },
+    ]
+
     return [
       ...lifestyleRedirects,
       ...financeRedirects,
@@ -58,6 +71,7 @@ const nextConfig = {
       { source: '/lifestyle', destination: '/', permanent: true },
       { source: '/tiktok', destination: '/finance/links', permanent: false },
       { source: '/finance/yendo-review', destination: '/finance/yendo-credit-card-review', permanent: true },
+      ...bareToEnRedirects,
     ]
   },
 }
