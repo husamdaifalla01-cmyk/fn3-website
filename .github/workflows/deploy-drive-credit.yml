@@ -34,7 +34,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: ventures/drive-credit
-        run: npm ci
+        run: npm ci || npm install
 
       - name: Build + deploy production Worker
         working-directory: ventures/drive-credit
