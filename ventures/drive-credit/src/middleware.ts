@@ -14,6 +14,9 @@ const LOCALE_EXEMPT = [
   '/sitemap',
   '/robots.txt',
   '/opengraph-image',
+  // static public-dir article trees — served as-is, never locale-prefixed
+  '/articles/editorial',
+  '/articles/affiliate',
 ]
 
 // Country code → locale mapping using Cloudflare CF-IPCountry header
@@ -85,38 +88,39 @@ export default function middleware(request: NextRequest) {
 
   const detectedLocale = geoLocale ?? acceptLocale ?? 'en'
 
-  // If English: this build prefixes every locale (incl. the default), so the
-  // bare root has no static page — redirect "/" → "/en" explicitly. Other
-  // English paths fall through to next-intl as before.
+  // Check if path already has a supported locale prefix
+  const hasLocalePrefix = (routing.locales as readonly string[]).some(
+    (locale) =>
+      pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+  )
+
+  // If English: this build prefixes every locale (incl. the default), so NO bare
+  // path has a static page — under OpenNext, next-intl does not reliably redirect
+  // them and they serve a prerendered 404 (this is how every ranked /articles/<slug>
+  // URL went dark). Redirect every bare path explicitly: 307 for the geo-flavored
+  // root, 308 (permanent) for deep paths so crawlers carry ranking signal to /en.
   if (detectedLocale === 'en') {
-    if (pathname === '/') {
-      const url = request.nextUrl.clone()
-      url.pathname = '/en'
-      const r = NextResponse.redirect(url, 307)
-      r.cookies.set(COOKIE_NAME, 'en', {
+    if (hasLocalePrefix) {
+      const response = intlMiddleware(request)
+      response.cookies.set(COOKIE_NAME, 'en', {
         maxAge: COOKIE_MAX_AGE,
         sameSite: 'lax',
         secure: true,
         path: '/',
       })
-      return r
+      return response
     }
-    const response = intlMiddleware(request)
-    // Set cookie so next visits skip detection
-    response.cookies.set(COOKIE_NAME, 'en', {
+    const url = request.nextUrl.clone()
+    url.pathname = pathname === '/' ? '/en' : `/en${pathname}`
+    const r = NextResponse.redirect(url, pathname === '/' ? 307 : 308)
+    r.cookies.set(COOKIE_NAME, 'en', {
       maxAge: COOKIE_MAX_AGE,
       sameSite: 'lax',
       secure: true,
       path: '/',
     })
-    return response
+    return r
   }
-
-  // Check if path already has the detected locale prefix
-  const hasLocalePrefix = (routing.locales as readonly string[]).some(
-    (locale) =>
-      pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  )
 
   if (hasLocalePrefix) {
     return intlMiddleware(request)

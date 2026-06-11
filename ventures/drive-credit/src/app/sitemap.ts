@@ -105,20 +105,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entries: MetadataRoute.Sitemap = []
 
-  for (const locale of locales) {
-    const prefix = locale === 'en' ? '' : `/${locale}`
-    for (const { path: p, src } of lifestylePages) {
-      // Skip /articles for default locale: /public/articles/ static dir
-      // shadows the dynamic /[locale]/articles route on Cloudflare Pages,
-      // so the no-prefix URL returns 404. Locale-prefixed URLs are unaffected.
-      if (locale === 'en' && (p === '/articles')) continue
-      const url = `${base}${prefix}${p || '/'}`.replace(/\/$/, '') || base
-      entries.push({ url, lastModified: gitMtime(src) })
-    }
-    for (const slug of articleSlugs) {
-      if (locale === 'en') continue
-      entries.push({ url: `${base}${prefix}${slug}`, lastModified: articlesMtime })
-    }
+  // ONE canonical URL per page: /en/ only. The 10x locale duplication advertised
+  // ~760 machine-translated dupes (splitting ranking signal), every bare URL 404'd,
+  // and pages now canonicalize to /en/ — the sitemap must agree with the canonicals.
+  void locales
+  for (const { path: p, src } of lifestylePages) {
+    const url = `${base}/en${p || ''}`.replace(/\/$/, '') || `${base}/en`
+    entries.push({ url, lastModified: gitMtime(src) })
+  }
+  for (const slug of articleSlugs) {
+    entries.push({ url: `${base}/en${slug}`, lastModified: articlesMtime })
   }
 
   for (const { path: p, src } of financePages) {
