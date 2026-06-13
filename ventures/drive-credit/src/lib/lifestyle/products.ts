@@ -961,7 +961,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0G2ST1SYJ_nb.jpg",
     "pin_image_url": "/products/B0G2ST1SYJ_nb.jpg",
     "has_pin": true,
-    "category": "wellness"
+    "category": "jewelry"
   },
   {
     "asin": "B0DWNGSRMV",
@@ -974,7 +974,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0DWNGSRMV_nb.jpg",
     "pin_image_url": "/products/B0DWNGSRMV_nb.jpg",
     "has_pin": true,
-    "category": "wellness"
+    "category": "jewelry"
   },
   {
     "asin": "B0BG6LQCCD",
@@ -987,7 +987,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0BG6LQCCD_nb.jpg",
     "pin_image_url": "/products/B0BG6LQCCD_nb.jpg",
     "has_pin": true,
-    "category": "wellness"
+    "category": "jewelry"
   },
   {
     "asin": "B0F5M9793N",
