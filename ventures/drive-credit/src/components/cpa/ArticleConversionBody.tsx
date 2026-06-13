@@ -71,6 +71,18 @@ const NICHE_CTA: Record<string, { heading: string; body: string; cta: string; fu
     cta: 'Enter to win',
     funnel: MB_LINKS.sweeps_1k,
   },
+  garden: {
+    heading: 'Big garden project? Get funded in 24 hours.',
+    body: "Irrigation systems, raised beds, landscaping — personal loans up to $50K with bad-credit approval. Soft pull, no score impact.",
+    cta: 'Check approval odds',
+    funnel: FUNNELS.fastloansgroup,
+  },
+  hair: {
+    heading: 'Before the haul — enter to win $1,000.',
+    body: "Free to enter. Single email, no credit check. US residents 18+. Use it on the routine you've been eyeing.",
+    cta: 'Enter to win',
+    funnel: MB_LINKS.sweeps_1k,
+  },
 }
 
 // Legacy alias — kept for existing call sites. Resolves via NICHE_CTA above.

@@ -467,7 +467,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B07VR1NDSQ_nb.jpg",
     "pin_image_url": "/products/B07VR1NDSQ_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B0DQV1FQ49",
@@ -480,7 +480,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0DQV1FQ49_nb.jpg",
     "pin_image_url": "/products/B0DQV1FQ49_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B0013VY4AM",
@@ -493,7 +493,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0013VY4AM_nb.jpg",
     "pin_image_url": "/products/B0013VY4AM_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B0F2QZQWDN",
@@ -506,7 +506,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0F2QZQWDN_nb.jpg",
     "pin_image_url": "/products/B0F2QZQWDN_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B0BZZJWGPQ",
@@ -519,7 +519,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0BZZJWGPQ_nb.jpg",
     "pin_image_url": "/products/B0BZZJWGPQ_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B0B137RLYG",
@@ -532,7 +532,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0B137RLYG_nb.jpg",
     "pin_image_url": "/products/B0B137RLYG_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B086TPQJTT",
@@ -545,7 +545,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B086TPQJTT_nb.jpg",
     "pin_image_url": "/products/B086TPQJTT_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B099XMVSB1",
@@ -558,7 +558,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B099XMVSB1_nb.jpg",
     "pin_image_url": "/products/B099XMVSB1_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B07H3GBSC3",
@@ -571,7 +571,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B07H3GBSC3_nb.jpg",
     "pin_image_url": "/products/B07H3GBSC3_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B09HR5KSR8",
@@ -584,7 +584,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B09HR5KSR8_nb.jpg",
     "pin_image_url": "/products/B09HR5KSR8_nb.jpg",
     "has_pin": true,
-    "category": "beauty"
+    "category": "hair"
   },
   {
     "asin": "B089VRBZY6",
@@ -857,7 +857,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0GFW1L9V1_nb.jpg",
     "pin_image_url": "/products/B0GFW1L9V1_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B0DYJQ6M79",
@@ -870,7 +870,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0DYJQ6M79_nb.jpg",
     "pin_image_url": "/products/B0DYJQ6M79_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B0FFB991KF",
@@ -883,7 +883,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0FFB991KF_nb.jpg",
     "pin_image_url": "/products/B0FFB991KF_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B09R98W9J5",
@@ -896,7 +896,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B09R98W9J5_nb.jpg",
     "pin_image_url": "/products/B09R98W9J5_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B0DWHSCGRL",
@@ -909,7 +909,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0DWHSCGRL_nb.jpg",
     "pin_image_url": "/products/B0DWHSCGRL_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B0CQ4BYFGR",
@@ -922,7 +922,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0CQ4BYFGR_nb.jpg",
     "pin_image_url": "/products/B0CQ4BYFGR_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B07BZ5B3LS",
@@ -935,7 +935,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B07BZ5B3LS_nb.jpg",
     "pin_image_url": "/products/B07BZ5B3LS_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B0FKGQ8V4R",
@@ -948,7 +948,7 @@ const ALL_PRODUCTS: Product[] = [
     "primary_image_url": "/products/B0FKGQ8V4R_nb.jpg",
     "pin_image_url": "/products/B0FKGQ8V4R_nb.jpg",
     "has_pin": true,
-    "category": "home-decor"
+    "category": "garden"
   },
   {
     "asin": "B0G2ST1SYJ",
