@@ -367,6 +367,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Eyeshadow Palette for Everyday Neutral Looks: Born This Way vs. Stone Cold Fox', slug: 'best-eyeshadow-palette-everyday-neutral-looks', readTime: '14 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 8, 2026', excerpt: 'Discover the best eyeshadow palette for everyday neutral looks tested by real buyers. Born This Way vs. Stone Cold Fox & more — with honest reviews.' },
 
   { title: 'Best Clean Beauty Foundations for Beginners in 2024: Tested & Ranked', slug: 'best-clean-beauty-foundations-for-beginners', readTime: '8 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 11, 2026', excerpt: 'Looking for the best clean beauty foundation for beginners? We tested top-rated non-toxic foundations from bareMinerals, Clinique, and more. Find your perfect match.' },
+
+  { title: 'Best Drip Irrigation Kit for Beginners in 2026: Easy, Affordable & Leak-Proof', slug: 'best-drip-irrigation-kit-for-beginners', readTime: '10 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'June 12, 2026', excerpt: 'Discover the best drip irrigation kit for beginners in 2026 — easy to install, leak-proof, and affordable. Tested by real gardeners.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
