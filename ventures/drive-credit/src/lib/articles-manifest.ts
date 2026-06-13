@@ -68,6 +68,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-coffee-table-for-living-room",
   "best-compact-budget-air-fryer-small-kitchen",
   "best-dark-spot-corrector-serum-under-50",
+  "best-drip-irrigation-kit-for-beginners",
   "best-drip-irrigation-kits",
   "best-drip-irrigation-system",
   "best-everyday-eyeshadow-palette",
