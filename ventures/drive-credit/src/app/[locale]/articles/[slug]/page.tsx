@@ -375,6 +375,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Clean Foundation for Beginners in 2024: Tested & Ranked', slug: 'best-clean-foundation-for-beginners-2024', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 16, 2026', excerpt: 'Discover the best clean foundation for beginners in 2024 — tested by real users. Natural, non-toxic options with real results.' },
 
   { title: 'Best Drip Irrigation Kit for Beginners in 2024: Tested & Ranked', slug: 'best-drip-irrigation-kit-for-beginners-2024', readTime: '12 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'June 16, 2026', excerpt: 'Find the best drip irrigation kit for beginners in 2024. Tested by real gardeners — easy, affordable, tool-free setups that work.' },
+
+  { title: 'Best Credit Cards for Bad Credit With No Deposit Required (2026)', slug: 'best-credit-cards-bad-credit-no-deposit', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'June 16, 2026', excerpt: 'Independent editorial review: best credit cards for bad credit no deposit — real approval odds, eligibility, and the fastest path through.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {

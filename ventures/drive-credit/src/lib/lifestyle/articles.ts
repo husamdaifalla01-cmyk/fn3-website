@@ -592,6 +592,16 @@ export const ARTICLES: Article[] = [
     bg: '#EEF3F1',
     accent: '#1D3A2F',
   },
+  {
+    slug: 'best-credit-cards-bad-credit-no-deposit',
+    title: 'Best Credit Cards for Bad Credit With No Deposit Required (2026)',
+    category: 'finance',
+    categoryLabel: 'Money & Credit',
+    readTime: '9 min',
+    excerpt: 'Independent editorial review: best credit cards for bad credit no deposit — real approval odds, eligibility, and the fastest path through.',
+    bg: '#EEF3F1',
+    accent: '#1D3A2F',
+  },
 
 ]
 
