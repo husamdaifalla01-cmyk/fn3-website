@@ -27,3 +27,7 @@ ventures/drive-credit/.wrangler/
 
 # OpenNext build output (regenerated each deploy; must not dirty the rebase)
 ventures/drive-credit/.open-next/
+
+# macOS metadata — these get modified on every directory access and block git pull --rebase
+.DS_Store
+**/.DS_Store
