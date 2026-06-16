@@ -371,6 +371,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Drip Irrigation Kit for Beginners in 2026: Easy, Affordable & Leak-Proof', slug: 'best-drip-irrigation-kit-for-beginners', readTime: '10 min', category: 'Home & Decor', categorySlug: 'garden', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'June 12, 2026', excerpt: 'Discover the best drip irrigation kit for beginners in 2026 — easy to install, leak-proof, and affordable. Tested by real gardeners.' },
 
   { title: 'Best Self-Care Gift Baskets for Women Under $50: Top 5 Budget Picks', slug: 'best-self-care-gift-basket-for-women-under-50', readTime: '12 min', category: 'Wellness', categorySlug: 'wellness', bg: '#F5EDE5', accent: '#7B5E4A', image: '/wellness.jpg', date: 'June 13, 2026', excerpt: 'Discover the best self-care gift baskets for women under $50 — tested, reviewed, and perfect for birthdays, get-well moments, or vintage-loving moms.' },
+
+  { title: 'Best Clean Foundation for Beginners in 2024: Tested & Ranked', slug: 'best-clean-foundation-for-beginners-2024', readTime: '10 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 16, 2026', excerpt: 'Discover the best clean foundation for beginners in 2024 — tested by real users. Natural, non-toxic options with real results.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {

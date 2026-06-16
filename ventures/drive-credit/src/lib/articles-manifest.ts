@@ -105,6 +105,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-retinol-for-sensitive-skin",
   "best-retinol-serum-for-beginners",
   "best-reusable-water-bottles-under-40",
+  "best-self-care-gift-basket-for-women-under-50",
   "best-self-care-gift-baskets-women",
   "best-self-care-gifts-for-best-friend",
   "best-self-care-gifts-mothers-day",
