@@ -383,6 +383,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Vitamin C Serum for Brightening Dull Skin in 2026: Tested & Ranked', slug: 'best-vitamin-c-serum-for-brightening-dull-skin-2026', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 18, 2026', excerpt: 'Discover the best vitamin C serum for brightening dull skin in 2026, tested by real users. See top picks for radiant, even-toned skin.' },
 
   { title: 'Best Sous Vide Cooker for Beginners in 2024: Tested & Ranked', slug: 'best-sous-vide-cooker-for-beginners-2024', readTime: '12 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'June 18, 2026', excerpt: 'Find the best sous vide cooker for beginners in 2024. Tested by real users — Anova Nano tops our list for ease, app control, and value.' },
+
+  { title: 'Best Linen Duvet Cover Set for Luxury Bedroom 2024: Tested & Ranked', slug: 'best-linen-duvet-cover-set-for-luxury-bedroom-2024', readTime: '10 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'June 18, 2026', excerpt: 'Discover the best linen duvet cover set for luxury bedroom in 2024 — tested by real buyers. See why 8,200 reviewers chose this 100% French linen set.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
