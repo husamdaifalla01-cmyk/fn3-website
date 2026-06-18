@@ -381,6 +381,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Hair Oil for Damaged Hair in 2024: Tested & Ranked', slug: 'best-hair-oil-for-damaged-hair-2024', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 18, 2026', excerpt: 'Discover the best hair oil for damaged hair in 2024, tested by real users. Olaplex No. 7 Bonding Oil tops our list for repair and shine.' },
 
   { title: 'Best Vitamin C Serum for Brightening Dull Skin in 2026: Tested & Ranked', slug: 'best-vitamin-c-serum-for-brightening-dull-skin-2026', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 18, 2026', excerpt: 'Discover the best vitamin C serum for brightening dull skin in 2026, tested by real users. See top picks for radiant, even-toned skin.' },
+
+  { title: 'Best Sous Vide Cooker for Beginners in 2024: Tested & Ranked', slug: 'best-sous-vide-cooker-for-beginners-2024', readTime: '12 min', category: 'Kitchen', categorySlug: 'kitchen', bg: '#EDF2E5', accent: '#4A5E2C', image: '/kitchen.jpg', date: 'June 18, 2026', excerpt: 'Find the best sous vide cooker for beginners in 2024. Tested by real users — Anova Nano tops our list for ease, app control, and value.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
