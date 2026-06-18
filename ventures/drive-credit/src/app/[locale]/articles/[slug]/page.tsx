@@ -379,6 +379,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Credit Cards for Bad Credit With No Deposit Required (2026)', slug: 'best-credit-cards-bad-credit-no-deposit', readTime: '9 min', category: 'Money & Credit', categorySlug: 'finance', bg: '#EEF3F1', accent: '#1D3A2F', image: '/editorial.jpg', date: 'June 16, 2026', excerpt: 'Independent editorial review: best credit cards for bad credit no deposit — real approval odds, eligibility, and the fastest path through.' },
 
   { title: 'Best Hair Oil for Damaged Hair in 2024: Tested & Ranked', slug: 'best-hair-oil-for-damaged-hair-2024', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 18, 2026', excerpt: 'Discover the best hair oil for damaged hair in 2024, tested by real users. Olaplex No. 7 Bonding Oil tops our list for repair and shine.' },
+
+  { title: 'Best Vitamin C Serum for Brightening Dull Skin in 2026: Tested & Ranked', slug: 'best-vitamin-c-serum-for-brightening-dull-skin-2026', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 18, 2026', excerpt: 'Discover the best vitamin C serum for brightening dull skin in 2026, tested by real users. See top picks for radiant, even-toned skin.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {
