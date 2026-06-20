@@ -7,11 +7,11 @@ import FinanceEmailCapture from '@/components/FinanceEmailCapture'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { trackEvent } from '@/lib/analytics'
 import { YENDO_500_HERO } from '@/lib/affiliateUrls'
-import { Fraunces, Spline_Sans_Mono, Hanken_Grotesk } from 'next/font/google'
+import { Hanken_Grotesk } from 'next/font/google'
 import s from './ApprovalPath.module.css'
 
-const fraunces = Fraunces({ subsets: ['latin'], weight: ['400', '500', '600'], style: ['normal', 'italic'], variable: '--font-fraunces', display: 'swap' })
-const monoF = Spline_Sans_Mono({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-mono2', display: 'swap' })
+// Display = Playfair Display, provided by the finance layout via --font-playfair
+// (matches the live Mintbrooks brand). Body = Hanken Grotesk.
 const hanken = Hanken_Grotesk({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-hanken', display: 'swap' })
 
 function band(sc: number) {
@@ -47,7 +47,7 @@ export default function ApprovalPath500() {
   const owns = car === 'yes'
 
   return (
-    <div className={`${s.wrap} ${fraunces.variable} ${monoF.variable} ${hanken.variable}`}>
+    <div className={`${s.wrap} ${hanken.variable}`}>
       {/* HERO + ENGINE */}
       <header className={s.bleed}>
         <div className={s.hero}>
@@ -183,9 +183,9 @@ export default function ApprovalPath500() {
               <path className={s.area} d="M40,140 C180,150 250,120 320,100 S520,55 580,42 L580,240 L40,240 Z" />
               <path className={s.cpath} ref={pathRef} d="M40,140 C180,150 250,120 320,100 S520,55 580,42" />
               <circle className={s.cdot} cx="40" cy="140" r="6" /><circle className={s.cdot} cx="320" cy="100" r="6" /><circle className={s.cdot} cx="580" cy="42" r="6" />
-              <text className={s.ann} x="40" y="165"><tspan style={{ fill: '#171310', fontWeight: 600 }}>500</tspan> · today</text>
+              <text className={s.ann} x="40" y="165"><tspan style={{ fill: '#1A1714', fontWeight: 600 }}>500</tspan> · today</text>
               <text className={s.ann} x="300" y="128">first real card</text>
-              <text className={s.ann} x="560" y="34" textAnchor="end"><tspan style={{ fill: '#171310', fontWeight: 600 }}>~700</tspan> · real limits</text>
+              <text className={s.ann} x="560" y="34" textAnchor="end"><tspan style={{ fill: '#1A1714', fontWeight: 600 }}>~700</tspan> · real limits</text>
             </svg>
           </div>
         </div>

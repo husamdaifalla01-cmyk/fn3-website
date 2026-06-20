@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import NavBar from '@/components/NavBar'
+import LifestyleNav from '@/components/lifestyle/LifestyleNav'
 import ApprovalPath500 from '@/components/approval-path/ApprovalPath500'
+import { NextIntlClientProvider } from 'next-intl'
+import enMessages from '../../../../messages/en.json'
 import T3ProductLeadMagnet from '@/components/T3ProductLeadMagnet'
 import T3LeadMagnetCreditCard from '@/components/T3LeadMagnetCreditCard'
 import AffiliateLink from '@/components/AffiliateLink'
@@ -98,7 +100,9 @@ export default function Page() {
       {jsonLd.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <NavBar />
+      <NextIntlClientProvider locale="en" messages={enMessages} now={new Date()} timeZone="UTC" formats={{}}>
+        <LifestyleNav />
+      </NextIntlClientProvider>
       <ApprovalPath500 />
       <article className="max-w-3xl mx-auto px-4 py-14">
 
