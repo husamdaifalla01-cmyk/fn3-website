@@ -7,7 +7,7 @@ import { YENDO_NO_CREDIT_HERO, YENDO_NO_CREDIT_CARD, YENDO_NO_CREDIT_CTA } from 
 export const metadata: Metadata = {
   title: 'Credit Card with No Credit History: Your Real Options — Mintbrooks',
   description: 'No credit history? Here are the cards and products that actually approve applicants with no file — including options with no credit check.',
-  alternates: { canonical: 'https://mintbrooks.com/no-credit-history-credit-card' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/no-credit-history-credit-card' },
 }
 
 const jsonLd = {

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://mintbrooks.com/car-title-loan-alternative',
+    canonical: 'https://mintbrooks.com/finance/car-title-loan-alternative',
   },
 }
 

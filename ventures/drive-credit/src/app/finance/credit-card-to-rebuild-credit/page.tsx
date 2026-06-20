@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Best Credit Card to Rebuild Credit in 2026 — Mintbrooks',
   description:
     'Looking for a credit card to rebuild credit? Compare secured cards, car-secured cards, and credit-builder options — with honest advice on which one works fastest.',
-  alternates: { canonical: 'https://mintbrooks.com/credit-card-to-rebuild-credit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/credit-card-to-rebuild-credit' },
   openGraph: {
     title: 'Best Credit Card to Rebuild Credit in 2026 — Mintbrooks',
     description:

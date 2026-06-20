@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Yendo Credit Card Review 2026 — Legit or Scam? Real Approval Odds Explained',
   description: 'Yendo is a car-secured Visa credit card that uses your vehicle as collateral instead of your credit score. This review covers approval requirements, fees, credit limits, and who it\'s best for.',
   keywords: 'yendo credit card review, yendo review, yendo legit, yendo scam, yendo card approval odds, yendo vs secured credit card, yendo bad credit',
-  alternates: { canonical: 'https://mintbrooks.com/yendo-review' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/yendo-review' },
   openGraph: {
     title: 'Yendo Credit Card Review 2026 — Is It Legit?',
     description: 'Yendo uses your car as collateral to give you a real Visa credit card with up to $10,000 limit — no credit score required. Our honest review.',

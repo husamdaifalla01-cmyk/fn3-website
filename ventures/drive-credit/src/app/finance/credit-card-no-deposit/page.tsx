@@ -7,7 +7,7 @@ import { YENDO_NO_DEPOSIT_HERO, YENDO_NO_DEPOSIT_CTA } from '@/lib/affiliateUrls
 export const metadata: Metadata = {
   title: 'Credit Card with No Deposit Required: Real Options — Mintbrooks',
   description: 'Most secured cards require a cash deposit. Here are real credit cards that require no deposit — even with bad or no credit.',
-  alternates: { canonical: 'https://mintbrooks.com/credit-card-no-deposit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/credit-card-no-deposit' },
 }
 
 const jsonLd = {

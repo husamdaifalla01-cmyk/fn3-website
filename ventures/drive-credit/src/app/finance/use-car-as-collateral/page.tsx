@@ -7,7 +7,7 @@ import { YENDO_COLLATERAL_CTA } from '@/lib/affiliateUrls'
 export const metadata: Metadata = {
   title: 'Using Your Car as Collateral for Credit: How It Works — Mintbrooks',
   description: 'Learn how car-secured credit works, what it means to use your vehicle as collateral, and how it differs from a title loan.',
-  alternates: { canonical: 'https://mintbrooks.com/use-car-as-collateral' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/use-car-as-collateral' },
 }
 
 const jsonLd = {

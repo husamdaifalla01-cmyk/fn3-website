@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true }, // de-indexed: concentrate authority on /finance
   title: 'Kitchen & Cooking',
   description:
     'Kitchen gear guides, coffee bar setups, and the cookware that earns its place in your home.',

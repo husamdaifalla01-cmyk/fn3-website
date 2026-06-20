@@ -1,0 +1,8 @@
+# De-index the static lifestyle/affiliate article dupes (kept live, not deleted) so
+# they stop diluting the domain's topical authority. These are served as static
+# HTML and bypass Next.js metadata, so noindex must be set at the edge.
+/articles/affiliate/*
+  X-Robots-Tag: noindex, follow
+
+/articles/editorial/*
+  X-Robots-Tag: noindex, follow

@@ -8,6 +8,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true }, // de-indexed: concentrate authority on /finance
   title: 'The Reading List — Mintbrooks',
   description:
     'Books the Mintbrooks editors would press into your hands. 20 essential reads on money, home, wellness, creativity, and living well.',

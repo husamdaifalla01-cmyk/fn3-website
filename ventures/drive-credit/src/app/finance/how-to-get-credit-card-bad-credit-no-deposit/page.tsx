@@ -7,7 +7,7 @@ import { YENDO_BAD_CREDIT_NO_DEPOSIT_HERO, YENDO_BAD_CREDIT_NO_DEPOSIT_CTA } fro
 export const metadata: Metadata = {
   title: 'How to Get a Credit Card with Bad Credit and No Deposit (2026) — Mintbrooks',
   description: 'Real options for getting a credit card when you have bad credit and can\'t afford a deposit. No-deposit alternatives that actually work.',
-  alternates: { canonical: 'https://mintbrooks.com/how-to-get-credit-card-bad-credit-no-deposit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/how-to-get-credit-card-bad-credit-no-deposit' },
 }
 
 const jsonLd = {

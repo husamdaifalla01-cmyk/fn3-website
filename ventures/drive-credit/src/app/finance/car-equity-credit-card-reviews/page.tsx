@@ -7,7 +7,7 @@ import { YENDO_CAR_EQUITY_REVIEW_HERO, YENDO_CAR_EQUITY_REVIEW_CTA } from '@/lib
 export const metadata: Metadata = {
   title: 'Car Equity Credit Card Reviews (2026) — How They Work & Who Qualifies',
   description: 'In-depth review of car equity credit cards. How they work, who qualifies, the real pros and cons, and how they compare to secured cards and personal loans.',
-  alternates: { canonical: 'https://mintbrooks.com/car-equity-credit-card-reviews' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/car-equity-credit-card-reviews' },
   openGraph: {
     title: 'Car Equity Credit Card Reviews (2026)',
     description: 'How car equity credit cards work, who qualifies, and honest pros/cons.',

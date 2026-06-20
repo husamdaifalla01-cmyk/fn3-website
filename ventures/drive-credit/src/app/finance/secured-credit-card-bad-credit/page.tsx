@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: 'Best Secured Credit Cards for Bad Credit (2026) — No Deposit Required Option',
   description: 'Most secured credit cards require a $200–$500 cash deposit you can\'t touch. If you own a car, there\'s a better option — use your car\'s equity instead of cash.',
   keywords: 'secured credit card bad credit, best secured credit card bad credit, secured credit card no deposit, secured credit card 500 credit score, secured card for rebuilding credit',
-  alternates: { canonical: 'https://mintbrooks.com/secured-credit-card-bad-credit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/secured-credit-card-bad-credit' },
   openGraph: {
     title: 'Best Secured Credit Cards for Bad Credit (2026)',
     description: 'Skip the cash deposit. If you own a car, use your car\'s equity to qualify for a Visa credit card — no cash tied up.',

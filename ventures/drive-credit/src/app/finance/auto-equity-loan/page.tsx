@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: 'Auto Equity Loan Alternative — Use Your Car for Revolving Credit (2026)',
   description: 'An auto equity loan gives you a lump sum and charges daily interest. A car-secured credit card gives you up to $10,000 in revolving credit — pay only what you use. No hard credit pull to check eligibility.',
   keywords: 'auto equity loan, car equity loan, auto equity credit, car equity line of credit, use car equity for credit, auto equity bad credit',
-  alternates: { canonical: 'https://mintbrooks.com/auto-equity-loan' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/auto-equity-loan' },
   openGraph: {
     title: 'Auto Equity Loan Alternative — Revolving Credit With Your Car (2026)',
     description: 'Skip the lump-sum auto equity loan. Get a revolving Visa credit line using your car — soft pull only, no cash deposit.',

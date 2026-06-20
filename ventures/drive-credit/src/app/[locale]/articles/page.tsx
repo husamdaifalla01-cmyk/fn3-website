@@ -11,6 +11,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true }, // de-indexed: concentrate authority on /finance
   title: 'Articles — Mintbrooks',
   description:
     'Guides, reviews, and honest advice on home decor, wellness, beauty, kitchen, and personal finance.',

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Car Equity Credit Card vs Secured Credit Cards (2026 Comparison) — Mintbrooks',
   description: 'Side-by-side comparison of Yendo car-equity credit card vs OpenSky, Discover, and Chime secured cards. See which option fits your credit situation — no deposit required with car equity.',
   keywords: 'car equity credit card vs secured card, yendo vs opensky, yendo vs discover secured, no deposit credit card, secured credit card comparison, credit card bad credit',
-  alternates: { canonical: 'https://mintbrooks.com/car-equity-vs-secured-cards' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/car-equity-vs-secured-cards' },
   openGraph: {
     title: 'Car Equity Credit Card vs Secured Credit Cards — 2026 Comparison',
     description: 'Compare Yendo car-equity card against traditional secured cards. No cash deposit needed when you use your car.',

@@ -10,7 +10,7 @@ const YENDO_FAQ_BOT = buildAffiliateUrl(OFFERS.yendo.url, 'organic', 'seo', 'faq
 export const metadata: Metadata = {
   title: 'Car-Secured Credit Card FAQ — Mintbrooks',
   description: 'Answers to the most common questions about car-secured credit cards: how they work, credit score impact, which states qualify, what cars are eligible, and how to apply.',
-  alternates: { canonical: 'https://mintbrooks.com/faq' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/faq' },
   openGraph: {
     title: 'Car-Secured Credit Card FAQ — Mintbrooks',
     description: 'Everything you want to know about using your car to get a credit card — no fluff, plain answers.',

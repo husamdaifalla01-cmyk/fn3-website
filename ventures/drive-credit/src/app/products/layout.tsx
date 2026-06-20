@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://mintbrooks.com'),
   title: 'The 90-Day Money Reset — Mintbrooks',
   description: 'A step-by-step 90-day protocol to repair your credit and take control of your finances. One action per day. Creditor scripts included. $24, one time.',
+  alternates: { canonical: 'https://mintbrooks.com/products/90-day-money-reset' },
   openGraph: {
     title: 'The 90-Day Money Reset',
     description: 'Day-by-day credit repair protocol. Creditor scripts, dispute letters, and a weekly tracking system. $24 one-time.',

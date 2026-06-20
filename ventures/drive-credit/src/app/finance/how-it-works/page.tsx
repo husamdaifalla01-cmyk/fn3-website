@@ -7,7 +7,7 @@ import { YENDO_HOW_IT_WORKS_CTA } from '@/lib/affiliateUrls'
 export const metadata: Metadata = {
   title: 'How Car-Secured Credit Works — Mintbrooks',
   description: 'A clear explanation of how car-secured credit works: from application to using the card. No jargon, no surprises.',
-  alternates: { canonical: 'https://mintbrooks.com/how-it-works' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/how-it-works' },
 }
 
 const jsonLd = {

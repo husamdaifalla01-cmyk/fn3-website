@@ -551,6 +551,9 @@ export async function generateMetadata({
     title: article.title,
     description: excerpt,
     alternates: { canonical },
+    // Concentrate topical authority on /finance. Lifestyle/affiliate articles are
+    // de-indexed (kept live + crawlable) so they stop diluting the domain's signal.
+    robots: { index: false, follow: true },
     openGraph: {
       title: article.title,
       description: excerpt,

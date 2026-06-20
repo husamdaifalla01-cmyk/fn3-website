@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Is Yendo Available in My State? — Complete State Eligibility Guide — Mintbrooks',
   description: 'Check if the Yendo car-secured credit card is available in your state. Yendo operates in 37 states + DC. See the full list and find your best option if your state isn\'t covered.',
   keywords: 'is yendo available in my state, yendo states, yendo eligibility, car equity credit card states, yendo not available',
-  alternates: { canonical: 'https://mintbrooks.com/yendo-states-guide' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/yendo-states-guide' },
   openGraph: {
     title: 'Is Yendo Available in My State? — Complete Guide',
     description: 'Yendo is available in 37 states + DC. Check your state and find the best car-equity credit option for you.',

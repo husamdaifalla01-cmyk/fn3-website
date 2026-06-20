@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true }, // de-indexed: concentrate authority on /finance
   title: 'Wellness',
   description:
     'Wellness rituals, sleep routines, and the products that actually support a calmer, more intentional life.',

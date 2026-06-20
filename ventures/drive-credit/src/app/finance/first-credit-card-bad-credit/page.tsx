@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'First Credit Card With Bad Credit — What Actually Works in 2026',
   description: 'Getting your first credit card with bad credit is possible. Learn which options work, which to avoid, and how a car-secured card beats traditional secured cards.',
   keywords: 'first credit card bad credit, first credit card no credit history, how to get first credit card, best first credit card bad credit, first time credit card bad credit',
-  alternates: { canonical: 'https://mintbrooks.com/first-credit-card-bad-credit' },
+  alternates: { canonical: 'https://mintbrooks.com/finance/first-credit-card-bad-credit' },
   openGraph: {
     title: 'First Credit Card With Bad Credit — What Actually Works in 2026',
     description: 'Stop paying deposits. If you own a car, you already have the collateral you need for your first card.',
