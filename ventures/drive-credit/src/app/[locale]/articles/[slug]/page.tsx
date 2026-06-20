@@ -551,9 +551,10 @@ export async function generateMetadata({
     title: article.title,
     description: excerpt,
     alternates: { canonical },
-    // Concentrate topical authority on /finance. Lifestyle/affiliate articles are
-    // de-indexed (kept live + crawlable) so they stop diluting the domain's signal.
-    robots: { index: false, follow: true },
+    // Concentrate authority on finance: de-index lifestyle articles (kept live), but
+    // KEEP finance-category articles indexable — several rank top-10 and convert
+    // (e.g. yendo-bad-credit-approval-odds at pos ~10).
+    robots: article.categorySlug === 'finance' ? undefined : { index: false, follow: true },
     openGraph: {
       title: article.title,
       description: excerpt,

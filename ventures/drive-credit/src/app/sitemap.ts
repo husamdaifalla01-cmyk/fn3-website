@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { ARTICLES } from '@/lib/lifestyle/articles'
 import { execSync } from 'child_process'
 import fs from 'fs'
 import path from 'path'
@@ -94,6 +95,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   for (const p of productPages) {
     entries.push({ url: `${base}/${p}`, lastModified: gitMtime(`src/app/${p}/page.tsx`), changeFrequency: 'monthly', priority: 0.9 })
+  }
+
+  // Finance-category articles live at /en/articles/<slug> and STAY indexed (several
+  // rank top-10 and convert). Lifestyle articles are noindexed and excluded.
+  const articlesMtime = gitMtime('src/lib/lifestyle/articles.ts')
+  for (const a of ARTICLES.filter((x) => x.category === 'finance')) {
+    entries.push({ url: `${base}/en/articles/${a.slug}`, lastModified: articlesMtime, changeFrequency: 'monthly', priority: 0.7 })
   }
 
   return entries
