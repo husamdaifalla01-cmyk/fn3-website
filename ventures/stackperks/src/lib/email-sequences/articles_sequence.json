@@ -1,0 +1,351 @@
+{
+  "sequence_meta": {
+    "niche": "articles",
+    "brand": "Mintbrooks",
+    "persona": "The Mintbrooks Letter",
+    "persona_voice": "Ann Handley — editorial letter format, One Thing per email, specific personal anecdote to universal truth, never sounds like a brand",
+    "total_emails": 6
+  },
+  "emails": [
+    {
+      "niche": "articles",
+      "email_number": 1,
+      "send_day": 0,
+      "subject_line": "The letter that started this (and what you'll find here)",
+      "preview_text": "A note on what Mintbrooks actually is — and a question",
+      "from_name": "The Mintbrooks Letter",
+      "plain_text_body": "I want to tell you why this newsletter exists.\n\nAbout three years ago, I started keeping a running document on my laptop called \"things I keep telling people.\"\n\nEvery time I caught myself saying the same thing to a friend — about their apartment, about a supplement they were asking about, about why their kitchen felt chaotic, about a book I'd just read — I'd add it to the document.\n\nThe document got long. I started turning things into blog posts. The blog posts became articles. The articles attracted readers, and readers started emailing me questions that led to more articles.\n\nThat's Mintbrooks. It's a lifestyle site in the same way that a very organized, curious friend who has done a lot of research is a \"lifestyle friend.\" Not a brand. A person who has thought about things and wants to share what they found.\n\nWe cover home, wellness, beauty, kitchen, money, and — in this letter specifically — the ideas behind all of it. The things that don't fit neatly into any one category. The cross-category insights. The things I find genuinely interesting that I want to share.\n\nYour welcome gift — \"The Mintbrooks Reading List: 20 Books That Actually Changed Something About How We Live\" — is waiting for you at mintbrooks.com/reading-list. It's not an Amazon-optimized bestseller list. It's the books that actually shifted something for me or for people on this team.\n\nBefore you go: I'd like to know what kind of reader you are.\n\n[SEGMENTATION LINK: Ideas First] — \"I care most about interesting ideas and how they connect\"\n[SEGMENTATION LINK: Practical First] — \"I want specific, actionable things I can implement\"\n[SEGMENTATION LINK: Stories First] — \"I'm here for narrative — human stories that illustrate something\"\n[SEGMENTATION LINK: All of it] — \"Give me everything — I'll sort out what's useful\"\n\nI'll tailor the balance of future letters based on what you tell me.\n\nWelcome to the letter. I'm glad you're here.\n\nWarm,\nNadia\nEditor, The Mintbrooks Letter\n\nP.S. — We publish on Thursdays. If you don't hear from me on a Thursday, something has gone wrong with the internet and we should all be worried.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;'>The Mintbrooks Letter</p><h2 style='font-size: 22px;'>The letter that started this</h2><p>About three years ago, I started keeping a document called \"things I keep telling people.\"</p><p>Every time I caught myself saying the same thing to a friend — about their apartment, a supplement, a book — I'd add it to the document. The document became blog posts. The posts became articles. The articles became this.</p><p>Mintbrooks is a lifestyle site in the same way a very curious, well-researched friend is a \"lifestyle friend.\" Not a brand. A person.</p><p>Your welcome gift — <a href=\"https://mintbrooks.com/reading-list\" style=\"color:#2c5f8a;\"><em>The Mintbrooks Reading List: 20 Books That Actually Changed Something</em></a> — is ready for you.</p><p><strong>What kind of reader are you?</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 10px;'><a href='{{SEG_IDEAS}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Ideas first — interesting ideas and how they connect</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_PRACTICAL}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Practical first — specific, actionable things</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_STORIES}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Stories first — narrative that illustrates something</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_ALL}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>All of it — I'll sort what's useful</a></li></ul><p>Warm,<br><strong>Nadia</strong><br><em>Editor, The Mintbrooks Letter</em></p></div>",
+      "tags_applied_on_send": [
+        "sequence:articles",
+        "stage:welcome"
+      ],
+      "tags_applied_on_click": [
+        "tag:reader-type:set"
+      ],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "articles",
+          "amazon_search_term": "Thinking Fast and Slow Daniel Kahneman book",
+          "placement": "reading-list-reference",
+          "affiliate_context": "Reading list companion — Thinking Fast and Slow is on the Mintbrooks reading list as a foundational ideas book"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": [
+          "tag:engaged:articles-email-1"
+        ],
+        "on_click_seg_ideas": [
+          "tag:reader:ideas-first"
+        ],
+        "on_click_seg_practical": [
+          "tag:reader:practical-first"
+        ],
+        "on_click_seg_stories": [
+          "tag:reader:stories-first"
+        ],
+        "on_click_seg_all": [
+          "tag:reader:all-types"
+        ],
+        "on_click_product": [
+          "tag:journey:converted-click",
+          "queue:social-proof-followup-72h"
+        ],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "A document called \"things I keep telling people\""
+      }
+    },
+    {
+      "niche": "articles",
+      "email_number": 2,
+      "send_day": 4,
+      "subject_line": "The thing about friction you probably haven't thought about",
+      "preview_text": "One idea. Applies everywhere.",
+      "from_name": "The Mintbrooks Letter",
+      "plain_text_body": "One thing. That's the rule I've set for this letter.\n\nOne idea per email, developed properly, followed to where it actually leads. Not a roundup. Not a list of five things. One thing.\n\nToday's one thing: friction.\n\nAbout two years ago, I moved into a new apartment. I had always wanted to be a \"reader\" — someone who reads books consistently, makes time for it, doesn't spend evenings on their phone.\n\nFor years, I'd failed. I'd buy books, start them, lose the thread, pick up my phone instead. I blamed distraction. I blamed my attention span. I did not, until I moved apartments, look at the physics of the situation.\n\nIn my old apartment, my phone charger was on my nightstand. My books were on a shelf across the room.\n\nIn the new apartment, setting up my space for the first time, I made one decision: the charger went across the room, under the desk. The book I was currently reading went on the nightstand.\n\nI became a reader in about three weeks. Not because I suddenly had more discipline. Because the friction had been redistributed.\n\nThis is the insight that I keep coming back to across every category we cover at Mintbrooks:\n\n**Good behavior is almost always a friction problem before it's a willpower problem.**\n\nThe gym clothes by the door vs. in the drawer. The fruit bowl on the counter vs. in the crisper. The budget spreadsheet bookmarked vs. buried in a folder. The vitamins next to the coffee vs. in a cabinet.\n\nThe behavior you want becomes easier not when you try harder but when you make the desired path shorter than the alternative.\n\nJames Clear calls this \"friction management.\" He says it better than I will — and if you haven't read Atomic Habits, it is the clearest book-length treatment of this idea that exists.\n\nBut the sentence I keep returning to isn't from his book. It's from a conversation I had with a friend who works in behavioral design:\n\n*\"People are not lazy. They are optimizing for ease, and ease is determined by design, not character.\"*\n\nIf something in your life isn't working — a habit, a space, a relationship with your own money — the first question worth asking is not \"what's wrong with me\" but \"where is the friction?\" and \"where should I add some?\"\n\nBecause the phone charger across the room was friction I added. I didn't become more disciplined. I made the bad choice harder.\n\nThat's today's one thing.\n\nOne book, if you want more:\n\n[PRODUCT LINK: Atomic Habits by James Clear — the clearest book on this idea]\n\nNext Thursday: the thing about perfectionism that nobody says out loud.\n\nWarm,\nNadia\n\nP.S. — Where in your life is friction pointing you in the wrong direction? Hit reply and tell me. I collect these.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.85; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;'>The Mintbrooks Letter</p><h2>The thing about friction</h2><p><em>One idea. Follows where it leads.</em></p><p>I moved into a new apartment two years ago. For years I'd tried to become \"a reader\" — books on the nightstand, phone picked up instead, every time.</p><p>On move-in day I made one unconscious decision: the charger went under the desk, across the room. The current book went on the nightstand.</p><p>Three weeks later, I was a reader.</p><blockquote style='border-left: 4px solid #2c5f8a; margin: 24px 0; padding: 16px 20px; background: #f0f5fb; font-size: 16px; font-style: italic;'>Good behavior is almost always a friction problem before it's a willpower problem.</blockquote><p>Gym clothes by the door vs. in the drawer. Fruit bowl on the counter vs. in the crisper. Phone charger across the room vs. on the nightstand. The vitamins next to the coffee vs. in a cabinet.</p><p>The behavior you want becomes easier not when you try harder but when you make the desired path shorter than the alternative.</p><blockquote style='border-left: 4px solid #aaa; margin: 24px 0; padding: 16px 20px; background: #f8f8f8; font-style: italic;'>\"People are not lazy. They are optimizing for ease, and ease is determined by design, not character.\"</blockquote><p>If something in your life isn't working — ask not \"what's wrong with me\" but \"where is the friction?\" and \"where should I add some?\"</p><p><a href='{{P1_URL}}' style='color: #2c5f8a;'>Atomic Habits — James Clear (the clearest book on this) →</a></p><p>Warm,<br><strong>Nadia</strong></p><p style='font-size: 13px; color: #888;'>P.S. — Where is friction pointing you wrong? Hit reply.</p></div>",
+      "tags_applied_on_send": [
+        "sequence:articles",
+        "stage:education"
+      ],
+      "tags_applied_on_click": [
+        "tag:journey:converted-click",
+        "tag:interest:books-habits"
+      ],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "articles",
+          "amazon_search_term": "Atomic Habits James Clear behavior change book",
+          "placement": "editorial-recommendation",
+          "affiliate_context": "Organically recommended as the 'clearest book-length treatment' of the friction idea developed in the email — the recommendation arrives as editorial endorsement, not product pitch"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": [
+          "tag:engaged:articles-email-2"
+        ],
+        "on_click_product": [
+          "tag:journey:converted-click",
+          "queue:social-proof-followup-72h"
+        ],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "People are not lazy (a behavioral design idea)"
+      }
+    },
+    {
+      "niche": "articles",
+      "email_number": 3,
+      "send_day": 10,
+      "subject_line": "\"I spent 11 years starting things\" (a story about finishing)",
+      "preview_text": "A reader letter and the idea it opened up",
+      "from_name": "The Mintbrooks Letter",
+      "plain_text_body": "Two weeks ago, after the friction email, I got a reply that I've been sitting with.\n\nI'm sharing it with permission from Priya, who runs a design studio in Chicago:\n\n---\n\n*\"Your email about friction gave me language for something I've been experiencing but couldn't articulate. I've spent 11 years starting projects that I don't finish. Not because I lose interest — I keep thinking about them constantly. But the moment I get to a certain stage of a project, I add friction. I make it harder. I start over-researching. I ask for one more opinion. I open it in a new document and start from scratch. I'm not lazy. I'm sabotaging my own momentum and calling it thoroughness.*\n\n*The insight: I don't actually have a starting problem. I have a finishing problem. And I've been treating them as the same problem.\"*\n\n---\n\nPriya gave me the one thing for today's letter.\n\nThe starting problem and the finishing problem are not the same problem.\n\nMost productivity content is about starting: how to overcome resistance, beat procrastination, break inertia. The shelf is full of it. It assumes that the obstacle is getting going, and that once you're moving, you'll keep moving.\n\nFor some people, this is exactly right. Their problem is inertia.\n\nBut there's another kind of person — and I suspect most readers of this letter fall into this category — whose problem is not starting. It's a specific species of perfectionism that activates once real work is underway. Call it \"completion anxiety.\" The fear that finishing means exposing the work to judgment. As long as a project is ongoing, it has infinite potential. Finished, it is what it is.\n\nSo the project never finishes. It restarts. Endlessly.\n\nI've been this person. I spent three years \"writing a book\" that was actually 14 separate half-started documents that I would open, revise the opening, close, and never return to.\n\nThe thing that broke the pattern for me wasn't a productivity system or a timer method. It was a single question someone asked:\n\n*\"What's the cost of not finishing?\"*\n\nNot the cost of finishing badly. The cost of not finishing at all. The accumulated weight of perpetually unfinished things.\n\nPriya's design studio has four long-running projects she hasn't shipped. The cost isn't that they'll be imperfect. The cost is that her clients are waiting, her reputation is forming around someone who is good to work with but slow to finish, and she's carrying four mental files open simultaneously.\n\nShipping imperfectly is almost always less costly than not shipping.\n\nOne book that treats this seriously — not as a pep talk but as a genuine investigation of creative resistance:\n\n[PRODUCT LINK: The War of Art by Steven Pressfield]\n[PRODUCT LINK: Finish: Give Yourself the Gift of Done by Jon Acuff]\n\nThe War of Art for the starting-and-stalling pattern. Finish for the completion anxiety pattern specifically.\n\nBoth are short. Both feel very personal.\n\nNext Thursday: the thing about comparison that I've never seen written the way I want to write it.\n\nWarm,\nNadia\n\nP.S. — If you're Priya and you're reading this: you finished the email. That counts.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.85; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;'>The Mintbrooks Letter</p><h2>\"I spent 11 years starting things\"</h2><blockquote style='border-left: 4px solid #2c5f8a; margin: 20px 0; padding: 16px 20px; background: #f0f5fb; font-style: italic;'><p>\"I don't actually have a starting problem. I have a finishing problem. And I've been treating them as the same problem.\"</p><p style='font-style: normal; font-size: 13px; color: #888;'>— Priya, design studio owner, Chicago</p></blockquote><p>The starting problem and the finishing problem are not the same problem.</p><p>Completion anxiety activates once real work is underway. The fear that finishing means exposing the work to judgment. As long as a project is ongoing, it has infinite potential. Finished, it is what it is.</p><p>The question that broke my own pattern:</p><blockquote style='border-left: 4px solid #aaa; margin: 20px 0; padding: 16px 20px; background: #f8f8f8; font-size: 16px; font-style: italic;'>\"What's the cost of not finishing?\"</blockquote><p>Not the cost of finishing badly. The cost of perpetually unfinished things.</p><p>Two books that treat this seriously:</p><p><a href='{{P1_URL}}' style='color: #2c5f8a;'>The War of Art — Pressfield (for the stalling pattern) →</a><br><a href='{{P2_URL}}' style='color: #2c5f8a;'>Finish — Jon Acuff (for completion anxiety specifically) →</a></p><p>Warm,<br><strong>Nadia</strong></p><p style='font-size: 13px; color: #888;'>P.S. — If you're Priya and you're reading this: you finished the email. That counts.</p></div>",
+      "tags_applied_on_send": [
+        "sequence:articles",
+        "stage:social-proof"
+      ],
+      "tags_applied_on_click": [
+        "tag:journey:converted-click",
+        "tag:interest:books-productivity"
+      ],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "articles",
+          "amazon_search_term": "The War of Art Steven Pressfield creative work resistance",
+          "placement": "reader-letter-follow-up",
+          "affiliate_context": "Two-book recommendation following reader story — War of Art for creative resistance, positioned as investigation not pep talk"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "articles",
+          "amazon_search_term": "Finish Give Yourself the Gift of Done Jon Acuff book",
+          "placement": "reader-letter-follow-up",
+          "affiliate_context": "Completion anxiety specific — paired with War of Art as the more tactical complement for the finishing problem specifically"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": [
+          "tag:engaged:articles-email-3"
+        ],
+        "on_click_product": [
+          "tag:journey:converted-click",
+          "queue:social-proof-followup-72h"
+        ],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The starting problem and the finishing problem are not the same"
+      }
+    },
+    {
+      "niche": "articles",
+      "email_number": 4,
+      "send_day": 17,
+      "subject_line": "The thing about comparison I've never seen written correctly",
+      "preview_text": "It's not about you. It's about information. Here's why that matters.",
+      "from_name": "The Mintbrooks Letter",
+      "plain_text_body": "Last week I promised you the comparison essay.\n\nHere it is.\n\nMost writing about comparison goes one of two directions. The optimistic direction: comparison is the thief of joy (Theodore Roosevelt, attributed), stop comparing yourself to others, run your own race, everyone is on a different timeline. The clinical direction: comparison is a cognitive distortion, unhealthy, a sign of low self-worth that should be managed.\n\nBoth of these are partially true and mostly useless.\n\nHere is the thing about comparison that I've not seen written the way I want to write it:\n\nComparison isn't a character flaw. It's an information-gathering behavior that misfires when aimed at the wrong targets.\n\nYour brain compares because it needs to understand where you are in relation to what is possible. This is adaptive. A hunter-gatherer who could gauge whether they had enough food relative to their community was more likely to prepare correctly for winter. The comparison instinct is old and useful.\n\nThe problem is not comparison. The problem is the target set.\n\nWhen you compare yourself to a curated highlight reel on Instagram, you are feeding your comparison instinct with a fundamentally miscalibrated dataset. You are comparing your internal experience — messy, self-aware, accompanied by all your doubt and failure — to another person's external output, which has been filtered, lit, captioned, and scheduled.\n\nThis isn't low self-esteem. This is a rational mind working correctly on bad data.\n\nThe relevant question is not \"how do I stop comparing\" but \"what am I comparing to?\"\n\nThe comparison targets that produce useful information:\n- Yourself 12 months ago\n- Yourself in a different context (what are you like when you're at your best?)\n- Someone whose process you can observe, not just whose results you can see\n\nThe comparison targets that produce noise:\n- Any public-facing output stripped of context\n- Someone at a different stage than you with different resources\n- A version of yourself that exists only in future projection\n\nI read something recently in Esther Perel's work (she says this about relationships but it applies more broadly) that I keep turning over:\n\n*\"The quality of your life is determined not by the absence of problems but by the quality of the problems you've chosen to have.\"*\n\nThe comparison version of this: the question is not whether you will compare yourself to others, but whether you are comparing yourself to signal or to noise.\n\nOne book that changed how I think about envy (which is the sharpened form of comparison, and possibly more useful to understand):\n\n[PRODUCT LINK: The Gift of Our Compulsions by Mary O'Malley]\n\nAnd one that takes a broader lens on the psychology of desire and competition:\n\n[PRODUCT LINK: Wanting: The Power of Mimetic Desire in Everyday Life by Luke Burgis]\n\n\"Wanting\" specifically is one of the most mind-altering books I've read on why we want what we want. Highly recommended.\n\nNext Thursday: the one thing about reading that nobody mentions.\n\nWarm,\nNadia\n\nP.S. — If you've been comparing yourself to someone this week, ask: am I comparing to signal or noise? Often the answer clarifies very quickly.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.85; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;'>The Mintbrooks Letter</p><h2>The thing about comparison</h2><p>Most writing on comparison is useless. It tells you to stop. The instinct doesn't stop. Here's a better frame.</p><blockquote style='border-left: 4px solid #2c5f8a; margin: 24px 0; padding: 16px 20px; background: #f0f5fb; font-size: 16px; font-style: italic;'>Comparison isn't a character flaw. It's an information-gathering behavior that misfires when aimed at the wrong targets.</blockquote><p>Your brain compares because it needs to understand where you are relative to what is possible. This is adaptive, not pathological.</p><p>The problem is the target set. When you compare your internal experience — messy, self-aware, accompanied by all your doubt — to another person's curated external output, you are a rational mind working correctly on bad data.</p><p><strong>Comparison targets that produce signal:</strong> yourself 12 months ago, yourself at your best, someone whose <em>process</em> (not results) you can observe.</p><p><strong>Comparison targets that produce noise:</strong> any filtered public output stripped of context, someone at a different stage with different resources.</p><blockquote style='border-left: 4px solid #aaa; margin: 24px 0; padding: 16px 20px; background: #f8f8f8; font-style: italic;'>The question is not whether you will compare yourself to others, but whether you are comparing yourself to signal or to noise.</blockquote><p>Two books:</p><p><a href='{{P1_URL}}' style='color: #2c5f8a;'>The Gift of Our Compulsions — Mary O'Malley →</a><br><a href='{{P2_URL}}' style='color: #2c5f8a;'>Wanting: The Power of Mimetic Desire — Luke Burgis →</a> (one of the most mind-altering books I've read on why we want what we want)</p><p>Warm,<br><strong>Nadia</strong></p></div>",
+      "tags_applied_on_send": [
+        "sequence:articles",
+        "stage:objection-handler"
+      ],
+      "tags_applied_on_click": [
+        "tag:journey:converted-click",
+        "tag:interest:books-psychology"
+      ],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "articles",
+          "amazon_search_term": "The Gift of Our Compulsions Mary O'Malley self compassion book",
+          "placement": "editorial-deep-dive",
+          "affiliate_context": "Recommended as exploration of envy — the sharper form of comparison, positioned as companion reading to the essay"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "articles",
+          "amazon_search_term": "Wanting Power of Mimetic Desire Everyday Life Luke Burgis book",
+          "placement": "editorial-deep-dive",
+          "affiliate_context": "Primary recommendation — described as 'mind-altering' with the strongest personal endorsement language in the sequence. Mimetic desire ties directly to the comparison mechanism explained in the email."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": [
+          "tag:engaged:articles-email-4"
+        ],
+        "on_click_product": [
+          "tag:journey:converted-click",
+          "queue:social-proof-followup-72h"
+        ],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Comparison is not a character flaw. It's an information problem."
+      }
+    },
+    {
+      "niche": "articles",
+      "email_number": 5,
+      "send_day": 24,
+      "subject_line": "The books and tools that shaped this letter (your reading list)",
+      "preview_text": "By idea interest, not bestseller list — here's what I'd actually recommend",
+      "from_name": "The Mintbrooks Letter",
+      "plain_text_body": "A few weeks ago you told me what kind of reader you are.\n\nBelow is a curated list organized by what I know you're drawn to — with specific context for why each thing is worth your time.\n\nThis is not a bestseller list. It's what I'd actually recommend to the person you told me you are.\n\n---\n\n**IF YOU SAID: Ideas First**\n\nYou want books that change how you see things, not just what you know.\n\n→ \"Wanting\" by Luke Burgis — mimetic desire, why we want what others want, how to find your own authentic desires. Will change how you see advertising, ambition, relationships.\n\n→ \"Thinking in Systems\" by Donella Meadows — the clearest introduction to systems thinking that exists. After reading it, you see feedback loops in everything. Homes, bodies, organizations, economies.\n\n→ \"Range\" by David Epstein — the case against early specialization and for the generalist. The research is robust and the argument is genuinely unusual.\n\n→ \"The Structure of Scientific Revolutions\" by Thomas Kuhn — dense but short. Introduces the concept of paradigm shifts. You'll use the vocabulary forever.\n\n[PRODUCT LINK: Wanting by Luke Burgis]\n[PRODUCT LINK: Thinking in Systems by Donella Meadows]\n[PRODUCT LINK: Range by David Epstein]\n\n---\n\n**IF YOU SAID: Practical First**\n\nYou want frameworks that translate directly into behavior.\n\n→ \"Getting Things Done\" by David Allen — the original productivity system, still unsurpassed as a framework for external capture. Not a motivational book, an engineering book.\n\n→ \"Deep Work\" by Cal Newport — the case for focused, uninterrupted work time and the specific methods for protecting it. I re-read this once a year.\n\n→ \"The ONE Thing\" by Gary Keller — reductive in the best way. One question that, answered correctly, makes everything else easier or unnecessary.\n\n→ \"Four Thousand Weeks\" by Oliver Burkeman — the anti-productivity productivity book. The argument: you cannot do everything, and pretending you can is a trap. The most clarifying book I've read on time.\n\n[PRODUCT LINK: Deep Work by Cal Newport]\n[PRODUCT LINK: Four Thousand Weeks by Oliver Burkeman]\n\n---\n\n**IF YOU SAID: Stories First**\n\nYou want narrative that illuminates something about being human.\n\n→ \"Man's Search for Meaning\" by Viktor Frankl — I'll just say: if you haven't read this, put down every other book and read it. 150 pages. Will change your relationship with meaning, suffering, and choice.\n\n→ \"The Warmth of Other Suns\" by Isabel Wilkerson — narrative nonfiction about the Great Migration. The best exemplar of how to tell history through three individual lives. The craft is extraordinary.\n\n→ \"When Breath Becomes Air\" by Paul Kalanithi — a neurosurgeon faces terminal illness and writes about what makes a life worth living. Short. I have given away probably 20 copies.\n\n→ \"The Body Keeps the Score\" by Bessel van der Kolk — dense, clinical, and one of the most widely recommended books for understanding how experience lives in the body. Story-driven chapters alternate with research.\n\n[PRODUCT LINK: Man's Search for Meaning by Viktor Frankl]\n[PRODUCT LINK: When Breath Becomes Air by Paul Kalanithi]\n[PRODUCT LINK: The Warmth of Other Suns by Isabel Wilkerson]\n\n---\n\nAll affiliate links. All books I have actually read. Context included for each because a recommendation without context isn't useful.\n\nWarm,\nNadia\n\nP.S. — If a book you love isn't on this list, hit reply and tell me. I'm always looking for additions. The Mintbrooks reading list is a living document.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.85; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;'>The Mintbrooks Letter</p><h2>Your reading list — by reader type</h2><p>Not a bestseller list. What I'd actually recommend to the reader you told me you are.</p><div style='border-left: 4px solid #2c5f8a; padding-left: 20px; margin: 20px 0;'><h3 style='color: #2c5f8a;'>Ideas First</h3><p><a href='{{IDEAS_P1}}' style='color: #2c5f8a;'>Wanting — Luke Burgis →</a> Why we want what others want. Changes how you see ambition.<br><a href='{{IDEAS_P2}}' style='color: #2c5f8a;'>Thinking in Systems — Donella Meadows →</a> After this, you see feedback loops in everything.<br><a href='{{IDEAS_P3}}' style='color: #2c5f8a;'>Range — David Epstein →</a> The case for generalists. Unusual, evidence-backed.</p></div><div style='border-left: 4px solid #27ae60; padding-left: 20px; margin: 20px 0;'><h3 style='color: #27ae60;'>Practical First</h3><p><a href='{{PRAC_P1}}' style='color: #2c5f8a;'>Deep Work — Cal Newport →</a> I re-read this once a year.<br><a href='{{PRAC_P2}}' style='color: #2c5f8a;'>Four Thousand Weeks — Oliver Burkeman →</a> The anti-productivity productivity book. Most clarifying book on time I've read.</p></div><div style='border-left: 4px solid #c0392b; padding-left: 20px; margin: 20px 0;'><h3 style='color: #c0392b;'>Stories First</h3><p><a href='{{STORY_P1}}' style='color: #2c5f8a;'>Man's Search for Meaning — Viktor Frankl →</a> 150 pages. Put everything else down. Read this first.<br><a href='{{STORY_P2}}' style='color: #2c5f8a;'>When Breath Becomes Air — Paul Kalanithi →</a> I've given away 20 copies.<br><a href='{{STORY_P3}}' style='color: #2c5f8a;'>The Warmth of Other Suns — Isabel Wilkerson →</a> The best narrative nonfiction I've read.</p></div><p>Warm,<br><strong>Nadia</strong></p></div>",
+      "tags_applied_on_send": [
+        "sequence:articles",
+        "stage:conversion"
+      ],
+      "tags_applied_on_click": [
+        "tag:journey:converted-click",
+        "tag:segment:books-buyer-intent"
+      ],
+      "product_slots": [
+        {
+          "slot_id": "product_ideas_1",
+          "category": "articles",
+          "amazon_search_term": "Wanting Power of Mimetic Desire Luke Burgis hardcover",
+          "placement": "segmented-reader-type",
+          "affiliate_context": "Ideas-first segment anchor — already mentioned in email 4 with strong personal endorsement, repeat placement reinforces conversion"
+        },
+        {
+          "slot_id": "product_ideas_2",
+          "category": "articles",
+          "amazon_search_term": "Thinking in Systems Donella Meadows primer book",
+          "placement": "segmented-reader-type",
+          "affiliate_context": "Systems thinking foundational book — unique recommendation likely not already owned, high educational differentiation"
+        },
+        {
+          "slot_id": "product_practical_1",
+          "category": "articles",
+          "amazon_search_term": "Deep Work Cal Newport focused success distracted world",
+          "placement": "segmented-reader-type",
+          "affiliate_context": "Practical segment — positioned with personal re-reading habit ('once a year') which is the highest endorsement signal"
+        },
+        {
+          "slot_id": "product_stories_1",
+          "category": "articles",
+          "amazon_search_term": "Man's Search for Meaning Viktor Frankl paperback",
+          "placement": "segmented-reader-type",
+          "affiliate_context": "Stories segment lead — given the strongest recommendation language in the entire sequence ('put down every other book')"
+        },
+        {
+          "slot_id": "product_stories_2",
+          "category": "articles",
+          "amazon_search_term": "When Breath Becomes Air Paul Kalanithi memoir",
+          "placement": "segmented-reader-type",
+          "affiliate_context": "Stories segment — '20 copies given away' is specific social proof that reads as genuine vs. performed enthusiasm"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": [
+          "tag:engaged:articles-email-5"
+        ],
+        "on_click_product": [
+          "tag:journey:converted-click",
+          "queue:post-purchase-care-sequence"
+        ],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The reading list — organized by what actually matters to you"
+      }
+    },
+    {
+      "niche": "articles",
+      "email_number": 6,
+      "send_day": 33,
+      "subject_line": "A month of letters — what's landed for you?",
+      "preview_text": "Checking in on one thing. And a letter about letters.",
+      "from_name": "The Mintbrooks Letter",
+      "plain_text_body": "It's been about a month.\n\nIn that time I've sent you four ideas: friction, finishing, comparison, and a reading list.\n\nI'm genuinely curious which one landed.\n\nNot which one was most interesting to read — which one you've thought about since. Which idea has stuck with you at a random moment in the last few weeks, uninvited.\n\nHit reply and tell me. I collect these answers because they tell me what to write next.\n\nWhile I have you, I want to say something about the format of this letter.\n\nI get asked sometimes whether The Mintbrooks Letter is still \"worth it\" in an era of information abundance. We are swimming in content. Newsletters, podcasts, threads, long-form articles, video essays. The supply of interesting ideas has never been higher.\n\nI think about this question seriously. And here's the answer I keep arriving at:\n\nVolume is not the problem. Curation with context is the rarest thing.\n\nAnyone can aggregate ideas. Most newsletters are aggregations — a list of links to things you could find yourself with slightly more effort. What I'm trying to do here is something different: develop one idea per letter, follow it to where it actually leads, and connect it to something you can use.\n\nI don't always succeed. But that's the intention.\n\nIf it's working — I'd love to know. Hit reply and tell me which idea from the last month has stuck.\n\nIf it's not working — tell me what you actually want. I'll adjust or I'll point you somewhere better.\n\nI'll keep publishing every Thursday. One thing. Developed properly.\n\nWarm,\nNadia\n\nP.S. — One last book recommendation, purely because I can't stop thinking about it: \"Four Thousand Weeks\" by Oliver Burkeman. Not a productivity book. A philosophy of time. The premise: you have approximately 4,000 weeks on this planet. The question is not how to do more in them but what to actually do with them.\n\n[PRODUCT LINK: Four Thousand Weeks: Time Management for Mortals by Oliver Burkeman]\n\nI re-read the last chapter last week. That's all I'll say.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.85; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 16px; letter-spacing: 1px; text-transform: uppercase;'>The Mintbrooks Letter</p><h2>A month of letters</h2><p>Four ideas in four weeks: friction, finishing, comparison, a reading list.</p><p><strong>Which one stuck?</strong></p><p>Not which was most interesting — which one came back to you uninvited at a random moment.</p><p>Hit reply. These answers shape what I write next.</p><hr style='border: none; border-top: 1px solid #e0e0e0; margin: 24px 0;'/><p>Volume is not the problem. Curation with context is the rarest thing. That's what I'm trying to do here.</p><p>If it's working: tell me which idea stuck.<br>If it's not: tell me what you actually want. I'll adjust.</p><p>Every Thursday. One thing. Developed properly.</p><p>P.S. — One last book I can't stop thinking about:</p><a href='{{P1_URL}}' style='color: #2c5f8a;'>Four Thousand Weeks — Oliver Burkeman →</a><p style='font-size: 13px; color: #888;'>Not a productivity book. A philosophy of time. I re-read the last chapter last week.</p><p>Warm,<br><strong>Nadia</strong></p></div>",
+      "tags_applied_on_send": [
+        "sequence:articles",
+        "stage:re-engagement"
+      ],
+      "tags_applied_on_click": [
+        "tag:re-engaged",
+        "tag:articles:still-active"
+      ],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "articles",
+          "amazon_search_term": "Four Thousand Weeks time management for mortals Oliver Burkeman",
+          "placement": "re-engagement-coda",
+          "affiliate_context": "The re-engagement closer — described with the most restrained but pointed enthusiasm ('I re-read the last chapter last week') which reads as genuinely personal rather than promotional"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": [
+          "tag:re-engaged:articles-email-6",
+          "remove-tag:at-risk-churn"
+        ],
+        "on_reply": [
+          "tag:high-value:articles-replied",
+          "queue:personal-response-workflow"
+        ],
+        "on_click_product": [
+          "tag:journey:converted-click",
+          "queue:social-proof-followup-72h"
+        ],
+        "on_no_open_after_days": 7,
+        "no_open_action": "move_to_win_back_sequence",
+        "variant_subject": "Before the next letter — one question"
+      }
+    }
+  ],
+  "automation_flow": {
+    "sequence_name": "articles-post-sequence",
+    "description": "Post-sequence automation for articles/editorial subscribers",
+    "branches": [
+      {
+        "condition": "tag:re-engaged:articles-email-6",
+        "action": "enroll_in_weekly_letter",
+        "digest_cadence": "every_thursday",
+        "digest_content": "One idea per letter, editorial format, personal anecdote to universal truth, 0-1 book recommendation",
+        "digest_from_name": "The Mintbrooks Letter"
+      },
+      {
+        "condition": "tag:reader:ideas-first AND tag:journey:converted-click",
+        "action": "send_ideas_deep_dive_series",
+        "timing": "14 days after email 6",
+        "content": "3-letter series on systems thinking applied to everyday decisions"
+      },
+      {
+        "condition": "tag:journey:converted-click AND NOT tag:post-purchase-confirmed",
+        "action": "send_reading_check_in",
+        "timing": "21 days after click",
+        "content": "Did you start [book]? Here's the chapter I'd actually start with."
+      },
+      {
+        "condition": "NOT opened any email in 35 days",
+        "action": "enroll_in_win_back_sequence",
+        "win_back_subject_1": "The one idea I haven't sent you yet",
+        "win_back_subject_2": "Closing the loop (and the list, unless you reply)"
+      }
+    ],
+    "seasonal_campaigns": [
+      {
+        "name": "Summer Reading Issue",
+        "send_month": "June",
+        "content": "Extended reading list for summer — 5 books for 5 moods"
+      },
+      {
+        "name": "September Reset",
+        "send_month": "September",
+        "content": "The annual review framework — what the year has taught you"
+      },
+      {
+        "name": "Year-End Reflection Letter",
+        "send_month": "December",
+        "content": "One idea: the question worth asking at the end of every year"
+      }
+    ]
+  }
+}

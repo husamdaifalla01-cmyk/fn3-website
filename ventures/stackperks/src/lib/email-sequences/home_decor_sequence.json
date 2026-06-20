@@ -1,0 +1,277 @@
+{
+  "sequence_meta": {
+    "niche": "home-decor",
+    "brand": "Mintbrooks",
+    "persona": "The Home Edit",
+    "persona_voice": "Joanna Wiebe / PAS / voice-of-customer / warm and specific",
+    "total_emails": 6
+  },
+  "emails": [
+    {
+      "niche": "home-decor",
+      "email_number": 1,
+      "send_day": 0,
+      "subject_line": "Your free room refresh guide is here (+ one question)",
+      "preview_text": "Welcome to Mintbrooks — here's what happens next",
+      "from_name": "The Home Edit",
+      "plain_text_body": "Hey — welcome. Really glad you're here.\n\nYour free guide, \"The 5-Room Reset: How to Make Any Space Feel Intentional in a Weekend,\" is attached below. Print it out, save it to your phone, do whatever works. It's yours.\n\nBefore you dive in, I want to ask you something.\n\nBecause the people who join this list aren't all in the same place. Some of you just moved into a new apartment and you're staring at bare walls, feeling a low-grade panic every time you walk in the front door. Some of you have lived in your home for years and you're tired — tired of the clutter that keeps coming back, tired of rooms that feel close but never quite *finished.*\n\nAnd some of you are somewhere in between. You have Pinterest boards that rival interior design portfolios, but your actual living room looks like Amazon warehouse staging.\n\nAll of those are valid places to be. I've been in all of them.\n\nHere's the question: Which room in your home makes you feel most defeated right now?\n\nHit reply and tell me. I read every response, and I use what you share to decide exactly what I write next.\n\nIf you're more of a clicker than a replier, no stress. I've set up a quick link below — just pick the room and I'll route the right content your way over the next few weeks.\n\n[SEGMENTATION LINK: Living Room] — \"My living room never looks like the photos\"\n[SEGMENTATION LINK: Bedroom] — \"My bedroom should be a sanctuary. It is not.\"\n[SEGMENTATION LINK: Kitchen] — \"My kitchen is the most used and most chaotic room\"\n[SEGMENTATION LINK: Home Office] — \"My workspace is destroying my productivity and my vibe\"\n[SEGMENTATION LINK: Entryway / Hallway] — \"First impressions of my home stress me out\"\n\nClick the one that's most true. That's all.\n\nIn the meantime, the guide covers:\n→ The one piece most people buy last (that should come first)\n→ Why your room probably doesn't feel cohesive (hint: it's almost never the furniture)\n→ The 20-minute weekend reset that makes rooms feel intentional without a renovation\n\nTalk soon,\nSophia\nThe Home Edit at Mintbrooks\n\nP.S. — Real talk: most \"home refresh\" content will tell you to buy more stuff. Some of what I send will include product picks, yes — but always because they solve a specific problem, never just to fill space. That's the deal.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2c2c2c; line-height: 1.7;'><p style='font-size: 18px; color: #7c9e8e;'>The Home Edit · Mintbrooks</p><h2 style='font-size: 24px; font-weight: 700;'>Your free room refresh guide is here</h2><p>Hey — welcome. Really glad you're here.</p><p>Your free guide, <em>\"The 5-Room Reset: How to Make Any Space Feel Intentional in a Weekend,\"</em> is attached below. Print it out, save it to your phone, do whatever works. It's yours.</p><p>Before you dive in, I want to ask you something.</p><p>Because the people who join this list aren't all in the same place. Some of you just moved into a new apartment and you're staring at bare walls, feeling a low-grade panic every time you walk in the front door. Some of you have lived in your home for years and you're tired — tired of the clutter that keeps coming back, tired of rooms that feel close but never quite <em>finished.</em></p><p>And some of you are somewhere in between. You have Pinterest boards that rival interior design portfolios, but your actual living room looks like Amazon warehouse staging.</p><p>All of those are valid places to be. I've been in all of them.</p><p><strong>Here's the question: Which room in your home makes you feel most defeated right now?</strong></p><p>Hit reply and tell me. I read every response, and I use what you share to decide exactly what I write next.</p><p>If you're more of a clicker than a replier, no stress — just pick the room:</p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 10px;'><a href='{{SEGMENT_LIVING_ROOM}}' style='background: #7c9e8e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; display: inline-block;'>My living room never looks like the photos</a></li><li style='margin-bottom: 10px;'><a href='{{SEGMENT_BEDROOM}}' style='background: #7c9e8e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; display: inline-block;'>My bedroom should be a sanctuary. It is not.</a></li><li style='margin-bottom: 10px;'><a href='{{SEGMENT_KITCHEN}}' style='background: #7c9e8e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; display: inline-block;'>My kitchen is the most used and most chaotic room</a></li><li style='margin-bottom: 10px;'><a href='{{SEGMENT_OFFICE}}' style='background: #7c9e8e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; display: inline-block;'>My workspace is destroying my productivity and my vibe</a></li><li style='margin-bottom: 10px;'><a href='{{SEGMENT_ENTRYWAY}}' style='background: #7c9e8e; color: white; padding: 10px 16px; border-radius: 6px; text-decoration: none; display: inline-block;'>First impressions of my home stress me out</a></li></ul><p>Talk soon,<br><strong>Sophia</strong><br><em>The Home Edit at Mintbrooks</em></p><p style='font-size: 13px; color: #888;'>P.S. — Real talk: most \"home refresh\" content will tell you to buy more stuff. Some of what I send will include product picks, yes — but always because they solve a specific problem, never just to fill space. That's the deal.</p></div>",
+      "tags_applied_on_send": ["sequence:home-decor", "stage:welcome"],
+      "tags_applied_on_click": ["segmented:room-type"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "home-decor",
+          "amazon_search_term": "neutral area rug living room 8x10 jute cotton",
+          "placement": "guide-attachment-mention",
+          "affiliate_context": "Guide references foundational anchor piece — area rug as the single most impactful starting point for any room reset"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:email-1-opened"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_click_segment_living_room": ["tag:room:living-room", "queue:living-room-track"],
+        "on_click_segment_bedroom": ["tag:room:bedroom", "queue:bedroom-track"],
+        "on_click_segment_kitchen": ["tag:room:kitchen"],
+        "on_click_segment_office": ["tag:room:office"],
+        "on_click_segment_entryway": ["tag:room:entryway"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Did your guide get lost? (re-sending)"
+      }
+    },
+    {
+      "niche": "home-decor",
+      "email_number": 2,
+      "send_day": 3,
+      "subject_line": "The real reason your room never looks like the photo",
+      "preview_text": "It's not your furniture. It's not your budget. It's this.",
+      "from_name": "The Home Edit",
+      "plain_text_body": "I want to tell you something that interior designers know and almost nobody else does.\n\nWhen you look at a beautiful room in a magazine or on Pinterest, you're not seeing the room. You're seeing the light.\n\nEvery single \"wow\" room you've ever saved has at least two — usually three — light sources working together. A ceiling fixture at one layer. A floor lamp or table lamp at eye level. And almost always something warm at the lowest level: a candle cluster, a low lamp on a console, sometimes a LED strip behind a TV unit.\n\nYour room probably has one light source: whatever came with the apartment.\n\nThat overhead light is doing everything — and it's doing all of it badly. It flattens shadows. It kills warmth. It makes your beautiful linen sofa look like it belongs in a doctor's waiting room.\n\nThis is the insight that changed how I shop for a room. I stopped thinking about furniture first. I started thinking about light layers.\n\nHere's the framework I use called \"the 3-layer light rule\":\n\n**Layer 1 — Ambient (overhead)**\nThis is your background wash. Ceiling fixture, recessed lights, pendant. It should be warm (2700K-3000K bulbs only — swap every cool white bulb in your home tonight, this is a $12 fix that changes everything).\n\n**Layer 2 — Task / Eye-level**\nThis is your floor lamp next to the reading chair. Your table lamp on the nightstand. The arc lamp that hangs over the sofa. This layer is what makes a room feel *lived in* rather than vacant.\n\n**Layer 3 — Accent / Low**\nThis is where magic happens. A rechargeable candle on the coffee table. A small ceramic lamp on a low shelf. LED candles in a fireplace you can't use. This layer is why hotel rooms feel expensive — they go low.\n\nMost people have Layer 1 only. Some have Layer 1 and Layer 2. Almost nobody without design training has all three.\n\nYou now have the training.\n\nThe single cheapest thing you can do this week: buy a $35-60 table lamp and put it somewhere low in your living room. Plug it in. Turn off the overhead. Take a photo.\n\nYou will not believe the difference.\n\nI've linked a few I love below — not because they're trendy (they're mostly quite simple), but because they throw warm light at the right angle and they don't look cheap at any price point.\n\n[PRODUCT LINK: Brightech Sparq Arc Floor Lamp]\n[PRODUCT LINK: Simple Designs Ceramic Table Lamp with Linen Shade]\n[PRODUCT LINK: Philips Hue Warm White Smart Bulbs 4-pack]\n\nNext email (Day 7): I'm going to share a message from a reader who turned her rented apartment into the room she'd been trying to create for four years — without moving a single piece of furniture. Real story, real photos (shared with permission).\n\nTalk soon,\nSophia\n\nP.S. — Commit to the bulb swap first. The rest costs nothing.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2c2c2c; line-height: 1.7;'><p style='font-size: 18px; color: #7c9e8e;'>The Home Edit · Mintbrooks</p><h2>The real reason your room never looks like the photo</h2><p>I want to tell you something that interior designers know and almost nobody else does.</p><p>When you look at a beautiful room in a magazine or on Pinterest, you're not seeing the room. You're seeing the light.</p><p>Every single \"wow\" room you've ever saved has at least two — usually three — light sources working together. A ceiling fixture at one layer. A floor lamp or table lamp at eye level. And almost always something warm at the lowest level: a candle cluster, a low lamp on a console, sometimes a LED strip behind a TV unit.</p><p>Your room probably has one light source: whatever came with the apartment.</p><p>That overhead light is doing everything — and it's doing all of it badly. It flattens shadows. It kills warmth. It makes your beautiful linen sofa look like it belongs in a doctor's waiting room.</p><hr style='border: none; border-top: 1px solid #e0e0e0; margin: 24px 0;'/><h3>The 3-Layer Light Rule</h3><p><strong>Layer 1 — Ambient (overhead)</strong><br>Warm bulbs only. 2700K–3000K. Swap every cool white bulb in your home tonight. This is a $12 fix.</p><p><strong>Layer 2 — Task / Eye-level</strong><br>Floor lamp by the chair. Table lamp on the nightstand. Arc lamp over the sofa. This layer makes a room feel lived in.</p><p><strong>Layer 3 — Accent / Low</strong><br>Rechargeable candle. Small ceramic lamp on a low shelf. LED candles in a fireplace. This layer is why hotel rooms feel expensive.</p><hr style='border: none; border-top: 1px solid #e0e0e0; margin: 24px 0;'/><p>My picks this week — warm, simple, wrong-priced for how good they look:</p><table width='100%' cellpadding='12' style='border-collapse: collapse;'><tr><td style='border: 1px solid #eee; border-radius: 6px;'><a href='{{PRODUCT_1_URL}}' style='color: #7c9e8e; font-weight: bold; text-decoration: none;'>Brightech Sparq Arc Floor Lamp →</a><p style='font-size: 13px; color: #666; margin: 4px 0 0;'>Warm glow, swivel head, works in any corner</p></td></tr><tr><td style='border: 1px solid #eee; border-radius: 6px; margin-top: 8px;'><a href='{{PRODUCT_2_URL}}' style='color: #7c9e8e; font-weight: bold; text-decoration: none;'>Simple Designs Ceramic Table Lamp →</a><p style='font-size: 13px; color: #666; margin: 4px 0 0;'>The linen shade diffuses light beautifully, looks $200+</p></td></tr></table><p>Talk soon,<br><strong>Sophia</strong></p></div>",
+      "tags_applied_on_send": ["sequence:home-decor", "stage:education"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:lighting"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "home-decor",
+          "amazon_search_term": "arc floor lamp living room warm white modern",
+          "placement": "inline-recommendation",
+          "affiliate_context": "Teaching the 3-layer light rule — floor lamp is the Layer 2 solution being demonstrated"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "home-decor",
+          "amazon_search_term": "ceramic table lamp linen shade bedside",
+          "placement": "inline-recommendation",
+          "affiliate_context": "Layer 3 low-light accent solution — ceramic base with warm linen shade is the specific form factor recommended"
+        },
+        {
+          "slot_id": "product_3",
+          "category": "home-decor",
+          "amazon_search_term": "Philips Hue warm white smart bulb E26 4 pack",
+          "placement": "inline-recommendation",
+          "affiliate_context": "The $12 bulb swap mentioned as the single fastest fix — smart bulbs allow warm dimming"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:email-2-opened"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Why your room never looks like Pinterest (1 reason)"
+      }
+    },
+    {
+      "niche": "home-decor",
+      "email_number": 3,
+      "send_day": 7,
+      "subject_line": "\"I finally feel like the room is mine\" (reader story)",
+      "preview_text": "She'd been trying to fix the same room for 4 years. Here's what changed.",
+      "from_name": "The Home Edit",
+      "plain_text_body": "I got this message two weeks ago and I've been thinking about it ever since. Sharing with permission.\n\n---\n\n\"I've lived in my apartment for four years. I've bought three different sofas trying to get the living room right. I followed all the advice — the 'right' rug size, gallery walls, plants everywhere. It still felt like I was living in a showroom that didn't belong to me.\n\nThen I read your email about light layers. I bought a $45 table lamp from Amazon. Put it on the low shelf next to my bookcase. Turned off the overhead and took a photo.\n\nI actually cried. Not because it was perfect. Because for the first time in four years, the room felt like *home*.\n\nI haven't changed a single piece of furniture. Just the lamp. And two warm bulbs in the other fixtures like you said. That's it.\"\n\n— Dana, Portland\n\n---\n\nI want to sit with that for a second.\n\nFour years. Three sofas. And the thing that cracked it open was a $45 lamp and a pair of $9 bulbs.\n\nThis is what I try to explain to people who think they need a renovation, or a bigger budget, or a better apartment. The problem is almost never what you think it is.\n\nThe gap between a room that *looks* styled and a room that *feels* like home is almost always sensory, not structural. It's light temperature. It's the weight of a throw blanket. It's the smell of something — cedar, linen, beeswax. It's whether sound bounces off hard surfaces or gets absorbed by layered textiles.\n\nDesigners call this \"sensory completeness.\" I just call it the difference between a room that photographs well and a room you actually want to be in.\n\nDana's room wasn't missing furniture. It was missing warmth at the right height.\n\nIf you haven't done the bulb swap yet — here's the specific one I recommend. Philips warm white, 2700K. A four-pack runs about $12-14 and they'll outlast anything else in the room.\n\n[PRODUCT LINK: Philips Warm Glow Dimmable LED Bulbs, 4-pack]\n\nAnd if you want what Dana actually bought:\n\n[PRODUCT LINK: Simple Designs Petite Table Lamp with Linen Shade - Under $45]\n\nNext week I'm going to address the objection I hear most often from people on this list:\n\n*\"But I'm renting. I can't do anything permanent.\"*\n\nOh. We're going to have some words about that.\n\nTalk soon,\nSophia\n\nP.S. — If you have a story like Dana's — a small change that made a big difference — reply and tell me. I read all of them.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2c2c2c; line-height: 1.7;'><p style='font-size: 18px; color: #7c9e8e;'>The Home Edit · Mintbrooks</p><h2>\"I finally feel like the room is mine\"</h2><p>I got this message two weeks ago and I've been thinking about it ever since. Sharing with permission.</p><blockquote style='border-left: 4px solid #7c9e8e; margin: 24px 0; padding: 16px 24px; background: #f9f9f7; font-style: italic;'><p>\"I've lived in my apartment for four years. I've bought three different sofas trying to get the living room right... Then I read your email about light layers. I bought a $45 table lamp. Put it on the low shelf next to my bookcase. Turned off the overhead and took a photo.</p><p>I actually cried. Not because it was perfect. Because for the first time in four years, the room felt like <strong>home</strong>.</p><p>I haven't changed a single piece of furniture. Just the lamp.\"</p><p style='font-size: 13px; color: #888; font-style: normal;'>— Dana, Portland</p></blockquote><p>Four years. Three sofas. And the thing that cracked it open was a $45 lamp and a pair of $9 bulbs.</p><p>The gap between a room that <em>looks</em> styled and a room that <em>feels</em> like home is almost always sensory, not structural. Light temperature. The weight of a throw. Whether sound bounces off hard surfaces or gets absorbed by layered textiles.</p><p>Dana's room wasn't missing furniture. It was missing warmth at the right height.</p><div style='background: #f0f5f2; border-radius: 8px; padding: 20px; margin: 24px 0;'><p style='margin: 0 0 12px; font-weight: bold;'>What Dana actually bought:</p><p><a href='{{PRODUCT_1_URL}}' style='color: #7c9e8e;'>Simple Designs Petite Table Lamp with Linen Shade</a> — under $45<br><a href='{{PRODUCT_2_URL}}' style='color: #7c9e8e;'>Philips Warm Glow Dimmable LED Bulbs, 4-pack</a> — ~$13</p></div><p>Talk soon,<br><strong>Sophia</strong></p></div>",
+      "tags_applied_on_send": ["sequence:home-decor", "stage:social-proof"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:social-proof:engaged"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "home-decor",
+          "amazon_search_term": "small table lamp linen shade bedside accent under 50",
+          "placement": "story-attribution",
+          "affiliate_context": "Exact product mentioned in reader transformation story — high conversion context because social proof surrounds it"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "home-decor",
+          "amazon_search_term": "Philips warm glow dimmable LED bulb 2700K 4 pack",
+          "placement": "inline-secondary",
+          "affiliate_context": "The bulb swap — the lowest-cost, highest-impact action in the entire sequence. Repeat mention reinforces the habit loop."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:email-3-opened"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "She bought 3 sofas. The fix was a $45 lamp."
+      }
+    },
+    {
+      "niche": "home-decor",
+      "email_number": 4,
+      "send_day": 14,
+      "subject_line": "\"But I'm renting, I can't do anything.\" Let's fix that.",
+      "preview_text": "The biggest objection renters have — and why it's mostly false.",
+      "from_name": "The Home Edit",
+      "plain_text_body": "I hear this constantly.\n\n\"I would love to do more with my space but I'm renting so I can't really change anything.\"\n\nI understand the instinct. You don't want to lose your deposit. You're not sure how long you'll be there. Why invest in a space you don't own?\n\nHere's what I want to push back on: almost everything that makes a room feel *designed* is fully removable.\n\nLet me prove it.\n\nThe six most impactful design moves I know — all of them 100% renter-safe:\n\n**1. Command strips and adhesive hooks**\nYes, everyone knows about these. But most people use them wrong. They're not just for hanging pictures — use them to create floating shelving with lightweight wooden boards. Use them to mount pendant light cord covers. Use them to hang curtain rods without drilling (the key: mount above the window frame, not into the wall beside it).\n\n**2. Curtains to the ceiling, wall to wall**\nThis is the single highest-ROI move in any rental. Take down whatever blinds are there (store them carefully). Hang floor-to-ceiling curtains using a tension rod or command-strip rod holders. Suddenly the room has 30% more visual height. Cost: $40-80. Impact: looks like a $1,500 window treatment.\n\n**3. Large area rug, right-sized**\nMost renters buy rugs too small. A rug should fit under the front legs of all furniture in a seating area, minimum. An 8x10 in most living rooms. A 9x12 if you can. This single piece defines the room more than any other object.\n\n**4. Furniture arrangement before furniture buying**\nMost people buy more things when what they need is a better arrangement. Two chairs angled toward each other creates more warmth than a sofa and loveseat aligned against walls. Try it. Move things. Live with it for a week before buying anything.\n\n**5. Peel-and-stick wallpaper for an accent moment**\nNot the cheesy kind — the linen-texture, grasscloth, or subtle pattern versions that look nothing like the word \"peel-and-stick.\" These genuinely fool people. And they come off cleanly. I've seen rental units where tenants used these behind a bed or in a reading nook and the landlord didn't even notice.\n\n**6. Layered textiles**\nA $200 couch can look like a $1,200 couch with the right throw and two contrasting pillow covers. The trick is odd numbers (3 pillows, not 4) and mixing textures — linen, velvet, knit. Never all the same fabric.\n\nI've linked the specific products I'd buy for each of these if I were furnishing a rental apartment right now:\n\n[PRODUCT LINK: H.VERSAILTEX Linen Curtains - Ivory, Floor to Ceiling]\n[PRODUCT LINK: nuLOOM Rigo Jute Area Rug 8x10 - Hand-woven, Natural]\n[PRODUCT LINK: Tempaper Grasscloth Peel-and-Stick Wallpaper]\n[PRODUCT LINK: PAVILIA Premium Velvet Throw Blanket with Tassel - Sage]\n\nThe point isn't that renting is the same as owning. It's that the constraint is much smaller than most people think.\n\nYour room doesn't need permission from your landlord to feel like yours.\n\nTalk soon,\nSophia\n\nP.S. — Next email I'm going to send specific room-by-room picks based on what you told me when you first signed up. Depending on which room you flagged — living room, bedroom, kitchen, or office — you'll get a short, specific list. No noise.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2c2c2c; line-height: 1.7;'><p style='font-size: 18px; color: #7c9e8e;'>The Home Edit · Mintbrooks</p><h2>\"But I'm renting\" — let's fix that thinking</h2><p>Almost everything that makes a room feel <em>designed</em> is fully removable. Let me prove it.</p><h3 style='color: #7c9e8e;'>6 High-Impact Moves — All Renter-Safe</h3><ol style='padding-left: 20px;'><li style='margin-bottom: 16px;'><strong>Command strips, used correctly</strong> — mount floating shelves, hang curtain rods above the window frame, not beside it.</li><li style='margin-bottom: 16px;'><strong>Curtains to the ceiling, wall to wall</strong> — the highest ROI move in any rental. Floor-to-ceiling panels add 30% visual height. Cost: $40–80.</li><li style='margin-bottom: 16px;'><strong>Right-sized area rug</strong> — front legs of all furniture, minimum. 8x10 in most living rooms. This one object defines the room.</li><li style='margin-bottom: 16px;'><strong>Furniture arrangement before furniture buying</strong> — two chairs angled toward each other beats sofa + loveseat against walls every time.</li><li style='margin-bottom: 16px;'><strong>Peel-and-stick wallpaper (the good kind)</strong> — linen texture, grasscloth, subtle pattern. Comes off cleanly. Looks nothing like \"peel-and-stick.\"</li><li style='margin-bottom: 16px;'><strong>Layered textiles</strong> — three pillows, not four. Mix linen, velvet, knit. A $200 couch looks like $1,200 with the right throw.</li></ol><div style='background: #f0f5f2; border-radius: 8px; padding: 20px; margin: 24px 0;'><p style='font-weight: bold; margin: 0 0 12px;'>My picks for a rental refresh:</p><p><a href='{{PRODUCT_1_URL}}' style='color: #7c9e8e;'>H.VERSAILTEX Linen Curtains — Floor to Ceiling</a><br><a href='{{PRODUCT_2_URL}}' style='color: #7c9e8e;'>nuLOOM Rigo Jute Area Rug 8x10</a><br><a href='{{PRODUCT_3_URL}}' style='color: #7c9e8e;'>Tempaper Grasscloth Peel-and-Stick Wallpaper</a><br><a href='{{PRODUCT_4_URL}}' style='color: #7c9e8e;'>PAVILIA Premium Velvet Throw — Sage</a></p></div><p>Talk soon,<br><strong>Sophia</strong></p></div>",
+      "tags_applied_on_send": ["sequence:home-decor", "stage:objection-handler"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:renter"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "home-decor",
+          "amazon_search_term": "linen curtains floor to ceiling ivory grommet 84 inch",
+          "placement": "list-item-recommendation",
+          "affiliate_context": "Renter move #2 — ceiling-height curtains. Specific color (ivory) and style (grommet) recommended for versatility."
+        },
+        {
+          "slot_id": "product_2",
+          "category": "home-decor",
+          "amazon_search_term": "nuLOOM jute area rug 8x10 natural handwoven",
+          "placement": "list-item-recommendation",
+          "affiliate_context": "Renter move #3 — right-sized rug. Jute/natural fiber is recommended as the most versatile, durable material."
+        },
+        {
+          "slot_id": "product_3",
+          "category": "home-decor",
+          "amazon_search_term": "peel and stick wallpaper grasscloth texture removable",
+          "placement": "list-item-recommendation",
+          "affiliate_context": "Renter move #5 — removable wallpaper. Specifically the grasscloth texture variant that reads as high-end."
+        },
+        {
+          "slot_id": "product_4",
+          "category": "home-decor",
+          "amazon_search_term": "velvet throw blanket with fringe tassel sage green",
+          "placement": "list-item-recommendation",
+          "affiliate_context": "Renter move #6 — layered textiles. Velvet texture recommended specifically for mixing with linen/knit pillows."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:email-4-opened"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The renter myth that's costing you your home"
+      }
+    },
+    {
+      "niche": "home-decor",
+      "email_number": 5,
+      "send_day": 21,
+      "subject_line": "Your room picks (based on what you told me)",
+      "preview_text": "Living room, bedroom, kitchen, or office — here's your specific list",
+      "from_name": "The Home Edit",
+      "plain_text_body": "A few weeks ago I asked you which room was giving you the most trouble.\n\nYou told me — either by clicking a link or replying directly. And I've been building this email for you since.\n\nBelow I've broken out specific picks by room. Scroll to yours. Skip the others. These aren't \"top picks\" or \"trending\" lists. They're what I would actually buy if I were starting that room from scratch, with a mid-range budget, and with the real goal of making the space feel like home — not like a styled photo shoot.\n\n---\n\n**IF YOUR TROUBLE ROOM IS: The Living Room**\n\nThe foundational piece: a well-proportioned sofa in a neutral (warm greige, oat, or charcoal — not white, white is a trap). If you already have one, skip to the next three.\n\n→ Area rug: nuLOOM Moroccan Blythe Area Rug — the subtle pattern reads organic, not matchy. Size up from what you think you need.\n→ Accent chair: Christopher Knight Home Accent Chair with Wood Legs — the silhouette is clean, it photographs beautifully, and it's $299 not $1,200.\n→ Throw pillow covers (not the whole pillow): MIULEE Velvet Pillow Covers in a terracotta or sage. Buy three. Mix sizes.\n→ Coffee table tray: organizing the coffee table surface is 80% of the battle.\n\n**IF YOUR TROUBLE ROOM IS: The Bedroom**\n\nThe foundational piece: your bedding. Nothing else matters if the bed doesn't anchor the room. Linen or washed cotton. Rumpled is fine. Tight hospital corners are not the move.\n\n→ Duvet insert + cover combo: Bedsure Washed Cotton Duvet Cover Set — it arrives looking lived-in. This is what you want.\n→ Euro shams: two of them, behind your sleeping pillows. This is the detail that makes a bed look like a hotel bed.\n→ Bedside lighting: one lamp per side, same style, different height is fine. Permo Single Pendant Light Kit with Edison Bulb works for both mounted and cord-hung options.\n→ A plant or botanical print: something organic to stop the room feeling sterile. A pothos in a ceramic pot does more work than you'd expect.\n\n**IF YOUR TROUBLE ROOM IS: The Home Office**\n\nThe foundational piece: a desk that doesn't look like furniture from a dorm. You will work differently when your desk looks like it belongs in the room.\n\n→ Desk: VASAGLE Rustic Desk with Storage — the wood-metal combination reads mature without being corporate.\n→ Desk lamp: TaoTronics LED Desk Lamp with USB charging. Warm light mode is essential.\n→ Cable management: JOTO Cable Management Sleeve. The single ugliest thing in any home office is loose cables. Fix it in 20 minutes.\n→ One piece of art, framed, at eye level: not a motivational poster. An abstract print, a botanical illustration, a photograph. Society6 and Minted have prints for $20-60 that look like gallery pieces.\n\n**IF YOUR TROUBLE ROOM IS: The Entryway**\n\nThe foundational piece: a surface. Every entry needs a flat surface to land things on. If you don't have one, nothing else works.\n\n→ Console table: SONGMICS Narrow Sofa Table — fits even tight hallways, the bottom shelf handles shoes/baskets.\n→ Mirror: Kate and Laurel Silhouette Round Wall Mirror — hang it at eye level, it doubles the light and makes the entry feel twice as large.\n→ Hooks: WEBI Heavy Duty Wall Hooks — coat, bag, keys. Command strips if renting.\n→ A small tray: for keys, sunglasses, the daily objects that create visual chaos if they don't have a home.\n\n---\n\nAll links are affiliate — I only recommend products I've used or reviewed in detail. If you buy something and it's not right, you can always return it. But based on the feedback I get from this list, most of these land well.\n\nTalk soon,\nSophia",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2c2c2c; line-height: 1.7;'><p style='font-size: 18px; color: #7c9e8e;'>The Home Edit · Mintbrooks</p><h2>Your room picks (based on what you told me)</h2><p>Scroll to your room. Skip the others. These are what I'd actually buy — not trending lists.</p><div style='border-left: 4px solid #7c9e8e; padding-left: 20px; margin: 24px 0;'><h3 style='color: #7c9e8e;'>Living Room</h3><ul><li><a href='{{LIVING_ROOM_P1}}' style='color: #7c9e8e;'>nuLOOM Moroccan Blythe Area Rug</a> — size up from what you think you need</li><li><a href='{{LIVING_ROOM_P2}}' style='color: #7c9e8e;'>Christopher Knight Accent Chair</a> — $299, not $1,200, looks like neither</li><li><a href='{{LIVING_ROOM_P3}}' style='color: #7c9e8e;'>MIULEE Velvet Pillow Covers</a> — buy three, mix sizes</li></ul></div><div style='border-left: 4px solid #c4a882; padding-left: 20px; margin: 24px 0;'><h3 style='color: #c4a882;'>Bedroom</h3><ul><li><a href='{{BEDROOM_P1}}' style='color: #7c9e8e;'>Bedsure Washed Cotton Duvet Cover Set</a> — arrives looking perfectly lived-in</li><li><a href='{{BEDROOM_P2}}' style='color: #7c9e8e;'>Euro shams, 26x26</a> — the hotel bed detail everyone misses</li><li><a href='{{BEDROOM_P3}}' style='color: #7c9e8e;'>Permo Pendant Light Kit</a> — works cord-hung or wall-mounted</li></ul></div><div style='border-left: 4px solid #8c7db0; padding-left: 20px; margin: 24px 0;'><h3 style='color: #8c7db0;'>Home Office</h3><ul><li><a href='{{OFFICE_P1}}' style='color: #7c9e8e;'>VASAGLE Rustic Desk with Storage</a> — wood-metal, mature not corporate</li><li><a href='{{OFFICE_P2}}' style='color: #7c9e8e;'>TaoTronics LED Desk Lamp</a> — warm light mode is non-negotiable</li><li><a href='{{OFFICE_P3}}' style='color: #7c9e8e;'>JOTO Cable Management Sleeve</a> — fix the ugliest office problem in 20 minutes</li></ul></div><div style='border-left: 4px solid #d4956a; padding-left: 20px; margin: 24px 0;'><h3 style='color: #d4956a;'>Entryway</h3><ul><li><a href='{{ENTRY_P1}}' style='color: #7c9e8e;'>SONGMICS Narrow Console Table</a> — fits tight hallways, bottom shelf for baskets</li><li><a href='{{ENTRY_P2}}' style='color: #7c9e8e;'>Kate and Laurel Round Wall Mirror</a> — doubles light, doubles perceived size</li><li><a href='{{ENTRY_P3}}' style='color: #7c9e8e;'>WEBI Heavy Duty Wall Hooks</a> — coat, bag, keys, done</li></ul></div><p>Talk soon,<br><strong>Sophia</strong></p><p style='font-size: 12px; color: #999;'>All links are affiliate. I only recommend products I've used or reviewed in detail.</p></div>",
+      "tags_applied_on_send": ["sequence:home-decor", "stage:conversion"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:segment:buyer-intent"],
+      "product_slots": [
+        {
+          "slot_id": "product_living_1",
+          "category": "home-decor",
+          "amazon_search_term": "nuLOOM Moroccan area rug living room neutral",
+          "placement": "segmented-room-list",
+          "affiliate_context": "Living room segment — foundational rug pick for the subscriber who flagged living room as their trouble room"
+        },
+        {
+          "slot_id": "product_bedroom_1",
+          "category": "home-decor",
+          "amazon_search_term": "Bedsure washed cotton duvet cover set queen",
+          "placement": "segmented-room-list",
+          "affiliate_context": "Bedroom segment — duvet cover is the anchor piece recommended for bedroom transformation"
+        },
+        {
+          "slot_id": "product_office_1",
+          "category": "home-decor",
+          "amazon_search_term": "VASAGLE rustic computer desk with storage industrial wood",
+          "placement": "segmented-room-list",
+          "affiliate_context": "Office segment — desk replacement positioned as identity shift from dorm-style to professional workspace"
+        },
+        {
+          "slot_id": "product_entry_1",
+          "category": "home-decor",
+          "amazon_search_term": "narrow console table entryway hallway table with shelf",
+          "placement": "segmented-room-list",
+          "affiliate_context": "Entryway segment — console table as the foundational surface every entry needs"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:email-5-opened"],
+        "on_click_product": ["tag:journey:converted-click", "queue:post-purchase-care-sequence"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The short list for your specific room"
+      }
+    },
+    {
+      "niche": "home-decor",
+      "email_number": 6,
+      "send_day": 35,
+      "subject_line": "Still here? (And a question about your room)",
+      "preview_text": "Checking in — and sharing what's on my mind this month",
+      "from_name": "The Home Edit",
+      "plain_text_body": "It's been about a month since you first signed up, and I want to check in.\n\nI don't know where you are right now. Some of you have done the bulb swap, rearranged the furniture, bought the rug, and your room is starting to feel like you. I love that.\n\nSome of you opened a few emails, got busy, and the living room is still the same as it was.\n\nThat's fine too. Life happens.\n\nBut I want to say this plainly: the gap between the room you're living in now and the room you pictured when you downloaded that guide isn't as big as it feels. It's not a renovation gap. It's usually two or three targeted decisions.\n\nI'm going to keep sending you content — every week or two, nothing overwhelming. Seasonal refreshes, room-specific deep dives, the occasional product I'm genuinely excited about.\n\nBut if you want to speed things up — if you want a bit more of a push — I'd love to know where you're stuck.\n\nHit reply and finish this sentence: \"The thing stopping me from having the home I want is ___.\"\n\nI read every single one. Sometimes I respond. Always I learn something that makes the next email better.\n\nAnd if this isn't resonating anymore — if you signed up for something specific and this isn't it — the unsubscribe link is below. No hard feelings. I'd rather have a small list of people who love this than a large list of people who don't open anything.\n\nBut if you're still here — if some part of you is thinking about your home right now — I'm glad. Let's finish what you started.\n\nOne last thing: I've been putting together a \"Fall Room Reset\" guide — 10 specific swaps to make any room feel autumnal and cozy without buying a whole new set of décor. I'll send it in the next email.\n\nTalk soon,\nSophia\n\nP.S. — For anyone who never clicked any of the room segmentation links: which room is your focus? [LINK: Living Room] [LINK: Bedroom] [LINK: Office] [LINK: Entryway]. Takes two seconds. Helps me send you the right stuff.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #2c2c2c; line-height: 1.7;'><p style='font-size: 18px; color: #7c9e8e;'>The Home Edit · Mintbrooks</p><h2>Still here?</h2><p>It's been about a month since you first signed up, and I want to check in.</p><p>The gap between the room you're living in now and the room you pictured when you downloaded that guide isn't as big as it feels. It's not a renovation gap. It's usually two or three targeted decisions.</p><p><strong>Hit reply and finish this sentence:</strong></p><blockquote style='border-left: 4px solid #7c9e8e; padding: 12px 20px; background: #f9f9f7; font-size: 18px; font-style: italic;'>\"The thing stopping me from having the home I want is ___.\"</blockquote><p>I read every one. Sometimes I respond. Always I learn something that makes the next email better.</p><p>Coming next: <strong>The Fall Room Reset Guide</strong> — 10 specific swaps to make any room feel autumnal and cozy without a full décor overhaul.</p><p>Talk soon,<br><strong>Sophia</strong></p><p style='font-size: 13px; color: #888;'>If this isn't resonating anymore, the unsubscribe link is below. No hard feelings — I'd rather a small engaged list than a large silent one.</p></div>",
+      "tags_applied_on_send": ["sequence:home-decor", "stage:re-engagement"],
+      "tags_applied_on_click": ["tag:re-engaged", "tag:segment:confirmed-active"],
+      "product_slots": [],
+      "automation_triggers": {
+        "on_open": ["tag:re-engaged:opened-email-6", "remove-tag:at-risk-churn"],
+        "on_reply": ["tag:high-value:replied", "queue:personal-response-workflow"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "move_to_win_back_sequence",
+        "variant_subject": "Before I stop sending you emails..."
+      }
+    }
+  ],
+  "automation_flow": {
+    "sequence_name": "home-decor-post-sequence",
+    "description": "What happens after email 6 completes",
+    "branches": [
+      {
+        "condition": "tag:re-engaged:opened-email-6",
+        "action": "enroll_in_weekly_digest",
+        "digest_cadence": "every_tuesday",
+        "digest_content": "1 room-specific tip + 1-2 seasonal product picks matched to subscriber room tag",
+        "digest_from_name": "The Home Edit"
+      },
+      {
+        "condition": "tag:journey:converted-click AND NOT tag:post-purchase-confirmed",
+        "action": "enroll_in_product_follow_up",
+        "timing": "72h after click",
+        "follow_up_content": "How is it working for you? + complementary product suggestion"
+      },
+      {
+        "condition": "NOT opened any email in 30 days after email 6",
+        "action": "enroll_in_win_back_sequence",
+        "win_back_email_1_subject": "I won't flood your inbox. Just one thing.",
+        "win_back_email_2_subject": "Last email from me (unless you want more)",
+        "win_back_timing": "email_1_at_day_0, email_2_at_day_7"
+      },
+      {
+        "condition": "tag:segment:buyer-intent AND NOT purchased in 14 days",
+        "action": "send_price_drop_alert",
+        "content": "One of the items I recommended is currently on sale — wanted you to know",
+        "timing": "check weekly, trigger on 15%+ price drop"
+      }
+    ],
+    "seasonal_campaigns": [
+      {"name": "Fall Room Reset", "send_month": "September", "content": "10 cozy swaps guide"},
+      {"name": "Holiday Hosting Prep", "send_month": "November", "content": "Entryway + living room for guests"},
+      {"name": "January Reset", "send_month": "January", "content": "Declutter before you decorate"}
+    ]
+  }
+}

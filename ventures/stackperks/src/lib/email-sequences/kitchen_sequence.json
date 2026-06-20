@@ -1,0 +1,270 @@
+{
+  "sequence_meta": {
+    "niche": "kitchen",
+    "brand": "Mintbrooks",
+    "persona": "The Kitchen Lab",
+    "persona_voice": "Chris Orzechowski — direct response, transformation-first, mechanism explanations, strong CTAs, RPE-optimised",
+    "total_emails": 6
+  },
+  "emails": [
+    {
+      "niche": "kitchen",
+      "email_number": 1,
+      "send_day": 0,
+      "subject_line": "Your free kitchen upgrade guide (and the question that changes everything)",
+      "preview_text": "Welcome to The Kitchen Lab — here's what's coming",
+      "from_name": "The Kitchen Lab",
+      "plain_text_body": "Welcome to The Kitchen Lab.\n\nYour free guide — \"The 5 Kitchen Tools That Changed How I Cook (And What They Actually Do)\" — is attached.\n\nBefore you read it, I want to ask you something that'll shape everything I send you from here on:\n\nWhat's the actual problem in your kitchen right now?\n\nBecause \"I want to cook better\" means nothing. But \"I make chicken breast that's dry every single time and I've given up on it\" — that I can fix.\n\nClick the statement that best describes your kitchen situation:\n\n[SEGMENTATION LINK: Weeknight Dinners] — \"I cook most nights but it's the same 5 things on repeat and I'm bored\"\n[SEGMENTATION LINK: Skill Building] — \"My technique is weak — things don't turn out right and I don't know why\"\n[SEGMENTATION LINK: Meal Prep] — \"I want to batch cook and eat well all week without spending Sunday in the kitchen forever\"\n[SEGMENTATION LINK: Equipment] — \"I have the wrong tools and it's slowing me down\"\n[SEGMENTATION LINK: Entertaining] — \"I want to cook for guests and actually feel confident doing it\"\n\nHit reply if none of these fit and just describe where you are. I read every reply.\n\nHere's what you're getting in this sequence over the next few weeks:\n\n→ The technique that halves your cooking time for 80% of weeknight meals (it's not meal prep — it's a framework)\n→ The one pan that replaces 4 pieces of cookware (and why buying cheap cookware is the most expensive mistake in the kitchen)\n→ A reader story: how a person who couldn't boil pasta correctly now cooks full dinners in under 30 minutes\n→ The tool I use more than anything else that costs $12 (you're going to feel annoyed when you see it)\n\nPlus product recommendations, yes — but only tools that solve specific problems. Not gadgets. Not single-use appliances that live in a drawer forever.\n\nTalk soon,\nJake\nThe Kitchen Lab at Mintbrooks\n\nP.S. — The guide covers 5 tools. One of them is the $12 thing I just mentioned. Start there.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #c0392b; font-weight: bold; font-size: 17px;'>The Kitchen Lab · Mintbrooks</p><h2>Your free kitchen upgrade guide is here</h2><p>Welcome. Before you read it — tell me where you actually are in the kitchen.</p><p>\"I want to cook better\" means nothing. But \"my chicken is always dry\" — that I can fix.</p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 10px;'><a href='{{SEG_WEEKNIGHT}}' style='background: #c0392b; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Weeknight — same 5 meals on repeat, bored</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_SKILL}}' style='background: #c0392b; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Skill — technique is weak, things don't turn out right</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_MEALPREP}}' style='background: #c0392b; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Meal Prep — want to batch cook without spending all Sunday</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_EQUIPMENT}}' style='background: #c0392b; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Equipment — wrong tools, slowing me down</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_ENTERTAINING}}' style='background: #c0392b; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Entertaining — want to cook for guests and feel confident</a></li></ul><p>Jake<br><em>The Kitchen Lab</em></p></div>",
+      "tags_applied_on_send": ["sequence:kitchen", "stage:welcome"],
+      "tags_applied_on_click": ["tag:kitchen-segment:set"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "kitchen",
+          "amazon_search_term": "instant read meat thermometer digital kitchen",
+          "placement": "guide-reference",
+          "affiliate_context": "The $12 tool mentioned in email — instant-read thermometer is the single most impactful tool for solving dry meat, the most common cooking failure"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:kitchen-email-1"],
+        "on_click_seg_weeknight": ["tag:kitchen-focus:weeknight"],
+        "on_click_seg_skill": ["tag:kitchen-focus:skill-building"],
+        "on_click_seg_mealprep": ["tag:kitchen-focus:meal-prep"],
+        "on_click_seg_equipment": ["tag:kitchen-focus:equipment"],
+        "on_click_seg_entertaining": ["tag:kitchen-focus:entertaining"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The $12 kitchen tool I use more than everything else combined"
+      }
+    },
+    {
+      "niche": "kitchen",
+      "email_number": 2,
+      "send_day": 3,
+      "subject_line": "The reason your chicken is always dry (it's not what you think)",
+      "preview_text": "There's a mechanism behind dry, overcooked meat — and a $12 fix",
+      "from_name": "The Kitchen Lab",
+      "plain_text_body": "Let me explain why your chicken is dry.\n\nNot as a criticism — as a mechanism.\n\nChicken breast dries out because it's overcooked. Not because of the recipe. Not because of your technique. Because you have no way to know when it's done, so you err on the side of cooking it longer, and overcooked chicken is dry chicken.\n\nHere's the specific mechanism: chicken breast proteins begin denaturing (seizing up, releasing moisture) at about 150°F. At 165°F — the USDA safe temperature — about 70% of the moisture is gone. At 175°F, the moisture loss is severe. At 185°F, which is what most people hit when they're \"making sure it's cooked,\" you've turned a protein into a kitchen sponge.\n\nThis is not a skill problem. It's an information problem.\n\nYou can't see what temperature your meat is at. So you guess. And you guess high because nobody wants to undercook meat.\n\nThe fix is a $12-15 thermometer.\n\nI use the ThermoPro TP03. It reads in 3-4 seconds. It costs $13. I've had mine for 4 years. This single tool changed how I cook protein more than any class, cookbook, or technique video.\n\nHere's how you use it:\n- Chicken breast: pull at 155°F (carry-over heat takes it to safe temp in 2-3 minutes of rest)\n- Pork chop: pull at 140°F (rest to 145°F)\n- Steak (medium-rare): 125°F pull, rest 130°F\n- Burger: 155°F pull, especially if ground at home\n\nThe next time you cook chicken, try this: set a timer for 15 minutes less than you normally would. Probe with the thermometer. Adjust. You will not overcook it. Your chicken will be different.\n\nThis is the most direct path from where you are to dramatically better results. Not a recipe. Not a technique. A thermometer.\n\n[PRODUCT LINK: ThermoPro TP03 Digital Instant Read Meat Thermometer — $13]\n\nAnd while I have you here: the second most common protein problem I see is searing. Most people don't get their pan hot enough before adding meat. The reason: you want a Maillard reaction (that brown crust), which only happens above 300°F. A room-temperature pan with oil in it is nowhere near that.\n\nFor searing, you want a cast iron or stainless steel pan, preheated for 2-3 minutes on medium-high before the oil goes in, and 30 seconds more after the oil starts shimmering.\n\nThe Lodge 10.25\" Cast Iron Skillet has been the standard for decades. It's $33 and it's indestructible.\n\n[PRODUCT LINK: Lodge 10.25 Inch Cast Iron Skillet pre-seasoned]\n\nTwo tools. Under $50 total. Completely changes your protein results.\n\nTalk soon,\nJake\n\nP.S. — The thermometer is the one I'd buy first. If you only take one thing from this email, take that.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #c0392b; font-weight: bold; font-size: 17px;'>The Kitchen Lab · Mintbrooks</p><h2>Why your chicken is always dry (the actual mechanism)</h2><p>Chicken dries out because it's overcooked. Not because of the recipe. Because you have no way to know when it's done, so you err long — and overcooked chicken is dry chicken.</p><div style='background: #fff5f4; border-left: 4px solid #c0392b; padding: 16px 20px; margin: 20px 0;'><p style='margin: 0; font-weight: bold;'>The temperature problem:</p><p style='margin: 8px 0 0;'>150°F — proteins begin seizing, moisture releasing<br>165°F — USDA safe, ~70% moisture gone<br>175°F — severe moisture loss<br>185°F — what most people hit when \"making sure\"</p></div><p><strong>The fix: a $13 thermometer.</strong> Not a skill. Not a recipe. Information.</p><p><strong>Pull temperatures:</strong> Chicken breast at 155°F (carry-over to safe). Pork at 140°F. Steak (medium-rare) at 125°F. Burger at 155°F.</p><a href='{{P1_URL}}' style='background: #c0392b; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; margin: 16px 0;'>Get the ThermoPro TP03 — $13 →</a><p>The second issue: your pan isn't hot enough for searing. Maillard reaction requires 300°F+. Preheat 2-3 minutes before the oil goes in. Use cast iron or stainless.</p><a href='{{P2_URL}}' style='background: #c0392b; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; margin: 16px 0;'>Lodge 10.25\" Cast Iron Skillet — $33 →</a><p>Two tools. Under $50. Completely different results.</p><p>Jake</p></div>",
+      "tags_applied_on_send": ["sequence:kitchen", "stage:education"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:cookware"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "kitchen",
+          "amazon_search_term": "ThermoPro TP03 digital instant read meat thermometer",
+          "placement": "mechanism-solution",
+          "affiliate_context": "Positioned as the information tool that solves the dry-meat problem — mechanism explanation precedes recommendation, making it feel inevitable rather than salesy"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "kitchen",
+          "amazon_search_term": "Lodge 10.25 inch cast iron skillet pre-seasoned",
+          "placement": "secondary-technique",
+          "affiliate_context": "Searing mechanism explanation leads to cast iron recommendation — the pan is the enabling tool for the Maillard reaction technique taught"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:kitchen-email-2"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The mechanism behind dry chicken (and a $13 fix)"
+      }
+    },
+    {
+      "niche": "kitchen",
+      "email_number": 3,
+      "send_day": 9,
+      "subject_line": "\"I went from boiling water struggles to 30-minute dinners\"",
+      "preview_text": "Michael's story — from kitchen anxiety to cooking 5 nights a week",
+      "from_name": "The Kitchen Lab",
+      "plain_text_body": "I want to tell you about Michael.\n\nMichael was 34, recently divorced, living alone for the first time. He'd ordered food delivery almost every day for the better part of a year. He was spending $800-1,000/month on takeout and feeling guilty about it, but every time he tried to cook, something went wrong.\n\nThe rice came out mushy. The pasta was overcooked. He burned a pan making scrambled eggs. He genuinely didn't understand why.\n\nHe emailed me after my third email in this sequence. He said:\n\n\"I feel stupid asking this but — is there a reason my eggs always stick and burn? I use a regular pan and butter. The butter always burns immediately before the eggs are cooked.\"\n\nThe answer was simple: he was cooking on heat that was too high. Butter burns at around 300°F. Eggs cook best at 250-275°F. He was setting the burner to medium-high because he thought that would cook things faster. It doesn't. It destroys them.\n\nI told him: for eggs, set the burner to medium-low. Wait until the butter foams and subsides. Then add the eggs. Slow and low.\n\nHe replied four minutes later. He'd already tried it. The eggs were perfect.\n\nHere's what I want you to take from Michael's story: the gap between \"I can't cook\" and \"I cook 5 nights a week\" is almost never about talent. It's almost always about one or two specific misunderstandings about how heat works.\n\nMost of those misunderstandings can be fixed in a single email.\n\nMichael now cooks dinner five nights a week. His grocery spend is $250-300/month. He's down $500-700/month on food and he says the cooking itself has become a routine he looks forward to.\n\nThe two tools he credits most:\n1. The thermometer (Email 2 — you already know about this one)\n2. A non-stick pan for eggs, fish, and anything delicate\n\nFor non-stick, I recommend getting off the cheap stuff (it scratches and the coating degrades) and investing once in a quality option. The OXO Good Grips Hard-Anodized Non-Stick Frypan is what I'd buy. About $45 for the 10-inch. Use it exclusively on medium and lower heat. No metal utensils. This pan will last years.\n\n[PRODUCT LINK: OXO Good Grips Hard-Anodized Non-Stick Frypan 10-Inch]\n\nFor pasta — the most common basic cooking fail — the answer is always: your pot is too small and you don't have enough water. Use your biggest pot. A pound of pasta needs at least 4 quarts of water. Salt it aggressively (it should taste like mildly salted ocean water). Never add oil to the pasta water.\n\nThat's it. Those two things fix 90% of pasta problems.\n\nTalk soon,\nJake\n\nP.S. — Michael said I could share his story. Thanks Michael.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #c0392b; font-weight: bold; font-size: 17px;'>The Kitchen Lab · Mintbrooks</p><h2>From delivery every day to cooking 5 nights a week</h2><blockquote style='border-left: 4px solid #c0392b; margin: 20px 0; padding: 16px 20px; background: #fff5f4; font-style: italic;'><p>\"I feel stupid asking this but — is there a reason my eggs always stick and burn?\"</p><p style='font-style: normal; font-size: 13px; color: #888;'>— Michael, 34, first time living alone</p></blockquote><p>Answer: heat too high. Butter burns at 300°F. Eggs cook best at 250-275°F. He was setting burner to medium-high because he thought faster = better. It doesn't.</p><p><strong>The fix:</strong> Medium-low. Wait for butter to foam and subside. Then add eggs. Slow and low.</p><p>He tried it four minutes later. Replied saying the eggs were perfect.</p><p>Michael now cooks 5 nights a week. Spends $250-300/month on groceries instead of $800-1000 on delivery.</p><div style='background: #fff5f4; border-radius: 8px; padding: 20px; margin: 20px 0;'><p style='margin: 0 0 12px; font-weight: bold;'>The two tools Michael credits:</p><ol><li>Instant-read thermometer (from Email 2)</li><li><a href='{{P1_URL}}' style='color: #c0392b;'>OXO Good Grips Hard-Anodized Non-Stick Frypan 10\"</a> — ~$45, use on medium and lower only, no metal utensils, lasts for years</li></ol></div><p><strong>Pasta fix (two things):</strong> Use a bigger pot. Use more water (4 quarts per pound). Salt it aggressively. Never add oil.</p><p>Jake</p></div>",
+      "tags_applied_on_send": ["sequence:kitchen", "stage:social-proof"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:nonstick-cookware"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "kitchen",
+          "amazon_search_term": "OXO Good Grips hard anodized non-stick frypan 10 inch",
+          "placement": "story-resolution",
+          "affiliate_context": "Reader story resolution product — non-stick pan solves the specific egg problem Michael had. Positioned as invest-once recommendation after cautioning against cheap options."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:kitchen-email-3"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "He spent $900/month on takeout. Two pans changed that."
+      }
+    },
+    {
+      "niche": "kitchen",
+      "email_number": 4,
+      "send_day": 15,
+      "subject_line": "Stop buying gadgets. Here's what to buy instead.",
+      "preview_text": "The kitchen tools I never touch — and the ones I use every single day",
+      "from_name": "The Kitchen Lab",
+      "plain_text_body": "I'm going to save you a few hundred dollars.\n\nHere's the honest list of kitchen gadgets I've bought and never used:\n- Spiralizer\n- Immersion blender (used twice)\n- Avocado slicer\n- Apple corer\n- Egg cooker (yes, really)\n- Mandoline slicer (used once, still fear it)\n- Panini press (used once, takes 20 minutes to clean)\n- Electric can opener\n\nI've probably spent $350 on gadgets in the last five years that live in my cabinet drawer doing nothing. Most people have a version of this cabinet.\n\nHere's the thing about kitchen gadgets: they solve problems you don't have very often, for specific use cases, in way that a basic knife or pan usually handles just as well.\n\nWant zoodles? A Y-peeler makes them. No spiralizer needed.\nWant to blend a soup? Do it in a regular blender. Immersion blenders are convenient but not necessary.\nWant sliced apples? A knife.\n\nThe kitchen tools I use every single day, without exception:\n\n**1. An 8-inch chef's knife**\nA sharp, well-balanced chef's knife does 90% of all kitchen work. The Victorinox Fibrox Pro 8-inch is $35 and it's what culinary schools give students. It outperforms $300 knives in blind tests. It's not glamorous. It works.\n\n**2. A cutting board that doesn't slip**\nOXO Good Grips Cutting Board with Non-Slip Feet. The non-slip matters more than most people realize — a sliding board is a safety hazard. The large version is worth it.\n\n**3. A half-sheet baking pan**\nNordic Ware Baker's Half Sheet. Versatile beyond belief. Roast vegetables, bake cookies, sheet-pan dinners, toast bread, rest meat. One pan, $15.\n\n**4. A cast iron skillet** (already covered)\n**5. A non-stick pan** (already covered)\n\n**6. A Dutch oven**\nThe tool that unlocks braises, soups, stews, no-knead bread, and one-pot pasta. The Lodge 6-Quart Enameled Cast Iron Dutch Oven does everything a Le Creuset does at $50 vs. $400. I'm not saying Le Creuset isn't beautiful. I'm saying Lodge is functionally equivalent.\n\n**7. An instant-read thermometer** (already covered)\n\nThat's the full list. Seven things. Everything else is optional.\n\n[PRODUCT LINK: Victorinox Fibrox Pro 8-Inch Chef's Knife]\n[PRODUCT LINK: Nordic Ware Naturals Baker's Half Sheet 2-Pack]\n[PRODUCT LINK: Lodge 6 Quart Enameled Cast Iron Dutch Oven]\n\nTotal for all three: about $85. Replace your takeout-ordering hand with actual cooking tools.\n\nTalk soon,\nJake\n\nP.S. — If you have one gadget you want me to defend or destroy — hit reply and tell me. I'll give you the honest answer.",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #c0392b; font-weight: bold; font-size: 17px;'>The Kitchen Lab · Mintbrooks</p><h2>Stop buying gadgets. Here's what to buy instead.</h2><p>I've probably spent $350 on gadgets in the last five years that live in my cabinet drawer doing nothing. Spiralizer. Immersion blender used twice. Avocado slicer. You know the drawer.</p><p><strong>The 7 tools I use every single day:</strong></p><ol><li style='margin-bottom: 12px;'><strong>8-inch chef's knife</strong> — <a href='{{P1_URL}}' style='color: #c0392b;'>Victorinox Fibrox Pro, $35</a>. What culinary schools give students. Outperforms $300 knives in blind tests.</li><li style='margin-bottom: 12px;'><strong>Non-slip cutting board</strong> — OXO Good Grips, large. The non-slip matters; sliding boards are safety hazards.</li><li style='margin-bottom: 12px;'><strong>Half-sheet baking pan</strong> — <a href='{{P2_URL}}' style='color: #c0392b;'>Nordic Ware Half Sheet, $15</a>. Roast, bake, sheet-pan dinners, rest meat. One pan.</li><li style='margin-bottom: 12px;'><strong>Cast iron skillet</strong> — covered in email 2</li><li style='margin-bottom: 12px;'><strong>Non-stick pan</strong> — covered in email 3</li><li style='margin-bottom: 12px;'><strong>Dutch oven</strong> — <a href='{{P3_URL}}' style='color: #c0392b;'>Lodge 6-Qt Enameled Dutch Oven, ~$50</a>. Everything Le Creuset does at $50 vs. $400.</li><li style='margin-bottom: 12px;'><strong>Instant-read thermometer</strong> — covered in email 2</li></ol><p>Seven things. Everything else is optional.</p><p>Jake</p></div>",
+      "tags_applied_on_send": ["sequence:kitchen", "stage:objection-handler"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:kitchen-essentials"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "kitchen",
+          "amazon_search_term": "Victorinox Fibrox Pro 8 inch chef knife Swiss made",
+          "placement": "essentials-list",
+          "affiliate_context": "The anti-gadget email's core recommendation — chef's knife positioned as the universal tool that makes gadgets unnecessary"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "kitchen",
+          "amazon_search_term": "Nordic Ware naturals baker's half sheet aluminum 2 pack",
+          "placement": "essentials-list",
+          "affiliate_context": "The most underrated kitchen tool — half-sheet pan positioned as the secret weapon of sheet-pan cooking"
+        },
+        {
+          "slot_id": "product_3",
+          "category": "kitchen",
+          "amazon_search_term": "Lodge 6 quart enameled cast iron dutch oven blue red",
+          "placement": "essentials-list",
+          "affiliate_context": "Positioned as the budget-equal to Le Creuset — the price comparison does the selling work"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:kitchen-email-4"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The gadgets killing your kitchen (and the 7 things that replace them)"
+      }
+    },
+    {
+      "niche": "kitchen",
+      "email_number": 5,
+      "send_day": 21,
+      "subject_line": "Your cooking picks (by the situation you told me about)",
+      "preview_text": "Weeknight meals, skill building, meal prep, or entertaining — here's your list",
+      "from_name": "The Kitchen Lab",
+      "plain_text_body": "A few weeks ago you told me about your cooking situation.\n\nBelow I've broken out specific tools and resources by cooking goal. Jump to yours.\n\n---\n\n**IF YOUR GOAL IS: Better Weeknight Dinners**\n\nThe framework shift that matters: stop thinking in recipes and start thinking in methods. A sear-then-finish method works for any protein. A roast-at-425 method works for any vegetable. Learn the method, apply it to anything in your fridge.\n\n→ Half-sheet pan (already mentioned): Nordic Ware Baker's Half Sheet — your weeknight sheet-pan dinners happen here\n→ Instant Pot Duo 7-in-1: the single fastest path from \"no idea what to cook\" to dinner on the table. 20-minute chicken from frozen. Rice in 12 minutes. Soup while you watch TV. If you don't have one, this is the weeknight cook's most important upgrade.\n→ A good olive oil: California Olive Ranch Extra Virgin is the brand I trust — cold-pressed, fresh, not the rancid grocery-store standard\n\n[PRODUCT LINK: Instant Pot Duo 7-in-1 Electric Pressure Cooker 6 Qt]\n[PRODUCT LINK: California Olive Ranch Extra Virgin Olive Oil]\n\n---\n\n**IF YOUR GOAL IS: Skill Building**\n\nThe right investment is knowledge, not tools. But tools that teach you feedback:\n\n→ The Food Lab by J. Kenji López-Alt (book): the best single-volume resource on WHY cooking works. This is not a recipe book, it's a mechanism book. $40, worth every dollar.\n→ A probe thermometer vs. an instant-read: if you want to level up from the ThermoPro TP03, the MEATER Plus is a wireless probe that gives you real-time temp data during oven cooking. $70. Changes roasting completely.\n→ A kitchen scale: measuring by weight is more accurate than volume for almost everything except liquids. Ozeri Pronto Digital Kitchen Scale, $10.\n\n[PRODUCT LINK: J. Kenji Lopez-Alt The Food Lab cookbook]\n[PRODUCT LINK: MEATER Plus wireless meat thermometer]\n[PRODUCT LINK: Ozeri Pronto digital kitchen scale]\n\n---\n\n**IF YOUR GOAL IS: Meal Prep**\n\nBatch cooking is a logistics challenge as much as a cooking challenge. The right containers and the right strategy matter more than recipes.\n\n→ Glass meal prep containers: Prep Naturals Glass Meal Prep Containers — microwave safe, no plastic leaching, last for years. Get the variety pack.\n→ A food processor: Cuisinart 14-Cup Food Processor. This is the tool that takes batch prep from 2 hours to 45 minutes. It chops, slices, shreds, and blends. If you batch cook regularly, this pays for itself in time within a month.\n→ Vacuum sealer: FoodSaver FM2000 — extend the life of batch-cooked food from 4 days to 2-3 weeks in the freezer.\n\n[PRODUCT LINK: Prep Naturals Glass Meal Prep Containers 10-Pack]\n[PRODUCT LINK: Cuisinart 14-Cup Food Processor]\n[PRODUCT LINK: FoodSaver FM2000 Vacuum Sealer]\n\n---\n\n**IF YOUR GOAL IS: Cooking for Guests / Entertaining**\n\n→ The Dutch oven you already know about: for braises that serve 6-8 and can be made a day ahead\n→ A mandoline slicer (the one gadget I'll defend for entertaining): OXO Good Grips V-Blade Mandoline. For gratins, vegetable platters, any dish where uniform slicing matters. Use the cut-resistant glove — always.\n→ A good carving board: Teakhaus Edge Grain Teakwood Cutting Board with Juice Groove. The aesthetic matters for entertaining. The juice groove is practical.\n→ Wüsthof Classic 8-Inch Chef's Knife: if you're cooking for guests regularly and you've had the Victorinox for a while, this is the upgrade that feels noticeably different.\n\n[PRODUCT LINK: OXO Good Grips V-Blade Mandoline Slicer]\n[PRODUCT LINK: Teakhaus edge grain teakwood cutting board with groove]\n\n---\n\nAll affiliate links. Only things I'd actually buy.\n\nTalk soon,\nJake",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #c0392b; font-weight: bold; font-size: 17px;'>The Kitchen Lab · Mintbrooks</p><h2>Your cooking picks by situation</h2><p>Jump to yours.</p><div style='border-left: 4px solid #c0392b; padding-left: 20px; margin: 20px 0;'><h3 style='color: #c0392b;'>Weeknight Dinners</h3><p><a href='{{WN_P1}}' style='color: #c0392b;'>Instant Pot Duo 7-in-1 6Qt →</a> — 20-min chicken from frozen, rice in 12 min<br><a href='{{WN_P2}}' style='color: #c0392b;'>California Olive Ranch EVOO →</a> — the quality oil that upgrades everything</p></div><div style='border-left: 4px solid #e67e22; padding-left: 20px; margin: 20px 0;'><h3 style='color: #e67e22;'>Skill Building</h3><p><a href='{{SK_P1}}' style='color: #c0392b;'>The Food Lab by J. Kenji López-Alt →</a> — why cooking works, not just how<br><a href='{{SK_P2}}' style='color: #c0392b;'>MEATER Plus Wireless Thermometer →</a> — real-time roasting data<br><a href='{{SK_P3}}' style='color: #c0392b;'>Ozeri Pronto Kitchen Scale →</a> — $10, weight over volume</p></div><div style='border-left: 4px solid #27ae60; padding-left: 20px; margin: 20px 0;'><h3 style='color: #27ae60;'>Meal Prep</h3><p><a href='{{MP_P1}}' style='color: #c0392b;'>Prep Naturals Glass Containers 10-Pack →</a><br><a href='{{MP_P2}}' style='color: #c0392b;'>Cuisinart 14-Cup Food Processor →</a> — cuts prep time in half<br><a href='{{MP_P3}}' style='color: #c0392b;'>FoodSaver FM2000 Vacuum Sealer →</a></p></div><div style='border-left: 4px solid #8e44ad; padding-left: 20px; margin: 20px 0;'><h3 style='color: #8e44ad;'>Entertaining</h3><p><a href='{{ENT_P1}}' style='color: #c0392b;'>OXO Mandoline Slicer →</a> — the one gadget I defend for this use case<br><a href='{{ENT_P2}}' style='color: #c0392b;'>Teakhaus Cutting Board with Juice Groove →</a></p></div><p>Jake</p></div>",
+      "tags_applied_on_send": ["sequence:kitchen", "stage:conversion"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:segment:kitchen-buyer-intent"],
+      "product_slots": [
+        {
+          "slot_id": "product_weeknight_1",
+          "category": "kitchen",
+          "amazon_search_term": "Instant Pot Duo 7-in-1 electric pressure cooker 6 quart",
+          "placement": "segmented-goal-list",
+          "affiliate_context": "Weeknight segment highest-value recommendation — Instant Pot positioned as the transformation tool for cooking-from-frozen weeknight meals"
+        },
+        {
+          "slot_id": "product_skill_1",
+          "category": "kitchen",
+          "amazon_search_term": "The Food Lab Better Home Cooking Through Science Kenji Lopez-Alt",
+          "placement": "segmented-goal-list",
+          "affiliate_context": "Skill segment — book recommendation differentiated from tools, positions writer as educator not just product pusher"
+        },
+        {
+          "slot_id": "product_mealprep_1",
+          "category": "kitchen",
+          "amazon_search_term": "Cuisinart 14 cup food processor stainless steel",
+          "placement": "segmented-goal-list",
+          "affiliate_context": "Meal prep segment highest-conversion tool — food processor reduces batch prep time by 50-60%, positioned with specific time-saving claim"
+        },
+        {
+          "slot_id": "product_entertaining_1",
+          "category": "kitchen",
+          "amazon_search_term": "OXO Good Grips V-blade mandoline slicer with food holder",
+          "placement": "segmented-goal-list",
+          "affiliate_context": "Entertaining segment — mandoline slicer recommended despite earlier anti-gadget stance, the contextual exception reinforces credibility"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:kitchen-email-5"],
+        "on_click_product": ["tag:journey:converted-click", "queue:post-purchase-care-sequence"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Your specific kitchen upgrade list (based on your situation)"
+      }
+    },
+    {
+      "niche": "kitchen",
+      "email_number": 6,
+      "send_day": 30,
+      "subject_line": "What's still not working in your kitchen?",
+      "preview_text": "A month in — checking in and asking the honest question",
+      "from_name": "The Kitchen Lab",
+      "plain_text_body": "It's been about a month.\n\nI want to ask you a direct question: what's still not working?\n\nBecause here's my honest assessment of how most kitchen transformations happen:\n\nPeople read things. They nod. They maybe buy one thing. And then they keep cooking the way they always have.\n\nThat's human. But it's also not why you signed up.\n\nIf there's something specific still going wrong — the chicken is still dry, the pasta is still weird, the weeknights are still chaotic — tell me. Hit reply. Describe the exact problem in one sentence. I'll tell you what's causing it and what to do about it.\n\nThat's not a marketing exercise. That's literally how I find out what to write.\n\nThe people who get the most out of this list are the ones who reply. Not because they're special, but because they tell me what they need and I point them at the right thing.\n\nOn that note — I'll keep sending you content. Techniques, gear breakdowns, recipe frameworks. About once or twice a week. Low volume, high specificity.\n\nIf that's not what you came here for, the unsubscribe is below.\n\nBut if you're still trying to get something right in the kitchen — stick around. The next sequence I'm running is entirely on knife skills: three emails, three techniques, zero equipment required. If you want to be in the first cohort:\n\n[LINK: Yes, send me the knife skills emails →]\n\nAnd if you don't have the thermometer yet:\n\n[PRODUCT LINK: ThermoPro TP03 — $13, the starting point for all of this]\n\nStart with that. Tonight.\n\nTalk soon,\nJake",
+      "html_body": "<div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.75; font-size: 15px;'><p style='color: #c0392b; font-weight: bold; font-size: 17px;'>The Kitchen Lab · Mintbrooks</p><h2>What's still not working?</h2><p>A month in. Direct question: <strong>what's still not working in your kitchen?</strong></p><p>Hit reply. One sentence. I'll tell you what's causing it and exactly what to do.</p><p>Coming next: <strong>Knife Skills Series</strong> — 3 emails, 3 techniques, zero equipment required.</p><a href='{{KNIFE_SKILLS_OPTIN}}' style='background: #c0392b; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold; margin: 16px 0;'>Yes, send me the knife skills emails →</a><p>And if you haven't started anywhere yet — the single best first step:</p><a href='{{P1_URL}}' style='background: #333; color: white; padding: 10px 16px; border-radius: 5px; text-decoration: none; display: inline-block; margin: 8px 0;'>ThermoPro TP03 — $13 →</a><p>Start with that. Tonight.</p><p>Jake</p></div>",
+      "tags_applied_on_send": ["sequence:kitchen", "stage:re-engagement"],
+      "tags_applied_on_click": ["tag:re-engaged", "tag:kitchen:still-active"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "kitchen",
+          "amazon_search_term": "ThermoPro TP03 digital instant read meat thermometer kitchen",
+          "placement": "re-engagement-lowest-barrier",
+          "affiliate_context": "Re-engagement product — cheapest, most impactful tool in the sequence. The sequence started with it, ends with it. Consistent callback."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:re-engaged:kitchen-email-6", "remove-tag:at-risk-churn"],
+        "on_reply": ["tag:high-value:kitchen-replied", "queue:personal-response-workflow"],
+        "on_click_knife_skills": ["tag:enrolled:knife-skills-series", "queue:knife-skills-sequence"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "move_to_win_back_sequence",
+        "variant_subject": "The one thing you need to change in the kitchen (direct question)"
+      }
+    }
+  ],
+  "automation_flow": {
+    "sequence_name": "kitchen-post-sequence",
+    "description": "Post-sequence automation for kitchen subscribers",
+    "branches": [
+      {
+        "condition": "tag:re-engaged:kitchen-email-6",
+        "action": "enroll_in_weekly_digest",
+        "digest_cadence": "every_sunday",
+        "digest_content": "1 technique or recipe framework + 0-1 tool recommendation per week",
+        "digest_from_name": "The Kitchen Lab"
+      },
+      {
+        "condition": "tag:enrolled:knife-skills-series",
+        "action": "enroll_in_knife_skills_sequence",
+        "timing": "3 days after email 6",
+        "content": "3-email sequence: knife grip, the push cut, breaking down a chicken"
+      },
+      {
+        "condition": "tag:kitchen-focus:meal-prep AND tag:journey:converted-click",
+        "action": "enroll_in_meal_prep_deep_dive",
+        "timing": "7 days after email 6",
+        "content": "4-email batch cooking method sequence"
+      },
+      {
+        "condition": "tag:journey:converted-click AND NOT tag:post-purchase-confirmed",
+        "action": "send_usage_tip",
+        "timing": "5 days after click",
+        "content": "Quick tip: how to get the most out of [product] in the first week"
+      },
+      {
+        "condition": "NOT opened any email in 21 days",
+        "action": "enroll_in_win_back_sequence",
+        "win_back_subject_1": "One technique. Five minutes. Completely changes your cooking.",
+        "win_back_subject_2": "Last one — unless you reply"
+      }
+    ],
+    "seasonal_campaigns": [
+      {"name": "Holiday Cooking Prep", "send_month": "November", "content": "Make-ahead dishes, hosting logistics, carving a turkey"},
+      {"name": "New Year Meal Prep Reset", "send_month": "January", "content": "Weekly batch cooking framework for Q1"},
+      {"name": "Summer Grilling Season", "send_month": "May", "content": "Grill technique, marinades, temperature guide for outdoor proteins"}
+    ]
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "sequence_meta": {
+    "niche": "finance",
+    "brand": "Mintbrooks",
+    "persona": "The Money Desk",
+    "persona_voice": "Ramit Sethi — psychological mirror, extreme specificity, scripts included, long-form personal, not financial advice disclaimer throughout",
+    "total_emails": 6
+  },
+  "emails": [
+    {
+      "niche": "finance",
+      "email_number": 1,
+      "send_day": 0,
+      "subject_line": "Your free money guide (and the question most financial advice skips)",
+      "preview_text": "Welcome to The Money Desk — this is different from what you've read before",
+      "from_name": "The Money Desk",
+      "plain_text_body": "Welcome.\n\nYour free guide — \"The Automatic Money System: How to Set Up Your Finances So They Run Without You Thinking About Them\" — is attached.\n\nBefore you read it, I need to say something that most financial content won't say:\n\nMost personal finance advice is technically correct and psychologically useless.\n\n\"Spend less than you earn.\" \"Max your 401(k).\" \"Pay off high-interest debt first.\" These are all true. They're also things you already know. And they're clearly not working — otherwise you wouldn't be reading this.\n\nThe reason personal finance advice fails isn't information. It's motivation and systems.\n\nYou know you should save more. The problem is that saving requires remembering to save, which requires willpower, which is a depletable resource, which means on the Tuesday after a bad week you spend $140 on things you didn't need and feel guilty.\n\nThe solution is not more willpower. The solution is a system that removes the decision.\n\nThat's what the guide covers. Not budgeting tips. A system.\n\nBefore I send you anything else, I want to know where you actually are. Not vague feelings — the specific situation:\n\n[SEGMENTATION LINK: Debt] — \"I have credit card or student loan debt that I'm struggling to make progress on\"\n[SEGMENTATION LINK: Savings] — \"I make decent money but I'm not saving enough and I don't know where it goes\"\n[SEGMENTATION LINK: Investing] — \"I know I should be investing more but I don't know where to start or whether I'm doing it right\"\n[SEGMENTATION LINK: Income] — \"The real problem is that I don't make enough — I need to earn more, not just optimize what I have\"\n[SEGMENTATION LINK: Overwhelmed] — \"All of the above, and I feel paralyzed\"\n\nHit reply if you'd rather tell me directly. I read everything.\n\nI'll be sending you content about money — not product pitches disguised as advice, actual frameworks and strategies. Occasionally I'll recommend a book, tool, or resource. Everything is disclosed when it's affiliate.\n\nTalk soon,\nDavid\nThe Money Desk at Mintbrooks\n\nP.S. — Not a financial advisor. Not a CPA. Everything here is education and perspective, not personalized financial advice. For decisions about your specific situation, consult a fee-only financial advisor. I'll say this every time — not as a legal disclaimer, but because I mean it.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 17px;'>The Money Desk · Mintbrooks</p><h2>Welcome — here's your guide (and a question first)</h2><p>Most personal finance advice is technically correct and psychologically useless. \"Spend less than you earn\" is true and it's clearly not working — otherwise you wouldn't be reading this.</p><p>The solution is not more willpower. The solution is a system that removes the decision.</p><p><strong>Where are you actually right now?</strong></p><ul style='list-style: none; padding: 0;'><li style='margin-bottom: 10px;'><a href='{{SEG_DEBT}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Debt — credit card or student loans, not making progress</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_SAVINGS}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Savings — decent income, not saving enough</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_INVESTING}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Investing — should be doing more but don't know how</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_INCOME}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Income — the real problem is earning more</a></li><li style='margin-bottom: 10px;'><a href='{{SEG_OVERWHELMED}}' style='background: #2c5f8a; color: white; padding: 10px 14px; border-radius: 5px; text-decoration: none; display: inline-block; font-size: 14px;'>Overwhelmed — all of the above, feel paralyzed</a></li></ul><p>David<br><em>The Money Desk</em></p><p style='font-size: 12px; color: #888;'>Not a financial advisor. Everything here is education, not personalized financial advice. Consult a fee-only advisor for your specific situation.</p></div>",
+      "tags_applied_on_send": ["sequence:finance", "stage:welcome"],
+      "tags_applied_on_click": ["tag:money-segment:set"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "finance",
+          "amazon_search_term": "I Will Teach You To Be Rich Ramit Sethi book",
+          "placement": "guide-companion-mention",
+          "affiliate_context": "Guide companion book referenced for subscribers who want to go deeper — disclosed as affiliate"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:finance-email-1"],
+        "on_click_seg_debt": ["tag:money-focus:debt"],
+        "on_click_seg_savings": ["tag:money-focus:savings"],
+        "on_click_seg_investing": ["tag:money-focus:investing"],
+        "on_click_seg_income": ["tag:money-focus:income"],
+        "on_click_seg_overwhelmed": ["tag:money-focus:overwhelmed"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Why personal finance advice keeps failing you (it's not the information)"
+      }
+    },
+    {
+      "niche": "finance",
+      "email_number": 2,
+      "send_day": 3,
+      "subject_line": "The Automatic Money System (set it up once, run forever)",
+      "preview_text": "This is the framework — not a budget, a system. Here's exactly how to build it.",
+      "from_name": "The Money Desk",
+      "plain_text_body": "Let me show you the system.\n\nNot a budget. A system.\n\nThe difference: a budget requires you to check in, track, decide, and exercise restraint every week. A system runs automatically and you stop thinking about it.\n\nHere's the exact architecture I'd recommend if you were building from scratch. This is based on a framework that has appeared in various forms from multiple personal finance educators. I've adapted it and added specificity for real implementation:\n\n**THE 4-ACCOUNT ARCHITECTURE**\n\n**Account 1: The Checking Account (Operational)**\nThis is where your paycheck lands. It's a pure passthrough account. You don't save from it. You don't invest from it manually. Everything that happens to this money is automatic.\n\nBank recommendation: A free checking account with no minimums and no fees. Fidelity Cash Management Account or Schwab Investor Checking are both genuinely free, reimburse ATM fees globally, and pay interest. Stop paying $12-15/month for a bank that doesn't work for you.\n\n**Account 2: The Bills Account (Fixed Expenses)**\nOn payday, an automatic transfer moves exactly the amount needed to cover your fixed monthly bills into a separate account. Rent/mortgage, utilities, subscriptions, minimum debt payments — everything fixed.\n\nHow to calculate the transfer amount: list every fixed expense, total it, add 10% buffer. Set and forget.\n\n**Account 3: The Emergency Fund + Savings Account (High-Yield Savings)**\nThis is where your savings goal lives. Automatic transfer on payday. The account should be at a different bank than your checking — inconvenience is a feature, not a bug. The friction of transferring money prevents impulse spending.\n\nHigh-yield savings recommendation: Marcus by Goldman Sachs, Ally Bank, or SoFi Savings. Any of these currently pay significantly higher interest than a traditional bank savings account. Your money should be working while it waits.\n\nSavings rate target: start at whatever is sustainable (even 5-10% if you're starting from zero). Increase by 1% every 3 months until you feel it but can still manage.\n\n**Account 4: The Investment Account**\nAutomatic contribution on payday. Index funds. Low-cost. Consistent.\n\nIf you have an employer 401(k) with any match: contribute enough to capture the full match first. Always. This is the closest thing to a guaranteed 50-100% return on investment that exists in finance. After the match, max your Roth IRA if eligible ($7,000/year in 2024). After that, back to the 401(k) or a taxable brokerage.\n\nIndex fund recommendation: VTSAX (Vanguard Total Stock Market Index Fund) or its ETF equivalent VTI. Expense ratio 0.03%. The lowest-cost broad diversification that exists.\n\n---\n\n**THE IMPLEMENTATION SCRIPT**\n\nThis is the step you never see in financial content: the actual conversation to have.\n\nCall your HR department or use your benefits portal and say:\n\n*\"I'd like to split my direct deposit. Please send $X to [investment/savings account] and the remainder to my [checking account].\"*\n\nMost employers can do this. It takes one phone call. After that, the investment happens before you see the money, which means you never have to choose between spending and saving. The choice is gone.\n\nFor the credit card — yes, you should have one, for the protections and cashback. Automate the full balance payment every month. Never carry a balance. Use it like a debit card with rewards.\n\nThe book that lays all of this out in full detail: \"I Will Teach You To Be Rich\" by Ramit Sethi. Second edition. Outdated recommendations aside, the psychological framework is the best I've read. It's $15-18 on Amazon.\n\n[PRODUCT LINK: I Will Teach You To Be Rich by Ramit Sethi - 2nd Edition]\n\nNext email: the story of a person who made $55,000/year and saved $14,000 in one year without feeling deprived. Not through cutting — through systems.\n\nTalk soon,\nDavid\n\nP.S. — Not financial advice. This is education and framework. Your specific tax situation, income, and goals require a human professional who knows your details. A fee-only fiduciary financial advisor is the standard I'd recommend — they're paid by you, not by product commissions.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 17px;'>The Money Desk · Mintbrooks</p><h2>The Automatic Money System — build it once, run forever</h2><p>Not a budget. A system. Budgets require decisions. Systems don't.</p><div style='background: #f0f5fb; border-radius: 8px; padding: 20px; margin: 20px 0;'><p><strong>The 4-Account Architecture:</strong></p><p><strong>1. Checking (Operational)</strong> — paycheck passthrough. Use Fidelity Cash Management or Schwab — free, ATM reimbursement, pays interest.</p><p><strong>2. Bills Account (Fixed Expenses)</strong> — auto-transfer on payday. Fixed bills only. Never touch this account manually.</p><p><strong>3. High-Yield Savings</strong> — at a different bank (friction is a feature). Marcus, Ally, or SoFi. Significantly higher interest than traditional banks.</p><p><strong>4. Investment Account</strong> — auto-contribution. 401(k) match first (always — free money). Then Roth IRA. Then VTI/VTSAX index funds.</p></div><div style='background: #fffbf0; border: 1px solid #f0d060; border-radius: 8px; padding: 20px; margin: 20px 0;'><p style='margin: 0; font-weight: bold;'>The Implementation Script:</p><p>Call HR and say: <em>\"I'd like to split my direct deposit. Please send $X to [savings/investment account] and the remainder to my checking account.\"</em></p><p style='margin-bottom: 0;'>The investment happens before you see the money. The choice is gone.</p></div><p><strong>The book that covers all of this:</strong></p><a href='{{P1_URL}}' style='color: #2c5f8a;'>I Will Teach You To Be Rich — Ramit Sethi, 2nd Ed. →</a><p>David</p><p style='font-size: 12px; color: #888;'>Not financial advice. Consult a fee-only fiduciary advisor for your specific situation.</p></div>",
+      "tags_applied_on_send": ["sequence:finance", "stage:education"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:personal-finance-books"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "finance",
+          "amazon_search_term": "I Will Teach You To Be Rich Ramit Sethi second edition paperback",
+          "placement": "framework-companion",
+          "affiliate_context": "Book recommended after teaching the framework — positioned as the full-depth companion to the email's summary. Low price point, high educational value, strong brand alignment."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:finance-email-2"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The 4-account money architecture (set it up once)"
+      }
+    },
+    {
+      "niche": "finance",
+      "email_number": 3,
+      "send_day": 8,
+      "subject_line": "She made $55K and saved $14,000 in one year. Here's exactly how.",
+      "preview_text": "Not through cutting lattes. Through systems and one specific mindset shift.",
+      "from_name": "The Money Desk",
+      "plain_text_body": "I want to share a story from someone who was kind enough to let me write about her experience.\n\nAlex is 29. She works in HR for a regional hospital system. Last year she made $55,000 before taxes. She saved $14,200.\n\nThat's a 25.8% savings rate on a salary that most financial content would say \"makes saving hard.\"\n\nHere's what she did, in her own words from an email she sent me:\n\n*\"The thing that changed for me was realizing I was saving what was left over, which was almost nothing. As soon as I got paid, I was already spending. The automatic transfer flipped the script — I saved first and spent what was left. It sounds obvious but it felt genuinely revolutionary.\"*\n\nHere's the specific breakdown of her $55,000 gross salary:\n- Federal + state taxes, FICA: ~$11,000\n- Net take-home: ~$44,000 ($3,667/month)\n- Automatic transfer to HYSA on payday: $800/month\n- 401(k) contribution: $5,500/year ($458/month, enough to capture full employer match)\n- Effective monthly spend: $2,409\n- Annual savings/investment total: $9,600 HYSA + $5,500 401(k) = $15,100 (she received a small bonus, so final number was $14,200 net after one emergency)\n\nShe didn't cut her Netflix. She didn't stop going out. She didn't meal prep every Sunday.\n\nShe restructured the order of operations.\n\n**The specific order:**\n1. Paycheck arrives\n2. Automatic split: $458 to 401(k) (done at payroll, pre-tax), $800 to HYSA, remainder to checking\n3. Fixed bills auto-pay from bills sub-account\n4. Whatever is left: spend freely, no guilt\n\nShe calls this her \"guilt-free spending\" amount. She knows that when it's gone, it's gone. She doesn't track individual purchases. She doesn't have a budget app.\n\n**The key insight from Alex's story:**\n\nMost people treat savings as a spending category — something to allocate from discretionary income. Alex treats savings as a separate income stream that leaves her account before she counts it as hers.\n\nThe psychological term for this is \"pay yourself first,\" but it's often taught too abstractly. The implementation matters:\n- Automatic transfer the day of or day after paycheck\n- To a separate institution\n- With an amount that feels slightly uncomfortable but manageable\n\nIf $800 isn't realistic for you, start with $50. The mechanism is the same. The amount scales.\n\nThe tool Alex used to track her progress (because she's wired to want to see the numbers, which is genuinely useful):\n\n[PRODUCT LINK: You Need A Budget (YNAB) app - 34-day free trial]\n\nNote: YNAB isn't a traditional budget tracker — it's a system for giving every dollar a job before you spend it. It's the most effective budget app I've come across. $109/year. Many people save more than that in the first month.\n\nTalk soon,\nDavid\n\nP.S. — Not financial advice. Alex's situation is hers. Your income, tax situation, and expenses differ. The framework transfers. The exact numbers don't.\n\nP.P.S. — If you're on less than $40,000 gross, or have significant consumer debt, the order of operations changes. Reply with your specific situation and I'll point you at the right sequence.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 17px;'>The Money Desk · Mintbrooks</p><h2>She made $55K and saved $14,000 in one year</h2><blockquote style='border-left: 4px solid #2c5f8a; margin: 20px 0; padding: 16px 20px; background: #f0f5fb; font-style: italic;'><p>\"The thing that changed for me was realizing I was saving what was left over, which was almost nothing. The automatic transfer flipped the script — I saved first and spent what was left. It sounds obvious but it felt genuinely revolutionary.\"</p><p style='font-style: normal; font-size: 13px; color: #888;'>— Alex, 29, $55K salary, $14,200 saved in year 1</p></blockquote><div style='background: #f0f5fb; border-radius: 8px; padding: 20px; margin: 20px 0;'><p style='margin: 0 0 8px; font-weight: bold;'>Her monthly breakdown ($3,667 take-home):</p><p style='margin: 0;'>→ 401(k) auto-contribution: $458 (pre-tax, captures full employer match)<br>→ Auto-transfer to HYSA: $800<br>→ Remaining guilt-free spending: $2,409</p></div><p><strong>The key insight:</strong> She treats savings as a separate income stream that leaves before she counts it as hers. Not a spending category. A first allocation.</p><p>The tool she used to stay connected to the numbers:</p><a href='{{P1_URL}}' style='color: #2c5f8a;'>YNAB — You Need A Budget (34-day free trial) →</a><p>$109/year. Most people save more than that in month one.</p><p>David</p><p style='font-size: 12px; color: #888;'>Not financial advice. Framework transfers; exact numbers are hers.</p></div>",
+      "tags_applied_on_send": ["sequence:finance", "stage:social-proof"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:budgeting-tools"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "finance",
+          "amazon_search_term": "YNAB You Need a Budget software subscription personal finance",
+          "placement": "story-resolution",
+          "affiliate_context": "Reader story completion — YNAB mentioned as the tracking tool that helped Alex stay connected to her progress. High conversion because story does the selling work."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:finance-email-3"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "The exact breakdown: $55K salary, $14K saved. No cuts, no deprivation."
+      }
+    },
+    {
+      "niche": "finance",
+      "email_number": 4,
+      "send_day": 14,
+      "subject_line": "The financial advice you're getting is making you poorer",
+      "preview_text": "Index funds vs. individual stocks. Advisors who charge commissions. The emergency fund myth.",
+      "from_name": "The Money Desk",
+      "plain_text_body": "I want to push back on some things you've probably been told.\n\n**\"You should pick stocks / actively invest\"**\n\nThis is almost certainly not true for most people.\n\nThe evidence: over 15 years, approximately 92% of actively managed mutual funds underperform their benchmark index. 92%. That means that a fund manager who is paid to pick stocks — with a research team, Bloomberg terminals, and decades of experience — will most likely perform worse than simply buying the whole market.\n\nYou, checking CNBC between meetings, will not outperform professional fund managers who don't outperform the index.\n\nThe answer is index funds. Total market index (VTI, VTSAX) or S&P 500 index (VOO, VFIAX). Buy every month regardless of what the market is doing. Never sell during a down market. Done.\n\nThis is not exciting. That's the point. Investing that requires constant attention and decision-making is a system waiting to fail.\n\n**\"Your financial advisor has your best interest in mind\"**\n\nOnly if they are a *fee-only fiduciary.* This is a legal designation that means they are required to recommend what's best for you, paid directly by you with no commission structure.\n\nMany advisors — including ones at major banks — are held to a \"suitability\" standard, not a fiduciary standard. This means they can recommend products that are merely \"suitable\" for you, even if a better option exists. They earn commissions on products they sell.\n\nHow to find a fee-only fiduciary: napfa.org. NAPFA is the National Association of Personal Financial Advisors. All listed advisors are fee-only. Pay for their time. Get advice that's actually for you.\n\n**\"You need 3-6 months in an emergency fund before investing\"**\n\nI partially disagree with this one, and here's why:\n\nIf you have high-interest consumer debt (credit card at 20%+ APR), the \"emergency fund first\" advice ignores that your debt is compounding against you every month. The order should be:\n1. $1,000 starter emergency fund (just the floor, not the full amount)\n2. Employer 401(k) match (free money)\n3. High-interest debt elimination (avalanche method: highest APR first)\n4. Full 3-6 month emergency fund\n5. Additional investing\n\nIf you have no high-interest debt and an employer match available, save the emergency fund concurrently with capturing the match.\n\n**The one financial move most people skip that has the best risk-adjusted return:**\n\nNegotiating your salary.\n\nA 5% salary increase on a $60,000 income is $3,000/year — every year, forever, compounding into every future raise and retirement calculation. You cannot index-fund your way to that kind of return on effort.\n\nScript for asking for a raise:\n\n*\"I'd like to discuss my compensation. Over the past [X months/year], I've delivered [specific achievement 1], [specific achievement 2], and [specific achievement 3]. Based on market data for this role and my contributions, I'm looking to bring my salary to [specific number]. I'd like to understand what would need to happen to get there.\"*\n\nThe specificity matters. \"I work hard\" does not work. Three specific achievements + a specific number + a question that opens dialogue is the structure.\n\nTwo books I'd recommend for the financial and negotiation layer:\n\n[PRODUCT LINK: The Simple Path to Wealth by JL Collins]\n[PRODUCT LINK: Never Split the Difference by Chris Voss - negotiation]\n\nTalk soon,\nDavid\n\nP.S. — Not financial advice. These are frameworks and education. Your specific investment decisions, tax situation, and financial goals require a professional who knows your details. Please work with one.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 17px;'>The Money Desk · Mintbrooks</p><h2>The financial advice making you poorer</h2><p><strong>\"Pick stocks\"</strong> — 92% of actively managed funds underperform their index over 15 years. Buy VTI or VOO. Done.</p><p><strong>\"Your financial advisor has your back\"</strong> — Only if they're a fee-only fiduciary. Use napfa.org to find one. Most bank advisors are held to a suitability standard, not fiduciary.</p><p><strong>\"Build full emergency fund before investing\"</strong> — Not if you have high-interest debt. Correct order: $1K starter fund → employer match → pay off high-APR debt → full emergency fund → more investing.</p><div style='background: #fffbf0; border: 1px solid #f0d060; border-radius: 8px; padding: 20px; margin: 20px 0;'><p style='margin: 0 0 8px; font-weight: bold;'>The raise script:</p><p style='font-style: italic; margin: 0;'>\"Over the past [period], I've delivered [achievement 1], [achievement 2], [achievement 3]. Based on market data, I'm looking to bring my salary to [specific number]. What would need to happen to get there?\"</p></div><p><strong>Two books worth reading:</strong></p><p><a href='{{P1_URL}}' style='color: #2c5f8a;'>The Simple Path to Wealth — JL Collins →</a><br><a href='{{P2_URL}}' style='color: #2c5f8a;'>Never Split the Difference — Chris Voss →</a></p><p>David</p><p style='font-size: 12px; color: #888;'>Not financial advice. Your situation requires a fee-only fiduciary who knows your details.</p></div>",
+      "tags_applied_on_send": ["sequence:finance", "stage:objection-handler"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:interest:finance-books"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "finance",
+          "amazon_search_term": "The Simple Path to Wealth JL Collins stock market index fund",
+          "placement": "contrarian-education",
+          "affiliate_context": "Book that supports the index fund argument made in the email — reader arrives at the recommendation already convinced by the logic"
+        },
+        {
+          "slot_id": "product_2",
+          "category": "finance",
+          "amazon_search_term": "Never Split the Difference Chris Voss negotiation book",
+          "placement": "salary-negotiation-companion",
+          "affiliate_context": "Negotiation book recommended after salary raise script — natural progression from the advice just given"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:finance-email-4"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "92% of fund managers lose to the index. And you're going to pick stocks?"
+      }
+    },
+    {
+      "niche": "finance",
+      "email_number": 5,
+      "send_day": 21,
+      "subject_line": "Your money picks (based on your situation)",
+      "preview_text": "Debt, savings, investing, or income — here's what I'd focus on first",
+      "from_name": "The Money Desk",
+      "plain_text_body": "A few weeks ago you told me where you are with money.\n\nBelow I've broken out the specific frameworks and tools by situation. Skip to yours.\n\n---\n\n**IF YOUR SITUATION IS: Debt**\n\nFirst: not all debt is equal. Before anything else, categorize:\n- High-interest consumer debt (credit cards, payday loans — APR above 8%): attack aggressively\n- Student loans (APR below 6%): manageable, pay minimums while building other systems\n- Mortgage: lowest priority — your money works harder in index funds at historical rates\n\nFor high-interest debt elimination:\n→ **Avalanche method** (mathematically optimal): pay minimums on all debts, throw every extra dollar at highest APR first\n→ **Snowball method** (psychologically easier): pay minimums on all, attack smallest balance first for quick wins\n\nI recommend avalanche for people with strong willpower, snowball for everyone who needs motivation. The debt you actually pay off beats the optimal method you abandon.\n\nCallable action: open a spreadsheet this week. List every debt, the balance, the interest rate, the minimum payment. Total it. Now you have the full picture. Most people avoid this. Don't.\n\nTool: Tiller Money (connects to your bank, auto-updates your spreadsheet in Google Sheets). $79/year. Better than any app because you see every dollar manually.\n\n[PRODUCT LINK: Tiller Money personal finance spreadsheet tool subscription]\n\n---\n\n**IF YOUR SITUATION IS: Savings**\n\nThe problem is almost always the same: you don't have a specific savings target and you're saving what's left, not saving first.\n\nAction 1: Open a high-yield savings account this week if you don't have one. Marcus by Goldman Sachs or Ally Bank. Both are FDIC insured. Both pay meaningfully more than a traditional savings account.\n\nAction 2: Set up an automatic transfer for the day after payday. Start with whatever is uncomfortable but sustainable.\n\nAction 3: Name your savings account. \"Emergency Fund.\" \"House Down Payment.\" \"Leave My Job Fund.\" Research shows named accounts lead to higher savings rates because the money has an identity.\n\nTool: Acorns — rounds up every debit card purchase and invests the difference. For people who want to start with $20/month rather than a big system overhaul. $3/month subscription.\n\n[PRODUCT LINK: Acorns investing app — automatic round-up investing]\n\n---\n\n**IF YOUR SITUATION IS: Investing**\n\nSimplified first-principles investing for someone starting today:\n\n1. Open a Roth IRA at Vanguard, Fidelity, or Schwab (they're all good — pick one, stop overthinking it)\n2. Contribute the maximum: $7,000/year in 2024 if under 50\n3. Invest 100% in VTI (Vanguard Total Market ETF) if you're under 50\n4. Never sell during a down market\n5. Increase contributions every time your income increases\n\nFor 401(k) allocation: same principle. Target-date index fund (Vanguard Target Retirement 2055 or 2060 if you're in your 30s) is the set-and-forget option.\n\nBook: The Little Book of Common Sense Investing by John Bogle. The definitive plain-language case for index funds from the man who invented them.\n\n[PRODUCT LINK: The Little Book of Common Sense Investing John Bogle]\n\n---\n\n**IF YOUR SITUATION IS: Income**\n\nThis is the only email list that will tell you plainly: if you make less than $40,000/year, optimization tips are limited in their impact. A 5-10% savings rate on $35,000 is $1,750/year. The leverage is in income.\n\nThree paths with the best effort-to-income ratio for most people:\n\n1. **Negotiate your current salary** (script is in the previous email)\n2. **Develop a marketable skill and document it publicly** — picking one skill (data analysis, copywriting, video editing, web development), learning it to a demonstrable level, and publishing work creates the most direct path to rate increases\n3. **Freelance your existing skills for 10-15 hours/week** — an extra $500-800/month on top of a full-time salary, directed entirely at savings or debt paydown, changes the math significantly\n\nBook: Atomic Habits by James Clear — not directly a finance book, but the systems thinking behind habit formation is the infrastructure on which income improvement is built.\n\n[PRODUCT LINK: Atomic Habits by James Clear]\n\n---\n\nAll affiliate links disclosed. Everything here is education.\n\nTalk soon,\nDavid\n\nNot financial advice.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 17px;'>The Money Desk · Mintbrooks</p><h2>Your money situation — what to focus on first</h2><p>Skip to yours.</p><div style='border-left: 4px solid #c0392b; padding-left: 20px; margin: 20px 0;'><h3 style='color: #c0392b;'>Debt</h3><p>Avalanche (highest APR first) vs. Snowball (smallest balance first). The method you actually follow beats the optimal method you abandon.<br><a href='{{DEBT_P1}}' style='color: #2c5f8a;'>Tiller Money — spreadsheet that auto-updates with your accounts →</a></p></div><div style='border-left: 4px solid #27ae60; padding-left: 20px; margin: 20px 0;'><h3 style='color: #27ae60;'>Savings</h3><p>Open a high-yield savings account (Marcus or Ally). Auto-transfer day after payday. Name the account — named accounts save more.<br><a href='{{SAVINGS_P1}}' style='color: #2c5f8a;'>Acorns — round-up investing for starting small →</a></p></div><div style='border-left: 4px solid #2c5f8a; padding-left: 20px; margin: 20px 0;'><h3 style='color: #2c5f8a;'>Investing</h3><p>Roth IRA → max contribution → 100% VTI → never sell → increase with every raise.<br><a href='{{INVEST_P1}}' style='color: #2c5f8a;'>The Little Book of Common Sense Investing — Bogle →</a></p></div><div style='border-left: 4px solid #8e44ad; padding-left: 20px; margin: 20px 0;'><h3 style='color: #8e44ad;'>Income</h3><p>Negotiate first. Then skill development + public documentation. Then freelance existing skills.<br><a href='{{INCOME_P1}}' style='color: #2c5f8a;'>Atomic Habits — James Clear →</a></p></div><p>David</p><p style='font-size: 12px; color: #888;'>Not financial advice.</p></div>",
+      "tags_applied_on_send": ["sequence:finance", "stage:conversion"],
+      "tags_applied_on_click": ["tag:journey:converted-click", "tag:segment:finance-buyer-intent"],
+      "product_slots": [
+        {
+          "slot_id": "product_debt_1",
+          "category": "finance",
+          "amazon_search_term": "Tiller Money Google Sheets personal finance tracker subscription",
+          "placement": "segmented-situation",
+          "affiliate_context": "Debt segment — Tiller Money recommended for the visualization exercise (list all debts) because seeing the full picture is the first action step"
+        },
+        {
+          "slot_id": "product_savings_1",
+          "category": "finance",
+          "amazon_search_term": "Acorns app round up investing micro-investing subscription",
+          "placement": "segmented-situation",
+          "affiliate_context": "Savings segment — Acorns positioned as the low-friction starting point for people who need to start with very small amounts"
+        },
+        {
+          "slot_id": "product_investing_1",
+          "category": "finance",
+          "amazon_search_term": "Little Book of Common Sense Investing John Bogle index funds",
+          "placement": "segmented-situation",
+          "affiliate_context": "Investing segment — Bogle's book from the inventor of index funds, natural authority pairing with the VTI/index fund recommendation"
+        },
+        {
+          "slot_id": "product_income_1",
+          "category": "finance",
+          "amazon_search_term": "Atomic Habits James Clear habit formation book",
+          "placement": "segmented-situation",
+          "affiliate_context": "Income segment — habit formation book as infrastructure for the skill-development path recommended. Highest-volume seller in the list."
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:engaged:finance-email-5"],
+        "on_click_product": ["tag:journey:converted-click", "queue:post-purchase-care-sequence"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "resend_with_variant_subject",
+        "variant_subject": "Your specific money situation — what to do first"
+      }
+    },
+    {
+      "niche": "finance",
+      "email_number": 6,
+      "send_day": 35,
+      "subject_line": "A month in — one honest question about your money",
+      "preview_text": "Checking in. Not a pitch. A question.",
+      "from_name": "The Money Desk",
+      "plain_text_body": "It's been about a month.\n\nI want to ask you one honest question.\n\nDid you do anything?\n\nNot everything. Not the whole system. Just one thing.\n\nDid you open the high-yield savings account? Did you set up the automatic transfer? Did you look at your employer match? Did you read even the first chapter of the book I recommended?\n\nOne thing.\n\nHere's the honest truth about money and behavior change: most people feel better after reading about personal finance and then do nothing. This is well-documented in behavioral economics. The feeling of planning and the feeling of doing are neurologically similar. Reading about the automatic transfer gives you some of the satisfaction of having done it.\n\nI say this not to be harsh, but because I know how it works. I've felt it.\n\nSo here's what I'm going to ask: hit reply and tell me one thing you've done (or tried and hit a wall on) since you signed up.\n\nIf you've done something — I want to hear. Genuinely.\n\nIf you haven't — tell me what stopped you. Was it time? Uncertainty about which bank to choose? Fear of seeing the real numbers? I've written about all of those blockers. I'll send you the right thing.\n\nI'll keep writing about money — systems, behavior, specific tool breakdowns, occasionally an interview with someone who solved a problem I think you're dealing with. Roughly twice a week.\n\nIf this isn't what you came for, unsubscribe link is below.\n\nIf it is — welcome to the slow, boring, highly effective path to financial control. I'm glad you're here.\n\nOne last thing: the single most important first step for anyone, regardless of situation:\n\nOpen a high-yield savings account if you don't have one. Transfer $50 into it today. Call it \"Emergency Fund.\"\n\nFifty dollars. Today. The mechanism of doing it is more important than the amount. You're proving to yourself that you can.\n\n[PRODUCT LINK: Marcus by Goldman Sachs High Yield Online Savings Account — no minimums, FDIC insured]\n\nTalk soon,\nDavid\n\nP.S. — Not financial advice. Marcus is a product. Do your own research on current rates and compare with Ally and SoFi before opening anything.",
+      "html_body": "<div style='font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #1a1a1a; line-height: 1.8; font-size: 15px;'><p style='color: #2c5f8a; font-weight: bold; font-size: 17px;'>The Money Desk · Mintbrooks</p><h2>One honest question about your money</h2><p>Did you do anything? Not everything. One thing.</p><p>Most people feel better after reading about personal finance and then do nothing. Reading about the system gives you the satisfaction of having done it. I know because I've felt it.</p><p><strong>Hit reply and tell me:</strong> one thing you've done, or what stopped you. I'll send you the right resource for whatever's in the way.</p><p>The single most important first step for anyone:</p><div style='background: #f0f5fb; border-radius: 8px; padding: 20px; margin: 20px 0; text-align: center;'><p style='font-size: 17px; font-weight: bold; margin: 0 0 8px;'>Open a high-yield savings account.</p><p style='margin: 0 0 16px;'>Transfer $50 into it today. Call it \"Emergency Fund.\"</p><a href='{{P1_URL}}' style='background: #2c5f8a; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: bold;'>Marcus by Goldman Sachs HYSA →</a></div><p>The mechanism of doing it matters more than the amount. Fifty dollars proves to yourself that you can.</p><p>David</p><p style='font-size: 12px; color: #888;'>Not financial advice. Compare rates across Marcus, Ally, and SoFi before opening. All are FDIC insured.</p></div>",
+      "tags_applied_on_send": ["sequence:finance", "stage:re-engagement"],
+      "tags_applied_on_click": ["tag:re-engaged", "tag:finance:still-active"],
+      "product_slots": [
+        {
+          "slot_id": "product_1",
+          "category": "finance",
+          "amazon_search_term": "high yield savings account online banking FDIC insured",
+          "placement": "re-engagement-single-action",
+          "affiliate_context": "The single lowest-friction financial action repeated in re-engagement — HYSA account opening is the entry-level financial behavior that starts the system"
+        }
+      ],
+      "automation_triggers": {
+        "on_open": ["tag:re-engaged:finance-email-6", "remove-tag:at-risk-churn"],
+        "on_reply": ["tag:high-value:finance-replied", "queue:personal-response-workflow"],
+        "on_click_product": ["tag:journey:converted-click", "queue:social-proof-followup-72h"],
+        "on_no_open_after_days": 7,
+        "no_open_action": "move_to_win_back_sequence",
+        "variant_subject": "I won't send another email unless you want me to"
+      }
+    }
+  ],
+  "automation_flow": {
+    "sequence_name": "finance-post-sequence",
+    "description": "Post-sequence automation for finance subscribers",
+    "branches": [
+      {
+        "condition": "tag:re-engaged:finance-email-6",
+        "action": "enroll_in_weekly_digest",
+        "digest_cadence": "every_monday",
+        "digest_content": "1 money framework or behavior insight + 1 tool or book recommendation + not-financial-advice disclaimer",
+        "digest_from_name": "The Money Desk"
+      },
+      {
+        "condition": "tag:money-focus:debt AND tag:journey:converted-click",
+        "action": "enroll_in_debt_payoff_series",
+        "timing": "7 days after email 6",
+        "content": "4-email debt elimination deep dive: avalanche math, snowball psychology, debt consolidation considerations, celebrating progress"
+      },
+      {
+        "condition": "tag:money-focus:investing AND tag:journey:converted-click",
+        "action": "enroll_in_investing_foundation_series",
+        "timing": "7 days after email 6",
+        "content": "5-email investing series: account types, asset allocation by age, tax-advantaged accounts, rebalancing"
+      },
+      {
+        "condition": "tag:journey:converted-click AND NOT tag:post-purchase-confirmed",
+        "action": "send_implementation_check_in",
+        "timing": "14 days after click",
+        "content": "Did you get [product] set up? Common first questions answered."
+      },
+      {
+        "condition": "NOT opened any email in 30 days",
+        "action": "enroll_in_win_back_sequence",
+        "win_back_subject_1": "The one money move that compounds while you do nothing",
+        "win_back_subject_2": "Removing you from the list (unless you'd like to stay)"
+      }
+    ],
+    "seasonal_campaigns": [
+      {"name": "Tax Season Prep", "send_month": "February", "content": "Deductions most people miss, when to hire a CPA, free filing options"},
+      {"name": "Open Enrollment Season", "send_month": "October", "content": "401k contribution maximization, HSA strategy, benefits optimization"},
+      {"name": "Year-End Money Review", "send_month": "December", "content": "Annual financial audit framework, 2025 contribution limits, Roth conversion considerations"}
+    ]
+  }
+}

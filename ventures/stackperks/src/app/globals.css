@@ -1,0 +1,230 @@
+@import "tailwindcss";
+
+:root {
+  /* Stackperks — young adult deals hub */
+  --bg: #f8f7ff;
+  --surface: #ffffff;
+  --surface-dark: #0d0c1d;
+  --border: rgba(124,58,237,0.12);
+  --border-dark: rgba(255,255,255,0.08);
+
+  /* Brand */
+  --violet: #7c3aed;
+  --violet-light: #a78bfa;
+  --violet-dark: #5b21b6;
+  --emerald: #10b981;
+  --emerald-dark: #059669;
+  --indigo: #4f46e5;
+  --amber: #f59e0b;
+
+  /* Text */
+  --text: #0f0a1e;
+  --text-muted: #6b7280;
+  --text-soft: #9ca3af;
+  --text-on-dark: #f0eeff;
+  --text-muted-dark: rgba(240,238,255,0.55);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(124,58,237,0.18);
+  color: #0f0a1e;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--violet);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-label-light {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--violet-light);
+  opacity: 0.75;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(15,10,30,0.05);
+}
+
+/* Primary CTA — violet (brand action) */
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(124,58,237,0.35);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(124,58,237,0.50);
+}
+
+/* Emerald CTA — claim/go */
+.btn-emerald {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(16,185,129,0.35);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-emerald:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(16,185,129,0.48);
+}
+
+/* Amber CTA — secondary value */
+.btn-amber {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 4px 20px rgba(245,158,11,0.30);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-amber:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(245,158,11,0.42);
+}
+
+/* Ghost button on dark backgrounds */
+.btn-ghost-dark {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.82);
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+.btn-ghost-dark:hover {
+  background: rgba(255,255,255,0.13);
+  color: white;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(28,25,23,0.05);
+}
+
+.badge-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(217,119,6,0.1);
+  border: 1px solid rgba(217,119,6,0.22);
+  color: #b45309;
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--amber);
+  margin-bottom: 10px;
+}
+
+/* Green variant of primary CTA */
+.btn-primary.btn-green {
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.section-label-light {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(251,191,36,0.85);
+  margin-bottom: 10px;
+}
+
+/* ── 90-Day Money Reset product page — responsive grid overrides ── */
+@media (max-width: 768px) {
+  .problem-cols {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .phase-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .deliverable-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .timeline-line {
+    display: none;
+  }
+  .timeline-row {
+    grid-template-columns: 1fr !important;
+    gap: 4px !important;
+  }
+}
+@media (max-width: 480px) {
+  .deliverable-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
