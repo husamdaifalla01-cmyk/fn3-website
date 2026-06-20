@@ -243,7 +243,7 @@ export default function LifestyleBridge() {
                     The 90-Day Money Reset
                   </div>
                   <div style={{ fontSize: '14px', color: 'rgba(253,250,246,0.6)', lineHeight: 1.55, marginBottom: '20px' }}>
-                    A step-by-step protocol for people who know what to do — and need the structure to actually do it. $24.
+                    A step-by-step protocol for people who know what to do — and need the structure to actually do it. $17.
                   </div>
                   <div style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#B8955A', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     Get the guide → <span style={{ fontSize: '16px' }}>→</span>

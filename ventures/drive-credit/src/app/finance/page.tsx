@@ -857,7 +857,7 @@ export default function FinancePage() {
             transition: 'transform 0.2s, box-shadow 0.2s',
           }}
         >
-          Get the guide — $24
+          Get the guide — $17
         </Link>
         <span
           style={{
@@ -985,7 +985,7 @@ export default function FinancePage() {
             letterSpacing: '-0.03em',
           }}
         >
-          $24
+          $17
         </div>
         <div style={{ fontSize: '12px', color: 'rgba(253,250,246,0.4)', marginTop: '4px' }}>
           One-time · No subscription · 60-day guarantee

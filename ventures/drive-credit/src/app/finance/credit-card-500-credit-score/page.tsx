@@ -8,8 +8,8 @@ import AffiliateLink from '@/components/AffiliateLink'
 import FTCDisclosure from '@/components/FTCDisclosure'
 import { YENDO_500_HERO, YENDO_500_CARD, YENDO_500_CTA } from '@/lib/affiliateUrls'
 
-// Stripe checkout for Credit Sequence ($24 product)
-const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/14AbJ10u5c6McBb6Fa08g01'
+// Stripe checkout for Credit Sequence ($17 product)
+const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/14A4gz90Bgn230BfbG08g0c'
 
 export const metadata: Metadata = {
   title: 'Credit Cards for 500 Credit Score (2026): Cards That Actually Approve',
@@ -136,9 +136,9 @@ export default function Page() {
           <p className="text-xs mt-2" style={{ color: '#a8a29e' }}>Soft inquiry only · Affiliate link · No score impact</p>
         </div>
 
-        {/* Secondary offer — Stripe $24 product (the full playbook) */}
+        {/* Secondary offer — Stripe $17 product (the full playbook) */}
         <div className="rounded-2xl p-6 mb-10" style={{ background: '#1c1917' }}>
-          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>Want the whole plan? · $24</div>
+          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>Want the whole plan? · $17</div>
           <h3 className="text-xl font-black text-white mb-2">The 90-Day Money Reset</h3>
           <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
             Every move in this guide — sequenced day-by-day, with the bureau scripts, the statement-closing-date trick, and the secured-vs-Yendo decision tree. Instant PDF. 60-day refund.
@@ -147,7 +147,7 @@ export default function Page() {
             href={STRIPE_CHECKOUT_URL}
             className="btn-primary inline-block py-2.5 px-6 text-sm"
           >
-            Get The 90-Day Reset → $24
+            Get The 90-Day Reset → $17
           </a>
           <p className="text-xs mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>Secure checkout via Stripe · One-time payment</p>
         </div>
@@ -258,7 +258,7 @@ export default function Page() {
         </p>
 
         <div className="rounded-2xl p-6 text-center mb-12" style={{ background: '#1c1917' }}>
-          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>The full playbook · $24</div>
+          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>The full playbook · $17</div>
           <h3 className="text-xl font-black text-white mb-2">Get The 90-Day Credit Reset</h3>
           <p className="text-sm mb-5" style={{ color: 'rgba(255,255,255,0.5)' }}>
             Every move in this guide — sequenced day-by-day, with bureau scripts, the statement-closing-date trick, and the secured-vs-Yendo decision tree. Instant PDF. 60-day refund.
@@ -267,7 +267,7 @@ export default function Page() {
             href={STRIPE_CHECKOUT_URL}
             className="btn-primary inline-block py-3 px-8"
           >
-            Get The 90-Day Reset → $24
+            Get The 90-Day Reset → $17
           </a>
           <p className="text-xs mt-3" style={{ color: 'rgba(255,255,255,0.28)' }}>Secure checkout via Stripe · One-time payment · 60-day refund</p>
         </div>
@@ -321,7 +321,7 @@ export default function Page() {
             </Link>
             <Link href="/products/90-day-money-reset" className="rounded-xl p-4 hover:bg-stone-50 transition" style={{ border: '1px solid rgba(28,25,23,0.08)' }}>
               <div className="font-bold mb-1" style={{ color: '#1c1917' }}>The 90-Day Money Reset</div>
-              <div style={{ color: '#78716c' }}>Full PDF — every move, in order. $24, instant, 60-day refund.</div>
+              <div style={{ color: '#78716c' }}>Full PDF — every move, in order. $17, instant, 60-day refund.</div>
             </Link>
           </div>
         </section>
@@ -343,7 +343,7 @@ export default function Page() {
 
         <T3ProductLeadMagnet
           product="The 90-Day Money Reset"
-          price="$24"
+          price="$17"
           productUrl="/products/90-day-money-reset"
           productDescr="Full PDF guide — every move, in order. Instant download. 60-day refund."
         />

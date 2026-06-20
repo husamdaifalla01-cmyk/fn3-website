@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 // ─── Stripe payment link ─────────────────────────────────────────────────────
-const STRIPE_URL = 'https://buy.stripe.com/14AbJ10u5c6McBb6Fa08g01'
+const STRIPE_URL = 'https://buy.stripe.com/14A4gz90Bgn230BfbG08g0c'
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 function useInView(threshold = 0.12) {
@@ -187,7 +187,7 @@ export default function MoneyResetPage() {
             boxShadow: '0 4px 16px rgba(29,58,47,0.5)',
           }}
         >
-          Get it — $24 →
+          Get it — $17 →
         </a>
       </div>
 
@@ -319,7 +319,7 @@ export default function MoneyResetPage() {
                 e.currentTarget.style.boxShadow = '0 6px 28px rgba(29,58,47,0.45)'
               }}
             >
-              Start my reset — $24
+              Start my reset — $17
             </a>
             <a
               href="#how-it-works"
@@ -357,7 +357,7 @@ export default function MoneyResetPage() {
             gap: '28px',
             flexWrap: 'wrap',
           }}>
-            {['One-time $24', 'Instant PDF delivery', '60-day guarantee'].map(t => (
+            {['One-time $17', 'Instant PDF delivery', '60-day guarantee'].map(t => (
               <span key={t} style={{
                 fontSize: '12px',
                 color: 'rgba(253,250,246,0.5)',
@@ -780,7 +780,7 @@ function DeliverablesSection() {
               lineHeight: 1,
               letterSpacing: '-0.03em',
             }}>
-              $24
+              $17
             </div>
             <div style={{ fontSize: '12px', color: 'rgba(253,250,246,0.35)', marginTop: '6px' }}>
               Instant PDF delivery
@@ -867,7 +867,7 @@ function DeliverablesSection() {
               e.currentTarget.style.boxShadow = '0 6px 32px rgba(184,149,90,0.35)'
             }}
           >
-            Get everything — $24
+            Get everything — $17
           </a>
         </div>
       </div>
@@ -1234,7 +1234,7 @@ function BuySection() {
             letterSpacing: '-0.04em',
             marginBottom: '8px',
           }}>
-            $24
+            $17
           </div>
           <div style={{
             fontSize: '13px',
@@ -1302,7 +1302,7 @@ function BuySection() {
               e.currentTarget.style.boxShadow = '0 6px 28px rgba(29,58,47,0.35)'
             }}
           >
-            Start my reset — $24
+            Start my reset — $17
           </a>
 
           {/* Security line */}
@@ -1380,7 +1380,7 @@ function GuaranteeSection() {
             Follow the Phase 1 and Phase 2 actions. Complete at least 45 of the first 60 days.
             If you haven't seen measurable movement — a score increase, a debt removed, a
             creditor communication resolved — email us for a full refund. No interrogation.
-            No "prove it." You did the work. If it didn't move the needle, you get your $24 back.
+            No "prove it." You did the work. If it didn't move the needle, you get your $17 back.
           </p>
           <p style={{
             fontSize: '13px',
@@ -1389,7 +1389,7 @@ function GuaranteeSection() {
             margin: 0,
             fontStyle: 'italic',
           }}>
-            $24 is less than one missed payment's penalty fee.
+            $17 is less than one missed payment's penalty fee.
           </p>
         </div>
       </div>
@@ -1463,7 +1463,7 @@ function CloseSection() {
           margin: '0 0 52px',
         }}>
           You might close this tab. Those are all things you've done before.
-          Or: you could spend $24 today — one time, no subscription — and get a
+          Or: you could spend $17 today — one time, no subscription — and get a
           day-by-day path out of avoidance built specifically for a person who
           already knows what they should do.
         </p>
@@ -1512,7 +1512,7 @@ function CloseSection() {
             P.S. — The most common thing people say after buying this guide is: "I wish I'd done
             this two years ago." The second most common: "I can't believe how manageable this felt."
             You've been postponing this for at least that long. The shame you feel about the number
-            is keeping the number exactly where it is. $24 and 90 days is a very small trade for
+            is keeping the number exactly where it is. $17 and 90 days is a very small trade for
             the thing you've been carrying.
           </p>
         </div>

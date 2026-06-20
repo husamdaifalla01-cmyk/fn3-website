@@ -271,7 +271,7 @@ export default function Page() {
 
         <T3ProductLeadMagnet
           product="The 90-Day Money Reset"
-          price="$24"
+          price="$17"
           productUrl="/products/90-day-money-reset"
           productDescr="Full PDF guide — get out of the high-cost borrowing loop, in order. Instant download. 60-day refund."
         />

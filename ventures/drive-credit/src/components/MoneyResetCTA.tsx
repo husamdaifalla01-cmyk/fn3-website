@@ -75,7 +75,7 @@ export default function MoneyResetCTA({ variant = 'mid' }: Props) {
         >
           The 90-Day Money Reset walks you through every step in this article —
           plus the creditor scripts, the weekly tracking system, and the no-shame
-          mindset framework that makes it stick. $24, instant PDF delivery.
+          mindset framework that makes it stick. $17, instant PDF delivery.
         </p>
 
         <a
@@ -94,7 +94,7 @@ export default function MoneyResetCTA({ variant = 'mid' }: Props) {
             boxShadow: '0 4px 24px rgba(184,149,90,0.3)',
           }}
         >
-          Get the 90-Day Money Reset — $24
+          Get the 90-Day Money Reset — $17
         </a>
 
         <p
@@ -167,7 +167,7 @@ export default function MoneyResetCTA({ variant = 'mid' }: Props) {
           }}
         >
           A step-by-step protocol with the creditor scripts, tracking system, and
-          order of operations that makes this approach stick. $24, instant PDF.
+          order of operations that makes this approach stick. $17, instant PDF.
         </p>
         <a
           href="/products/90-day-money-reset"
@@ -186,7 +186,7 @@ export default function MoneyResetCTA({ variant = 'mid' }: Props) {
             textDecoration: 'none',
           }}
         >
-          Get the guide — $24 →
+          Get the guide — $17 →
         </a>
       </div>
     </div>

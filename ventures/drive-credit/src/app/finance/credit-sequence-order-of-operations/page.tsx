@@ -6,8 +6,8 @@ import FTCDisclosure from '@/components/FTCDisclosure'
 import AffiliateLink from '@/components/AffiliateLink'
 import { YENDO_GUIDE_HERO } from '@/lib/affiliateUrls'
 
-// Stripe checkout for the Credit Sequence ($24 product)
-const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/14AbJ10u5c6McBb6Fa08g01'
+// Stripe checkout for the Credit Sequence ($17 product)
+const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/14A4gz90Bgn230BfbG08g0c'
 
 export const metadata: Metadata = {
   title: 'The Credit Sequence: What to Fix First, Second, Third (2026)',
@@ -120,16 +120,16 @@ export default function Page() {
           subtext="The exact order to fix your file — utilization, statement timing, the right new account — in one email. Free."
         />
 
-        {/* Primary offer — Stripe $24 product */}
+        {/* Primary offer — Stripe $17 product */}
         <div className="rounded-2xl p-6 mb-10" style={{ background: '#1c1917' }}>
-          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>The full playbook · $24</div>
+          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>The full playbook · $17</div>
           <h3 className="text-xl font-black text-white mb-2">The 90-Day Money Reset</h3>
           <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
             Every step below, sequenced day-by-day — with the bureau scripts, the statement-closing-date trick, and the
             secured-vs-Yendo decision tree. Instant PDF. 60-day refund.
           </p>
           <a href={STRIPE_CHECKOUT_URL} className="btn-primary inline-block py-2.5 px-6 text-sm">
-            Get The 90-Day Reset → $24
+            Get The 90-Day Reset → $17
           </a>
           <p className="text-xs mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>Secure checkout via Stripe · One-time payment</p>
         </div>
@@ -206,9 +206,9 @@ export default function Page() {
         <div className="rounded-2xl p-6" style={{ background: '#1c1917' }}>
           <h3 className="text-xl font-black text-white mb-2">Want it sequenced day-by-day?</h3>
           <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
-            The 90-Day Money Reset turns this order of operations into a dated plan with scripts and decision trees. $24, instant PDF, 60-day refund.
+            The 90-Day Money Reset turns this order of operations into a dated plan with scripts and decision trees. $17, instant PDF, 60-day refund.
           </p>
-          <a href={STRIPE_CHECKOUT_URL} className="btn-primary inline-block py-2.5 px-6 text-sm">Get The 90-Day Reset → $24</a>
+          <a href={STRIPE_CHECKOUT_URL} className="btn-primary inline-block py-2.5 px-6 text-sm">Get The 90-Day Reset → $17</a>
         </div>
       </article>
     </>
