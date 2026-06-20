@@ -42,6 +42,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Finance pages — English only, no locale prefix (canonical = /finance/<slug>).
   const financePages: string[] = [
     'finance',
+    'finance/bad-credit',
+    'finance/bad-credit-loans-instant-decision',
     'finance/calculator',
     'finance/bad-credit-credit-card',
     'finance/credit-card-500-credit-score',
