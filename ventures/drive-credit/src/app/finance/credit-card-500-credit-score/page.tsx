@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import NavBar from '@/components/NavBar'
-import FinanceEmailCapture from '@/components/FinanceEmailCapture'
+import ApprovalPath500 from '@/components/approval-path/ApprovalPath500'
 import T3ProductLeadMagnet from '@/components/T3ProductLeadMagnet'
 import T3LeadMagnetCreditCard from '@/components/T3LeadMagnetCreditCard'
 import AffiliateLink from '@/components/AffiliateLink'
-import FTCDisclosure from '@/components/FTCDisclosure'
-import { YENDO_500_HERO, YENDO_500_CARD, YENDO_500_CTA } from '@/lib/affiliateUrls'
+import { YENDO_500_CARD } from '@/lib/affiliateUrls'
 
 // Stripe checkout for Credit Sequence ($17 product)
 const STRIPE_CHECKOUT_URL = 'https://buy.stripe.com/14A4gz90Bgn230BfbG08g0c'
@@ -100,57 +99,8 @@ export default function Page() {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
       <NavBar />
+      <ApprovalPath500 />
       <article className="max-w-3xl mx-auto px-4 py-14">
-
-        {/* Breadcrumb */}
-        <nav className="text-xs mb-6 flex items-center gap-2" style={{ color: '#a8a29e' }}>
-          <Link href="/" className="hover:text-amber-700 transition-colors">Mintbrooks</Link>
-          <span>›</span>
-          <span>500 Score Options</span>
-        </nav>
-
-        <div className="section-label mb-3">Credit Guide</div>
-        <h1 className="text-3xl md:text-4xl font-black mb-4 leading-tight" style={{ color: '#1c1917', letterSpacing: '-0.02em' }}>
-          Credit Cards for 500 Credit Score:<br />Cards That Actually Approve
-        </h1>
-        <FTCDisclosure />
-        <p className="text-lg mb-8 leading-relaxed" style={{ color: '#78716c' }}>
-          Most lists of "credit cards for bad credit" include cards that will reject a 500 score in practice. This one doesn't.
-        </p>
-
-        <FinanceEmailCapture
-          source="finance"
-          headline="Before You Apply: Get The 500-Score Approval Checklist"
-          subtext="The 7 things to fix in the next 30 minutes that decide whether your application gets auto-approved or auto-declined. Free, one email."
-        />
-
-        {/* Primary action — Yendo soft-pull (highest-value, zero-friction, free to the user) */}
-        <div className="rounded-2xl p-6 mb-6" style={{ background: '#fef9ee', border: '1px solid rgba(217,119,6,0.2)' }}>
-          <div className="font-bold mb-2" style={{ color: '#d97706' }}>🚗 Own a car? This is your fastest real approval.</div>
-          <p className="text-sm leading-relaxed mb-4" style={{ color: '#78716c' }}>
-            A car-secured credit card like Yendo uses your <strong style={{ color: '#1c1917' }}>vehicle equity</strong> — not your FICO score — to set your limit. A 500, 480, even a 420 score doesn't automatically disqualify you. It's the most realistic path to a real revolving Visa with a high limit if you have poor credit and own a car. The eligibility check is a <strong style={{ color: '#1c1917' }}>soft inquiry — it won't touch your score.</strong>
-          </p>
-          <AffiliateLink href={YENDO_500_HERO} placement="500-score-guide-hero" className="btn-primary text-sm py-2.5 px-6 inline-block">
-            Check If My Car Qualifies → Free
-          </AffiliateLink>
-          <p className="text-xs mt-2" style={{ color: '#a8a29e' }}>Soft inquiry only · Affiliate link · No score impact</p>
-        </div>
-
-        {/* Secondary offer — Stripe $17 product (the full playbook) */}
-        <div className="rounded-2xl p-6 mb-10" style={{ background: '#1c1917' }}>
-          <div className="text-xs font-bold mb-2" style={{ color: '#B8955A', letterSpacing: '0.16em', textTransform: 'uppercase' }}>Want the whole plan? · $17</div>
-          <h3 className="text-xl font-black text-white mb-2">The 90-Day Money Reset</h3>
-          <p className="text-sm mb-4" style={{ color: 'rgba(255,255,255,0.65)' }}>
-            Every move in this guide — sequenced day-by-day, with the bureau scripts, the statement-closing-date trick, and the secured-vs-Yendo decision tree. Instant PDF. 60-day refund.
-          </p>
-          <a
-            href={STRIPE_CHECKOUT_URL}
-            className="btn-primary inline-block py-2.5 px-6 text-sm"
-          >
-            Get The 90-Day Reset → $17
-          </a>
-          <p className="text-xs mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>Secure checkout via Stripe · One-time payment</p>
-        </div>
 
         <h2 className="text-2xl font-black mb-4" style={{ color: '#1c1917', letterSpacing: '-0.01em' }}>What a 500 Score Actually Means for Approval</h2>
         <p className="mb-4 leading-relaxed" style={{ color: '#78716c' }}>
