@@ -96,6 +96,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-hair-oil-damaged-color-treated-hair",
   "best-hair-oil-damaged-color-treated-olaplex-kerastase",
   "best-hair-oil-for-damaged-hair-2024",
+  "best-hair-oil-for-glass-hair-trend-2024",
   "best-home-office-desk-accessories-under-50",
   "best-home-office-essentials-under-100",
   "best-lamp-for-living-room",
