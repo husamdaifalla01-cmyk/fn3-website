@@ -128,6 +128,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-vintage-self-care-gift-basket",
   "best-vintage-self-care-gift-baskets",
   "best-vitamin-c-serum-for-brightening-dull-skin",
+  "best-vitamin-c-serum-for-brightening-dull-skin-2024",
   "best-vitamin-c-serum-for-brightening-dull-skin-2026",
   "best-waffle-duvet-cover-queen",
   "best-waffle-duvet-cover-queen-aesthetic",
