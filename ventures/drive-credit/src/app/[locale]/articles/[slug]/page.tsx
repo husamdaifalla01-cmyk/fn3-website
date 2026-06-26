@@ -393,6 +393,8 @@ const ALL_ARTICLES: Article[] = [
   { title: 'Best Vitamin C Serum for Brightening Dull Skin in 2024: Tested & Ranked', slug: 'best-vitamin-c-serum-for-brightening-dull-skin-2024', readTime: '12 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 23, 2026', excerpt: 'Discover the best vitamin C serum for brightening dull skin in 2024, tested by real users. See top-rated formulas that actually reduce dark spots and restore glow.' },
 
   { title: 'Best Linen Duvet Cover Set for Luxury Bedroom 2024: Tested & Ranked', slug: 'best-linen-duvet-cover-set-luxury-bedroom-2024', readTime: '11 min', category: 'Home & Decor', categorySlug: 'home-decor', bg: '#EEF3F1', accent: '#2C4A3E', image: '/home-decor.jpg', date: 'June 25, 2026', excerpt: 'Discover the best linen duvet cover set for luxury bedroom in 2024 — tested by real buyers, ranked by comfort, durability, and true luxury feel.' },
+
+  { title: 'Best Eyeshadow Palette for Everyday Neutral Looks 2024: Tested & Ranked', slug: 'best-eyeshadow-palette-everyday-neutral-looks-2024', readTime: '11 min', category: 'Beauty', categorySlug: 'beauty', bg: '#F5EAF0', accent: '#8B4E6B', image: '/beauty.jpg', date: 'June 26, 2026', excerpt: 'Discover the best eyeshadow palette for everyday neutral looks in 2024—tested by real buyers for office-friendly, natural makeup. Top pick: Too Faced Born This Way.' },
 ]
 
 async function getAffiliateBodyHtml(slug: string, _siteUrl: string): Promise<string | null> {

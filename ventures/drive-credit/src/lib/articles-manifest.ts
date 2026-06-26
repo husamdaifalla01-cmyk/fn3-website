@@ -106,6 +106,7 @@ export const AFFILIATE_SLUGS: string[] = [
   "best-linen-bedding-sets",
   "best-linen-duvet-cover-set",
   "best-linen-duvet-cover-set-for-luxury-bedroom-2024",
+  "best-linen-duvet-cover-set-luxury-bedroom-2024",
   "best-linen-duvet-cover-sets-luxury-budget",
   "best-luxury-hair-products-under-40",
   "best-neutral-eyeshadow-palette",
